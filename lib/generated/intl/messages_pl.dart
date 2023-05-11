@@ -1,0 +1,244 @@
+// DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
+// This is a library that provides messages for a pl locale. All the
+// messages from the main program should be duplicated here with the same
+// function name.
+
+// Ignore issues from commonly used lints in this file.
+// ignore_for_file:unnecessary_brace_in_string_interps, unnecessary_new
+// ignore_for_file:prefer_single_quotes,comment_references, directives_ordering
+// ignore_for_file:annotate_overrides,prefer_generic_function_type_aliases
+// ignore_for_file:unused_import, file_names, avoid_escaping_inner_quotes
+// ignore_for_file:unnecessary_string_interpolations, unnecessary_string_escapes
+
+import 'package:intl/intl.dart';
+import 'package:intl/message_lookup_by_library.dart';
+
+final messages = new MessageLookup();
+
+typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
+
+class MessageLookup extends MessageLookupByLibrary {
+  String get localeName => 'pl';
+
+  final messages = _notInlinedMessages(_notInlinedMessages);
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "CustomerDetails":
+            MessageLookupByLibrary.simpleMessage("Szczegóły klienta"),
+        "addAPurchase": MessageLookupByLibrary.simpleMessage("Dodaj zakup"),
+        "addBrand": MessageLookupByLibrary.simpleMessage("Dodaj markę"),
+        "addContact": MessageLookupByLibrary.simpleMessage("Dodaj kontakt"),
+        "addCustomer": MessageLookupByLibrary.simpleMessage("Dodaj klienta"),
+        "addExpense": MessageLookupByLibrary.simpleMessage("Dodaj wydatki"),
+        "addExpenseCat":
+            MessageLookupByLibrary.simpleMessage("Dodaj kategorię wydatków"),
+        "addItems": MessageLookupByLibrary.simpleMessage("Dodaj przedmioty"),
+        "addNewProduct":
+            MessageLookupByLibrary.simpleMessage("Dodaj nowy produkt"),
+        "addNewPurchase": MessageLookupByLibrary.simpleMessage("Dodaj zakup"),
+        "addProduct": MessageLookupByLibrary.simpleMessage("Dodaj produkt"),
+        "addPurchase": MessageLookupByLibrary.simpleMessage("Dodaj zakup"),
+        "addSale":
+            MessageLookupByLibrary.simpleMessage("Dodaj ofertę sprzedaży"),
+        "addSales": MessageLookupByLibrary.simpleMessage("Dodaj sprzedaż"),
+        "addUnit": MessageLookupByLibrary.simpleMessage("Dodaj jednostkę"),
+        "address": MessageLookupByLibrary.simpleMessage("Adres"),
+        "alreadyAdded": MessageLookupByLibrary.simpleMessage("Już dodane"),
+        "amount": MessageLookupByLibrary.simpleMessage("Kwota"),
+        "brandName": MessageLookupByLibrary.simpleMessage("Nazwa handlowa"),
+        "brands": MessageLookupByLibrary.simpleMessage("Marki"),
+        "businessCat":
+            MessageLookupByLibrary.simpleMessage("Kategoria biznesu"),
+        "businessName":
+            MessageLookupByLibrary.simpleMessage("Nazwa firmy i firmy"),
+        "buyPremium": MessageLookupByLibrary.simpleMessage("Kup plan premium"),
+        "camera": MessageLookupByLibrary.simpleMessage("Kamera"),
+        "cancel": MessageLookupByLibrary.simpleMessage("Anulować"),
+        "categoryName": MessageLookupByLibrary.simpleMessage("Nazwa Kategorii"),
+        "changePassword": MessageLookupByLibrary.simpleMessage("Zmień hasło"),
+        "checkEmail": MessageLookupByLibrary.simpleMessage("Sprawdź email"),
+        "chooseCustomer":
+            MessageLookupByLibrary.simpleMessage("Wybierz Klienta"),
+        "chooseSupplier":
+            MessageLookupByLibrary.simpleMessage("Wybierz dostawcę"),
+        "clickToConnect":
+            MessageLookupByLibrary.simpleMessage("Kliknij, aby połączyć"),
+        "close": MessageLookupByLibrary.simpleMessage("Zamknąć"),
+        "collectDue": MessageLookupByLibrary.simpleMessage("Zbierz należne"),
+        "collectDues":
+            MessageLookupByLibrary.simpleMessage("Proszę zebrać należność"),
+        "companyAddress": MessageLookupByLibrary.simpleMessage("adres spółki"),
+        "confirmPass": MessageLookupByLibrary.simpleMessage("Potwierdź hasło"),
+        "congratulation": MessageLookupByLibrary.simpleMessage("Gratulacje"),
+        "connect":
+            MessageLookupByLibrary.simpleMessage("Kliknij, aby połączyć"),
+        "connectPrinter":
+            MessageLookupByLibrary.simpleMessage("Podłącz drukarkę"),
+        "continueButton": MessageLookupByLibrary.simpleMessage("Kontynuować"),
+        "createAcc":
+            MessageLookupByLibrary.simpleMessage("Utwórz bezpłatne konto"),
+        "currency": MessageLookupByLibrary.simpleMessage("Waluta"),
+        "customerName": MessageLookupByLibrary.simpleMessage("Nazwa klienta"),
+        "date": MessageLookupByLibrary.simpleMessage("Data"),
+        "dates": MessageLookupByLibrary.simpleMessage("Data:"),
+        "dealer": MessageLookupByLibrary.simpleMessage("Kupiec"),
+        "dealerPrice": MessageLookupByLibrary.simpleMessage("Cena dealerska"),
+        "discount": MessageLookupByLibrary.simpleMessage("Rabat"),
+        "due": MessageLookupByLibrary.simpleMessage("Należny"),
+        "dueAmount": MessageLookupByLibrary.simpleMessage("Należna kwota: "),
+        "dueList": MessageLookupByLibrary.simpleMessage("Lista oczekujących"),
+        "dueReport": MessageLookupByLibrary.simpleMessage("Należny raport"),
+        "edit": MessageLookupByLibrary.simpleMessage("Edytować"),
+        "editPhone":
+            MessageLookupByLibrary.simpleMessage("Edytować numer telefonu?"),
+        "editPurchaseInvoice":
+            MessageLookupByLibrary.simpleMessage("Edytuj fakturę zakupu"),
+        "editSalesInvoice":
+            MessageLookupByLibrary.simpleMessage("Edytuj fakturę sprzedaży"),
+        "email": MessageLookupByLibrary.simpleMessage("Adres e-mail"),
+        "emailText": MessageLookupByLibrary.simpleMessage("E-mail"),
+        "enterEmail": MessageLookupByLibrary.simpleMessage(
+            "Wpisz swój adres e-mail poniżej, aby otrzymać link do resetowania hasła."),
+        "expenseCat":
+            MessageLookupByLibrary.simpleMessage("Kategorie wydatków"),
+        "expenseDate": MessageLookupByLibrary.simpleMessage("Data wydatku"),
+        "expenseFor": MessageLookupByLibrary.simpleMessage("Wydatek na"),
+        "expenseReport":
+            MessageLookupByLibrary.simpleMessage("Raport z wydatków"),
+        "forgotPassword":
+            MessageLookupByLibrary.simpleMessage("Zapomniałeś hasła"),
+        "freePack": MessageLookupByLibrary.simpleMessage("Darmowy pakiet"),
+        "freePlan": MessageLookupByLibrary.simpleMessage("Darmowy plan"),
+        "fromDate": MessageLookupByLibrary.simpleMessage("Od daty"),
+        "fullyPaid": MessageLookupByLibrary.simpleMessage("W pełni opłacony"),
+        "gallery": MessageLookupByLibrary.simpleMessage("Galeria"),
+        "gotEmail": MessageLookupByLibrary.simpleMessage("Masz e-mail"),
+        "haveAcc": MessageLookupByLibrary.simpleMessage("Posiadasz już konto?"),
+        "inv": MessageLookupByLibrary.simpleMessage("nr inw."),
+        "invoice": MessageLookupByLibrary.simpleMessage("Faktura"),
+        "itemAdded": MessageLookupByLibrary.simpleMessage("Pozycja dodana"),
+        "language": MessageLookupByLibrary.simpleMessage("język"),
+        "loading": MessageLookupByLibrary.simpleMessage("Ładowanie"),
+        "logIn": MessageLookupByLibrary.simpleMessage("Zaloguj sie"),
+        "logInWithMail":
+            MessageLookupByLibrary.simpleMessage("Zaloguj się przez e-mail"),
+        "logOut": MessageLookupByLibrary.simpleMessage("Wyloguj"),
+        "loginWithPhone":
+            MessageLookupByLibrary.simpleMessage("Zaloguj się przez telefon"),
+        "loss": MessageLookupByLibrary.simpleMessage("Strata"),
+        "lp": MessageLookupByLibrary.simpleMessage("Strata/zysk"),
+        "lpDetails":
+            MessageLookupByLibrary.simpleMessage("Szczegóły straty/zysku"),
+        "manufacturer": MessageLookupByLibrary.simpleMessage("Producent"),
+        "mobile": MessageLookupByLibrary.simpleMessage("mobilny:"),
+        "moreInfo": MessageLookupByLibrary.simpleMessage("Więcej informacji"),
+        "mrp": MessageLookupByLibrary.simpleMessage("MRP"),
+        "name": MessageLookupByLibrary.simpleMessage("Nazwa"),
+        "noAcc": MessageLookupByLibrary.simpleMessage("Nie masz konta?"),
+        "noData":
+            MessageLookupByLibrary.simpleMessage("Brak dostępnych danych"),
+        "noSupplier":
+            MessageLookupByLibrary.simpleMessage("Brak dostępnych dostawcówe"),
+        "note": MessageLookupByLibrary.simpleMessage("Notatka"),
+        "openingBalance":
+            MessageLookupByLibrary.simpleMessage("Bilans otwarcia"),
+        "packFeatures": MessageLookupByLibrary.simpleMessage("Funkcje pakietu"),
+        "paid": MessageLookupByLibrary.simpleMessage("Płatny"),
+        "paidAmount": MessageLookupByLibrary.simpleMessage("Zapłacona kwota"),
+        "partyList": MessageLookupByLibrary.simpleMessage("Lista stron"),
+        "password": MessageLookupByLibrary.simpleMessage("Hasło"),
+        "paymentTypes": MessageLookupByLibrary.simpleMessage("Typ płatności"),
+        "paypalPay": MessageLookupByLibrary.simpleMessage("Zapłać z PayPal-em"),
+        "phone": MessageLookupByLibrary.simpleMessage("Numer telefonu"),
+        "phoneVerification":
+            MessageLookupByLibrary.simpleMessage("Weryfikacja telefonu"),
+        "premiumPlan":
+            MessageLookupByLibrary.simpleMessage("Abonament premium"),
+        "previousDue": MessageLookupByLibrary.simpleMessage("Poprzedni termin"),
+        "previousPayAmount":
+            MessageLookupByLibrary.simpleMessage("Poprzednia kwota płatności"),
+        "printing": MessageLookupByLibrary.simpleMessage("Opcja drukowania"),
+        "product": MessageLookupByLibrary.simpleMessage("Produkt"),
+        "productCode": MessageLookupByLibrary.simpleMessage("Kod produktu"),
+        "productList": MessageLookupByLibrary.simpleMessage("Lista produktów"),
+        "productName": MessageLookupByLibrary.simpleMessage("Nazwa produktu"),
+        "profile": MessageLookupByLibrary.simpleMessage("Profil"),
+        "profit": MessageLookupByLibrary.simpleMessage("Zysk"),
+        "purchase": MessageLookupByLibrary.simpleMessage("Zakup"),
+        "purchaseList": MessageLookupByLibrary.simpleMessage("Lista zakupów"),
+        "purchasePremium":
+            MessageLookupByLibrary.simpleMessage("Kup plan premium"),
+        "purchasePrice": MessageLookupByLibrary.simpleMessage("Cena zakupu"),
+        "purchaseReport": MessageLookupByLibrary.simpleMessage("Raport zakupu"),
+        "quantity": MessageLookupByLibrary.simpleMessage("Ilość"),
+        "recentTransaction":
+            MessageLookupByLibrary.simpleMessage("ostatnie tranzakcje"),
+        "referenceNo":
+            MessageLookupByLibrary.simpleMessage("Numer referencyjny"),
+        "register": MessageLookupByLibrary.simpleMessage("Rejestr"),
+        "registerTitle": MessageLookupByLibrary.simpleMessage(
+            "Musimy zarejestrować Twój telefon bez rozpoczynania pracy!"),
+        "reports": MessageLookupByLibrary.simpleMessage("Raporty"),
+        "retailer": MessageLookupByLibrary.simpleMessage("Detalista"),
+        "returnAmount": MessageLookupByLibrary.simpleMessage("Kwota zwrotu"),
+        "sale": MessageLookupByLibrary.simpleMessage("Sprzedaż"),
+        "saleList": MessageLookupByLibrary.simpleMessage("Lista sprzedaży"),
+        "salePrice": MessageLookupByLibrary.simpleMessage("Cena sprzedaży"),
+        "salesDetails":
+            MessageLookupByLibrary.simpleMessage("Szczegóły sprzedaży"),
+        "salesReport": MessageLookupByLibrary.simpleMessage("Raport sprzedaży"),
+        "save": MessageLookupByLibrary.simpleMessage("Ratować"),
+        "saveNPublish":
+            MessageLookupByLibrary.simpleMessage("Zapisz i opublikuj"),
+        "search": MessageLookupByLibrary.simpleMessage("Szukaj"),
+        "select": MessageLookupByLibrary.simpleMessage("Wybierać"),
+        "selectLang":
+            MessageLookupByLibrary.simpleMessage("Wybierz swój język"),
+        "sendCode": MessageLookupByLibrary.simpleMessage("Wyślij kod"),
+        "sendEmail": MessageLookupByLibrary.simpleMessage(
+            "Wysłaliśmy wiadomość e-mail z instrukcjami, jak zresetować hasło do:"),
+        "sendLink":
+            MessageLookupByLibrary.simpleMessage("Wyślij łącze resetowania"),
+        "setUpDesc": MessageLookupByLibrary.simpleMessage(
+            "Zaktualizuj swój profil, aby połączyć się z lekarzem i uzyskać lepsze wrażenie"),
+        "setUpProfile":
+            MessageLookupByLibrary.simpleMessage("Skonfiguruj swój profil"),
+        "staffLogin":
+            MessageLookupByLibrary.simpleMessage("Logowanie personelu"),
+        "stillUnpaid":
+            MessageLookupByLibrary.simpleMessage("Nadal nieopłacone"),
+        "stock": MessageLookupByLibrary.simpleMessage("Magazyn"),
+        "stockList": MessageLookupByLibrary.simpleMessage("Lista zapasów"),
+        "subTotal": MessageLookupByLibrary.simpleMessage("Suma częściowa"),
+        "subscription": MessageLookupByLibrary.simpleMessage("Subskrypcja"),
+        "supplier": MessageLookupByLibrary.simpleMessage("Dostawca"),
+        "supplierName": MessageLookupByLibrary.simpleMessage("Nazwa Dostawcy"),
+        "toDate": MessageLookupByLibrary.simpleMessage("Spotykać się z kimś"),
+        "total": MessageLookupByLibrary.simpleMessage("Całkowity"),
+        "totalAmount": MessageLookupByLibrary.simpleMessage("Całkowita kwota"),
+        "totalExpense": MessageLookupByLibrary.simpleMessage("Łączny koszt"),
+        "totalLoss": MessageLookupByLibrary.simpleMessage("Całkowita utrata"),
+        "totalProduct":
+            MessageLookupByLibrary.simpleMessage("Wszystkie produkty"),
+        "totalProfit": MessageLookupByLibrary.simpleMessage("Całkowity zysk"),
+        "tryAgain": MessageLookupByLibrary.simpleMessage("Spróbuj ponownie"),
+        "unPaid": MessageLookupByLibrary.simpleMessage("Nie zapłacony"),
+        "unitName": MessageLookupByLibrary.simpleMessage("Nazwa jednostki"),
+        "units": MessageLookupByLibrary.simpleMessage("Jednostki"),
+        "unlimited": MessageLookupByLibrary.simpleMessage("Nieograniczony"),
+        "update": MessageLookupByLibrary.simpleMessage("Aktualizacja"),
+        "updateContact":
+            MessageLookupByLibrary.simpleMessage("Zaktualizuj kontakt"),
+        "updateNow": MessageLookupByLibrary.simpleMessage("Aktualizuj teraz"),
+        "updateProduct":
+            MessageLookupByLibrary.simpleMessage("Zaktualizuj produkt"),
+        "updateProfile":
+            MessageLookupByLibrary.simpleMessage("Zaktualizuj swój profil"),
+        "userRole": MessageLookupByLibrary.simpleMessage("Rola użytkownika"),
+        "viewAll": MessageLookupByLibrary.simpleMessage("Pokaż wszystkie"),
+        "whatNew": MessageLookupByLibrary.simpleMessage("Co nowego"),
+        "wholeSalePrice": MessageLookupByLibrary.simpleMessage("Cena hurtowa"),
+        "wholesaler": MessageLookupByLibrary.simpleMessage("Hurtownik"),
+        "youRUsing": MessageLookupByLibrary.simpleMessage("Ty używasz "),
+        "yourPack": MessageLookupByLibrary.simpleMessage("Twój pakunek")
+      };
+}

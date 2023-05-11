@@ -1,0 +1,235 @@
+// DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
+// This is a library that provides messages for a ar locale. All the
+// messages from the main program should be duplicated here with the same
+// function name.
+
+// Ignore issues from commonly used lints in this file.
+// ignore_for_file:unnecessary_brace_in_string_interps, unnecessary_new
+// ignore_for_file:prefer_single_quotes,comment_references, directives_ordering
+// ignore_for_file:annotate_overrides,prefer_generic_function_type_aliases
+// ignore_for_file:unused_import, file_names, avoid_escaping_inner_quotes
+// ignore_for_file:unnecessary_string_interpolations, unnecessary_string_escapes
+
+import 'package:intl/intl.dart';
+import 'package:intl/message_lookup_by_library.dart';
+
+final messages = new MessageLookup();
+
+typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
+
+class MessageLookup extends MessageLookupByLibrary {
+  String get localeName => 'ar';
+
+  final messages = _notInlinedMessages(_notInlinedMessages);
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "CustomerDetails":
+            MessageLookupByLibrary.simpleMessage("تفاصيل العميل"),
+        "addAPurchase":
+            MessageLookupByLibrary.simpleMessage("الرجاء إضافة شراء"),
+        "addBrand":
+            MessageLookupByLibrary.simpleMessage("أضف العلامة التجارية"),
+        "addContact": MessageLookupByLibrary.simpleMessage("إضافة جهة اتصال"),
+        "addCustomer":
+            MessageLookupByLibrary.simpleMessage("الرجاء إضافة عميل"),
+        "addExpense": MessageLookupByLibrary.simpleMessage("أضف المصاريف"),
+        "addExpenseCat":
+            MessageLookupByLibrary.simpleMessage("إضافة فئة المصاريف"),
+        "addItems": MessageLookupByLibrary.simpleMessage("إضافة عناصر"),
+        "addNewProduct":
+            MessageLookupByLibrary.simpleMessage("اضافة منتج جديد"),
+        "addNewPurchase":
+            MessageLookupByLibrary.simpleMessage("الرجاء إضافة شراء"),
+        "addProduct": MessageLookupByLibrary.simpleMessage("الرجاء إضافة منتج"),
+        "addPurchase": MessageLookupByLibrary.simpleMessage("أضف شراء"),
+        "addSale": MessageLookupByLibrary.simpleMessage("الرجاء إضافة بيع"),
+        "addSales": MessageLookupByLibrary.simpleMessage("أضف المبيعات"),
+        "addUnit": MessageLookupByLibrary.simpleMessage("أضف وحدة"),
+        "address": MessageLookupByLibrary.simpleMessage("عنوان"),
+        "alreadyAdded": MessageLookupByLibrary.simpleMessage("اسم التصنيف"),
+        "amount": MessageLookupByLibrary.simpleMessage("كمية"),
+        "brandName":
+            MessageLookupByLibrary.simpleMessage("اسم العلامة التجارية"),
+        "brands": MessageLookupByLibrary.simpleMessage("العلامات التجارية"),
+        "businessCat": MessageLookupByLibrary.simpleMessage("نوع العمل"),
+        "businessName":
+            MessageLookupByLibrary.simpleMessage("اسم الشركة والأعمال"),
+        "buyPremium": MessageLookupByLibrary.simpleMessage("شراء خطة قسط"),
+        "camera": MessageLookupByLibrary.simpleMessage("آلة تصوير"),
+        "cancel": MessageLookupByLibrary.simpleMessage("يلغي"),
+        "categoryName": MessageLookupByLibrary.simpleMessage("اسم التصنيف"),
+        "changePassword":
+            MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
+        "checkEmail":
+            MessageLookupByLibrary.simpleMessage("تفقد البريد الإلكتروني"),
+        "chooseCustomer": MessageLookupByLibrary.simpleMessage("اختر الزبون"),
+        "chooseSupplier": MessageLookupByLibrary.simpleMessage("اختر موردًا"),
+        "clickToConnect": MessageLookupByLibrary.simpleMessage("انقر للاتصال"),
+        "close": MessageLookupByLibrary.simpleMessage("يغلق"),
+        "collectDue": MessageLookupByLibrary.simpleMessage("تحصيل المستحق"),
+        "collectDues":
+            MessageLookupByLibrary.simpleMessage("يرجى جمع المبلغ المستحق"),
+        "companyAddress": MessageLookupByLibrary.simpleMessage("عنوان الشركة"),
+        "confirmPass":
+            MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
+        "congratulation": MessageLookupByLibrary.simpleMessage("تهانينا"),
+        "connect": MessageLookupByLibrary.simpleMessage("انقر للاتصال"),
+        "connectPrinter":
+            MessageLookupByLibrary.simpleMessage("قم بتوصيل الطابعة الخاصة بك"),
+        "continueButton": MessageLookupByLibrary.simpleMessage("يكمل"),
+        "createAcc": MessageLookupByLibrary.simpleMessage("إنشاء حساب مجاني"),
+        "currency": MessageLookupByLibrary.simpleMessage("عملة"),
+        "customerName": MessageLookupByLibrary.simpleMessage("اسم الزبون"),
+        "date": MessageLookupByLibrary.simpleMessage("تاريخ"),
+        "dates": MessageLookupByLibrary.simpleMessage("تاريخ:"),
+        "dealer": MessageLookupByLibrary.simpleMessage("تاجر"),
+        "dealerPrice": MessageLookupByLibrary.simpleMessage("سعر التاجر"),
+        "discount": MessageLookupByLibrary.simpleMessage("تخفيض"),
+        "due": MessageLookupByLibrary.simpleMessage("حق"),
+        "dueAmount": MessageLookupByLibrary.simpleMessage("مبلغ مستحق: "),
+        "dueList": MessageLookupByLibrary.simpleMessage("قائمة الاستحقاق"),
+        "dueReport": MessageLookupByLibrary.simpleMessage("تقرير الاستحقاق"),
+        "edit": MessageLookupByLibrary.simpleMessage("يحرر"),
+        "editPhone": MessageLookupByLibrary.simpleMessage("تحرير رقم الهاتف؟"),
+        "editPurchaseInvoice":
+            MessageLookupByLibrary.simpleMessage("تحرير فاتورة الشراء"),
+        "editSalesInvoice":
+            MessageLookupByLibrary.simpleMessage("تحرير فاتورة المبيعات"),
+        "email":
+            MessageLookupByLibrary.simpleMessage("عنوان البريد الإلكتروني"),
+        "emailText": MessageLookupByLibrary.simpleMessage("بريد إلكتروني"),
+        "enterEmail": MessageLookupByLibrary.simpleMessage(
+            "يرجى إدخال عنوان بريدك الإلكتروني أدناه لتلقي رابط إعادة تعيين كلمة المرور."),
+        "expenseCat": MessageLookupByLibrary.simpleMessage("فئات المصاريف"),
+        "expenseDate": MessageLookupByLibrary.simpleMessage("تاريخ المصاريف"),
+        "expenseFor": MessageLookupByLibrary.simpleMessage("حساب ل"),
+        "expenseReport": MessageLookupByLibrary.simpleMessage("تقرير المصاريف"),
+        "forgotPassword":
+            MessageLookupByLibrary.simpleMessage("هل نسيت كلمة السر"),
+        "freePack": MessageLookupByLibrary.simpleMessage("حزمة مجانية"),
+        "freePlan": MessageLookupByLibrary.simpleMessage("خطة مجانية"),
+        "fromDate": MessageLookupByLibrary.simpleMessage("من التاريخ"),
+        "fullyPaid": MessageLookupByLibrary.simpleMessage("مدفوعة بالكامل"),
+        "gallery": MessageLookupByLibrary.simpleMessage("صالة عرض"),
+        "gotEmail": MessageLookupByLibrary.simpleMessage("لديك بريد إلكتروني"),
+        "haveAcc": MessageLookupByLibrary.simpleMessage("هل لديك حساب؟"),
+        "inv": MessageLookupByLibrary.simpleMessage("رقم الفاتورة"),
+        "invoice": MessageLookupByLibrary.simpleMessage("فاتورة"),
+        "itemAdded": MessageLookupByLibrary.simpleMessage("تمت إضافة العنصر"),
+        "language": MessageLookupByLibrary.simpleMessage("لغة"),
+        "loading": MessageLookupByLibrary.simpleMessage("تحميل"),
+        "logIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "logInWithMail": MessageLookupByLibrary.simpleMessage(
+            "تسجيل الدخول بالبريد الإلكتروني"),
+        "logOut": MessageLookupByLibrary.simpleMessage("تسجيل خروج"),
+        "loginWithPhone":
+            MessageLookupByLibrary.simpleMessage("تسجيل الدخول بالهاتف"),
+        "loss": MessageLookupByLibrary.simpleMessage("خسارة"),
+        "lp": MessageLookupByLibrary.simpleMessage("خسارة الأرباح"),
+        "lpDetails":
+            MessageLookupByLibrary.simpleMessage("تفاصيل الخسارة / الربح"),
+        "manufacturer": MessageLookupByLibrary.simpleMessage("الصانع"),
+        "mobile": MessageLookupByLibrary.simpleMessage("متحرك:"),
+        "moreInfo": MessageLookupByLibrary.simpleMessage("مزيد من المعلومات"),
+        "mrp": MessageLookupByLibrary.simpleMessage("MRP"),
+        "name": MessageLookupByLibrary.simpleMessage("اسم"),
+        "noAcc": MessageLookupByLibrary.simpleMessage("ليس لديك أي حساب?"),
+        "noData": MessageLookupByLibrary.simpleMessage("لا تتوافر بيانات"),
+        "noSupplier": MessageLookupByLibrary.simpleMessage("لا يوجد مورد متاح"),
+        "note": MessageLookupByLibrary.simpleMessage("ملحوظة"),
+        "openingBalance":
+            MessageLookupByLibrary.simpleMessage("الرصيد الافتتاحي"),
+        "packFeatures": MessageLookupByLibrary.simpleMessage("ميزات العبوة"),
+        "paid": MessageLookupByLibrary.simpleMessage("مدفوع"),
+        "paidAmount": MessageLookupByLibrary.simpleMessage("المبلغ المدفوع"),
+        "partyList": MessageLookupByLibrary.simpleMessage("قائمة الأحزاب"),
+        "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "paymentTypes": MessageLookupByLibrary.simpleMessage("نوع الدفع"),
+        "paypalPay":
+            MessageLookupByLibrary.simpleMessage("الدفع بواسط باى بال"),
+        "phone": MessageLookupByLibrary.simpleMessage("رقم التليفون"),
+        "phoneVerification":
+            MessageLookupByLibrary.simpleMessage("التحقق من الهاتف"),
+        "premiumPlan": MessageLookupByLibrary.simpleMessage("خطة بريميوم"),
+        "previousDue":
+            MessageLookupByLibrary.simpleMessage("تاريخ الاستحقاق السابق"),
+        "previousPayAmount":
+            MessageLookupByLibrary.simpleMessage("مبلغ الدفع السابق"),
+        "printing": MessageLookupByLibrary.simpleMessage("خيار الطباعة"),
+        "product": MessageLookupByLibrary.simpleMessage("منتج"),
+        "productCode": MessageLookupByLibrary.simpleMessage("كود المنتج"),
+        "productList": MessageLookupByLibrary.simpleMessage("قائمة المنتجات"),
+        "productName": MessageLookupByLibrary.simpleMessage("اسم المنتج"),
+        "profile": MessageLookupByLibrary.simpleMessage("حساب تعريفي"),
+        "profit": MessageLookupByLibrary.simpleMessage("ربح"),
+        "purchase": MessageLookupByLibrary.simpleMessage("شراء"),
+        "purchaseList": MessageLookupByLibrary.simpleMessage("قائمة الشراء"),
+        "purchasePremium":
+            MessageLookupByLibrary.simpleMessage("شراء خطة بريميوم"),
+        "purchasePrice": MessageLookupByLibrary.simpleMessage("سعر الشراء"),
+        "purchaseReport": MessageLookupByLibrary.simpleMessage("تقرير الشراء"),
+        "quantity": MessageLookupByLibrary.simpleMessage("كمية"),
+        "recentTransaction":
+            MessageLookupByLibrary.simpleMessage("التحويلات الاخيرة"),
+        "referenceNo": MessageLookupByLibrary.simpleMessage("رقم المرجع"),
+        "register": MessageLookupByLibrary.simpleMessage("يسجل"),
+        "registerTitle": MessageLookupByLibrary.simpleMessage(
+            "نحتاج إلى تسجيل هاتفك دون أن نبدأ!"),
+        "reports": MessageLookupByLibrary.simpleMessage("التقارير"),
+        "retailer": MessageLookupByLibrary.simpleMessage("بائع تجزئة"),
+        "returnAmount": MessageLookupByLibrary.simpleMessage("المبلغ العائد"),
+        "sale": MessageLookupByLibrary.simpleMessage("أُوكَازيُون"),
+        "saleList": MessageLookupByLibrary.simpleMessage("قائمة المبيعات"),
+        "salePrice": MessageLookupByLibrary.simpleMessage("سعر البيع"),
+        "salesDetails": MessageLookupByLibrary.simpleMessage("تفاصيل المبيعات"),
+        "salesReport": MessageLookupByLibrary.simpleMessage("تقرير المبيعات"),
+        "save": MessageLookupByLibrary.simpleMessage("يحفظ"),
+        "saveNPublish": MessageLookupByLibrary.simpleMessage("احفظ وانشر"),
+        "search": MessageLookupByLibrary.simpleMessage("يبحث"),
+        "select": MessageLookupByLibrary.simpleMessage("يختار"),
+        "selectLang": MessageLookupByLibrary.simpleMessage("اختر لغتك"),
+        "sendCode": MessageLookupByLibrary.simpleMessage("أرسل الرمز"),
+        "sendEmail": MessageLookupByLibrary.simpleMessage(
+            "أرسلنا بريدًا إلكترونيًا يحتوي على إرشادات حول كيفية إعادة تعيين كلمة المرور إلى:"),
+        "sendLink":
+            MessageLookupByLibrary.simpleMessage("أرسل رابط إعادة التعيين"),
+        "setUpDesc": MessageLookupByLibrary.simpleMessage(
+            "قم بتحديث ملف التعريف الخاص بك لتوصيل طبيبك بانطباع أفضل"),
+        "setUpProfile": MessageLookupByLibrary.simpleMessage(
+            "قم بإعداد ملف التعريف الخاص بك"),
+        "staffLogin": MessageLookupByLibrary.simpleMessage("دخول الموظفين"),
+        "stillUnpaid":
+            MessageLookupByLibrary.simpleMessage("لا يزال غير مدفوع"),
+        "stock": MessageLookupByLibrary.simpleMessage("مخزون"),
+        "stockList": MessageLookupByLibrary.simpleMessage("قائمة الأسهم"),
+        "subTotal": MessageLookupByLibrary.simpleMessage("المجموع الفرعي"),
+        "subscription": MessageLookupByLibrary.simpleMessage("الاشتراك"),
+        "supplier": MessageLookupByLibrary.simpleMessage("المورد"),
+        "supplierName": MessageLookupByLibrary.simpleMessage("اسم المورد"),
+        "toDate": MessageLookupByLibrary.simpleMessage("ان يذهب في موعد"),
+        "total": MessageLookupByLibrary.simpleMessage("المجموع"),
+        "totalAmount": MessageLookupByLibrary.simpleMessage("المبلغ الإجمالي"),
+        "totalExpense": MessageLookupByLibrary.simpleMessage("المصاريف الكلية"),
+        "totalLoss": MessageLookupByLibrary.simpleMessage("خسارة كاملة"),
+        "totalProduct": MessageLookupByLibrary.simpleMessage("إجمالي المنتجات"),
+        "totalProfit": MessageLookupByLibrary.simpleMessage("اجمالي الربح"),
+        "tryAgain": MessageLookupByLibrary.simpleMessage("حاول ثانية"),
+        "unPaid": MessageLookupByLibrary.simpleMessage("غير مدفوعة"),
+        "unitName": MessageLookupByLibrary.simpleMessage("إسم الوحدة"),
+        "units": MessageLookupByLibrary.simpleMessage("الوحدات"),
+        "unlimited": MessageLookupByLibrary.simpleMessage("غير محدود"),
+        "update": MessageLookupByLibrary.simpleMessage("تحديث"),
+        "updateContact":
+            MessageLookupByLibrary.simpleMessage("تحديث جهة الاتصال"),
+        "updateNow": MessageLookupByLibrary.simpleMessage("تحديث الان"),
+        "updateProduct": MessageLookupByLibrary.simpleMessage("تحديث المنتج"),
+        "updateProfile":
+            MessageLookupByLibrary.simpleMessage("تحديث ملفك الشخصي"),
+        "userRole": MessageLookupByLibrary.simpleMessage("دور المستخدم"),
+        "viewAll": MessageLookupByLibrary.simpleMessage("مشاهدة الكل"),
+        "whatNew": MessageLookupByLibrary.simpleMessage("ما هو الجديد"),
+        "wholeSalePrice": MessageLookupByLibrary.simpleMessage("سعر بالجملة"),
+        "wholesaler": MessageLookupByLibrary.simpleMessage("تاجر الجملة"),
+        "youRUsing": MessageLookupByLibrary.simpleMessage("انت تستخدم "),
+        "yourPack": MessageLookupByLibrary.simpleMessage("مجموعتك")
+      };
+}
