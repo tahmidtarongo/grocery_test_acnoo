@@ -137,7 +137,7 @@ class _ExpenseListState extends State<ExpenseList> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       SizedBox(
-                        width: 170,
+                        width: 130,
                         child: Text(
                           lang.S.of(context).expenseFor,
                         ),
@@ -172,8 +172,7 @@ class _ExpenseListState extends State<ExpenseList> {
                         itemCount: data.length,
                         physics: const NeverScrollableScrollPhysics(),
                         itemBuilder: (BuildContext context, int index) {
-                          return (fromDate.isBefore(DateTime.parse(data[index].expenseDate)) ||
-                                      DateTime.parse(data[index].expenseDate).isAtSameMomentAs(fromDate)) &&
+                          return (fromDate.isBefore(DateTime.parse(data[index].expenseDate)) || DateTime.parse(data[index].expenseDate).isAtSameMomentAs(fromDate)) &&
                                   (toDate.isAfter(DateTime.parse(data[index].expenseDate)) || DateTime.parse(data[index].expenseDate).isAtSameMomentAs(toDate))
                               ? Column(
                                   children: [
@@ -184,7 +183,7 @@ class _ExpenseListState extends State<ExpenseList> {
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         children: [
                                           SizedBox(
-                                            width: 170,
+                                            width: 130,
                                             child: Column(
                                               crossAxisAlignment: CrossAxisAlignment.start,
                                               mainAxisAlignment: MainAxisAlignment.center,

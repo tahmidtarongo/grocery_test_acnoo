@@ -23,20 +23,17 @@ class _OnBoardState extends State<OnBoard> {
     {
       "icon": 'images/onboard1.png',
       "title": 'Easy to use mobile pos',
-      "description":
-          'Lorem ipsum dolor sit amet, consectetuer adipisci elit, sed diam nonummy nibh euismod tincidunt u laoreet dolore magna aliquam erat volutpat. Ut wi',
+      "description": 'Lorem ipsum dolor sit amet, consectetuer adipisci elit, sed diam nonummy nibh euismod tincidunt u laoreet dolore magna aliquam erat volutpat. Ut wi',
     },
     {
       "icon": 'images/onboard2.png',
       "title": 'Choose your features',
-      "description":
-          'Lorem ipsum dolor sit amet, consectetuer adipisci elit, sed diam nonummy nibh euismod tincidunt u laoreet dolore magna aliquam erat volutpat. Ut wi',
+      "description": 'Lorem ipsum dolor sit amet, consectetuer adipisci elit, sed diam nonummy nibh euismod tincidunt u laoreet dolore magna aliquam erat volutpat. Ut wi',
     },
     {
       "icon": 'images/onboard3.png',
       "title": 'All business solutions',
-      "description":
-          'Lorem ipsum dolor sit amet, consectetuer adipisci elit, sed diam nonummy nibh euismod tincidunt u laoreet dolore magna aliquam erat volutpat. Ut wi',
+      "description": 'Lorem ipsum dolor sit amet, consectetuer adipisci elit, sed diam nonummy nibh euismod tincidunt u laoreet dolore magna aliquam erat volutpat. Ut wi',
     },
   ];
 
@@ -70,84 +67,84 @@ class _OnBoardState extends State<OnBoard> {
           ),
         ],
       ),
-      body: Column(
-        children: [
-          Container(
-            padding: const EdgeInsets.only(top: 8, bottom: 8),
-            height: 550,
-            width: 340,
-            child: Stack(
-              alignment: Alignment.bottomCenter,
-              children: [
-                PageView.builder(
-                  itemCount: sliderList.length,
-                  controller: pageController,
-                  onPageChanged: (int index) => setState(() => currentIndexPage = index),
-                  itemBuilder: (_, index) {
-                    return Column(
-                      children: [
-                        Image.asset(sliderList[index]['icon'], fit: BoxFit.fill, width: context.width(), height: 340),
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Text(
-                            sliderList[index]['title'].toString(),
-                            style: GoogleFonts.jost(
-                              fontSize: 25.0,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ),
-                        // ignore: sized_box_for_whitespace
-                        Padding(
-                          padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                          // ignore: sized_box_for_whitespace
-                          child: Container(
-                            width: context.width(),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              padding: const EdgeInsets.only(top: 8, bottom: 8),
+              height: 550,
+              width: 340,
+              child: Stack(
+                alignment: Alignment.bottomCenter,
+                children: [
+                  PageView.builder(
+                    itemCount: sliderList.length,
+                    controller: pageController,
+                    onPageChanged: (int index) => setState(() => currentIndexPage = index),
+                    itemBuilder: (_, index) {
+                      return Column(
+                        children: [
+                          Image.asset(sliderList[index]['icon'], fit: BoxFit.fill, width: context.width(), height: 340),
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
                             child: Text(
-                              sliderList[index]['description'].toString(),
-                              textAlign: TextAlign.center,
-                              overflow: TextOverflow.ellipsis,
-                              maxLines: 5,
+                              sliderList[index]['title'].toString(),
                               style: GoogleFonts.jost(
-                                fontSize: 15.0,
-                                color: kGreyTextColor,
+                                fontSize: 25.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
                               ),
                             ),
                           ),
-                        ),
-                      ],
-                    );
-                  },
-                ),
-              ],
+                          // ignore: sized_box_for_whitespace
+                          Padding(
+                            padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+                            // ignore: sized_box_for_whitespace
+                            child: Container(
+                              width: context.width(),
+                              child: Text(
+                                sliderList[index]['description'].toString(),
+                                textAlign: TextAlign.center,
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 5,
+                                style: GoogleFonts.jost(
+                                  fontSize: 15.0,
+                                  color: kGreyTextColor,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      );
+                    },
+                  ),
+                ],
+              ),
             ),
-          ),
-          DotIndicator(
-            currentDotSize: 15,
-            dotSize: 6,
-            pageController: pageController,
-            pages: sliderList,
-            indicatorColor: kMainColor,
-            unselectedIndicatorColor: Colors.grey,
-          ),
-          ButtonGlobal(
-            iconWidget: Icons.arrow_forward,
-            buttontext: buttonText,
-            iconColor: Colors.white,
-            buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
-            onPressed: () {
-              setState(
-                () {
-                  currentIndexPage < 2
-                      ? pageController.nextPage(duration: const Duration(microseconds: 1000), curve: Curves.bounceInOut)
-                      : const PhoneAuth().launch(context);
-                  // : const SignInScreen().launch(context);
-                },
-              );
-            },
-          ),
-        ],
+            DotIndicator(
+              currentDotSize: 15,
+              dotSize: 6,
+              pageController: pageController,
+              pages: sliderList,
+              indicatorColor: kMainColor,
+              unselectedIndicatorColor: Colors.grey,
+            ),
+            ButtonGlobal(
+              iconWidget: Icons.arrow_forward,
+              buttontext: buttonText,
+              iconColor: Colors.white,
+              buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
+              onPressed: () {
+                setState(
+                  () {
+                    currentIndexPage < 2 ? pageController.nextPage(duration: const Duration(microseconds: 1000), curve: Curves.bounceInOut) : const PhoneAuth().launch(context);
+                    // : const SignInScreen().launch(context);
+                  },
+                );
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
