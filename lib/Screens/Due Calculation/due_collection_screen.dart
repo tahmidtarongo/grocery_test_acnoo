@@ -1,7 +1,6 @@
 // ignore_for_file: unused_result
 
 import 'dart:convert';
-
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -375,10 +374,10 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                           height: 60,
                           width: 100,
                           decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), color: Colors.grey.shade200),
-                          child: Center(
+                          child: const Center(
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
-                              children: const [
+                              children: [
                                 Icon(
                                   FeatherIcons.camera,
                                   color: Colors.grey,
