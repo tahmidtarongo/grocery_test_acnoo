@@ -54,17 +54,17 @@ dependencies:
   modal_bottom_sheet: ^2.1.0
   platform: ^3.1.0
   flutter_riverpod: ^2.3.2
-  shimmer: ^2.0.0
+  shimmer: ^3.0.0
   cached_network_image: ^3.2.1
   url_launcher: ^6.1.5
   flutter_feather_icons: ^2.0.0+1
   bluetooth_thermal_printer: ^0.0.6
   esc_pos_utils: ^1.1.0
   permission_handler: ^10.0.0
-  flutter_paypal: ^0.0.8
+  flutter_paypal: ^0.2.0
   in_app_update: ^4.0.1
   shared_preferences: ^2.0.15
-  restart_app: ^1.1.0+1
+  restart_app: ^1.2.1
   intl: ^0.18.0
   pinput: ^2.2.12
   nb_utils: ^5.0.6
