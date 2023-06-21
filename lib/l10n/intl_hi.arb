@@ -1,4 +1,7 @@
 {
+  "purchaseReports": "खरीदारी रिपोर्ट",
+  "salesReports" : "बिक्री रिपोर्ट",
+  "dueReports" : "बकाया रिपोर्ट",
   "save": "बचाना",
   "update": "अद्यतन",
   "continueButton": "जारी रखना",

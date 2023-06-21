@@ -253,7 +253,6 @@ class _StockListState extends State<StockList> {
         totalStock = totalStock + int.parse(data['productStock']);
         totalSalePrice = totalSalePrice + (int.parse(data['productSalePrice']) * int.parse(data['productStock']));
         totalParPrice = totalParPrice + (int.parse(data['productPurchasePrice']) * int.parse(data['productStock']));
-
         // productList.add(ProductModel.fromJson(jsonDecode(jsonEncode(element.value))));
       }
     });

@@ -1,4 +1,7 @@
 {
+  "purchaseReports": "Purchase Report",
+  "salesReports" : "Sales Report",
+  "dueReports" : "Due Report",
   "save": "Αποθηκεύσετε",
   "update": "Εκσυγχρονίζω",
   "continueButton": "Εκσυγχρονίζω",
