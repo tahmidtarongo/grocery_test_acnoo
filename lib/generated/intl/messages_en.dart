@@ -139,8 +139,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "moreInfo": MessageLookupByLibrary.simpleMessage("More Info"),
         "mrp": MessageLookupByLibrary.simpleMessage("MRP"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
-        "noAcc":
-            MessageLookupByLibrary.simpleMessage("Haven\\\'t any account?"),
+        "noAcc": MessageLookupByLibrary.simpleMessage("Haven\'t any account?"),
         "noData": MessageLookupByLibrary.simpleMessage("No Data Available"),
         "noSupplier":
             MessageLookupByLibrary.simpleMessage("No Supplier Available"),

@@ -26,10 +26,6 @@ class SuccessScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer(builder: (context, ref, _) {
       final userRoleData = ref.watch(allUserRoleProvider);
-      ref.refresh(profileDetailsProvider);
-      ref.refresh(customerProvider);
-      ref.refresh(deliveryAddressProvider);
-      ref.refresh(productProvider);
       return userRoleData.when(data: (data) {
         if (email == 'phone') {
           currentUserData.putUserData(userId: FirebaseAuth.instance.currentUser!.uid, isSubUser: false, title: '', email: '');
