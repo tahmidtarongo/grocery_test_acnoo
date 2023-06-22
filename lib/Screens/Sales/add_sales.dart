@@ -548,10 +548,10 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                         height: 60,
                         width: 100,
                         decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), color: Colors.grey.shade200),
-                        child: Center(
+                        child: const Center(
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
-                            children: const [
+                            children: [
                               Icon(
                                 FeatherIcons.camera,
                                 color: Colors.grey,
@@ -772,7 +772,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                   EasyLoading.show(status: 'Loading...', dismissOnTap: false);
 
                                   DatabaseReference ref = FirebaseDatabase.instance.ref("$constUserId/Sales Transition");
-                                  ref.keepSynced(true);
+
 
                                   dueAmount <= 0 ? transitionModel.isPaid = true : transitionModel.isPaid = false;
                                   dueAmount <= 0 ? transitionModel.dueAmount = 0 : transitionModel.dueAmount = double.parse(dueAmount.toStringAsFixed(2));
@@ -800,8 +800,9 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
 
                                   transitionModel.totalQuantity = totalQuantity;
                                   transitionModel.lossProfit = double.parse(lossProfit.toStringAsFixed(2));
-
+                                  ref.keepSynced(true);
                                   ref.push().set(transitionModel.toJson());
+
 
                                   ///__________StockMange_________________________________________________-
 
@@ -812,9 +813,10 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                   ///_______invoice_Update_____________________________________________
                                   final DatabaseReference personalInformationRef =
                                       FirebaseDatabase.instance.ref().child(constUserId).child('Personal Information');
-                                  personalInformationRef.keepSynced(true);
 
-                                  personalInformationRef.update({'invoiceCounter': invoice + 1});
+
+                                 await personalInformationRef.update({'invoiceCounter': invoice + 1});
+                                  // personalInformationRef.keepSynced(true);
 
                                   ///________Subscription_____________________________________________________
                                   Subscription.decreaseSubscriptionLimits(itemType: 'saleNumber', context: context);

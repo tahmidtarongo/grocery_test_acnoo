@@ -1580,10 +1580,10 @@ class S {
     );
   }
 
-  /// `Haven\'t any account?`
+  /// `Haven't any account?`
   String get noAcc {
     return Intl.message(
-      'Haven\\\'t any account?',
+      'Haven\'t any account?',
       name: 'noAcc',
       desc: '',
       args: [],
