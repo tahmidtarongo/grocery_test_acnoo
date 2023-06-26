@@ -203,7 +203,7 @@ class _SalesListScreenState extends State<SalesListScreen> {
                                                     color: Colors.grey,
                                                   )),
                                               IconButton(
-                                                  onPressed: () => GeneratePdf().generateSaleDocument(reTransaction[index], data),
+                                                  onPressed: () => GeneratePdf().generateSaleDocument(reTransaction[index], data,context),
                                                   icon: const Icon(
                                                     Icons.picture_as_pdf,
                                                     color: Colors.grey,

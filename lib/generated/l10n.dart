@@ -960,10 +960,10 @@ class S {
     );
   }
 
-  /// `language`
+  /// `Language`
   String get language {
     return Intl.message(
-      'language',
+      'Language',
       name: 'language',
       desc: '',
       args: [],

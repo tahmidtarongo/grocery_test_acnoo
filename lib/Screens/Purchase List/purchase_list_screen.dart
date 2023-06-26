@@ -206,7 +206,7 @@ class _PurchaseReportState extends State<PurchaseListScreen> {
                                                     color: Colors.grey,
                                                   )),
                                               IconButton(
-                                                  onPressed: () => GeneratePdf().generatePurchaseDocument(reTransaction[index], data),
+                                                  onPressed: () => GeneratePdf().generatePurchaseDocument(reTransaction[index], data,context),
                                                   icon: const Icon(
                                                     Icons.picture_as_pdf,
                                                     color: Colors.grey,

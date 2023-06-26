@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -7,6 +9,7 @@ import 'package:mobile_pos/Provider/printer_provider.dart';
 import 'package:mobile_pos/Provider/transactions_provider.dart';
 import 'package:mobile_pos/model/print_transaction_model.dart';
 import 'package:nb_utils/nb_utils.dart';
+import 'package:path_provider/path_provider.dart';
 
 import '../../../GlobalComponents/generate_pdf.dart';
 import '../../../Provider/profile_provider.dart';
@@ -41,6 +44,12 @@ class _SalesReportScreenState extends State<SalesReportScreen> {
       toDate = DateTime.now();
       toDateTextEditingController = TextEditingController(text: DateFormat.yMMMd().format(DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day)));
     });
+  }
+
+  Future<String> getPDFPath({required String data}) async {
+    Directory appDocDir = await getApplicationDocumentsDirectory();
+    String appDocPath = appDocDir.path;
+    return '$appDocPath/your_pdf_file.pdf'; // Replace with the actual file name
   }
 
   @override
@@ -166,7 +175,7 @@ class _SalesReportScreenState extends State<SalesReportScreen> {
                                       crossAxisAlignment: CrossAxisAlignment.center,
                                       children: [
                                         Text(
-                                          totalSale.toString(),
+                                          totalSale.toStringAsFixed(2),
                                           style: const TextStyle(
                                             color: Colors.green,
                                             fontSize: 20,
@@ -387,7 +396,7 @@ class _SalesReportScreenState extends State<SalesReportScreen> {
                                                               color: Colors.grey,
                                                             )),
                                                         IconButton(
-                                                            onPressed: () => GeneratePdf().generateSaleDocument(reTransaction[index], data),
+                                                            onPressed: () => GeneratePdf().generateSaleDocument(reTransaction[index], data,context),
                                                             icon: const Icon(
                                                               Icons.picture_as_pdf,
                                                               color: Colors.grey,

@@ -122,7 +122,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "inv": MessageLookupByLibrary.simpleMessage("Inv No."),
         "invoice": MessageLookupByLibrary.simpleMessage("Invoice"),
         "itemAdded": MessageLookupByLibrary.simpleMessage("Item Added"),
-        "language": MessageLookupByLibrary.simpleMessage("language"),
+        "language": MessageLookupByLibrary.simpleMessage("Language"),
         "loading": MessageLookupByLibrary.simpleMessage("Loading"),
         "logIn": MessageLookupByLibrary.simpleMessage("Log In"),
         "logInWithMail":
