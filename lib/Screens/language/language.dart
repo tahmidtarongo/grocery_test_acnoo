@@ -4,6 +4,7 @@ import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../constant.dart';
+import '../Home/home.dart';
 import '../Settings/settings_screen.dart';
 import 'language_provider.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
@@ -91,7 +92,7 @@ class _SelectLanguageState extends State<SelectLanguage> {
                   (value) => Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const SettingScreen(),
+                      builder: (context) => const Home(),
                     ),
                   ),
                 );
