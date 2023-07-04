@@ -46,7 +46,7 @@ dependencies:
   firebase_database: ^10.0.14
   firebase_auth: ^4.2.9
   firebase_storage: ^11.0.13
-  image_picker: ^0.8.5+3
+  image_picker: ^1.0.0
   flutter_barcode_scanner: ^2.0.0
   flutter_cart: ^0.0.7
   flutter_easyloading: ^3.0.5
@@ -67,7 +67,7 @@ dependencies:
   restart_app: ^1.2.1
   intl: ^0.18.0
   pinput: ^2.2.12
-  nb_utils: ^5.0.6
+  nb_utils: ^6.0.0
   youtube_player_flutter: ^8.1.1
   pdf: ^3.8.4
   open_file: ^3.2.1
