@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -61,15 +63,9 @@ class _SplashScreenState extends State<SplashScreen> {
 
   getCurrency() async {
     final prefs = await SharedPreferences.getInstance();
-    String? data = prefs.getString('currency');
-    String? dataName = prefs.getString('currencyName');
-    if (!data.isEmptyOrNull) {
-      currency = data!;
-      currencyName = dataName!;
-    } else {
-      currency = currency;
-      currencyName = currencyName;
-    }
+    currency = prefs.getString('currency') ?? '\$';
+    currencyName = prefs.getString('currencyName')??'Dollar';
+
   }
 
   var currentUser = FirebaseAuth.instance.currentUser;
@@ -251,10 +247,8 @@ class _SplashScreenState extends State<SplashScreen> {
                                       await prefs.setString('skipVersion', newUpdateVersion);
 
                                       if (currentUser != null) {
-                                        // ignore: use_build_context_synchronously
                                         const Home().launch(context);
                                       } else {
-                                        // ignore: use_build_context_synchronously
                                         const OnBoard().launch(context);
                                       }
                                     },
@@ -382,10 +376,8 @@ class _SplashScreenState extends State<SplashScreen> {
                                     await prefs.setString('skipVersion', newUpdateVersion);
 
                                     if (currentUser != null) {
-                                      // ignore: use_build_context_synchronously
                                       const Home().launch(context);
                                     } else {
-                                      // ignore: use_build_context_synchronously
                                       const OnBoard().launch(context);
                                     }
                                   },

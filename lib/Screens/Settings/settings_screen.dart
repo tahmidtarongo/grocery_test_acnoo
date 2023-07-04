@@ -13,6 +13,7 @@ import '../../Provider/profile_provider.dart';
 import '../../constant.dart';
 import '../../currency.dart';
 import '../../model/personal_information_model.dart';
+import '../Currency/currency_screen.dart';
 import '../Shimmers/home_screen_appbar_shimmer.dart';
 import '../language/language.dart';
 import '../subscription/package_screen.dart';
@@ -596,24 +597,31 @@ class _SettingScreenState extends State<SettingScreen> {
                   ),
                 ).visible(!isSubUser),
 
-                ///_____________________________________________________________________________
+                ///____________Currency________________________________________________
                 ListTile(
-                  onTap: () {
-                    showCurrencyPicker(
-                      context: context,
-                      showFlag: true,
-                      showCurrencyName: true,
-                      showCurrencyCode: true,
-                      onSelect: (Currency c) async {
-                        final prefs = await SharedPreferences.getInstance();
-                        await prefs.setString('currency', c.symbol);
-                        await prefs.setString('currencyName', c.name);
-                        setState(() {
-                          currency = c.symbol;
-                          currencyName = c.name;
-                        });
-                      },
-                    );
+                  onTap: () async {
+
+                     await const CurrencyScreen().launch(context);
+
+                     setState(() {
+
+                     });
+
+                    // showCurrencyPicker(
+                    //   context: context,
+                    //   showFlag: true,
+                    //   showCurrencyName: true,
+                    //   showCurrencyCode: true,
+                    //   onSelect: (Currency c) async {
+                    //     final prefs = await SharedPreferences.getInstance();
+                    //     await prefs.setString('currency', c.symbol);
+                    //     await prefs.setString('currencyName', c.name);
+                    //     setState(() {
+                    //       currency = c.symbol;
+                    //       currencyName = c.name;
+                    //     });
+                    //   },
+                    // );
                   },
                   title: Text(
                     lang.S.of(context).currency,
