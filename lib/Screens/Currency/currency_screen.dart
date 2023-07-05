@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Provider/currency_provider.dart';
+import 'package:mobile_pos/model/currency_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../constant.dart';
 import '../../currency.dart';
@@ -14,6 +15,8 @@ class CurrencyScreen extends StatefulWidget {
 }
 
 class _CurrencyScreenState extends State<CurrencyScreen> {
+  CurrencyModel selectedCurrency = CurrencyModel(name: currencyName, symbol: currency);
+
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, ref, __) {
@@ -44,16 +47,12 @@ class _CurrencyScreenState extends State<CurrencyScreen> {
                   itemBuilder: (BuildContext context, int index) {
                     return Card(
                       child: ListTile(
-                        selected: currencyName == currencys[index].name,
+                        selected: selectedCurrency.name == currencys[index].name,
                         selectedColor: Colors.white,
                         selectedTileColor: kMainColor.withOpacity(.7),
-                        onTap: () async {
-                          final prefs = await SharedPreferences.getInstance();
-                          await prefs.setString('currency', currencys[index].symbol);
-                          await prefs.setString('currencyName', currencys[index].name);
+                        onTap: () {
                           setState(() {
-                            currency = currencys[index].symbol;
-                            currencyName = currencys[index].name;
+                            selectedCurrency = currencys[index];
                           });
                         },
                         title: Text('${currencys[index].name} - ${currencys[index].symbol}'),
@@ -77,8 +76,15 @@ class _CurrencyScreenState extends State<CurrencyScreen> {
         bottomNavigationBar: Padding(
           padding: const EdgeInsets.all(10.0),
           child: GestureDetector(
-            onTap: () {
-              Navigator.pop(context);
+            onTap: () async {
+              final prefs = await SharedPreferences.getInstance();
+              await prefs.setString('currency', selectedCurrency.symbol);
+              await prefs.setString('currencyName', selectedCurrency.name);
+              setState(() {
+                currency = selectedCurrency.symbol;
+                currencyName = selectedCurrency.name;
+                Navigator.pop(context);
+              });
             },
             child: Container(
               height: 50,

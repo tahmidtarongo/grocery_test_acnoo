@@ -64,7 +64,7 @@ class _SplashScreenState extends State<SplashScreen> {
   getCurrency() async {
     final prefs = await SharedPreferences.getInstance();
     currency = prefs.getString('currency') ?? '\$';
-    currencyName = prefs.getString('currencyName') ?? 'Dollar';
+    currencyName = prefs.getString('currencyName') ?? 'United States Dollar';
   }
 
   var currentUser = FirebaseAuth.instance.currentUser;
