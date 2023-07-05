@@ -184,7 +184,7 @@ class _PackageScreenState extends State<PackageScreen> {
                         const SizedBox(height: 8),
                         Row(
                           children: [
-                             Text(
+                            Text(
                               lang.S.of(context).youRUsing,
                               style: const TextStyle(fontSize: 14),
                             ),
@@ -218,7 +218,7 @@ class _PackageScreenState extends State<PackageScreen> {
                 ),
               ).visible(Subscription.customersActivePlan.subscriptionName != 'Free'),
               const SizedBox(height: 20),
-               Text(
+              Text(
                 lang.S.of(context).packFeatures,
                 style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
@@ -253,8 +253,8 @@ class _PackageScreenState extends State<PackageScreen> {
                                       '(${initialPackageService?[i] ?? ''}/${mainPackageService?[i].toString()})',
                                       style: const TextStyle(color: Colors.grey),
                                     )
-                                  :  Text(
-                                lang.S.of(context).unlimited,
+                                  : Text(
+                                      lang.S.of(context).unlimited,
                                       style: const TextStyle(color: Colors.grey),
                                     ),
                             ),
@@ -281,7 +281,7 @@ class _PackageScreenState extends State<PackageScreen> {
                     color: kMainColor,
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                   ),
-                  child:  Center(
+                  child: Center(
                     child: Text(
                       lang.S.of(context).updateNow,
                       style: const TextStyle(fontSize: 18, color: Colors.white),

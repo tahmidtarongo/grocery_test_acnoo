@@ -3,12 +3,10 @@
 import 'dart:io';
 
 import 'package:date_time_format/date_time_format.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:mobile_pos/model/due_transaction_model.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:open_file/open_file.dart';
 import 'package:pdf/pdf.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:pdf/widgets.dart' as pw;
@@ -901,7 +899,7 @@ class GeneratePdf {
     }
   }
 
-  Future<void> generateDueDocument(DueTransactionModel transactions, PersonalInformationModel personalInformation,BuildContext context) async {
+  Future<void> generateDueDocument(DueTransactionModel transactions, PersonalInformationModel personalInformation, BuildContext context) async {
     final pw.Document doc = pw.Document();
     // final netImage = await networkImage(
     //   personalInformation.pictureUrl.toString(),

@@ -1,3 +1,4 @@
+// ignore_for_file: unused_result
 
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
@@ -199,9 +200,7 @@ class _SalesDetailsState extends State<SalesDetails> {
                     ),
                     const Spacer(),
                     Text(
-                      providerData.discountType == 'USD'
-                          ? providerData.discount.toString()
-                          : '${providerData.discount} %',
+                      providerData.discountType == 'USD' ? providerData.discount.toString() : '${providerData.discount} %',
                       style: GoogleFonts.poppins(
                         color: kGreyTextColor,
                         fontSize: 15.0,
@@ -251,11 +250,9 @@ class _SalesDetailsState extends State<SalesDetails> {
                       .reference()
                       .child(constUserId)
                       .child('Sales Report');
-                  SalesReport salesReport = SalesReport(
-                      customer, providerData.getTotalAmount().toString(), providerData.cartItemList.length.toString());
+                  SalesReport salesReport = SalesReport(customer, providerData.getTotalAmount().toString(), providerData.cartItemList.length.toString());
                   await salesReportRef.push().set(salesReport.toJson());
                   EasyLoading.dismiss();
-
 
                   Future.delayed(const Duration(milliseconds: 500), () {
                     ref.refresh(productProvider);
@@ -272,6 +269,4 @@ class _SalesDetailsState extends State<SalesDetails> {
       );
     });
   }
-
-
 }

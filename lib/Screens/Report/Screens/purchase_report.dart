@@ -42,6 +42,7 @@ class _PurchaseReportState extends State<PurchaseReportScreen> {
       toDateTextEditingController = TextEditingController(text: DateFormat.yMMMd().format(DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day)));
     });
   }
+
   @override
   Widget build(BuildContext context) {
     totalPurchase = 0;
@@ -149,98 +150,98 @@ class _PurchaseReportState extends State<PurchaseReportScreen> {
                   }
                   return reTransaction.isNotEmpty
                       ? Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(20.0),
-                            child: Container(
-                              height: 100,
-                              width: double.infinity,
-                              decoration: BoxDecoration(
-                                  color: kMainColor.withOpacity(0.1), border: Border.all(width: 1, color: kMainColor), borderRadius: const BorderRadius.all(Radius.circular(15))),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                children: [
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        totalPurchase.toString(),
-                                        style: const TextStyle(
-                                          color: Colors.green,
-                                          fontSize: 20,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(20.0),
+                              child: Container(
+                                height: 100,
+                                width: double.infinity,
+                                decoration: BoxDecoration(
+                                    color: kMainColor.withOpacity(0.1), border: Border.all(width: 1, color: kMainColor), borderRadius: const BorderRadius.all(Radius.circular(15))),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                  children: [
+                                    Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          totalPurchase.toString(),
+                                          style: const TextStyle(
+                                            color: Colors.green,
+                                            fontSize: 20,
+                                          ),
                                         ),
-                                      ),
-                                      const SizedBox(height: 10),
-                                      const Text(
-                                        'Total Purchase',
-                                        style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 16,
+                                        const SizedBox(height: 10),
+                                        const Text(
+                                          'Total Purchase',
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 16,
+                                          ),
                                         ),
-                                      ),
-                                    ],
-                                  ),
-                                  Container(
-                                    width: 1,
-                                    height: 60,
-                                    color: kMainColor,
-                                  ),
-                                  Container(
-                                    height: 40,
-                                    width: 150,
-                                    padding: const EdgeInsets.all(5),
-                                    decoration: BoxDecoration(border: Border.all(color: kMainColor, width: 1), borderRadius: const BorderRadius.all(Radius.circular(8))),
-                                    child: DropdownButtonHideUnderline(
-                                      child: DropdownButton(
-                                        underline: null,
-                                        // underline: const Divider(color: Colors.black),
-                                        value: dropdownValue,
-                                        icon: const Icon(Icons.keyboard_arrow_down),
-                                        items: timeLimit.map((String items) {
-                                          return DropdownMenuItem(
-                                            value: items,
-                                            child: Text(items),
-                                          );
-                                        }).toList(),
-                                        onChanged: (newValue) {
-                                          setState(() {
-                                            dropdownValue = newValue.toString();
+                                      ],
+                                    ),
+                                    Container(
+                                      width: 1,
+                                      height: 60,
+                                      color: kMainColor,
+                                    ),
+                                    Container(
+                                      height: 40,
+                                      width: 150,
+                                      padding: const EdgeInsets.all(5),
+                                      decoration: BoxDecoration(border: Border.all(color: kMainColor, width: 1), borderRadius: const BorderRadius.all(Radius.circular(8))),
+                                      child: DropdownButtonHideUnderline(
+                                        child: DropdownButton(
+                                          underline: null,
+                                          // underline: const Divider(color: Colors.black),
+                                          value: dropdownValue,
+                                          icon: const Icon(Icons.keyboard_arrow_down),
+                                          items: timeLimit.map((String items) {
+                                            return DropdownMenuItem(
+                                              value: items,
+                                              child: Text(items),
+                                            );
+                                          }).toList(),
+                                          onChanged: (newValue) {
+                                            setState(() {
+                                              dropdownValue = newValue.toString();
 
-                                            switch (newValue) {
-                                              case 'ToDay':
-                                                changeDate(from: DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day));
-                                                break;
-                                              case 'This Week':
-                                                changeDate(from: DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().weekday));
-                                                break;
-                                              case 'This Month':
-                                                changeDate(from: DateTime(DateTime.now().year, DateTime.now().month, 1));
-                                                break;
-                                              case 'This Year':
-                                                changeDate(from: DateTime(DateTime.now().year, 1, 1));
-                                                break;
-                                              case 'All Time':
-                                                changeDate(from: DateTime(2020, 1, 1));
-                                                break;
-                                            }
-                                          });
-                                        },
+                                              switch (newValue) {
+                                                case 'ToDay':
+                                                  changeDate(from: DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day));
+                                                  break;
+                                                case 'This Week':
+                                                  changeDate(from: DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().weekday));
+                                                  break;
+                                                case 'This Month':
+                                                  changeDate(from: DateTime(DateTime.now().year, DateTime.now().month, 1));
+                                                  break;
+                                                case 'This Year':
+                                                  changeDate(from: DateTime(DateTime.now().year, 1, 1));
+                                                  break;
+                                                case 'All Time':
+                                                  changeDate(from: DateTime(2020, 1, 1));
+                                                  break;
+                                              }
+                                            });
+                                          },
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
-                          ),
-                          ListView.builder(
+                            ListView.builder(
                               shrinkWrap: true,
                               physics: const NeverScrollableScrollPhysics(),
                               itemCount: reTransaction.length,
                               itemBuilder: (context, index) {
                                 return Visibility(
                                   visible: (fromDate.isBefore(DateTime.parse(reTransaction[index].purchaseDate)) ||
-                                      DateTime.parse(reTransaction[index].purchaseDate).isAtSameMomentAs(fromDate)) &&
+                                          DateTime.parse(reTransaction[index].purchaseDate).isAtSameMomentAs(fromDate)) &&
                                       (toDate.isAfter(DateTime.parse(reTransaction[index].purchaseDate)) ||
                                           DateTime.parse(reTransaction[index].purchaseDate).isAtSameMomentAs(toDate)),
                                   child: GestureDetector(
@@ -315,8 +316,8 @@ class _PurchaseReportState extends State<PurchaseReportScreen> {
                                                               if ((Theme.of(context).platform == TargetPlatform.android)) {
                                                                 ///________Print_______________________________________________________
                                                                 await printerData.getBluetooth();
-                                                                PrintPurchaseTransactionModel model = PrintPurchaseTransactionModel(
-                                                                    purchaseTransitionModel: reTransaction[index], personalInformationModel: data);
+                                                                PrintPurchaseTransactionModel model =
+                                                                    PrintPurchaseTransactionModel(purchaseTransitionModel: reTransaction[index], personalInformationModel: data);
                                                                 if (connected) {
                                                                   await printerData.printTicket(
                                                                     printTransactionModel: model,
@@ -388,7 +389,7 @@ class _PurchaseReportState extends State<PurchaseReportScreen> {
                                                               color: Colors.grey,
                                                             )),
                                                         IconButton(
-                                                            onPressed: () => GeneratePdf().generatePurchaseDocument(reTransaction[index], data,context),
+                                                            onPressed: () => GeneratePdf().generatePurchaseDocument(reTransaction[index], data, context),
                                                             icon: const Icon(
                                                               Icons.picture_as_pdf,
                                                               color: Colors.grey,
@@ -416,8 +417,8 @@ class _PurchaseReportState extends State<PurchaseReportScreen> {
                                 );
                               },
                             ),
-                        ],
-                      )
+                          ],
+                        )
                       : Center(
                           child: Text(
                             lang.S.of(context).addNewPurchase,

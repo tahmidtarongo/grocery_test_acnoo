@@ -208,8 +208,7 @@ class _DueInvoiceDetailsState extends State<DueInvoiceDetails> {
             child: GestureDetector(
               onTap: () async {
                 await printerData.getBluetooth();
-                PrintDueTransactionModel model =
-                    PrintDueTransactionModel(dueTransactionModel: widget.transitionModel, personalInformationModel: widget.personalInformationModel);
+                PrintDueTransactionModel model = PrintDueTransactionModel(dueTransactionModel: widget.transitionModel, personalInformationModel: widget.personalInformationModel);
                 mainConstant.connected
                     ? printerData.printTicket(
                         printDueTransactionModel: model,

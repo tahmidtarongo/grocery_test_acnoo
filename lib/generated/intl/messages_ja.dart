@@ -80,8 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "editSalesInvoice": MessageLookupByLibrary.simpleMessage("売上請求書の編集"),
         "email": MessageLookupByLibrary.simpleMessage("電子メールアドレス"),
         "emailText": MessageLookupByLibrary.simpleMessage("Eメール"),
-        "enterEmail": MessageLookupByLibrary.simpleMessage(
-            "パスワードリセットリンクを受け取るには、以下にメールアドレスを入力してください。"),
+        "enterEmail": MessageLookupByLibrary.simpleMessage("パスワードリセットリンクを受け取るには、以下にメールアドレスを入力してください。"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("経費の分類"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("経費の日付"),
         "expenseFor": MessageLookupByLibrary.simpleMessage("費用"),
@@ -144,8 +143,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "recentTransaction": MessageLookupByLibrary.simpleMessage("最近の取引"),
         "referenceNo": MessageLookupByLibrary.simpleMessage("参照番号"),
         "register": MessageLookupByLibrary.simpleMessage("登録"),
-        "registerTitle":
-            MessageLookupByLibrary.simpleMessage("開始せずに電話を登録する必要があります。"),
+        "registerTitle": MessageLookupByLibrary.simpleMessage("開始せずに電話を登録する必要があります。"),
         "reports": MessageLookupByLibrary.simpleMessage("レポート"),
         "retailer": MessageLookupByLibrary.simpleMessage("小売業者"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("返品金額"),
@@ -160,11 +158,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "select": MessageLookupByLibrary.simpleMessage("選択する"),
         "selectLang": MessageLookupByLibrary.simpleMessage("あなたが使う言語を選んでください"),
         "sendCode": MessageLookupByLibrary.simpleMessage("コードを送信"),
-        "sendEmail": MessageLookupByLibrary.simpleMessage(
-            "パスワードをリセットする方法を記載したメールを次の宛先に送信しました。"),
+        "sendEmail": MessageLookupByLibrary.simpleMessage("パスワードをリセットする方法を記載したメールを次の宛先に送信しました。"),
         "sendLink": MessageLookupByLibrary.simpleMessage("リセットリンクを送信"),
-        "setUpDesc": MessageLookupByLibrary.simpleMessage(
-            "プロフィールを更新して、医師とのつながりをより良い印象にしましょう"),
+        "setUpDesc": MessageLookupByLibrary.simpleMessage("プロフィールを更新して、医師とのつながりをより良い印象にしましょう"),
         "setUpProfile": MessageLookupByLibrary.simpleMessage("プロフィールを設定する"),
         "staffLogin": MessageLookupByLibrary.simpleMessage("スタッフログイン"),
         "stillUnpaid": MessageLookupByLibrary.simpleMessage("まだ未払い"),

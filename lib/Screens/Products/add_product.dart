@@ -1,3 +1,5 @@
+// ignore_for_file: unused_result, use_build_context_synchronously
+
 import 'dart:io';
 
 import 'package:firebase_core/firebase_core.dart' as firebase_core;
@@ -746,12 +748,11 @@ class _AddProductState extends State<AddProduct> {
                   onPressed: () async {
                     if (!codeList.contains(productCode.toLowerCase()) && !productNameList.contains(productName.toLowerCase())) {
                       bool result = await InternetConnectionChecker().hasConnection;
-                      if(result){
+                      if (result) {
                         bool status = await PurchaseModel().isActiveBuyer();
-                        if(status){
+                        if (status) {
                           try {
                             EasyLoading.show(status: 'Loading...', dismissOnTap: false);
-
 
                             imagePath == 'No Data' ? null : await uploadFile(imagePath);
                             // ignore: no_leading_underscores_for_local_identifiers
@@ -790,10 +791,10 @@ class _AddProductState extends State<AddProduct> {
                             EasyLoading.dismiss();
                             ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
                           }
-                        }else{
+                        } else {
                           showLicensePage(context: context);
                         }
-                      }else{
+                      } else {
                         try {
                           EasyLoading.show(status: 'Loading...', dismissOnTap: false);
                           imagePath == 'No Data' ? null : await uploadFile(imagePath);

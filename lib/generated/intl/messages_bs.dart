@@ -22,27 +22,19 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "CustomerDetails":
-            MessageLookupByLibrary.simpleMessage("Customer Details"),
-        "addAPurchase":
-            MessageLookupByLibrary.simpleMessage("Molimo dodajte kupovinu"),
+        "CustomerDetails": MessageLookupByLibrary.simpleMessage("Customer Details"),
+        "addAPurchase": MessageLookupByLibrary.simpleMessage("Molimo dodajte kupovinu"),
         "addBrand": MessageLookupByLibrary.simpleMessage("Add Brand"),
         "addContact": MessageLookupByLibrary.simpleMessage("Dodaj kontakt"),
-        "addCustomer":
-            MessageLookupByLibrary.simpleMessage("Molimo dodajte kupca"),
+        "addCustomer": MessageLookupByLibrary.simpleMessage("Molimo dodajte kupca"),
         "addExpense": MessageLookupByLibrary.simpleMessage("Add Expense"),
-        "addExpenseCat":
-            MessageLookupByLibrary.simpleMessage("Dodajte kategoriju troškova"),
+        "addExpenseCat": MessageLookupByLibrary.simpleMessage("Dodajte kategoriju troškova"),
         "addItems": MessageLookupByLibrary.simpleMessage("Dodaj stavke"),
-        "addNewProduct":
-            MessageLookupByLibrary.simpleMessage("Dodaj novi proizvod"),
-        "addNewPurchase":
-            MessageLookupByLibrary.simpleMessage("Molimo dodajte kupovinu"),
-        "addProduct":
-            MessageLookupByLibrary.simpleMessage("Molimo dodajte proizvod"),
+        "addNewProduct": MessageLookupByLibrary.simpleMessage("Dodaj novi proizvod"),
+        "addNewPurchase": MessageLookupByLibrary.simpleMessage("Molimo dodajte kupovinu"),
+        "addProduct": MessageLookupByLibrary.simpleMessage("Molimo dodajte proizvod"),
         "addPurchase": MessageLookupByLibrary.simpleMessage("Dodaj kupovinu"),
-        "addSale":
-            MessageLookupByLibrary.simpleMessage("Molimo dodajte rasprodaju"),
+        "addSale": MessageLookupByLibrary.simpleMessage("Molimo dodajte rasprodaju"),
         "addSales": MessageLookupByLibrary.simpleMessage("Dodaj prodaju"),
         "addUnit": MessageLookupByLibrary.simpleMessage("Dodaj jedinicu"),
         "address": MessageLookupByLibrary.simpleMessage("Adresa"),
@@ -50,40 +42,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "amount": MessageLookupByLibrary.simpleMessage("Iznos"),
         "brandName": MessageLookupByLibrary.simpleMessage("Brand name"),
         "brands": MessageLookupByLibrary.simpleMessage("Brendovi"),
-        "businessCat":
-            MessageLookupByLibrary.simpleMessage("Poslovna kategorija"),
-        "businessName":
-            MessageLookupByLibrary.simpleMessage("Naziv kompanije i preduzeća"),
-        "buyPremium":
-            MessageLookupByLibrary.simpleMessage("Kupite premium plan"),
+        "businessCat": MessageLookupByLibrary.simpleMessage("Poslovna kategorija"),
+        "businessName": MessageLookupByLibrary.simpleMessage("Naziv kompanije i preduzeća"),
+        "buyPremium": MessageLookupByLibrary.simpleMessage("Kupite premium plan"),
         "camera": MessageLookupByLibrary.simpleMessage("Kamera"),
         "cancel": MessageLookupByLibrary.simpleMessage("Otkaži"),
-        "categoryName":
-            MessageLookupByLibrary.simpleMessage("Naziv kategorije"),
-        "changePassword":
-            MessageLookupByLibrary.simpleMessage("Promijeni lozinku"),
+        "categoryName": MessageLookupByLibrary.simpleMessage("Naziv kategorije"),
+        "changePassword": MessageLookupByLibrary.simpleMessage("Promijeni lozinku"),
         "checkEmail": MessageLookupByLibrary.simpleMessage("Provjeri email"),
-        "chooseCustomer":
-            MessageLookupByLibrary.simpleMessage("Odaberite kupca"),
-        "chooseSupplier":
-            MessageLookupByLibrary.simpleMessage("Odaberite dobavljača"),
-        "clickToConnect":
-            MessageLookupByLibrary.simpleMessage("Kliknite za povezivanje"),
+        "chooseCustomer": MessageLookupByLibrary.simpleMessage("Odaberite kupca"),
+        "chooseSupplier": MessageLookupByLibrary.simpleMessage("Odaberite dobavljača"),
+        "clickToConnect": MessageLookupByLibrary.simpleMessage("Kliknite za povezivanje"),
         "close": MessageLookupByLibrary.simpleMessage("Zatvori"),
         "collectDue": MessageLookupByLibrary.simpleMessage("Collect Due"),
-        "collectDues":
-            MessageLookupByLibrary.simpleMessage("Molimo prikupiti dug"),
-        "companyAddress":
-            MessageLookupByLibrary.simpleMessage("Adresa kompanije"),
+        "collectDues": MessageLookupByLibrary.simpleMessage("Molimo prikupiti dug"),
+        "companyAddress": MessageLookupByLibrary.simpleMessage("Adresa kompanije"),
         "confirmPass": MessageLookupByLibrary.simpleMessage("Potvrdi šifru"),
         "congratulation": MessageLookupByLibrary.simpleMessage("Čestitam"),
-        "connect":
-            MessageLookupByLibrary.simpleMessage("Kliknite za povezivanje"),
-        "connectPrinter":
-            MessageLookupByLibrary.simpleMessage("Povežite svoj štampač"),
+        "connect": MessageLookupByLibrary.simpleMessage("Kliknite za povezivanje"),
+        "connectPrinter": MessageLookupByLibrary.simpleMessage("Povežite svoj štampač"),
         "continueButton": MessageLookupByLibrary.simpleMessage("Nastavi"),
-        "createAcc":
-            MessageLookupByLibrary.simpleMessage("Kreirajte besplatni nalog"),
+        "createAcc": MessageLookupByLibrary.simpleMessage("Kreirajte besplatni nalog"),
         "currency": MessageLookupByLibrary.simpleMessage("Valuta"),
         "customerName": MessageLookupByLibrary.simpleMessage("Ime kupca"),
         "date": MessageLookupByLibrary.simpleMessage("Datum"),
@@ -96,24 +75,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "dueList": MessageLookupByLibrary.simpleMessage("Due List"),
         "dueReport": MessageLookupByLibrary.simpleMessage("Due Report"),
         "edit": MessageLookupByLibrary.simpleMessage("Uredi"),
-        "editPhone":
-            MessageLookupByLibrary.simpleMessage("Urediti broj telefona?"),
-        "editPurchaseInvoice":
-            MessageLookupByLibrary.simpleMessage("Uredite fakturu za kupovinu"),
-        "editSalesInvoice":
-            MessageLookupByLibrary.simpleMessage("Uredite fakturu prodaje"),
+        "editPhone": MessageLookupByLibrary.simpleMessage("Urediti broj telefona?"),
+        "editPurchaseInvoice": MessageLookupByLibrary.simpleMessage("Uredite fakturu za kupovinu"),
+        "editSalesInvoice": MessageLookupByLibrary.simpleMessage("Uredite fakturu prodaje"),
         "email": MessageLookupByLibrary.simpleMessage("E-mail adresa"),
         "emailText": MessageLookupByLibrary.simpleMessage("Email"),
-        "enterEmail": MessageLookupByLibrary.simpleMessage(
-            "Molimo unesite svoju adresu e-pošte ispod da dobijete link za poništavanje lozinke."),
-        "expenseCat":
-            MessageLookupByLibrary.simpleMessage("Kategorije troškova"),
+        "enterEmail": MessageLookupByLibrary.simpleMessage("Molimo unesite svoju adresu e-pošte ispod da dobijete link za poništavanje lozinke."),
+        "expenseCat": MessageLookupByLibrary.simpleMessage("Kategorije troškova"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("Datum troška"),
         "expenseFor": MessageLookupByLibrary.simpleMessage("Expense For"),
-        "expenseReport":
-            MessageLookupByLibrary.simpleMessage("Izvještaj o troškovima"),
-        "forgotPassword":
-            MessageLookupByLibrary.simpleMessage("Zaboravili ste lozinku"),
+        "expenseReport": MessageLookupByLibrary.simpleMessage("Izvještaj o troškovima"),
+        "forgotPassword": MessageLookupByLibrary.simpleMessage("Zaboravili ste lozinku"),
         "freePack": MessageLookupByLibrary.simpleMessage("Besplatni paket"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Besplatni plan"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Od datuma"),
@@ -127,29 +99,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "language": MessageLookupByLibrary.simpleMessage("jezik"),
         "loading": MessageLookupByLibrary.simpleMessage("Učitavanje"),
         "logIn": MessageLookupByLibrary.simpleMessage("Ulogovati se"),
-        "logInWithMail":
-            MessageLookupByLibrary.simpleMessage("Prijavite se putem e-pošte"),
+        "logInWithMail": MessageLookupByLibrary.simpleMessage("Prijavite se putem e-pošte"),
         "logOut": MessageLookupByLibrary.simpleMessage("Odjaviti se"),
-        "loginWithPhone":
-            MessageLookupByLibrary.simpleMessage("Prijavite se putem telefona"),
+        "loginWithPhone": MessageLookupByLibrary.simpleMessage("Prijavite se putem telefona"),
         "loss": MessageLookupByLibrary.simpleMessage("Gubitak"),
         "lp": MessageLookupByLibrary.simpleMessage("Gubitak/Profit"),
-        "lpDetails":
-            MessageLookupByLibrary.simpleMessage("Detalji o gubitku/profitu"),
+        "lpDetails": MessageLookupByLibrary.simpleMessage("Detalji o gubitku/profitu"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("Proizvođač"),
         "mobile": MessageLookupByLibrary.simpleMessage("Mobilni:"),
         "moreInfo": MessageLookupByLibrary.simpleMessage("Više informacija"),
         "mrp": MessageLookupByLibrary.simpleMessage("MRP"),
         "name": MessageLookupByLibrary.simpleMessage("Ime"),
         "noAcc": MessageLookupByLibrary.simpleMessage("Nemate nikakav račun?"),
-        "noData":
-            MessageLookupByLibrary.simpleMessage("Nema dostupnih podataka"),
-        "noSupplier":
-            MessageLookupByLibrary.simpleMessage("Dobavljač nije dostupan"),
+        "noData": MessageLookupByLibrary.simpleMessage("Nema dostupnih podataka"),
+        "noSupplier": MessageLookupByLibrary.simpleMessage("Dobavljač nije dostupan"),
         "note": MessageLookupByLibrary.simpleMessage("Bilješka"),
         "openingBalance": MessageLookupByLibrary.simpleMessage("Početni saldo"),
-        "packFeatures":
-            MessageLookupByLibrary.simpleMessage("Package Features"),
+        "packFeatures": MessageLookupByLibrary.simpleMessage("Package Features"),
         "paid": MessageLookupByLibrary.simpleMessage("Plaćeno"),
         "paidAmount": MessageLookupByLibrary.simpleMessage("Plaćeni iznos"),
         "partyList": MessageLookupByLibrary.simpleMessage("Lista stranaka"),
@@ -157,12 +123,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "paymentTypes": MessageLookupByLibrary.simpleMessage("Vrsta plaćanja"),
         "paypalPay": MessageLookupByLibrary.simpleMessage("Platite Paypalom"),
         "phone": MessageLookupByLibrary.simpleMessage("Telefonski broj"),
-        "phoneVerification":
-            MessageLookupByLibrary.simpleMessage("Telefonska verifikacija"),
+        "phoneVerification": MessageLookupByLibrary.simpleMessage("Telefonska verifikacija"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Premium plan"),
         "previousDue": MessageLookupByLibrary.simpleMessage("Previous Due"),
-        "previousPayAmount":
-            MessageLookupByLibrary.simpleMessage("Prethodni iznos plaćanja"),
+        "previousPayAmount": MessageLookupByLibrary.simpleMessage("Prethodni iznos plaćanja"),
         "printing": MessageLookupByLibrary.simpleMessage("Printing Option"),
         "product": MessageLookupByLibrary.simpleMessage("Proizvod"),
         "productCode": MessageLookupByLibrary.simpleMessage("Kod proizvoda"),
@@ -172,18 +136,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "profit": MessageLookupByLibrary.simpleMessage("Profit"),
         "purchase": MessageLookupByLibrary.simpleMessage("Kupovina"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("Lista kupovine"),
-        "purchasePremium":
-            MessageLookupByLibrary.simpleMessage("Kupite Premium plan"),
+        "purchasePremium": MessageLookupByLibrary.simpleMessage("Kupite Premium plan"),
         "purchasePrice": MessageLookupByLibrary.simpleMessage("Otkupna cijena"),
-        "purchaseReport":
-            MessageLookupByLibrary.simpleMessage("Izvještaj o kupovini"),
+        "purchaseReport": MessageLookupByLibrary.simpleMessage("Izvještaj o kupovini"),
         "quantity": MessageLookupByLibrary.simpleMessage("Količina"),
-        "recentTransaction":
-            MessageLookupByLibrary.simpleMessage("Nedavne transakcije"),
+        "recentTransaction": MessageLookupByLibrary.simpleMessage("Nedavne transakcije"),
         "referenceNo": MessageLookupByLibrary.simpleMessage("Referentni broj"),
         "register": MessageLookupByLibrary.simpleMessage("Registrirajte se"),
-        "registerTitle": MessageLookupByLibrary.simpleMessage(
-            "Moramo registrovati vaš telefon bez početka!"),
+        "registerTitle": MessageLookupByLibrary.simpleMessage("Moramo registrovati vaš telefon bez početka!"),
         "reports": MessageLookupByLibrary.simpleMessage("Izvještaji"),
         "retailer": MessageLookupByLibrary.simpleMessage("Prodavac na malo"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("Povratni iznos"),
@@ -191,24 +151,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "saleList": MessageLookupByLibrary.simpleMessage("Sales List"),
         "salePrice": MessageLookupByLibrary.simpleMessage("Prodajna cijena"),
         "salesDetails": MessageLookupByLibrary.simpleMessage("Sales Details"),
-        "salesReport":
-            MessageLookupByLibrary.simpleMessage("Izvještaj o prodaji"),
+        "salesReport": MessageLookupByLibrary.simpleMessage("Izvještaj o prodaji"),
         "save": MessageLookupByLibrary.simpleMessage("Sačuvaj"),
-        "saveNPublish":
-            MessageLookupByLibrary.simpleMessage("Sačuvaj i objavi"),
+        "saveNPublish": MessageLookupByLibrary.simpleMessage("Sačuvaj i objavi"),
         "search": MessageLookupByLibrary.simpleMessage("Traži"),
         "select": MessageLookupByLibrary.simpleMessage("Odaberite"),
-        "selectLang":
-            MessageLookupByLibrary.simpleMessage("Odaberite Vaš jezik"),
+        "selectLang": MessageLookupByLibrary.simpleMessage("Odaberite Vaš jezik"),
         "sendCode": MessageLookupByLibrary.simpleMessage("Pošalji kod"),
-        "sendEmail": MessageLookupByLibrary.simpleMessage(
-            "Poslali smo e-mail sa uputstvima kako da poništim lozinku na:"),
-        "sendLink":
-            MessageLookupByLibrary.simpleMessage("Pošalji vezu za resetovanje"),
-        "setUpDesc": MessageLookupByLibrary.simpleMessage(
-            "Ažurirajte svoj profil da povežete svog doktora sa boljim utiskom"),
-        "setUpProfile":
-            MessageLookupByLibrary.simpleMessage("Postavite svoj profil"),
+        "sendEmail": MessageLookupByLibrary.simpleMessage("Poslali smo e-mail sa uputstvima kako da poništim lozinku na:"),
+        "sendLink": MessageLookupByLibrary.simpleMessage("Pošalji vezu za resetovanje"),
+        "setUpDesc": MessageLookupByLibrary.simpleMessage("Ažurirajte svoj profil da povežete svog doktora sa boljim utiskom"),
+        "setUpProfile": MessageLookupByLibrary.simpleMessage("Postavite svoj profil"),
         "staffLogin": MessageLookupByLibrary.simpleMessage("Prijava osoblja"),
         "stillUnpaid": MessageLookupByLibrary.simpleMessage("Still Unpaid"),
         "stock": MessageLookupByLibrary.simpleMessage("Stock"),
@@ -228,21 +181,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "unPaid": MessageLookupByLibrary.simpleMessage("UnPaid"),
         "unitName": MessageLookupByLibrary.simpleMessage("Naziv jedinice"),
         "units": MessageLookupByLibrary.simpleMessage("Jedinice"),
-        "unlimited":
-            MessageLookupByLibrary.simpleMessage("Karakteristike paketa"),
+        "unlimited": MessageLookupByLibrary.simpleMessage("Karakteristike paketa"),
         "update": MessageLookupByLibrary.simpleMessage("Ažuriraj"),
-        "updateContact":
-            MessageLookupByLibrary.simpleMessage("Ažurirajte kontakt"),
+        "updateContact": MessageLookupByLibrary.simpleMessage("Ažurirajte kontakt"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Ažurirati sada"),
-        "updateProduct":
-            MessageLookupByLibrary.simpleMessage("Ažurirajte proizvod"),
-        "updateProfile":
-            MessageLookupByLibrary.simpleMessage("Ažurirajte svoj profil"),
+        "updateProduct": MessageLookupByLibrary.simpleMessage("Ažurirajte proizvod"),
+        "updateProfile": MessageLookupByLibrary.simpleMessage("Ažurirajte svoj profil"),
         "userRole": MessageLookupByLibrary.simpleMessage("Uloga korisnika"),
         "viewAll": MessageLookupByLibrary.simpleMessage("Vidi sve"),
         "whatNew": MessageLookupByLibrary.simpleMessage("Šta je novo"),
-        "wholeSalePrice":
-            MessageLookupByLibrary.simpleMessage("Veleprodajna cijena"),
+        "wholeSalePrice": MessageLookupByLibrary.simpleMessage("Veleprodajna cijena"),
         "wholesaler": MessageLookupByLibrary.simpleMessage("Veletrgovac"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("Vi koristite "),
         "yourPack": MessageLookupByLibrary.simpleMessage("Vaš paket")

@@ -58,7 +58,7 @@ class _ExpenseCategoryListState extends State<ExpenseCategoryList> {
                       textFieldType: TextFieldType.NAME,
                       decoration: InputDecoration(
                         border: const OutlineInputBorder(),
-                        hintText:    lang.S.of(context).search,
+                        hintText: lang.S.of(context).search,
                         prefixIcon: Icon(
                           Icons.search,
                           color: kGreyTextColor.withOpacity(0.5),

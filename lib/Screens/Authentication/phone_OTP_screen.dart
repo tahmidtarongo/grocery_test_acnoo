@@ -109,7 +109,7 @@ class _OTPVerifyState extends State<OTPVerify> {
                         (route) => false,
                       );
                     },
-                    child:  Text(
+                    child: Text(
                       lang.S.of(context).editPhone,
                       style: const TextStyle(color: Colors.black),
                     ),

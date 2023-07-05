@@ -135,7 +135,7 @@ class _SalesScreenState extends State<SalesScreen> {
                     const DataCell(
                       Text('Cash'),
                     ),
-                     DataCell(
+                    DataCell(
                       Text('$currency 3975'),
                     ),
                   ],

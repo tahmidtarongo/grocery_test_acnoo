@@ -28,25 +28,23 @@ class _NotificationScreenState extends State<NotificationScreen> {
         backgroundColor: Colors.white,
         elevation: 0.0,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(10.0),
+      body: const Padding(
+        padding: EdgeInsets.all(10.0),
         child: Column(
-          children: const [
+          children: [
             NotificationCard(
               title: 'Purchase Alarm',
               iconColor: Colors.orange,
               icons: Icons.alarm,
               time: 'June 23, 2021',
-              description:
-                  'Lorem ipsum dolor sit amet, consectetur adip gravi iscing elit. Ultricies gravida scelerisque arcu facilisis duis in.',
+              description: 'Lorem ipsum dolor sit amet, consectetur adip gravi iscing elit. Ultricies gravida scelerisque arcu facilisis duis in.',
             ),
             NotificationCard(
               title: 'Purchase Confirmed',
               iconColor: Colors.purple,
               icons: Icons.notifications_none_outlined,
               time: 'June 23, 2021',
-              description:
-                  'Lorem ipsum dolor sit amet, consectetur adip gravi iscing elit. Ultricies gravida scelerisque arcu facilisis duis in.',
+              description: 'Lorem ipsum dolor sit amet, consectetur adip gravi iscing elit. Ultricies gravida scelerisque arcu facilisis duis in.',
             ),
           ],
         ),

@@ -26,7 +26,6 @@ class _AddDeliveryState extends State<AddDelivery> {
   String initialCountry = 'Bangladesh';
   late String firstName, lastname, emailAddress, phoneNumber, addressLocation, addressType = 'Home';
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -233,8 +232,7 @@ class _AddDeliveryState extends State<AddDelivery> {
                         .reference()
                         .child(constUserId)
                         .child('Delivery Addresses');
-                    DeliveryModel deliveryModel = DeliveryModel(
-                        firstName, lastname, emailAddress, phoneNumber, initialCountry, addressLocation, addressType);
+                    DeliveryModel deliveryModel = DeliveryModel(firstName, lastname, emailAddress, phoneNumber, initialCountry, addressLocation, addressType);
                     await _deliveryInformationRef.push().set(deliveryModel.toJson());
                     EasyLoading.showSuccess('Added Successfully', duration: const Duration(milliseconds: 1000));
                     ref.refresh(deliveryAddressProvider);

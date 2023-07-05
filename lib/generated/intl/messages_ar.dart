@@ -22,23 +22,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "CustomerDetails":
-            MessageLookupByLibrary.simpleMessage("تفاصيل العميل"),
-        "addAPurchase":
-            MessageLookupByLibrary.simpleMessage("الرجاء إضافة شراء"),
-        "addBrand":
-            MessageLookupByLibrary.simpleMessage("أضف العلامة التجارية"),
+        "CustomerDetails": MessageLookupByLibrary.simpleMessage("تفاصيل العميل"),
+        "addAPurchase": MessageLookupByLibrary.simpleMessage("الرجاء إضافة شراء"),
+        "addBrand": MessageLookupByLibrary.simpleMessage("أضف العلامة التجارية"),
         "addContact": MessageLookupByLibrary.simpleMessage("إضافة جهة اتصال"),
-        "addCustomer":
-            MessageLookupByLibrary.simpleMessage("الرجاء إضافة عميل"),
+        "addCustomer": MessageLookupByLibrary.simpleMessage("الرجاء إضافة عميل"),
         "addExpense": MessageLookupByLibrary.simpleMessage("أضف المصاريف"),
-        "addExpenseCat":
-            MessageLookupByLibrary.simpleMessage("إضافة فئة المصاريف"),
+        "addExpenseCat": MessageLookupByLibrary.simpleMessage("إضافة فئة المصاريف"),
         "addItems": MessageLookupByLibrary.simpleMessage("إضافة عناصر"),
-        "addNewProduct":
-            MessageLookupByLibrary.simpleMessage("اضافة منتج جديد"),
-        "addNewPurchase":
-            MessageLookupByLibrary.simpleMessage("الرجاء إضافة شراء"),
+        "addNewProduct": MessageLookupByLibrary.simpleMessage("اضافة منتج جديد"),
+        "addNewPurchase": MessageLookupByLibrary.simpleMessage("الرجاء إضافة شراء"),
         "addProduct": MessageLookupByLibrary.simpleMessage("الرجاء إضافة منتج"),
         "addPurchase": MessageLookupByLibrary.simpleMessage("أضف شراء"),
         "addSale": MessageLookupByLibrary.simpleMessage("الرجاء إضافة بيع"),
@@ -47,34 +40,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "address": MessageLookupByLibrary.simpleMessage("عنوان"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("اسم التصنيف"),
         "amount": MessageLookupByLibrary.simpleMessage("كمية"),
-        "brandName":
-            MessageLookupByLibrary.simpleMessage("اسم العلامة التجارية"),
+        "brandName": MessageLookupByLibrary.simpleMessage("اسم العلامة التجارية"),
         "brands": MessageLookupByLibrary.simpleMessage("العلامات التجارية"),
         "businessCat": MessageLookupByLibrary.simpleMessage("نوع العمل"),
-        "businessName":
-            MessageLookupByLibrary.simpleMessage("اسم الشركة والأعمال"),
+        "businessName": MessageLookupByLibrary.simpleMessage("اسم الشركة والأعمال"),
         "buyPremium": MessageLookupByLibrary.simpleMessage("شراء خطة قسط"),
         "camera": MessageLookupByLibrary.simpleMessage("آلة تصوير"),
         "cancel": MessageLookupByLibrary.simpleMessage("يلغي"),
         "categoryName": MessageLookupByLibrary.simpleMessage("اسم التصنيف"),
-        "changePassword":
-            MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
-        "checkEmail":
-            MessageLookupByLibrary.simpleMessage("تفقد البريد الإلكتروني"),
+        "changePassword": MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
+        "checkEmail": MessageLookupByLibrary.simpleMessage("تفقد البريد الإلكتروني"),
         "chooseCustomer": MessageLookupByLibrary.simpleMessage("اختر الزبون"),
         "chooseSupplier": MessageLookupByLibrary.simpleMessage("اختر موردًا"),
         "clickToConnect": MessageLookupByLibrary.simpleMessage("انقر للاتصال"),
         "close": MessageLookupByLibrary.simpleMessage("يغلق"),
         "collectDue": MessageLookupByLibrary.simpleMessage("تحصيل المستحق"),
-        "collectDues":
-            MessageLookupByLibrary.simpleMessage("يرجى جمع المبلغ المستحق"),
+        "collectDues": MessageLookupByLibrary.simpleMessage("يرجى جمع المبلغ المستحق"),
         "companyAddress": MessageLookupByLibrary.simpleMessage("عنوان الشركة"),
-        "confirmPass":
-            MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
+        "confirmPass": MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
         "congratulation": MessageLookupByLibrary.simpleMessage("تهانينا"),
         "connect": MessageLookupByLibrary.simpleMessage("انقر للاتصال"),
-        "connectPrinter":
-            MessageLookupByLibrary.simpleMessage("قم بتوصيل الطابعة الخاصة بك"),
+        "connectPrinter": MessageLookupByLibrary.simpleMessage("قم بتوصيل الطابعة الخاصة بك"),
         "continueButton": MessageLookupByLibrary.simpleMessage("يكمل"),
         "createAcc": MessageLookupByLibrary.simpleMessage("إنشاء حساب مجاني"),
         "currency": MessageLookupByLibrary.simpleMessage("عملة"),
@@ -90,21 +76,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "dueReport": MessageLookupByLibrary.simpleMessage("تقرير الاستحقاق"),
         "edit": MessageLookupByLibrary.simpleMessage("يحرر"),
         "editPhone": MessageLookupByLibrary.simpleMessage("تحرير رقم الهاتف؟"),
-        "editPurchaseInvoice":
-            MessageLookupByLibrary.simpleMessage("تحرير فاتورة الشراء"),
-        "editSalesInvoice":
-            MessageLookupByLibrary.simpleMessage("تحرير فاتورة المبيعات"),
-        "email":
-            MessageLookupByLibrary.simpleMessage("عنوان البريد الإلكتروني"),
+        "editPurchaseInvoice": MessageLookupByLibrary.simpleMessage("تحرير فاتورة الشراء"),
+        "editSalesInvoice": MessageLookupByLibrary.simpleMessage("تحرير فاتورة المبيعات"),
+        "email": MessageLookupByLibrary.simpleMessage("عنوان البريد الإلكتروني"),
         "emailText": MessageLookupByLibrary.simpleMessage("بريد إلكتروني"),
-        "enterEmail": MessageLookupByLibrary.simpleMessage(
-            "يرجى إدخال عنوان بريدك الإلكتروني أدناه لتلقي رابط إعادة تعيين كلمة المرور."),
+        "enterEmail": MessageLookupByLibrary.simpleMessage("يرجى إدخال عنوان بريدك الإلكتروني أدناه لتلقي رابط إعادة تعيين كلمة المرور."),
         "expenseCat": MessageLookupByLibrary.simpleMessage("فئات المصاريف"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("تاريخ المصاريف"),
         "expenseFor": MessageLookupByLibrary.simpleMessage("حساب ل"),
         "expenseReport": MessageLookupByLibrary.simpleMessage("تقرير المصاريف"),
-        "forgotPassword":
-            MessageLookupByLibrary.simpleMessage("هل نسيت كلمة السر"),
+        "forgotPassword": MessageLookupByLibrary.simpleMessage("هل نسيت كلمة السر"),
         "freePack": MessageLookupByLibrary.simpleMessage("حزمة مجانية"),
         "freePlan": MessageLookupByLibrary.simpleMessage("خطة مجانية"),
         "fromDate": MessageLookupByLibrary.simpleMessage("من التاريخ"),
@@ -118,15 +99,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "language": MessageLookupByLibrary.simpleMessage("لغة"),
         "loading": MessageLookupByLibrary.simpleMessage("تحميل"),
         "logIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
-        "logInWithMail": MessageLookupByLibrary.simpleMessage(
-            "تسجيل الدخول بالبريد الإلكتروني"),
+        "logInWithMail": MessageLookupByLibrary.simpleMessage("تسجيل الدخول بالبريد الإلكتروني"),
         "logOut": MessageLookupByLibrary.simpleMessage("تسجيل خروج"),
-        "loginWithPhone":
-            MessageLookupByLibrary.simpleMessage("تسجيل الدخول بالهاتف"),
+        "loginWithPhone": MessageLookupByLibrary.simpleMessage("تسجيل الدخول بالهاتف"),
         "loss": MessageLookupByLibrary.simpleMessage("خسارة"),
         "lp": MessageLookupByLibrary.simpleMessage("خسارة الأرباح"),
-        "lpDetails":
-            MessageLookupByLibrary.simpleMessage("تفاصيل الخسارة / الربح"),
+        "lpDetails": MessageLookupByLibrary.simpleMessage("تفاصيل الخسارة / الربح"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("الصانع"),
         "mobile": MessageLookupByLibrary.simpleMessage("متحرك:"),
         "moreInfo": MessageLookupByLibrary.simpleMessage("مزيد من المعلومات"),
@@ -136,24 +114,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "noData": MessageLookupByLibrary.simpleMessage("لا تتوافر بيانات"),
         "noSupplier": MessageLookupByLibrary.simpleMessage("لا يوجد مورد متاح"),
         "note": MessageLookupByLibrary.simpleMessage("ملحوظة"),
-        "openingBalance":
-            MessageLookupByLibrary.simpleMessage("الرصيد الافتتاحي"),
+        "openingBalance": MessageLookupByLibrary.simpleMessage("الرصيد الافتتاحي"),
         "packFeatures": MessageLookupByLibrary.simpleMessage("ميزات العبوة"),
         "paid": MessageLookupByLibrary.simpleMessage("مدفوع"),
         "paidAmount": MessageLookupByLibrary.simpleMessage("المبلغ المدفوع"),
         "partyList": MessageLookupByLibrary.simpleMessage("قائمة الأحزاب"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "paymentTypes": MessageLookupByLibrary.simpleMessage("نوع الدفع"),
-        "paypalPay":
-            MessageLookupByLibrary.simpleMessage("الدفع بواسط باى بال"),
+        "paypalPay": MessageLookupByLibrary.simpleMessage("الدفع بواسط باى بال"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم التليفون"),
-        "phoneVerification":
-            MessageLookupByLibrary.simpleMessage("التحقق من الهاتف"),
+        "phoneVerification": MessageLookupByLibrary.simpleMessage("التحقق من الهاتف"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("خطة بريميوم"),
-        "previousDue":
-            MessageLookupByLibrary.simpleMessage("تاريخ الاستحقاق السابق"),
-        "previousPayAmount":
-            MessageLookupByLibrary.simpleMessage("مبلغ الدفع السابق"),
+        "previousDue": MessageLookupByLibrary.simpleMessage("تاريخ الاستحقاق السابق"),
+        "previousPayAmount": MessageLookupByLibrary.simpleMessage("مبلغ الدفع السابق"),
         "printing": MessageLookupByLibrary.simpleMessage("خيار الطباعة"),
         "product": MessageLookupByLibrary.simpleMessage("منتج"),
         "productCode": MessageLookupByLibrary.simpleMessage("كود المنتج"),
@@ -163,17 +136,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "profit": MessageLookupByLibrary.simpleMessage("ربح"),
         "purchase": MessageLookupByLibrary.simpleMessage("شراء"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("قائمة الشراء"),
-        "purchasePremium":
-            MessageLookupByLibrary.simpleMessage("شراء خطة بريميوم"),
+        "purchasePremium": MessageLookupByLibrary.simpleMessage("شراء خطة بريميوم"),
         "purchasePrice": MessageLookupByLibrary.simpleMessage("سعر الشراء"),
         "purchaseReport": MessageLookupByLibrary.simpleMessage("تقرير الشراء"),
         "quantity": MessageLookupByLibrary.simpleMessage("كمية"),
-        "recentTransaction":
-            MessageLookupByLibrary.simpleMessage("التحويلات الاخيرة"),
+        "recentTransaction": MessageLookupByLibrary.simpleMessage("التحويلات الاخيرة"),
         "referenceNo": MessageLookupByLibrary.simpleMessage("رقم المرجع"),
         "register": MessageLookupByLibrary.simpleMessage("يسجل"),
-        "registerTitle": MessageLookupByLibrary.simpleMessage(
-            "نحتاج إلى تسجيل هاتفك دون أن نبدأ!"),
+        "registerTitle": MessageLookupByLibrary.simpleMessage("نحتاج إلى تسجيل هاتفك دون أن نبدأ!"),
         "reports": MessageLookupByLibrary.simpleMessage("التقارير"),
         "retailer": MessageLookupByLibrary.simpleMessage("بائع تجزئة"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("المبلغ العائد"),
@@ -188,17 +158,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "select": MessageLookupByLibrary.simpleMessage("يختار"),
         "selectLang": MessageLookupByLibrary.simpleMessage("اختر لغتك"),
         "sendCode": MessageLookupByLibrary.simpleMessage("أرسل الرمز"),
-        "sendEmail": MessageLookupByLibrary.simpleMessage(
-            "أرسلنا بريدًا إلكترونيًا يحتوي على إرشادات حول كيفية إعادة تعيين كلمة المرور إلى:"),
-        "sendLink":
-            MessageLookupByLibrary.simpleMessage("أرسل رابط إعادة التعيين"),
-        "setUpDesc": MessageLookupByLibrary.simpleMessage(
-            "قم بتحديث ملف التعريف الخاص بك لتوصيل طبيبك بانطباع أفضل"),
-        "setUpProfile": MessageLookupByLibrary.simpleMessage(
-            "قم بإعداد ملف التعريف الخاص بك"),
+        "sendEmail": MessageLookupByLibrary.simpleMessage("أرسلنا بريدًا إلكترونيًا يحتوي على إرشادات حول كيفية إعادة تعيين كلمة المرور إلى:"),
+        "sendLink": MessageLookupByLibrary.simpleMessage("أرسل رابط إعادة التعيين"),
+        "setUpDesc": MessageLookupByLibrary.simpleMessage("قم بتحديث ملف التعريف الخاص بك لتوصيل طبيبك بانطباع أفضل"),
+        "setUpProfile": MessageLookupByLibrary.simpleMessage("قم بإعداد ملف التعريف الخاص بك"),
         "staffLogin": MessageLookupByLibrary.simpleMessage("دخول الموظفين"),
-        "stillUnpaid":
-            MessageLookupByLibrary.simpleMessage("لا يزال غير مدفوع"),
+        "stillUnpaid": MessageLookupByLibrary.simpleMessage("لا يزال غير مدفوع"),
         "stock": MessageLookupByLibrary.simpleMessage("مخزون"),
         "stockList": MessageLookupByLibrary.simpleMessage("قائمة الأسهم"),
         "subTotal": MessageLookupByLibrary.simpleMessage("المجموع الفرعي"),
@@ -218,12 +183,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "units": MessageLookupByLibrary.simpleMessage("الوحدات"),
         "unlimited": MessageLookupByLibrary.simpleMessage("غير محدود"),
         "update": MessageLookupByLibrary.simpleMessage("تحديث"),
-        "updateContact":
-            MessageLookupByLibrary.simpleMessage("تحديث جهة الاتصال"),
+        "updateContact": MessageLookupByLibrary.simpleMessage("تحديث جهة الاتصال"),
         "updateNow": MessageLookupByLibrary.simpleMessage("تحديث الان"),
         "updateProduct": MessageLookupByLibrary.simpleMessage("تحديث المنتج"),
-        "updateProfile":
-            MessageLookupByLibrary.simpleMessage("تحديث ملفك الشخصي"),
+        "updateProfile": MessageLookupByLibrary.simpleMessage("تحديث ملفك الشخصي"),
         "userRole": MessageLookupByLibrary.simpleMessage("دور المستخدم"),
         "viewAll": MessageLookupByLibrary.simpleMessage("مشاهدة الكل"),
         "whatNew": MessageLookupByLibrary.simpleMessage("ما هو الجديد"),

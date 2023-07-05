@@ -68,11 +68,11 @@ class _AddBrandsState extends State<AddBrands> {
                       brandName = value;
                     });
                   },
-                  decoration:  InputDecoration(
+                  decoration: InputDecoration(
                     border: const OutlineInputBorder(),
                     hintText: 'Apple',
                     floatingLabelBehavior: FloatingLabelBehavior.always,
-                    labelText:  lang.S.of(context).brandName,
+                    labelText: lang.S.of(context).brandName,
                   ),
                 ),
                 ButtonGlobalWithoutIcon(

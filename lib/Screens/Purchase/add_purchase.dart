@@ -330,20 +330,18 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
 
                   ///_____Total______________________________
                   Container(
-                    decoration:
-                        BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), border: Border.all(color: Colors.grey.shade300, width: 1)),
+                    decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), border: Border.all(color: Colors.grey.shade300, width: 1)),
                     child: Column(
                       children: [
                         Container(
                           padding: const EdgeInsets.all(10),
-                          decoration: const BoxDecoration(
-                              color: Color(0xffEAEFFA), borderRadius: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10))),
+                          decoration: const BoxDecoration(color: Color(0xffEAEFFA), borderRadius: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10))),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                               Text(
+                              Text(
                                 lang.S.of(context).subTotal,
-                                style:const TextStyle(fontSize: 16),
+                                style: const TextStyle(fontSize: 16),
                               ),
                               Text(
                                 providerData.getTotalAmount().toStringAsFixed(2),
@@ -357,9 +355,9 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                               Text(
+                              Text(
                                 lang.S.of(context).discount,
-                                style:const TextStyle(fontSize: 16),
+                                style: const TextStyle(fontSize: 16),
                               ),
                               SizedBox(
                                 width: context.width() / 4,
@@ -399,7 +397,7 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                               Text(
+                              Text(
                                 lang.S.of(context).total,
                                 style: const TextStyle(fontSize: 16),
                               ),
@@ -415,9 +413,9 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                               Text(
+                              Text(
                                 lang.S.of(context).paidAmount,
-                                style:const TextStyle(fontSize: 16),
+                                style: const TextStyle(fontSize: 16),
                               ),
                               SizedBox(
                                 width: context.width() / 4,
@@ -446,9 +444,9 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                               Text(
+                              Text(
                                 lang.S.of(context).returnAmount,
-                                style:const TextStyle(fontSize: 16),
+                                style: const TextStyle(fontSize: 16),
                               ),
                               Text(
                                 calculateReturnAmount(total: subTotal).abs().toStringAsFixed(2),
@@ -462,9 +460,9 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                               Text(
+                              Text(
                                 lang.S.of(context).dueAmount,
-                                style:const TextStyle(fontSize: 16),
+                                style: const TextStyle(fontSize: 16),
                               ),
                               Text(
                                 calculateDueAmount(total: subTotal).toStringAsFixed(2),
@@ -487,10 +485,10 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Row(
-                        children:  [
+                        children: [
                           Text(
                             lang.S.of(context).paymentTypes,
-                            style:const TextStyle(fontSize: 16, color: Colors.black54),
+                            style: const TextStyle(fontSize: 16, color: Colors.black54),
                           ),
                           const SizedBox(
                             width: 5,
@@ -548,10 +546,10 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                           height: 60,
                           width: 100,
                           decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), color: Colors.grey.shade200),
-                          child: Center(
+                          child: const Center(
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
-                              children: const [
+                              children: [
                                 Icon(
                                   FeatherIcons.camera,
                                   color: Colors.grey,
@@ -728,10 +726,10 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                             color: Colors.grey.shade300,
                             borderRadius: const BorderRadius.all(Radius.circular(10)),
                           ),
-                          child:  Center(
+                          child: Center(
                             child: Text(
                               lang.S.of(context).cancel,
-                              style:const TextStyle(fontSize: 18),
+                              style: const TextStyle(fontSize: 18),
                             ),
                           ),
                         ),
@@ -780,8 +778,7 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                                 ///________Print_______________________________________________________
                                 if (isPrintEnable && (Theme.of(context).platform == TargetPlatform.android)) {
                                   await printerData.getBluetooth();
-                                  PrintPurchaseTransactionModel model =
-                                      PrintPurchaseTransactionModel(purchaseTransitionModel: transitionModel, personalInformationModel: data);
+                                  PrintPurchaseTransactionModel model = PrintPurchaseTransactionModel(purchaseTransitionModel: transitionModel, personalInformationModel: data);
                                   if (connected) {
                                     await printerData.printTicket(printTransactionModel: model, productList: providerData.cartItemPurchaseList);
                                     providerData.clearCart();
@@ -813,8 +810,7 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                                                   children: [
                                                     ListView.builder(
                                                       shrinkWrap: true,
-                                                      itemCount:
-                                                          printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
+                                                      itemCount: printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
                                                       itemBuilder: (context, index) {
                                                         return ListTile(
                                                           onTap: () async {
@@ -824,8 +820,7 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                                                             String mac = list[1];
                                                             bool isConnect = await printerData.setConnect(mac);
                                                             if (isConnect) {
-                                                              await printerData.printTicket(
-                                                                  printTransactionModel: model, productList: transitionModel.productList);
+                                                              await printerData.printTicket(printTransactionModel: model, productList: transitionModel.productList);
                                                               providerData.clearCart();
                                                               consumerRef.refresh(customerProvider);
                                                               consumerRef.refresh(productProvider);
@@ -903,7 +898,7 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                               color: kMainColor,
                               borderRadius: BorderRadius.all(Radius.circular(10)),
                             ),
-                            child:  Center(
+                            child: Center(
                               child: Text(
                                 lang.S.of(context).save,
                                 style: const TextStyle(fontSize: 18, color: Colors.white),

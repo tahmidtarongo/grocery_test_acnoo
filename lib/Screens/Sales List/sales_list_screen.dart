@@ -94,9 +94,7 @@ class _SalesListScreenState extends State<SalesListScreen> {
                                         Container(
                                           padding: const EdgeInsets.all(8),
                                           decoration: BoxDecoration(
-                                              color: reTransaction[index].dueAmount! <= 0
-                                                  ? const Color(0xff0dbf7d).withOpacity(0.1)
-                                                  : const Color(0xFFED1A3B).withOpacity(0.1),
+                                              color: reTransaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d).withOpacity(0.1) : const Color(0xFFED1A3B).withOpacity(0.1),
                                               borderRadius: const BorderRadius.all(Radius.circular(10))),
                                           child: Text(
                                             reTransaction[index].dueAmount! <= 0 ? lang.S.of(context).paid : lang.S.of(context).unPaid,
@@ -132,8 +130,7 @@ class _SalesListScreenState extends State<SalesListScreen> {
                                               IconButton(
                                                   onPressed: () async {
                                                     await printerData.getBluetooth();
-                                                    PrintTransactionModel model =
-                                                        PrintTransactionModel(transitionModel: reTransaction[index], personalInformationModel: data);
+                                                    PrintTransactionModel model = PrintTransactionModel(transitionModel: reTransaction[index], personalInformationModel: data);
                                                     connected
                                                         ? printerData.printTicket(
                                                             printTransactionModel: model,
@@ -152,9 +149,8 @@ class _SalesListScreenState extends State<SalesListScreen> {
                                                                       children: [
                                                                         ListView.builder(
                                                                           shrinkWrap: true,
-                                                                          itemCount: printerData.availableBluetoothDevices.isNotEmpty
-                                                                              ? printerData.availableBluetoothDevices.length
-                                                                              : 0,
+                                                                          itemCount:
+                                                                              printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
                                                                           itemBuilder: (context, index) {
                                                                             return ListTile(
                                                                               onTap: () async {
@@ -203,7 +199,7 @@ class _SalesListScreenState extends State<SalesListScreen> {
                                                     color: Colors.grey,
                                                   )),
                                               IconButton(
-                                                  onPressed: () => GeneratePdf().generateSaleDocument(reTransaction[index], data,context),
+                                                  onPressed: () => GeneratePdf().generateSaleDocument(reTransaction[index], data, context),
                                                   icon: const Icon(
                                                     Icons.picture_as_pdf,
                                                     color: Colors.grey,

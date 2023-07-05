@@ -57,7 +57,6 @@ class _CurrencyScreenState extends State<CurrencyScreen> {
                           });
                         },
                         title: Text('${currencys[index].name} - ${currencys[index].symbol}'),
-
                         trailing: const Icon(
                           (Icons.arrow_forward_ios),
                         ),

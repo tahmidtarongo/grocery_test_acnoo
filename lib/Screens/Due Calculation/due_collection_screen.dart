@@ -80,8 +80,7 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
   Widget build(BuildContext context) {
     count++;
     return Consumer(builder: (context, consumerRef, __) {
-      final customerProviderRef =
-          widget.customerModel.type == 'Supplier' ? consumerRef.watch(purchaseTransitionProvider) : consumerRef.watch(transitionProvider);
+      final customerProviderRef = widget.customerModel.type == 'Supplier' ? consumerRef.watch(purchaseTransitionProvider) : consumerRef.watch(transitionProvider);
       final printerData = consumerRef.watch(printerDueProviderNotifier);
       final personalData = consumerRef.watch(profileDetailsProvider);
       return personalData.when(data: (data) {
@@ -219,14 +218,12 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
 
                   ///_____Total______________________________
                   Container(
-                    decoration:
-                        BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), border: Border.all(color: Colors.grey.shade300, width: 1)),
+                    decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), border: Border.all(color: Colors.grey.shade300, width: 1)),
                     child: Column(
                       children: [
                         Container(
                           padding: const EdgeInsets.all(10),
-                          decoration: const BoxDecoration(
-                              color: Color(0xffEAEFFA), borderRadius: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10))),
+                          decoration: const BoxDecoration(color: Color(0xffEAEFFA), borderRadius: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10))),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -422,8 +419,7 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                                 EasyLoading.show(status: 'Loading...', dismissOnTap: false);
 
                                 DatabaseReference ref = FirebaseDatabase.instance.ref("$constUserId/Due Transaction");
-                                final DatabaseReference personalInformationRef =
-                                    FirebaseDatabase.instance.ref().child(constUserId).child('Personal Information');
+                                final DatabaseReference personalInformationRef = FirebaseDatabase.instance.ref().child(constUserId).child('Personal Information');
                                 ref.keepSynced(true);
                                 personalInformationRef.keepSynced(true);
 
@@ -457,8 +453,7 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                                 ///________Print_______________________________________________________
                                 if (isPrintEnable && (Theme.of(context).platform == TargetPlatform.android)) {
                                   await printerData.getBluetooth();
-                                  PrintDueTransactionModel model =
-                                      PrintDueTransactionModel(dueTransactionModel: dueTransactionModel, personalInformationModel: data);
+                                  PrintDueTransactionModel model = PrintDueTransactionModel(dueTransactionModel: dueTransactionModel, personalInformationModel: data);
                                   if (connected) {
                                     await printerData.printTicket(printDueTransactionModel: model);
                                     consumerRef.refresh(customerProvider);
@@ -489,8 +484,7 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                                                   children: [
                                                     ListView.builder(
                                                       shrinkWrap: true,
-                                                      itemCount:
-                                                          printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
+                                                      itemCount: printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
                                                       itemBuilder: (context, index) {
                                                         return ListTile(
                                                           onTap: () async {
@@ -604,9 +598,7 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
   }
 
   void updateInvoice({required String type, required String invoice, required int remainDueAmount}) {
-    final ref = type == 'Supplier'
-        ? FirebaseDatabase.instance.ref('$constUserId/Purchase Transition/')
-        : FirebaseDatabase.instance.ref('$constUserId/Sales Transition/');
+    final ref = type == 'Supplier' ? FirebaseDatabase.instance.ref('$constUserId/Purchase Transition/') : FirebaseDatabase.instance.ref('$constUserId/Sales Transition/');
     String? key;
     ref.keepSynced(true);
 

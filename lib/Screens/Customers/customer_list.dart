@@ -131,7 +131,7 @@ class _CustomerListState extends State<CustomerList> {
                         ),
                       );
                     })
-                :  Center(
+                : Center(
                     child: Text(
                       lang.S.of(context).addCustomer,
                       maxLines: 2,

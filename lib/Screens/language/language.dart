@@ -5,7 +5,6 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../constant.dart';
 import '../Home/home.dart';
-import '../Settings/settings_screen.dart';
 import 'language_provider.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 

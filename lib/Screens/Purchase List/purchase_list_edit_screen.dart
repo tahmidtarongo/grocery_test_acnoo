@@ -1,3 +1,5 @@
+// ignore_for_file: unused_result
+
 import 'dart:convert';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
@@ -275,8 +277,8 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                     onTap: () {
                       EditPurchaseInvoiceSaleProducts(
                         catName: null,
-                        customerModel: CustomerModel(
-                            widget.transitionModel.customerName, widget.transitionModel.customerPhone, widget.transitionModel.customerType, '', '', '', ''),
+                        customerModel:
+                            CustomerModel(widget.transitionModel.customerName, widget.transitionModel.customerPhone, widget.transitionModel.customerType, '', '', '', ''),
                         transitionModel: widget.transitionModel,
                       ).launch(context);
                     },
@@ -296,14 +298,12 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
 
                   ///_____Total______________________________
                   Container(
-                    decoration:
-                        BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), border: Border.all(color: Colors.grey.shade300, width: 1)),
+                    decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), border: Border.all(color: Colors.grey.shade300, width: 1)),
                     child: Column(
                       children: [
                         Container(
                           padding: const EdgeInsets.all(10),
-                          decoration: const BoxDecoration(
-                              color: Color(0xffEAEFFA), borderRadius: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10))),
+                          decoration: const BoxDecoration(color: Color(0xffEAEFFA), borderRadius: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10))),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -515,10 +515,10 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                           height: 60,
                           width: 100,
                           decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), color: Colors.grey.shade200),
-                          child: Center(
+                          child: const Center(
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
-                              children: const [
+                              children: [
                                 Icon(
                                   FeatherIcons.camera,
                                   color: Colors.grey,
@@ -591,8 +591,7 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                                   int i = 0;
                                   for (var futureElement in presentProducts) {
                                     if (pastElement.productCode == futureElement.productCode) {
-                                      if (pastElement.productStock.toInt() < futureElement.productStock.toInt() &&
-                                          pastElement.productStock != futureElement.productStock) {
+                                      if (pastElement.productStock.toInt() < futureElement.productStock.toInt() && pastElement.productStock != futureElement.productStock) {
                                         ProductModel m = pastElement;
                                         m.productStock = (futureElement.productStock.toInt() - pastElement.productStock.toInt()).toString();
                                         // ignore: iterable_contains_unrelated_type

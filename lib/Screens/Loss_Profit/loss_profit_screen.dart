@@ -134,9 +134,7 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                         for (var element in reTransaction) {
                           if ((fromDate.isBefore(DateTime.parse(element.purchaseDate)) || DateTime.parse(element.purchaseDate).isAtSameMomentAs(fromDate)) &&
                               (toDate.isAfter(DateTime.parse(element.purchaseDate)) || DateTime.parse(element.purchaseDate).isAtSameMomentAs(toDate))) {
-                            element.lossProfit!.isNegative
-                                ? totalLoss = totalLoss + element.lossProfit!.abs()
-                                : totalProfit = totalProfit + element.lossProfit!;
+                            element.lossProfit!.isNegative ? totalLoss = totalLoss + element.lossProfit!.abs() : totalProfit = totalProfit + element.lossProfit!;
                           }
                         }
 
@@ -233,9 +231,7 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                                                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                           children: [
                                                             Text(
-                                                              reTransaction[index].customerName.isNotEmpty
-                                                                  ? reTransaction[index].customerName
-                                                                  : reTransaction[index].customerPhone,
+                                                              reTransaction[index].customerName.isNotEmpty ? reTransaction[index].customerName : reTransaction[index].customerPhone,
                                                               style: const TextStyle(fontSize: 16),
                                                             ),
                                                             Text(
@@ -257,10 +253,7 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                                                                   borderRadius: const BorderRadius.all(Radius.circular(10))),
                                                               child: Text(
                                                                 reTransaction[index].dueAmount! <= 0 ? lang.S.of(context).paid : lang.S.of(context).unPaid,
-                                                                style: TextStyle(
-                                                                    color: reTransaction[index].dueAmount! <= 0
-                                                                        ? const Color(0xff0dbf7d)
-                                                                        : const Color(0xFFED1A3B)),
+                                                                style: TextStyle(color: reTransaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d) : const Color(0xFFED1A3B)),
                                                               ),
                                                             ),
                                                             Column(
@@ -306,8 +299,8 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                                                                         totalProfit = 0;
                                                                         totalLoss = 0;
                                                                         await printerData.getBluetooth();
-                                                                        PrintTransactionModel model = PrintTransactionModel(
-                                                                            transitionModel: reTransaction[index], personalInformationModel: data);
+                                                                        PrintTransactionModel model =
+                                                                            PrintTransactionModel(transitionModel: reTransaction[index], personalInformationModel: data);
                                                                         connected
                                                                             ? printerData.printTicket(
                                                                                 printTransactionModel: model,
@@ -332,8 +325,7 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                                                                                               itemBuilder: (context, index) {
                                                                                                 return ListTile(
                                                                                                   onTap: () async {
-                                                                                                    String select =
-                                                                                                        printerData.availableBluetoothDevices[index];
+                                                                                                    String select = printerData.availableBluetoothDevices[index];
                                                                                                     List list = select.split("#");
                                                                                                     // String name = list[0];
                                                                                                     String mac = list[1];
@@ -344,8 +336,7 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                                                                                                         ? finish(context)
                                                                                                         : toast('Try Again');
                                                                                                   },
-                                                                                                  title:
-                                                                                                      Text('${printerData.availableBluetoothDevices[index]}'),
+                                                                                                  title: Text('${printerData.availableBluetoothDevices[index]}'),
                                                                                                   subtitle: const Text("Click to connect"),
                                                                                                 );
                                                                                               },
@@ -354,8 +345,7 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                                                                                               padding: EdgeInsets.only(top: 20, bottom: 10),
                                                                                               child: Text(
                                                                                                 'Please connect your bluetooth Printer',
-                                                                                                style:
-                                                                                                    TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                                                                                                style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
                                                                                               ),
                                                                                             ),
                                                                                             const SizedBox(height: 10),

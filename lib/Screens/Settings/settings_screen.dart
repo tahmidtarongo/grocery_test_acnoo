@@ -1,4 +1,3 @@
-import 'package:currency_picker/currency_picker.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -600,12 +599,9 @@ class _SettingScreenState extends State<SettingScreen> {
                 ///____________Currency________________________________________________
                 ListTile(
                   onTap: () async {
+                    await const CurrencyScreen().launch(context);
 
-                     await const CurrencyScreen().launch(context);
-
-                     setState(() {
-
-                     });
+                    setState(() {});
 
                     // showCurrencyPicker(
                     //   context: context,

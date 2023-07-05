@@ -111,7 +111,7 @@ class _ProfileDetailsState extends State<ProfileDetails> {
                         text: details.phoneNumber,
                       ),
                       decoration: InputDecoration(
-                          labelText:  lang.S.of(context).phone,
+                          labelText: lang.S.of(context).phone,
                           border: const OutlineInputBorder().copyWith(borderSide: const BorderSide(color: kGreyTextColor)),
                           hoverColor: kGreyTextColor,
                           fillColor: kGreyTextColor),

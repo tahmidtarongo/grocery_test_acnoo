@@ -80,8 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "editSalesInvoice": MessageLookupByLibrary.simpleMessage("판매 송장 편집"),
         "email": MessageLookupByLibrary.simpleMessage("이메일 주소"),
         "emailText": MessageLookupByLibrary.simpleMessage("이메일"),
-        "enterEmail": MessageLookupByLibrary.simpleMessage(
-            "비밀번호 재설정 링크를 받으려면 아래에 이메일 주소를 입력하세요."),
+        "enterEmail": MessageLookupByLibrary.simpleMessage("비밀번호 재설정 링크를 받으려면 아래에 이메일 주소를 입력하세요."),
         "expenseCat": MessageLookupByLibrary.simpleMessage("비용 범주"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("비용 날짜"),
         "expenseFor": MessageLookupByLibrary.simpleMessage("비용"),
@@ -144,8 +143,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "recentTransaction": MessageLookupByLibrary.simpleMessage("최근 거래"),
         "referenceNo": MessageLookupByLibrary.simpleMessage("참조 번호"),
         "register": MessageLookupByLibrary.simpleMessage("등록하다"),
-        "registerTitle":
-            MessageLookupByLibrary.simpleMessage("시작하지 않고 전화를 등록해야 합니다!"),
+        "registerTitle": MessageLookupByLibrary.simpleMessage("시작하지 않고 전화를 등록해야 합니다!"),
         "reports": MessageLookupByLibrary.simpleMessage("보고서"),
         "retailer": MessageLookupByLibrary.simpleMessage("소매점"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("반환 금액"),
@@ -160,11 +158,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "select": MessageLookupByLibrary.simpleMessage("선택하다"),
         "selectLang": MessageLookupByLibrary.simpleMessage("언어 선택"),
         "sendCode": MessageLookupByLibrary.simpleMessage("코드 보내기"),
-        "sendEmail": MessageLookupByLibrary.simpleMessage(
-            "비밀번호를 재설정하는 방법에 대한 지침이 포함된 이메일을 다음 주소로 보냈습니다."),
+        "sendEmail": MessageLookupByLibrary.simpleMessage("비밀번호를 재설정하는 방법에 대한 지침이 포함된 이메일을 다음 주소로 보냈습니다."),
         "sendLink": MessageLookupByLibrary.simpleMessage("재설정 링크 보내기"),
-        "setUpDesc": MessageLookupByLibrary.simpleMessage(
-            "프로필을 업데이트하여 의사에게 더 나은 인상을 심어주세요."),
+        "setUpDesc": MessageLookupByLibrary.simpleMessage("프로필을 업데이트하여 의사에게 더 나은 인상을 심어주세요."),
         "setUpProfile": MessageLookupByLibrary.simpleMessage("프로필 설정"),
         "staffLogin": MessageLookupByLibrary.simpleMessage("직원 로그인"),
         "stillUnpaid": MessageLookupByLibrary.simpleMessage("아직 미지급"),

@@ -22,27 +22,19 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "CustomerDetails":
-            MessageLookupByLibrary.simpleMessage("Kliëntbesonderhede"),
-        "addAPurchase": MessageLookupByLibrary.simpleMessage(
-            "Voeg asseblief \'n Aankoop by"),
+        "CustomerDetails": MessageLookupByLibrary.simpleMessage("Kliëntbesonderhede"),
+        "addAPurchase": MessageLookupByLibrary.simpleMessage("Voeg asseblief \'n Aankoop by"),
         "addBrand": MessageLookupByLibrary.simpleMessage("Voeg Handelsmerk by"),
         "addContact": MessageLookupByLibrary.simpleMessage("Voeg Kontak Toe"),
-        "addCustomer": MessageLookupByLibrary.simpleMessage(
-            "Voeg asseblief \'n Kliënt by"),
+        "addCustomer": MessageLookupByLibrary.simpleMessage("Voeg asseblief \'n Kliënt by"),
         "addExpense": MessageLookupByLibrary.simpleMessage("Voeg Uitgawe Toe"),
-        "addExpenseCat":
-            MessageLookupByLibrary.simpleMessage("Voeg Uitgawe Kategorie Toe"),
+        "addExpenseCat": MessageLookupByLibrary.simpleMessage("Voeg Uitgawe Kategorie Toe"),
         "addItems": MessageLookupByLibrary.simpleMessage("Voeg Items by"),
-        "addNewProduct":
-            MessageLookupByLibrary.simpleMessage("Voeg Nuwe Produk by"),
-        "addNewPurchase": MessageLookupByLibrary.simpleMessage(
-            "Voeg asseblief \'n Aankoop by"),
-        "addProduct": MessageLookupByLibrary.simpleMessage(
-            "Voeg asseblief \'n Produk by"),
+        "addNewProduct": MessageLookupByLibrary.simpleMessage("Voeg Nuwe Produk by"),
+        "addNewPurchase": MessageLookupByLibrary.simpleMessage("Voeg asseblief \'n Aankoop by"),
+        "addProduct": MessageLookupByLibrary.simpleMessage("Voeg asseblief \'n Produk by"),
         "addPurchase": MessageLookupByLibrary.simpleMessage("Voeg Aankoop by"),
-        "addSale": MessageLookupByLibrary.simpleMessage(
-            "Voeg asseblief \'n Verkoop by"),
+        "addSale": MessageLookupByLibrary.simpleMessage("Voeg asseblief \'n Verkoop by"),
         "addSales": MessageLookupByLibrary.simpleMessage("Voeg Verkope by"),
         "addUnit": MessageLookupByLibrary.simpleMessage("Voeg Eenheid by"),
         "address": MessageLookupByLibrary.simpleMessage("Adres"),
@@ -50,38 +42,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "amount": MessageLookupByLibrary.simpleMessage("Bedrag"),
         "brandName": MessageLookupByLibrary.simpleMessage("Handelsmerknaam"),
         "brands": MessageLookupByLibrary.simpleMessage("Handelsmerke"),
-        "businessCat":
-            MessageLookupByLibrary.simpleMessage("Besigheidskategorie"),
-        "businessName": MessageLookupByLibrary.simpleMessage(
-            "Maatskappy- en Besigheidsnaam"),
+        "businessCat": MessageLookupByLibrary.simpleMessage("Besigheidskategorie"),
+        "businessName": MessageLookupByLibrary.simpleMessage("Maatskappy- en Besigheidsnaam"),
         "buyPremium": MessageLookupByLibrary.simpleMessage("Koop premium Plan"),
         "camera": MessageLookupByLibrary.simpleMessage("Kamera"),
         "cancel": MessageLookupByLibrary.simpleMessage("Kanselleer"),
         "categoryName": MessageLookupByLibrary.simpleMessage("Kategorie Naam"),
-        "changePassword":
-            MessageLookupByLibrary.simpleMessage("Verander Wagwoord"),
+        "changePassword": MessageLookupByLibrary.simpleMessage("Verander Wagwoord"),
         "checkEmail": MessageLookupByLibrary.simpleMessage("Kyk na E-pos"),
-        "chooseCustomer":
-            MessageLookupByLibrary.simpleMessage("Kies \'n Kliënt"),
-        "chooseSupplier":
-            MessageLookupByLibrary.simpleMessage("Kies \'n Verskaffer"),
-        "clickToConnect":
-            MessageLookupByLibrary.simpleMessage("Klik om te verbind"),
+        "chooseCustomer": MessageLookupByLibrary.simpleMessage("Kies \'n Kliënt"),
+        "chooseSupplier": MessageLookupByLibrary.simpleMessage("Kies \'n Verskaffer"),
+        "clickToConnect": MessageLookupByLibrary.simpleMessage("Klik om te verbind"),
         "close": MessageLookupByLibrary.simpleMessage("Maak Toe"),
         "collectDue": MessageLookupByLibrary.simpleMessage("Innis Verkry"),
-        "collectDues": MessageLookupByLibrary.simpleMessage(
-            "Versamel asseblief \'n Uitstaande"),
-        "companyAddress":
-            MessageLookupByLibrary.simpleMessage("Maatskappy Adres"),
-        "confirmPass":
-            MessageLookupByLibrary.simpleMessage("Bevestig Wagwoord"),
+        "collectDues": MessageLookupByLibrary.simpleMessage("Versamel asseblief \'n Uitstaande"),
+        "companyAddress": MessageLookupByLibrary.simpleMessage("Maatskappy Adres"),
+        "confirmPass": MessageLookupByLibrary.simpleMessage("Bevestig Wagwoord"),
         "congratulation": MessageLookupByLibrary.simpleMessage("Gelukwensing"),
         "connect": MessageLookupByLibrary.simpleMessage("Klik om te verbind"),
-        "connectPrinter":
-            MessageLookupByLibrary.simpleMessage("Verbind jou drukker"),
+        "connectPrinter": MessageLookupByLibrary.simpleMessage("Verbind jou drukker"),
         "continueButton": MessageLookupByLibrary.simpleMessage("Gaan voort"),
-        "createAcc":
-            MessageLookupByLibrary.simpleMessage("Skep \'n Gratis Rekening"),
+        "createAcc": MessageLookupByLibrary.simpleMessage("Skep \'n Gratis Rekening"),
         "currency": MessageLookupByLibrary.simpleMessage("Geldeenheid"),
         "customerName": MessageLookupByLibrary.simpleMessage("Kliënt Naam"),
         "date": MessageLookupByLibrary.simpleMessage("Datum"),
@@ -90,62 +71,48 @@ class MessageLookup extends MessageLookupByLibrary {
         "dealerPrice": MessageLookupByLibrary.simpleMessage("Handelaarsprys"),
         "discount": MessageLookupByLibrary.simpleMessage("Afslag"),
         "due": MessageLookupByLibrary.simpleMessage("Uitstaande"),
-        "dueAmount":
-            MessageLookupByLibrary.simpleMessage("Uitstaande Bedrag: "),
+        "dueAmount": MessageLookupByLibrary.simpleMessage("Uitstaande Bedrag: "),
         "dueList": MessageLookupByLibrary.simpleMessage("Uitstaande Lys"),
         "dueReport": MessageLookupByLibrary.simpleMessage("Uitstaande Verslag"),
         "edit": MessageLookupByLibrary.simpleMessage("Wysig"),
-        "editPhone":
-            MessageLookupByLibrary.simpleMessage("Wysig Telefoonnommer?"),
-        "editPurchaseInvoice":
-            MessageLookupByLibrary.simpleMessage("Wysig Aankoopfaktuur"),
-        "editSalesInvoice":
-            MessageLookupByLibrary.simpleMessage("Wysig Verkope Faktuur"),
+        "editPhone": MessageLookupByLibrary.simpleMessage("Wysig Telefoonnommer?"),
+        "editPurchaseInvoice": MessageLookupByLibrary.simpleMessage("Wysig Aankoopfaktuur"),
+        "editSalesInvoice": MessageLookupByLibrary.simpleMessage("Wysig Verkope Faktuur"),
         "email": MessageLookupByLibrary.simpleMessage("E-posadres"),
         "emailText": MessageLookupByLibrary.simpleMessage("E-pos"),
-        "enterEmail": MessageLookupByLibrary.simpleMessage(
-            "Voer asseblief jou e-posadres hieronder in om \'n skakel vir wagwoordherstel te ontvang."),
-        "expenseCat":
-            MessageLookupByLibrary.simpleMessage("Uitgawe Kategorieë"),
+        "enterEmail": MessageLookupByLibrary.simpleMessage("Voer asseblief jou e-posadres hieronder in om \'n skakel vir wagwoordherstel te ontvang."),
+        "expenseCat": MessageLookupByLibrary.simpleMessage("Uitgawe Kategorieë"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("Uitgawedatum"),
         "expenseFor": MessageLookupByLibrary.simpleMessage("Uitgawe Vir"),
         "expenseReport": MessageLookupByLibrary.simpleMessage("Uitgaweverslag"),
-        "forgotPassword":
-            MessageLookupByLibrary.simpleMessage("Wagwoord vergeet"),
+        "forgotPassword": MessageLookupByLibrary.simpleMessage("Wagwoord vergeet"),
         "freePack": MessageLookupByLibrary.simpleMessage("Gratis Pakket"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Gratis Plan"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Van Datum"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("Volledig Betaal"),
         "gallery": MessageLookupByLibrary.simpleMessage("Galerie"),
-        "gotEmail":
-            MessageLookupByLibrary.simpleMessage("Jy het \'n E-pos ontvang"),
-        "haveAcc":
-            MessageLookupByLibrary.simpleMessage("Het reeds \'n rekening?"),
+        "gotEmail": MessageLookupByLibrary.simpleMessage("Jy het \'n E-pos ontvang"),
+        "haveAcc": MessageLookupByLibrary.simpleMessage("Het reeds \'n rekening?"),
         "inv": MessageLookupByLibrary.simpleMessage("Faktuur Nr."),
         "invoice": MessageLookupByLibrary.simpleMessage("Faktuur"),
         "itemAdded": MessageLookupByLibrary.simpleMessage("Item Bygevoeg"),
         "language": MessageLookupByLibrary.simpleMessage("taal"),
         "loading": MessageLookupByLibrary.simpleMessage("Laai"),
         "logIn": MessageLookupByLibrary.simpleMessage("Teken In"),
-        "logInWithMail":
-            MessageLookupByLibrary.simpleMessage("Teken In Met E-pos"),
+        "logInWithMail": MessageLookupByLibrary.simpleMessage("Teken In Met E-pos"),
         "logOut": MessageLookupByLibrary.simpleMessage("Teken Uit"),
-        "loginWithPhone":
-            MessageLookupByLibrary.simpleMessage("Teken In Met Telefoon"),
+        "loginWithPhone": MessageLookupByLibrary.simpleMessage("Teken In Met Telefoon"),
         "loss": MessageLookupByLibrary.simpleMessage("Verlies"),
         "lp": MessageLookupByLibrary.simpleMessage("Verlies/Wins"),
-        "lpDetails":
-            MessageLookupByLibrary.simpleMessage("Verlies/Wins Besonderhede"),
+        "lpDetails": MessageLookupByLibrary.simpleMessage("Verlies/Wins Besonderhede"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("Vervaardiger"),
         "mobile": MessageLookupByLibrary.simpleMessage("Mobiel:"),
         "moreInfo": MessageLookupByLibrary.simpleMessage("Meer Inligting"),
         "mrp": MessageLookupByLibrary.simpleMessage("MRP"),
         "name": MessageLookupByLibrary.simpleMessage("Naam"),
-        "noAcc":
-            MessageLookupByLibrary.simpleMessage("Het nog geen rekening nie?"),
+        "noAcc": MessageLookupByLibrary.simpleMessage("Het nog geen rekening nie?"),
         "noData": MessageLookupByLibrary.simpleMessage("Geen Data Beskikbaar"),
-        "noSupplier":
-            MessageLookupByLibrary.simpleMessage("Geen Verskaffer Beskikbaar"),
+        "noSupplier": MessageLookupByLibrary.simpleMessage("Geen Verskaffer Beskikbaar"),
         "note": MessageLookupByLibrary.simpleMessage("Nota"),
         "openingBalance": MessageLookupByLibrary.simpleMessage("Beginbalans"),
         "packFeatures": MessageLookupByLibrary.simpleMessage("Pakket Funksies"),
@@ -156,13 +123,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "paymentTypes": MessageLookupByLibrary.simpleMessage("Betaal Tipe"),
         "paypalPay": MessageLookupByLibrary.simpleMessage("Betaal met Paypal"),
         "phone": MessageLookupByLibrary.simpleMessage("Telefoonnommer"),
-        "phoneVerification":
-            MessageLookupByLibrary.simpleMessage("Telefoonverifikasie"),
+        "phoneVerification": MessageLookupByLibrary.simpleMessage("Telefoonverifikasie"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Premium Plan"),
-        "previousDue":
-            MessageLookupByLibrary.simpleMessage("Vorige Uitstaande"),
-        "previousPayAmount":
-            MessageLookupByLibrary.simpleMessage("Vorige Betaalbedrag"),
+        "previousDue": MessageLookupByLibrary.simpleMessage("Vorige Uitstaande"),
+        "previousPayAmount": MessageLookupByLibrary.simpleMessage("Vorige Betaalbedrag"),
         "printing": MessageLookupByLibrary.simpleMessage("Drukopsie"),
         "product": MessageLookupByLibrary.simpleMessage("Produk"),
         "productCode": MessageLookupByLibrary.simpleMessage("Produkkode"),
@@ -172,45 +136,33 @@ class MessageLookup extends MessageLookupByLibrary {
         "profit": MessageLookupByLibrary.simpleMessage("Wins"),
         "purchase": MessageLookupByLibrary.simpleMessage("Aankoop"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("Aankooplys"),
-        "purchasePremium":
-            MessageLookupByLibrary.simpleMessage("Koop Premium Plan"),
+        "purchasePremium": MessageLookupByLibrary.simpleMessage("Koop Premium Plan"),
         "purchasePrice": MessageLookupByLibrary.simpleMessage("Koopprys"),
-        "purchaseReport":
-            MessageLookupByLibrary.simpleMessage("Aankoopverslag"),
+        "purchaseReport": MessageLookupByLibrary.simpleMessage("Aankoopverslag"),
         "quantity": MessageLookupByLibrary.simpleMessage("Hoeveelheid"),
-        "recentTransaction":
-            MessageLookupByLibrary.simpleMessage("Onlangse Transaksies"),
+        "recentTransaction": MessageLookupByLibrary.simpleMessage("Onlangse Transaksies"),
         "referenceNo": MessageLookupByLibrary.simpleMessage("Verwysingsnommer"),
         "register": MessageLookupByLibrary.simpleMessage("Registreer"),
-        "registerTitle": MessageLookupByLibrary.simpleMessage(
-            "Ons moet jou telefoon registreer sonder om te begin!"),
+        "registerTitle": MessageLookupByLibrary.simpleMessage("Ons moet jou telefoon registreer sonder om te begin!"),
         "reports": MessageLookupByLibrary.simpleMessage("Verslae"),
         "retailer": MessageLookupByLibrary.simpleMessage("Kleinhandelaar"),
-        "returnAmount":
-            MessageLookupByLibrary.simpleMessage("Terugbetaling Bedrag"),
+        "returnAmount": MessageLookupByLibrary.simpleMessage("Terugbetaling Bedrag"),
         "sale": MessageLookupByLibrary.simpleMessage("Verkoop"),
         "saleList": MessageLookupByLibrary.simpleMessage("Verkope Lys"),
         "salePrice": MessageLookupByLibrary.simpleMessage("Verkoopprys"),
-        "salesDetails":
-            MessageLookupByLibrary.simpleMessage("Verkope Besonderhede"),
+        "salesDetails": MessageLookupByLibrary.simpleMessage("Verkope Besonderhede"),
         "salesReport": MessageLookupByLibrary.simpleMessage("Verkope Verslag"),
         "save": MessageLookupByLibrary.simpleMessage("Stoor"),
-        "saveNPublish":
-            MessageLookupByLibrary.simpleMessage("Stoor en Publiseer"),
+        "saveNPublish": MessageLookupByLibrary.simpleMessage("Stoor en Publiseer"),
         "search": MessageLookupByLibrary.simpleMessage("Soek"),
         "select": MessageLookupByLibrary.simpleMessage("Kies"),
         "selectLang": MessageLookupByLibrary.simpleMessage("Kies jou Taal"),
         "sendCode": MessageLookupByLibrary.simpleMessage("Stuur die kode"),
-        "sendEmail": MessageLookupByLibrary.simpleMessage(
-            "Ons het \'n E-pos gestuur met instruksies oor hoe om wagwoord te herstel na:"),
-        "sendLink":
-            MessageLookupByLibrary.simpleMessage("Stuur Herstel Skakel"),
-        "setUpDesc": MessageLookupByLibrary.simpleMessage(
-            "Werk jou profiel op om beter indruk te maak wanneer jy met jou dokter kommunikeer"),
-        "setUpProfile":
-            MessageLookupByLibrary.simpleMessage("Stel Jou Profiel Op"),
-        "staffLogin":
-            MessageLookupByLibrary.simpleMessage("Personeel Teken In"),
+        "sendEmail": MessageLookupByLibrary.simpleMessage("Ons het \'n E-pos gestuur met instruksies oor hoe om wagwoord te herstel na:"),
+        "sendLink": MessageLookupByLibrary.simpleMessage("Stuur Herstel Skakel"),
+        "setUpDesc": MessageLookupByLibrary.simpleMessage("Werk jou profiel op om beter indruk te maak wanneer jy met jou dokter kommunikeer"),
+        "setUpProfile": MessageLookupByLibrary.simpleMessage("Stel Jou Profiel Op"),
+        "staffLogin": MessageLookupByLibrary.simpleMessage("Personeel Teken In"),
         "stillUnpaid": MessageLookupByLibrary.simpleMessage("Nog Onbetaal"),
         "stock": MessageLookupByLibrary.simpleMessage("Voorraad"),
         "stockList": MessageLookupByLibrary.simpleMessage("Voorraadlys"),
@@ -231,17 +183,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "units": MessageLookupByLibrary.simpleMessage("Eenhede"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Onbeperk"),
         "update": MessageLookupByLibrary.simpleMessage("Opdateer"),
-        "updateContact":
-            MessageLookupByLibrary.simpleMessage("Opdateer Kontak"),
+        "updateContact": MessageLookupByLibrary.simpleMessage("Opdateer Kontak"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Werk Nou By"),
         "updateProduct": MessageLookupByLibrary.simpleMessage("Werk Produk by"),
-        "updateProfile":
-            MessageLookupByLibrary.simpleMessage("Werk Jou Profiel by"),
+        "updateProfile": MessageLookupByLibrary.simpleMessage("Werk Jou Profiel by"),
         "userRole": MessageLookupByLibrary.simpleMessage("Gebruikersrol"),
         "viewAll": MessageLookupByLibrary.simpleMessage("Vertoon Alles"),
         "whatNew": MessageLookupByLibrary.simpleMessage("Wat is Nuut"),
-        "wholeSalePrice":
-            MessageLookupByLibrary.simpleMessage("Groothandelsprys"),
+        "wholeSalePrice": MessageLookupByLibrary.simpleMessage("Groothandelsprys"),
         "wholesaler": MessageLookupByLibrary.simpleMessage("Groothandelaar"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("Jy gebruik "),
         "yourPack": MessageLookupByLibrary.simpleMessage("Jou Pakket")

@@ -27,8 +27,8 @@ class PurchasePremiumPlanScreen extends StatefulWidget {
 class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
   String selectedPayButton = 'Paypal';
   int selectedPackageValue = 0;
-  SubscriptionPlanModel selectedPlan = SubscriptionPlanModel(
-      subscriptionName: '', saleNumber: 0, purchaseNumber: 0, partiesNumber: 0, dueNumber: 0, duration: 0, products: 0, subscriptionPrice: 0, offerPrice: 0);
+  SubscriptionPlanModel selectedPlan =
+      SubscriptionPlanModel(subscriptionName: '', saleNumber: 0, purchaseNumber: 0, partiesNumber: 0, dueNumber: 0, duration: 0, products: 0, subscriptionPrice: 0, offerPrice: 0);
 
   List<String> imageList = [
     'images/sp1.png',
@@ -145,10 +145,8 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                                         const SizedBox(height: 15),
                                         const Padding(
                                           padding: EdgeInsets.all(8.0),
-                                          child: Text(
-                                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Natoque aliquet et, cur eget. Tellus sapien odio aliq.',
-                                              textAlign: TextAlign.center,
-                                              style: TextStyle(fontSize: 16)),
+                                          child: Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Natoque aliquet et, cur eget. Tellus sapien odio aliq.',
+                                              textAlign: TextAlign.center, style: TextStyle(fontSize: 16)),
                                         ),
                                         const SizedBox(height: 20),
                                       ],
@@ -217,9 +215,7 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                                             height: (context.width() / 2.5),
                                             width: (context.width() / 3) - 20,
                                             decoration: BoxDecoration(
-                                              color: data[index].subscriptionName == selectedPlan.subscriptionName
-                                                  ? kPremiumPlanColor2.withOpacity(0.1)
-                                                  : Colors.white,
+                                              color: data[index].subscriptionName == selectedPlan.subscriptionName ? kPremiumPlanColor2.withOpacity(0.1) : Colors.white,
                                               borderRadius: const BorderRadius.all(
                                                 Radius.circular(10),
                                               ),
@@ -287,14 +283,11 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                                       height: (context.width() / 3) - 20,
                                       width: (context.width() / 3) - 20,
                                       decoration: BoxDecoration(
-                                        color:
-                                            data[index].subscriptionName == selectedPlan.subscriptionName ? kPremiumPlanColor2.withOpacity(0.1) : Colors.white,
+                                        color: data[index].subscriptionName == selectedPlan.subscriptionName ? kPremiumPlanColor2.withOpacity(0.1) : Colors.white,
                                         borderRadius: const BorderRadius.all(
                                           Radius.circular(10),
                                         ),
-                                        border: Border.all(
-                                            width: 1,
-                                            color: data[index].subscriptionName == selectedPlan.subscriptionName ? kPremiumPlanColor2 : kPremiumPlanColor),
+                                        border: Border.all(width: 1, color: data[index].subscriptionName == selectedPlan.subscriptionName ? kPremiumPlanColor2 : kPremiumPlanColor),
                                       ),
                                       child: Column(
                                         mainAxisAlignment: MainAxisAlignment.center,

@@ -292,8 +292,7 @@ class _SaleProductsState extends State<SaleProducts> {
 
 // ignore: must_be_immutable
 class ProductCard extends StatefulWidget {
-  ProductCard({Key? key, required this.productTitle, required this.productDescription, required this.productPrice, required this.productImage})
-      : super(key: key);
+  ProductCard({Key? key, required this.productTitle, required this.productDescription, required this.productPrice, required this.productImage}) : super(key: key);
 
   // final Product product;
   String productImage, productTitle, productDescription, productPrice;

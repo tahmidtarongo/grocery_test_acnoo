@@ -149,9 +149,8 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                     child: Container(
                       height: 120,
                       width: 120,
-                      decoration: BoxDecoration(
-                          color: buttonsSelected == 'Call' ? kMainColor : kMainColor.withOpacity(0.10),
-                          borderRadius: const BorderRadius.all(Radius.circular(10))),
+                      decoration:
+                          BoxDecoration(color: buttonsSelected == 'Call' ? kMainColor : kMainColor.withOpacity(0.10), borderRadius: const BorderRadius.all(Radius.circular(10))),
                       child: Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -224,9 +223,8 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                     child: Container(
                       height: 120,
                       width: 120,
-                      decoration: BoxDecoration(
-                          color: buttonsSelected == 'Email' ? kMainColor : kMainColor.withOpacity(0.10),
-                          borderRadius: const BorderRadius.all(Radius.circular(10))),
+                      decoration:
+                          BoxDecoration(color: buttonsSelected == 'Email' ? kMainColor : kMainColor.withOpacity(0.10), borderRadius: const BorderRadius.all(Radius.circular(10))),
                       child: Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -302,8 +300,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                                                       borderRadius: const BorderRadius.all(Radius.circular(10))),
                                                   child: Text(
                                                     reTransaction[index].dueAmount! <= 0 ? lang.S.of(context).paid : lang.S.of(context).unPaid,
-                                                    style: TextStyle(
-                                                        color: reTransaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d) : const Color(0xFFED1A3B)),
+                                                    style: TextStyle(color: reTransaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d) : const Color(0xFFED1A3B)),
                                                   ),
                                                 ),
                                                 Text(
@@ -345,9 +342,8 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                                                                         child: SizedBox(
                                                                           height: 200,
                                                                           child: ListView.builder(
-                                                                            itemCount: printerData.availableBluetoothDevices.isNotEmpty
-                                                                                ? printerData.availableBluetoothDevices.length
-                                                                                : 0,
+                                                                            itemCount:
+                                                                                printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
                                                                             itemBuilder: (context, index) {
                                                                               return ListTile(
                                                                                 onTap: () async {
@@ -461,8 +457,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                                                       borderRadius: const BorderRadius.all(Radius.circular(10))),
                                                   child: Text(
                                                     reTransaction[index].dueAmount! <= 0 ? lang.S.of(context).paid : lang.S.of(context).unPaid,
-                                                    style: TextStyle(
-                                                        color: reTransaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d) : const Color(0xFFED1A3B)),
+                                                    style: TextStyle(color: reTransaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d) : const Color(0xFFED1A3B)),
                                                   ),
                                                 ),
                                                 Text(
@@ -506,9 +501,8 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                                                                         child: SizedBox(
                                                                           height: 200,
                                                                           child: ListView.builder(
-                                                                            itemCount: printerData.availableBluetoothDevices.isNotEmpty
-                                                                                ? printerData.availableBluetoothDevices.length
-                                                                                : 0,
+                                                                            itemCount:
+                                                                                printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
                                                                             itemBuilder: (context, index) {
                                                                               return ListTile(
                                                                                 onTap: () async {

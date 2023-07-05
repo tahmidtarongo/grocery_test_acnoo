@@ -22,27 +22,19 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "CustomerDetails":
-            MessageLookupByLibrary.simpleMessage("Detaily zákazníka"),
-        "addAPurchase":
-            MessageLookupByLibrary.simpleMessage("Prosím přidejte nákup"),
+        "CustomerDetails": MessageLookupByLibrary.simpleMessage("Detaily zákazníka"),
+        "addAPurchase": MessageLookupByLibrary.simpleMessage("Prosím přidejte nákup"),
         "addBrand": MessageLookupByLibrary.simpleMessage("Přidat značku"),
         "addContact": MessageLookupByLibrary.simpleMessage("Přidat kontakt"),
-        "addCustomer":
-            MessageLookupByLibrary.simpleMessage("Prosím přidejte zákazníka"),
+        "addCustomer": MessageLookupByLibrary.simpleMessage("Prosím přidejte zákazníka"),
         "addExpense": MessageLookupByLibrary.simpleMessage("Přidat výdaj"),
-        "addExpenseCat":
-            MessageLookupByLibrary.simpleMessage("Přidat kategorii výdajů"),
+        "addExpenseCat": MessageLookupByLibrary.simpleMessage("Přidat kategorii výdajů"),
         "addItems": MessageLookupByLibrary.simpleMessage("Přidat položky"),
-        "addNewProduct":
-            MessageLookupByLibrary.simpleMessage("Přidat nový produkt"),
-        "addNewPurchase":
-            MessageLookupByLibrary.simpleMessage("Prosím přidejte nákup"),
-        "addProduct":
-            MessageLookupByLibrary.simpleMessage("Prosím přidejte produkt"),
+        "addNewProduct": MessageLookupByLibrary.simpleMessage("Přidat nový produkt"),
+        "addNewPurchase": MessageLookupByLibrary.simpleMessage("Prosím přidejte nákup"),
+        "addProduct": MessageLookupByLibrary.simpleMessage("Prosím přidejte produkt"),
         "addPurchase": MessageLookupByLibrary.simpleMessage("Přidat nákup"),
-        "addSale":
-            MessageLookupByLibrary.simpleMessage("Prosím přidejte prodej"),
+        "addSale": MessageLookupByLibrary.simpleMessage("Prosím přidejte prodej"),
         "addSales": MessageLookupByLibrary.simpleMessage("Přidat prodej"),
         "addUnit": MessageLookupByLibrary.simpleMessage("Přidat jednotku"),
         "address": MessageLookupByLibrary.simpleMessage("Adresa"),
@@ -50,39 +42,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "amount": MessageLookupByLibrary.simpleMessage("Částka"),
         "brandName": MessageLookupByLibrary.simpleMessage("Název značky"),
         "brands": MessageLookupByLibrary.simpleMessage("Značky"),
-        "businessCat":
-            MessageLookupByLibrary.simpleMessage("Kategorie podnikání"),
-        "businessName": MessageLookupByLibrary.simpleMessage(
-            "Název společnosti a podnikání"),
-        "buyPremium":
-            MessageLookupByLibrary.simpleMessage("Koupit prémiový plán"),
+        "businessCat": MessageLookupByLibrary.simpleMessage("Kategorie podnikání"),
+        "businessName": MessageLookupByLibrary.simpleMessage("Název společnosti a podnikání"),
+        "buyPremium": MessageLookupByLibrary.simpleMessage("Koupit prémiový plán"),
         "camera": MessageLookupByLibrary.simpleMessage("Fotoaparát"),
         "cancel": MessageLookupByLibrary.simpleMessage("Zrušit"),
         "categoryName": MessageLookupByLibrary.simpleMessage("Název kategorie"),
         "changePassword": MessageLookupByLibrary.simpleMessage("Změnit heslo"),
-        "checkEmail":
-            MessageLookupByLibrary.simpleMessage("Zkontrolovat email"),
-        "chooseCustomer":
-            MessageLookupByLibrary.simpleMessage("Vyberte zákazníka"),
-        "chooseSupplier":
-            MessageLookupByLibrary.simpleMessage("Vyberte dodavatele"),
-        "clickToConnect":
-            MessageLookupByLibrary.simpleMessage("Kliknutím se připojte"),
+        "checkEmail": MessageLookupByLibrary.simpleMessage("Zkontrolovat email"),
+        "chooseCustomer": MessageLookupByLibrary.simpleMessage("Vyberte zákazníka"),
+        "chooseSupplier": MessageLookupByLibrary.simpleMessage("Vyberte dodavatele"),
+        "clickToConnect": MessageLookupByLibrary.simpleMessage("Kliknutím se připojte"),
         "close": MessageLookupByLibrary.simpleMessage("Zavřít"),
         "collectDue": MessageLookupByLibrary.simpleMessage("Vybrat dluh"),
-        "collectDues":
-            MessageLookupByLibrary.simpleMessage("Prosím vybírejte dluhy"),
-        "companyAddress":
-            MessageLookupByLibrary.simpleMessage("Adresa společnosti"),
+        "collectDues": MessageLookupByLibrary.simpleMessage("Prosím vybírejte dluhy"),
+        "companyAddress": MessageLookupByLibrary.simpleMessage("Adresa společnosti"),
         "confirmPass": MessageLookupByLibrary.simpleMessage("Potvrďte heslo"),
         "congratulation": MessageLookupByLibrary.simpleMessage("Gratulujeme"),
-        "connect":
-            MessageLookupByLibrary.simpleMessage("Kliknutím se připojte"),
-        "connectPrinter":
-            MessageLookupByLibrary.simpleMessage("Připojte tiskárnu"),
+        "connect": MessageLookupByLibrary.simpleMessage("Kliknutím se připojte"),
+        "connectPrinter": MessageLookupByLibrary.simpleMessage("Připojte tiskárnu"),
         "continueButton": MessageLookupByLibrary.simpleMessage("Pokračovat"),
-        "createAcc":
-            MessageLookupByLibrary.simpleMessage("Vytvořit bezplatný účet"),
+        "createAcc": MessageLookupByLibrary.simpleMessage("Vytvořit bezplatný účet"),
         "currency": MessageLookupByLibrary.simpleMessage("Měna"),
         "customerName": MessageLookupByLibrary.simpleMessage("Jméno zákazníka"),
         "date": MessageLookupByLibrary.simpleMessage("Datum"),
@@ -95,23 +75,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "dueList": MessageLookupByLibrary.simpleMessage("Seznam dluhů"),
         "dueReport": MessageLookupByLibrary.simpleMessage("Hlášení o dluhu"),
         "edit": MessageLookupByLibrary.simpleMessage("Upravit"),
-        "editPhone":
-            MessageLookupByLibrary.simpleMessage("Upravit telefonní číslo?"),
-        "editPurchaseInvoice":
-            MessageLookupByLibrary.simpleMessage("Upravit nákupní fakturu"),
-        "editSalesInvoice":
-            MessageLookupByLibrary.simpleMessage("Upravit prodejní fakturu"),
+        "editPhone": MessageLookupByLibrary.simpleMessage("Upravit telefonní číslo?"),
+        "editPurchaseInvoice": MessageLookupByLibrary.simpleMessage("Upravit nákupní fakturu"),
+        "editSalesInvoice": MessageLookupByLibrary.simpleMessage("Upravit prodejní fakturu"),
         "email": MessageLookupByLibrary.simpleMessage("Emailová adresa"),
         "emailText": MessageLookupByLibrary.simpleMessage("Email"),
-        "enterEmail": MessageLookupByLibrary.simpleMessage(
-            "Zadejte prosím svou e-mailovou adresu níže, abyste obdrželi odkaz na obnovení hesla."),
+        "enterEmail": MessageLookupByLibrary.simpleMessage("Zadejte prosím svou e-mailovou adresu níže, abyste obdrželi odkaz na obnovení hesla."),
         "expenseCat": MessageLookupByLibrary.simpleMessage("Kategorie výdajů"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("Datum výdaje"),
         "expenseFor": MessageLookupByLibrary.simpleMessage("Výdaj pro"),
-        "expenseReport":
-            MessageLookupByLibrary.simpleMessage("Hlášení o výdajích"),
-        "forgotPassword":
-            MessageLookupByLibrary.simpleMessage("Zapomněli jste heslo"),
+        "expenseReport": MessageLookupByLibrary.simpleMessage("Hlášení o výdajích"),
+        "forgotPassword": MessageLookupByLibrary.simpleMessage("Zapomněli jste heslo"),
         "freePack": MessageLookupByLibrary.simpleMessage("Bezplatný balíček"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Bezplatný plán"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Od data"),
@@ -125,43 +99,34 @@ class MessageLookup extends MessageLookupByLibrary {
         "language": MessageLookupByLibrary.simpleMessage("Jazyk"),
         "loading": MessageLookupByLibrary.simpleMessage("Načítání"),
         "logIn": MessageLookupByLibrary.simpleMessage("Přihlásit se"),
-        "logInWithMail":
-            MessageLookupByLibrary.simpleMessage("Přihlásit se pomocí e-mailu"),
+        "logInWithMail": MessageLookupByLibrary.simpleMessage("Přihlásit se pomocí e-mailu"),
         "logOut": MessageLookupByLibrary.simpleMessage("Odhlásit se"),
-        "loginWithPhone": MessageLookupByLibrary.simpleMessage(
-            "Přihlásit se pomocí telefonu"),
+        "loginWithPhone": MessageLookupByLibrary.simpleMessage("Přihlásit se pomocí telefonu"),
         "loss": MessageLookupByLibrary.simpleMessage("Ztráta"),
         "lp": MessageLookupByLibrary.simpleMessage("Ztráta/Zisk"),
-        "lpDetails":
-            MessageLookupByLibrary.simpleMessage("Detaily o ztrátě/zisku"),
+        "lpDetails": MessageLookupByLibrary.simpleMessage("Detaily o ztrátě/zisku"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("Výrobce"),
         "mobile": MessageLookupByLibrary.simpleMessage("Mobil:"),
         "moreInfo": MessageLookupByLibrary.simpleMessage("Více informací"),
         "mrp": MessageLookupByLibrary.simpleMessage("MRP"),
         "name": MessageLookupByLibrary.simpleMessage("Jméno"),
         "noAcc": MessageLookupByLibrary.simpleMessage("Nemáte žádný účet?"),
-        "noData":
-            MessageLookupByLibrary.simpleMessage("Data nejsou k dispozici"),
-        "noSupplier": MessageLookupByLibrary.simpleMessage(
-            "Není k dispozici žádný dodavatel"),
+        "noData": MessageLookupByLibrary.simpleMessage("Data nejsou k dispozici"),
+        "noSupplier": MessageLookupByLibrary.simpleMessage("Není k dispozici žádný dodavatel"),
         "note": MessageLookupByLibrary.simpleMessage("Poznámka"),
-        "openingBalance":
-            MessageLookupByLibrary.simpleMessage("Počáteční zůstatek"),
+        "openingBalance": MessageLookupByLibrary.simpleMessage("Počáteční zůstatek"),
         "packFeatures": MessageLookupByLibrary.simpleMessage("Funkce balíčku"),
         "paid": MessageLookupByLibrary.simpleMessage("Zaplaceno"),
         "paidAmount": MessageLookupByLibrary.simpleMessage("Zaplacená částka"),
         "partyList": MessageLookupByLibrary.simpleMessage("Seznam stran"),
         "password": MessageLookupByLibrary.simpleMessage("Heslo"),
         "paymentTypes": MessageLookupByLibrary.simpleMessage("Typ platby"),
-        "paypalPay":
-            MessageLookupByLibrary.simpleMessage("Zaplatit přes PayPal"),
+        "paypalPay": MessageLookupByLibrary.simpleMessage("Zaplatit přes PayPal"),
         "phone": MessageLookupByLibrary.simpleMessage("Telefonní číslo"),
-        "phoneVerification":
-            MessageLookupByLibrary.simpleMessage("Ověření telefonu"),
+        "phoneVerification": MessageLookupByLibrary.simpleMessage("Ověření telefonu"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Prémiový plán"),
         "previousDue": MessageLookupByLibrary.simpleMessage("Předchozí dluh"),
-        "previousPayAmount":
-            MessageLookupByLibrary.simpleMessage("Předchozí částka platby"),
+        "previousPayAmount": MessageLookupByLibrary.simpleMessage("Předchozí částka platby"),
         "printing": MessageLookupByLibrary.simpleMessage("Možnost tisku"),
         "product": MessageLookupByLibrary.simpleMessage("Produkt"),
         "productCode": MessageLookupByLibrary.simpleMessage("Kód produktu"),
@@ -171,62 +136,46 @@ class MessageLookup extends MessageLookupByLibrary {
         "profit": MessageLookupByLibrary.simpleMessage("Zisk"),
         "purchase": MessageLookupByLibrary.simpleMessage("Nákup"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("Seznam nákupů"),
-        "purchasePremium":
-            MessageLookupByLibrary.simpleMessage("Koupit prémiový plán"),
+        "purchasePremium": MessageLookupByLibrary.simpleMessage("Koupit prémiový plán"),
         "purchasePrice": MessageLookupByLibrary.simpleMessage("Nákupní cena"),
-        "purchaseReport":
-            MessageLookupByLibrary.simpleMessage("Hlášení o nákupech"),
+        "purchaseReport": MessageLookupByLibrary.simpleMessage("Hlášení o nákupech"),
         "quantity": MessageLookupByLibrary.simpleMessage("Množství"),
-        "recentTransaction":
-            MessageLookupByLibrary.simpleMessage("Nedávné transakce"),
+        "recentTransaction": MessageLookupByLibrary.simpleMessage("Nedávné transakce"),
         "referenceNo": MessageLookupByLibrary.simpleMessage("Referenční číslo"),
         "register": MessageLookupByLibrary.simpleMessage("Registrovat"),
-        "registerTitle": MessageLookupByLibrary.simpleMessage(
-            "Je třeba zaregistrovat váš telefon před zahájením!"),
+        "registerTitle": MessageLookupByLibrary.simpleMessage("Je třeba zaregistrovat váš telefon před zahájením!"),
         "reports": MessageLookupByLibrary.simpleMessage("Hlášení"),
         "retailer": MessageLookupByLibrary.simpleMessage("Prodejce"),
-        "returnAmount":
-            MessageLookupByLibrary.simpleMessage("Částka k vrácení"),
+        "returnAmount": MessageLookupByLibrary.simpleMessage("Částka k vrácení"),
         "sale": MessageLookupByLibrary.simpleMessage("Prodej"),
         "saleList": MessageLookupByLibrary.simpleMessage("Seznam prodejů"),
         "salePrice": MessageLookupByLibrary.simpleMessage("Prodejní cena"),
-        "salesDetails":
-            MessageLookupByLibrary.simpleMessage("Podrobnosti o prodeji"),
-        "salesReport":
-            MessageLookupByLibrary.simpleMessage("Hlášení o prodejích"),
+        "salesDetails": MessageLookupByLibrary.simpleMessage("Podrobnosti o prodeji"),
+        "salesReport": MessageLookupByLibrary.simpleMessage("Hlášení o prodejích"),
         "save": MessageLookupByLibrary.simpleMessage("Uložit"),
-        "saveNPublish":
-            MessageLookupByLibrary.simpleMessage("Uložit a publikovat"),
+        "saveNPublish": MessageLookupByLibrary.simpleMessage("Uložit a publikovat"),
         "search": MessageLookupByLibrary.simpleMessage("Hledat"),
         "select": MessageLookupByLibrary.simpleMessage("Vybrat"),
         "selectLang": MessageLookupByLibrary.simpleMessage("Vyberte jazyk"),
         "sendCode": MessageLookupByLibrary.simpleMessage("Odeslat kód"),
-        "sendEmail": MessageLookupByLibrary.simpleMessage(
-            "Poslali jsme vám e-mail s instrukcemi, jak obnovit heslo na:"),
-        "sendLink": MessageLookupByLibrary.simpleMessage(
-            "Odeslat odkaz na obnovu hesla"),
-        "setUpDesc": MessageLookupByLibrary.simpleMessage(
-            "Aktualizujte svůj profil pro lepší spojení s vaším lékařem"),
-        "setUpProfile":
-            MessageLookupByLibrary.simpleMessage("Nastavit váš profil"),
-        "staffLogin":
-            MessageLookupByLibrary.simpleMessage("Přihlášení zaměstnance"),
-        "stillUnpaid":
-            MessageLookupByLibrary.simpleMessage("Stále nezaplaceno"),
+        "sendEmail": MessageLookupByLibrary.simpleMessage("Poslali jsme vám e-mail s instrukcemi, jak obnovit heslo na:"),
+        "sendLink": MessageLookupByLibrary.simpleMessage("Odeslat odkaz na obnovu hesla"),
+        "setUpDesc": MessageLookupByLibrary.simpleMessage("Aktualizujte svůj profil pro lepší spojení s vaším lékařem"),
+        "setUpProfile": MessageLookupByLibrary.simpleMessage("Nastavit váš profil"),
+        "staffLogin": MessageLookupByLibrary.simpleMessage("Přihlášení zaměstnance"),
+        "stillUnpaid": MessageLookupByLibrary.simpleMessage("Stále nezaplaceno"),
         "stock": MessageLookupByLibrary.simpleMessage("Sklad"),
         "stockList": MessageLookupByLibrary.simpleMessage("Seznam skladu"),
         "subTotal": MessageLookupByLibrary.simpleMessage("Mezisoučet"),
         "subscription": MessageLookupByLibrary.simpleMessage("Předplatné"),
         "supplier": MessageLookupByLibrary.simpleMessage("Dodavatel"),
-        "supplierName":
-            MessageLookupByLibrary.simpleMessage("Název dodavatele"),
+        "supplierName": MessageLookupByLibrary.simpleMessage("Název dodavatele"),
         "toDate": MessageLookupByLibrary.simpleMessage("Do data"),
         "total": MessageLookupByLibrary.simpleMessage("Celkem"),
         "totalAmount": MessageLookupByLibrary.simpleMessage("Celková částka"),
         "totalExpense": MessageLookupByLibrary.simpleMessage("Celkové náklady"),
         "totalLoss": MessageLookupByLibrary.simpleMessage("Celková ztráta"),
-        "totalProduct":
-            MessageLookupByLibrary.simpleMessage("Celkový počet produktů"),
+        "totalProduct": MessageLookupByLibrary.simpleMessage("Celkový počet produktů"),
         "totalProfit": MessageLookupByLibrary.simpleMessage("Celkový zisk"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("Zkusit znovu"),
         "unPaid": MessageLookupByLibrary.simpleMessage("Nezaplaceno"),
@@ -234,18 +183,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "units": MessageLookupByLibrary.simpleMessage("Jednotky"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Neomezený"),
         "update": MessageLookupByLibrary.simpleMessage("Aktualizovat"),
-        "updateContact":
-            MessageLookupByLibrary.simpleMessage("Aktualizovat kontakt"),
+        "updateContact": MessageLookupByLibrary.simpleMessage("Aktualizovat kontakt"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Aktualizovat nyní"),
-        "updateProduct":
-            MessageLookupByLibrary.simpleMessage("Aktualizovat produkt"),
-        "updateProfile":
-            MessageLookupByLibrary.simpleMessage("Aktualizovat váš profil"),
+        "updateProduct": MessageLookupByLibrary.simpleMessage("Aktualizovat produkt"),
+        "updateProfile": MessageLookupByLibrary.simpleMessage("Aktualizovat váš profil"),
         "userRole": MessageLookupByLibrary.simpleMessage("Role uživatele"),
         "viewAll": MessageLookupByLibrary.simpleMessage("Zobrazit vše"),
         "whatNew": MessageLookupByLibrary.simpleMessage("Co je nového"),
-        "wholeSalePrice":
-            MessageLookupByLibrary.simpleMessage("Velkoobchodní cena"),
+        "wholeSalePrice": MessageLookupByLibrary.simpleMessage("Velkoobchodní cena"),
         "wholesaler": MessageLookupByLibrary.simpleMessage("Velkoobchodník"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("Používáte "),
         "yourPack": MessageLookupByLibrary.simpleMessage("Váš balíček")

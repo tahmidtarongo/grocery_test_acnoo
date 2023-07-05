@@ -82,7 +82,7 @@ class _LoginFormState extends State<LoginForm> {
                             obscureText: showPassword,
                             decoration: InputDecoration(
                               border: const OutlineInputBorder(),
-                              labelText:  lang.S.of(context).password,
+                              labelText: lang.S.of(context).password,
                               hintText: 'Please enter a password',
                               suffixIcon: IconButton(
                                 onPressed: () {
@@ -128,7 +128,7 @@ class _LoginFormState extends State<LoginForm> {
                     ],
                   ).visible(widget.isEmailLogin),
                   ButtonGlobalWithoutIcon(
-                      buttontext:                 lang.S.of(context).logIn,
+                      buttontext: lang.S.of(context).logIn,
                       buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
                       onPressed: () {
                         if (validateAndSave()) {

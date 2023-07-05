@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -7,26 +5,24 @@ import 'package:google_fonts/google_fonts.dart';
 class PDFViewerPage extends StatefulWidget {
   final String path;
 
-  PDFViewerPage({required this.path});
+  const PDFViewerPage({Key? key, required this.path}) : super(key: key);
 
   @override
-  _PDFViewerPageState createState() => _PDFViewerPageState();
+  PDFViewerPageState createState() => PDFViewerPageState();
 }
 
-class _PDFViewerPageState extends State<PDFViewerPage> {
-  late PDFViewController _pdfViewController;
-  int _pages = 0;
-  int _currentPage = 0;
-
+class PDFViewerPageState extends State<PDFViewerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Invoice Viewer',
+        title: Text(
+          'Invoice Viewer',
           style: GoogleFonts.poppins(
             color: Colors.black,
             fontSize: 20.0,
-          ),),
+          ),
+        ),
         iconTheme: const IconThemeData(color: Colors.black),
         centerTitle: true,
         backgroundColor: Colors.white,
@@ -37,9 +33,9 @@ class _PDFViewerPageState extends State<PDFViewerPage> {
           Expanded(
             child: PDFView(
               filePath: widget.path,
-              onViewCreated: (PDFViewController controller) {
-                _pdfViewController = controller;
-              },
+              // onViewCreated: (PDFViewController controller) {
+              //   _pdfViewController = controller;
+              // },
               // onPageChanged: (int page, int total) {
               //   setState(() {
               //     _currentPage = page;

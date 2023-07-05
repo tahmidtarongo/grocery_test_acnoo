@@ -22,63 +22,45 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "CustomerDetails":
-            MessageLookupByLibrary.simpleMessage("detil pelanggan"),
-        "addAPurchase": MessageLookupByLibrary.simpleMessage(
-            "Silahkan Tambahkan Pembelian"),
+        "CustomerDetails": MessageLookupByLibrary.simpleMessage("detil pelanggan"),
+        "addAPurchase": MessageLookupByLibrary.simpleMessage("Silahkan Tambahkan Pembelian"),
         "addBrand": MessageLookupByLibrary.simpleMessage("Tambahkan Merek"),
         "addContact": MessageLookupByLibrary.simpleMessage("Tambah kontak"),
-        "addCustomer":
-            MessageLookupByLibrary.simpleMessage("Silakan Tambahkan Pelanggan"),
+        "addCustomer": MessageLookupByLibrary.simpleMessage("Silakan Tambahkan Pelanggan"),
         "addExpense": MessageLookupByLibrary.simpleMessage("Tambah Beban"),
-        "addExpenseCat": MessageLookupByLibrary.simpleMessage(
-            "Tambahkan Kategori Pengeluaran"),
+        "addExpenseCat": MessageLookupByLibrary.simpleMessage("Tambahkan Kategori Pengeluaran"),
         "addItems": MessageLookupByLibrary.simpleMessage("Tambahkan Item"),
-        "addNewProduct":
-            MessageLookupByLibrary.simpleMessage("Tambahkan Produk Baru"),
-        "addNewPurchase": MessageLookupByLibrary.simpleMessage(
-            "Silahkan Tambahkan Pembelian"),
-        "addProduct":
-            MessageLookupByLibrary.simpleMessage("Silakan Tambahkan Produk"),
-        "addPurchase":
-            MessageLookupByLibrary.simpleMessage("Tambahkan Pembelian"),
-        "addSale":
-            MessageLookupByLibrary.simpleMessage("Harap Tambahkan Obral"),
+        "addNewProduct": MessageLookupByLibrary.simpleMessage("Tambahkan Produk Baru"),
+        "addNewPurchase": MessageLookupByLibrary.simpleMessage("Silahkan Tambahkan Pembelian"),
+        "addProduct": MessageLookupByLibrary.simpleMessage("Silakan Tambahkan Produk"),
+        "addPurchase": MessageLookupByLibrary.simpleMessage("Tambahkan Pembelian"),
+        "addSale": MessageLookupByLibrary.simpleMessage("Harap Tambahkan Obral"),
         "addSales": MessageLookupByLibrary.simpleMessage("Tambahkan Penjualan"),
         "addUnit": MessageLookupByLibrary.simpleMessage("Tambahkan Satuan"),
         "address": MessageLookupByLibrary.simpleMessage("Alamat"),
-        "alreadyAdded":
-            MessageLookupByLibrary.simpleMessage("Sudah ditambahkan"),
+        "alreadyAdded": MessageLookupByLibrary.simpleMessage("Sudah ditambahkan"),
         "amount": MessageLookupByLibrary.simpleMessage("Jumlah"),
         "brandName": MessageLookupByLibrary.simpleMessage("Nama merk"),
         "brands": MessageLookupByLibrary.simpleMessage("Merek"),
         "businessCat": MessageLookupByLibrary.simpleMessage("Kategori Bisnis"),
-        "businessName":
-            MessageLookupByLibrary.simpleMessage("Nama Perusahaan & Bisnis"),
-        "buyPremium":
-            MessageLookupByLibrary.simpleMessage("Beli Paket premium"),
+        "businessName": MessageLookupByLibrary.simpleMessage("Nama Perusahaan & Bisnis"),
+        "buyPremium": MessageLookupByLibrary.simpleMessage("Beli Paket premium"),
         "camera": MessageLookupByLibrary.simpleMessage("Kamera"),
         "cancel": MessageLookupByLibrary.simpleMessage("Membatalkan"),
         "categoryName": MessageLookupByLibrary.simpleMessage("Nama Kategori"),
-        "changePassword":
-            MessageLookupByLibrary.simpleMessage("Ganti kata sandi"),
+        "changePassword": MessageLookupByLibrary.simpleMessage("Ganti kata sandi"),
         "checkEmail": MessageLookupByLibrary.simpleMessage("Periksa Email"),
-        "chooseCustomer":
-            MessageLookupByLibrary.simpleMessage("Pilih Pelanggan"),
+        "chooseCustomer": MessageLookupByLibrary.simpleMessage("Pilih Pelanggan"),
         "chooseSupplier": MessageLookupByLibrary.simpleMessage("Pilih Pemasok"),
-        "clickToConnect":
-            MessageLookupByLibrary.simpleMessage("Klik untuk terhubung"),
+        "clickToConnect": MessageLookupByLibrary.simpleMessage("Klik untuk terhubung"),
         "close": MessageLookupByLibrary.simpleMessage("Menutup"),
         "collectDue": MessageLookupByLibrary.simpleMessage("Kumpulkan Karena"),
-        "collectDues":
-            MessageLookupByLibrary.simpleMessage("Harap Kumpulkan Hutang"),
-        "companyAddress":
-            MessageLookupByLibrary.simpleMessage("Alamat perusahaan"),
+        "collectDues": MessageLookupByLibrary.simpleMessage("Harap Kumpulkan Hutang"),
+        "companyAddress": MessageLookupByLibrary.simpleMessage("Alamat perusahaan"),
         "confirmPass": MessageLookupByLibrary.simpleMessage("konfirmasi sandi"),
         "congratulation": MessageLookupByLibrary.simpleMessage("Selamat"),
         "connect": MessageLookupByLibrary.simpleMessage("Klik untuk terhubung"),
-        "connectPrinter":
-            MessageLookupByLibrary.simpleMessage("Hubungkan pencetak Anda"),
+        "connectPrinter": MessageLookupByLibrary.simpleMessage("Hubungkan pencetak Anda"),
         "continueButton": MessageLookupByLibrary.simpleMessage("Melanjutkan"),
         "createAcc": MessageLookupByLibrary.simpleMessage("Buat Akun gratis"),
         "currency": MessageLookupByLibrary.simpleMessage("Mata uang"),
@@ -89,37 +71,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "dealerPrice": MessageLookupByLibrary.simpleMessage("Harga dealer"),
         "discount": MessageLookupByLibrary.simpleMessage("Diskon"),
         "due": MessageLookupByLibrary.simpleMessage("Jatuh tempo"),
-        "dueAmount":
-            MessageLookupByLibrary.simpleMessage("Jumlah Jatuh Tempo: "),
+        "dueAmount": MessageLookupByLibrary.simpleMessage("Jumlah Jatuh Tempo: "),
         "dueList": MessageLookupByLibrary.simpleMessage("Daftar jatuh tempo"),
-        "dueReport":
-            MessageLookupByLibrary.simpleMessage("Laporan Jatuh Tempo"),
+        "dueReport": MessageLookupByLibrary.simpleMessage("Laporan Jatuh Tempo"),
         "edit": MessageLookupByLibrary.simpleMessage("Sunting"),
-        "editPhone":
-            MessageLookupByLibrary.simpleMessage("Sunting Nomor Telepon?"),
-        "editPurchaseInvoice":
-            MessageLookupByLibrary.simpleMessage("Edit Faktur Pembelian"),
-        "editSalesInvoice":
-            MessageLookupByLibrary.simpleMessage("Edit Faktur Penjualan"),
+        "editPhone": MessageLookupByLibrary.simpleMessage("Sunting Nomor Telepon?"),
+        "editPurchaseInvoice": MessageLookupByLibrary.simpleMessage("Edit Faktur Pembelian"),
+        "editSalesInvoice": MessageLookupByLibrary.simpleMessage("Edit Faktur Penjualan"),
         "email": MessageLookupByLibrary.simpleMessage("Alamat email"),
         "emailText": MessageLookupByLibrary.simpleMessage("Surel"),
-        "enterEmail": MessageLookupByLibrary.simpleMessage(
-            "Silakan masukkan alamat email Anda di bawah ini untuk menerima Tautan Reset kata sandi."),
+        "enterEmail": MessageLookupByLibrary.simpleMessage("Silakan masukkan alamat email Anda di bawah ini untuk menerima Tautan Reset kata sandi."),
         "expenseCat": MessageLookupByLibrary.simpleMessage("Kategori Biaya"),
-        "expenseDate":
-            MessageLookupByLibrary.simpleMessage("Tanggal Pengeluaran"),
+        "expenseDate": MessageLookupByLibrary.simpleMessage("Tanggal Pengeluaran"),
         "expenseFor": MessageLookupByLibrary.simpleMessage("Biaya Untuk"),
-        "expenseReport":
-            MessageLookupByLibrary.simpleMessage("Laporan pengeluaran"),
-        "forgotPassword":
-            MessageLookupByLibrary.simpleMessage("Tidak ingat kata sandi"),
+        "expenseReport": MessageLookupByLibrary.simpleMessage("Laporan pengeluaran"),
+        "forgotPassword": MessageLookupByLibrary.simpleMessage("Tidak ingat kata sandi"),
         "freePack": MessageLookupByLibrary.simpleMessage("Paket Gratis"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Paket Gratis"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Dari tanggal"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("Dibayar Penuh"),
         "gallery": MessageLookupByLibrary.simpleMessage("Galeri"),
-        "gotEmail":
-            MessageLookupByLibrary.simpleMessage("Anda Telah Mendapat Email"),
+        "gotEmail": MessageLookupByLibrary.simpleMessage("Anda Telah Mendapat Email"),
         "haveAcc": MessageLookupByLibrary.simpleMessage("Sudah memiliki akun?"),
         "inv": MessageLookupByLibrary.simpleMessage("Inv No."),
         "invoice": MessageLookupByLibrary.simpleMessage("Faktur"),
@@ -127,11 +99,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "language": MessageLookupByLibrary.simpleMessage("bahasa"),
         "loading": MessageLookupByLibrary.simpleMessage("Memuat"),
         "logIn": MessageLookupByLibrary.simpleMessage("Gabung"),
-        "logInWithMail":
-            MessageLookupByLibrary.simpleMessage("Masuk Dengan Email"),
+        "logInWithMail": MessageLookupByLibrary.simpleMessage("Masuk Dengan Email"),
         "logOut": MessageLookupByLibrary.simpleMessage("Keluar"),
-        "loginWithPhone":
-            MessageLookupByLibrary.simpleMessage("Masuk Dengan Telepon"),
+        "loginWithPhone": MessageLookupByLibrary.simpleMessage("Masuk Dengan Telepon"),
         "loss": MessageLookupByLibrary.simpleMessage("Kehilangan"),
         "lp": MessageLookupByLibrary.simpleMessage("Rugi/Laba"),
         "lpDetails": MessageLookupByLibrary.simpleMessage("Rincian Rugi/Laba"),
@@ -141,10 +111,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "mrp": MessageLookupByLibrary.simpleMessage("MRP"),
         "name": MessageLookupByLibrary.simpleMessage("Nama"),
         "noAcc": MessageLookupByLibrary.simpleMessage("Belum punya akun?"),
-        "noData": MessageLookupByLibrary.simpleMessage(
-            "Tidak ada data yang tersedia"),
-        "noSupplier": MessageLookupByLibrary.simpleMessage(
-            "Tidak Ada Pemasok yang Tersedia"),
+        "noData": MessageLookupByLibrary.simpleMessage("Tidak ada data yang tersedia"),
+        "noSupplier": MessageLookupByLibrary.simpleMessage("Tidak Ada Pemasok yang Tersedia"),
         "note": MessageLookupByLibrary.simpleMessage("Catatan"),
         "openingBalance": MessageLookupByLibrary.simpleMessage("Saldo awal"),
         "packFeatures": MessageLookupByLibrary.simpleMessage("Fitur Paket"),
@@ -153,16 +121,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "partyList": MessageLookupByLibrary.simpleMessage("Daftar Pihak"),
         "password": MessageLookupByLibrary.simpleMessage("Kata sandi"),
         "paymentTypes": MessageLookupByLibrary.simpleMessage("Tipe pembayaran"),
-        "paypalPay":
-            MessageLookupByLibrary.simpleMessage("Bayar Dengan Paypal"),
+        "paypalPay": MessageLookupByLibrary.simpleMessage("Bayar Dengan Paypal"),
         "phone": MessageLookupByLibrary.simpleMessage("Nomor telepon"),
-        "phoneVerification":
-            MessageLookupByLibrary.simpleMessage("Verifikasi Telepon"),
+        "phoneVerification": MessageLookupByLibrary.simpleMessage("Verifikasi Telepon"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Paket Premium"),
-        "previousDue":
-            MessageLookupByLibrary.simpleMessage("Jatuh Tempo Sebelumnya"),
-        "previousPayAmount": MessageLookupByLibrary.simpleMessage(
-            "Jumlah Pembayaran Sebelumnya"),
+        "previousDue": MessageLookupByLibrary.simpleMessage("Jatuh Tempo Sebelumnya"),
+        "previousPayAmount": MessageLookupByLibrary.simpleMessage("Jumlah Pembayaran Sebelumnya"),
         "printing": MessageLookupByLibrary.simpleMessage("Opsi Pencetakan"),
         "product": MessageLookupByLibrary.simpleMessage("Produk"),
         "productCode": MessageLookupByLibrary.simpleMessage("Kode Produk"),
@@ -171,49 +135,35 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("Profil"),
         "profit": MessageLookupByLibrary.simpleMessage("Laba"),
         "purchase": MessageLookupByLibrary.simpleMessage("Pembelian"),
-        "purchaseList":
-            MessageLookupByLibrary.simpleMessage("Daftar Pembelian"),
-        "purchasePremium":
-            MessageLookupByLibrary.simpleMessage("Beli Paket Premium"),
-        "purchasePrice":
-            MessageLookupByLibrary.simpleMessage("Harga pembelian"),
-        "purchaseReport":
-            MessageLookupByLibrary.simpleMessage("Laporan Pembelian"),
+        "purchaseList": MessageLookupByLibrary.simpleMessage("Daftar Pembelian"),
+        "purchasePremium": MessageLookupByLibrary.simpleMessage("Beli Paket Premium"),
+        "purchasePrice": MessageLookupByLibrary.simpleMessage("Harga pembelian"),
+        "purchaseReport": MessageLookupByLibrary.simpleMessage("Laporan Pembelian"),
         "quantity": MessageLookupByLibrary.simpleMessage("Kuantitas"),
-        "recentTransaction":
-            MessageLookupByLibrary.simpleMessage("transaksi terkini"),
+        "recentTransaction": MessageLookupByLibrary.simpleMessage("transaksi terkini"),
         "referenceNo": MessageLookupByLibrary.simpleMessage("Nomor referensi"),
         "register": MessageLookupByLibrary.simpleMessage("Daftar"),
-        "registerTitle": MessageLookupByLibrary.simpleMessage(
-            "Kami perlu mendaftarkan ponsel Anda tanpa memulai!"),
+        "registerTitle": MessageLookupByLibrary.simpleMessage("Kami perlu mendaftarkan ponsel Anda tanpa memulai!"),
         "reports": MessageLookupByLibrary.simpleMessage("Laporan"),
         "retailer": MessageLookupByLibrary.simpleMessage("Pengecer"),
-        "returnAmount":
-            MessageLookupByLibrary.simpleMessage("Jumlah Pengembalian"),
+        "returnAmount": MessageLookupByLibrary.simpleMessage("Jumlah Pengembalian"),
         "sale": MessageLookupByLibrary.simpleMessage("Penjualan"),
         "saleList": MessageLookupByLibrary.simpleMessage("Daftar Penjualan"),
         "salePrice": MessageLookupByLibrary.simpleMessage("Harga penjualan"),
-        "salesDetails":
-            MessageLookupByLibrary.simpleMessage("Detail Penjualan"),
-        "salesReport":
-            MessageLookupByLibrary.simpleMessage("Laporan penjualan"),
+        "salesDetails": MessageLookupByLibrary.simpleMessage("Detail Penjualan"),
+        "salesReport": MessageLookupByLibrary.simpleMessage("Laporan penjualan"),
         "save": MessageLookupByLibrary.simpleMessage("Menyimpan"),
-        "saveNPublish":
-            MessageLookupByLibrary.simpleMessage("Simpan dan Publikasikan"),
+        "saveNPublish": MessageLookupByLibrary.simpleMessage("Simpan dan Publikasikan"),
         "search": MessageLookupByLibrary.simpleMessage("Mencari"),
         "select": MessageLookupByLibrary.simpleMessage("Pilih"),
         "selectLang": MessageLookupByLibrary.simpleMessage("Pilih bahasamu"),
         "sendCode": MessageLookupByLibrary.simpleMessage("Kirim kodenya"),
-        "sendEmail": MessageLookupByLibrary.simpleMessage(
-            "Kami Telah Mengirim Email dengan instruksi tentang cara mengatur ulang kata sandi ke:"),
+        "sendEmail": MessageLookupByLibrary.simpleMessage("Kami Telah Mengirim Email dengan instruksi tentang cara mengatur ulang kata sandi ke:"),
         "sendLink": MessageLookupByLibrary.simpleMessage("Kirim Ulang Tautan"),
-        "setUpDesc": MessageLookupByLibrary.simpleMessage(
-            "Perbarui profil Anda untuk menghubungkan dokter Anda dengan kesan yang lebih baik"),
-        "setUpProfile":
-            MessageLookupByLibrary.simpleMessage("Siapkan Profil Anda"),
+        "setUpDesc": MessageLookupByLibrary.simpleMessage("Perbarui profil Anda untuk menghubungkan dokter Anda dengan kesan yang lebih baik"),
+        "setUpProfile": MessageLookupByLibrary.simpleMessage("Siapkan Profil Anda"),
         "staffLogin": MessageLookupByLibrary.simpleMessage("Login Staf"),
-        "stillUnpaid":
-            MessageLookupByLibrary.simpleMessage("Masih Belum Dibayar"),
+        "stillUnpaid": MessageLookupByLibrary.simpleMessage("Masih Belum Dibayar"),
         "stock": MessageLookupByLibrary.simpleMessage("Saham"),
         "stockList": MessageLookupByLibrary.simpleMessage("Daftar Stok"),
         "subTotal": MessageLookupByLibrary.simpleMessage("Sub Total"),
@@ -233,14 +183,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "units": MessageLookupByLibrary.simpleMessage("Satuan"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Tak terbatas"),
         "update": MessageLookupByLibrary.simpleMessage("Memperbarui"),
-        "updateContact":
-            MessageLookupByLibrary.simpleMessage("Perbarui Kontak"),
-        "updateNow":
-            MessageLookupByLibrary.simpleMessage("Memperbarui sekarang"),
-        "updateProduct":
-            MessageLookupByLibrary.simpleMessage("Perbarui Produk"),
-        "updateProfile":
-            MessageLookupByLibrary.simpleMessage("Perbarui Profil Anda"),
+        "updateContact": MessageLookupByLibrary.simpleMessage("Perbarui Kontak"),
+        "updateNow": MessageLookupByLibrary.simpleMessage("Memperbarui sekarang"),
+        "updateProduct": MessageLookupByLibrary.simpleMessage("Perbarui Produk"),
+        "updateProfile": MessageLookupByLibrary.simpleMessage("Perbarui Profil Anda"),
         "userRole": MessageLookupByLibrary.simpleMessage("Peran pengguna"),
         "viewAll": MessageLookupByLibrary.simpleMessage("Lihat semua"),
         "whatNew": MessageLookupByLibrary.simpleMessage("Apa yang baru"),

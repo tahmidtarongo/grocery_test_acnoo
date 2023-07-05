@@ -6,7 +6,7 @@ import 'package:mobile_pos/Screens/Authentication/phone.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../constant.dart';
-import 'package:mobile_pos/generated/l10n.dart'as lang;
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -42,13 +42,15 @@ class _SignInScreenState extends State<SignInScreen> {
               padding: const EdgeInsets.all(10.0),
               child: Center(
                 child: ButtonGlobalWithoutIcon(
-                  buttontext:     lang.S.of(context).logIn,
+                  buttontext: lang.S.of(context).logIn,
                   buttonTextColor: Colors.white,
                   buttonDecoration: kButtonDecoration.copyWith(
                     color: kMainColor,
                   ),
                   onPressed: () {
-                    const LoginForm(isEmailLogin: true,).launch(context);
+                    const LoginForm(
+                      isEmailLogin: true,
+                    ).launch(context);
                     // Navigator.pushNamed(context, '/loginForm');
                   },
                 ),
@@ -58,7 +60,7 @@ class _SignInScreenState extends State<SignInScreen> {
               padding: const EdgeInsets.only(left: 10.0, right: 10.0),
               child: Center(
                 child: ButtonGlobalWithoutIcon(
-                  buttontext:     lang.S.of(context).register,
+                  buttontext: lang.S.of(context).register,
                   buttonTextColor: Colors.white,
                   buttonDecoration: kButtonDecoration.copyWith(
                     color: const Color(0xFF19AAF8),

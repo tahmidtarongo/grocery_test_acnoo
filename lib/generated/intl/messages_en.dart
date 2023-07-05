@@ -22,24 +22,17 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "CustomerDetails":
-            MessageLookupByLibrary.simpleMessage("Customer Details"),
-        "addAPurchase":
-            MessageLookupByLibrary.simpleMessage("Please Add A Purchase"),
+        "CustomerDetails": MessageLookupByLibrary.simpleMessage("Customer Details"),
+        "addAPurchase": MessageLookupByLibrary.simpleMessage("Please Add A Purchase"),
         "addBrand": MessageLookupByLibrary.simpleMessage("Add Brand"),
         "addContact": MessageLookupByLibrary.simpleMessage("Add Contact"),
-        "addCustomer":
-            MessageLookupByLibrary.simpleMessage("Please Add A Customer"),
+        "addCustomer": MessageLookupByLibrary.simpleMessage("Please Add A Customer"),
         "addExpense": MessageLookupByLibrary.simpleMessage("Add Expense"),
-        "addExpenseCat":
-            MessageLookupByLibrary.simpleMessage("Add Expense Category"),
+        "addExpenseCat": MessageLookupByLibrary.simpleMessage("Add Expense Category"),
         "addItems": MessageLookupByLibrary.simpleMessage("Add Items"),
-        "addNewProduct":
-            MessageLookupByLibrary.simpleMessage("Add New Product"),
-        "addNewPurchase":
-            MessageLookupByLibrary.simpleMessage("Please Add A Purchase"),
-        "addProduct":
-            MessageLookupByLibrary.simpleMessage("Please Add A Product"),
+        "addNewProduct": MessageLookupByLibrary.simpleMessage("Add New Product"),
+        "addNewPurchase": MessageLookupByLibrary.simpleMessage("Please Add A Purchase"),
+        "addProduct": MessageLookupByLibrary.simpleMessage("Please Add A Product"),
         "addPurchase": MessageLookupByLibrary.simpleMessage("Add Purchase"),
         "addSale": MessageLookupByLibrary.simpleMessage("Please Add A Sale"),
         "addSales": MessageLookupByLibrary.simpleMessage("Add Sales"),
@@ -49,38 +42,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "amount": MessageLookupByLibrary.simpleMessage("Amount"),
         "brandName": MessageLookupByLibrary.simpleMessage("Brand name"),
         "brands": MessageLookupByLibrary.simpleMessage("Brands"),
-        "businessCat":
-            MessageLookupByLibrary.simpleMessage("Business Category"),
-        "businessName":
-            MessageLookupByLibrary.simpleMessage("Company & Business Name"),
+        "businessCat": MessageLookupByLibrary.simpleMessage("Business Category"),
+        "businessName": MessageLookupByLibrary.simpleMessage("Company & Business Name"),
         "buyPremium": MessageLookupByLibrary.simpleMessage("Buy premium Plan"),
         "camera": MessageLookupByLibrary.simpleMessage("Camera"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "categoryName": MessageLookupByLibrary.simpleMessage("Category name"),
-        "changePassword":
-            MessageLookupByLibrary.simpleMessage("Change Password"),
+        "changePassword": MessageLookupByLibrary.simpleMessage("Change Password"),
         "checkEmail": MessageLookupByLibrary.simpleMessage("Check Email"),
-        "chooseCustomer":
-            MessageLookupByLibrary.simpleMessage("Choose a Customer"),
-        "chooseSupplier":
-            MessageLookupByLibrary.simpleMessage("Choose a Supplier"),
-        "clickToConnect":
-            MessageLookupByLibrary.simpleMessage("Click to connect"),
+        "chooseCustomer": MessageLookupByLibrary.simpleMessage("Choose a Customer"),
+        "chooseSupplier": MessageLookupByLibrary.simpleMessage("Choose a Supplier"),
+        "clickToConnect": MessageLookupByLibrary.simpleMessage("Click to connect"),
         "close": MessageLookupByLibrary.simpleMessage("Close"),
         "collectDue": MessageLookupByLibrary.simpleMessage("Collect Due"),
-        "collectDues":
-            MessageLookupByLibrary.simpleMessage("Please Collect A Due"),
-        "companyAddress":
-            MessageLookupByLibrary.simpleMessage("Company Address"),
+        "collectDues": MessageLookupByLibrary.simpleMessage("Please Collect A Due"),
+        "companyAddress": MessageLookupByLibrary.simpleMessage("Company Address"),
         "confirmPass": MessageLookupByLibrary.simpleMessage("Confirm Password"),
-        "congratulation":
-            MessageLookupByLibrary.simpleMessage("Congratulations"),
+        "congratulation": MessageLookupByLibrary.simpleMessage("Congratulations"),
         "connect": MessageLookupByLibrary.simpleMessage("Click to connect"),
-        "connectPrinter":
-            MessageLookupByLibrary.simpleMessage("Connect your printer"),
+        "connectPrinter": MessageLookupByLibrary.simpleMessage("Connect your printer"),
         "continueButton": MessageLookupByLibrary.simpleMessage("Continue"),
-        "createAcc":
-            MessageLookupByLibrary.simpleMessage("Create a Free Account"),
+        "createAcc": MessageLookupByLibrary.simpleMessage("Create a Free Account"),
         "currency": MessageLookupByLibrary.simpleMessage("Currency"),
         "customerName": MessageLookupByLibrary.simpleMessage("Customer Name"),
         "date": MessageLookupByLibrary.simpleMessage("Date"),
@@ -93,47 +75,36 @@ class MessageLookup extends MessageLookupByLibrary {
         "dueList": MessageLookupByLibrary.simpleMessage("Due List"),
         "dueReport": MessageLookupByLibrary.simpleMessage("Due Report"),
         "edit": MessageLookupByLibrary.simpleMessage("Edit"),
-        "editPhone":
-            MessageLookupByLibrary.simpleMessage("Edit Phone Number ?"),
-        "editPurchaseInvoice":
-            MessageLookupByLibrary.simpleMessage("Edit Purchase Invoice"),
-        "editSalesInvoice":
-            MessageLookupByLibrary.simpleMessage("Edit Sales Invoice"),
+        "editPhone": MessageLookupByLibrary.simpleMessage("Edit Phone Number ?"),
+        "editPurchaseInvoice": MessageLookupByLibrary.simpleMessage("Edit Purchase Invoice"),
+        "editSalesInvoice": MessageLookupByLibrary.simpleMessage("Edit Sales Invoice"),
         "email": MessageLookupByLibrary.simpleMessage("Email Address"),
         "emailText": MessageLookupByLibrary.simpleMessage("Email"),
-        "enterEmail": MessageLookupByLibrary.simpleMessage(
-            "Please enter your email address below to receive password Reset Link."),
-        "expenseCat":
-            MessageLookupByLibrary.simpleMessage("Expense Categories"),
+        "enterEmail": MessageLookupByLibrary.simpleMessage("Please enter your email address below to receive password Reset Link."),
+        "expenseCat": MessageLookupByLibrary.simpleMessage("Expense Categories"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("Expense Date"),
         "expenseFor": MessageLookupByLibrary.simpleMessage("Expense For"),
         "expenseReport": MessageLookupByLibrary.simpleMessage("Expense Report"),
-        "forgotPassword":
-            MessageLookupByLibrary.simpleMessage("Forgot password"),
+        "forgotPassword": MessageLookupByLibrary.simpleMessage("Forgot password"),
         "freePack": MessageLookupByLibrary.simpleMessage("Free Package"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Free Plan"),
         "fromDate": MessageLookupByLibrary.simpleMessage("From Date"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("Fully Paid"),
         "gallery": MessageLookupByLibrary.simpleMessage("Gallery"),
-        "gotEmail":
-            MessageLookupByLibrary.simpleMessage("You Have Got An Email"),
-        "haveAcc":
-            MessageLookupByLibrary.simpleMessage("Already have an account?"),
+        "gotEmail": MessageLookupByLibrary.simpleMessage("You Have Got An Email"),
+        "haveAcc": MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "inv": MessageLookupByLibrary.simpleMessage("Inv No."),
         "invoice": MessageLookupByLibrary.simpleMessage("Invoice"),
         "itemAdded": MessageLookupByLibrary.simpleMessage("Item Added"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "loading": MessageLookupByLibrary.simpleMessage("Loading"),
         "logIn": MessageLookupByLibrary.simpleMessage("Log In"),
-        "logInWithMail":
-            MessageLookupByLibrary.simpleMessage("Login With Email"),
+        "logInWithMail": MessageLookupByLibrary.simpleMessage("Login With Email"),
         "logOut": MessageLookupByLibrary.simpleMessage("Log Out"),
-        "loginWithPhone":
-            MessageLookupByLibrary.simpleMessage("Login With Phone"),
+        "loginWithPhone": MessageLookupByLibrary.simpleMessage("Login With Phone"),
         "loss": MessageLookupByLibrary.simpleMessage("Loss"),
         "lp": MessageLookupByLibrary.simpleMessage("Loss/Profit"),
-        "lpDetails":
-            MessageLookupByLibrary.simpleMessage("Loss/Profit Details"),
+        "lpDetails": MessageLookupByLibrary.simpleMessage("Loss/Profit Details"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("Manufacturer"),
         "mobile": MessageLookupByLibrary.simpleMessage("Mobile:"),
         "moreInfo": MessageLookupByLibrary.simpleMessage("More Info"),
@@ -141,13 +112,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "noAcc": MessageLookupByLibrary.simpleMessage("Haven\'t any account?"),
         "noData": MessageLookupByLibrary.simpleMessage("No Data Available"),
-        "noSupplier":
-            MessageLookupByLibrary.simpleMessage("No Supplier Available"),
+        "noSupplier": MessageLookupByLibrary.simpleMessage("No Supplier Available"),
         "note": MessageLookupByLibrary.simpleMessage("Note"),
-        "openingBalance":
-            MessageLookupByLibrary.simpleMessage("Opening Balance"),
-        "packFeatures":
-            MessageLookupByLibrary.simpleMessage("Package Features"),
+        "openingBalance": MessageLookupByLibrary.simpleMessage("Opening Balance"),
+        "packFeatures": MessageLookupByLibrary.simpleMessage("Package Features"),
         "paid": MessageLookupByLibrary.simpleMessage("Paid"),
         "paidAmount": MessageLookupByLibrary.simpleMessage("Paid Amount"),
         "partyList": MessageLookupByLibrary.simpleMessage("Parties List"),
@@ -155,12 +123,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "paymentTypes": MessageLookupByLibrary.simpleMessage("Payment Type"),
         "paypalPay": MessageLookupByLibrary.simpleMessage("Pay With Paypal"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone Number"),
-        "phoneVerification":
-            MessageLookupByLibrary.simpleMessage("Phone Verification"),
+        "phoneVerification": MessageLookupByLibrary.simpleMessage("Phone Verification"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Premium Plan"),
         "previousDue": MessageLookupByLibrary.simpleMessage("Previous Due"),
-        "previousPayAmount":
-            MessageLookupByLibrary.simpleMessage("Previous Pay Amount"),
+        "previousPayAmount": MessageLookupByLibrary.simpleMessage("Previous Pay Amount"),
         "printing": MessageLookupByLibrary.simpleMessage("Printing Option"),
         "product": MessageLookupByLibrary.simpleMessage("Product"),
         "productCode": MessageLookupByLibrary.simpleMessage("Product Code"),
@@ -170,18 +136,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "profit": MessageLookupByLibrary.simpleMessage("Profit"),
         "purchase": MessageLookupByLibrary.simpleMessage("Purchase"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("Purchase List"),
-        "purchasePremium":
-            MessageLookupByLibrary.simpleMessage("Purchase Premium Plan"),
+        "purchasePremium": MessageLookupByLibrary.simpleMessage("Purchase Premium Plan"),
         "purchasePrice": MessageLookupByLibrary.simpleMessage("Purchase Price"),
-        "purchaseReport":
-            MessageLookupByLibrary.simpleMessage("Purchase Report"),
+        "purchaseReport": MessageLookupByLibrary.simpleMessage("Purchase Report"),
         "quantity": MessageLookupByLibrary.simpleMessage("Quantity"),
-        "recentTransaction":
-            MessageLookupByLibrary.simpleMessage("Recent Transactions"),
+        "recentTransaction": MessageLookupByLibrary.simpleMessage("Recent Transactions"),
         "referenceNo": MessageLookupByLibrary.simpleMessage("Reference Number"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
-        "registerTitle": MessageLookupByLibrary.simpleMessage(
-            "We need to register your phone without getting started!"),
+        "registerTitle": MessageLookupByLibrary.simpleMessage("We need to register your phone without getting started!"),
         "reports": MessageLookupByLibrary.simpleMessage("Reports"),
         "retailer": MessageLookupByLibrary.simpleMessage("Retailer"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("Return Amount"),
@@ -191,20 +153,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "salesDetails": MessageLookupByLibrary.simpleMessage("Sales Details"),
         "salesReport": MessageLookupByLibrary.simpleMessage("Sales Report"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
-        "saveNPublish":
-            MessageLookupByLibrary.simpleMessage("Save and Publish"),
+        "saveNPublish": MessageLookupByLibrary.simpleMessage("Save and Publish"),
         "search": MessageLookupByLibrary.simpleMessage("Search"),
         "select": MessageLookupByLibrary.simpleMessage("Select"),
-        "selectLang":
-            MessageLookupByLibrary.simpleMessage("Select Your Language"),
+        "selectLang": MessageLookupByLibrary.simpleMessage("Select Your Language"),
         "sendCode": MessageLookupByLibrary.simpleMessage("Send the code"),
-        "sendEmail": MessageLookupByLibrary.simpleMessage(
-            "We Have Send An Email with instructions on how to reset password to:"),
+        "sendEmail": MessageLookupByLibrary.simpleMessage("We Have Send An Email with instructions on how to reset password to:"),
         "sendLink": MessageLookupByLibrary.simpleMessage("Send Reset Link"),
-        "setUpDesc": MessageLookupByLibrary.simpleMessage(
-            "Update your profile to connect your doctor with better impression"),
-        "setUpProfile":
-            MessageLookupByLibrary.simpleMessage("Setup Your Profile"),
+        "setUpDesc": MessageLookupByLibrary.simpleMessage("Update your profile to connect your doctor with better impression"),
+        "setUpProfile": MessageLookupByLibrary.simpleMessage("Setup Your Profile"),
         "staffLogin": MessageLookupByLibrary.simpleMessage("Staff Login"),
         "stillUnpaid": MessageLookupByLibrary.simpleMessage("Still Unpaid"),
         "stock": MessageLookupByLibrary.simpleMessage("Stock"),
@@ -229,13 +186,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact": MessageLookupByLibrary.simpleMessage("Update Contact"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Update Now"),
         "updateProduct": MessageLookupByLibrary.simpleMessage("Update Product"),
-        "updateProfile":
-            MessageLookupByLibrary.simpleMessage("Update Your Profile"),
+        "updateProfile": MessageLookupByLibrary.simpleMessage("Update Your Profile"),
         "userRole": MessageLookupByLibrary.simpleMessage("User Role"),
         "viewAll": MessageLookupByLibrary.simpleMessage("View All"),
         "whatNew": MessageLookupByLibrary.simpleMessage("What\'s New"),
-        "wholeSalePrice":
-            MessageLookupByLibrary.simpleMessage("WholeSale Price"),
+        "wholeSalePrice": MessageLookupByLibrary.simpleMessage("WholeSale Price"),
         "wholesaler": MessageLookupByLibrary.simpleMessage("Wholesaler"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("You are using "),
         "yourPack": MessageLookupByLibrary.simpleMessage("Your Package")

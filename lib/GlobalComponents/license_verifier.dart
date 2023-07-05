@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void showLicense({required BuildContext context}){
+void showLicense({required BuildContext context}) {
   showDialog(
     context: context,
     builder: (BuildContext context) {
@@ -14,16 +14,23 @@ void showLicense({required BuildContext context}){
               color: Colors.white,
               borderRadius: BorderRadius.all(Radius.circular(30)),
             ),
-            child: Column(
+            child: const Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(20),
+                  padding: EdgeInsets.all(20),
                   child: Column(
                     children: [
-                      Text('Please Check Your Purchase Code',style: TextStyle(fontSize: 20.0,fontWeight: FontWeight.bold),),
-                      SizedBox(height: 10.0,),
-                      Text('Your purchase code is not valid. Please buy our product from envato to get a new purchase code',maxLines: 6,),
-
+                      Text(
+                        'Please Check Your Purchase Code',
+                        style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(
+                        height: 10.0,
+                      ),
+                      Text(
+                        'Your purchase code is not valid. Please buy our product from envato to get a new purchase code',
+                        maxLines: 6,
+                      ),
                     ],
                   ),
                 ),

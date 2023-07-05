@@ -64,116 +64,85 @@ class _SplashScreenState extends State<SplashScreen> {
   getCurrency() async {
     final prefs = await SharedPreferences.getInstance();
     currency = prefs.getString('currency') ?? '\$';
-    currencyName = prefs.getString('currencyName')??'Dollar';
-
+    currencyName = prefs.getString('currencyName') ?? 'Dollar';
   }
 
   var currentUser = FirebaseAuth.instance.currentUser;
 
   // bool isis = FirebaseAuth.instance.currentUser
 
-  void setLanguage() async{
+  void setLanguage() async {
     final prefs = await SharedPreferences.getInstance();
-     String selectedLanguage = prefs.getString('lang') ?? 'English';
-      selectedLanguage == 'English'
-          ? context.read<LanguageChangeProvider>().changeLocale("en")
-          : selectedLanguage == 'Chinese'
-          ? context.read<LanguageChangeProvider>().changeLocale("zh")
-          : selectedLanguage == 'Hindi'
-          ? context.read<LanguageChangeProvider>().changeLocale("hi")
-          : selectedLanguage == 'French'
-          ? context.read<LanguageChangeProvider>().changeLocale("fr")
-          : selectedLanguage == 'Spanish'
-          ? context.read<LanguageChangeProvider>().changeLocale("es")
-          : selectedLanguage == 'Japanese'
-          ? context.read<LanguageChangeProvider>().changeLocale("ja")
-          : selectedLanguage == 'Arabic'
-          ? context.read<LanguageChangeProvider>().changeLocale("ar")
-          : selectedLanguage == 'Romanian'
-          ? context.read<LanguageChangeProvider>().changeLocale("ro")
-          : selectedLanguage == 'Italian'
-          ? context.read<LanguageChangeProvider>().changeLocale("it")
-          : selectedLanguage == 'German'
-          ? context.read<LanguageChangeProvider>().changeLocale("de")
-          : selectedLanguage == 'Vietnamese'
-          ? context.read<LanguageChangeProvider>().changeLocale("vi")
-          : selectedLanguage == 'Русский'
-          ? context.read<LanguageChangeProvider>().changeLocale("ru")
-          : selectedLanguage == 'Indonesian'
-          ? context.read<LanguageChangeProvider>().changeLocale("id")
-          : selectedLanguage == 'Korean'
-          ? context.read<LanguageChangeProvider>().changeLocale("ko")
-          : selectedLanguage == 'Serbian'
-          ? context.read<LanguageChangeProvider>().changeLocale("sr")
-          : selectedLanguage == 'Polish'
-          ? context.read<LanguageChangeProvider>().changeLocale("pl")
-          : selectedLanguage == 'Persian'
-          ? context.read<LanguageChangeProvider>().changeLocale("fa")
-          : selectedLanguage == 'Ukrainian'
-          ? context.read<LanguageChangeProvider>().changeLocale("uk")
-          : selectedLanguage == 'Malay'
-          ? context
-          .read<LanguageChangeProvider>()
-          .changeLocale("ms")
-          : selectedLanguage == 'Lao'
-          ? context
-          .read<LanguageChangeProvider>()
-          .changeLocale("lo")
-          : selectedLanguage == 'Turkish'
-          ? context
-          .read<LanguageChangeProvider>()
-          .changeLocale("tr")
-          : selectedLanguage == 'Portuguese'
-          ? context
-          .read<LanguageChangeProvider>()
-          .changeLocale("pt")
-          : selectedLanguage == 'Hungarian'
-          ? context
-          .read<LanguageChangeProvider>()
-          .changeLocale("hu")
-          : selectedLanguage == 'Hebrew'
-          ? context
-          .read<LanguageChangeProvider>()
-          .changeLocale("he")
-          : selectedLanguage == 'Thai'
-          ? context
-          .read<
-          LanguageChangeProvider>()
-          .changeLocale("th")
-          : selectedLanguage == 'Dutch'
-          ? context
-          .read<
-          LanguageChangeProvider>()
-          .changeLocale("nl")
-          : selectedLanguage == 'Finland'
-          ? context
-          .read<
-          LanguageChangeProvider>()
-          .changeLocale("fi")
-          : selectedLanguage == 'Greek'
-          ? context
-          .read<
-          LanguageChangeProvider>()
-          .changeLocale("el")
-          : selectedLanguage == 'Khmer'
-          ? context
-          .read<
-          LanguageChangeProvider>()
-          .changeLocale("km")
-          : selectedLanguage == 'Bosnian'
-          ? context
-          .read<
-          LanguageChangeProvider>()
-          .changeLocale("bs")
-          : selectedLanguage == 'Bangla'
-          ? context
-          .read<
-          LanguageChangeProvider>()
-          .changeLocale("bn")
-          : context
-          .read<
-          LanguageChangeProvider>()
-          .changeLocale("en");
+    String selectedLanguage = prefs.getString('lang') ?? 'English';
+    selectedLanguage == 'English'
+        ? context.read<LanguageChangeProvider>().changeLocale("en")
+        : selectedLanguage == 'Chinese'
+            ? context.read<LanguageChangeProvider>().changeLocale("zh")
+            : selectedLanguage == 'Hindi'
+                ? context.read<LanguageChangeProvider>().changeLocale("hi")
+                : selectedLanguage == 'French'
+                    ? context.read<LanguageChangeProvider>().changeLocale("fr")
+                    : selectedLanguage == 'Spanish'
+                        ? context.read<LanguageChangeProvider>().changeLocale("es")
+                        : selectedLanguage == 'Japanese'
+                            ? context.read<LanguageChangeProvider>().changeLocale("ja")
+                            : selectedLanguage == 'Arabic'
+                                ? context.read<LanguageChangeProvider>().changeLocale("ar")
+                                : selectedLanguage == 'Romanian'
+                                    ? context.read<LanguageChangeProvider>().changeLocale("ro")
+                                    : selectedLanguage == 'Italian'
+                                        ? context.read<LanguageChangeProvider>().changeLocale("it")
+                                        : selectedLanguage == 'German'
+                                            ? context.read<LanguageChangeProvider>().changeLocale("de")
+                                            : selectedLanguage == 'Vietnamese'
+                                                ? context.read<LanguageChangeProvider>().changeLocale("vi")
+                                                : selectedLanguage == 'Русский'
+                                                    ? context.read<LanguageChangeProvider>().changeLocale("ru")
+                                                    : selectedLanguage == 'Indonesian'
+                                                        ? context.read<LanguageChangeProvider>().changeLocale("id")
+                                                        : selectedLanguage == 'Korean'
+                                                            ? context.read<LanguageChangeProvider>().changeLocale("ko")
+                                                            : selectedLanguage == 'Serbian'
+                                                                ? context.read<LanguageChangeProvider>().changeLocale("sr")
+                                                                : selectedLanguage == 'Polish'
+                                                                    ? context.read<LanguageChangeProvider>().changeLocale("pl")
+                                                                    : selectedLanguage == 'Persian'
+                                                                        ? context.read<LanguageChangeProvider>().changeLocale("fa")
+                                                                        : selectedLanguage == 'Ukrainian'
+                                                                            ? context.read<LanguageChangeProvider>().changeLocale("uk")
+                                                                            : selectedLanguage == 'Malay'
+                                                                                ? context.read<LanguageChangeProvider>().changeLocale("ms")
+                                                                                : selectedLanguage == 'Lao'
+                                                                                    ? context.read<LanguageChangeProvider>().changeLocale("lo")
+                                                                                    : selectedLanguage == 'Turkish'
+                                                                                        ? context.read<LanguageChangeProvider>().changeLocale("tr")
+                                                                                        : selectedLanguage == 'Portuguese'
+                                                                                            ? context.read<LanguageChangeProvider>().changeLocale("pt")
+                                                                                            : selectedLanguage == 'Hungarian'
+                                                                                                ? context.read<LanguageChangeProvider>().changeLocale("hu")
+                                                                                                : selectedLanguage == 'Hebrew'
+                                                                                                    ? context.read<LanguageChangeProvider>().changeLocale("he")
+                                                                                                    : selectedLanguage == 'Thai'
+                                                                                                        ? context.read<LanguageChangeProvider>().changeLocale("th")
+                                                                                                        : selectedLanguage == 'Dutch'
+                                                                                                            ? context.read<LanguageChangeProvider>().changeLocale("nl")
+                                                                                                            : selectedLanguage == 'Finland'
+                                                                                                                ? context.read<LanguageChangeProvider>().changeLocale("fi")
+                                                                                                                : selectedLanguage == 'Greek'
+                                                                                                                    ? context.read<LanguageChangeProvider>().changeLocale("el")
+                                                                                                                    : selectedLanguage == 'Khmer'
+                                                                                                                        ? context.read<LanguageChangeProvider>().changeLocale("km")
+                                                                                                                        : selectedLanguage == 'Bosnian'
+                                                                                                                            ? context
+                                                                                                                                .read<LanguageChangeProvider>()
+                                                                                                                                .changeLocale("bs")
+                                                                                                                            : selectedLanguage == 'Bangla'
+                                                                                                                                ? context
+                                                                                                                                    .read<LanguageChangeProvider>()
+                                                                                                                                    .changeLocale("bn")
+                                                                                                                                : context
+                                                                                                                                    .read<LanguageChangeProvider>()
+                                                                                                                                    .changeLocale("en");
   }
 
   void init() async {
@@ -182,9 +151,9 @@ class _SplashScreenState extends State<SplashScreen> {
     isPrintEnable = prefs.getBool('isPrintEnable') ?? true;
     final String? skipVersion = prefs.getString('skipVersion');
     bool result = await InternetConnectionChecker().hasConnection;
-    if(result){
+    if (result) {
       bool isValid = await PurchaseModel().isActiveBuyer();
-      if(isValid){
+      if (isValid) {
         await Future.delayed(const Duration(seconds: 2), () {
           if (isUpdateAvailable && (skipVersion == null || skipVersion != newUpdateVersion)) {
             showDialog(
@@ -210,7 +179,7 @@ class _SplashScreenState extends State<SplashScreen> {
                                   padding: EdgeInsets.only(top: 20, bottom: 10),
                                   child: Text(
                                     'A new update available\n\n'
-                                        'Please update your app',
+                                    'Please update your app',
                                     style: TextStyle(
                                       fontSize: 20,
                                     ),
@@ -233,9 +202,9 @@ class _SplashScreenState extends State<SplashScreen> {
                                       ),
                                       child: const Center(
                                           child: Text(
-                                            'Update Now',
-                                            style: TextStyle(color: Colors.white),
-                                          )),
+                                        'Update Now',
+                                        style: TextStyle(color: Colors.white),
+                                      )),
                                     ),
                                   ),
                                 ),
@@ -260,9 +229,9 @@ class _SplashScreenState extends State<SplashScreen> {
                                       ),
                                       child: const Center(
                                           child: Text(
-                                            'Skip this update',
-                                            style: TextStyle(color: Colors.white),
-                                          )),
+                                        'Skip this update',
+                                        style: TextStyle(color: Colors.white),
+                                      )),
                                     ),
                                   ),
                                 ),
@@ -284,9 +253,9 @@ class _SplashScreenState extends State<SplashScreen> {
                                       ),
                                       child: const Center(
                                           child: Text(
-                                            'Remember me later',
-                                            style: TextStyle(color: Colors.white),
-                                          )),
+                                        'Remember me later',
+                                        style: TextStyle(color: Colors.white),
+                                      )),
                                     ),
                                   ),
                                 ),
@@ -302,7 +271,6 @@ class _SplashScreenState extends State<SplashScreen> {
             );
             // const RedeemConfirmationScreen().launch(context);
           } else {
-
             if (currentUser != null) {
               const Home().launch(context);
             } else {
@@ -310,10 +278,10 @@ class _SplashScreenState extends State<SplashScreen> {
             }
           }
         });
-      } else{
+      } else {
         showLicense(context: context);
       }
-    }else{
+    } else {
       await Future.delayed(const Duration(seconds: 2), () {
         if (isUpdateAvailable && (skipVersion == null || skipVersion != newUpdateVersion)) {
           showDialog(
@@ -339,7 +307,7 @@ class _SplashScreenState extends State<SplashScreen> {
                                 padding: EdgeInsets.only(top: 20, bottom: 10),
                                 child: Text(
                                   'A new update available\n\n'
-                                      'Please update your app',
+                                  'Please update your app',
                                   style: TextStyle(
                                     fontSize: 20,
                                   ),
@@ -362,9 +330,9 @@ class _SplashScreenState extends State<SplashScreen> {
                                     ),
                                     child: const Center(
                                         child: Text(
-                                          'Update Now',
-                                          style: TextStyle(color: Colors.white),
-                                        )),
+                                      'Update Now',
+                                      style: TextStyle(color: Colors.white),
+                                    )),
                                   ),
                                 ),
                               ),
@@ -389,9 +357,9 @@ class _SplashScreenState extends State<SplashScreen> {
                                     ),
                                     child: const Center(
                                         child: Text(
-                                          'Skip this update',
-                                          style: TextStyle(color: Colors.white),
-                                        )),
+                                      'Skip this update',
+                                      style: TextStyle(color: Colors.white),
+                                    )),
                                   ),
                                 ),
                               ),
@@ -413,9 +381,9 @@ class _SplashScreenState extends State<SplashScreen> {
                                     ),
                                     child: const Center(
                                         child: Text(
-                                          'Remember me later',
-                                          style: TextStyle(color: Colors.white),
-                                        )),
+                                      'Remember me later',
+                                      style: TextStyle(color: Colors.white),
+                                    )),
                                   ),
                                 ),
                               ),
@@ -431,7 +399,6 @@ class _SplashScreenState extends State<SplashScreen> {
           );
           // const RedeemConfirmationScreen().launch(context);
         } else {
-
           if (currentUser != null) {
             const Home().launch(context);
           } else {
@@ -440,8 +407,6 @@ class _SplashScreenState extends State<SplashScreen> {
         }
       });
     }
-
-
 
     defaultBlurRadius = 10.0;
     defaultSpreadRadius = 0.5;

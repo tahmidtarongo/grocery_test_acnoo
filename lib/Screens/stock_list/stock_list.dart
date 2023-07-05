@@ -70,7 +70,7 @@ class _StockListState extends State<StockList> {
                             flex: 2,
                             child: Text(
                               lang.S.of(context).quantity,
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: const TextStyle(fontWeight: FontWeight.bold),
                             ),
                           ),
                           Expanded(

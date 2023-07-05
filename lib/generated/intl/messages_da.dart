@@ -22,66 +22,47 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "CustomerDetails":
-            MessageLookupByLibrary.simpleMessage("Kundedetaljer"),
-        "addAPurchase":
-            MessageLookupByLibrary.simpleMessage("Tilføj venligst et køb"),
+        "CustomerDetails": MessageLookupByLibrary.simpleMessage("Kundedetaljer"),
+        "addAPurchase": MessageLookupByLibrary.simpleMessage("Tilføj venligst et køb"),
         "addBrand": MessageLookupByLibrary.simpleMessage("Tilføj mærke"),
         "addContact": MessageLookupByLibrary.simpleMessage("Tilføj kontakt"),
-        "addCustomer":
-            MessageLookupByLibrary.simpleMessage("Tilføj venligst en kunde"),
+        "addCustomer": MessageLookupByLibrary.simpleMessage("Tilføj venligst en kunde"),
         "addExpense": MessageLookupByLibrary.simpleMessage("Tilføj udgift"),
-        "addExpenseCat":
-            MessageLookupByLibrary.simpleMessage("Tilføj udgiftskategori"),
+        "addExpenseCat": MessageLookupByLibrary.simpleMessage("Tilføj udgiftskategori"),
         "addItems": MessageLookupByLibrary.simpleMessage("Tilføj varer"),
-        "addNewProduct":
-            MessageLookupByLibrary.simpleMessage("Tilføj nyt produkt"),
-        "addNewPurchase":
-            MessageLookupByLibrary.simpleMessage("Tilføj venligst et køb"),
-        "addProduct":
-            MessageLookupByLibrary.simpleMessage("Tilføj venligst et produkt"),
+        "addNewProduct": MessageLookupByLibrary.simpleMessage("Tilføj nyt produkt"),
+        "addNewPurchase": MessageLookupByLibrary.simpleMessage("Tilføj venligst et køb"),
+        "addProduct": MessageLookupByLibrary.simpleMessage("Tilføj venligst et produkt"),
         "addPurchase": MessageLookupByLibrary.simpleMessage("Tilføj køb"),
-        "addSale":
-            MessageLookupByLibrary.simpleMessage("Tilføj venligst et salg"),
+        "addSale": MessageLookupByLibrary.simpleMessage("Tilføj venligst et salg"),
         "addSales": MessageLookupByLibrary.simpleMessage("Tilføj salg"),
         "addUnit": MessageLookupByLibrary.simpleMessage("Tilføj enhed"),
         "address": MessageLookupByLibrary.simpleMessage("Adresse"),
-        "alreadyAdded":
-            MessageLookupByLibrary.simpleMessage("Allerede tilføjet"),
+        "alreadyAdded": MessageLookupByLibrary.simpleMessage("Allerede tilføjet"),
         "amount": MessageLookupByLibrary.simpleMessage("Beløb"),
         "brandName": MessageLookupByLibrary.simpleMessage("Mærkenavn"),
         "brands": MessageLookupByLibrary.simpleMessage("Mærker"),
-        "businessCat":
-            MessageLookupByLibrary.simpleMessage("Forretningskategori"),
-        "businessName":
-            MessageLookupByLibrary.simpleMessage("Firma- og forretningsnavn"),
+        "businessCat": MessageLookupByLibrary.simpleMessage("Forretningskategori"),
+        "businessName": MessageLookupByLibrary.simpleMessage("Firma- og forretningsnavn"),
         "buyPremium": MessageLookupByLibrary.simpleMessage("Køb premium plan"),
         "camera": MessageLookupByLibrary.simpleMessage("Kamera"),
         "cancel": MessageLookupByLibrary.simpleMessage("Annuller"),
         "categoryName": MessageLookupByLibrary.simpleMessage("Kategorinavn"),
-        "changePassword":
-            MessageLookupByLibrary.simpleMessage("Skift adgangskode"),
+        "changePassword": MessageLookupByLibrary.simpleMessage("Skift adgangskode"),
         "checkEmail": MessageLookupByLibrary.simpleMessage("Tjek e-mail"),
         "chooseCustomer": MessageLookupByLibrary.simpleMessage("Vælg en kunde"),
-        "chooseSupplier":
-            MessageLookupByLibrary.simpleMessage("Vælg en leverandør"),
-        "clickToConnect":
-            MessageLookupByLibrary.simpleMessage("Klik for at forbinde"),
+        "chooseSupplier": MessageLookupByLibrary.simpleMessage("Vælg en leverandør"),
+        "clickToConnect": MessageLookupByLibrary.simpleMessage("Klik for at forbinde"),
         "close": MessageLookupByLibrary.simpleMessage("Luk"),
         "collectDue": MessageLookupByLibrary.simpleMessage("Inddriv skyldige"),
-        "collectDues": MessageLookupByLibrary.simpleMessage(
-            "Inddriv venligst et skyldigt beløb"),
-        "companyAddress":
-            MessageLookupByLibrary.simpleMessage("Virksomhedsadresse"),
-        "confirmPass":
-            MessageLookupByLibrary.simpleMessage("Bekræft adgangskode"),
+        "collectDues": MessageLookupByLibrary.simpleMessage("Inddriv venligst et skyldigt beløb"),
+        "companyAddress": MessageLookupByLibrary.simpleMessage("Virksomhedsadresse"),
+        "confirmPass": MessageLookupByLibrary.simpleMessage("Bekræft adgangskode"),
         "congratulation": MessageLookupByLibrary.simpleMessage("Tillykke"),
         "connect": MessageLookupByLibrary.simpleMessage("Klik for at forbinde"),
-        "connectPrinter":
-            MessageLookupByLibrary.simpleMessage("Forbind din printer"),
+        "connectPrinter": MessageLookupByLibrary.simpleMessage("Forbind din printer"),
         "continueButton": MessageLookupByLibrary.simpleMessage("Fortsæt"),
-        "createAcc":
-            MessageLookupByLibrary.simpleMessage("Opret en gratis konto"),
+        "createAcc": MessageLookupByLibrary.simpleMessage("Opret en gratis konto"),
         "currency": MessageLookupByLibrary.simpleMessage("Valuta"),
         "customerName": MessageLookupByLibrary.simpleMessage("Kundens navn"),
         "date": MessageLookupByLibrary.simpleMessage("Dato"),
@@ -92,62 +73,48 @@ class MessageLookup extends MessageLookupByLibrary {
         "due": MessageLookupByLibrary.simpleMessage("Skyldige"),
         "dueAmount": MessageLookupByLibrary.simpleMessage("Skyldig beløb: "),
         "dueList": MessageLookupByLibrary.simpleMessage("Skyldig liste"),
-        "dueReport":
-            MessageLookupByLibrary.simpleMessage("Rapport om skyldige beløb"),
+        "dueReport": MessageLookupByLibrary.simpleMessage("Rapport om skyldige beløb"),
         "edit": MessageLookupByLibrary.simpleMessage("Rediger"),
-        "editPhone":
-            MessageLookupByLibrary.simpleMessage("Rediger telefonnummer?"),
-        "editPurchaseInvoice":
-            MessageLookupByLibrary.simpleMessage("Rediger købsfaktura"),
-        "editSalesInvoice":
-            MessageLookupByLibrary.simpleMessage("Rediger salgsfaktura"),
+        "editPhone": MessageLookupByLibrary.simpleMessage("Rediger telefonnummer?"),
+        "editPurchaseInvoice": MessageLookupByLibrary.simpleMessage("Rediger købsfaktura"),
+        "editSalesInvoice": MessageLookupByLibrary.simpleMessage("Rediger salgsfaktura"),
         "email": MessageLookupByLibrary.simpleMessage("Emailadresse"),
         "emailText": MessageLookupByLibrary.simpleMessage("E-mail"),
-        "enterEmail": MessageLookupByLibrary.simpleMessage(
-            "Indtast din e-mailadresse nedenfor for at modtage et link til nulstilling af adgangskode."),
+        "enterEmail": MessageLookupByLibrary.simpleMessage("Indtast din e-mailadresse nedenfor for at modtage et link til nulstilling af adgangskode."),
         "expenseCat": MessageLookupByLibrary.simpleMessage("Udgiftskategorier"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("Udgiftsdato"),
         "expenseFor": MessageLookupByLibrary.simpleMessage("Udgift til"),
         "expenseReport": MessageLookupByLibrary.simpleMessage("Udgiftsrapport"),
-        "forgotPassword":
-            MessageLookupByLibrary.simpleMessage("Glemt adgangskode"),
+        "forgotPassword": MessageLookupByLibrary.simpleMessage("Glemt adgangskode"),
         "freePack": MessageLookupByLibrary.simpleMessage("Gratis pakke"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Gratis plan"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Fra dato"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("Fuldt betalt"),
         "gallery": MessageLookupByLibrary.simpleMessage("Galleri"),
-        "gotEmail":
-            MessageLookupByLibrary.simpleMessage("Du har modtaget en e-mail"),
-        "haveAcc":
-            MessageLookupByLibrary.simpleMessage("Har du allerede en konto?"),
+        "gotEmail": MessageLookupByLibrary.simpleMessage("Du har modtaget en e-mail"),
+        "haveAcc": MessageLookupByLibrary.simpleMessage("Har du allerede en konto?"),
         "inv": MessageLookupByLibrary.simpleMessage("Fakturanummer"),
         "invoice": MessageLookupByLibrary.simpleMessage("Faktura"),
         "itemAdded": MessageLookupByLibrary.simpleMessage("Vare tilføjet"),
         "language": MessageLookupByLibrary.simpleMessage("Sprog"),
         "loading": MessageLookupByLibrary.simpleMessage("Indlæser"),
         "logIn": MessageLookupByLibrary.simpleMessage("Log ind"),
-        "logInWithMail":
-            MessageLookupByLibrary.simpleMessage("Log ind med e-mail"),
+        "logInWithMail": MessageLookupByLibrary.simpleMessage("Log ind med e-mail"),
         "logOut": MessageLookupByLibrary.simpleMessage("Log ud"),
-        "loginWithPhone":
-            MessageLookupByLibrary.simpleMessage("Log ind med telefon"),
+        "loginWithPhone": MessageLookupByLibrary.simpleMessage("Log ind med telefon"),
         "loss": MessageLookupByLibrary.simpleMessage("Tab"),
         "lp": MessageLookupByLibrary.simpleMessage("Tab/Profit"),
-        "lpDetails":
-            MessageLookupByLibrary.simpleMessage("Tab/Profit detaljer"),
+        "lpDetails": MessageLookupByLibrary.simpleMessage("Tab/Profit detaljer"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("Producent"),
         "mobile": MessageLookupByLibrary.simpleMessage("Mobil:"),
         "moreInfo": MessageLookupByLibrary.simpleMessage("Mere information"),
         "mrp": MessageLookupByLibrary.simpleMessage("Maksimum salgspris"),
         "name": MessageLookupByLibrary.simpleMessage("Navn"),
         "noAcc": MessageLookupByLibrary.simpleMessage("Har du ikke en konto?"),
-        "noData":
-            MessageLookupByLibrary.simpleMessage("Ingen data tilgængelig"),
-        "noSupplier": MessageLookupByLibrary.simpleMessage(
-            "Ingen leverandør tilgængelig"),
+        "noData": MessageLookupByLibrary.simpleMessage("Ingen data tilgængelig"),
+        "noSupplier": MessageLookupByLibrary.simpleMessage("Ingen leverandør tilgængelig"),
         "note": MessageLookupByLibrary.simpleMessage("Bemærkning"),
-        "openingBalance":
-            MessageLookupByLibrary.simpleMessage("Åbningsbalance"),
+        "openingBalance": MessageLookupByLibrary.simpleMessage("Åbningsbalance"),
         "packFeatures": MessageLookupByLibrary.simpleMessage("Pakkefunktioner"),
         "paid": MessageLookupByLibrary.simpleMessage("Betalt"),
         "paidAmount": MessageLookupByLibrary.simpleMessage("Betalt beløb"),
@@ -156,13 +123,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "paymentTypes": MessageLookupByLibrary.simpleMessage("Betalingsmetode"),
         "paypalPay": MessageLookupByLibrary.simpleMessage("Betal med Paypal"),
         "phone": MessageLookupByLibrary.simpleMessage("Telefonnummer"),
-        "phoneVerification":
-            MessageLookupByLibrary.simpleMessage("Telefonverifikation"),
+        "phoneVerification": MessageLookupByLibrary.simpleMessage("Telefonverifikation"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Premium plan"),
-        "previousDue":
-            MessageLookupByLibrary.simpleMessage("Tidligere skyldige"),
-        "previousPayAmount":
-            MessageLookupByLibrary.simpleMessage("Tidligere betalt beløb"),
+        "previousDue": MessageLookupByLibrary.simpleMessage("Tidligere skyldige"),
+        "previousPayAmount": MessageLookupByLibrary.simpleMessage("Tidligere betalt beløb"),
         "printing": MessageLookupByLibrary.simpleMessage("Udskriftsmulighed"),
         "product": MessageLookupByLibrary.simpleMessage("Produkt"),
         "productCode": MessageLookupByLibrary.simpleMessage("Produktkode"),
@@ -172,17 +136,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "profit": MessageLookupByLibrary.simpleMessage("Profit"),
         "purchase": MessageLookupByLibrary.simpleMessage("Køb"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("Købsliste"),
-        "purchasePremium":
-            MessageLookupByLibrary.simpleMessage("Køb Premium Plan"),
+        "purchasePremium": MessageLookupByLibrary.simpleMessage("Køb Premium Plan"),
         "purchasePrice": MessageLookupByLibrary.simpleMessage("Købspris"),
         "purchaseReport": MessageLookupByLibrary.simpleMessage("Købsrapport"),
         "quantity": MessageLookupByLibrary.simpleMessage("Antal"),
-        "recentTransaction":
-            MessageLookupByLibrary.simpleMessage("Seneste transaktioner"),
+        "recentTransaction": MessageLookupByLibrary.simpleMessage("Seneste transaktioner"),
         "referenceNo": MessageLookupByLibrary.simpleMessage("Referencenummer"),
         "register": MessageLookupByLibrary.simpleMessage("Registrer"),
-        "registerTitle": MessageLookupByLibrary.simpleMessage(
-            "Vi skal registrere dit telefonnummer, inden vi begynder!"),
+        "registerTitle": MessageLookupByLibrary.simpleMessage("Vi skal registrere dit telefonnummer, inden vi begynder!"),
         "reports": MessageLookupByLibrary.simpleMessage("Rapporter"),
         "retailer": MessageLookupByLibrary.simpleMessage("Forhandler"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("Returbeløb"),
@@ -192,20 +153,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "salesDetails": MessageLookupByLibrary.simpleMessage("Salgsdetaljer"),
         "salesReport": MessageLookupByLibrary.simpleMessage("Salgsrapport"),
         "save": MessageLookupByLibrary.simpleMessage("Gem"),
-        "saveNPublish":
-            MessageLookupByLibrary.simpleMessage("Gem og offentliggør"),
+        "saveNPublish": MessageLookupByLibrary.simpleMessage("Gem og offentliggør"),
         "search": MessageLookupByLibrary.simpleMessage("Søg"),
         "select": MessageLookupByLibrary.simpleMessage("Vælg"),
         "selectLang": MessageLookupByLibrary.simpleMessage("Vælg dit sprog"),
         "sendCode": MessageLookupByLibrary.simpleMessage("Send koden"),
-        "sendEmail": MessageLookupByLibrary.simpleMessage(
-            "Vi har sendt en e-mail med instruktioner om, hvordan du nulstiller adgangskoden til:"),
-        "sendLink":
-            MessageLookupByLibrary.simpleMessage("Send nulstillingslink"),
-        "setUpDesc": MessageLookupByLibrary.simpleMessage(
-            "Opdater din profil for at få en bedre forbindelse til din læge"),
-        "setUpProfile":
-            MessageLookupByLibrary.simpleMessage("Opsæt din profil"),
+        "sendEmail": MessageLookupByLibrary.simpleMessage("Vi har sendt en e-mail med instruktioner om, hvordan du nulstiller adgangskoden til:"),
+        "sendLink": MessageLookupByLibrary.simpleMessage("Send nulstillingslink"),
+        "setUpDesc": MessageLookupByLibrary.simpleMessage("Opdater din profil for at få en bedre forbindelse til din læge"),
+        "setUpProfile": MessageLookupByLibrary.simpleMessage("Opsæt din profil"),
         "staffLogin": MessageLookupByLibrary.simpleMessage("Medarbejderlogin"),
         "stillUnpaid": MessageLookupByLibrary.simpleMessage("Stadig ubetalt"),
         "stock": MessageLookupByLibrary.simpleMessage("Lager"),
@@ -217,11 +173,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "toDate": MessageLookupByLibrary.simpleMessage("Til dato"),
         "total": MessageLookupByLibrary.simpleMessage("Total"),
         "totalAmount": MessageLookupByLibrary.simpleMessage("Totalbeløb"),
-        "totalExpense":
-            MessageLookupByLibrary.simpleMessage("Samlede udgifter"),
+        "totalExpense": MessageLookupByLibrary.simpleMessage("Samlede udgifter"),
         "totalLoss": MessageLookupByLibrary.simpleMessage("Samlet tab"),
-        "totalProduct":
-            MessageLookupByLibrary.simpleMessage("Samlede produkter"),
+        "totalProduct": MessageLookupByLibrary.simpleMessage("Samlede produkter"),
         "totalProfit": MessageLookupByLibrary.simpleMessage("Samlet profit"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("Prøv igen"),
         "unPaid": MessageLookupByLibrary.simpleMessage("Ubetalte"),
@@ -229,13 +183,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "units": MessageLookupByLibrary.simpleMessage("Enheder"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Ubegrænset"),
         "update": MessageLookupByLibrary.simpleMessage("Opdater"),
-        "updateContact":
-            MessageLookupByLibrary.simpleMessage("Opdater kontakt"),
+        "updateContact": MessageLookupByLibrary.simpleMessage("Opdater kontakt"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Opdater nu"),
-        "updateProduct":
-            MessageLookupByLibrary.simpleMessage("Opdater produkt"),
-        "updateProfile":
-            MessageLookupByLibrary.simpleMessage("Opdater din profil"),
+        "updateProduct": MessageLookupByLibrary.simpleMessage("Opdater produkt"),
+        "updateProfile": MessageLookupByLibrary.simpleMessage("Opdater din profil"),
         "userRole": MessageLookupByLibrary.simpleMessage("Brugerrolle"),
         "viewAll": MessageLookupByLibrary.simpleMessage("Vis alle"),
         "whatNew": MessageLookupByLibrary.simpleMessage("Hvad er nyt"),

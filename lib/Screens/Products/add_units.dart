@@ -1,3 +1,5 @@
+// ignore_for_file: unused_result
+
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -65,11 +67,11 @@ class _AddUnitsState extends State<AddUnits> {
                     unitsName = value;
                   });
                 },
-                decoration:  InputDecoration(
+                decoration: InputDecoration(
                   border: const OutlineInputBorder(),
                   hintText: 'kg',
                   floatingLabelBehavior: FloatingLabelBehavior.always,
-                  labelText:  lang.S.of(context).unitName,
+                  labelText: lang.S.of(context).unitName,
                 ),
               ),
               ButtonGlobalWithoutIcon(

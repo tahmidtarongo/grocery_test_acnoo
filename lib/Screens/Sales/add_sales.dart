@@ -1,4 +1,4 @@
-// ignore_for_file: unused_result
+// ignore_for_file: unused_result, use_build_context_synchronously
 
 import 'dart:convert';
 
@@ -334,14 +334,12 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
 
                   ///_____Total______________________________
                   Container(
-                    decoration:
-                        BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), border: Border.all(color: Colors.grey.shade300, width: 1)),
+                    decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), border: Border.all(color: Colors.grey.shade300, width: 1)),
                     child: Column(
                       children: [
                         Container(
                           padding: const EdgeInsets.all(10),
-                          decoration: const BoxDecoration(
-                              color: Color(0xffEAEFFA), borderRadius: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10))),
+                          decoration: const BoxDecoration(color: Color(0xffEAEFFA), borderRadius: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10))),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -466,7 +464,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                               Text(
+                              Text(
                                 lang.S.of(context).dueAmount,
                                 style: const TextStyle(fontSize: 16),
                               ),
@@ -491,7 +489,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Row(
-                        children:  [
+                        children: [
                           Text(
                             lang.S.of(context).paymentTypes,
                             style: const TextStyle(fontSize: 16, color: Colors.black54),
@@ -770,16 +768,14 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                               if (widget.customerModel.type == 'Guest' && dueAmount > 0) {
                                 EasyLoading.showError('Due is not available for guest');
                               } else {
-                                if(!isClicked){
+                                if (!isClicked) {
                                   try {
-
                                     setState(() {
                                       isClicked = true;
                                     });
                                     EasyLoading.show(status: 'Loading...', dismissOnTap: false);
 
                                     DatabaseReference ref = FirebaseDatabase.instance.ref("$constUserId/Sales Transition");
-
 
                                     dueAmount <= 0 ? transitionModel.isPaid = true : transitionModel.isPaid = false;
                                     dueAmount <= 0 ? transitionModel.dueAmount = 0 : transitionModel.dueAmount = double.parse(dueAmount.toStringAsFixed(2));
@@ -810,7 +806,6 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                     ref.keepSynced(true);
                                     ref.push().set(transitionModel.toJson());
 
-
                                     ///__________StockMange_________________________________________________-
 
                                     for (var element in providerData.cartItemList) {
@@ -818,9 +813,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                     }
 
                                     ///_______invoice_Update_____________________________________________
-                                    final DatabaseReference personalInformationRef =
-                                    FirebaseDatabase.instance.ref().child(constUserId).child('Personal Information');
-
+                                    final DatabaseReference personalInformationRef = FirebaseDatabase.instance.ref().child(constUserId).child('Personal Information');
 
                                     await personalInformationRef.update({'invoiceCounter': invoice + 1});
                                     // personalInformationRef.keepSynced(true);
@@ -851,10 +844,9 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                         });
                                       } else {
                                         EasyLoading.showSuccess('Added Successfully');
-                                        // ignore: use_build_context_synchronously
+
                                         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Please Connect The Printer First')));
 
-                                        // ignore: use_build_context_synchronously
                                         showDialog(
                                             context: context,
                                             builder: (_) {
@@ -867,8 +859,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                                       children: [
                                                         ListView.builder(
                                                           shrinkWrap: true,
-                                                          itemCount:
-                                                          printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
+                                                          itemCount: printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
                                                           itemBuilder: (context, index) {
                                                             return ListTile(
                                                               onTap: () async {
@@ -878,8 +869,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                                                 String mac = list[1];
                                                                 bool isConnect = await printerData.setConnect(mac);
                                                                 if (isConnect) {
-                                                                  await printerData.printTicket(
-                                                                      printTransactionModel: model, productList: transitionModel.productList);
+                                                                  await printerData.printTicket(printTransactionModel: model, productList: transitionModel.productList);
                                                                   providerData.clearCart();
                                                                   consumerRef.refresh(customerProvider);
                                                                   consumerRef.refresh(productProvider);

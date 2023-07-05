@@ -22,28 +22,19 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "CustomerDetails":
-            MessageLookupByLibrary.simpleMessage("اطلاعات مشتری"),
-        "addAPurchase":
-            MessageLookupByLibrary.simpleMessage("لطفا یک خرید اضافه کنید"),
-        "addBrand":
-            MessageLookupByLibrary.simpleMessage("نام تجاری را اضافه کنید"),
+        "CustomerDetails": MessageLookupByLibrary.simpleMessage("اطلاعات مشتری"),
+        "addAPurchase": MessageLookupByLibrary.simpleMessage("لطفا یک خرید اضافه کنید"),
+        "addBrand": MessageLookupByLibrary.simpleMessage("نام تجاری را اضافه کنید"),
         "addContact": MessageLookupByLibrary.simpleMessage("افزودن مخاطب"),
-        "addCustomer":
-            MessageLookupByLibrary.simpleMessage("لطفا یک مشتری اضافه کنید"),
+        "addCustomer": MessageLookupByLibrary.simpleMessage("لطفا یک مشتری اضافه کنید"),
         "addExpense": MessageLookupByLibrary.simpleMessage("اضافه کردن هزینه"),
-        "addExpenseCat":
-            MessageLookupByLibrary.simpleMessage("اضافه کردن دسته هزینه"),
+        "addExpenseCat": MessageLookupByLibrary.simpleMessage("اضافه کردن دسته هزینه"),
         "addItems": MessageLookupByLibrary.simpleMessage("موارد را اضافه کنید"),
-        "addNewProduct":
-            MessageLookupByLibrary.simpleMessage("افزودن محصول جدید"),
-        "addNewPurchase":
-            MessageLookupByLibrary.simpleMessage("لطفا یک خرید اضافه کنید"),
-        "addProduct":
-            MessageLookupByLibrary.simpleMessage("لطفا یک محصول اضافه کنید"),
+        "addNewProduct": MessageLookupByLibrary.simpleMessage("افزودن محصول جدید"),
+        "addNewPurchase": MessageLookupByLibrary.simpleMessage("لطفا یک خرید اضافه کنید"),
+        "addProduct": MessageLookupByLibrary.simpleMessage("لطفا یک محصول اضافه کنید"),
         "addPurchase": MessageLookupByLibrary.simpleMessage("خرید اضافه کنید"),
-        "addSale":
-            MessageLookupByLibrary.simpleMessage("لطفا یک فروش اضافه کنید"),
+        "addSale": MessageLookupByLibrary.simpleMessage("لطفا یک فروش اضافه کنید"),
         "addSales": MessageLookupByLibrary.simpleMessage("فروش را اضافه کنید"),
         "addUnit": MessageLookupByLibrary.simpleMessage("افزودن واحد"),
         "address": MessageLookupByLibrary.simpleMessage("نشانی"),
@@ -52,36 +43,26 @@ class MessageLookup extends MessageLookupByLibrary {
         "brandName": MessageLookupByLibrary.simpleMessage("نام برند"),
         "brands": MessageLookupByLibrary.simpleMessage("برندها"),
         "businessCat": MessageLookupByLibrary.simpleMessage("دسته کسب و کار"),
-        "businessName":
-            MessageLookupByLibrary.simpleMessage("نام شرکت و کسب و کار"),
+        "businessName": MessageLookupByLibrary.simpleMessage("نام شرکت و کسب و کار"),
         "buyPremium": MessageLookupByLibrary.simpleMessage("خرید طرح حق بیمه"),
         "camera": MessageLookupByLibrary.simpleMessage("دوربین"),
         "cancel": MessageLookupByLibrary.simpleMessage("لغو کنید"),
         "categoryName": MessageLookupByLibrary.simpleMessage("نام دسته"),
-        "changePassword":
-            MessageLookupByLibrary.simpleMessage("رمز عبور را تغییر دهید"),
-        "checkEmail":
-            MessageLookupByLibrary.simpleMessage("ایمیل را بررسی کنید"),
-        "chooseCustomer":
-            MessageLookupByLibrary.simpleMessage("یک مشتری انتخاب کنید"),
-        "chooseSupplier":
-            MessageLookupByLibrary.simpleMessage("یک تامین کننده انتخاب کنید"),
-        "clickToConnect":
-            MessageLookupByLibrary.simpleMessage("برای اتصال کلیک کنید"),
+        "changePassword": MessageLookupByLibrary.simpleMessage("رمز عبور را تغییر دهید"),
+        "checkEmail": MessageLookupByLibrary.simpleMessage("ایمیل را بررسی کنید"),
+        "chooseCustomer": MessageLookupByLibrary.simpleMessage("یک مشتری انتخاب کنید"),
+        "chooseSupplier": MessageLookupByLibrary.simpleMessage("یک تامین کننده انتخاب کنید"),
+        "clickToConnect": MessageLookupByLibrary.simpleMessage("برای اتصال کلیک کنید"),
         "close": MessageLookupByLibrary.simpleMessage("بستن"),
         "collectDue": MessageLookupByLibrary.simpleMessage("دریافت سررسید"),
-        "collectDues":
-            MessageLookupByLibrary.simpleMessage("لطفا سررسید جمع آوری کنید"),
+        "collectDues": MessageLookupByLibrary.simpleMessage("لطفا سررسید جمع آوری کنید"),
         "companyAddress": MessageLookupByLibrary.simpleMessage("آدرس شرکت"),
-        "confirmPass":
-            MessageLookupByLibrary.simpleMessage("رمز عبور را تایید کنید"),
+        "confirmPass": MessageLookupByLibrary.simpleMessage("رمز عبور را تایید کنید"),
         "congratulation": MessageLookupByLibrary.simpleMessage("تبریک می گویم"),
         "connect": MessageLookupByLibrary.simpleMessage("برای اتصال کلیک کنید"),
-        "connectPrinter":
-            MessageLookupByLibrary.simpleMessage("چاپگر خود را وصل کنید"),
+        "connectPrinter": MessageLookupByLibrary.simpleMessage("چاپگر خود را وصل کنید"),
         "continueButton": MessageLookupByLibrary.simpleMessage("ادامه هید"),
-        "createAcc": MessageLookupByLibrary.simpleMessage(
-            "یک حساب کاربری رایگان ایجاد کنید"),
+        "createAcc": MessageLookupByLibrary.simpleMessage("یک حساب کاربری رایگان ایجاد کنید"),
         "currency": MessageLookupByLibrary.simpleMessage("واحد پول"),
         "customerName": MessageLookupByLibrary.simpleMessage("نام مشتری"),
         "date": MessageLookupByLibrary.simpleMessage("تاریخ"),
@@ -94,32 +75,24 @@ class MessageLookup extends MessageLookupByLibrary {
         "dueList": MessageLookupByLibrary.simpleMessage("لیست سررسید"),
         "dueReport": MessageLookupByLibrary.simpleMessage("گزارش موعد"),
         "edit": MessageLookupByLibrary.simpleMessage("ویرایش کنید"),
-        "editPhone":
-            MessageLookupByLibrary.simpleMessage("شماره تلفن را ویرایش کنید؟"),
-        "editPurchaseInvoice":
-            MessageLookupByLibrary.simpleMessage("ویرایش فاکتور خرید"),
-        "editSalesInvoice":
-            MessageLookupByLibrary.simpleMessage("ویرایش فاکتور فروش"),
+        "editPhone": MessageLookupByLibrary.simpleMessage("شماره تلفن را ویرایش کنید؟"),
+        "editPurchaseInvoice": MessageLookupByLibrary.simpleMessage("ویرایش فاکتور خرید"),
+        "editSalesInvoice": MessageLookupByLibrary.simpleMessage("ویرایش فاکتور فروش"),
         "email": MessageLookupByLibrary.simpleMessage("آدرس ایمیل"),
         "emailText": MessageLookupByLibrary.simpleMessage("پست الکترونیک"),
-        "enterEmail": MessageLookupByLibrary.simpleMessage(
-            "لطفا آدرس ایمیل خود را در زیر وارد کنید تا لینک بازنشانی رمز عبور را دریافت کنید."),
-        "expenseCat":
-            MessageLookupByLibrary.simpleMessage("دسته بندی هزینه ها"),
+        "enterEmail": MessageLookupByLibrary.simpleMessage("لطفا آدرس ایمیل خود را در زیر وارد کنید تا لینک بازنشانی رمز عبور را دریافت کنید."),
+        "expenseCat": MessageLookupByLibrary.simpleMessage("دسته بندی هزینه ها"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("تاریخ هزینه"),
         "expenseFor": MessageLookupByLibrary.simpleMessage("هزینه برای"),
         "expenseReport": MessageLookupByLibrary.simpleMessage("گزارش هزینه"),
-        "forgotPassword":
-            MessageLookupByLibrary.simpleMessage("رمز عبور را فراموش کرده اید"),
+        "forgotPassword": MessageLookupByLibrary.simpleMessage("رمز عبور را فراموش کرده اید"),
         "freePack": MessageLookupByLibrary.simpleMessage("بسته رایگان"),
         "freePlan": MessageLookupByLibrary.simpleMessage("طرح رایگان"),
         "fromDate": MessageLookupByLibrary.simpleMessage("از تاریخ"),
-        "fullyPaid":
-            MessageLookupByLibrary.simpleMessage("به طور کامل پرداخت شده"),
+        "fullyPaid": MessageLookupByLibrary.simpleMessage("به طور کامل پرداخت شده"),
         "gallery": MessageLookupByLibrary.simpleMessage("آلبوم عکس"),
         "gotEmail": MessageLookupByLibrary.simpleMessage("شما یک ایمیل دارید"),
-        "haveAcc":
-            MessageLookupByLibrary.simpleMessage("از قبل حساب کاربری دارید؟"),
+        "haveAcc": MessageLookupByLibrary.simpleMessage("از قبل حساب کاربری دارید؟"),
         "inv": MessageLookupByLibrary.simpleMessage("شماره ورودی"),
         "invoice": MessageLookupByLibrary.simpleMessage("صورتحساب"),
         "itemAdded": MessageLookupByLibrary.simpleMessage("مورد اضافه شد"),
@@ -137,11 +110,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "moreInfo": MessageLookupByLibrary.simpleMessage("اطلاعات بیشتر"),
         "mrp": MessageLookupByLibrary.simpleMessage("MRP"),
         "name": MessageLookupByLibrary.simpleMessage("نام"),
-        "noAcc":
-            MessageLookupByLibrary.simpleMessage("هیچ حساب کاربری ندارید؟"),
+        "noAcc": MessageLookupByLibrary.simpleMessage("هیچ حساب کاربری ندارید؟"),
         "noData": MessageLookupByLibrary.simpleMessage("اطلاعاتی موجود نیست"),
-        "noSupplier": MessageLookupByLibrary.simpleMessage(
-            "هیچ تامین کننده ای موجود نیست"),
+        "noSupplier": MessageLookupByLibrary.simpleMessage("هیچ تامین کننده ای موجود نیست"),
         "note": MessageLookupByLibrary.simpleMessage("توجه داشته باشید"),
         "openingBalance": MessageLookupByLibrary.simpleMessage("تعادل باز"),
         "packFeatures": MessageLookupByLibrary.simpleMessage("ویژگی های بسته"),
@@ -155,8 +126,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "phoneVerification": MessageLookupByLibrary.simpleMessage("تأیید تلفن"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("طرح حق بیمه"),
         "previousDue": MessageLookupByLibrary.simpleMessage("سررسید قبلی"),
-        "previousPayAmount":
-            MessageLookupByLibrary.simpleMessage("مبلغ پرداخت قبلی"),
+        "previousPayAmount": MessageLookupByLibrary.simpleMessage("مبلغ پرداخت قبلی"),
         "printing": MessageLookupByLibrary.simpleMessage("گزینه چاپ"),
         "product": MessageLookupByLibrary.simpleMessage("تولید - محصول"),
         "productCode": MessageLookupByLibrary.simpleMessage("کد محصول"),
@@ -165,19 +135,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("مشخصات"),
         "profit": MessageLookupByLibrary.simpleMessage("سود"),
         "purchase": MessageLookupByLibrary.simpleMessage("خرید"),
-        "purchaseList":
-            MessageLookupByLibrary.simpleMessage("ویرایش فاکتور خرید"),
-        "purchasePremium":
-            MessageLookupByLibrary.simpleMessage("خرید طرح حق بیمه"),
+        "purchaseList": MessageLookupByLibrary.simpleMessage("ویرایش فاکتور خرید"),
+        "purchasePremium": MessageLookupByLibrary.simpleMessage("خرید طرح حق بیمه"),
         "purchasePrice": MessageLookupByLibrary.simpleMessage("قیمت خرید"),
         "purchaseReport": MessageLookupByLibrary.simpleMessage("گزارش خرید"),
         "quantity": MessageLookupByLibrary.simpleMessage("تعداد"),
-        "recentTransaction":
-            MessageLookupByLibrary.simpleMessage("معاملات اخیر"),
+        "recentTransaction": MessageLookupByLibrary.simpleMessage("معاملات اخیر"),
         "referenceNo": MessageLookupByLibrary.simpleMessage("شماره مرجع"),
         "register": MessageLookupByLibrary.simpleMessage("ثبت نام"),
-        "registerTitle": MessageLookupByLibrary.simpleMessage(
-            "ما باید گوشی شما را بدون شروع ثبت نام کنیم!"),
+        "registerTitle": MessageLookupByLibrary.simpleMessage("ما باید گوشی شما را بدون شروع ثبت نام کنیم!"),
         "reports": MessageLookupByLibrary.simpleMessage("گزارش ها"),
         "retailer": MessageLookupByLibrary.simpleMessage("خرده فروش"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("مبلغ برگشتی"),
@@ -187,20 +153,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "salesDetails": MessageLookupByLibrary.simpleMessage("جزئیات فروش"),
         "salesReport": MessageLookupByLibrary.simpleMessage("گزارش فروش"),
         "save": MessageLookupByLibrary.simpleMessage("صرفه جویی"),
-        "saveNPublish":
-            MessageLookupByLibrary.simpleMessage("ذخیره و منتشر کنید"),
+        "saveNPublish": MessageLookupByLibrary.simpleMessage("ذخیره و منتشر کنید"),
         "search": MessageLookupByLibrary.simpleMessage("جستجو کردن"),
         "select": MessageLookupByLibrary.simpleMessage("انتخاب کنید"),
-        "selectLang":
-            MessageLookupByLibrary.simpleMessage("زبان خود را انتخاب کنید"),
+        "selectLang": MessageLookupByLibrary.simpleMessage("زبان خود را انتخاب کنید"),
         "sendCode": MessageLookupByLibrary.simpleMessage("کد را ارسال کنید"),
-        "sendEmail": MessageLookupByLibrary.simpleMessage(
-            "ما یک ایمیل با دستورالعمل هایی در مورد نحوه تنظیم مجدد رمز عبور ارسال می کنیم:"),
+        "sendEmail": MessageLookupByLibrary.simpleMessage("ما یک ایمیل با دستورالعمل هایی در مورد نحوه تنظیم مجدد رمز عبور ارسال می کنیم:"),
         "sendLink": MessageLookupByLibrary.simpleMessage("ارسال لینک بازنشانی"),
-        "setUpDesc": MessageLookupByLibrary.simpleMessage(
-            "نمایه خود را به روز کنید تا پزشک خود را با برداشت بهتر ارتباط برقرار کنید"),
-        "setUpProfile":
-            MessageLookupByLibrary.simpleMessage("نمایه خود را تنظیم کنید"),
+        "setUpDesc": MessageLookupByLibrary.simpleMessage("نمایه خود را به روز کنید تا پزشک خود را با برداشت بهتر ارتباط برقرار کنید"),
+        "setUpProfile": MessageLookupByLibrary.simpleMessage("نمایه خود را تنظیم کنید"),
         "staffLogin": MessageLookupByLibrary.simpleMessage("ورود کارکنان"),
         "stillUnpaid": MessageLookupByLibrary.simpleMessage("هنوز پرداخت نشده"),
         "stock": MessageLookupByLibrary.simpleMessage("موجودی"),
@@ -222,22 +183,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "units": MessageLookupByLibrary.simpleMessage("واحدها"),
         "unlimited": MessageLookupByLibrary.simpleMessage("نامحدود"),
         "update": MessageLookupByLibrary.simpleMessage("به روز رسانی"),
-        "updateContact":
-            MessageLookupByLibrary.simpleMessage("به روز رسانی تماس"),
-        "updateNow":
-            MessageLookupByLibrary.simpleMessage("اکنون به روز رسانی کنید"),
-        "updateProduct":
-            MessageLookupByLibrary.simpleMessage("به روز رسانی محصول"),
-        "updateProfile": MessageLookupByLibrary.simpleMessage(
-            "پروفایل خود را به روز نمائید"),
+        "updateContact": MessageLookupByLibrary.simpleMessage("به روز رسانی تماس"),
+        "updateNow": MessageLookupByLibrary.simpleMessage("اکنون به روز رسانی کنید"),
+        "updateProduct": MessageLookupByLibrary.simpleMessage("به روز رسانی محصول"),
+        "updateProfile": MessageLookupByLibrary.simpleMessage("پروفایل خود را به روز نمائید"),
         "userRole": MessageLookupByLibrary.simpleMessage("نقش کاربر"),
         "viewAll": MessageLookupByLibrary.simpleMessage("مشاهده همه"),
         "whatNew": MessageLookupByLibrary.simpleMessage("What\'s New"),
-        "wholeSalePrice":
-            MessageLookupByLibrary.simpleMessage("قیمت عمده فروشی"),
+        "wholeSalePrice": MessageLookupByLibrary.simpleMessage("قیمت عمده فروشی"),
         "wholesaler": MessageLookupByLibrary.simpleMessage("عمده فروش"),
-        "youRUsing":
-            MessageLookupByLibrary.simpleMessage("شما در حال استفاده هستید "),
+        "youRUsing": MessageLookupByLibrary.simpleMessage("شما در حال استفاده هستید "),
         "yourPack": MessageLookupByLibrary.simpleMessage("بسته شما")
       };
 }

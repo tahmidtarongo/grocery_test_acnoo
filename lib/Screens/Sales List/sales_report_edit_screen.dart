@@ -1,3 +1,5 @@
+// ignore_for_file: unused_result
+
 import 'dart:convert';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
@@ -377,8 +379,8 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                     onTap: () {
                       EditSaleInvoiceSaleProducts(
                         catName: null,
-                        customerModel: CustomerModel(widget.transitionModel.customerName, widget.transitionModel.customerPhone,
-                            widget.transitionModel.customerType, '', '', 'customerAddress', ''),
+                        customerModel: CustomerModel(
+                            widget.transitionModel.customerName, widget.transitionModel.customerPhone, widget.transitionModel.customerType, '', '', 'customerAddress', ''),
                         transitionModel: widget.transitionModel,
                       ).launch(context);
                     },
@@ -397,14 +399,12 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
 
                   ///_____Total______________________________
                   Container(
-                    decoration:
-                        BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), border: Border.all(color: Colors.grey.shade300, width: 1)),
+                    decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), border: Border.all(color: Colors.grey.shade300, width: 1)),
                     child: Column(
                       children: [
                         Container(
                           padding: const EdgeInsets.all(10),
-                          decoration: const BoxDecoration(
-                              color: Color(0xffEAEFFA), borderRadius: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10))),
+                          decoration: const BoxDecoration(color: Color(0xffEAEFFA), borderRadius: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10))),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -633,10 +633,10 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                         height: 60,
                         width: 100,
                         decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), color: Colors.grey.shade200),
-                        child: Center(
+                        child: const Center(
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
-                            children: const [
+                            children: [
                               Icon(
                                 FeatherIcons.camera,
                                 color: Colors.grey,

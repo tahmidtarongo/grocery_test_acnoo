@@ -146,4 +146,3 @@ class CurrentUserData {
 }
 
 bool newSelect = false;
-

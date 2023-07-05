@@ -98,10 +98,7 @@ class _PurchaseListState extends State<PurchaseList> {
                           },
                           controller: dateController,
                           decoration: const InputDecoration(
-                              border: OutlineInputBorder(),
-                              floatingLabelBehavior: FloatingLabelBehavior.always,
-                              labelText: 'Start Date',
-                              hintText: 'Pick Start Date'),
+                              border: OutlineInputBorder(), floatingLabelBehavior: FloatingLabelBehavior.always, labelText: 'Start Date', hintText: 'Pick Start Date'),
                         ),
                       ),
                     ),
@@ -117,10 +114,7 @@ class _PurchaseListState extends State<PurchaseList> {
                           },
                           controller: dateController,
                           decoration: const InputDecoration(
-                              border: OutlineInputBorder(),
-                              floatingLabelBehavior: FloatingLabelBehavior.always,
-                              labelText: 'End Date',
-                              hintText: 'Pick End Date'),
+                              border: OutlineInputBorder(), floatingLabelBehavior: FloatingLabelBehavior.always, labelText: 'End Date', hintText: 'Pick End Date'),
                         ),
                       ),
                     ),
