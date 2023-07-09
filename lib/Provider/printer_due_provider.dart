@@ -66,6 +66,8 @@ class PrinterDue extends ChangeNotifier {
     bytes += generator.text(printDueTransactionModel.personalInformationModel.phoneNumber, styles: const PosStyles(align: PosAlign.center), linesAfter: 1);
     bytes += generator.text('Received From: ${printDueTransactionModel.dueTransactionModel!.customerName} ', styles: const PosStyles(align: PosAlign.left));
     bytes += generator.text('mobile: ${printDueTransactionModel.dueTransactionModel!.customerPhone}', styles: const PosStyles(align: PosAlign.left));
+    bytes += generator.text('Invoice Number: ${printDueTransactionModel.dueTransactionModel?.invoiceNumber ?? 'Not Provided'}', styles: const PosStyles(align: PosAlign.left), linesAfter: 1);
+
     bytes += generator.hr();
     bytes += generator.row([
       PosColumn(text: 'Invoice', width: 8, styles: const PosStyles(align: PosAlign.left, bold: true)),

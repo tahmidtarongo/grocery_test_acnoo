@@ -41,9 +41,9 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                     leading: Container(
                       height: 50.0,
                       width: 50.0,
-                      decoration: const BoxDecoration(
+                      decoration:  BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage('images/logoPos.png'),
+                          image: NetworkImage(widget.personalInformationModel.pictureUrl ?? ''),
                         ),
                       ),
                     ),

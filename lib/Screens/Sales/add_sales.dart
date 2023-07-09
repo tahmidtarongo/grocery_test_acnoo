@@ -22,6 +22,7 @@ import '../../Provider/product_provider.dart';
 import '../../Provider/seles_report_provider.dart';
 import '../../constant.dart';
 import '../../currency.dart';
+import '../../model/personal_information_model.dart';
 import '../../model/print_transaction_model.dart';
 import '../../subscription.dart';
 import '../Customers/Model/customer_model.dart';
@@ -80,6 +81,8 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
   );
   DateTime selectedDate = DateTime.now();
 
+  late PersonalInformationModel personalInformationModel;
+
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, consumerRef, __) {
@@ -88,6 +91,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
       final personalData = consumerRef.watch(profileDetailsProvider);
       return personalData.when(data: (data) {
         invoice = data.invoiceCounter!.toInt();
+        personalInformationModel = data;
         return Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.white,
@@ -814,9 +818,11 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
 
                                     ///_______invoice_Update_____________________________________________
                                     final DatabaseReference personalInformationRef = FirebaseDatabase.instance.ref().child(constUserId).child('Personal Information');
+                                    personalInformationModel.invoiceCounter = invoice + 1;
+                                    personalInformationRef.keepSynced(true);
 
-                                    await personalInformationRef.update({'invoiceCounter': invoice + 1});
-                                    // personalInformationRef.keepSynced(true);
+                                    personalInformationRef.set(personalInformationModel.toJson());
+                                    // await personalInformationRef.update({'invoiceCounter': invoice + 1});
 
                                     ///________Subscription_____________________________________________________
                                     Subscription.decreaseSubscriptionLimits(itemType: 'saleNumber', context: context);
