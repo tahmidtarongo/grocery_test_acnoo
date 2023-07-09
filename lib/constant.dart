@@ -19,7 +19,7 @@ List<String> paymentsTypeList = ['Cash', 'Card', 'Check', 'Mobile Pay', 'Due'];
 bool isExpiringInFiveDays = false;
 bool isExpiringInOneDays = false;
 
-const String appVersion = '2.0.0';
+const String appVersion = '5.0';
 
 String paypalClientId = '';
 String paypalClientSecret = '';

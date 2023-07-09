@@ -432,7 +432,7 @@ class _SplashScreenState extends State<SplashScreen> {
               children: [
                 Center(
                   child: Text(
-                    'Powered By Maan Technology',
+                    'Powered By Acnoo',
                     style: GoogleFonts.poppins(color: Colors.white, fontWeight: FontWeight.normal, fontSize: 20.0),
                   ),
                 ),
