@@ -343,11 +343,11 @@ class _PaymentPageState extends State<PaymentPage> {
 
       //STEP 3: Display Payment sheet
       await Stripe.instance.presentPaymentSheet().then((value) {
-        onSuccess;
+        onSuccess();
         paymentIntent = null;
       });
     } on StripeException catch (e) {
-      widget.onError;
+      widget.onError();
     }
   }
 
@@ -372,7 +372,7 @@ class _PaymentPageState extends State<PaymentPage> {
       SSLCTransactionInfoModel result = await sslcommerz.payNow();
 
       if (result.status!.toLowerCase() == "failed") {
-        widget.onError;
+        widget.onError();
         Fluttertoast.showToast(
           msg: "Transaction is Failed....",
           toastLength: Toast.LENGTH_SHORT,
@@ -413,10 +413,10 @@ class _PaymentPageState extends State<PaymentPage> {
       'send_sms_hash': true,
     };
     razorpay.on(Razorpay.EVENT_PAYMENT_ERROR, () {
-      widget.onError;
+      widget.onError();
     });
     razorpay.on(Razorpay.EVENT_PAYMENT_SUCCESS, (PaymentSuccessResponse response) {
-      onSuccess;
+      onSuccess();
     });
     razorpay.on(Razorpay.EVENT_EXTERNAL_WALLET, () {});
     razorpay.open(options);
@@ -462,13 +462,13 @@ class _PaymentPageState extends State<PaymentPage> {
             ],
             note: "Contact us for any questions on your order.",
             onSuccess: (Map params) async {
-              onSuccess;
+              onSuccess();
             },
             onError: (error) {
-              widget.onError;
+              widget.onError();
             },
             onCancel: (params) {
-              widget.onError;
+              widget.onError();
             }),
       ),
     );
@@ -515,10 +515,10 @@ class _PaymentPageState extends State<PaymentPage> {
               // }
             },
             onSuccess: (Map params) async {
-              onSuccess;
+              onSuccess();
             },
             onError: (error) {
-              widget.onError;
+              widget.onError();
             }),
       ),
     );
@@ -565,9 +565,9 @@ class _PaymentPageState extends State<PaymentPage> {
         isTestMode: sandbox);
     final ChargeResponse response = await flutterwave.charge();
     if (response.success == true) {
-     onSuccess;
+     onSuccess();
     } else {
-      widget.onError;
+      widget.onError();
     }
   }
 
