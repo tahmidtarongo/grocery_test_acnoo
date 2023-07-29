@@ -5,6 +5,7 @@ import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_paypal/flutter_paypal.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mobile_pos/model/subscription_plan_model.dart';
+import 'package:mobile_pos/payment_methods.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../Provider/subacription_plan_provider.dart';
@@ -317,88 +318,52 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                   const SizedBox(height: 20),
                   GestureDetector(
                     onTap: () {
-                      UsePaypal(
-                          sandboxMode: sandbox,
-                          clientId: paypalClientId,
-                          secretKey: paypalClientSecret,
-                          returnURL: "https://samplesite.com/return",
-                          cancelURL: "https://samplesite.com/cancel",
-                          transactions: [
-                            {
-                              "amount": {
-                                // "total": Subscription.subscriptionAmounts[Subscription.selectedItem]!['Amount'].toString(),
-                                "total": selectedPlan.subscriptionPrice.toString(),
-                                "currency": Subscription.currency.toString(),
-                                "details": {
-                                  // "subtotal": Subscription.subscriptionAmounts[Subscription.selectedItem]!['Amount'].toString(),
-                                  "subtotal": selectedPlan.subscriptionPrice.toString(),
-                                  "shipping": '0',
-                                  "shipping_discount": 0
-                                }
-                              },
-                              "description": "The payment transaction description.",
-                              "item_list": {
-                                "items": [
-                                  {
-                                    "name": "${selectedPlan.subscriptionName} Package",
-                                    "quantity": 1,
-                                    // "price": Subscription.subscriptionAmounts[Subscription.selectedItem]!['Amount'].toString(),
-                                    "price": selectedPlan.subscriptionPrice.toString(),
-                                    "currency": Subscription.currency.toString(),
-                                  }
-                                ],
-                              }
-                            }
-                          ],
-                          note: "Payment From MaanPos app",
-                          onSuccess: (Map params) async {
-                            try {
-                              EasyLoading.show(status: 'Loading...', dismissOnTap: false);
-                              final prefs = await SharedPreferences.getInstance();
-
-                              await prefs.setBool('isFiveDayRemainderShown', true);
-
-                              final DatabaseReference subscriptionRef = FirebaseDatabase.instance.ref().child(constUserId).child('Subscription');
-
-                              SubscriptionModel subscriptionModel = SubscriptionModel(
-                                subscriptionName: selectedPlan.subscriptionName,
-                                subscriptionDate: DateTime.now().toString(),
-                                saleNumber: selectedPlan.saleNumber.toInt(),
-                                purchaseNumber: selectedPlan.purchaseNumber.toInt(),
-                                partiesNumber: selectedPlan.partiesNumber.toInt(),
-                                dueNumber: selectedPlan.dueNumber.toInt(),
-                                duration: selectedPlan.duration.toInt(),
-                                products: selectedPlan.products.toInt(),
-                              );
-                              // print('here');
-
-                              // SubscriptionModel subscriptionModel = SubscriptionModel(
-                              //   subscriptionName: Subscription.selectedItem,
-                              //   subscriptionDate: DateTime.now().toString(),
-                              //   saleNumber: Subscription.subscriptionPlansService[Subscription.selectedItem]!['Sales'].toInt(),
-                              //   purchaseNumber: Subscription.subscriptionPlansService[Subscription.selectedItem]!['Purchase'].toInt(),
-                              //   partiesNumber: Subscription.subscriptionPlansService[Subscription.selectedItem]!['Parties'].toInt(),
-                              //   dueNumber: Subscription.subscriptionPlansService[Subscription.selectedItem]!['Due Collection'].toInt(),
-                              //   duration: Subscription.subscriptionPlansService[Subscription.selectedItem]!['Duration'].toInt(),
-                              //   products: Subscription.subscriptionPlansService[Subscription.selectedItem]!['Products'].toInt(),
-                              // );
-
-                              await subscriptionRef.set(subscriptionModel.toJson());
-                              EasyLoading.showSuccess('Added Successfully', duration: const Duration());
-                            } catch (e) {
-                              EasyLoading.dismiss();
-                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
-                            }
-                            if (mounted) {
-                              await const Home().launch(context);
-                            }
-                          },
-                          onError: (error) {
-                            EasyLoading.showError('Error');
-                          },
-                          onCancel: (params) {
-                            EasyLoading.showError('Cancel');
-                          }).launch(context);
+                      // UsePaypal(
+                      //     sandboxMode: sandbox,
+                      //     clientId: paypalClientId,
+                      //     secretKey: paypalClientSecret,
+                      //     returnURL: "https://samplesite.com/return",
+                      //     cancelURL: "https://samplesite.com/cancel",
+                      //     transactions: [
+                      //       {
+                      //         "amount": {
+                      //           // "total": Subscription.subscriptionAmounts[Subscription.selectedItem]!['Amount'].toString(),
+                      //           "total": selectedPlan.subscriptionPrice.toString(),
+                      //           "currency": Subscription.currency.toString(),
+                      //           "details": {
+                      //             // "subtotal": Subscription.subscriptionAmounts[Subscription.selectedItem]!['Amount'].toString(),
+                      //             "subtotal": selectedPlan.subscriptionPrice.toString(),
+                      //             "shipping": '0',
+                      //             "shipping_discount": 0
+                      //           }
+                      //         },
+                      //         "description": "The payment transaction description.",
+                      //         "item_list": {
+                      //           "items": [
+                      //             {
+                      //               "name": "${selectedPlan.subscriptionName} Package",
+                      //               "quantity": 1,
+                      //               // "price": Subscription.subscriptionAmounts[Subscription.selectedItem]!['Amount'].toString(),
+                      //               "price": selectedPlan.subscriptionPrice.toString(),
+                      //               "currency": Subscription.currency.toString(),
+                      //             }
+                      //           ],
+                      //         }
+                      //       }
+                      //     ],
+                      //     note: "Payment From MaanPos app",
+                      //     onSuccess: (Map params) async {
+                      //
+                      //     },
+                      //     onError: (error) {
+                      //       EasyLoading.showError('Error');
+                      //     },
+                      //     onCancel: (params) {
+                      //       EasyLoading.showError('Cancel');
+                      //     }).launch(context);
+                      PaymentPage(selectedPlan: selectedPlan, onError: (){
+                        EasyLoading.showError("Payment error");
+                      }, totalAmount: selectedPlan.subscriptionPrice.toString()).launch(context);
                     },
                     child: Container(
                       height: 60,
