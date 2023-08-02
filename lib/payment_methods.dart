@@ -16,6 +16,7 @@ import 'package:flutterwave_standard/models/requests/customer.dart';
 import 'package:flutterwave_standard/models/requests/customizations.dart';
 import 'package:flutterwave_standard/models/responses/charge_response.dart';
 import 'package:mobile_pos/payment_credentials.dart';
+import 'package:mobile_pos/paytm_config.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:http/http.dart' as http;
 import 'package:razorpay_flutter/razorpay_flutter.dart';
@@ -155,6 +156,38 @@ class _PaymentPageState extends State<PaymentPage> {
                   ),
                 ),
               ).visible(useTap),
+              const SizedBox(
+                height: 10.0,
+              ).visible(usePaytm),
+              Material(
+                elevation: 0.0,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                    side: BorderSide(color: whichPaymentIsChecked == 'Paytm' ? primaryColor : kGreyTextColor.withOpacity(0.1))),
+                color: Colors.white,
+                child: CheckboxListTile(
+                  value: whichPaymentIsChecked == 'Paytm',
+                  checkboxShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
+                  onChanged: (val) {
+                    setState(() {
+                      val == true ? whichPaymentIsChecked = 'Paytm' : whichPaymentIsChecked = 'Paypal';
+                    });
+                  },
+                  contentPadding: const EdgeInsets.all(10.0),
+                  activeColor: primaryColor,
+                  title: const Text(
+                    'Paytm',
+                    style: TextStyle(
+                      color: Colors.black,
+                    ),
+                  ),
+                  secondary: Image.asset(
+                    'images/paytm-logo.png',
+                    height: 50.0,
+                    width: 80.0,
+                  ),
+                ),
+              ).visible(usePaytm),
               const SizedBox(
                 height: 10.0,
               ).visible(useRazorpay),
@@ -298,6 +331,10 @@ class _PaymentPageState extends State<PaymentPage> {
       case 'Tap':
         _handleTapPayment(totalAmount, currency);
         break;
+    case 'Paytm':
+      PaytmConfig().generateTxnToken(widget.selectedPlan.offerPrice.toDouble(),
+          DateTime.now().millisecondsSinceEpoch.toString());
+      break;
       default:
         _handlePaypalPayment(totalAmount, currency);
     }
