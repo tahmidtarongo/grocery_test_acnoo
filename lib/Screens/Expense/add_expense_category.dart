@@ -72,7 +72,7 @@ class _AddExpenseCategoryState extends State<AddExpenseCategory> {
                   },
                   decoration: InputDecoration(
                     border: const OutlineInputBorder(),
-                    hintText: 'Fashion',
+                    hintText: lang.S.of(context).fashions,
                     floatingLabelBehavior: FloatingLabelBehavior.always,
                     labelText: lang.S.of(context).categoryName,
                   ),

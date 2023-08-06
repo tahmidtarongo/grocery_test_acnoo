@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Provider/category,brans,units_provide.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:nb_utils/nb_utils.dart';
-
 import '../../GlobalComponents/button_global.dart';
 import 'add_units.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;

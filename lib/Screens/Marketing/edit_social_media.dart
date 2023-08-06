@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import '../../constant.dart';
 
 class EditSocialmedia extends StatefulWidget {
@@ -17,7 +17,7 @@ class _EditSocialmediaState extends State<EditSocialmedia> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Edit Social Media',
+          lang.S.of(context).editSocailMedia,
           style: GoogleFonts.poppins(
             color: Colors.black,
             fontSize: 20.0,

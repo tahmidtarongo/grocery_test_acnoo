@@ -127,8 +127,8 @@ class _UpdateProductState extends State<UpdateProduct> {
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 const SizedBox(height: 20),
-                                const Text(
-                                  'You want to delete this product?',
+                                Text(
+                                  lang.S.of(context).youWantTodeletetheProduct,
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     fontSize: 22,
@@ -140,7 +140,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                                   children: [
                                     Expanded(
                                       child: ButtonGlobalWithoutIcon(
-                                        buttontext: 'Cancel',
+                                        buttontext: lang.S.of(context).cancel,
                                         buttonDecoration: kButtonDecoration.copyWith(color: Colors.green),
                                         onPressed: (() {
                                           Navigator.pop(context1);
@@ -150,7 +150,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                                     ),
                                     Expanded(
                                       child: ButtonGlobalWithoutIcon(
-                                        buttontext: 'Delete',
+                                        buttontext: lang.S.of(context).delete,
                                         buttonDecoration: kButtonDecoration.copyWith(color: Colors.red),
                                         onPressed: (() {
                                           deleteProduct(wRef: ref);
@@ -270,9 +270,9 @@ class _UpdateProductState extends State<UpdateProduct> {
                               updatedProductModel.color = value;
                             });
                           },
-                          decoration: const InputDecoration(
+                          decoration:  InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: 'Color',
+                            labelText: lang.S.of(context).color,
                             hintText: 'Green',
                             border: OutlineInputBorder(),
                           ),
@@ -294,9 +294,9 @@ class _UpdateProductState extends State<UpdateProduct> {
                               updatedProductModel.weight = value;
                             });
                           },
-                          decoration: const InputDecoration(
+                          decoration:  InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: 'Weight',
+                            labelText: lang.S.of(context).weight,
                             hintText: '10 inc',
                             border: OutlineInputBorder(),
                           ),
@@ -314,9 +314,9 @@ class _UpdateProductState extends State<UpdateProduct> {
                               updatedProductModel.capacity = value;
                             });
                           },
-                          decoration: const InputDecoration(
+                          decoration:  InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: 'Capacity',
+                            labelText: lang.S.of(context).capacity,
                             hintText: '244 liter',
                             border: OutlineInputBorder(),
                           ),
@@ -335,9 +335,9 @@ class _UpdateProductState extends State<UpdateProduct> {
                         updatedProductModel.type = value;
                       });
                     },
-                    decoration: const InputDecoration(
+                    decoration:  InputDecoration(
                       floatingLabelBehavior: FloatingLabelBehavior.always,
-                      labelText: 'Type',
+                      labelText: lang.S.of(context).type,
                       hintText: 'Usb C',
                       border: OutlineInputBorder(),
                     ),
@@ -656,7 +656,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                                             color: kGreyTextColor,
                                           ),
                                           Text(
-                                            'Camera',
+                                            lang.S.of(context).camera,
                                             style: GoogleFonts.poppins(
                                               fontSize: 20.0,
                                               color: kGreyTextColor,

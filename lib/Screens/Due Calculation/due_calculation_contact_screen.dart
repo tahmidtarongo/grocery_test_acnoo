@@ -131,9 +131,9 @@ class _DueCalculationContactScreenState extends State<DueCalculationContactScree
                               )
                             : Container();
                       })
-                  : const Center(
+                  :  Center(
                       child: Text(
-                        'No Due Available',
+                        lang.S.of(context).noDataAvailabe,
                         maxLines: 2,
                         style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20.0),
                       ),

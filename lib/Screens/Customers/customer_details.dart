@@ -359,7 +359,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                                                                                       : toast('Try Again');
                                                                                 },
                                                                                 title: Text('${printerData.availableBluetoothDevices[index]}'),
-                                                                                subtitle: const Text("Click to connect"),
+                                                                                subtitle:  Text(lang.S.of(context).clickToConnect),
                                                                               );
                                                                             },
                                                                           ),

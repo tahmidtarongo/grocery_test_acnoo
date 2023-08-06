@@ -9,7 +9,7 @@ import 'package:mobile_pos/constant.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:provider/provider.dart';
-
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import '../../GlobalComponents/license_verifier.dart';
 import '../../currency.dart';
 import '../../repository/subscription_repo.dart';
@@ -165,7 +165,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     child: Container(
                       height: MediaQuery.of(context).size.height / 2,
                       width: double.infinity,
-                      decoration: const BoxDecoration(
+                      decoration:  BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.all(Radius.circular(30)),
                       ),
@@ -175,11 +175,10 @@ class _SplashScreenState extends State<SplashScreen> {
                             padding: const EdgeInsets.all(20),
                             child: Column(
                               children: [
-                                const Padding(
+                                 Padding(
                                   padding: EdgeInsets.only(top: 20, bottom: 10),
                                   child: Text(
-                                    'A new update available\n\n'
-                                    'Please update your app',
+                                    lang.S.of(context).anewUpdateAvailable,
                                     style: TextStyle(
                                       fontSize: 20,
                                     ),
@@ -200,9 +199,9 @@ class _SplashScreenState extends State<SplashScreen> {
                                         color: kMainColor,
                                         borderRadius: BorderRadius.all(Radius.circular(20)),
                                       ),
-                                      child: const Center(
+                                      child:  Center(
                                           child: Text(
-                                        'Update Now',
+                                        lang.S.of(context).updateNow,
                                         style: TextStyle(color: Colors.white),
                                       )),
                                     ),
@@ -227,9 +226,9 @@ class _SplashScreenState extends State<SplashScreen> {
                                         color: kMainColor,
                                         borderRadius: BorderRadius.all(Radius.circular(20)),
                                       ),
-                                      child: const Center(
+                                      child:  Center(
                                           child: Text(
-                                        'Skip this update',
+                                            lang.S.of(context).skipTheUpdate,
                                         style: TextStyle(color: Colors.white),
                                       )),
                                     ),
@@ -251,9 +250,9 @@ class _SplashScreenState extends State<SplashScreen> {
                                         color: kMainColor,
                                         borderRadius: BorderRadius.all(Radius.circular(20)),
                                       ),
-                                      child: const Center(
+                                      child:  Center(
                                           child: Text(
-                                        'Remember me later',
+                                            lang.S.of(context).rememberMeLater,
                                         style: TextStyle(color: Colors.white),
                                       )),
                                     ),
@@ -303,11 +302,10 @@ class _SplashScreenState extends State<SplashScreen> {
                           padding: const EdgeInsets.all(20),
                           child: Column(
                             children: [
-                              const Padding(
+                              Padding(
                                 padding: EdgeInsets.only(top: 20, bottom: 10),
                                 child: Text(
-                                  'A new update available\n\n'
-                                  'Please update your app',
+                                  lang.S.of(context).anewUpdateAvailable,
                                   style: TextStyle(
                                     fontSize: 20,
                                   ),
@@ -328,9 +326,9 @@ class _SplashScreenState extends State<SplashScreen> {
                                       color: kMainColor,
                                       borderRadius: BorderRadius.all(Radius.circular(20)),
                                     ),
-                                    child: const Center(
+                                    child:  Center(
                                         child: Text(
-                                      'Update Now',
+                                          lang.S.of(context).updateNow,
                                       style: TextStyle(color: Colors.white),
                                     )),
                                   ),
@@ -355,9 +353,9 @@ class _SplashScreenState extends State<SplashScreen> {
                                       color: kMainColor,
                                       borderRadius: BorderRadius.all(Radius.circular(20)),
                                     ),
-                                    child: const Center(
+                                    child:  Center(
                                         child: Text(
-                                      'Skip this update',
+                                          lang.S.of(context).skipTheUpdate,
                                       style: TextStyle(color: Colors.white),
                                     )),
                                   ),
@@ -379,9 +377,9 @@ class _SplashScreenState extends State<SplashScreen> {
                                       color: kMainColor,
                                       borderRadius: BorderRadius.all(Radius.circular(20)),
                                     ),
-                                    child: const Center(
+                                    child:  Center(
                                         child: Text(
-                                      'Remember me later',
+                                          lang.S.of(context).rememberMeLater,
                                       style: TextStyle(color: Colors.white),
                                     )),
                                   ),
@@ -432,7 +430,7 @@ class _SplashScreenState extends State<SplashScreen> {
               children: [
                 Center(
                   child: Text(
-                    'Powered By Acnoo',
+                    lang.S.of(context).powerdedByAcnoo,
                     style: GoogleFonts.poppins(color: Colors.white, fontWeight: FontWeight.normal, fontSize: 20.0),
                   ),
                 ),

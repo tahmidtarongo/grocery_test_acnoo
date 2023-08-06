@@ -105,7 +105,7 @@ class _AddCustomerState extends State<AddCustomer> {
                     decoration: InputDecoration(
                       floatingLabelBehavior: FloatingLabelBehavior.always,
                       labelText: lang.S.of(context).phone,
-                      hintText: 'Enter your phone number',
+                      hintText: lang.S.of(context).enterYourPhoneNumber,
                       border: const OutlineInputBorder(),
                     ),
                   ),
@@ -122,7 +122,7 @@ class _AddCustomerState extends State<AddCustomer> {
                     decoration: InputDecoration(
                       floatingLabelBehavior: FloatingLabelBehavior.always,
                       labelText: lang.S.of(context).name,
-                      hintText: 'Enter your name',
+                      hintText: lang.S.of(context).enterYourName,
                       border: const OutlineInputBorder(),
                     ),
                   ),
@@ -432,7 +432,7 @@ class _AddCustomerState extends State<AddCustomer> {
                                   border: const OutlineInputBorder(),
                                   floatingLabelBehavior: FloatingLabelBehavior.always,
                                   labelText: lang.S.of(context).previousDue,
-                                  hintText: 'Amount'),
+                                  hintText: lang.S.of(context).amount),
                             ),
                           ),
                         ],

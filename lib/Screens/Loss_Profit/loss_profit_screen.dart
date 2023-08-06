@@ -278,16 +278,16 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                                                           children: [
                                                             Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                                                               Text(
-                                                                'Total : $currency ${reTransaction[index].totalAmount.toString()}',
+                                                                '${lang.S.of(context).total} : $currency ${reTransaction[index].totalAmount.toString()}',
                                                                 style: const TextStyle(color: Colors.grey),
                                                               ),
                                                               const SizedBox(height: 5),
                                                               Text(
-                                                                'Profit : $currency ${reTransaction[index].lossProfit}',
+                                                                '${lang.S.of(context).profit} : $currency ${reTransaction[index].lossProfit}',
                                                                 style: const TextStyle(color: Colors.green, fontWeight: FontWeight.bold),
                                                               ).visible(!reTransaction[index].lossProfit!.isNegative),
                                                               Text(
-                                                                'Loss: $currency ${reTransaction[index].lossProfit!.abs()}',
+                                                                '${lang.S.of(context).loss}: $currency ${reTransaction[index].lossProfit!.abs()}',
                                                                 style: const TextStyle(color: Colors.redAccent, fontWeight: FontWeight.bold),
                                                               ).visible(reTransaction[index].lossProfit!.isNegative),
                                                             ]),
@@ -337,14 +337,14 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                                                                                                         : toast('Try Again');
                                                                                                   },
                                                                                                   title: Text('${printerData.availableBluetoothDevices[index]}'),
-                                                                                                  subtitle: const Text("Click to connect"),
+                                                                                                  subtitle:  Text(lang.S.of(context).clickToConnect),
                                                                                                 );
                                                                                               },
                                                                                             ),
-                                                                                            const Padding(
+                                                                                             Padding(
                                                                                               padding: EdgeInsets.only(top: 20, bottom: 10),
                                                                                               child: Text(
-                                                                                                'Please connect your bluetooth Printer',
+                                                                                                lang.S.of(context).pleaseConnectYourBlutohPrinter,
                                                                                                 style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
                                                                                               ),
                                                                                             ),
@@ -355,9 +355,9 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                                                                                               onTap: () {
                                                                                                 Navigator.pop(context);
                                                                                               },
-                                                                                              child: const Center(
+                                                                                              child:  Center(
                                                                                                 child: Text(
-                                                                                                  'Cancel',
+                                                                                                  lang.S.of(context).cancel,
                                                                                                   style: TextStyle(color: kMainColor),
                                                                                                 ),
                                                                                               ),

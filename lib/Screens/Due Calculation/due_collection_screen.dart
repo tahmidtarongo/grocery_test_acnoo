@@ -358,10 +358,10 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                           onChanged: (value) {
                             setState(() {});
                           },
-                          decoration: const InputDecoration(
+                          decoration:  InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: 'Description',
-                            hintText: 'Add Note',
+                            labelText: lang.S.of(context).description,
+                            hintText: lang.S.of(context).addNote,
                             border: OutlineInputBorder(),
                           ),
                         ),
@@ -371,18 +371,18 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                           height: 60,
                           width: 100,
                           decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), color: Colors.grey.shade200),
-                          child: const Center(
+                          child:  Center(
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                Icon(
+                                const Icon(
                                   FeatherIcons.camera,
                                   color: Colors.grey,
                                 ),
                                 SizedBox(width: 5),
                                 Text(
-                                  'Image',
-                                  style: TextStyle(color: Colors.grey, fontSize: 16),
+                                  lang.S.of(context).image,
+                                  style: const TextStyle(color: Colors.grey, fontSize: 16),
                                 )
                               ],
                             ),
@@ -468,8 +468,8 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                                     });
                                   } else {
                                     // ignore: use_build_context_synchronously
-                                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                                      content: Text("Please Connect The Printer First"),
+                                    ScaffoldMessenger.of(context).showSnackBar( SnackBar(
+                                      content: Text(lang.S.of(context).pleaseConnectThePrinterFirst),
                                     ));
                                     // ignore: use_build_context_synchronously
                                     showDialog(
@@ -507,12 +507,12 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                                                             }
                                                           },
                                                           title: Text('${printerData.availableBluetoothDevices[index]}'),
-                                                          subtitle: const Text("Click to connect"),
+                                                          subtitle:  Text(lang.S.of(context).clickToConnect),
                                                         );
                                                       },
                                                     ),
                                                     const SizedBox(height: 10),
-                                                    const Text('Connect Your printer'),
+                                                    Text(lang.S.of(context).connectPrinter),
                                                     const SizedBox(height: 10),
                                                     Container(
                                                       height: 1,
@@ -529,9 +529,9 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                                                         consumerRef.refresh(profileDetailsProvider);
                                                         const DueReportScreen().launch(context);
                                                       },
-                                                      child: const Center(
+                                                      child:  Center(
                                                         child: Text(
-                                                          'Cancel',
+                                                          lang.S.of(context).cancel,
                                                           style: TextStyle(color: kMainColor),
                                                         ),
                                                       ),

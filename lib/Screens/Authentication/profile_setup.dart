@@ -366,7 +366,7 @@ class _ProfileSetupState extends State<ProfileSetup> {
                           },
                           decoration: InputDecoration(
                             labelText: lang.S.of(context).phone,
-                            hintText: 'Enter Phone Number',
+                            hintText: lang.S.of(context).enterYourPhoneNumber,
                             border: const OutlineInputBorder(),
                           ),
                         ),
@@ -383,7 +383,7 @@ class _ProfileSetupState extends State<ProfileSetup> {
                             borderSide: BorderSide(color: kGreyTextColor),
                           ),
                           labelText: lang.S.of(context).companyAddress,
-                          hintText: 'Enter Full Address',
+                          hintText: lang.S.of(context).enterFullAddress,
                           border: const OutlineInputBorder(),
                         ),
                       ),

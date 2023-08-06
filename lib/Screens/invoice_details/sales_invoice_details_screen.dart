@@ -9,6 +9,7 @@ import '../../invoice_constant.dart';
 // ignore: library_prefixes
 import '../../constant.dart' as mainConstant;
 import '../../model/personal_information_model.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import '../../model/print_transaction_model.dart';
 import '../../model/transition_model.dart';
 
@@ -81,12 +82,12 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                   Row(
                     children: [
                       Text(
-                        'BILL To',
+                        lang.S.of(context).billTO,
                         style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
                       ),
                       const Spacer(),
                       Text(
-                        'Invoice# ${widget.transitionModel.invoiceNumber}',
+                        '${lang.S.of(context).invoice}# ${widget.transitionModel.invoiceNumber}',
                         style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
                       ),
                     ],
@@ -129,25 +130,25 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                     child: Row(
                       children: [
                         Text(
-                          'Product',
+                          lang.S.of(context).product,
                           maxLines: 2,
                           style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
                         ),
                         const Spacer(),
                         Text(
-                          'Unit Price',
+                          lang.S.of(context).unitPirce,
                           maxLines: 2,
                           style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
                         ),
                         const Spacer(),
                         Text(
-                          'Quantity',
+                          lang.S.of(context).quantity,
                           maxLines: 1,
                           style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
                         ),
                         const Spacer(),
                         Text(
-                          'Total Price',
+                          lang.S.of(context).totalPrice,
                           maxLines: 2,
                           style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
                         ),
@@ -202,7 +203,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
-                        'Sub Total',
+                        lang.S.of(context).subTotal,
                         maxLines: 1,
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
@@ -223,7 +224,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
-                        'Total Vat',
+                        lang.S.of(context).totalVat,
                         maxLines: 1,
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
@@ -244,7 +245,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
-                        'Discount',
+                        lang.S.of(context).discount,
                         maxLines: 1,
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
@@ -265,7 +266,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
-                        'Delivery Charge',
+                        lang.S.of(context).deliveryCharge,
                         maxLines: 1,
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
@@ -286,7 +287,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
-                        'Total Payable',
+                        lang.S.of(context).totalPayable,
                         maxLines: 1,
                         style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
                       ),
@@ -307,7 +308,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
-                        'Paid',
+                        lang.S.of(context).paid,
                         maxLines: 1,
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
@@ -328,7 +329,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
-                        'Due',
+                        lang.S.of(context).due,
                         maxLines: 1,
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
@@ -351,7 +352,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                   const SizedBox(height: 10.0),
                   Center(
                     child: Text(
-                      'Thank you for your purchase',
+                      lang.S.of(context).thakYouForYourPurchase,
                       maxLines: 1,
                       style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
                       textAlign: TextAlign.center,
@@ -398,12 +399,12 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                                             isConnect ? finish(context) : toast('Try Again');
                                           },
                                           title: Text('${printerData.availableBluetoothDevices[index]}'),
-                                          subtitle: const Text("Click to connect"),
+                                          subtitle:  Text(lang.S.of(context).clickToConnect),
                                         );
                                       },
                                     ),
                                     const SizedBox(height: 10),
-                                    const Text('Connect Your printer'),
+                                    Text(lang.S.of(context).connectPrinter),
                                     const SizedBox(height: 10),
                                     Container(height: 1, width: double.infinity, color: Colors.grey),
                                     const SizedBox(height: 15),
@@ -411,9 +412,9 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                                       onTap: () {
                                         Navigator.pop(context);
                                       },
-                                      child: const Center(
+                                      child:  Center(
                                         child: Text(
-                                          'Cancel',
+                                          lang.S.of(context).cancel,
                                           style: TextStyle(color: mainConstant.kMainColor),
                                         ),
                                       ),
@@ -435,10 +436,10 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                     Radius.circular(30),
                   ),
                 ),
-                child: const Center(
+                child:  Center(
                   child: Text(
-                    'Print',
-                    style: TextStyle(
+                    lang.S.of(context).print,
+                    style: const TextStyle(
                       fontSize: 18,
                       color: Colors.white,
                     ),

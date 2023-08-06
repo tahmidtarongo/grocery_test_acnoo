@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Provider/product_provider.dart';
 import 'package:mobile_pos/Screens/Products/update_product.dart';
 import 'package:nb_utils/nb_utils.dart';
-
 import '../../GlobalComponents/button_global.dart';
 import '../../constant.dart';
 import '../../currency.dart';

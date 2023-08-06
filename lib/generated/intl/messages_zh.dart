@@ -80,7 +80,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "editSalesInvoice": MessageLookupByLibrary.simpleMessage("编辑销售发票"),
         "email": MessageLookupByLibrary.simpleMessage("电子邮件地址"),
         "emailText": MessageLookupByLibrary.simpleMessage("电子邮件"),
-        "enterEmail": MessageLookupByLibrary.simpleMessage("请在下面输入您的电子邮件地址以接收密码重置链接。"),
+        "enterEmail":
+            MessageLookupByLibrary.simpleMessage("请在下面输入您的电子邮件地址以接收密码重置链接。"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("费用类别"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("费用日期"),
         "expenseFor": MessageLookupByLibrary.simpleMessage("费用为"),
@@ -142,7 +143,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "recentTransaction": MessageLookupByLibrary.simpleMessage("最近的交易"),
         "referenceNo": MessageLookupByLibrary.simpleMessage("参考编号"),
         "register": MessageLookupByLibrary.simpleMessage("登记"),
-        "registerTitle": MessageLookupByLibrary.simpleMessage("我们需要注册您的手机，无需入门！"),
+        "registerTitle":
+            MessageLookupByLibrary.simpleMessage("我们需要注册您的手机，无需入门！"),
         "reports": MessageLookupByLibrary.simpleMessage("报告"),
         "retailer": MessageLookupByLibrary.simpleMessage("零售商"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("退货金额"),
@@ -157,9 +159,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "select": MessageLookupByLibrary.simpleMessage("选择"),
         "selectLang": MessageLookupByLibrary.simpleMessage("选择你的语言"),
         "sendCode": MessageLookupByLibrary.simpleMessage("发送代码"),
-        "sendEmail": MessageLookupByLibrary.simpleMessage("我们已发送一封电子邮件，其中包含有关如何重设密码的说明："),
+        "sendEmail": MessageLookupByLibrary.simpleMessage(
+            "我们已发送一封电子邮件，其中包含有关如何重设密码的说明："),
         "sendLink": MessageLookupByLibrary.simpleMessage("发送重置链接"),
-        "setUpDesc": MessageLookupByLibrary.simpleMessage("更新您的个人资料以使您的医生获得更好的印象"),
+        "setUpDesc":
+            MessageLookupByLibrary.simpleMessage("更新您的个人资料以使您的医生获得更好的印象"),
         "setUpProfile": MessageLookupByLibrary.simpleMessage("设置您的个人资料"),
         "staffLogin": MessageLookupByLibrary.simpleMessage("员工登入"),
         "stillUnpaid": MessageLookupByLibrary.simpleMessage("仍未付款"),

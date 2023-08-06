@@ -8,7 +8,6 @@ import 'package:mobile_pos/Screens/Customers/customer_details.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
-
 import '../../currency.dart';
 
 class CustomerList extends StatefulWidget {
@@ -147,7 +146,7 @@ class _CustomerListState extends State<CustomerList> {
       ),
       bottomNavigationBar: ButtonGlobal(
         iconWidget: Icons.add,
-        buttontext: 'Add Customer',
+        buttontext: lang.S.of(context).addCustomer,
         iconColor: Colors.white,
         buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
         onPressed: () {

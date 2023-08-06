@@ -6,6 +6,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/Screens/Expense/expense_category_list.dart';
 import 'package:mobile_pos/Screens/Expense/expense_list.dart';
@@ -127,10 +128,10 @@ class _AddExpenseState extends State<AddExpense> {
                               enabledBorder: const OutlineInputBorder(),
                               contentPadding: const EdgeInsets.all(20),
                               labelText: lang.S.of(context).expenseDate,
-                              hintText: 'Enter expense date',
+                              hintText: lang.S.of(context).enterExpenseDate,
                             ),
                             child: Text(
-                              '${selectedDate.day}/${selectedDate.month}/${selectedDate.year}',
+                              '${DateFormat.d().format(selectedDate)} ${DateFormat.MMM().format(selectedDate)} ${DateFormat.y().format(selectedDate)}',
                             ),
                           );
                         },
@@ -155,7 +156,7 @@ class _AddExpenseState extends State<AddExpense> {
                               const SizedBox(
                                 width: 10.0,
                               ),
-                              Text(dropdownValue),
+                            dropdownValue == 'Select Category'?Text(lang.S.of(context).selectCategory) :Text(dropdownValue),
                               const Spacer(),
                               const Icon(Icons.keyboard_arrow_down),
                               const SizedBox(
@@ -181,9 +182,10 @@ class _AddExpenseState extends State<AddExpense> {
                           expanseForNameController.text = value!;
                         },
                         decoration: InputDecoration(
+                          floatingLabelBehavior: FloatingLabelBehavior.always,
                           border: const OutlineInputBorder(),
                           labelText: lang.S.of(context).expenseFor,
-                          hintText: 'Enter Name',
+                          hintText: lang.S.of(context).enterName,
                         ),
                       ),
                       const SizedBox(height: 20),
@@ -226,7 +228,8 @@ class _AddExpenseState extends State<AddExpense> {
                             borderSide: BorderSide(color: Colors.red),
                           ),
                           labelText: lang.S.of(context).amount,
-                          hintText: 'Enter Amount',
+                          floatingLabelBehavior: FloatingLabelBehavior.always,
+                          hintText: lang.S.of(context).enterAmount,
                         ),
                         keyboardType: TextInputType.number,
                       ),
@@ -246,7 +249,8 @@ class _AddExpenseState extends State<AddExpense> {
                         decoration: InputDecoration(
                           border: const OutlineInputBorder(),
                           labelText: lang.S.of(context).referenceNo,
-                          hintText: 'Enter Reference Number',
+                          floatingLabelBehavior: FloatingLabelBehavior.always,
+                          hintText: lang.S.of(context).enterRefNumber,
                         ),
                       ),
                       const SizedBox(height: 20),

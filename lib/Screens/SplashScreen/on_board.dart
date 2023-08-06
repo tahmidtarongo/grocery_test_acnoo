@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/Screens/Authentication/phone.dart';
 import 'package:nb_utils/nb_utils.dart';
-
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import '../../constant.dart';
 
 class OnBoard extends StatefulWidget {
@@ -19,37 +19,41 @@ class _OnBoardState extends State<OnBoard> {
   int currentIndexPage = 0;
   String buttonText = 'Next';
 
-  List<Map<String, dynamic>> sliderList = [
-    {
-      "icon": 'images/onboard1.png',
-      "title": 'Easy to use mobile pos',
-      "description": 'Lorem ipsum dolor sit amet, consectetuer adipisci elit, sed diam nonummy nibh euismod tincidunt u laoreet dolore magna aliquam erat volutpat. Ut wi',
-    },
-    {
-      "icon": 'images/onboard2.png',
-      "title": 'Choose your features',
-      "description": 'Lorem ipsum dolor sit amet, consectetuer adipisci elit, sed diam nonummy nibh euismod tincidunt u laoreet dolore magna aliquam erat volutpat. Ut wi',
-    },
-    {
-      "icon": 'images/onboard3.png',
-      "title": 'All business solutions',
-      "description": 'Lorem ipsum dolor sit amet, consectetuer adipisci elit, sed diam nonummy nibh euismod tincidunt u laoreet dolore magna aliquam erat volutpat. Ut wi',
-    },
-  ];
+
+  List<Map<String, dynamic>> getSlider({required BuildContext context}){
+    List<Map<String, dynamic>> sliderList = [
+      {
+        "icon": 'images/onboard1.png',
+        "title": lang.S.of(context).easyToUseThePos,
+        "description": lang.S.of(context).easytheusedesciption,
+      },
+      {
+        "icon": 'images/onboard2.png',
+        "title": lang.S.of(context).choseYourFeature,
+        "description": lang.S.of(context).choseyourfeatureDesciption,
+      },
+      {
+        "icon": 'images/onboard3.png',
+        "title": lang.S.of(context).allBusinessSolutions,
+        "description": lang.S.of(context).allBusinessSolutions,
+      },
+    ];
+    return sliderList;
+  }
+  List<Map<String, dynamic>> sliderList = [];
 
   @override
   Widget build(BuildContext context) {
+    sliderList=getSlider(context: context);
     return Scaffold(
       appBar: AppBar(
         iconTheme: const IconThemeData(color: Colors.black),
-        backgroundColor: Colors.white,
+        automaticallyImplyLeading: false,
+        backgroundColor: Colors.transparent,
         elevation: 0.0,
         actions: [
-          const SizedBox(
-            width: 20.0,
-          ),
           Padding(
-            padding: const EdgeInsets.only(top: 8.0, right: 10.0),
+            padding: const EdgeInsets.only(right: 8.0),
             child: TextButton(
               onPressed: () {
                 const PhoneAuth().launch(context);
@@ -57,9 +61,9 @@ class _OnBoardState extends State<OnBoard> {
                 // Navigator.pushNamed(context, '/signIn');
               },
               child: Text(
-                'Skip',
+                lang.S.of(context).skip,
                 style: GoogleFonts.jost(
-                  fontSize: 20.0,
+                  fontSize: 18.0,
                   color: kMainColor,
                 ),
               ),
@@ -129,9 +133,10 @@ class _OnBoardState extends State<OnBoard> {
               indicatorColor: kMainColor,
               unselectedIndicatorColor: Colors.grey,
             ),
+            SizedBox(height: 30,),
             ButtonGlobal(
               iconWidget: Icons.arrow_forward,
-              buttontext: buttonText,
+              buttontext: lang.S.of(context).next,
               iconColor: Colors.white,
               buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
               onPressed: () {

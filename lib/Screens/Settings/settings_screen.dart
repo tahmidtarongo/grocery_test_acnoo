@@ -663,10 +663,7 @@ class _SettingScreenState extends State<SettingScreen> {
                       builder: (context) => const SelectLanguage(),
                     ),
                   ),
-                  leading: const Icon(
-                    Icons.language,
-                    color: kMainColor,
-                  ),
+                  leading: Image.asset('images/en.png'),
                   trailing: const Icon(
                     Icons.arrow_forward_ios,
                     color: kGreyTextColor,

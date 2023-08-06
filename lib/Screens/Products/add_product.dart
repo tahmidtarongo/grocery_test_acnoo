@@ -21,7 +21,7 @@ import 'package:mobile_pos/Screens/Products/unit_list.dart';
 import 'package:mobile_pos/model/product_model.dart';
 import 'package:mobile_pos/repository/subscription_repo.dart';
 import 'package:nb_utils/nb_utils.dart';
-
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import '../../GlobalComponents/Model/category_model.dart';
 import '../../Provider/product_provider.dart';
 import '../../constant.dart';
@@ -233,9 +233,9 @@ class _AddProductState extends State<AddProduct> {
                               size = value;
                             });
                           },
-                          decoration: const InputDecoration(
+                          decoration:  InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: 'Size',
+                            labelText: lang.S.of(context).size,
                             hintText: 'M',
                             border: OutlineInputBorder(),
                           ),
@@ -252,11 +252,11 @@ class _AddProductState extends State<AddProduct> {
                               color = value;
                             });
                           },
-                          decoration: const InputDecoration(
+                          decoration:  InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: 'Color',
+                            labelText: lang.S.of(context).color,
                             hintText: 'Green',
-                            border: OutlineInputBorder(),
+                            border: const OutlineInputBorder(),
                           ),
                         ),
                       ),
@@ -275,9 +275,9 @@ class _AddProductState extends State<AddProduct> {
                               weight = value;
                             });
                           },
-                          decoration: const InputDecoration(
+                          decoration:  InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: 'Weight',
+                            labelText: lang.S.of(context).weight,
                             hintText: '10 inc',
                             border: OutlineInputBorder(),
                           ),
@@ -294,9 +294,9 @@ class _AddProductState extends State<AddProduct> {
                               capacity = value;
                             });
                           },
-                          decoration: const InputDecoration(
+                          decoration:  InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: 'Capacity',
+                            labelText: lang.S.of(context).capacity,
                             hintText: '244 liter',
                             border: OutlineInputBorder(),
                           ),
@@ -314,9 +314,9 @@ class _AddProductState extends State<AddProduct> {
                         type = value;
                       });
                     },
-                    decoration: const InputDecoration(
+                    decoration:  InputDecoration(
                       floatingLabelBehavior: FloatingLabelBehavior.always,
-                      labelText: 'Type',
+                      labelText: lang.S.of(context).type,
                       hintText: 'Usb C',
                       border: OutlineInputBorder(),
                     ),
@@ -567,7 +567,7 @@ class _AddProductState extends State<AddProduct> {
                         },
                         decoration: InputDecoration(
                           floatingLabelBehavior: FloatingLabelBehavior.always,
-                          labelText: 'Discount',
+                          labelText: lang.S.of(context).discount,
                           hintText: '$currency 34.90',
                           border: const OutlineInputBorder(),
                         ),
@@ -638,7 +638,7 @@ class _AddProductState extends State<AddProduct> {
                                                 color: kMainColor,
                                               ),
                                               Text(
-                                                'Gallery',
+                                                lang.S.of(context).gallery,
                                                 style: GoogleFonts.poppins(
                                                   fontSize: 20.0,
                                                   color: kMainColor,
@@ -670,7 +670,7 @@ class _AddProductState extends State<AddProduct> {
                                                 color: kGreyTextColor,
                                               ),
                                               Text(
-                                                'Camera',
+                                                lang.S.of(context).camera,
                                                 style: GoogleFonts.poppins(
                                                   fontSize: 20.0,
                                                   color: kGreyTextColor,

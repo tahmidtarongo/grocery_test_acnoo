@@ -18,14 +18,17 @@ class S {
   static S? _current;
 
   static S get current {
-    assert(_current != null, 'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
+    assert(_current != null,
+        'No instance of S was loaded. Try to initialize the S delegate before accessing S.current.');
     return _current!;
   }
 
   static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
 
   static Future<S> load(Locale locale) {
-    final name = (locale.countryCode?.isEmpty ?? false) ? locale.languageCode : locale.toString();
+    final name = (locale.countryCode?.isEmpty ?? false)
+        ? locale.languageCode
+        : locale.toString();
     final localeName = Intl.canonicalizedLocale(name);
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
@@ -38,12 +41,893 @@ class S {
 
   static S of(BuildContext context) {
     final instance = S.maybeOf(context);
-    assert(instance != null, 'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?');
+    assert(instance != null,
+        'No instance of S present in the widget tree. Did you add S.delegate in localizationsDelegates?');
     return instance!;
   }
 
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
+  }
+
+  /// `Enter your phone number`
+  String get enterYourPhoneNumber {
+    return Intl.message(
+      'Enter your phone number',
+      name: 'enterYourPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Full Address`
+  String get enterFullAddress {
+    return Intl.message(
+      'Enter Full Address',
+      name: 'enterFullAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your email address`
+  String get enterYourEmailAddress {
+    return Intl.message(
+      'Enter your email address',
+      name: 'enterYourEmailAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a password`
+  String get pleaseEnterAPassword {
+    return Intl.message(
+      'Please enter a password',
+      name: 'pleaseEnterAPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a confirm password`
+  String get pleaseEnterAConfirmPassword {
+    return Intl.message(
+      'Please enter a confirm password',
+      name: 'pleaseEnterAConfirmPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your name`
+  String get enterYourName {
+    return Intl.message(
+      'Enter your name',
+      name: 'enterYourName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add New Address`
+  String get addNewAddress {
+    return Intl.message(
+      'Add New Address',
+      name: 'addNewAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `First Name`
+  String get firstName {
+    return Intl.message(
+      'First Name',
+      name: 'firstName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Last Name`
+  String get lastName {
+    return Intl.message(
+      'Last Name',
+      name: 'lastName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Country`
+  String get country {
+    return Intl.message(
+      'Country',
+      name: 'country',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bangladesh`
+  String get bangladesh {
+    return Intl.message(
+      'Bangladesh',
+      name: 'bangladesh',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Apply`
+  String get apply {
+    return Intl.message(
+      'Apply',
+      name: 'apply',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery Address`
+  String get deliveryAddress {
+    return Intl.message(
+      'Delivery Address',
+      name: 'deliveryAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No data available`
+  String get noDataAvailabe {
+    return Intl.message(
+      'No data available',
+      name: 'noDataAvailabe',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Delivery`
+  String get addDelivery {
+    return Intl.message(
+      'Add Delivery',
+      name: 'addDelivery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Description`
+  String get description {
+    return Intl.message(
+      'Description',
+      name: 'description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Note`
+  String get addNote {
+    return Intl.message(
+      'Add Note',
+      name: 'addNote',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Image`
+  String get image {
+    return Intl.message(
+      'Image',
+      name: 'image',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please connect the printer first`
+  String get pleaseConnectThePrinterFirst {
+    return Intl.message(
+      'Please connect the printer first',
+      name: 'pleaseConnectThePrinterFirst',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Category`
+  String get selectCategory {
+    return Intl.message(
+      'Select Category',
+      name: 'selectCategory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter expense date`
+  String get enterExpenseDate {
+    return Intl.message(
+      'Enter expense date',
+      name: 'enterExpenseDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Name`
+  String get enterName {
+    return Intl.message(
+      'Enter Name',
+      name: 'enterName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Amount`
+  String get enterAmount {
+    return Intl.message(
+      'Enter Amount',
+      name: 'enterAmount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter reference number`
+  String get enterRefNumber {
+    return Intl.message(
+      'Enter reference number',
+      name: 'enterRefNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fashion`
+  String get fashions {
+    return Intl.message(
+      'Fashion',
+      name: 'fashions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bill To`
+  String get billTO {
+    return Intl.message(
+      'Bill To',
+      name: 'billTO',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total Due`
+  String get totalDue {
+    return Intl.message(
+      'Total Due',
+      name: 'totalDue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment Amounts`
+  String get paymentsAmount {
+    return Intl.message(
+      'Payment Amounts',
+      name: 'paymentsAmount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Remaining Due`
+  String get remainingDue {
+    return Intl.message(
+      'Remaining Due',
+      name: 'remainingDue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Thank you for your due payment`
+  String get thankYouForYourDuePayment {
+    return Intl.message(
+      'Thank you for your due payment',
+      name: 'thankYouForYourDuePayment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Print`
+  String get print {
+    return Intl.message(
+      'Print',
+      name: 'print',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unit Price`
+  String get unitPirce {
+    return Intl.message(
+      'Unit Price',
+      name: 'unitPirce',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total Price`
+  String get totalPrice {
+    return Intl.message(
+      'Total Price',
+      name: 'totalPrice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total Vat`
+  String get totalVat {
+    return Intl.message(
+      'Total Vat',
+      name: 'totalVat',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery Charge`
+  String get deliveryCharge {
+    return Intl.message(
+      'Delivery Charge',
+      name: 'deliveryCharge',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total Payable`
+  String get totalPayable {
+    return Intl.message(
+      'Total Payable',
+      name: 'totalPayable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Thak you for your purchase`
+  String get thakYouForYourPurchase {
+    return Intl.message(
+      'Thak you for your purchase',
+      name: 'thakYouForYourPurchase',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please connect your bluetooth printer`
+  String get pleaseConnectYourBlutohPrinter {
+    return Intl.message(
+      'Please connect your bluetooth printer',
+      name: 'pleaseConnectYourBlutohPrinter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit Socail Media`
+  String get editSocailMedia {
+    return Intl.message(
+      'Edit Socail Media',
+      name: 'editSocailMedia',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Social Marketing`
+  String get socialMarketing {
+    return Intl.message(
+      'Social Marketing',
+      name: 'socialMarketing',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Share`
+  String get share {
+    return Intl.message(
+      'Share',
+      name: 'share',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Notification`
+  String get notification {
+    return Intl.message(
+      'Notification',
+      name: 'notification',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Purchase Alarm`
+  String get purchaseAlarm {
+    return Intl.message(
+      'Purchase Alarm',
+      name: 'purchaseAlarm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Purchase Confirmed`
+  String get purchaseConfirmed {
+    return Intl.message(
+      'Purchase Confirmed',
+      name: 'purchaseConfirmed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment Complete`
+  String get paymentComplete {
+    return Intl.message(
+      'Payment Complete',
+      name: 'paymentComplete',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Return`
+  String get retur {
+    return Intl.message(
+      'Return',
+      name: 'retur',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send Sms`
+  String get sendSms {
+    return Intl.message(
+      'Send Sms',
+      name: 'sendSms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Received the Pin`
+  String get recivethePin {
+    return Intl.message(
+      'Received the Pin',
+      name: 'recivethePin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start New Sale`
+  String get startNewSale {
+    return Intl.message(
+      'Start New Sale',
+      name: 'startNewSale',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment`
+  String get payment {
+    return Intl.message(
+      'Payment',
+      name: 'payment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Master Card`
+  String get masterCard {
+    return Intl.message(
+      'Master Card',
+      name: 'masterCard',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Instruction`
+  String get instrucation {
+    return Intl.message(
+      'Instruction',
+      name: 'instrucation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cash`
+  String get cash {
+    return Intl.message(
+      'Cash',
+      name: 'cash',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invoice viewer`
+  String get invoiceViewr {
+    return Intl.message(
+      'Invoice viewer',
+      name: 'invoiceViewr',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Size`
+  String get size {
+    return Intl.message(
+      'Size',
+      name: 'size',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Color`
+  String get color {
+    return Intl.message(
+      'Color',
+      name: 'color',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Weight`
+  String get weight {
+    return Intl.message(
+      'Weight',
+      name: 'weight',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Capacity`
+  String get capacity {
+    return Intl.message(
+      'Capacity',
+      name: 'capacity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Type`
+  String get type {
+    return Intl.message(
+      'Type',
+      name: 'type',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You want to delete this product?`
+  String get youWantTodeletetheProduct {
+    return Intl.message(
+      'You want to delete this product?',
+      name: 'youWantTodeletetheProduct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete`
+  String get delete {
+    return Intl.message(
+      'Delete',
+      name: 'delete',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contact Details`
+  String get contactDetials {
+    return Intl.message(
+      'Contact Details',
+      name: 'contactDetials',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Clarence`
+  String get clarence {
+    return Intl.message(
+      'Clarence',
+      name: 'clarence',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Call`
+  String get call {
+    return Intl.message(
+      'Call',
+      name: 'call',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Message`
+  String get messege {
+    return Intl.message(
+      'Message',
+      name: 'messege',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Daily Transaction`
+  String get dailyTransaction {
+    return Intl.message(
+      'Daily Transaction',
+      name: 'dailyTransaction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Promo`
+  String get promo {
+    return Intl.message(
+      'Promo',
+      name: 'promo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send`
+  String get send {
+    return Intl.message(
+      'Send',
+      name: 'send',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Easy to use mobile pos`
+  String get easyToUseThePos {
+    return Intl.message(
+      'Easy to use mobile pos',
+      name: 'easyToUseThePos',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sales Pro app is free, easy to use. In fact, it's one of the best  POS systems around the world.`
+  String get easytheusedesciption {
+    return Intl.message(
+      'Sales Pro app is free, easy to use. In fact, it\'s one of the best  POS systems around the world.',
+      name: 'easytheusedesciption',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chose Your Features`
+  String get choseYourFeature {
+    return Intl.message(
+      'Chose Your Features',
+      name: 'choseYourFeature',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Features are the important part which makes Sales Pro different from traditional solutions.`
+  String get choseyourfeatureDesciption {
+    return Intl.message(
+      'Features are the important part which makes Sales Pro different from traditional solutions.',
+      name: 'choseyourfeatureDesciption',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All business solutions`
+  String get allBusinessSolutions {
+    return Intl.message(
+      'All business solutions',
+      name: 'allBusinessSolutions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sales Pro is a complete business solution with stock, account, sales, expense & loss/profit.`
+  String get allBusinessolutionDescrip {
+    return Intl.message(
+      'Sales Pro is a complete business solution with stock, account, sales, expense & loss/profit.',
+      name: 'allBusinessolutionDescrip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Skip`
+  String get skip {
+    return Intl.message(
+      'Skip',
+      name: 'skip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message(
+      'Next',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A new update available\nPlease update your app`
+  String get anewUpdateAvailable {
+    return Intl.message(
+      'A new update available\nPlease update your app',
+      name: 'anewUpdateAvailable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Skip the update`
+  String get skipTheUpdate {
+    return Intl.message(
+      'Skip the update',
+      name: 'skipTheUpdate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Remember me later`
+  String get rememberMeLater {
+    return Intl.message(
+      'Remember me later',
+      name: 'rememberMeLater',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Powered By Acnoo`
+  String get powerdedByAcnoo {
+    return Intl.message(
+      'Powered By Acnoo',
+      name: 'powerdedByAcnoo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Loss/Profit`
+  String get lossOrProfit {
+    return Intl.message(
+      'Loss/Profit',
+      name: 'lossOrProfit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Expense`
+  String get expense {
+    return Intl.message(
+      'Expense',
+      name: 'expense',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Parties`
+  String get parties {
+    return Intl.message(
+      'Parties',
+      name: 'parties',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Home`
+  String get home {
+    return Intl.message(
+      'Home',
+      name: 'home',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sales`
+  String get sales {
+    return Intl.message(
+      'Sales',
+      name: 'sales',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Setting`
+  String get setting {
+    return Intl.message(
+      'Setting',
+      name: 'setting',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Purchase Now`
+  String get purchaseNow {
+    return Intl.message(
+      'Purchase Now',
+      name: 'purchaseNow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment Methods`
+  String get paymentMethods {
+    return Intl.message(
+      'Payment Methods',
+      name: 'paymentMethods',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Save`

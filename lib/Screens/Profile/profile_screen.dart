@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/constant.dart';
-
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import '../../currency.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -22,7 +22,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       appBar: AppBar(
         iconTheme: const IconThemeData(color: Colors.black),
         title: Text(
-          'Contact Details',
+          lang.S.of(context).contactDetials,
           style: GoogleFonts.poppins(
             color: Colors.black,
           ),
@@ -66,7 +66,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               height: 10.0,
             ),
             Text(
-              'Clarence',
+              lang.S.of(context).clarence,
               style: GoogleFonts.poppins(
                 fontWeight: FontWeight.bold,
                 fontSize: 25.0,
@@ -83,14 +83,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
             const SizedBox(
               height: 10.0,
             ),
-            const Row(
+             Row(
               children: [
                 Expanded(
                   child: Padding(
-                    padding: EdgeInsets.all(10.0),
+                    padding: const EdgeInsets.all(10.0),
                     child: IconWithText(
-                      bgColor: Color(0xFFF1F7F7),
-                      title: 'Call',
+                      bgColor: const Color(0xFFF1F7F7),
+                      title: lang.S.of(context).call,
                       iconData: Icons.call_outlined,
                       iconColor: Colors.black,
                     ),
@@ -101,7 +101,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     padding: EdgeInsets.all(10.0),
                     child: IconWithText(
                       bgColor: kMainColor,
-                      title: 'Message',
+                      title: lang.S.of(context).messege,
                       iconData: Icons.message,
                       iconColor: Colors.white,
                     ),
@@ -129,7 +129,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Daily Transaction',
+                        lang.S.of(context).dailyTransaction,
                         style: GoogleFonts.poppins(
                           fontSize: 20.0,
                           color: Colors.black,
@@ -139,19 +139,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         height: 10.0,
                       ),
                       Transactions(
-                        title: 'Sales',
+                        title: lang.S.of(context).sales,
                         amount: '$currency 1509.09',
                         tranColor: Colors.black,
                         pressed: () {},
                       ),
                       Transactions(
-                        title: 'Due',
+                        title: lang.S.of(context).due,
                         amount: '$currency 509.09',
                         tranColor: kGreyTextColor,
                         pressed: null,
                       ),
                       Transactions(
-                        title: 'Promo',
+                        title: lang.S.of(context).promo,
                         amount: '$currency 109.09',
                         tranColor: kGreyTextColor,
                         pressed: null,
@@ -164,7 +164,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             const SizedBox(
               height: 20.0,
             ),
-            ButtonGlobalWithoutIcon(buttontext: 'Send', buttonDecoration: kButtonDecoration.copyWith(color: kMainColor), onPressed: null, buttonTextColor: Colors.white),
+            ButtonGlobalWithoutIcon(buttontext: lang.S.of(context).send, buttonDecoration: kButtonDecoration.copyWith(color: kMainColor), onPressed: null, buttonTextColor: Colors.white),
           ],
         ),
       ),

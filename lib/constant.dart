@@ -15,12 +15,9 @@ const kTitleColor = Color(0xFF000000);
 bool connected = false;
 bool isPrintEnable = false;
 List<String> paymentsTypeList = ['Cash', 'Card', 'Check', 'Mobile Pay', 'Due'];
-
 bool isExpiringInFiveDays = false;
 bool isExpiringInOneDays = false;
-
 const String appVersion = '5.0';
-
 String paypalClientId = '';
 String paypalClientSecret = '';
 const bool sandbox = true;

@@ -214,6 +214,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     // print('UserId: $constUserId');
     // print('UserId: ${FirebaseAuth.instance.currentUser!.uid}');
+    freeIcons=getFreeIcons(context: context);
     return SafeArea(
       child: Consumer(builder: (_, ref, __) {
         final userProfileDetails = ref.watch(profileDetailsProvider);
@@ -223,6 +224,7 @@ class _HomeScreenState extends State<HomeScreen> {
           resizeToAvoidBottomInset: true,
           body: SingleChildScrollView(
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
                   padding: const EdgeInsets.all(10.0),
@@ -606,11 +608,11 @@ class _HomeGridCardsState extends State<HomeGridCards> {
                         isSubUser
                             ? checkPermission(item: widget.gridItems.title)
                                 ? await subscriptionChecker(item: widget.gridItems.title)
-                                    ? Navigator.of(context).pushNamed('/${widget.gridItems.title}')
+                                    ? Navigator.of(context).pushNamed('/${widget.gridItems.route}')
                                     : EasyLoading.showError('Update your plan first,\nyour limit is over.')
                                 : EasyLoading.showError('Sorry, you have no permission to access this service')
                             : await subscriptionChecker(item: widget.gridItems.title)
-                                ? Navigator.of(context).pushNamed('/${widget.gridItems.title}')
+                                ? Navigator.of(context).pushNamed('/${widget.gridItems.route}')
                                 : EasyLoading.showError('Update your plan first,\nyour limit is over.');
                       },
                       child: Container(

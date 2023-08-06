@@ -305,7 +305,7 @@ class _EditCustomerState extends State<EditCustomer> {
                                                         color: kMainColor,
                                                       ),
                                                       Text(
-                                                        'Gallery',
+                                                        lang.S.of(context).gallery,
                                                         style: GoogleFonts.poppins(
                                                           fontSize: 20.0,
                                                           color: kMainColor,
@@ -337,7 +337,7 @@ class _EditCustomerState extends State<EditCustomer> {
                                                         color: kGreyTextColor,
                                                       ),
                                                       Text(
-                                                        'Camera',
+                                                        lang.S.of(context).camera,
                                                         style: GoogleFonts.poppins(
                                                           fontSize: 20.0,
                                                           color: kGreyTextColor,

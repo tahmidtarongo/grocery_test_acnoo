@@ -16,7 +16,6 @@ import 'package:mobile_pos/model/print_transaction_model.dart';
 import 'package:mobile_pos/model/product_model.dart';
 import 'package:mobile_pos/model/transition_model.dart';
 import 'package:nb_utils/nb_utils.dart';
-
 import '../../Provider/add_to_cart_purchase.dart';
 import '../../Provider/print_purchase_provider.dart';
 import '../../Provider/product_provider.dart';
