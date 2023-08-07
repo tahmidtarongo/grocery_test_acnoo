@@ -97,6 +97,7 @@ class _BrandsListState extends State<BrandsList> {
                   return ListView.builder(
                       shrinkWrap: true,
                       itemCount: data.length,
+                      physics: const NeverScrollableScrollPhysics(),
                       itemBuilder: (context, i) {
                         return data[i].brandName.contains(search)
                             ? Padding(
@@ -141,7 +142,7 @@ class _BrandsListState extends State<BrandsList> {
                                     Expanded(
                                       flex: 1,
                                       child: ButtonGlobalWithoutIcon(
-                                        buttontext: lang.S.of(context).select,
+                                        buttontext: 'Select',
                                         buttonDecoration: kButtonDecoration.copyWith(color: kDarkWhite),
                                         onPressed: () {
                                           Navigator.pop(context, data[i].brandName);

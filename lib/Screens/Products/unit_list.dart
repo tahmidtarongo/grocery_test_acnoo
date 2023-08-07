@@ -94,6 +94,7 @@ class _UnitListState extends State<UnitList> {
                 ),
                 unitData.when(data: (data) {
                   return ListView.builder(
+                    physics: const NeverScrollableScrollPhysics(),
                       shrinkWrap: true,
                       itemCount: data.length,
                       itemBuilder: (context, i) {
@@ -140,7 +141,7 @@ class _UnitListState extends State<UnitList> {
                                     Expanded(
                                       flex: 1,
                                       child: ButtonGlobalWithoutIcon(
-                                        buttontext: lang.S.of(context).select,
+                                        buttontext: 'Select',
                                         buttonDecoration: kButtonDecoration.copyWith(color: kDarkWhite),
                                         onPressed: () {
                                           Navigator.pop(context, data[i].unitName);
