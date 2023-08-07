@@ -49,6 +49,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addSale": MessageLookupByLibrary.simpleMessage("ກະລຸນາເພີ່ມການຂາຍ"),
         "addSales": MessageLookupByLibrary.simpleMessage("ເພີ່ມການຂາຍ"),
         "addUnit": MessageLookupByLibrary.simpleMessage("ເພີ່ມຫົວໜ່ວຍ"),
+        "addUserRole":
+            MessageLookupByLibrary.simpleMessage("ເພີ່ມບົດບາດຜູ້ໃຊ້"),
         "address": MessageLookupByLibrary.simpleMessage("ທີ່ຢູ່"),
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("ລົງທະບຽນທັງຫມົດ"),
@@ -59,6 +61,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "ມີການປັບປຸງໃຫມ່ຢູ່\nກະລຸນາປັບປຸງແອດອັນຂອງທ່ານ"),
         "apply": MessageLookupByLibrary.simpleMessage("ນຳໃຊ້"),
+        "backToHome": MessageLookupByLibrary.simpleMessage("ກັບໄປໜ້າຫຼັກ"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("ປະເທດລາວ"),
         "billTO": MessageLookupByLibrary.simpleMessage("ລາຍລະອຽດເອກະສານ"),
         "brandName": MessageLookupByLibrary.simpleMessage("ຊື່ຍີ່ຫໍ້"),
@@ -72,6 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("ຍົກເລີກ"),
         "capacity": MessageLookupByLibrary.simpleMessage("ຄວາມສູງ"),
         "cash": MessageLookupByLibrary.simpleMessage("ເງິນສົດ"),
+        "categories": MessageLookupByLibrary.simpleMessage("ໝວດໝູ່"),
         "categoryName": MessageLookupByLibrary.simpleMessage("ຊື່ປະເພດ"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("ປ່ຽນ​ລະ​ຫັດ​ຜ່ານ"),
@@ -99,6 +103,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ເຊື່ອມຕໍ່ເຄື່ອງພິມຂອງທ່ານ"),
         "contactDetials":
             MessageLookupByLibrary.simpleMessage("ລາຍລະອຽດຕິດຕໍ່"),
+        "contactUs": MessageLookupByLibrary.simpleMessage("ຕິດຕໍ່ພວກເຮົາ"),
         "continueButton": MessageLookupByLibrary.simpleMessage("ສືບຕໍ່"),
         "country": MessageLookupByLibrary.simpleMessage("ປະເທດ"),
         "createAcc": MessageLookupByLibrary.simpleMessage("ສ້າງບັນຊີຟຣີ"),
@@ -200,6 +205,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noData": MessageLookupByLibrary.simpleMessage("ບໍ່ມີຂໍ້ມູນ"),
         "noDataAvailabe":
             MessageLookupByLibrary.simpleMessage("ບໍ່ມີຂໍ້ມູນຂອງທ່ານດີ"),
+        "noRoleFound":
+            MessageLookupByLibrary.simpleMessage("ບໍ່ພົບບົດບາດຜູ້ໃຊ້"),
         "noSupplier": MessageLookupByLibrary.simpleMessage("ບໍ່ມີຜູ້ສະໜອງໃຫ້"),
         "note": MessageLookupByLibrary.simpleMessage("ຫມາຍ​ເຫດ​"),
         "notification": MessageLookupByLibrary.simpleMessage("ການແຈ້ງເຕືອນ"),
@@ -249,6 +256,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("ໂປຣໄຟລ໌"),
         "profit": MessageLookupByLibrary.simpleMessage("ກໍາໄລ"),
         "promo": MessageLookupByLibrary.simpleMessage("ຕົວເລືອກ"),
+        "promoCode": MessageLookupByLibrary.simpleMessage("ລະຫັດໂດຍພະນັກງານ"),
         "purchase": MessageLookupByLibrary.simpleMessage("ຊື້"),
         "purchaseAlarm":
             MessageLookupByLibrary.simpleMessage("ແຈ້ງເຕືອນການຊື້"),
@@ -286,6 +294,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("ບັນທຶກ ແລະເຜີຍແຜ່"),
         "search": MessageLookupByLibrary.simpleMessage("ຊອກຫາ"),
+        "seeAllPromoCode":
+            MessageLookupByLibrary.simpleMessage("ເບິ່ງລະຫັດໂດຍພະນັກງານທັງໝົດ"),
         "select": MessageLookupByLibrary.simpleMessage("ເລືອກ"),
         "selectCategory": MessageLookupByLibrary.simpleMessage("ເລືອກປະເພດ"),
         "selectLang": MessageLookupByLibrary.simpleMessage("ເລືອກພາສາຂອງທ່ານ"),
@@ -294,7 +304,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendEmail": MessageLookupByLibrary.simpleMessage(
             "ພວກ​ເຮົາ​ໄດ້​ສົ່ງ​ອີ​ເມວ​ທີ່​ມີ​ຄໍາ​ແນະ​ນໍາ​ກ່ຽວ​ກັບ​ວິ​ທີ​ການ​ປັບ​ລະ​ຫັດ​ຜ່ານ​ເປັນ​:"),
         "sendLink": MessageLookupByLibrary.simpleMessage("ສົ່ງລິ້ງຣີເຊັດ"),
+        "sendMessage": MessageLookupByLibrary.simpleMessage("ສົ່ງຂໍ້ຄວາມ"),
         "sendSms": MessageLookupByLibrary.simpleMessage("ສົ່ງຂໍ້ຄວາມ SMS"),
+        "sendYourEmail":
+            MessageLookupByLibrary.simpleMessage("ສົ່ງອີເມລຂອງທ່ານ"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "ອັບເດດໂປຣໄຟລ໌ຂອງທ່ານເພື່ອເຊື່ອມຕໍ່ທ່ານໝໍດ້ວຍຄວາມປະທັບໃຈທີ່ດີຂຶ້ນ"),
         "setUpProfile":
@@ -315,6 +328,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("ຫຸ້ນ"),
         "stockList": MessageLookupByLibrary.simpleMessage("ລາຍການຫຼັກຊັບ"),
         "subTotal": MessageLookupByLibrary.simpleMessage("ທັງໝົດຍ່ອຍ"),
+        "submit": MessageLookupByLibrary.simpleMessage("ສົ່ງຂໍ້ມູນ"),
         "subscription": MessageLookupByLibrary.simpleMessage("ການສະໝັກໃຊ້"),
         "supplier": MessageLookupByLibrary.simpleMessage("ຜູ້ສະຫນອງ"),
         "supplierName": MessageLookupByLibrary.simpleMessage("ຊື່​ຜູ້​ຜະ​ລິດ"),
@@ -357,9 +371,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "whatNew": MessageLookupByLibrary.simpleMessage("ມີ​ຫຍັງ​ໃຫມ່"),
         "wholeSalePrice": MessageLookupByLibrary.simpleMessage("ລາຄາຂາຍທັງໝົດ"),
         "wholesaler": MessageLookupByLibrary.simpleMessage("ຂາຍສົ່ງ"),
+        "writeYourMessageHere":
+            MessageLookupByLibrary.simpleMessage("ຂຽນຂໍ້ຄວາມຂອງທ່ານຢູ່ນີ້"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("ທ່ານກໍາລັງໃຊ້ "),
         "youWantTodeletetheProduct": MessageLookupByLibrary.simpleMessage(
             "ທ່ານຢືນຢັນການລຶບສິນຄ້ານີ້ບໍ່?"),
-        "yourPack": MessageLookupByLibrary.simpleMessage("ຊຸດຂອງທ່ານ")
+        "yourPack": MessageLookupByLibrary.simpleMessage("ຊຸດຂອງທ່ານ"),
+        "yourPackageExpiredInDays": MessageLookupByLibrary.simpleMessage(
+            "ຄັ້ງທີ່ເຖິງ, ບົດບາດຂອງທ່ານຈະອອກໄປມື້ນີ້ 5 ມື້"),
+        "yourPackageExpiredToday": MessageLookupByLibrary.simpleMessage(
+            "ບົດບາດຂອງທ່ານຈະອອກໄປມື້ນີ້\n\nກະລຸນາຊື້ອີກຄັ້ງ")
       };
 }

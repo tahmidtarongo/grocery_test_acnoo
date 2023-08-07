@@ -5,7 +5,7 @@ import 'package:mobile_pos/GlobalComponents/category_card.dart';
 import 'package:mobile_pos/Screens/Products/product_data.dart';
 import 'package:mobile_pos/Screens/Sales/sales_screen.dart';
 import 'package:nb_utils/nb_utils.dart';
-
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import '../../constant.dart';
 
 class SalesCategoryList extends StatefulWidget {
@@ -29,7 +29,7 @@ class _SalesCategoryListState extends State<SalesCategoryList> {
               image: AssetImage('images/x.png'),
             )),
         title: Text(
-          'Categories',
+          lang.S.of(context).categories,
           style: GoogleFonts.poppins(
             color: Colors.black,
             fontSize: 20.0,

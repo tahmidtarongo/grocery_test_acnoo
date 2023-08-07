@@ -1,5 +1,17 @@
 {
-
+  "addUserRole": "Ajouter un rôle d'utilisateur",
+  "noRoleFound": "Aucun rôle d'utilisateur trouvé",
+  "yourPackageExpiredInDays": "Votre forfait expirera dans 5 jours",
+  "yourPackageExpiredToday": "Votre forfait expirera aujourd'hui\n\nVeuillez effectuer un nouvel achat",
+  "contactUs": "Contactez-nous",
+  "writeYourMessageHere": "Écrivez votre message ici",
+  "sendMessage": "Envoyer le message",
+  "sendYourEmail": "Envoyez votre e-mail",
+  "backToHome": "Retour à la page d'accueil",
+  "promoCode": "Code promo",
+  "submit": "Soumettre",
+  "seeAllPromoCode": "Voir tous les codes promo",
+  "categories": "Catégories",
   "enterYourPhoneNumber": "Entrez votre numéro de téléphone",
   "enterFullAddress": "Entrez l'adresse complète",
   "enterYourEmailAddress": "Entrez votre adresse e-mail",

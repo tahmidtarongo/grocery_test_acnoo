@@ -117,7 +117,7 @@ class _ExpenseCategoryListState extends State<ExpenseCategoryList> {
                           Expanded(
                             flex: 1,
                             child: ButtonGlobalWithoutIcon(
-                              buttontext: lang.S.of(context).select,
+                              buttontext: 'Select',
                               buttonDecoration: kButtonDecoration.copyWith(color: kDarkWhite),
                               onPressed: () {
                                 // const AddExpense().launch(context);

@@ -50,12 +50,18 @@ class MessageLookup extends MessageLookupByLibrary {
             "দয়া করে একটি বিক্রয় যোগ করুন"),
         "addSales": MessageLookupByLibrary.simpleMessage("বিক্রয় যোগ করুন"),
         "addUnit": MessageLookupByLibrary.simpleMessage("ইউনিট যোগ করুন"),
+        "addUserRole":
+            MessageLookupByLibrary.simpleMessage("ব্যবহারকারী ভূমিকা যোগ করুন"),
         "address": MessageLookupByLibrary.simpleMessage("ঠিকানা"),
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("সমস্ত ব্যবসায়িক সমাধান"),
+        "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
+            "সেলস প্রো একটি সম্পূর্ণ ব্যবসার সমাধান যা মজুদ, হিসাব, বিক্রয়, ব্যয় এবং লক্ষ্য/লাভ অপরাধ শাখা সহিত।"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("ইতিমধ্যে যোগ"),
         "amount": MessageLookupByLibrary.simpleMessage("পরিমাণ"),
         "apply": MessageLookupByLibrary.simpleMessage("প্রয়োগ"),
+        "backToHome":
+            MessageLookupByLibrary.simpleMessage("মূলপাতায় ফিরে যান"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("বাংলাদেশ"),
         "billTO": MessageLookupByLibrary.simpleMessage("বিল প্রাপ্তকারী"),
         "brandName": MessageLookupByLibrary.simpleMessage("ব্র্যান্ড নাম"),
@@ -70,6 +76,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("বাতিল করুন"),
         "capacity": MessageLookupByLibrary.simpleMessage("ধারণক্ষমতা"),
         "cash": MessageLookupByLibrary.simpleMessage("নগদ"),
+        "categories": MessageLookupByLibrary.simpleMessage("বিভাগসমূহ"),
         "categoryName": MessageLookupByLibrary.simpleMessage("বিভাগ নাম"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("পাসওয়ার্ড পরিবর্তন করুন"),
@@ -78,6 +85,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("গ্রাহক চয়ন করুন"),
         "chooseSupplier":
             MessageLookupByLibrary.simpleMessage("একটি সরবরাহকারী চয়ন করুন"),
+        "choseYourFeature":
+            MessageLookupByLibrary.simpleMessage("আপনার বৈশিষ্ট্য চয়ন করুন"),
+        "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
+            "বৈশিষ্ট্যগুলি মৌলিকভাবে গুরুত্বপূর্ণ, এটি সেলস প্রোকে পারম্পরিক সমাধানগুলি থেকে আলাদা করে।"),
         "clarence": MessageLookupByLibrary.simpleMessage("ক্ল্যারেন্স"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("সংযোগ করতে ক্লিক করুন"),
@@ -96,6 +107,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("সংযোগ করতে ক্লিক করুন"),
         "connectPrinter": MessageLookupByLibrary.simpleMessage(
             "আপনার প্রিন্টার সংযুক্ত করুন"),
+        "contactUs": MessageLookupByLibrary.simpleMessage("যোগাযোগ করুন"),
         "continueButton": MessageLookupByLibrary.simpleMessage("চালিয়ে যান"),
         "country": MessageLookupByLibrary.simpleMessage("দেশ"),
         "createAcc": MessageLookupByLibrary.simpleMessage(
@@ -121,6 +133,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "dueReport": MessageLookupByLibrary.simpleMessage("বাকি বিবরণী"),
         "easyToUseThePos":
             MessageLookupByLibrary.simpleMessage("সহজে ব্যবহার করুন মোবাইল পস"),
+        "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
+            "সেলস প্রো অ্যাপ বিনামূল্যে এবং সহজে ব্যবহার করা যায়। সত্যিই, এটি বিশ্বব্যাপী শ্রেষ্ঠ POS সিস্টেমগুলির মধ্যে একটি।"),
         "edit": MessageLookupByLibrary.simpleMessage("সম্পাদনা করুন"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("ফোন নম্বর সম্পাদনা করুন?"),
@@ -165,6 +179,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("আপনি একটি ইমেল পেয়েছেন"),
         "haveAcc": MessageLookupByLibrary.simpleMessage(
             "ইতিমধ্যে একটি অ্যাকাউন্ট আছে?"),
+        "home": MessageLookupByLibrary.simpleMessage("হোম"),
         "image": MessageLookupByLibrary.simpleMessage("ছবি"),
         "inv": MessageLookupByLibrary.simpleMessage("চালান নং"),
         "invoice": MessageLookupByLibrary.simpleMessage("চালান"),
@@ -194,6 +209,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noData": MessageLookupByLibrary.simpleMessage("কোন তথ্য নেই"),
         "noDataAvailabe":
             MessageLookupByLibrary.simpleMessage("কোনও ডেটা পাওয়া যায়নি"),
+        "noRoleFound": MessageLookupByLibrary.simpleMessage(
+            "কোন ব্যবহারকারী ভূমিকা পাওয়া যায়নি"),
         "noSupplier":
             MessageLookupByLibrary.simpleMessage("কোনও সরবরাহকারী উপলব্ধ নেই"),
         "note": MessageLookupByLibrary.simpleMessage("বিঃদ্রঃ"),
@@ -201,7 +218,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "openingBalance":
             MessageLookupByLibrary.simpleMessage("উদ্ঘাটন ব্যালেন্স"),
         "packFeatures": MessageLookupByLibrary.simpleMessage("প্যাকেজ সুবিধা"),
-        "paid": MessageLookupByLibrary.simpleMessage("পেড"),
+        "paid": MessageLookupByLibrary.simpleMessage("পরিশোধ করা"),
         "paidAmount": MessageLookupByLibrary.simpleMessage("দেওয়া পরিমাণ"),
         "parties": MessageLookupByLibrary.simpleMessage("পার্টি লিস্ট"),
         "partyList": MessageLookupByLibrary.simpleMessage("দলগুলোর তালিকা"),
@@ -238,6 +255,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("প্রোফাইল"),
         "profit": MessageLookupByLibrary.simpleMessage("লাভ"),
         "promo": MessageLookupByLibrary.simpleMessage("প্রোমো"),
+        "promoCode": MessageLookupByLibrary.simpleMessage("প্রোমো কোড"),
         "purchase": MessageLookupByLibrary.simpleMessage("ক্রয়"),
         "purchaseAlarm": MessageLookupByLibrary.simpleMessage("ক্রয় সতর্কতা"),
         "purchaseConfirmed":
@@ -264,12 +282,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "sale": MessageLookupByLibrary.simpleMessage("বিক্রয়"),
         "saleList": MessageLookupByLibrary.simpleMessage("বিক্রয় তালিকা"),
         "salePrice": MessageLookupByLibrary.simpleMessage("বিক্রয় মূল্য"),
+        "sales": MessageLookupByLibrary.simpleMessage("বিক্রয়"),
         "salesDetails": MessageLookupByLibrary.simpleMessage("বিক্রয় বিবরণী"),
         "salesReport": MessageLookupByLibrary.simpleMessage("বিক্রয় রিপোর্ট"),
         "save": MessageLookupByLibrary.simpleMessage("সংরক্ষণ"),
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("সংরক্ষণ এবং প্রকাশ করুন"),
         "search": MessageLookupByLibrary.simpleMessage("অনুসন্ধান করুন"),
+        "seeAllPromoCode":
+            MessageLookupByLibrary.simpleMessage("সমস্ত প্রোমো কোড দেখুন"),
         "select": MessageLookupByLibrary.simpleMessage("নির্বাচন করুন"),
         "selectCategory":
             MessageLookupByLibrary.simpleMessage("বিভাগ নির্বাচন করুন"),
@@ -281,11 +302,16 @@ class MessageLookup extends MessageLookupByLibrary {
             "আমরা একটি ইমেল প্রেরণ করেছি যেটি পাসওয়ার্ড রিসেট করার নির্দেশাবলী সহ আছে:"),
         "sendLink":
             MessageLookupByLibrary.simpleMessage("রিসেট লিঙ্ক প্রেরণ করুন"),
+        "sendMessage":
+            MessageLookupByLibrary.simpleMessage("বার্তা প্রেরণ করুন"),
         "sendSms": MessageLookupByLibrary.simpleMessage("এসএমএস পাঠান"),
+        "sendYourEmail":
+            MessageLookupByLibrary.simpleMessage("আপনার ইমেল প্রেরণ করুন"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "আপনার প্রোফাইল আপডেট করে আপনার ডাক্তারকে ভাল প্রভাব দিতে সাহায্য করুন"),
         "setUpProfile":
             MessageLookupByLibrary.simpleMessage("আপনার প্রোফাইল সেটআপ করুন"),
+        "setting": MessageLookupByLibrary.simpleMessage("সেটিং"),
         "share": MessageLookupByLibrary.simpleMessage("শেয়ার"),
         "size": MessageLookupByLibrary.simpleMessage("আকার"),
         "skip": MessageLookupByLibrary.simpleMessage("এড়িয়ে যান"),
@@ -300,10 +326,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("এখনো পরিশোধ করা হয়নি"),
         "stock": MessageLookupByLibrary.simpleMessage("স্টক"),
         "stockList": MessageLookupByLibrary.simpleMessage("মজুদ তালিকা"),
-        "subTotal": MessageLookupByLibrary.simpleMessage("উপমোট"),
+        "subTotal": MessageLookupByLibrary.simpleMessage("সাবটোটাল"),
+        "submit": MessageLookupByLibrary.simpleMessage("জমা দিন"),
         "subscription": MessageLookupByLibrary.simpleMessage("সাবস্ক্রিপশন"),
         "supplier": MessageLookupByLibrary.simpleMessage("সরবরাহকারী"),
         "supplierName": MessageLookupByLibrary.simpleMessage("সরবরাহকারীর নাম"),
+        "thakYouForYourPurchase": MessageLookupByLibrary.simpleMessage(
+            "আপনার ক্রয় করার জন্য আপনাকে ধন্যবাদ"),
         "thankYouForYourDuePayment": MessageLookupByLibrary.simpleMessage(
             "আপনার বাকি পরিশোধের জন্য ধন্যবাদ"),
         "toDate": MessageLookupByLibrary.simpleMessage("এখন পর্যন্ত"),
@@ -337,8 +366,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "whatNew": MessageLookupByLibrary.simpleMessage("নতুন কি"),
         "wholeSalePrice": MessageLookupByLibrary.simpleMessage("হোলসেল মূল্য"),
         "wholesaler": MessageLookupByLibrary.simpleMessage("পাইকারী বিক্রেতা"),
+        "writeYourMessageHere":
+            MessageLookupByLibrary.simpleMessage("আপনার বার্তা এখানে লিখুন"),
         "youRUsing":
             MessageLookupByLibrary.simpleMessage("আপনি ব্যবহার করছেন "),
-        "yourPack": MessageLookupByLibrary.simpleMessage("আপনার প্যাকেজ")
+        "yourPack": MessageLookupByLibrary.simpleMessage("আপনার প্যাকেজ"),
+        "yourPackageExpiredInDays": MessageLookupByLibrary.simpleMessage(
+            "আপনার প্যাকেজ 5 দিনে মেয়াদ শেষ হবে"),
+        "yourPackageExpiredToday": MessageLookupByLibrary.simpleMessage(
+            "আপনার প্যাকেজ আজ মেয়াদ শেষ হবে\n\nঅনুগ্রহ করে আবার ক্রয় করুন")
       };
 }

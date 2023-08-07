@@ -51,6 +51,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Si prega di aggiungere una vendita"),
         "addSales": MessageLookupByLibrary.simpleMessage("Aggiungi vendite"),
         "addUnit": MessageLookupByLibrary.simpleMessage("Aggiungi unità"),
+        "addUserRole":
+            MessageLookupByLibrary.simpleMessage("Tambahkan Peran Pengguna"),
         "address": MessageLookupByLibrary.simpleMessage("Indirizzo"),
         "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
             "Tutte le soluzioni aziendali"),
@@ -61,6 +63,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "È disponibile un nuovo aggiornamento\nAggiorna l\'applicazione"),
         "apply": MessageLookupByLibrary.simpleMessage("Applica"),
+        "backToHome":
+            MessageLookupByLibrary.simpleMessage("Kembali ke Beranda"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("Bangladesh"),
         "billTO": MessageLookupByLibrary.simpleMessage("Fattura a"),
         "brandName": MessageLookupByLibrary.simpleMessage("Marchio"),
@@ -76,6 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Annulla"),
         "capacity": MessageLookupByLibrary.simpleMessage("Capacità"),
         "cash": MessageLookupByLibrary.simpleMessage("Contanti"),
+        "categories": MessageLookupByLibrary.simpleMessage("Kategori"),
         "categoryName":
             MessageLookupByLibrary.simpleMessage("Nome della categoria"),
         "changePassword":
@@ -108,6 +113,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Clicca per connetterti"),
         "connectPrinter":
             MessageLookupByLibrary.simpleMessage("Collega la tua stampante"),
+        "contactUs": MessageLookupByLibrary.simpleMessage("Hubungi Kami"),
         "continueButton": MessageLookupByLibrary.simpleMessage("Continua"),
         "country": MessageLookupByLibrary.simpleMessage("Paese"),
         "createAcc":
@@ -214,6 +220,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Nessun dato disponibile"),
         "noDataAvailabe":
             MessageLookupByLibrary.simpleMessage("Nessun dato disponibile"),
+        "noRoleFound": MessageLookupByLibrary.simpleMessage(
+            "Tidak Ada Peran Pengguna Ditemukan"),
         "noSupplier": MessageLookupByLibrary.simpleMessage(
             "Nessun fornitore disponibile"),
         "note": MessageLookupByLibrary.simpleMessage("Nota"),
@@ -263,6 +271,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("Profilo"),
         "profit": MessageLookupByLibrary.simpleMessage("Profitto"),
         "promo": MessageLookupByLibrary.simpleMessage("Promozione"),
+        "promoCode": MessageLookupByLibrary.simpleMessage("Kode Promo"),
         "purchase": MessageLookupByLibrary.simpleMessage("Acquistare"),
         "purchaseAlarm":
             MessageLookupByLibrary.simpleMessage("Allarme acquisto"),
@@ -302,6 +311,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("Salva e pubblica"),
         "search": MessageLookupByLibrary.simpleMessage("Ricerca"),
+        "seeAllPromoCode":
+            MessageLookupByLibrary.simpleMessage("Lihat semua kode promo"),
         "select": MessageLookupByLibrary.simpleMessage("Selezionare"),
         "selectCategory":
             MessageLookupByLibrary.simpleMessage("Seleziona categoria"),
@@ -313,7 +324,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Abbiamo inviato un\'e-mail con le istruzioni su come reimpostare la password a:"),
         "sendLink": MessageLookupByLibrary.simpleMessage(
             "Invia collegamento di ripristino"),
+        "sendMessage": MessageLookupByLibrary.simpleMessage("Kirim Pesan"),
         "sendSms": MessageLookupByLibrary.simpleMessage("Invia SMS"),
+        "sendYourEmail":
+            MessageLookupByLibrary.simpleMessage("Kirim Email Anda"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "Aggiorna il tuo profilo per connettere il tuo medico con una migliore impressione"),
         "setUpProfile":
@@ -334,6 +348,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("Azione"),
         "stockList": MessageLookupByLibrary.simpleMessage("Elenco scorte"),
         "subTotal": MessageLookupByLibrary.simpleMessage("Totale parziale"),
+        "submit": MessageLookupByLibrary.simpleMessage("Kirim"),
         "subscription": MessageLookupByLibrary.simpleMessage("Sottoscrizione"),
         "supplier": MessageLookupByLibrary.simpleMessage("Fornitore"),
         "supplierName":
@@ -373,7 +388,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "wholeSalePrice":
             MessageLookupByLibrary.simpleMessage("Prezzo all\'ingrosso"),
         "wholesaler": MessageLookupByLibrary.simpleMessage("Grossista"),
+        "writeYourMessageHere":
+            MessageLookupByLibrary.simpleMessage("Tulis pesan Anda di sini"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("Tu stai usando "),
-        "yourPack": MessageLookupByLibrary.simpleMessage("Il tuo pacchetto")
+        "yourPack": MessageLookupByLibrary.simpleMessage("Il tuo pacchetto"),
+        "yourPackageExpiredInDays": MessageLookupByLibrary.simpleMessage(
+            "Paket Anda Akan Kedaluwarsa dalam 5 Hari"),
+        "yourPackageExpiredToday": MessageLookupByLibrary.simpleMessage(
+            "Paket Anda Akan Kedaluwarsa Hari Ini\n\nSilakan Beli Lagi")
       };
 }

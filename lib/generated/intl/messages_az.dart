@@ -50,13 +50,18 @@ class MessageLookup extends MessageLookupByLibrary {
             "Zəhmət olmasa bir satış əlavə edin"),
         "addSales": MessageLookupByLibrary.simpleMessage("Satış əlavə edin"),
         "addUnit": MessageLookupByLibrary.simpleMessage("Vahid Əlavə Et"),
+        "addUserRole":
+            MessageLookupByLibrary.simpleMessage("İstifadəçi Rolu Əlavə Et"),
         "address": MessageLookupByLibrary.simpleMessage("Ünvan"),
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Bütün Biznes Həlləri"),
+        "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
+            "Satış Proqramı, stok, hesab, satış, xərclər və zərər/qazanc ilə tam bir iş həllidir."),
         "alreadyAdded":
             MessageLookupByLibrary.simpleMessage("Artıq əlavə edilib"),
         "amount": MessageLookupByLibrary.simpleMessage("Məbləğ"),
         "apply": MessageLookupByLibrary.simpleMessage("Tətbiq et"),
+        "backToHome": MessageLookupByLibrary.simpleMessage("Evə qayıt"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("Banqladeş"),
         "billTO": MessageLookupByLibrary.simpleMessage("Faturalama ünvanı"),
         "brandName": MessageLookupByLibrary.simpleMessage("Marka adı"),
@@ -72,6 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Ləğv et"),
         "capacity": MessageLookupByLibrary.simpleMessage("Tutum"),
         "cash": MessageLookupByLibrary.simpleMessage("Nəğd"),
+        "categories": MessageLookupByLibrary.simpleMessage("Kateqoriyalar"),
         "categoryName": MessageLookupByLibrary.simpleMessage("Kateqoriya adı"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("Şifrəni dəyişdir"),
@@ -79,6 +85,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "chooseCustomer": MessageLookupByLibrary.simpleMessage("Müştəri seçin"),
         "chooseSupplier":
             MessageLookupByLibrary.simpleMessage("Təchizatçı seçin"),
+        "choseYourFeature":
+            MessageLookupByLibrary.simpleMessage("Xüsusiyyətlərinizi Seçin"),
+        "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
+            "Xüsusiyyətlər əsas hissəsidir və Sales Pro-u ənənəvi həllərdən fərqləndirir."),
         "clarence": MessageLookupByLibrary.simpleMessage("Klarens"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Qoşulmaq üçün klikləyin"),
@@ -95,6 +105,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Əlaqə yaratmaq üçün klikləyin"),
         "connectPrinter":
             MessageLookupByLibrary.simpleMessage("Printerə qoşul"),
+        "contactUs": MessageLookupByLibrary.simpleMessage("Bizimlə Əlaqə"),
         "continueButton": MessageLookupByLibrary.simpleMessage("Davam et"),
         "country": MessageLookupByLibrary.simpleMessage("Ölkə"),
         "createAcc":
@@ -120,6 +131,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "dueReport": MessageLookupByLibrary.simpleMessage("Borc Hesabatı"),
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Asan istifadə edilən mobil POS"),
+        "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
+            "Satış Proqramı pulsuzdur, asan istifadə olunur. Həqiqətən də, bu dünyanın ən yaxşı POS sistemlərindən biridir."),
         "edit": MessageLookupByLibrary.simpleMessage("Düzəlt"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Telefon nömrəsini düzəlt?"),
@@ -194,6 +207,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noData": MessageLookupByLibrary.simpleMessage("Məlumat yoxdur"),
         "noDataAvailabe":
             MessageLookupByLibrary.simpleMessage("Məlumat yoxdur"),
+        "noRoleFound":
+            MessageLookupByLibrary.simpleMessage("İstifadəçi Rolu Tapılmadı"),
         "noSupplier":
             MessageLookupByLibrary.simpleMessage("Təchizatçı mövcud deyil"),
         "note": MessageLookupByLibrary.simpleMessage("Qeyd"),
@@ -238,6 +253,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("Profil"),
         "profit": MessageLookupByLibrary.simpleMessage("Qazanc"),
         "promo": MessageLookupByLibrary.simpleMessage("Promosiyalar"),
+        "promoCode": MessageLookupByLibrary.simpleMessage("Promo Kod"),
         "purchase": MessageLookupByLibrary.simpleMessage("Alış"),
         "purchaseAlarm":
             MessageLookupByLibrary.simpleMessage("Alışveriş Xəbərdarlığı"),
@@ -273,6 +289,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("Yadda Saxla və Yayımla"),
         "search": MessageLookupByLibrary.simpleMessage("Axtar"),
+        "seeAllPromoCode":
+            MessageLookupByLibrary.simpleMessage("Bütün promo kodları görmək"),
         "select": MessageLookupByLibrary.simpleMessage("Seçin"),
         "selectCategory":
             MessageLookupByLibrary.simpleMessage("Kateqoriyanı seçin"),
@@ -283,11 +301,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "Şifrəni yeniləmək üçün təlimatları olan bir e-poçt göndərdik:"),
         "sendLink":
             MessageLookupByLibrary.simpleMessage("Yeniləmə keçidi göndər"),
+        "sendMessage": MessageLookupByLibrary.simpleMessage("Mesaj Göndər"),
         "sendSms": MessageLookupByLibrary.simpleMessage("SMS Göndər"),
+        "sendYourEmail":
+            MessageLookupByLibrary.simpleMessage("Emailinizi göndərin"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "Həkiminizlə daha yaxşı əlaqə qurmaq üçün profilinizi yeniləyin"),
         "setUpProfile":
             MessageLookupByLibrary.simpleMessage("Profilinizi təyin edin"),
+        "setting": MessageLookupByLibrary.simpleMessage("qəbulu"),
         "share": MessageLookupByLibrary.simpleMessage("Paylaş"),
         "size": MessageLookupByLibrary.simpleMessage("Ölçü"),
         "skip": MessageLookupByLibrary.simpleMessage("Keç"),
@@ -302,6 +324,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("Stok"),
         "stockList": MessageLookupByLibrary.simpleMessage("Stok siyahısı"),
         "subTotal": MessageLookupByLibrary.simpleMessage("Cəmi"),
+        "submit": MessageLookupByLibrary.simpleMessage("Təqdim etmək"),
         "subscription": MessageLookupByLibrary.simpleMessage("Abunəlik"),
         "supplier": MessageLookupByLibrary.simpleMessage("Təchizatçı"),
         "supplierName": MessageLookupByLibrary.simpleMessage("Təchizatçı Adı"),
@@ -340,8 +363,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "wholeSalePrice":
             MessageLookupByLibrary.simpleMessage("Toptan Satış Qiyməti"),
         "wholesaler": MessageLookupByLibrary.simpleMessage("Toptancı"),
+        "writeYourMessageHere":
+            MessageLookupByLibrary.simpleMessage("Mesajınızı buraya yazın"),
         "youRUsing":
             MessageLookupByLibrary.simpleMessage("Siz istifadə edirsiniz "),
-        "yourPack": MessageLookupByLibrary.simpleMessage("Sizin paketiniz")
+        "yourPack": MessageLookupByLibrary.simpleMessage("Sizin paketiniz"),
+        "yourPackageExpiredInDays": MessageLookupByLibrary.simpleMessage(
+            "Paketiniz 5 gün içində sona çatacaq"),
+        "yourPackageExpiredToday": MessageLookupByLibrary.simpleMessage(
+            "Paketiniz bu gün sona çatır\n\nXahiş edirik yenidən satın alın")
       };
 }

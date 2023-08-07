@@ -45,12 +45,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "addSale": MessageLookupByLibrary.simpleMessage("Dodajte prodaju"),
         "addSales": MessageLookupByLibrary.simpleMessage("Dodaj prodaju"),
         "addUnit": MessageLookupByLibrary.simpleMessage("Dodaj jedinicu"),
+        "addUserRole":
+            MessageLookupByLibrary.simpleMessage("Dodaj ulogu korisnika"),
         "address": MessageLookupByLibrary.simpleMessage("Adresa"),
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Sva poslovna rješenja"),
+        "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
+            "Sales Pro je potpuno poslovno rješenje s inventarom, računima, prodajom, troškovima i dobitkom/gubitkom."),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Već dodano"),
         "amount": MessageLookupByLibrary.simpleMessage("Iznos"),
         "apply": MessageLookupByLibrary.simpleMessage("Primijeni"),
+        "backToHome": MessageLookupByLibrary.simpleMessage("Natrag na početnu"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("Bangladeš"),
         "billTO": MessageLookupByLibrary.simpleMessage("Račun na ime"),
         "brandName": MessageLookupByLibrary.simpleMessage("Naziv brenda"),
@@ -65,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Odustani"),
         "capacity": MessageLookupByLibrary.simpleMessage("Kapacitet"),
         "cash": MessageLookupByLibrary.simpleMessage("Gotovina"),
+        "categories": MessageLookupByLibrary.simpleMessage("Kategorije"),
         "categoryName":
             MessageLookupByLibrary.simpleMessage("Naziv kategorije"),
         "changePassword":
@@ -75,6 +81,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Odaberite kupca"),
         "chooseSupplier":
             MessageLookupByLibrary.simpleMessage("Odaberite dobavljača"),
+        "choseYourFeature":
+            MessageLookupByLibrary.simpleMessage("Izaberite svoje značajke"),
+        "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
+            "Značajke su važan dio koji čini Sales Pro drugačijim od tradicionalnih rješenja."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Kliknite za povezivanje"),
@@ -90,6 +100,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Klikni za povezivanje"),
         "connectPrinter":
             MessageLookupByLibrary.simpleMessage("Povežite pisač"),
+        "contactUs": MessageLookupByLibrary.simpleMessage("Kontaktirajte nas"),
         "continueButton": MessageLookupByLibrary.simpleMessage("Nastavi"),
         "country": MessageLookupByLibrary.simpleMessage("Zemlja"),
         "createAcc":
@@ -116,6 +127,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Izvješće o dugovanjima"),
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Lako korištenje mobilne POS blagajne"),
+        "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
+            "Sales Pro aplikacija je besplatna i jednostavna za korištenje. Zapravo, jedan je od najboljih POS sustava diljem svijeta."),
         "edit": MessageLookupByLibrary.simpleMessage("Uredi"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Uredi broj telefona?"),
@@ -190,6 +203,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Nema dostupnih podataka"),
         "noDataAvailabe":
             MessageLookupByLibrary.simpleMessage("Nema dostupnih podataka"),
+        "noRoleFound": MessageLookupByLibrary.simpleMessage(
+            "Nema pronađene uloge korisnika"),
         "noSupplier":
             MessageLookupByLibrary.simpleMessage("Nema dostupnih dobavljača"),
         "note": MessageLookupByLibrary.simpleMessage("Bilješka"),
@@ -235,6 +250,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("Profil"),
         "profit": MessageLookupByLibrary.simpleMessage("Profit"),
         "promo": MessageLookupByLibrary.simpleMessage("Promocija"),
+        "promoCode": MessageLookupByLibrary.simpleMessage("Promotivni kod"),
         "purchase": MessageLookupByLibrary.simpleMessage("Kupnja"),
         "purchaseAlarm":
             MessageLookupByLibrary.simpleMessage("Alarm za kupovinu"),
@@ -271,6 +287,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "save": MessageLookupByLibrary.simpleMessage("Spremi"),
         "saveNPublish": MessageLookupByLibrary.simpleMessage("Spremi i objavi"),
         "search": MessageLookupByLibrary.simpleMessage("Pretraži"),
+        "seeAllPromoCode": MessageLookupByLibrary.simpleMessage(
+            "Pogledaj sve promotivne kodove"),
         "select": MessageLookupByLibrary.simpleMessage("Odaberi"),
         "selectCategory":
             MessageLookupByLibrary.simpleMessage("Odaberite kategoriju"),
@@ -281,11 +299,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "Poslali smo vam e-poštu s uputama za resetiranje lozinke na:"),
         "sendLink": MessageLookupByLibrary.simpleMessage(
             "Pošalji poveznicu za resetiranje"),
+        "sendMessage": MessageLookupByLibrary.simpleMessage("Pošalji poruku"),
         "sendSms": MessageLookupByLibrary.simpleMessage("Pošalji SMS"),
+        "sendYourEmail":
+            MessageLookupByLibrary.simpleMessage("Pošaljite svoj e-mail"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "Ažurirajte svoj profil kako biste ostavili bolji dojam na svojeg doktora"),
         "setUpProfile":
             MessageLookupByLibrary.simpleMessage("Postavite svoj profil"),
+        "setting": MessageLookupByLibrary.simpleMessage("postavljanje"),
         "share": MessageLookupByLibrary.simpleMessage("Podijeli"),
         "size": MessageLookupByLibrary.simpleMessage("Veličina"),
         "skip": MessageLookupByLibrary.simpleMessage("Preskoči"),
@@ -300,6 +322,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("Zaliha"),
         "stockList": MessageLookupByLibrary.simpleMessage("Popis zaliha"),
         "subTotal": MessageLookupByLibrary.simpleMessage("Međuzbroj"),
+        "submit": MessageLookupByLibrary.simpleMessage("Pošalji"),
         "subscription": MessageLookupByLibrary.simpleMessage("Pretplata"),
         "supplier": MessageLookupByLibrary.simpleMessage("Dobavljač"),
         "supplierName":
@@ -340,7 +363,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "wholeSalePrice":
             MessageLookupByLibrary.simpleMessage("Cijena veleprodaje"),
         "wholesaler": MessageLookupByLibrary.simpleMessage("Trgovac na veliko"),
+        "writeYourMessageHere":
+            MessageLookupByLibrary.simpleMessage("Napišite svoju poruku ovdje"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("Koristite "),
-        "yourPack": MessageLookupByLibrary.simpleMessage("Vaš paket")
+        "yourPack": MessageLookupByLibrary.simpleMessage("Vaš paket"),
+        "yourPackageExpiredInDays": MessageLookupByLibrary.simpleMessage(
+            "Vaš paket će isteći za 5 dana"),
+        "yourPackageExpiredToday": MessageLookupByLibrary.simpleMessage(
+            "Vaš paket ističe danas\n\nMolimo vas da ponovno kupite")
       };
 }

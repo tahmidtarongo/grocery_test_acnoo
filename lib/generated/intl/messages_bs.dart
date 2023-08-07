@@ -49,6 +49,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Molimo dodajte rasprodaju"),
         "addSales": MessageLookupByLibrary.simpleMessage("Dodaj prodaju"),
         "addUnit": MessageLookupByLibrary.simpleMessage("Dodaj jedinicu"),
+        "addUserRole":
+            MessageLookupByLibrary.simpleMessage("Dodaj ulogu korisnika"),
         "address": MessageLookupByLibrary.simpleMessage("Adresa"),
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Sva poslovna rešenja"),
@@ -59,6 +61,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "Dostupno je novo ažuriranje\nMolimo vas da ažurirate aplikaciju"),
         "apply": MessageLookupByLibrary.simpleMessage("Primeni"),
+        "backToHome":
+            MessageLookupByLibrary.simpleMessage("Nazad na početnu stranicu"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("Bangladeš"),
         "billTO": MessageLookupByLibrary.simpleMessage("Račun za"),
         "brandName": MessageLookupByLibrary.simpleMessage("Brand name"),
@@ -74,6 +78,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Otkaži"),
         "capacity": MessageLookupByLibrary.simpleMessage("Kapacitet"),
         "cash": MessageLookupByLibrary.simpleMessage("Gotovina"),
+        "categories": MessageLookupByLibrary.simpleMessage("Kategorije"),
         "categoryName":
             MessageLookupByLibrary.simpleMessage("Naziv kategorije"),
         "changePassword":
@@ -105,6 +110,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Povežite svoj štampač"),
         "contactDetials":
             MessageLookupByLibrary.simpleMessage("Kontakt Detalji"),
+        "contactUs": MessageLookupByLibrary.simpleMessage("Kontaktirajte nas"),
         "continueButton": MessageLookupByLibrary.simpleMessage("Nastavi"),
         "country": MessageLookupByLibrary.simpleMessage("Država"),
         "createAcc":
@@ -211,6 +217,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Nema dostupnih podataka"),
         "noDataAvailabe":
             MessageLookupByLibrary.simpleMessage("Nema dostupnih podataka"),
+        "noRoleFound": MessageLookupByLibrary.simpleMessage(
+            "Nema pronađene uloge korisnika"),
         "noSupplier":
             MessageLookupByLibrary.simpleMessage("Dobavljač nije dostupan"),
         "note": MessageLookupByLibrary.simpleMessage("Bilješka"),
@@ -257,6 +265,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("Profil"),
         "profit": MessageLookupByLibrary.simpleMessage("Profit"),
         "promo": MessageLookupByLibrary.simpleMessage("Promocija"),
+        "promoCode": MessageLookupByLibrary.simpleMessage("Promotivni kod"),
         "purchase": MessageLookupByLibrary.simpleMessage("Kupovina"),
         "purchaseAlarm":
             MessageLookupByLibrary.simpleMessage("Alarm o kupovini"),
@@ -296,6 +305,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("Sačuvaj i objavi"),
         "search": MessageLookupByLibrary.simpleMessage("Traži"),
+        "seeAllPromoCode": MessageLookupByLibrary.simpleMessage(
+            "Pogledaj sve promotivne kodove"),
         "select": MessageLookupByLibrary.simpleMessage("Odaberite"),
         "selectCategory":
             MessageLookupByLibrary.simpleMessage("Izaberite Kategoriju"),
@@ -307,7 +318,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Poslali smo e-mail sa uputstvima kako da poništim lozinku na:"),
         "sendLink":
             MessageLookupByLibrary.simpleMessage("Pošalji vezu za resetovanje"),
+        "sendMessage": MessageLookupByLibrary.simpleMessage("Pošalji poruku"),
         "sendSms": MessageLookupByLibrary.simpleMessage("Pošalji SMS"),
+        "sendYourEmail":
+            MessageLookupByLibrary.simpleMessage("Pošaljite vašu email adresu"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "Ažurirajte svoj profil da povežete svog doktora sa boljim utiskom"),
         "setUpProfile":
@@ -327,6 +341,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("Stock"),
         "stockList": MessageLookupByLibrary.simpleMessage("Lista dionica"),
         "subTotal": MessageLookupByLibrary.simpleMessage("Sub Total"),
+        "submit": MessageLookupByLibrary.simpleMessage("Pošalji"),
         "subscription": MessageLookupByLibrary.simpleMessage("Pretplata"),
         "supplier": MessageLookupByLibrary.simpleMessage("Dobavljač"),
         "supplierName": MessageLookupByLibrary.simpleMessage("Dobavljač Ime"),
@@ -369,9 +384,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "wholeSalePrice":
             MessageLookupByLibrary.simpleMessage("Veleprodajna cijena"),
         "wholesaler": MessageLookupByLibrary.simpleMessage("Veletrgovac"),
+        "writeYourMessageHere":
+            MessageLookupByLibrary.simpleMessage("Napišite vašu poruku ovdje"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("Vi koristite "),
         "youWantTodeletetheProduct": MessageLookupByLibrary.simpleMessage(
             "Da li želite izbrisati ovaj proizvod?"),
-        "yourPack": MessageLookupByLibrary.simpleMessage("Vaš paket")
+        "yourPack": MessageLookupByLibrary.simpleMessage("Vaš paket"),
+        "yourPackageExpiredInDays": MessageLookupByLibrary.simpleMessage(
+            "Vaš paket će isteći za 5 dana"),
+        "yourPackageExpiredToday": MessageLookupByLibrary.simpleMessage(
+            "Vaš paket ističe danas\n\nMolimo kupite ponovo")
       };
 }

@@ -49,12 +49,18 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Por favor agregue una venta"),
         "addSales": MessageLookupByLibrary.simpleMessage("Añadir Ventas"),
         "addUnit": MessageLookupByLibrary.simpleMessage("Añadir Unidad"),
+        "addUserRole":
+            MessageLookupByLibrary.simpleMessage("Agregar Rol de Usuario"),
         "address": MessageLookupByLibrary.simpleMessage("DIRECCIÓN"),
         "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
             "Todas las soluciones comerciales"),
+        "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
+            "Sales Pro es una solución comercial completa con inventario, cuentas, ventas, gastos y pérdidas/ganancias."),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Ya agregado"),
         "amount": MessageLookupByLibrary.simpleMessage("Cantidad"),
         "apply": MessageLookupByLibrary.simpleMessage("Aplicar"),
+        "backToHome": MessageLookupByLibrary.simpleMessage(
+            "Volver a la Página Principal"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("Bangladesh"),
         "billTO": MessageLookupByLibrary.simpleMessage("Facturar a"),
         "brandName": MessageLookupByLibrary.simpleMessage("Nombre de la marca"),
@@ -70,6 +76,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Cancelar"),
         "capacity": MessageLookupByLibrary.simpleMessage("Capacidad"),
         "cash": MessageLookupByLibrary.simpleMessage("Efectivo"),
+        "categories": MessageLookupByLibrary.simpleMessage("Categorías"),
         "categoryName":
             MessageLookupByLibrary.simpleMessage("Nombre de la categoría"),
         "changePassword":
@@ -80,6 +87,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Elegir un Cliente"),
         "chooseSupplier":
             MessageLookupByLibrary.simpleMessage("Elegir un Proveedor"),
+        "choseYourFeature":
+            MessageLookupByLibrary.simpleMessage("Elige Tus Funciones"),
+        "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
+            "Las funciones son la parte importante que hace que Sales Pro sea diferente de las soluciones tradicionales."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Haga clic para conectar"),
@@ -97,6 +108,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Haga clic para conectar"),
         "connectPrinter":
             MessageLookupByLibrary.simpleMessage("Conecta tu impresora"),
+        "contactUs": MessageLookupByLibrary.simpleMessage("Contáctenos"),
         "continueButton": MessageLookupByLibrary.simpleMessage("Continuar"),
         "country": MessageLookupByLibrary.simpleMessage("País"),
         "createAcc":
@@ -124,6 +136,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "dueReport": MessageLookupByLibrary.simpleMessage("Debido Informe"),
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Fácil de usar el punto de venta móvil"),
+        "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
+            "La aplicación Sales Pro es gratuita y fácil de usar. De hecho, es uno de los mejores sistemas POS del mundo."),
         "edit": MessageLookupByLibrary.simpleMessage("Editar"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("¿Editar número de teléfono?"),
@@ -204,6 +218,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noData": MessageLookupByLibrary.simpleMessage("Datos no disponibles"),
         "noDataAvailabe":
             MessageLookupByLibrary.simpleMessage("No hay datos disponibles"),
+        "noRoleFound": MessageLookupByLibrary.simpleMessage(
+            "No se Encontró Rol de Usuario"),
         "noSupplier":
             MessageLookupByLibrary.simpleMessage("Ningún proveedor disponible"),
         "note": MessageLookupByLibrary.simpleMessage("Nota"),
@@ -252,6 +268,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("Perfil"),
         "profit": MessageLookupByLibrary.simpleMessage("Ganancia"),
         "promo": MessageLookupByLibrary.simpleMessage("Promo"),
+        "promoCode":
+            MessageLookupByLibrary.simpleMessage("Código de Promoción"),
         "purchase": MessageLookupByLibrary.simpleMessage("Compra"),
         "purchaseAlarm":
             MessageLookupByLibrary.simpleMessage("Alarma de compra"),
@@ -293,6 +311,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("Guardar y publicar"),
         "search": MessageLookupByLibrary.simpleMessage("Buscar"),
+        "seeAllPromoCode": MessageLookupByLibrary.simpleMessage(
+            "Ver todos los códigos de promoción"),
         "select": MessageLookupByLibrary.simpleMessage("Seleccionar"),
         "selectCategory":
             MessageLookupByLibrary.simpleMessage("Seleccione categoría"),
@@ -303,7 +323,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Hemos enviado un correo electrónico con instrucciones sobre cómo restablecer la contraseña a:"),
         "sendLink":
             MessageLookupByLibrary.simpleMessage("Enviar enlace de reinicio"),
+        "sendMessage": MessageLookupByLibrary.simpleMessage("Enviar Mensaje"),
         "sendSms": MessageLookupByLibrary.simpleMessage("Enviar SMS"),
+        "sendYourEmail": MessageLookupByLibrary.simpleMessage(
+            "Enviar su Correo Electrónico"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "Actualiza tu perfil para conectar a tu médico con una mejor impresión"),
         "setUpProfile":
@@ -325,6 +348,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("Existencias"),
         "stockList": MessageLookupByLibrary.simpleMessage("Lista común"),
         "subTotal": MessageLookupByLibrary.simpleMessage("Subtotal"),
+        "submit": MessageLookupByLibrary.simpleMessage("Enviar"),
         "subscription": MessageLookupByLibrary.simpleMessage("Suscripción"),
         "supplier": MessageLookupByLibrary.simpleMessage("Proveedor"),
         "supplierName":
@@ -364,7 +388,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "wholeSalePrice":
             MessageLookupByLibrary.simpleMessage("Precio al por mayor"),
         "wholesaler": MessageLookupByLibrary.simpleMessage("Mayorista"),
+        "writeYourMessageHere":
+            MessageLookupByLibrary.simpleMessage("Escriba su mensaje aquí"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("Tu estas usando "),
-        "yourPack": MessageLookupByLibrary.simpleMessage("Tu equipaje")
+        "yourPack": MessageLookupByLibrary.simpleMessage("Tu equipaje"),
+        "yourPackageExpiredInDays": MessageLookupByLibrary.simpleMessage(
+            "Su Paquete Expirará en 5 Días"),
+        "yourPackageExpiredToday": MessageLookupByLibrary.simpleMessage(
+            "Su Paquete Expirará Hoy\n\nPor favor, Compre nuevamente")
       };
 }

@@ -414,7 +414,7 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                                       child:  Center(
                                         child: Text(
                                           lang.S.of(context).cancel,
-                                          style: TextStyle(color: mainConstant.kMainColor),
+                                          style: const TextStyle(color: mainConstant.kMainColor),
                                         ),
                                       ),
                                     ),

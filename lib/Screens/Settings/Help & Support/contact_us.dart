@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/constant.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class ContactUs extends StatefulWidget {
   const ContactUs({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class _ContactUsState extends State<ContactUs> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Contact Us',
+          lang.S.of(context).contactUs,
           style: GoogleFonts.poppins(
             color: Colors.black,
             fontSize: 20.0,
@@ -35,12 +36,12 @@ class _ContactUsState extends State<ContactUs> {
             child: Container(
               height: 150.0,
               width: MediaQuery.of(context).size.width - 40,
-              child: const TextField(
+              child:  TextField(
                 keyboardType: TextInputType.name,
                 maxLines: 30,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  hintText: 'Write your message here',
+                  hintText: lang.S.of(context).writeYourMessageHere,
                 ),
               ),
             ),
@@ -48,7 +49,7 @@ class _ContactUsState extends State<ContactUs> {
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: ButtonGlobalWithoutIcon(
-              buttontext: 'Send Message',
+              buttontext: lang.S.of(context).sendMessage,
               buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
               onPressed: () {
                 showDialog(
@@ -93,7 +94,7 @@ class _ContactUsState extends State<ContactUs> {
                           ),
                           Center(
                             child: Text(
-                              'Send Your Email',
+                              lang.S.of(context).sendYourEmail,
                               style: GoogleFonts.poppins(
                                 color: Colors.black,
                                 fontSize: 20.0,
@@ -116,7 +117,7 @@ class _ContactUsState extends State<ContactUs> {
                             ),
                           ),
                           ButtonGlobalWithoutIcon(
-                            buttontext: 'Back to Home',
+                            buttontext: lang.S.of(context).backToHome,
                             buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
                             onPressed: () {
                               Navigator.pop(context);

@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Screens/User%20Roles/user_role_details.dart';
 import 'package:nb_utils/nb_utils.dart';
-
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import '../../Provider/user_role_provider.dart';
 import '../../constant.dart';
 import 'add_user_role_screen.dart';
@@ -25,7 +25,7 @@ class _UserRoleScreenState extends State<UserRoleScreen> {
         appBar: AppBar(
           backgroundColor: Colors.white,
           title: Text(
-            'User Role',
+            lang.S.of(context).userRole,
             style: GoogleFonts.poppins(
               color: Colors.black,
             ),
@@ -61,7 +61,7 @@ class _UserRoleScreenState extends State<UserRoleScreen> {
                   },
                 );
               } else {
-                return const Center(child: Text("No User Role Found"));
+                return  Center(child: Text(lang.S.of(context).noRoleFound));
               }
             }, error: (e, stack) {
               return Text(e.toString());
@@ -82,9 +82,9 @@ class _UserRoleScreenState extends State<UserRoleScreen> {
                 color: kMainColor,
                 borderRadius: BorderRadius.all(Radius.circular(10)),
               ),
-              child: const Center(
+              child:  Center(
                 child: Text(
-                  'Add New User Role',
+                  lang.S.of(context).addUserRole,
                   style: TextStyle(fontSize: 18, color: Colors.white),
                 ),
               ),

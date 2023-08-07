@@ -48,6 +48,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addSale": MessageLookupByLibrary.simpleMessage("الرجاء إضافة بيع"),
         "addSales": MessageLookupByLibrary.simpleMessage("أضف المبيعات"),
         "addUnit": MessageLookupByLibrary.simpleMessage("أضف وحدة"),
+        "addUserRole":
+            MessageLookupByLibrary.simpleMessage("إضافة دور المستخدم"),
         "address": MessageLookupByLibrary.simpleMessage("عنوان"),
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("جميع حلول الأعمال"),
@@ -58,6 +60,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "تحديث جديد متاح\nالرجاء تحديث تطبيقك"),
         "apply": MessageLookupByLibrary.simpleMessage("تطبيق"),
+        "backToHome":
+            MessageLookupByLibrary.simpleMessage("العودة إلى الصفحة الرئيسية"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("بنغلاديش"),
         "billTO": MessageLookupByLibrary.simpleMessage("إلى الفاتورة"),
         "brandName":
@@ -72,6 +76,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("يلغي"),
         "capacity": MessageLookupByLibrary.simpleMessage("السعة"),
         "cash": MessageLookupByLibrary.simpleMessage("نقداً"),
+        "categories": MessageLookupByLibrary.simpleMessage("الفئات"),
         "categoryName": MessageLookupByLibrary.simpleMessage("اسم التصنيف"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
@@ -98,6 +103,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("قم بتوصيل الطابعة الخاصة بك"),
         "contactDetials":
             MessageLookupByLibrary.simpleMessage("بيانات الاتصال"),
+        "contactUs": MessageLookupByLibrary.simpleMessage("اتصل بنا"),
         "continueButton": MessageLookupByLibrary.simpleMessage("يكمل"),
         "country": MessageLookupByLibrary.simpleMessage("الدولة"),
         "createAcc": MessageLookupByLibrary.simpleMessage("إنشاء حساب مجاني"),
@@ -198,6 +204,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noData": MessageLookupByLibrary.simpleMessage("لا تتوافر بيانات"),
         "noDataAvailabe":
             MessageLookupByLibrary.simpleMessage("لا توجد بيانات متاحة"),
+        "noRoleFound": MessageLookupByLibrary.simpleMessage(
+            "لم يتم العثور على دور المستخدم"),
         "noSupplier": MessageLookupByLibrary.simpleMessage("لا يوجد مورد متاح"),
         "note": MessageLookupByLibrary.simpleMessage("ملحوظة"),
         "notification": MessageLookupByLibrary.simpleMessage("إشعار"),
@@ -243,6 +251,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("حساب تعريفي"),
         "profit": MessageLookupByLibrary.simpleMessage("ربح"),
         "promo": MessageLookupByLibrary.simpleMessage("عرض ترويجي"),
+        "promoCode": MessageLookupByLibrary.simpleMessage("رمز الترويج"),
         "purchase": MessageLookupByLibrary.simpleMessage("شراء"),
         "purchaseAlarm": MessageLookupByLibrary.simpleMessage("تنبيه الشراء"),
         "purchaseConfirmed":
@@ -278,6 +287,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "save": MessageLookupByLibrary.simpleMessage("يحفظ"),
         "saveNPublish": MessageLookupByLibrary.simpleMessage("احفظ وانشر"),
         "search": MessageLookupByLibrary.simpleMessage("يبحث"),
+        "seeAllPromoCode":
+            MessageLookupByLibrary.simpleMessage("عرض جميع رموز الترويج"),
         "select": MessageLookupByLibrary.simpleMessage("يختار"),
         "selectCategory": MessageLookupByLibrary.simpleMessage("اختر الفئة"),
         "selectLang": MessageLookupByLibrary.simpleMessage("اختر لغتك"),
@@ -287,7 +298,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "أرسلنا بريدًا إلكترونيًا يحتوي على إرشادات حول كيفية إعادة تعيين كلمة المرور إلى:"),
         "sendLink":
             MessageLookupByLibrary.simpleMessage("أرسل رابط إعادة التعيين"),
+        "sendMessage": MessageLookupByLibrary.simpleMessage("إرسال الرسالة"),
         "sendSms": MessageLookupByLibrary.simpleMessage("إرسال رسالة نصية"),
+        "sendYourEmail":
+            MessageLookupByLibrary.simpleMessage("أرسل بريدك الإلكتروني"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "قم بتحديث ملف التعريف الخاص بك لتوصيل طبيبك بانطباع أفضل"),
         "setUpProfile": MessageLookupByLibrary.simpleMessage(
@@ -307,6 +321,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("مخزون"),
         "stockList": MessageLookupByLibrary.simpleMessage("قائمة الأسهم"),
         "subTotal": MessageLookupByLibrary.simpleMessage("المجموع الفرعي"),
+        "submit": MessageLookupByLibrary.simpleMessage("إرسال"),
         "subscription": MessageLookupByLibrary.simpleMessage("الاشتراك"),
         "supplier": MessageLookupByLibrary.simpleMessage("المورد"),
         "supplierName": MessageLookupByLibrary.simpleMessage("اسم المورد"),
@@ -345,9 +360,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "whatNew": MessageLookupByLibrary.simpleMessage("ما هو الجديد"),
         "wholeSalePrice": MessageLookupByLibrary.simpleMessage("سعر بالجملة"),
         "wholesaler": MessageLookupByLibrary.simpleMessage("تاجر الجملة"),
+        "writeYourMessageHere":
+            MessageLookupByLibrary.simpleMessage("اكتب رسالتك هنا"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("انت تستخدم "),
         "youWantTodeletetheProduct":
             MessageLookupByLibrary.simpleMessage("هل ترغب في حذف هذا المنتج؟"),
-        "yourPack": MessageLookupByLibrary.simpleMessage("مجموعتك")
+        "yourPack": MessageLookupByLibrary.simpleMessage("مجموعتك"),
+        "yourPackageExpiredInDays":
+            MessageLookupByLibrary.simpleMessage("سينتهي اشتراكك خلال 5 أيام"),
+        "yourPackageExpiredToday": MessageLookupByLibrary.simpleMessage(
+            "سينتهي اشتراكك اليوم\n\nيرجى الشراء مجددًا")
       };
 }

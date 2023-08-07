@@ -52,6 +52,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Veuillez ajouter une vente"),
         "addSales": MessageLookupByLibrary.simpleMessage("Ajouter des ventes"),
         "addUnit": MessageLookupByLibrary.simpleMessage("Ajouter une unité"),
+        "addUserRole": MessageLookupByLibrary.simpleMessage(
+            "Ajouter un rôle d\'utilisateur"),
         "address": MessageLookupByLibrary.simpleMessage("Adresse"),
         "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
             "Toutes les solutions commerciales"),
@@ -62,6 +64,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "Une nouvelle mise à jour est disponible\nVeuillez mettre à jour votre application"),
         "apply": MessageLookupByLibrary.simpleMessage("Appliquer"),
+        "backToHome":
+            MessageLookupByLibrary.simpleMessage("Retour à la page d\'accueil"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("Bangladesh"),
         "billTO": MessageLookupByLibrary.simpleMessage("Facturer à"),
         "brandName": MessageLookupByLibrary.simpleMessage("Marque"),
@@ -77,6 +81,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Annuler"),
         "capacity": MessageLookupByLibrary.simpleMessage("Capacité"),
         "cash": MessageLookupByLibrary.simpleMessage("Espèces"),
+        "categories": MessageLookupByLibrary.simpleMessage("Catégories"),
         "categoryName":
             MessageLookupByLibrary.simpleMessage("Nom de catégorie"),
         "changePassword":
@@ -110,6 +115,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "connectPrinter":
             MessageLookupByLibrary.simpleMessage("Connectez votre imprimante"),
         "contactDetials": MessageLookupByLibrary.simpleMessage("Coordonnées"),
+        "contactUs": MessageLookupByLibrary.simpleMessage("Contactez-nous"),
         "continueButton": MessageLookupByLibrary.simpleMessage("Continuer"),
         "country": MessageLookupByLibrary.simpleMessage("Pays"),
         "createAcc":
@@ -221,6 +227,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Pas de données disponibles"),
         "noDataAvailabe":
             MessageLookupByLibrary.simpleMessage("Pas de données disponibles"),
+        "noRoleFound": MessageLookupByLibrary.simpleMessage(
+            "Aucun rôle d\'utilisateur trouvé"),
         "noSupplier": MessageLookupByLibrary.simpleMessage(
             "Aucun fournisseur disponible"),
         "note": MessageLookupByLibrary.simpleMessage("Note"),
@@ -273,6 +281,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("Profil"),
         "profit": MessageLookupByLibrary.simpleMessage("Profit"),
         "promo": MessageLookupByLibrary.simpleMessage("Promo"),
+        "promoCode": MessageLookupByLibrary.simpleMessage("Code promo"),
         "purchase": MessageLookupByLibrary.simpleMessage("Achat"),
         "purchaseAlarm":
             MessageLookupByLibrary.simpleMessage("Alarme d\'achat"),
@@ -316,6 +325,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("Enregistrer et publier"),
         "search": MessageLookupByLibrary.simpleMessage("Recherche"),
+        "seeAllPromoCode":
+            MessageLookupByLibrary.simpleMessage("Voir tous les codes promo"),
         "select": MessageLookupByLibrary.simpleMessage("Sélectionner"),
         "selectCategory":
             MessageLookupByLibrary.simpleMessage("Sélectionnez une catégorie"),
@@ -327,7 +338,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "Nous avons envoyé un e-mail avec des instructions sur la façon de réinitialiser le mot de passe à :"),
         "sendLink": MessageLookupByLibrary.simpleMessage(
             "Envoyer le lien de réinitialisation"),
+        "sendMessage":
+            MessageLookupByLibrary.simpleMessage("Envoyer le message"),
         "sendSms": MessageLookupByLibrary.simpleMessage("Envoyer SMS"),
+        "sendYourEmail":
+            MessageLookupByLibrary.simpleMessage("Envoyez votre e-mail"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "Mettez à jour votre profil pour connecter votre médecin avec une meilleure impression"),
         "setUpProfile":
@@ -347,6 +362,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("Action"),
         "stockList": MessageLookupByLibrary.simpleMessage("Liste des stocks"),
         "subTotal": MessageLookupByLibrary.simpleMessage("Sous Total"),
+        "submit": MessageLookupByLibrary.simpleMessage("Soumettre"),
         "subscription": MessageLookupByLibrary.simpleMessage("Abonnement"),
         "supplier": MessageLookupByLibrary.simpleMessage("Fournisseur"),
         "supplierName":
@@ -388,9 +404,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "whatNew": MessageLookupByLibrary.simpleMessage("Quoi de neuf"),
         "wholeSalePrice": MessageLookupByLibrary.simpleMessage("Prix de gros"),
         "wholesaler": MessageLookupByLibrary.simpleMessage("Grossiste"),
+        "writeYourMessageHere":
+            MessageLookupByLibrary.simpleMessage("Écrivez votre message ici"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("Vous utilisez "),
         "youWantTodeletetheProduct": MessageLookupByLibrary.simpleMessage(
             "Voulez-vous supprimer ce produit ?"),
-        "yourPack": MessageLookupByLibrary.simpleMessage("Votre colis")
+        "yourPack": MessageLookupByLibrary.simpleMessage("Votre colis"),
+        "yourPackageExpiredInDays": MessageLookupByLibrary.simpleMessage(
+            "Votre forfait expirera dans 5 jours"),
+        "yourPackageExpiredToday": MessageLookupByLibrary.simpleMessage(
+            "Votre forfait expirera aujourd\'hui\n\nVeuillez effectuer un nouvel achat")
       };
 }

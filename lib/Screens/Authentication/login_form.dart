@@ -62,7 +62,7 @@ class _LoginFormState extends State<LoginForm> {
                             decoration: InputDecoration(
                               border: const OutlineInputBorder(),
                               labelText: lang.S.of(context).emailText,
-                              hintText: 'Enter your email address',
+                              hintText: lang.S.of(context).enterYourEmailAddress,
                             ),
                             validator: (value) {
                               if (value == null || value.isEmpty) {
@@ -83,7 +83,7 @@ class _LoginFormState extends State<LoginForm> {
                             decoration: InputDecoration(
                               border: const OutlineInputBorder(),
                               labelText: lang.S.of(context).password,
-                              hintText: 'Please enter a password',
+                              hintText: lang.S.of(context).pleaseEnterAPassword,
                               suffixIcon: IconButton(
                                 onPressed: () {
                                   setState(() {

@@ -50,6 +50,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("لطفا یک فروش اضافه کنید"),
         "addSales": MessageLookupByLibrary.simpleMessage("فروش را اضافه کنید"),
         "addUnit": MessageLookupByLibrary.simpleMessage("افزودن واحد"),
+        "addUserRole": MessageLookupByLibrary.simpleMessage("افزودن نقش کاربر"),
         "address": MessageLookupByLibrary.simpleMessage("نشانی"),
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("تمامی راه‌حل‌های تجاری"),
@@ -60,6 +61,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "بروزرسانی جدید موجود است\nلطفاً نرم‌افزار خود را بروز کنید"),
         "apply": MessageLookupByLibrary.simpleMessage("اعمال"),
+        "backToHome": MessageLookupByLibrary.simpleMessage("بازگشت به خانه"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("بنگلادش"),
         "billTO": MessageLookupByLibrary.simpleMessage("صورتحساب به"),
         "brandName": MessageLookupByLibrary.simpleMessage("نام برند"),
@@ -73,6 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("لغو کنید"),
         "capacity": MessageLookupByLibrary.simpleMessage("ظرفیت"),
         "cash": MessageLookupByLibrary.simpleMessage("نقدی"),
+        "categories": MessageLookupByLibrary.simpleMessage("دسته‌بندی‌ها"),
         "categoryName": MessageLookupByLibrary.simpleMessage("نام دسته"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("رمز عبور را تغییر دهید"),
@@ -82,6 +85,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("یک مشتری انتخاب کنید"),
         "chooseSupplier":
             MessageLookupByLibrary.simpleMessage("یک تامین کننده انتخاب کنید"),
+        "choseYourFeature": MessageLookupByLibrary.simpleMessage(
+            "ویژگی‌های خود را انتخاب کنید"),
+        "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
+            "ویژگی‌ها بخش مهمی از کاربرد اپلیکیشن فروش حرفه‌ای را تشکیل می‌دهند که آن را از راه‌حل‌های سنتی متمایز می‌کنند."),
         "clarence": MessageLookupByLibrary.simpleMessage("کلرنس"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("برای اتصال کلیک کنید"),
@@ -97,6 +104,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "connect": MessageLookupByLibrary.simpleMessage("برای اتصال کلیک کنید"),
         "connectPrinter":
             MessageLookupByLibrary.simpleMessage("چاپگر خود را وصل کنید"),
+        "contactUs": MessageLookupByLibrary.simpleMessage("تماس با ما"),
         "continueButton": MessageLookupByLibrary.simpleMessage("ادامه هید"),
         "country": MessageLookupByLibrary.simpleMessage("کشور"),
         "createAcc": MessageLookupByLibrary.simpleMessage(
@@ -120,6 +128,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "dueReport": MessageLookupByLibrary.simpleMessage("گزارش موعد"),
         "easyToUseThePos":
             MessageLookupByLibrary.simpleMessage("پرداخت آسان با موبایل"),
+        "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
+            "اپلیکیشن فروش حرفه‌ای رایگان و آسان در استفاده است. در واقع، این یکی از بهترین سیستم‌های نقطه‌فروش در سراسر دنیاست."),
         "edit": MessageLookupByLibrary.simpleMessage("ویرایش کنید"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("شماره تلفن را ویرایش کنید؟"),
@@ -193,6 +203,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noData": MessageLookupByLibrary.simpleMessage("اطلاعاتی موجود نیست"),
         "noDataAvailabe":
             MessageLookupByLibrary.simpleMessage("اطلاعاتی موجود نیست"),
+        "noRoleFound":
+            MessageLookupByLibrary.simpleMessage("هیچ نقش کاربری یافت نشد"),
         "noSupplier": MessageLookupByLibrary.simpleMessage(
             "هیچ تامین کننده ای موجود نیست"),
         "note": MessageLookupByLibrary.simpleMessage("توجه داشته باشید"),
@@ -235,6 +247,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("مشخصات"),
         "profit": MessageLookupByLibrary.simpleMessage("سود"),
         "promo": MessageLookupByLibrary.simpleMessage("پیشنهاد ویژه"),
+        "promoCode": MessageLookupByLibrary.simpleMessage("کد تخفیف"),
         "purchase": MessageLookupByLibrary.simpleMessage("خرید"),
         "purchaseAlarm": MessageLookupByLibrary.simpleMessage("هشدار خرید"),
         "purchaseConfirmed":
@@ -270,6 +283,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("ذخیره و منتشر کنید"),
         "search": MessageLookupByLibrary.simpleMessage("جستجو کردن"),
+        "seeAllPromoCode":
+            MessageLookupByLibrary.simpleMessage("مشاهده همه کدهای تخفیف"),
         "select": MessageLookupByLibrary.simpleMessage("انتخاب کنید"),
         "selectCategory": MessageLookupByLibrary.simpleMessage("انتخاب دسته"),
         "selectLang":
@@ -279,7 +294,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendEmail": MessageLookupByLibrary.simpleMessage(
             "ما یک ایمیل با دستورالعمل هایی در مورد نحوه تنظیم مجدد رمز عبور ارسال می کنیم:"),
         "sendLink": MessageLookupByLibrary.simpleMessage("ارسال لینک بازنشانی"),
+        "sendMessage": MessageLookupByLibrary.simpleMessage("ارسال پیام"),
         "sendSms": MessageLookupByLibrary.simpleMessage("ارسال پیامک"),
+        "sendYourEmail":
+            MessageLookupByLibrary.simpleMessage("ارسال ایمیل خود"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "نمایه خود را به روز کنید تا پزشک خود را با برداشت بهتر ارتباط برقرار کنید"),
         "setUpProfile":
@@ -298,6 +316,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("موجودی"),
         "stockList": MessageLookupByLibrary.simpleMessage("فهرست سهام"),
         "subTotal": MessageLookupByLibrary.simpleMessage("زیر مجموع"),
+        "submit": MessageLookupByLibrary.simpleMessage("ارسال"),
         "subscription": MessageLookupByLibrary.simpleMessage("اشتراک، ابونمان"),
         "supplier": MessageLookupByLibrary.simpleMessage("تامین کننده"),
         "supplierName": MessageLookupByLibrary.simpleMessage("نام تامین کننده"),
@@ -339,8 +358,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "wholeSalePrice":
             MessageLookupByLibrary.simpleMessage("قیمت عمده فروشی"),
         "wholesaler": MessageLookupByLibrary.simpleMessage("عمده فروش"),
+        "writeYourMessageHere":
+            MessageLookupByLibrary.simpleMessage("پیام خود را اینجا بنویسید"),
         "youRUsing":
             MessageLookupByLibrary.simpleMessage("شما در حال استفاده هستید "),
-        "yourPack": MessageLookupByLibrary.simpleMessage("بسته شما")
+        "yourPack": MessageLookupByLibrary.simpleMessage("بسته شما"),
+        "yourPackageExpiredInDays": MessageLookupByLibrary.simpleMessage(
+            "پکیج شما تا 5 روز دیگر منقضی خواهد شد"),
+        "yourPackageExpiredToday": MessageLookupByLibrary.simpleMessage(
+            "پکیج شما امروز منقضی خواهد شد\n\nلطفاً دوباره خرید کنید")
       };
 }

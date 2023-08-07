@@ -50,6 +50,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ದಯವಿಟ್ಟು ಮಾರಾಟ ಸೇರಿಸಿ"),
         "addSales": MessageLookupByLibrary.simpleMessage("ಮಾರಾಟ ಸೇರಿಸಿ"),
         "addUnit": MessageLookupByLibrary.simpleMessage("ಯೂನಿಟ್ ಸೇರಿಸಿ"),
+        "addUserRole":
+            MessageLookupByLibrary.simpleMessage("ಬಳಕೆದಾರ ಪಾತ್ರವನ್ನು ಸೇರಿಸಿ"),
         "address": MessageLookupByLibrary.simpleMessage("ವಿಳಾಸ"),
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("ಎಲ್ಲಾ ವ್ಯಾಪಾರ ಪರಿಹಾರಗಳು"),
@@ -60,6 +62,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "ಹೊಸ ಅಪ್‌ಡೇಟ್ ಲಭ್ಯವಿದೆ\nದಯವಿಟ್ಟು ನಿಮ್ಮ ಆಪ್‌ಡೇಟ್ ಮಾಡಿ"),
         "apply": MessageLookupByLibrary.simpleMessage("ಅನ್ವಯಿಸು"),
+        "backToHome":
+            MessageLookupByLibrary.simpleMessage("ಮುಂಗಡೆಗೆ ಹಿಂತಿರುಗಿ"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("ಬಂಗ್ಲಾದೇಶ"),
         "billTO": MessageLookupByLibrary.simpleMessage("ಬಿಲ್ ಟು"),
         "brandName": MessageLookupByLibrary.simpleMessage("ಬ್ರ್ಯಾಂಡ್ ಹೆಸರು"),
@@ -74,6 +78,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("ರದ್ದುಗೊಳಿಸು"),
         "capacity": MessageLookupByLibrary.simpleMessage("ಹಿಡಿತ"),
         "cash": MessageLookupByLibrary.simpleMessage("ನಗದು"),
+        "categories": MessageLookupByLibrary.simpleMessage("ವರ್ಗಗಳು"),
         "categoryName": MessageLookupByLibrary.simpleMessage("ವರ್ಗದ ಹೆಸರು"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("ಪಾಸ್‌ವರ್ಡ್ ಬದಲಿಸಿ"),
@@ -105,6 +110,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ಪ್ರಿಂಟರ್‌ಗೆ ಸಂಪರ್ಕಿಸಿ"),
         "contactDetials":
             MessageLookupByLibrary.simpleMessage("ಸಂಪರ್ಕ ವಿವರಗಳು"),
+        "contactUs": MessageLookupByLibrary.simpleMessage("ನಮ್ಮಿಂದ ಸಂಪರ್ಕಿಸಿ"),
         "continueButton": MessageLookupByLibrary.simpleMessage("ಮುಂದುವರಿಸು"),
         "country": MessageLookupByLibrary.simpleMessage("ದೇಶ"),
         "createAcc": MessageLookupByLibrary.simpleMessage("ಉಚಿತ ಖಾತೆ ರಚಿಸಿ"),
@@ -206,6 +212,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noData": MessageLookupByLibrary.simpleMessage("ಡೇಟಾ ಲಭ್ಯವಿಲ್ಲ"),
         "noDataAvailabe":
             MessageLookupByLibrary.simpleMessage("ಯಾವುದೇ ಡೇಟಾ ಲಭ್ಯವಿಲ್ಲ"),
+        "noRoleFound": MessageLookupByLibrary.simpleMessage(
+            "ಯಾವುದೇ ಬಳಕೆದಾರ ಪಾತ್ರ ಕಂಡುಬಂದಿಲ್ಲ"),
         "noSupplier":
             MessageLookupByLibrary.simpleMessage("ಯಾವುದೇ ಸರಬರಾಜುಗಾರ ಲಭ್ಯವಿಲ್ಲ"),
         "note": MessageLookupByLibrary.simpleMessage("ಕೆಲಸ"),
@@ -253,6 +261,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("ಪ್ರೊಫೈಲ್"),
         "profit": MessageLookupByLibrary.simpleMessage("ಲಾಭ"),
         "promo": MessageLookupByLibrary.simpleMessage("ಪ್ರೊಮೋ"),
+        "promoCode": MessageLookupByLibrary.simpleMessage("ಪ್ರೊಮೋ ಕೋಡ್"),
         "purchase": MessageLookupByLibrary.simpleMessage("ಖರೀದಿ"),
         "purchaseAlarm": MessageLookupByLibrary.simpleMessage("ಖರೀದಿ ಅಲಾರಂ"),
         "purchaseConfirmed":
@@ -288,6 +297,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("ಉಳಿಸಿ ಮತ್ತು ಪ್ರಕಟಿಸಿ"),
         "search": MessageLookupByLibrary.simpleMessage("ಹುಡುಕು"),
+        "seeAllPromoCode": MessageLookupByLibrary.simpleMessage(
+            "ಎಲ್ಲಾ ಪ್ರೊಮೋ ಕೋಡ್‌ಗಳನ್ನು ವೀಕ್ಷಿಸಿ"),
         "select": MessageLookupByLibrary.simpleMessage("ಆಯ್ಕೆಮಾಡಿ"),
         "selectCategory":
             MessageLookupByLibrary.simpleMessage("ವರ್ಗವನ್ನು ಆಯ್ಕೆಮಾಡಿ"),
@@ -299,7 +310,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "ನೀವು ಪಾಸ್ವರ್ಡ್ ರೀಸೆಟ್ ಮಾಡಲು ನಿರ್ದೇಶಗಳನ್ನು ಹೇಗೆ ಸೇರಿಸಬೇಕೆಂದು ಅನುಸರಿಸಿ ನಮೂದಿಸಿದ ಇಮೇಲ್ ಗೆ ನಾವು ಇಮೇಲ್ ಕಳುಹಿಸಿದ್ದೇವೆ"),
         "sendLink":
             MessageLookupByLibrary.simpleMessage("ರೀಸೆಟ್ ಲಿಂಕ್ ಕಳುಹಿಸಿ"),
+        "sendMessage": MessageLookupByLibrary.simpleMessage("ಸಂದೇಶ ಕಳುಹಿಸಿ"),
         "sendSms": MessageLookupByLibrary.simpleMessage("ಎಸ್‌ಎಂಎಸ್ ಕಳುಹಿಸಿ"),
+        "sendYourEmail":
+            MessageLookupByLibrary.simpleMessage("ನಿಮ್ಮ ಇಮೇಲ್ ಅನ್ನು ಕಳುಹಿಸಿ"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "ನಿಮ್ಮ ಪ್ರೊಫೈಲ್ ನನ್ನೆಯ ಡಾಕ್ಟರ್ ನೊಂದಿಗೆ ಹೆಚ್ಚು ಪ್ರಭಾವ ಬೆಳೆಸಲು ನವೀಕರಿಸಿ"),
         "setUpProfile": MessageLookupByLibrary.simpleMessage(
@@ -319,6 +333,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("ಸ್ಟಾಕ್"),
         "stockList": MessageLookupByLibrary.simpleMessage("ಸ್ಟಾಕ್ ಪಟ್ಟಿ"),
         "subTotal": MessageLookupByLibrary.simpleMessage("ಉಪಮೊತ್ತ"),
+        "submit": MessageLookupByLibrary.simpleMessage("ಸಲ್ಲಿಸಿ"),
         "subscription": MessageLookupByLibrary.simpleMessage("ಚಂದಾ"),
         "supplier": MessageLookupByLibrary.simpleMessage("ಸರಬರಾಜು ವಿತರಕ"),
         "supplierName":
@@ -362,10 +377,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "wholeSalePrice":
             MessageLookupByLibrary.simpleMessage("ಹೊಲ್‌ಸೇಲ್ ಬೆಲೆ"),
         "wholesaler": MessageLookupByLibrary.simpleMessage("ಹೊಲ್‌ಸೇಲರ್"),
+        "writeYourMessageHere": MessageLookupByLibrary.simpleMessage(
+            "ನಿಮ್ಮ ಸಂದೇಶವನ್ನು ಇಲ್ಲಿ ಬರೆಯಿರಿ"),
         "youRUsing":
             MessageLookupByLibrary.simpleMessage("ನೀವು ಬಳಸುತ್ತಿದ್ದೀರಿ"),
         "youWantTodeletetheProduct": MessageLookupByLibrary.simpleMessage(
             "ನೀವು ಈ ಉತ್ಪನ್ನವನ್ನು ಅಳಿಸಲು ಬಯಸುತ್ತಿದ್ದೀರಾ?"),
-        "yourPack": MessageLookupByLibrary.simpleMessage("ನಿಮ್ಮ ಪ್ಯಾಕೇಜ್")
+        "yourPack": MessageLookupByLibrary.simpleMessage("ನಿಮ್ಮ ಪ್ಯಾಕೇಜ್"),
+        "yourPackageExpiredInDays": MessageLookupByLibrary.simpleMessage(
+            "ನಿಮ್ಮ ಪ್ಯಾಕೇಜ್ 5 ದಿನಗಳಲ್ಲಿ ಅವಧಿಯಾಗುತ್ತದೆ"),
+        "yourPackageExpiredToday": MessageLookupByLibrary.simpleMessage(
+            "ನಿಮ್ಮ ಪ್ಯಾಕೇಜ್ ಇಂದೇ ಅವಧಿಯಾಗುತ್ತದೆ\n\nದಯವಿಟ್ಟು ಮತ್ತೆ ಖರೀದಿಸಿ")
       };
 }

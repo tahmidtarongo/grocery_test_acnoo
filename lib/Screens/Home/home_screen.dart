@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -12,7 +11,6 @@ import 'package:mobile_pos/model/subscription_model.dart';
 import 'package:mobile_pos/model/subscription_plan_model.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
-
 import '../../Provider/homepage_image_provider.dart';
 import '../../Provider/profile_provider.dart';
 import '../../model/paypal_info_model.dart';
@@ -97,9 +95,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const Text(
-                      'Your Package Will Expire in 5 Day',
-                      style: TextStyle(fontSize: 16),
+
+                     Text(
+                      lang.S.of(context).yourPackageExpiredInDays,
+                      style: const TextStyle(fontSize: 16),
                     ),
                     const SizedBox(height: 20),
                     TextButton(
@@ -108,8 +107,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         // ignore: use_build_context_synchronously
                         Navigator.pop(context);
                       },
-                      child: const Text(
-                        'Cancel',
+                      child:  Text(
+                        lang.S.of(context).cancel,
                         style: TextStyle(color: Colors.red),
                       ),
                     ),
@@ -134,8 +133,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      const Text(
-                        'Your Package Will Expire Today\n\nPlease Purchase again',
+                       Text(
+                        lang.S.of(context).yourPackageExpiredToday,
                         style: TextStyle(fontSize: 16),
                         textAlign: TextAlign.center,
                       ),
@@ -146,14 +145,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             onPressed: () {
                               const PackageScreen().launch(context);
                             },
-                            child: const Text('Purchase'),
+                            child:  Text(lang.S.of(context).purchase),
                           ),
                           TextButton(
                             onPressed: () {
                               Navigator.pop(context);
                             },
-                            child: const Text(
-                              'Cancel',
+                            child:  Text(
+                              lang.S.of(context).cancel,
                               style: TextStyle(color: Colors.red),
                             ),
                           ),
@@ -353,6 +352,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           Text(
                             lang.S.of(context).whatNew,
+                            textAlign: TextAlign.start,
                             style: GoogleFonts.poppins(
                               color: Colors.black,
                               fontWeight: FontWeight.bold,

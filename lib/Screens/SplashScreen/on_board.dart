@@ -5,6 +5,7 @@ import 'package:mobile_pos/Screens/Authentication/phone.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import '../../constant.dart';
+import '../Authentication/login_form.dart';
 
 class OnBoard extends StatefulWidget {
   const OnBoard({Key? key}) : super(key: key);
@@ -35,7 +36,7 @@ class _OnBoardState extends State<OnBoard> {
       {
         "icon": 'images/onboard3.png',
         "title": lang.S.of(context).allBusinessSolutions,
-        "description": lang.S.of(context).allBusinessSolutions,
+        "description": lang.S.of(context).allBusinessolutionDescrip,
       },
     ];
     return sliderList;
@@ -46,14 +47,12 @@ class _OnBoardState extends State<OnBoard> {
   Widget build(BuildContext context) {
     sliderList=getSlider(context: context);
     return Scaffold(
-      appBar: AppBar(
-        iconTheme: const IconThemeData(color: Colors.black),
-        automaticallyImplyLeading: false,
-        backgroundColor: Colors.transparent,
-        elevation: 0.0,
-        actions: [
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          const SizedBox(height: 30),
           Padding(
-            padding: const EdgeInsets.only(right: 8.0),
+            padding: const EdgeInsets.only(right: 20),
             child: TextButton(
               onPressed: () {
                 const PhoneAuth().launch(context);
@@ -63,93 +62,94 @@ class _OnBoardState extends State<OnBoard> {
               child: Text(
                 lang.S.of(context).skip,
                 style: GoogleFonts.jost(
-                  fontSize: 18.0,
+                  fontSize: 20.0,
                   color: kMainColor,
                 ),
               ),
             ),
           ),
-        ],
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-              padding: const EdgeInsets.only(top: 8, bottom: 8),
-              height: 550,
-              width: 340,
-              child: Stack(
-                alignment: Alignment.bottomCenter,
-                children: [
-                  PageView.builder(
-                    itemCount: sliderList.length,
-                    controller: pageController,
-                    onPageChanged: (int index) => setState(() => currentIndexPage = index),
-                    itemBuilder: (_, index) {
-                      return Column(
-                        children: [
-                          Image.asset(sliderList[index]['icon'], fit: BoxFit.fill, width: context.width(), height: 340),
-                          Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: Text(
-                              sliderList[index]['title'].toString(),
-                              style: GoogleFonts.jost(
-                                fontSize: 25.0,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black,
-                              ),
+          Container(
+            padding: const EdgeInsets.only(top: 20, bottom: 20),
+            height: 550,
+            width: context.width(),
+            child: Stack(
+              alignment: Alignment.bottomCenter,
+              children: [
+                PageView.builder(
+                  itemCount: sliderList.length,
+                  controller: pageController,
+                  onPageChanged: (int index) => setState(() => currentIndexPage = index),
+                  itemBuilder: (_, index) {
+                    return Column(
+                      children: [
+                        const SizedBox(height: 30),
+                        Image.asset(sliderList[index]['icon'], fit: BoxFit.fill, width: context.width() - 100, height: context.width() - 100),
+                        const SizedBox(height: 30),
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Text(
+                            sliderList[index]['title'].toString(),
+                            style: GoogleFonts.jost(
+                              fontSize: 25.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
                             ),
+                            textAlign: TextAlign.center,
                           ),
+                        ),
+                        // ignore: sized_box_for_whitespace
+                        Padding(
+                          padding: const EdgeInsets.only(left: 20.0, right: 20.0),
                           // ignore: sized_box_for_whitespace
-                          Padding(
-                            padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                            // ignore: sized_box_for_whitespace
-                            child: Container(
-                              width: context.width(),
-                              child: Text(
-                                sliderList[index]['description'].toString(),
-                                textAlign: TextAlign.center,
-                                overflow: TextOverflow.ellipsis,
-                                maxLines: 5,
-                                style: GoogleFonts.jost(
-                                  fontSize: 15.0,
-                                  color: kGreyTextColor,
-                                ),
+                          child: Container(
+                            width: context.width(),
+                            child: Text(
+                              sliderList[index]['description'].toString(),
+                              textAlign: TextAlign.center,
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 5,
+                              style: GoogleFonts.jost(
+                                fontSize: 15.0,
+                                color: kGreyTextColor,
                               ),
                             ),
                           ),
-                        ],
-                      );
-                    },
-                  ),
-                ],
-              ),
+                        ),
+                      ],
+                    );
+                  },
+                ),
+              ],
             ),
-            DotIndicator(
-              currentDotSize: 15,
-              dotSize: 6,
-              pageController: pageController,
-              pages: sliderList,
-              indicatorColor: kMainColor,
-              unselectedIndicatorColor: Colors.grey,
-            ),
-            SizedBox(height: 30,),
-            ButtonGlobal(
-              iconWidget: Icons.arrow_forward,
+          ),
+          DotIndicator(
+            currentDotSize: 25,
+            dotSize: 6,
+            pageController: pageController,
+            pages: sliderList,
+            indicatorColor: kMainColor,
+            unselectedIndicatorColor: Colors.grey,
+          ),
+          const Spacer(),
+          Padding(
+            padding: const EdgeInsets.only(right: 10.0, left: 10),
+            child: ButtonGlobal(
+              iconWidget: null,
               buttontext: lang.S.of(context).next,
               iconColor: Colors.white,
-              buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
+              buttonDecoration: kButtonDecoration.copyWith(color: kMainColor, borderRadius: const BorderRadius.all(Radius.circular(30))),
               onPressed: () {
                 setState(
-                  () {
-                    currentIndexPage < 2 ? pageController.nextPage(duration: const Duration(microseconds: 1000), curve: Curves.bounceInOut) : const PhoneAuth().launch(context);
-                    // : const SignInScreen().launch(context);
+                      () {
+                        currentIndexPage < 2 ? pageController.nextPage(duration: const Duration(microseconds: 1000), curve: Curves.bounceInOut) : const PhoneAuth().launch(context);
+                        // : const SignInScreen().launch(context);
                   },
                 );
               },
             ),
-          ],
-        ),
+          ),
+          const SizedBox(height: 20),
+        ],
       ),
     );
   }

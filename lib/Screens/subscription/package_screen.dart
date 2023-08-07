@@ -128,12 +128,14 @@ class _PackageScreenState extends State<PackageScreen> {
                         const SizedBox(height: 8),
                         Row(
                           children: [
-                            Text(
+                             Text(
                               lang.S.of(context).youRUsing,
-                              style: const TextStyle(fontSize: 14),
+                              style: TextStyle(fontSize: 14),
                             ),
                             Text(
-                              lang.S.of(context).freePack,
+                              'Free Package',
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 1,
                               style: const TextStyle(
                                 fontSize: 14,
                                 color: kMainColor,

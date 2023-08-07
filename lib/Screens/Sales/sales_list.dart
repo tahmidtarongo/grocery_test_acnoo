@@ -4,7 +4,7 @@ import 'package:mobile_pos/GlobalComponents/tab_buttons.dart';
 import 'package:mobile_pos/Screens/Home/home_screen.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:nb_utils/nb_utils.dart';
-
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import '../../currency.dart';
 
 class SalesScreen extends StatefulWidget {
@@ -25,7 +25,7 @@ class _SalesScreenState extends State<SalesScreen> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            'Sales List',
+            lang.S.of(context).saleList,
             style: GoogleFonts.poppins(
               color: Colors.black,
               fontSize: 20.0,

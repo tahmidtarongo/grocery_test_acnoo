@@ -79,7 +79,7 @@ class _SelectLanguageState extends State<SelectLanguage> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: ButtonGlobalWithoutIcon(
-          buttontext: 'Save',
+          buttontext: lang.S.of(context).save,
           buttonDecoration: kButtonDecoration.copyWith(
             color: kMainColor,
             borderRadius: BorderRadius.circular(6.0),
@@ -88,12 +88,7 @@ class _SelectLanguageState extends State<SelectLanguage> {
             setState(
               () async {
                 await saveData(selectedLanguage).then(
-                  (value) => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const Home(),
-                    ),
-                  ),
+                  (value) => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const Home())),
                 );
               },
             );

@@ -1,4 +1,20 @@
 {
+  "addUserRole" : "Add User Role",
+  "noRoleFound" : "No User Role Found",
+  "yourPackageExpiredInDays" : "Your Package Will Expire in 5 Day",
+  "yourPackageExpiredToday" : "Your Package Will Expire Today\n\nPlease Purchase again",
+  "contactUs" : "Contact Us",
+  "writeYourMessageHere" : "Write your message here",
+  "sendMessage" : "Send Message",
+  "sendYourEmail" : "Send your Email",
+  "backToHome" : "Back To Home",
+  "promoCode" : "Promo Code",
+  "submit" : "Submit",
+  "seeAllPromoCode" : "See all promo code",
+  "categories": "Categories",
+
+
+
   "enterYourPhoneNumber" : "Enter your phone number",
   "enterFullAddress" : "Enter Full Address",
   "enterYourEmailAddress" : "Enter your email address",

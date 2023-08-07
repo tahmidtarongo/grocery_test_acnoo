@@ -1,4 +1,18 @@
 {
+
+  "addUserRole": "إضافة دور المستخدم",
+  "noRoleFound": "لم يتم العثور على دور المستخدم",
+  "yourPackageExpiredInDays": "سينتهي اشتراكك خلال 5 أيام",
+  "yourPackageExpiredToday": "سينتهي اشتراكك اليوم\n\nيرجى الشراء مجددًا",
+  "contactUs": "اتصل بنا",
+  "writeYourMessageHere": "اكتب رسالتك هنا",
+  "sendMessage": "إرسال الرسالة",
+  "sendYourEmail": "أرسل بريدك الإلكتروني",
+  "backToHome": "العودة إلى الصفحة الرئيسية",
+  "promoCode": "رمز الترويج",
+  "submit": "إرسال",
+  "seeAllPromoCode": "عرض جميع رموز الترويج",
+  "categories": "الفئات",
   "enterYourPhoneNumber": "أدخل رقم هاتفك",
   "enterFullAddress": "أدخل العنوان بالكامل",
   "enterYourEmailAddress": "أدخل عنوان بريدك الإلكتروني",

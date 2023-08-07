@@ -51,6 +51,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Προσθέστε μια έκπτωση"),
         "addSales": MessageLookupByLibrary.simpleMessage("Προσθήκη πωλήσεων"),
         "addUnit": MessageLookupByLibrary.simpleMessage("Προσθήκη μονάδας"),
+        "addUserRole":
+            MessageLookupByLibrary.simpleMessage("Προσθήκη Ρόλου Χρήστη"),
         "address": MessageLookupByLibrary.simpleMessage("Διεύθυνση"),
         "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
             "Όλες οι επιχειρηματικές λύσεις"),
@@ -62,6 +64,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "Υπάρχει διαθέσιμη μια νέα ενημέρωση\nΠαρακαλώ ενημερώστε την εφαρμογή σας"),
         "apply": MessageLookupByLibrary.simpleMessage("Εφαρμογή"),
+        "backToHome":
+            MessageLookupByLibrary.simpleMessage("Πίσω στην Αρχική Σελίδα"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("Μπανγκλαντές"),
         "billTO": MessageLookupByLibrary.simpleMessage("Χρέωση σε"),
         "brandName": MessageLookupByLibrary.simpleMessage("Μάρκα"),
@@ -77,6 +81,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Ματαίωση"),
         "capacity": MessageLookupByLibrary.simpleMessage("Χωρητικότητα"),
         "cash": MessageLookupByLibrary.simpleMessage("Μετρητά"),
+        "categories": MessageLookupByLibrary.simpleMessage("Κατηγορίες"),
         "categoryName":
             MessageLookupByLibrary.simpleMessage("Ονομα κατηγορίας"),
         "changePassword": MessageLookupByLibrary.simpleMessage("Άλλαξε κωδικό"),
@@ -108,6 +113,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Συνδέστε τον εκτυπωτή σας"),
         "contactDetials":
             MessageLookupByLibrary.simpleMessage("Στοιχεία επικοινωνίας"),
+        "contactUs":
+            MessageLookupByLibrary.simpleMessage("Επικοινωνήστε μαζί μας"),
         "continueButton": MessageLookupByLibrary.simpleMessage("Εκσυγχρονίζω"),
         "country": MessageLookupByLibrary.simpleMessage("Χώρα"),
         "createAcc": MessageLookupByLibrary.simpleMessage(
@@ -223,6 +230,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Δεν υπάρχουν διαθέσιμα δεδομένα"),
         "noDataAvailabe": MessageLookupByLibrary.simpleMessage(
             "Δεν υπάρχουν διαθέσιμα δεδομένα"),
+        "noRoleFound":
+            MessageLookupByLibrary.simpleMessage("Δεν Βρέθηκε Ρόλος Χρήστη"),
         "noSupplier": MessageLookupByLibrary.simpleMessage(
             "Δεν υπάρχει διαθέσιμος προμηθευτής"),
         "note": MessageLookupByLibrary.simpleMessage("Σημείωση"),
@@ -274,6 +283,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("Προφίλ"),
         "profit": MessageLookupByLibrary.simpleMessage("Κέρδος"),
         "promo": MessageLookupByLibrary.simpleMessage("Προσφορά"),
+        "promoCode": MessageLookupByLibrary.simpleMessage("Κωδικός Προσφοράς"),
         "purchase": MessageLookupByLibrary.simpleMessage("Αγορά"),
         "purchaseAlarm":
             MessageLookupByLibrary.simpleMessage("Ειδοποίηση αγοράς"),
@@ -313,6 +323,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("Αποθήκευση και Δημοσίευση"),
         "search": MessageLookupByLibrary.simpleMessage("Αναζήτηση"),
+        "seeAllPromoCode": MessageLookupByLibrary.simpleMessage(
+            "Δείτε όλους τους κωδικούς προσφοράς"),
         "select": MessageLookupByLibrary.simpleMessage("Επιλέγω"),
         "selectCategory":
             MessageLookupByLibrary.simpleMessage("Επιλέξτε κατηγορία"),
@@ -324,7 +336,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "Έχουμε στείλει ένα email με οδηγίες για τον τρόπο επαναφοράς του κωδικού πρόσβασης σε:"),
         "sendLink": MessageLookupByLibrary.simpleMessage(
             "Αποστολή συνδέσμου επαναφοράς"),
+        "sendMessage":
+            MessageLookupByLibrary.simpleMessage("Αποστολή Μηνύματος"),
         "sendSms": MessageLookupByLibrary.simpleMessage("Αποστολή SMS"),
+        "sendYourEmail":
+            MessageLookupByLibrary.simpleMessage("Αποστολή του email σας"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "Ενημερώστε το προφίλ σας για να συνδέσετε τον γιατρό σας με καλύτερη εντύπωση"),
         "setUpProfile":
@@ -345,6 +361,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("Στοκ"),
         "stockList": MessageLookupByLibrary.simpleMessage("Λίστα αποθέματος"),
         "subTotal": MessageLookupByLibrary.simpleMessage("ΜΕΡΙΚΟ ΣΥΝΟΛΟ"),
+        "submit": MessageLookupByLibrary.simpleMessage("Υποβολή"),
         "subscription": MessageLookupByLibrary.simpleMessage("Συνδρομή"),
         "supplier": MessageLookupByLibrary.simpleMessage("Προμηθευτής"),
         "supplierName":
@@ -388,9 +405,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "whatNew": MessageLookupByLibrary.simpleMessage("Τι νέα"),
         "wholeSalePrice": MessageLookupByLibrary.simpleMessage("Χονδρική τιμή"),
         "wholesaler": MessageLookupByLibrary.simpleMessage("Χονδρέμπορος"),
+        "writeYourMessageHere":
+            MessageLookupByLibrary.simpleMessage("Γράψτε το μήνυμά σας εδώ"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("Χρησιμοποιεις "),
         "youWantTodeletetheProduct": MessageLookupByLibrary.simpleMessage(
             "Θέλετε να διαγράψετε αυτό το προϊόν;"),
-        "yourPack": MessageLookupByLibrary.simpleMessage("Το πακέτο σας")
+        "yourPack": MessageLookupByLibrary.simpleMessage("Το πακέτο σας"),
+        "yourPackageExpiredInDays": MessageLookupByLibrary.simpleMessage(
+            "Το πακέτο σας λήγει σε 5 ημέρες"),
+        "yourPackageExpiredToday": MessageLookupByLibrary.simpleMessage(
+            "Το πακέτο σας λήγει σήμερα\n\nΠαρακαλώ αγοράστε ξανά")
       };
 }

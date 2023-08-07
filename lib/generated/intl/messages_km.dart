@@ -47,12 +47,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "addSale": MessageLookupByLibrary.simpleMessage("សូមបន្ថែមការលក់"),
         "addSales": MessageLookupByLibrary.simpleMessage("បន្ថែមការលក់"),
         "addUnit": MessageLookupByLibrary.simpleMessage("បន្ថែមឯកតា"),
+        "addUserRole":
+            MessageLookupByLibrary.simpleMessage("បន្ថែមតួនាទីអ្នកប្រើប្រាស់"),
         "address": MessageLookupByLibrary.simpleMessage("អាស័យដ្ឋាន"),
         "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
             "ដែល​ជា​ការ​ដោះ​ស្រាយ​អាជីវកម្ម​ទាំងអស់"),
+        "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
+            "កម្មវិធី Sales Pro គឺជា​កម្មវិធី​ពិសេស​អាជីវកម្ម​ពេញលេញ​ដែលមាន​ស្តុក​សារ​គ្រឿង​សម្រាប់​ការ​ធ្វើ​កិច្ច​ការ​ គណនេយ្យ​ការ​លក់​ ចំណាយ & ចំណេញ/ការ​បញ្ចូល។"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("បានបន្ថែមរួចហើយ"),
         "amount": MessageLookupByLibrary.simpleMessage("ចំនួនទឹកប្រាក់"),
         "apply": MessageLookupByLibrary.simpleMessage("អនុវត្ត"),
+        "backToHome": MessageLookupByLibrary.simpleMessage("ត្រលប់ទៅផ្ទះគេ"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("បង់ក្លាដែស"),
         "billTO": MessageLookupByLibrary.simpleMessage("វិក្កយបត្រទៅ"),
         "brandName": MessageLookupByLibrary.simpleMessage("ឈ្មោះ​យីហោ"),
@@ -66,6 +71,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("បោះបង់"),
         "capacity": MessageLookupByLibrary.simpleMessage("មាត់កម្រិត"),
         "cash": MessageLookupByLibrary.simpleMessage("សាច់ប្រាក់"),
+        "categories": MessageLookupByLibrary.simpleMessage("ប្រភេទ"),
         "categoryName": MessageLookupByLibrary.simpleMessage("ឈ្មោះប្រភេទ"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("ផ្លាស់ប្តូរពាក្យសម្ងាត់"),
@@ -75,6 +81,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ជ្រើសរើសអតិថិជន"),
         "chooseSupplier":
             MessageLookupByLibrary.simpleMessage("ជ្រើសរើសអ្នកផ្គត់ផ្គង់"),
+        "choseYourFeature":
+            MessageLookupByLibrary.simpleMessage("ជ្រើសរើសលក្ខណៈពិសេសរបស់អ្នក"),
+        "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
+            "លក្ខណៈពិសេសជា​ផ្នែក​សំខាន់​ដែលធ្វើ​ឲ្យ​កម្មវិធី Sales Pro ខូចចិត្តនៃ​ការដំណោះស្រាយ​ប្រចាំ​នៅពី​ដំណាក់​កាល​ចាស់ៗ។"),
         "clarence": MessageLookupByLibrary.simpleMessage("ឃ្លានិង"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("ចុចដើម្បីភ្ជាប់"),
@@ -91,6 +101,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "connect": MessageLookupByLibrary.simpleMessage("ចុចដើម្បីភ្ជាប់"),
         "connectPrinter": MessageLookupByLibrary.simpleMessage(
             "ភ្ជាប់ម៉ាស៊ីនបោះពុម្ពរបស់អ្នក។"),
+        "contactUs": MessageLookupByLibrary.simpleMessage("ទាក់ទងមកយើង"),
         "continueButton": MessageLookupByLibrary.simpleMessage("បន្ត"),
         "country": MessageLookupByLibrary.simpleMessage("ប្រទេស"),
         "createAcc":
@@ -116,6 +127,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "dueReport": MessageLookupByLibrary.simpleMessage("របាយការណ៍ផុតកំណត់"),
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "សម្រាប់ប្រើកម្មវិធីលក់តាមរយៈទូរស័ព្ទសំរាប់ហាងតាមរយៈមុខងារណាមួយ"),
+        "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
+            "កម្មវិធី Sales Pro គឺជាកម្មវិធីឥតគិតថ្លៃ ដែលអាចប្រើបានងាយៗ។ ក្នុងបរិយាប័ត្រនេះ, វាជាជម្រើសល្អបំផុតរបស់ប្រព័ន្ធបញ្ជាទិញទំនិញនៅក្នុងពិភពពិភពលោក។"),
         "edit": MessageLookupByLibrary.simpleMessage("កែសម្រួល"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("កែសម្រួលលេខទូរស័ព្ទ?"),
@@ -186,6 +199,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noData": MessageLookupByLibrary.simpleMessage("មិនមានទិន្នន័យទេ។"),
         "noDataAvailabe": MessageLookupByLibrary.simpleMessage(
             "គ្មាន​ទិន្នន័យ​ដែល​អាច​រក​បាន​ទេ"),
+        "noRoleFound": MessageLookupByLibrary.simpleMessage(
+            "រកមិនឃើញតួនាទីអ្នកប្រើប្រាស់"),
         "noSupplier":
             MessageLookupByLibrary.simpleMessage("មិនមានអ្នកផ្គត់ផ្គង់ទេ។"),
         "note": MessageLookupByLibrary.simpleMessage("ចំណាំ"),
@@ -229,6 +244,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("ប្រវត្តិរូប"),
         "profit": MessageLookupByLibrary.simpleMessage("ប្រាក់ចំណេញ"),
         "promo": MessageLookupByLibrary.simpleMessage("កូដរបស់ការលក់បន្ថែម"),
+        "promoCode":
+            MessageLookupByLibrary.simpleMessage("លេខ​កូដ​ផ្នែក​បន្លាស់ទី"),
         "purchase": MessageLookupByLibrary.simpleMessage("ទិញ"),
         "purchaseAlarm": MessageLookupByLibrary.simpleMessage("ការណាត់ជួបទិញ"),
         "purchaseConfirmed":
@@ -264,6 +281,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("រក្សាទុក និងបោះពុម្ព"),
         "search": MessageLookupByLibrary.simpleMessage("ស្វែងរក"),
+        "seeAllPromoCode": MessageLookupByLibrary.simpleMessage(
+            "មើលកូដ​ផ្នែក​បន្លាស់ទី​ទាំងអស់"),
         "select": MessageLookupByLibrary.simpleMessage("ជ្រើសរើស"),
         "selectCategory":
             MessageLookupByLibrary.simpleMessage("ជ្រើសរើសប្រភេទ"),
@@ -274,7 +293,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendEmail": MessageLookupByLibrary.simpleMessage(
             "យើងបានផ្ញើអ៊ីមែលជាមួយនឹងការណែនាំអំពីរបៀបកំណត់ពាក្យសម្ងាត់ឡើងវិញទៅ៖"),
         "sendLink": MessageLookupByLibrary.simpleMessage("ផ្ញើតំណកំណត់ឡើងវិញ"),
+        "sendMessage": MessageLookupByLibrary.simpleMessage("ផ្ញើសារ"),
         "sendSms": MessageLookupByLibrary.simpleMessage("ផ្ញើ SMS"),
+        "sendYourEmail":
+            MessageLookupByLibrary.simpleMessage("ផ្ញើអ៊ីមែលរបស់អ្នក"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "ធ្វើបច្ចុប្បន្នភាពប្រវត្តិរូបរបស់អ្នក ដើម្បីភ្ជាប់វេជ្ជបណ្ឌិតរបស់អ្នកជាមួយនឹងចំណាប់អារម្មណ៍កាន់តែប្រសើរឡើង"),
         "setUpProfile":
@@ -295,6 +317,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("ភាគហ៊ុន"),
         "stockList": MessageLookupByLibrary.simpleMessage("បញ្ជីភាគហ៊ុន"),
         "subTotal": MessageLookupByLibrary.simpleMessage("សរុបរង"),
+        "submit": MessageLookupByLibrary.simpleMessage("ដាក់ស្នើ"),
         "subscription": MessageLookupByLibrary.simpleMessage("ការជាវ"),
         "supplier": MessageLookupByLibrary.simpleMessage("អ្នកផ្គត់ផ្គង់"),
         "supplierName":
@@ -335,7 +358,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "whatNew": MessageLookupByLibrary.simpleMessage("តើមានអ្វីថ្មី។"),
         "wholeSalePrice": MessageLookupByLibrary.simpleMessage("តម្លៃ​លក់ដុំ"),
         "wholesaler": MessageLookupByLibrary.simpleMessage("អ្នកលក់ដុំ"),
+        "writeYourMessageHere":
+            MessageLookupByLibrary.simpleMessage("សរសេរសាររបស់អ្នកនៅទីនេះ"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("អ្នកកំពុងប្រើ "),
-        "yourPack": MessageLookupByLibrary.simpleMessage("កញ្ចប់របស់អ្នក។")
+        "yourPack": MessageLookupByLibrary.simpleMessage("កញ្ចប់របស់អ្នក។"),
+        "yourPackageExpiredInDays": MessageLookupByLibrary.simpleMessage(
+            "កញ្ចប់កញ្ចប់របស់អ្នកនឹងអស់ក្នុង ៥ ថ្ងៃ"),
+        "yourPackageExpiredToday": MessageLookupByLibrary.simpleMessage(
+            "កញ្ចប់របស់អ្នកនឹងអស់ថ្ងៃនេះ\n\nសូមទិញម្តងទៀត")
       };
 }

@@ -49,6 +49,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ole hyvä ja lisää myynti"),
         "addSales": MessageLookupByLibrary.simpleMessage("Lisää myynti"),
         "addUnit": MessageLookupByLibrary.simpleMessage("Lisää yksikkö"),
+        "addUserRole":
+            MessageLookupByLibrary.simpleMessage("Lisää käyttäjärooli"),
         "address": MessageLookupByLibrary.simpleMessage("Osoite"),
         "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
             "Kaikki liiketoimintaratkaisut"),
@@ -59,6 +61,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "Uusi päivitys saatavilla\nPäivitä sovelluksesi"),
         "apply": MessageLookupByLibrary.simpleMessage("Käytä"),
+        "backToHome": MessageLookupByLibrary.simpleMessage("Takaisin kotiin"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("Bangladesh"),
         "billTO": MessageLookupByLibrary.simpleMessage("Laskutettava"),
         "brandName": MessageLookupByLibrary.simpleMessage("Tuotenimi"),
@@ -74,6 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Peruuttaa"),
         "capacity": MessageLookupByLibrary.simpleMessage("Kapasiteetti"),
         "cash": MessageLookupByLibrary.simpleMessage("Käteinen"),
+        "categories": MessageLookupByLibrary.simpleMessage("Kategoriat"),
         "categoryName": MessageLookupByLibrary.simpleMessage("Kategorian nimi"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("Vaihda salasana"),
@@ -104,6 +108,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "connectPrinter":
             MessageLookupByLibrary.simpleMessage("Liitä tulostin"),
         "contactDetials": MessageLookupByLibrary.simpleMessage("Yhteystiedot"),
+        "contactUs": MessageLookupByLibrary.simpleMessage("Ota yhteyttä"),
         "continueButton": MessageLookupByLibrary.simpleMessage("Jatkaa"),
         "country": MessageLookupByLibrary.simpleMessage("Maa"),
         "createAcc": MessageLookupByLibrary.simpleMessage("Luo ilmainen tili"),
@@ -213,6 +218,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Tietoja ei ole saatavilla"),
         "noDataAvailabe":
             MessageLookupByLibrary.simpleMessage("Tietoja ei saatavilla"),
+        "noRoleFound":
+            MessageLookupByLibrary.simpleMessage("Ei löytynyt käyttäjäroolia"),
         "noSupplier": MessageLookupByLibrary.simpleMessage(
             "Toimittajaa ei ole saatavilla"),
         "note": MessageLookupByLibrary.simpleMessage("Huomautus"),
@@ -261,6 +268,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("Profiili"),
         "profit": MessageLookupByLibrary.simpleMessage("Voitto"),
         "promo": MessageLookupByLibrary.simpleMessage("Tarjous"),
+        "promoCode": MessageLookupByLibrary.simpleMessage("Promokoodi"),
         "purchase": MessageLookupByLibrary.simpleMessage("Ostaa"),
         "purchaseAlarm": MessageLookupByLibrary.simpleMessage("Osto hälytys"),
         "purchaseConfirmed":
@@ -298,6 +306,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("Tallenna ja julkaise"),
         "search": MessageLookupByLibrary.simpleMessage("Hae"),
+        "seeAllPromoCode":
+            MessageLookupByLibrary.simpleMessage("Näytä kaikki promokoodit"),
         "select": MessageLookupByLibrary.simpleMessage("Valitse"),
         "selectCategory":
             MessageLookupByLibrary.simpleMessage("Valitse kategoria"),
@@ -308,7 +318,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Olemme lähettäneet sähköpostin, jossa on ohjeet salasanan vaihtamiseen osoitteeseen:"),
         "sendLink":
             MessageLookupByLibrary.simpleMessage("Lähetä nollauslinkki"),
+        "sendMessage": MessageLookupByLibrary.simpleMessage("Lähetä viesti"),
         "sendSms": MessageLookupByLibrary.simpleMessage("Lähetä SMS"),
+        "sendYourEmail":
+            MessageLookupByLibrary.simpleMessage("Lähetä sähköpostisi"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "Päivitä profiilisi saadaksesi paremman vaikutelman lääkärillesi"),
         "setUpProfile":
@@ -329,6 +342,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("Stock"),
         "stockList": MessageLookupByLibrary.simpleMessage("Osakeluettelo"),
         "subTotal": MessageLookupByLibrary.simpleMessage("Välisumma"),
+        "submit": MessageLookupByLibrary.simpleMessage("Lähetä"),
         "subscription": MessageLookupByLibrary.simpleMessage("Tilaus"),
         "supplier": MessageLookupByLibrary.simpleMessage("Toimittaja"),
         "supplierName":
@@ -372,9 +386,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "whatNew": MessageLookupByLibrary.simpleMessage("Mikä on uutta"),
         "wholeSalePrice": MessageLookupByLibrary.simpleMessage("Tukkuhinta"),
         "wholesaler": MessageLookupByLibrary.simpleMessage("Tukkukauppias"),
+        "writeYourMessageHere":
+            MessageLookupByLibrary.simpleMessage("Kirjoita viestisi tähän"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("Käytät "),
         "youWantTodeletetheProduct": MessageLookupByLibrary.simpleMessage(
             "Haluatko poistaa tämän tuotteen?"),
-        "yourPack": MessageLookupByLibrary.simpleMessage("Sinun pakettisi")
+        "yourPack": MessageLookupByLibrary.simpleMessage("Sinun pakettisi"),
+        "yourPackageExpiredInDays": MessageLookupByLibrary.simpleMessage(
+            "Pakettisi vanhenee 5 päivän kuluttua"),
+        "yourPackageExpiredToday": MessageLookupByLibrary.simpleMessage(
+            "Pakettisi vanhenee tänään\n\nOsta uudelleen, ole hyvä")
       };
 }

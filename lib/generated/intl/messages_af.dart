@@ -50,6 +50,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Voeg asseblief \'n Verkoop by"),
         "addSales": MessageLookupByLibrary.simpleMessage("Voeg Verkope by"),
         "addUnit": MessageLookupByLibrary.simpleMessage("Voeg Eenheid by"),
+        "addUserRole":
+            MessageLookupByLibrary.simpleMessage("Voeg Gebruikersrol By"),
         "address": MessageLookupByLibrary.simpleMessage("Adres"),
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Alle besigheidsoplossings"),
@@ -60,6 +62,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "Daar is \'n nuwe opdatering beskikbaar\nBlaai verby die opdatering"),
         "apply": MessageLookupByLibrary.simpleMessage("Pas toe"),
+        "backToHome": MessageLookupByLibrary.simpleMessage("Terug Na Huis"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("Bangladesj"),
         "billTO": MessageLookupByLibrary.simpleMessage("Betaal aan"),
         "brandName": MessageLookupByLibrary.simpleMessage("Handelsmerknaam"),
@@ -74,6 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Kanselleer"),
         "capacity": MessageLookupByLibrary.simpleMessage("Kapasiteit"),
         "cash": MessageLookupByLibrary.simpleMessage("Kontant"),
+        "categories": MessageLookupByLibrary.simpleMessage("Kategorieë"),
         "categoryName": MessageLookupByLibrary.simpleMessage("Kategorie Naam"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("Verander Wagwoord"),
@@ -104,6 +108,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Verbind jou drukker"),
         "contactDetials":
             MessageLookupByLibrary.simpleMessage("Kontakbesonderhede"),
+        "contactUs": MessageLookupByLibrary.simpleMessage("Kontak Ons"),
         "continueButton": MessageLookupByLibrary.simpleMessage("Gaan voort"),
         "country": MessageLookupByLibrary.simpleMessage("Land"),
         "createAcc":
@@ -212,6 +217,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noData": MessageLookupByLibrary.simpleMessage("Geen Data Beskikbaar"),
         "noDataAvailabe":
             MessageLookupByLibrary.simpleMessage("Geen data beskikbaar"),
+        "noRoleFound": MessageLookupByLibrary.simpleMessage(
+            "Geen Gebruikersrol Gevind Nie"),
         "noSupplier":
             MessageLookupByLibrary.simpleMessage("Geen Verskaffer Beskikbaar"),
         "note": MessageLookupByLibrary.simpleMessage("Nota"),
@@ -257,6 +264,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("Profiel"),
         "profit": MessageLookupByLibrary.simpleMessage("Wins"),
         "promo": MessageLookupByLibrary.simpleMessage("Promosie"),
+        "promoCode": MessageLookupByLibrary.simpleMessage("Promo Kode"),
         "purchase": MessageLookupByLibrary.simpleMessage("Aankoop"),
         "purchaseAlarm": MessageLookupByLibrary.simpleMessage("Aankoop Alarm"),
         "purchaseConfirmed":
@@ -297,6 +305,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("Stoor en Publiseer"),
         "search": MessageLookupByLibrary.simpleMessage("Soek"),
+        "seeAllPromoCode":
+            MessageLookupByLibrary.simpleMessage("Sien alle promokodes"),
         "select": MessageLookupByLibrary.simpleMessage("Kies"),
         "selectCategory":
             MessageLookupByLibrary.simpleMessage("Kies Kategorie"),
@@ -307,7 +317,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ons het \'n E-pos gestuur met instruksies oor hoe om wagwoord te herstel na:"),
         "sendLink":
             MessageLookupByLibrary.simpleMessage("Stuur Herstel Skakel"),
+        "sendMessage": MessageLookupByLibrary.simpleMessage("Stuur Boodskap"),
         "sendSms": MessageLookupByLibrary.simpleMessage("Stuur SMS"),
+        "sendYourEmail": MessageLookupByLibrary.simpleMessage("Stuur u E-pos"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "Werk jou profiel op om beter indruk te maak wanneer jy met jou dokter kommunikeer"),
         "setUpProfile":
@@ -328,6 +340,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("Voorraad"),
         "stockList": MessageLookupByLibrary.simpleMessage("Voorraadlys"),
         "subTotal": MessageLookupByLibrary.simpleMessage("Subtotaal"),
+        "submit": MessageLookupByLibrary.simpleMessage("Dien In"),
         "subscription": MessageLookupByLibrary.simpleMessage("Subskripsie"),
         "supplier": MessageLookupByLibrary.simpleMessage("Verskaffer"),
         "supplierName": MessageLookupByLibrary.simpleMessage("Verskaffer Naam"),
@@ -368,9 +381,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "wholeSalePrice":
             MessageLookupByLibrary.simpleMessage("Groothandelsprys"),
         "wholesaler": MessageLookupByLibrary.simpleMessage("Groothandelaar"),
+        "writeYourMessageHere":
+            MessageLookupByLibrary.simpleMessage("Skryf u boodskap hier"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("Jy gebruik "),
         "youWantTodeletetheProduct": MessageLookupByLibrary.simpleMessage(
             "Wil jy hierdie produk verwyder?"),
-        "yourPack": MessageLookupByLibrary.simpleMessage("Jou Pakket")
+        "yourPack": MessageLookupByLibrary.simpleMessage("Jou Pakket"),
+        "yourPackageExpiredInDays":
+            MessageLookupByLibrary.simpleMessage("U Pakket Verval Binne 5 Dae"),
+        "yourPackageExpiredToday": MessageLookupByLibrary.simpleMessage(
+            "U Pakket Verval Vandag\n\nKoop asseblief weer")
       };
 }

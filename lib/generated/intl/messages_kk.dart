@@ -45,6 +45,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addSale": MessageLookupByLibrary.simpleMessage("Сатып алу қосыңыз"),
         "addSales": MessageLookupByLibrary.simpleMessage("Сатып алу қосу"),
         "addUnit": MessageLookupByLibrary.simpleMessage("Бірлік қосу"),
+        "addUserRole":
+            MessageLookupByLibrary.simpleMessage("Пайдаланушы рөліні қосу"),
         "address": MessageLookupByLibrary.simpleMessage("Мекен-жай"),
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Барлық бизнес шешімдері"),
@@ -55,6 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "Жаңа жаңарту қол жетімді\nПриложениеңізді жаңартыңыз"),
         "apply": MessageLookupByLibrary.simpleMessage("Қолдану"),
+        "backToHome": MessageLookupByLibrary.simpleMessage("Басты бетке оралу"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("Бангладеш"),
         "billTO": MessageLookupByLibrary.simpleMessage("Төлеуші"),
         "brandName": MessageLookupByLibrary.simpleMessage("Бренд атауы"),
@@ -69,6 +72,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Болдырмау"),
         "capacity": MessageLookupByLibrary.simpleMessage("Қабілет"),
         "cash": MessageLookupByLibrary.simpleMessage("Нақт"),
+        "categories": MessageLookupByLibrary.simpleMessage("Санаттар"),
         "categoryName": MessageLookupByLibrary.simpleMessage("Категория аты"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("Құпия сөзді өзгерту"),
@@ -99,6 +103,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Принтерге байланыс"),
         "contactDetials":
             MessageLookupByLibrary.simpleMessage("Байланыс мәліметтері"),
+        "contactUs": MessageLookupByLibrary.simpleMessage("Бізге хабарласыңыз"),
         "continueButton": MessageLookupByLibrary.simpleMessage("Жалғастыру"),
         "country": MessageLookupByLibrary.simpleMessage("Ел"),
         "createAcc":
@@ -207,6 +212,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noAcc": MessageLookupByLibrary.simpleMessage("Ештеңе аккаунт жоқ па?"),
         "noData": MessageLookupByLibrary.simpleMessage("Деректер жоқ"),
         "noDataAvailabe": MessageLookupByLibrary.simpleMessage("Деректер жоқ"),
+        "noRoleFound":
+            MessageLookupByLibrary.simpleMessage("Пайдаланушы рөлі табылмады"),
         "noSupplier": MessageLookupByLibrary.simpleMessage(
             "Қолжетімді тапсырыс беруші жоқ"),
         "note": MessageLookupByLibrary.simpleMessage("Ескертпе"),
@@ -255,6 +262,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("Профиль"),
         "profit": MessageLookupByLibrary.simpleMessage("Кеңес"),
         "promo": MessageLookupByLibrary.simpleMessage("Промо"),
+        "promoCode": MessageLookupByLibrary.simpleMessage("Промокод"),
         "purchase": MessageLookupByLibrary.simpleMessage("Сатып алу"),
         "purchaseAlarm":
             MessageLookupByLibrary.simpleMessage("Сатып алу ескертпесі"),
@@ -297,6 +305,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("Сақтау және жариялау"),
         "search": MessageLookupByLibrary.simpleMessage("Іздеу"),
+        "seeAllPromoCode":
+            MessageLookupByLibrary.simpleMessage("Барлық промокодтарды көру"),
         "select": MessageLookupByLibrary.simpleMessage("Таңдау"),
         "selectCategory":
             MessageLookupByLibrary.simpleMessage("Санатты таңдау"),
@@ -307,7 +317,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendEmail": MessageLookupByLibrary.simpleMessage(
             "Біз сізге құпия сөзді қалпына келтіру бойынша нұсқаулықтармен хат жібердік:"),
         "sendLink": MessageLookupByLibrary.simpleMessage("Сілтеме жіберу"),
+        "sendMessage": MessageLookupByLibrary.simpleMessage("Хабар жіберу"),
         "sendSms": MessageLookupByLibrary.simpleMessage("SMS жіберу"),
+        "sendYourEmail": MessageLookupByLibrary.simpleMessage(
+            "Сіздің электрондық поштаңызды жіберу"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "Дәрігеріңізге жету үшін профиліңізді жаңартыңыз"),
         "setUpProfile":
@@ -328,6 +341,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("Тауарлар"),
         "stockList": MessageLookupByLibrary.simpleMessage("Тауарлар тізімі"),
         "subTotal": MessageLookupByLibrary.simpleMessage("Жалпы сома"),
+        "submit": MessageLookupByLibrary.simpleMessage("Жіберу"),
         "subscription": MessageLookupByLibrary.simpleMessage("Жазылу"),
         "supplier": MessageLookupByLibrary.simpleMessage("Тапсырыс беруші"),
         "supplierName":
@@ -368,10 +382,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "wholeSalePrice":
             MessageLookupByLibrary.simpleMessage("Опт алу бағасы"),
         "wholesaler": MessageLookupByLibrary.simpleMessage("Оптовик"),
+        "writeYourMessageHere":
+            MessageLookupByLibrary.simpleMessage("Хабарыңызды осында жазыңыз"),
         "youRUsing":
             MessageLookupByLibrary.simpleMessage("Сіз пайдаланудағыңыз"),
         "youWantTodeletetheProduct":
             MessageLookupByLibrary.simpleMessage("Бұл өнімді жою керек пе?"),
-        "yourPack": MessageLookupByLibrary.simpleMessage("Сіздің пакетіңіз")
+        "yourPack": MessageLookupByLibrary.simpleMessage("Сіздің пакетіңіз"),
+        "yourPackageExpiredInDays": MessageLookupByLibrary.simpleMessage(
+            "Сіздің пакетіңіз 5 күннен кейін аяқталады"),
+        "yourPackageExpiredToday": MessageLookupByLibrary.simpleMessage(
+            "Сіздің пакетіңіз бүгін аяқталады\n\nӨз пакетіңізді қайтадан сатып алыңыз")
       };
 }

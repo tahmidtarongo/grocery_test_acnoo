@@ -51,6 +51,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Harap Tambahkan Obral"),
         "addSales": MessageLookupByLibrary.simpleMessage("Tambahkan Penjualan"),
         "addUnit": MessageLookupByLibrary.simpleMessage("Tambahkan Satuan"),
+        "addUserRole":
+            MessageLookupByLibrary.simpleMessage("Tambahkan Peran Pengguna"),
         "address": MessageLookupByLibrary.simpleMessage("Alamat"),
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Semua Solusi Bisnis"),
@@ -62,6 +64,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "Pembaruan baru tersedia\nHarap perbarui aplikasi Anda"),
         "apply": MessageLookupByLibrary.simpleMessage("Terapkan"),
+        "backToHome":
+            MessageLookupByLibrary.simpleMessage("Kembali ke Beranda"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("Bangladesh"),
         "billTO": MessageLookupByLibrary.simpleMessage("Tagihan Kepada"),
         "brandName": MessageLookupByLibrary.simpleMessage("Nama merk"),
@@ -76,6 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cancel": MessageLookupByLibrary.simpleMessage("Membatalkan"),
         "capacity": MessageLookupByLibrary.simpleMessage("Kapasitas"),
         "cash": MessageLookupByLibrary.simpleMessage("Tunai"),
+        "categories": MessageLookupByLibrary.simpleMessage("Kategori"),
         "categoryName": MessageLookupByLibrary.simpleMessage("Nama Kategori"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("Ganti kata sandi"),
@@ -104,6 +109,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Hubungkan pencetak Anda"),
         "contactDetials":
             MessageLookupByLibrary.simpleMessage("Rincian Kontak"),
+        "contactUs": MessageLookupByLibrary.simpleMessage("Hubungi Kami"),
         "continueButton": MessageLookupByLibrary.simpleMessage("Melanjutkan"),
         "country": MessageLookupByLibrary.simpleMessage("Negara"),
         "createAcc": MessageLookupByLibrary.simpleMessage("Buat Akun gratis"),
@@ -212,6 +218,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Tidak ada data yang tersedia"),
         "noDataAvailabe":
             MessageLookupByLibrary.simpleMessage("Tidak ada data tersedia"),
+        "noRoleFound": MessageLookupByLibrary.simpleMessage(
+            "Tidak Ada Peran Pengguna Ditemukan"),
         "noSupplier": MessageLookupByLibrary.simpleMessage(
             "Tidak Ada Pemasok yang Tersedia"),
         "note": MessageLookupByLibrary.simpleMessage("Catatan"),
@@ -260,6 +268,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "profile": MessageLookupByLibrary.simpleMessage("Profil"),
         "profit": MessageLookupByLibrary.simpleMessage("Laba"),
         "promo": MessageLookupByLibrary.simpleMessage("Promo"),
+        "promoCode": MessageLookupByLibrary.simpleMessage("Kode Promo"),
         "purchase": MessageLookupByLibrary.simpleMessage("Pembelian"),
         "purchaseAlarm":
             MessageLookupByLibrary.simpleMessage("Alarm Pembelian"),
@@ -303,6 +312,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("Simpan dan Publikasikan"),
         "search": MessageLookupByLibrary.simpleMessage("Mencari"),
+        "seeAllPromoCode":
+            MessageLookupByLibrary.simpleMessage("Lihat semua kode promo"),
         "select": MessageLookupByLibrary.simpleMessage("Pilih"),
         "selectCategory":
             MessageLookupByLibrary.simpleMessage("Pilih Kategori"),
@@ -312,7 +323,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendEmail": MessageLookupByLibrary.simpleMessage(
             "Kami Telah Mengirim Email dengan instruksi tentang cara mengatur ulang kata sandi ke:"),
         "sendLink": MessageLookupByLibrary.simpleMessage("Kirim Ulang Tautan"),
+        "sendMessage": MessageLookupByLibrary.simpleMessage("Kirim Pesan"),
         "sendSms": MessageLookupByLibrary.simpleMessage("Kirim SMS"),
+        "sendYourEmail":
+            MessageLookupByLibrary.simpleMessage("Kirim Email Anda"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "Perbarui profil Anda untuk menghubungkan dokter Anda dengan kesan yang lebih baik"),
         "setUpProfile":
@@ -333,6 +347,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("Saham"),
         "stockList": MessageLookupByLibrary.simpleMessage("Daftar Stok"),
         "subTotal": MessageLookupByLibrary.simpleMessage("Sub Total"),
+        "submit": MessageLookupByLibrary.simpleMessage("Kirim"),
         "subscription": MessageLookupByLibrary.simpleMessage("Langganan"),
         "supplier": MessageLookupByLibrary.simpleMessage("Pemasok"),
         "supplierName": MessageLookupByLibrary.simpleMessage("nama pemasok"),
@@ -374,9 +389,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "whatNew": MessageLookupByLibrary.simpleMessage("Apa yang baru"),
         "wholeSalePrice": MessageLookupByLibrary.simpleMessage("Harga grosir"),
         "wholesaler": MessageLookupByLibrary.simpleMessage("Grosir"),
+        "writeYourMessageHere":
+            MessageLookupByLibrary.simpleMessage("Tulis pesan Anda di sini"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("Anda menggunakan "),
         "youWantTodeletetheProduct": MessageLookupByLibrary.simpleMessage(
             "Anda ingin menghapus produk ini?"),
-        "yourPack": MessageLookupByLibrary.simpleMessage("Paket Anda")
+        "yourPack": MessageLookupByLibrary.simpleMessage("Paket Anda"),
+        "yourPackageExpiredInDays": MessageLookupByLibrary.simpleMessage(
+            "Paket Anda Akan Kedaluwarsa dalam 5 Hari"),
+        "yourPackageExpiredToday": MessageLookupByLibrary.simpleMessage(
+            "Paket Anda Akan Kedaluwarsa Hari Ini\n\nSilakan Beli Lagi")
       };
 }

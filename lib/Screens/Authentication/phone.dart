@@ -129,11 +129,17 @@ class _PhoneAuthState extends State<PhoneAuth> {
                     },
                     child: Text(lang.S.of(context).staffLogin),
                   ),
-                  TextButton(
-                    onPressed: () {
-                      const LoginForm(isEmailLogin: true).launch(context);
-                    },
-                    child: Text(lang.S.of(context).logInWithMail),
+                  Flexible(
+                    child: TextButton(
+                      onPressed: () {
+                        const LoginForm(isEmailLogin: true).launch(context);
+                      },
+                      child: Text(
+                          lang.S.of(context).logInWithMail,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                      ),
+                    ),
                   ),
                 ],
               )

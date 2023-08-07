@@ -50,6 +50,136 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Add User Role`
+  String get addUserRole {
+    return Intl.message(
+      'Add User Role',
+      name: 'addUserRole',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No User Role Found`
+  String get noRoleFound {
+    return Intl.message(
+      'No User Role Found',
+      name: 'noRoleFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your Package Will Expire in 5 Day`
+  String get yourPackageExpiredInDays {
+    return Intl.message(
+      'Your Package Will Expire in 5 Day',
+      name: 'yourPackageExpiredInDays',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your Package Will Expire Today\n\nPlease Purchase again`
+  String get yourPackageExpiredToday {
+    return Intl.message(
+      'Your Package Will Expire Today\n\nPlease Purchase again',
+      name: 'yourPackageExpiredToday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contact Us`
+  String get contactUs {
+    return Intl.message(
+      'Contact Us',
+      name: 'contactUs',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Write your message here`
+  String get writeYourMessageHere {
+    return Intl.message(
+      'Write your message here',
+      name: 'writeYourMessageHere',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send Message`
+  String get sendMessage {
+    return Intl.message(
+      'Send Message',
+      name: 'sendMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send your Email`
+  String get sendYourEmail {
+    return Intl.message(
+      'Send your Email',
+      name: 'sendYourEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Back To Home`
+  String get backToHome {
+    return Intl.message(
+      'Back To Home',
+      name: 'backToHome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Promo Code`
+  String get promoCode {
+    return Intl.message(
+      'Promo Code',
+      name: 'promoCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Submit`
+  String get submit {
+    return Intl.message(
+      'Submit',
+      name: 'submit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `See all promo code`
+  String get seeAllPromoCode {
+    return Intl.message(
+      'See all promo code',
+      name: 'seeAllPromoCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Categories`
+  String get categories {
+    return Intl.message(
+      'Categories',
+      name: 'categories',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Enter your phone number`
   String get enterYourPhoneNumber {
     return Intl.message(
