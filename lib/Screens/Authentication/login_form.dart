@@ -5,7 +5,6 @@ import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/Screens/Authentication/register_form.dart';
 import 'package:mobile_pos/repository/login_repo.dart';
 import 'package:nb_utils/nb_utils.dart';
-
 import '../../constant.dart';
 import 'forgot_password.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
@@ -40,7 +39,6 @@ class _LoginFormState extends State<LoginForm> {
       child: Scaffold(
         body: Consumer(builder: (context, ref, child) {
           final loginProvider = ref.watch(logInProvider);
-
           return Center(
             child: SingleChildScrollView(
               child: Column(

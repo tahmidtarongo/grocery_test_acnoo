@@ -14,6 +14,7 @@ class LogInRepo extends ChangeNotifier {
     EasyLoading.show(status: 'Login...');
     try {
       UserCredential userCredential = await FirebaseAuth.instance.signInWithEmailAndPassword(email: email, password: password);
+      print(userCredential.user?.email);
       // ignore: unnecessary_null_comparison
       if (userCredential != null) {
         EasyLoading.showSuccess('Successful');

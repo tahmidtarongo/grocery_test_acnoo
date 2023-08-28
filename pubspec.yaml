@@ -66,7 +66,7 @@ dependencies:
   shared_preferences: ^2.0.15
   restart_app: ^1.2.1
   intl: ^0.18.0
-  pinput: ^2.2.12
+  pinput: ^3.0.1
   nb_utils: ^6.0.0
   youtube_player_flutter: ^8.1.1
   pdf: ^3.8.4
