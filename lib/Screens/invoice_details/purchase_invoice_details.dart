@@ -41,7 +41,7 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                     leading: Container(
                       height: 50.0,
                       width: 50.0,
-                      decoration:  BoxDecoration(
+                      decoration: BoxDecoration(
                         image: DecorationImage(
                           image: NetworkImage(widget.personalInformationModel.pictureUrl ?? ''),
                         ),
@@ -398,12 +398,12 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                                             isConnect ? finish(context) : toast('Try Again');
                                           },
                                           title: Text('${printerData.availableBluetoothDevices[index]}'),
-                                          subtitle:  Text(lang.S.of(context).clickToConnect),
+                                          subtitle: Text(lang.S.of(context).clickToConnect),
                                         );
                                       },
                                     ),
                                     const SizedBox(height: 10),
-                                     Text(lang.S.of(context).connectPrinter),
+                                    Text(lang.S.of(context).connectPrinter),
                                     const SizedBox(height: 10),
                                     Container(height: 1, width: double.infinity, color: Colors.grey),
                                     const SizedBox(height: 15),
@@ -411,7 +411,7 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                                       onTap: () {
                                         Navigator.pop(context);
                                       },
-                                      child:  Center(
+                                      child: Center(
                                         child: Text(
                                           lang.S.of(context).cancel,
                                           style: const TextStyle(color: mainConstant.kMainColor),
@@ -435,7 +435,7 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                     Radius.circular(30),
                   ),
                 ),
-                child:  Center(
+                child: Center(
                   child: Text(
                     lang.S.of(context).print,
                     style: const TextStyle(

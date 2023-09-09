@@ -131,7 +131,7 @@ class _DueCalculationContactScreenState extends State<DueCalculationContactScree
                               )
                             : Container();
                       })
-                  :  Center(
+                  : Center(
                       child: Text(
                         lang.S.of(context).noDataAvailabe,
                         maxLines: 2,

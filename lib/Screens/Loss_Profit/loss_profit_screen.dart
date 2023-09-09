@@ -337,11 +337,11 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                                                                                                         : toast('Try Again');
                                                                                                   },
                                                                                                   title: Text('${printerData.availableBluetoothDevices[index]}'),
-                                                                                                  subtitle:  Text(lang.S.of(context).clickToConnect),
+                                                                                                  subtitle: Text(lang.S.of(context).clickToConnect),
                                                                                                 );
                                                                                               },
                                                                                             ),
-                                                                                             Padding(
+                                                                                            Padding(
                                                                                               padding: EdgeInsets.only(top: 20, bottom: 10),
                                                                                               child: Text(
                                                                                                 lang.S.of(context).pleaseConnectYourBlutohPrinter,
@@ -355,7 +355,7 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                                                                                               onTap: () {
                                                                                                 Navigator.pop(context);
                                                                                               },
-                                                                                              child:  Center(
+                                                                                              child: Center(
                                                                                                 child: Text(
                                                                                                   lang.S.of(context).cancel,
                                                                                                   style: TextStyle(color: kMainColor),

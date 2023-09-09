@@ -95,8 +95,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-
-                     Text(
+                    Text(
                       lang.S.of(context).yourPackageExpiredInDays,
                       style: const TextStyle(fontSize: 16),
                     ),
@@ -107,7 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         // ignore: use_build_context_synchronously
                         Navigator.pop(context);
                       },
-                      child:  Text(
+                      child: Text(
                         lang.S.of(context).cancel,
                         style: TextStyle(color: Colors.red),
                       ),
@@ -133,7 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                       Text(
+                      Text(
                         lang.S.of(context).yourPackageExpiredToday,
                         style: TextStyle(fontSize: 16),
                         textAlign: TextAlign.center,
@@ -145,13 +144,13 @@ class _HomeScreenState extends State<HomeScreen> {
                             onPressed: () {
                               const PackageScreen().launch(context);
                             },
-                            child:  Text(lang.S.of(context).purchase),
+                            child: Text(lang.S.of(context).purchase),
                           ),
                           TextButton(
                             onPressed: () {
                               Navigator.pop(context);
                             },
-                            child:  Text(
+                            child: Text(
                               lang.S.of(context).cancel,
                               style: TextStyle(color: Colors.red),
                             ),
@@ -213,7 +212,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     // print('UserId: $constUserId');
     // print('UserId: ${FirebaseAuth.instance.currentUser!.uid}');
-    freeIcons=getFreeIcons(context: context);
+    freeIcons = getFreeIcons(context: context);
     return SafeArea(
       child: Consumer(builder: (_, ref, __) {
         final userProfileDetails = ref.watch(profileDetailsProvider);

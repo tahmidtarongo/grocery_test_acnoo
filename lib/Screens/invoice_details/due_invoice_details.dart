@@ -239,12 +239,12 @@ class _DueInvoiceDetailsState extends State<DueInvoiceDetails> {
                                             isConnect ? finish(context) : toast('Try Again');
                                           },
                                           title: Text('${printerData.availableBluetoothDevices[index]}'),
-                                          subtitle:  Text(lang.S.of(context).clickToConnect),
+                                          subtitle: Text(lang.S.of(context).clickToConnect),
                                         );
                                       },
                                     ),
                                     const SizedBox(height: 10),
-                                     Text(lang.S.of(context).connectPrinter),
+                                    Text(lang.S.of(context).connectPrinter),
                                     const SizedBox(height: 10),
                                     Container(height: 1, width: double.infinity, color: Colors.grey),
                                     const SizedBox(height: 15),
@@ -252,7 +252,7 @@ class _DueInvoiceDetailsState extends State<DueInvoiceDetails> {
                                       onTap: () {
                                         Navigator.pop(context);
                                       },
-                                      child:  Center(
+                                      child: Center(
                                         child: Text(
                                           lang.S.of(context).cancel,
                                           style: const TextStyle(color: mainConstant.kMainColor),
@@ -276,7 +276,7 @@ class _DueInvoiceDetailsState extends State<DueInvoiceDetails> {
                     Radius.circular(30),
                   ),
                 ),
-                child:  Center(
+                child: Center(
                   child: Text(
                     lang.S.of(context).print,
                     style: TextStyle(

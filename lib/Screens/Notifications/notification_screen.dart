@@ -28,7 +28,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
         backgroundColor: Colors.white,
         elevation: 0.0,
       ),
-      body:  Padding(
+      body: Padding(
         padding: EdgeInsets.all(10.0),
         child: Column(
           children: [

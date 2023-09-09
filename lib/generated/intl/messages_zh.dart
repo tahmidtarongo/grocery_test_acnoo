@@ -42,10 +42,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("添加单位"),
         "addUserRole": MessageLookupByLibrary.simpleMessage("添加用户角色"),
         "address": MessageLookupByLibrary.simpleMessage("地址"),
-        "allBusinessSolutions":
-            MessageLookupByLibrary.simpleMessage("所有业务解决方案"),
-        "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "Sales Pro是一个完整的商业解决方案，包括库存、帐户、销售、支出和损益/利润。"),
+        "allBusinessSolutions": MessageLookupByLibrary.simpleMessage("所有业务解决方案"),
+        "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage("Sales Pro是一个完整的商业解决方案，包括库存、帐户、销售、支出和损益/利润。"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("已经加入"),
         "amount": MessageLookupByLibrary.simpleMessage("数量"),
         "apply": MessageLookupByLibrary.simpleMessage("应用"),
@@ -69,8 +67,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "chooseCustomer": MessageLookupByLibrary.simpleMessage("选择客户"),
         "chooseSupplier": MessageLookupByLibrary.simpleMessage("选择供应商"),
         "choseYourFeature": MessageLookupByLibrary.simpleMessage("选择您的功能"),
-        "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "功能是使Sales Pro与传统解决方案不同的重要部分。"),
+        "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage("功能是使Sales Pro与传统解决方案不同的重要部分。"),
         "clarence": MessageLookupByLibrary.simpleMessage("克拉伦斯"),
         "clickToConnect": MessageLookupByLibrary.simpleMessage("点击连接"),
         "close": MessageLookupByLibrary.simpleMessage("关闭"),
@@ -103,8 +100,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "dueList": MessageLookupByLibrary.simpleMessage("到期清单"),
         "dueReport": MessageLookupByLibrary.simpleMessage("到期报告"),
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage("易于使用的移动 POS"),
-        "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Sales Pro应用免费且易于使用。事实上，它是全球最好的POS系统之一。"),
+        "easytheusedesciption": MessageLookupByLibrary.simpleMessage("Sales Pro应用免费且易于使用。事实上，它是全球最好的POS系统之一。"),
         "edit": MessageLookupByLibrary.simpleMessage("编辑"),
         "editPhone": MessageLookupByLibrary.simpleMessage("编辑电话号码？"),
         "editPurchaseInvoice": MessageLookupByLibrary.simpleMessage("编辑采购发票"),
@@ -112,17 +108,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("电子邮件地址"),
         "emailText": MessageLookupByLibrary.simpleMessage("电子邮件"),
         "enterAmount": MessageLookupByLibrary.simpleMessage("请输入金额"),
-        "enterEmail":
-            MessageLookupByLibrary.simpleMessage("请在下面输入您的电子邮件地址以接收密码重置链接。"),
+        "enterEmail": MessageLookupByLibrary.simpleMessage("请在下面输入您的电子邮件地址以接收密码重置链接。"),
         "enterExpenseDate": MessageLookupByLibrary.simpleMessage("请输入支出日期"),
         "enterFullAddress": MessageLookupByLibrary.simpleMessage("请输入完整地址"),
         "enterName": MessageLookupByLibrary.simpleMessage("请输入名称"),
         "enterRefNumber": MessageLookupByLibrary.simpleMessage("请输入参考编号"),
-        "enterYourEmailAddress":
-            MessageLookupByLibrary.simpleMessage("请输入您的电子邮件地址"),
+        "enterYourEmailAddress": MessageLookupByLibrary.simpleMessage("请输入您的电子邮件地址"),
         "enterYourName": MessageLookupByLibrary.simpleMessage("请输入您的姓名"),
-        "enterYourPhoneNumber":
-            MessageLookupByLibrary.simpleMessage("请输入您的电话号码"),
+        "enterYourPhoneNumber": MessageLookupByLibrary.simpleMessage("请输入您的电话号码"),
         "expense": MessageLookupByLibrary.simpleMessage("支出"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("费用类别"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("费用日期"),
@@ -182,10 +175,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "paypalPay": MessageLookupByLibrary.simpleMessage("使用贝宝支付"),
         "phone": MessageLookupByLibrary.simpleMessage("电话号码"),
         "phoneVerification": MessageLookupByLibrary.simpleMessage("电话验证"),
-        "pleaseConnectThePrinterFirst":
-            MessageLookupByLibrary.simpleMessage("请先连接打印机"),
-        "pleaseEnterAConfirmPassword":
-            MessageLookupByLibrary.simpleMessage("请输入确认密码"),
+        "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage("请先连接打印机"),
+        "pleaseEnterAConfirmPassword": MessageLookupByLibrary.simpleMessage("请输入确认密码"),
         "pleaseEnterAPassword": MessageLookupByLibrary.simpleMessage("请输入密码"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("保费计划"),
         "previousDue": MessageLookupByLibrary.simpleMessage("以前到期"),
@@ -212,8 +203,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "recentTransaction": MessageLookupByLibrary.simpleMessage("最近的交易"),
         "referenceNo": MessageLookupByLibrary.simpleMessage("参考编号"),
         "register": MessageLookupByLibrary.simpleMessage("登记"),
-        "registerTitle":
-            MessageLookupByLibrary.simpleMessage("我们需要注册您的手机，无需入门！"),
+        "registerTitle": MessageLookupByLibrary.simpleMessage("我们需要注册您的手机，无需入门！"),
         "remainingDue": MessageLookupByLibrary.simpleMessage("剩余应付款"),
         "rememberMeLater": MessageLookupByLibrary.simpleMessage("以后提醒我"),
         "reports": MessageLookupByLibrary.simpleMessage("报告"),
@@ -234,14 +224,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "selectLang": MessageLookupByLibrary.simpleMessage("选择你的语言"),
         "send": MessageLookupByLibrary.simpleMessage("发送"),
         "sendCode": MessageLookupByLibrary.simpleMessage("发送代码"),
-        "sendEmail": MessageLookupByLibrary.simpleMessage(
-            "我们已发送一封电子邮件，其中包含有关如何重设密码的说明："),
+        "sendEmail": MessageLookupByLibrary.simpleMessage("我们已发送一封电子邮件，其中包含有关如何重设密码的说明："),
         "sendLink": MessageLookupByLibrary.simpleMessage("发送重置链接"),
         "sendMessage": MessageLookupByLibrary.simpleMessage("发送消息"),
         "sendSms": MessageLookupByLibrary.simpleMessage("发送短信"),
         "sendYourEmail": MessageLookupByLibrary.simpleMessage("发送您的电子邮件"),
-        "setUpDesc":
-            MessageLookupByLibrary.simpleMessage("更新您的个人资料以使您的医生获得更好的印象"),
+        "setUpDesc": MessageLookupByLibrary.simpleMessage("更新您的个人资料以使您的医生获得更好的印象"),
         "setUpProfile": MessageLookupByLibrary.simpleMessage("设置您的个人资料"),
         "setting": MessageLookupByLibrary.simpleMessage("设置"),
         "share": MessageLookupByLibrary.simpleMessage("分享"),
@@ -259,10 +247,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "subscription": MessageLookupByLibrary.simpleMessage("订阅"),
         "supplier": MessageLookupByLibrary.simpleMessage("供应商"),
         "supplierName": MessageLookupByLibrary.simpleMessage("供应商名称"),
-        "thakYouForYourPurchase":
-            MessageLookupByLibrary.simpleMessage("感谢您的购买"),
-        "thankYouForYourDuePayment":
-            MessageLookupByLibrary.simpleMessage("感谢您的付款"),
+        "thakYouForYourPurchase": MessageLookupByLibrary.simpleMessage("感谢您的购买"),
+        "thankYouForYourDuePayment": MessageLookupByLibrary.simpleMessage("感谢您的付款"),
         "toDate": MessageLookupByLibrary.simpleMessage("迄今为止"),
         "total": MessageLookupByLibrary.simpleMessage("全部的"),
         "totalAmount": MessageLookupByLibrary.simpleMessage("总金额"),
@@ -291,13 +277,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "whatNew": MessageLookupByLibrary.simpleMessage("什么是新的"),
         "wholeSalePrice": MessageLookupByLibrary.simpleMessage("批发价"),
         "wholesaler": MessageLookupByLibrary.simpleMessage("批发商"),
-        "writeYourMessageHere":
-            MessageLookupByLibrary.simpleMessage("在此处编写您的消息"),
+        "writeYourMessageHere": MessageLookupByLibrary.simpleMessage("在此处编写您的消息"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("您正在使用 "),
         "yourPack": MessageLookupByLibrary.simpleMessage("你的包裹"),
-        "yourPackageExpiredInDays":
-            MessageLookupByLibrary.simpleMessage("您的套餐将在5天内过期"),
-        "yourPackageExpiredToday":
-            MessageLookupByLibrary.simpleMessage("您的套餐今天将会过期\n\n请重新购买")
+        "yourPackageExpiredInDays": MessageLookupByLibrary.simpleMessage("您的套餐将在5天内过期"),
+        "yourPackageExpiredToday": MessageLookupByLibrary.simpleMessage("您的套餐今天将会过期\n\n请重新购买")
       };
 }

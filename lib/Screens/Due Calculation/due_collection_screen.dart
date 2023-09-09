@@ -358,7 +358,7 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                           onChanged: (value) {
                             setState(() {});
                           },
-                          decoration:  InputDecoration(
+                          decoration: InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             labelText: lang.S.of(context).description,
                             hintText: lang.S.of(context).addNote,
@@ -371,7 +371,7 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                           height: 60,
                           width: 100,
                           decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), color: Colors.grey.shade200),
-                          child:  Center(
+                          child: Center(
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
@@ -468,7 +468,7 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                                     });
                                   } else {
                                     // ignore: use_build_context_synchronously
-                                    ScaffoldMessenger.of(context).showSnackBar( SnackBar(
+                                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                                       content: Text(lang.S.of(context).pleaseConnectThePrinterFirst),
                                     ));
                                     // ignore: use_build_context_synchronously
@@ -507,7 +507,7 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                                                             }
                                                           },
                                                           title: Text('${printerData.availableBluetoothDevices[index]}'),
-                                                          subtitle:  Text(lang.S.of(context).clickToConnect),
+                                                          subtitle: Text(lang.S.of(context).clickToConnect),
                                                         );
                                                       },
                                                     ),
@@ -529,7 +529,7 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                                                         consumerRef.refresh(profileDetailsProvider);
                                                         const DueReportScreen().launch(context);
                                                       },
-                                                      child:  Center(
+                                                      child: Center(
                                                         child: Text(
                                                           lang.S.of(context).cancel,
                                                           style: TextStyle(color: kMainColor),

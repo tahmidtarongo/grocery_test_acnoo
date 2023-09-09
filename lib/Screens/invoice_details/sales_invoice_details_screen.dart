@@ -42,7 +42,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                     leading: Container(
                       height: 50.0,
                       width: 50.0,
-                      decoration:  BoxDecoration(
+                      decoration: BoxDecoration(
                         image: DecorationImage(
                           image: NetworkImage(widget.personalInformationModel.pictureUrl ?? ''),
                           // image: AssetImage('images/logoPos.png'),
@@ -399,7 +399,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                                             isConnect ? finish(context) : toast('Try Again');
                                           },
                                           title: Text('${printerData.availableBluetoothDevices[index]}'),
-                                          subtitle:  Text(lang.S.of(context).clickToConnect),
+                                          subtitle: Text(lang.S.of(context).clickToConnect),
                                         );
                                       },
                                     ),
@@ -412,7 +412,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                                       onTap: () {
                                         Navigator.pop(context);
                                       },
-                                      child:  Center(
+                                      child: Center(
                                         child: Text(
                                           lang.S.of(context).cancel,
                                           style: TextStyle(color: mainConstant.kMainColor),
@@ -436,7 +436,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                     Radius.circular(30),
                   ),
                 ),
-                child:  Center(
+                child: Center(
                   child: Text(
                     lang.S.of(context).print,
                     style: const TextStyle(

@@ -88,7 +88,7 @@ class _SelectLanguageState extends State<SelectLanguage> {
             setState(
               () async {
                 await saveData(selectedLanguage).then(
-                  (value) => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const Home())),
+                  (value) => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Home())),
                 );
               },
             );

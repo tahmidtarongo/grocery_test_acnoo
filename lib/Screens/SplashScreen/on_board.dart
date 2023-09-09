@@ -20,8 +20,7 @@ class _OnBoardState extends State<OnBoard> {
   int currentIndexPage = 0;
   String buttonText = 'Next';
 
-
-  List<Map<String, dynamic>> getSlider({required BuildContext context}){
+  List<Map<String, dynamic>> getSlider({required BuildContext context}) {
     List<Map<String, dynamic>> sliderList = [
       {
         "icon": 'images/onboard1.png',
@@ -41,11 +40,12 @@ class _OnBoardState extends State<OnBoard> {
     ];
     return sliderList;
   }
+
   List<Map<String, dynamic>> sliderList = [];
 
   @override
   Widget build(BuildContext context) {
-    sliderList=getSlider(context: context);
+    sliderList = getSlider(context: context);
     return Scaffold(
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
@@ -140,9 +140,9 @@ class _OnBoardState extends State<OnBoard> {
               buttonDecoration: kButtonDecoration.copyWith(color: kMainColor, borderRadius: const BorderRadius.all(Radius.circular(30))),
               onPressed: () {
                 setState(
-                      () {
-                        currentIndexPage < 2 ? pageController.nextPage(duration: const Duration(microseconds: 1000), curve: Curves.bounceInOut) : const PhoneAuth().launch(context);
-                        // : const SignInScreen().launch(context);
+                  () {
+                    currentIndexPage < 2 ? pageController.nextPage(duration: const Duration(microseconds: 1000), curve: Curves.bounceInOut) : const PhoneAuth().launch(context);
+                    // : const SignInScreen().launch(context);
                   },
                 );
               },

@@ -134,7 +134,7 @@ class _PaymentCompletedState extends State<PaymentCompleted> {
                 ),
               ),
               const Spacer(),
-               ListTile(
+              ListTile(
                 leading: const Icon(
                   Icons.payment,
                   color: kGreyTextColor,
@@ -145,7 +145,7 @@ class _PaymentCompletedState extends State<PaymentCompleted> {
                   color: kGreyTextColor,
                 ),
               ),
-               ListTile(
+              ListTile(
                 leading: Icon(
                   Icons.payment,
                   color: kGreyTextColor,
@@ -156,7 +156,7 @@ class _PaymentCompletedState extends State<PaymentCompleted> {
                   color: kGreyTextColor,
                 ),
               ),
-               ListTile(
+              ListTile(
                 leading: Icon(
                   Icons.payment,
                   color: kGreyTextColor,
@@ -167,7 +167,7 @@ class _PaymentCompletedState extends State<PaymentCompleted> {
                   color: kGreyTextColor,
                 ),
               ),
-               ListTile(
+              ListTile(
                 leading: Icon(
                   Icons.payment,
                   color: kGreyTextColor,

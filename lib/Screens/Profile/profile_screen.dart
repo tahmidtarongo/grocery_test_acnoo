@@ -83,7 +83,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             const SizedBox(
               height: 10.0,
             ),
-             Row(
+            Row(
               children: [
                 Expanded(
                   child: Padding(
@@ -164,7 +164,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
             const SizedBox(
               height: 20.0,
             ),
-            ButtonGlobalWithoutIcon(buttontext: lang.S.of(context).send, buttonDecoration: kButtonDecoration.copyWith(color: kMainColor), onPressed: null, buttonTextColor: Colors.white),
+            ButtonGlobalWithoutIcon(
+                buttontext: lang.S.of(context).send, buttonDecoration: kButtonDecoration.copyWith(color: kMainColor), onPressed: null, buttonTextColor: Colors.white),
           ],
         ),
       ),

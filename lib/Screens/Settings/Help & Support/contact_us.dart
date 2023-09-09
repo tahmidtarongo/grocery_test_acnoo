@@ -36,7 +36,7 @@ class _ContactUsState extends State<ContactUs> {
             child: Container(
               height: 150.0,
               width: MediaQuery.of(context).size.width - 40,
-              child:  TextField(
+              child: TextField(
                 keyboardType: TextInputType.name,
                 maxLines: 30,
                 decoration: InputDecoration(

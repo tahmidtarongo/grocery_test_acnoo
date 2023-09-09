@@ -156,7 +156,7 @@ class _AddExpenseState extends State<AddExpense> {
                               const SizedBox(
                                 width: 10.0,
                               ),
-                            dropdownValue == 'Select Category'?Text(lang.S.of(context).selectCategory) :Text(dropdownValue),
+                              dropdownValue == 'Select Category' ? Text(lang.S.of(context).selectCategory) : Text(dropdownValue),
                               const Spacer(),
                               const Icon(Icons.keyboard_arrow_down),
                               const SizedBox(

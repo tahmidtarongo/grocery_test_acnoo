@@ -42,14 +42,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("ユニットを追加"),
         "addUserRole": MessageLookupByLibrary.simpleMessage("ユーザーロールの追加"),
         "address": MessageLookupByLibrary.simpleMessage("住所"),
-        "allBusinessSolutions":
-            MessageLookupByLibrary.simpleMessage("すべてのビジネスソリューション"),
-        "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "Sales Proは在庫、アカウント、売上、経費、損益を備えた完全なビジネスソリューションです。"),
+        "allBusinessSolutions": MessageLookupByLibrary.simpleMessage("すべてのビジネスソリューション"),
+        "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage("Sales Proは在庫、アカウント、売上、経費、損益を備えた完全なビジネスソリューションです。"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("追加済み"),
         "amount": MessageLookupByLibrary.simpleMessage("額"),
-        "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
-            "新しいアップデートが利用可能です\nアプリを更新してください"),
+        "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage("新しいアップデートが利用可能です\nアプリを更新してください"),
         "apply": MessageLookupByLibrary.simpleMessage("適用"),
         "backToHome": MessageLookupByLibrary.simpleMessage("ホームに戻る"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("バングラデシュ"),
@@ -71,8 +68,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "chooseCustomer": MessageLookupByLibrary.simpleMessage("顧客を選択"),
         "chooseSupplier": MessageLookupByLibrary.simpleMessage("サプライヤーを選ぶ"),
         "choseYourFeature": MessageLookupByLibrary.simpleMessage("機能を選択"),
-        "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "機能はSales Proを伝統的なソリューションとは異なるものにする重要な要素です。"),
+        "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage("機能はSales Proを伝統的なソリューションとは異なるものにする重要な要素です。"),
         "clarence": MessageLookupByLibrary.simpleMessage("クラレンス"),
         "clickToConnect": MessageLookupByLibrary.simpleMessage("クリックして接続"),
         "close": MessageLookupByLibrary.simpleMessage("近い"),
@@ -105,10 +101,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "dueAmount": MessageLookupByLibrary.simpleMessage("支払額: "),
         "dueList": MessageLookupByLibrary.simpleMessage("期限リスト"),
         "dueReport": MessageLookupByLibrary.simpleMessage("期日報告"),
-        "easyToUseThePos":
-            MessageLookupByLibrary.simpleMessage("簡単に使用できるモバイルPOS"),
-        "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Sales Proアプリは無料で、使いやすいです。実際、世界中で最も優れたPOSシステムの1つです。"),
+        "easyToUseThePos": MessageLookupByLibrary.simpleMessage("簡単に使用できるモバイルPOS"),
+        "easytheusedesciption": MessageLookupByLibrary.simpleMessage("Sales Proアプリは無料で、使いやすいです。実際、世界中で最も優れたPOSシステムの1つです。"),
         "edit": MessageLookupByLibrary.simpleMessage("編集"),
         "editPhone": MessageLookupByLibrary.simpleMessage("電話番号を編集しますか?"),
         "editPurchaseInvoice": MessageLookupByLibrary.simpleMessage("購入請求書の編集"),
@@ -117,19 +111,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("電子メールアドレス"),
         "emailText": MessageLookupByLibrary.simpleMessage("Eメール"),
         "enterAmount": MessageLookupByLibrary.simpleMessage("金額を入力してください"),
-        "enterEmail": MessageLookupByLibrary.simpleMessage(
-            "パスワードリセットリンクを受け取るには、以下にメールアドレスを入力してください。"),
-        "enterExpenseDate":
-            MessageLookupByLibrary.simpleMessage("経費の日付を入力してください"),
-        "enterFullAddress":
-            MessageLookupByLibrary.simpleMessage("完全な住所を入力してください"),
+        "enterEmail": MessageLookupByLibrary.simpleMessage("パスワードリセットリンクを受け取るには、以下にメールアドレスを入力してください。"),
+        "enterExpenseDate": MessageLookupByLibrary.simpleMessage("経費の日付を入力してください"),
+        "enterFullAddress": MessageLookupByLibrary.simpleMessage("完全な住所を入力してください"),
         "enterName": MessageLookupByLibrary.simpleMessage("名前を入力してください"),
         "enterRefNumber": MessageLookupByLibrary.simpleMessage("参照番号を入力してください"),
-        "enterYourEmailAddress":
-            MessageLookupByLibrary.simpleMessage("メールアドレスを入力してください"),
+        "enterYourEmailAddress": MessageLookupByLibrary.simpleMessage("メールアドレスを入力してください"),
         "enterYourName": MessageLookupByLibrary.simpleMessage("お名前を入力してください"),
-        "enterYourPhoneNumber":
-            MessageLookupByLibrary.simpleMessage("電話番号を入力してください"),
+        "enterYourPhoneNumber": MessageLookupByLibrary.simpleMessage("電話番号を入力してください"),
         "expense": MessageLookupByLibrary.simpleMessage("経費"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("経費の分類"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("経費の日付"),
@@ -193,16 +182,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "paypalPay": MessageLookupByLibrary.simpleMessage("Paypalで支払う"),
         "phone": MessageLookupByLibrary.simpleMessage("電話番号"),
         "phoneVerification": MessageLookupByLibrary.simpleMessage("電話認証"),
-        "pleaseConnectThePrinterFirst":
-            MessageLookupByLibrary.simpleMessage("プリンターに接続してください"),
-        "pleaseConnectYourBlutohPrinter":
-            MessageLookupByLibrary.simpleMessage("Bluetoothプリンターに接続してください"),
-        "pleaseEnterAConfirmPassword":
-            MessageLookupByLibrary.simpleMessage("確認用のパスワードを入力してください"),
-        "pleaseEnterAPassword":
-            MessageLookupByLibrary.simpleMessage("パスワードを入力してください"),
-        "powerdedByAcnoo":
-            MessageLookupByLibrary.simpleMessage("Powered By Acnoo"),
+        "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage("プリンターに接続してください"),
+        "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage("Bluetoothプリンターに接続してください"),
+        "pleaseEnterAConfirmPassword": MessageLookupByLibrary.simpleMessage("確認用のパスワードを入力してください"),
+        "pleaseEnterAPassword": MessageLookupByLibrary.simpleMessage("パスワードを入力してください"),
+        "powerdedByAcnoo": MessageLookupByLibrary.simpleMessage("Powered By Acnoo"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("プレミアムプラン"),
         "previousDue": MessageLookupByLibrary.simpleMessage("期限前"),
         "previousPayAmount": MessageLookupByLibrary.simpleMessage("以前の支払額"),
@@ -229,8 +213,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "recivethePin": MessageLookupByLibrary.simpleMessage("PINを受け取る"),
         "referenceNo": MessageLookupByLibrary.simpleMessage("参照番号"),
         "register": MessageLookupByLibrary.simpleMessage("登録"),
-        "registerTitle":
-            MessageLookupByLibrary.simpleMessage("開始せずに電話を登録する必要があります。"),
+        "registerTitle": MessageLookupByLibrary.simpleMessage("開始せずに電話を登録する必要があります。"),
         "remainingDue": MessageLookupByLibrary.simpleMessage("未払い残高"),
         "rememberMeLater": MessageLookupByLibrary.simpleMessage("後で覚えておく"),
         "reports": MessageLookupByLibrary.simpleMessage("レポート"),
@@ -246,21 +229,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "save": MessageLookupByLibrary.simpleMessage("保存"),
         "saveNPublish": MessageLookupByLibrary.simpleMessage("保存して公開"),
         "search": MessageLookupByLibrary.simpleMessage("検索"),
-        "seeAllPromoCode":
-            MessageLookupByLibrary.simpleMessage("すべてのプロモーションコードを見る"),
+        "seeAllPromoCode": MessageLookupByLibrary.simpleMessage("すべてのプロモーションコードを見る"),
         "select": MessageLookupByLibrary.simpleMessage("選択する"),
         "selectCategory": MessageLookupByLibrary.simpleMessage("カテゴリを選択"),
         "selectLang": MessageLookupByLibrary.simpleMessage("あなたが使う言語を選んでください"),
         "send": MessageLookupByLibrary.simpleMessage("送信"),
         "sendCode": MessageLookupByLibrary.simpleMessage("コードを送信"),
-        "sendEmail": MessageLookupByLibrary.simpleMessage(
-            "パスワードをリセットする方法を記載したメールを次の宛先に送信しました。"),
+        "sendEmail": MessageLookupByLibrary.simpleMessage("パスワードをリセットする方法を記載したメールを次の宛先に送信しました。"),
         "sendLink": MessageLookupByLibrary.simpleMessage("リセットリンクを送信"),
         "sendMessage": MessageLookupByLibrary.simpleMessage("メッセージを送信"),
         "sendSms": MessageLookupByLibrary.simpleMessage("SMS送信"),
         "sendYourEmail": MessageLookupByLibrary.simpleMessage("あなたのメールアドレスを送信"),
-        "setUpDesc": MessageLookupByLibrary.simpleMessage(
-            "プロフィールを更新して、医師とのつながりをより良い印象にしましょう"),
+        "setUpDesc": MessageLookupByLibrary.simpleMessage("プロフィールを更新して、医師とのつながりをより良い印象にしましょう"),
         "setUpProfile": MessageLookupByLibrary.simpleMessage("プロフィールを設定する"),
         "setting": MessageLookupByLibrary.simpleMessage("設定"),
         "share": MessageLookupByLibrary.simpleMessage("共有"),
@@ -278,10 +258,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "subscription": MessageLookupByLibrary.simpleMessage("サブスクリプション"),
         "supplier": MessageLookupByLibrary.simpleMessage("サプライヤー"),
         "supplierName": MessageLookupByLibrary.simpleMessage("サプライヤ名"),
-        "thakYouForYourPurchase":
-            MessageLookupByLibrary.simpleMessage("ご購入いただきありがとうございます"),
-        "thankYouForYourDuePayment":
-            MessageLookupByLibrary.simpleMessage("未払い金額の支払いありがとうございます"),
+        "thakYouForYourPurchase": MessageLookupByLibrary.simpleMessage("ご購入いただきありがとうございます"),
+        "thankYouForYourDuePayment": MessageLookupByLibrary.simpleMessage("未払い金額の支払いありがとうございます"),
         "toDate": MessageLookupByLibrary.simpleMessage("現在まで"),
         "total": MessageLookupByLibrary.simpleMessage("合計"),
         "totalAmount": MessageLookupByLibrary.simpleMessage("合計金額"),
@@ -311,15 +289,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "whatNew": MessageLookupByLibrary.simpleMessage("新着情報"),
         "wholeSalePrice": MessageLookupByLibrary.simpleMessage("卸売価格"),
         "wholesaler": MessageLookupByLibrary.simpleMessage("卸売業者"),
-        "writeYourMessageHere":
-            MessageLookupByLibrary.simpleMessage("ここにメッセージを書いてください"),
+        "writeYourMessageHere": MessageLookupByLibrary.simpleMessage("ここにメッセージを書いてください"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("使用している "),
-        "youWantTodeletetheProduct":
-            MessageLookupByLibrary.simpleMessage("この商品を削除しますか？"),
+        "youWantTodeletetheProduct": MessageLookupByLibrary.simpleMessage("この商品を削除しますか？"),
         "yourPack": MessageLookupByLibrary.simpleMessage("あなたのパッケージ"),
-        "yourPackageExpiredInDays":
-            MessageLookupByLibrary.simpleMessage("パッケージはあと5日で期限切れになります"),
-        "yourPackageExpiredToday": MessageLookupByLibrary.simpleMessage(
-            "パッケージは本日期限切れになります。\n\n再度購入してください")
+        "yourPackageExpiredInDays": MessageLookupByLibrary.simpleMessage("パッケージはあと5日で期限切れになります"),
+        "yourPackageExpiredToday": MessageLookupByLibrary.simpleMessage("パッケージは本日期限切れになります。\n\n再度購入してください")
       };
 }

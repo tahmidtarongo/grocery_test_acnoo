@@ -65,11 +65,11 @@ class _HomeState extends State<Home> {
         selectedItemColor: kMainColor,
         // ignore: prefer_const_literals_to_create_immutables
         items: [
-           BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: const Icon(FeatherIcons.home),
             label: lang.S.of(context).home,
           ),
-           BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: const Icon(FeatherIcons.shoppingCart),
             label: lang.S.of(context).sales,
           ),
@@ -77,7 +77,7 @@ class _HomeState extends State<Home> {
             icon: const Icon(FeatherIcons.fileText),
             label: lang.S.of(context).reports,
           ),
-           BottomNavigationBarItem(icon: const Icon(FeatherIcons.settings), label: lang.S.of(context).setting),
+          BottomNavigationBarItem(icon: const Icon(FeatherIcons.settings), label: lang.S.of(context).setting),
         ],
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,

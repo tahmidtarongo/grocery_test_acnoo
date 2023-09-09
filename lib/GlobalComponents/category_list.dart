@@ -93,7 +93,7 @@ class _CategoryListState extends State<CategoryList> {
                 child: categoryData.when(data: (data) {
                   return SingleChildScrollView(
                     child: ListView.builder(
-                       physics: NeverScrollableScrollPhysics(),
+                        physics: NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
                         itemCount: data.length,
                         itemBuilder: (context, i) {

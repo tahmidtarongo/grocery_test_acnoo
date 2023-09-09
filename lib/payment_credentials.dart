@@ -10,8 +10,6 @@ const bool useWebview = true;
 const bool useCashOnDelivery = true;
 const String defaultPaymentMethod = "Paypal";
 
-
-
 //Paypal Settings
 const String paypalClientId = 'ATKxCBB49G3rPw4DG_0vDmygbZeFKubzub7jGWpeUW5jzfElK9qOzqJOfrBTYvS7RuIhoPdWHB4DIdLJ';
 const String paypalClientSecret = 'EIDqVfraXlxDBMnswmhqP2qYv6rr_KPDgK269T-q1K9tB455OpPL_fc65irFiPBpiVXcoOQwpKqU3PAu';

@@ -233,7 +233,7 @@ class _AddProductState extends State<AddProduct> {
                               size = value;
                             });
                           },
-                          decoration:  InputDecoration(
+                          decoration: InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             labelText: lang.S.of(context).size,
                             hintText: 'M',
@@ -252,7 +252,7 @@ class _AddProductState extends State<AddProduct> {
                               color = value;
                             });
                           },
-                          decoration:  InputDecoration(
+                          decoration: InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             labelText: lang.S.of(context).color,
                             hintText: 'Green',
@@ -275,7 +275,7 @@ class _AddProductState extends State<AddProduct> {
                               weight = value;
                             });
                           },
-                          decoration:  InputDecoration(
+                          decoration: InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             labelText: lang.S.of(context).weight,
                             hintText: '10 inc',
@@ -294,7 +294,7 @@ class _AddProductState extends State<AddProduct> {
                               capacity = value;
                             });
                           },
-                          decoration:  InputDecoration(
+                          decoration: InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             labelText: lang.S.of(context).capacity,
                             hintText: '244 liter',
@@ -314,7 +314,7 @@ class _AddProductState extends State<AddProduct> {
                         type = value;
                       });
                     },
-                    decoration:  InputDecoration(
+                    decoration: InputDecoration(
                       floatingLabelBehavior: FloatingLabelBehavior.always,
                       labelText: lang.S.of(context).type,
                       hintText: 'Usb C',

@@ -128,7 +128,7 @@ class _PackageScreenState extends State<PackageScreen> {
                         const SizedBox(height: 8),
                         Row(
                           children: [
-                             Text(
+                            Text(
                               lang.S.of(context).youRUsing,
                               style: TextStyle(fontSize: 14),
                             ),

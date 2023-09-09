@@ -361,9 +361,13 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                       //     onCancel: (params) {
                       //       EasyLoading.showError('Cancel');
                       //     }).launch(context);
-                      PaymentPage(selectedPlan: selectedPlan, onError: (){
-                        EasyLoading.showError("Payment error");
-                      }, totalAmount: selectedPlan.subscriptionPrice.toString()).launch(context);
+                      PaymentPage(
+                              selectedPlan: selectedPlan,
+                              onError: () {
+                                EasyLoading.showError("Payment error");
+                              },
+                              totalAmount: selectedPlan.subscriptionPrice.toString())
+                          .launch(context);
                     },
                     child: Container(
                       height: 60,

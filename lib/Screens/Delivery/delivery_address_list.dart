@@ -37,7 +37,7 @@ class _DeliveryAddressState extends State<DeliveryAddress> {
       body: Consumer(builder: (context, ref, __) {
         final providerData = ref.watch(deliveryAddressProvider);
         if (providerData.value!.isEmpty) {
-          return  Center(
+          return Center(
               child: Text(
             lang.S.of(context).noDataAvailabe,
             style: const TextStyle(fontSize: 18),

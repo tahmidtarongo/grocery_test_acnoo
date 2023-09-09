@@ -10,8 +10,7 @@ class PaytmConfig {
   final String _mid = "...";
   final String _mKey = "...";
   final String _website = "DEFAULT"; // or "WEBSTAGING" in Testing
-  final String _url =
-      'https://flutter-paytm-backend.herokuapp.com/generateTxnToken'; // Add your own backend URL
+  final String _url = 'https://flutter-paytm-backend.herokuapp.com/generateTxnToken'; // Add your own backend URL
 
   String get mid => _mid;
   String get mKey => _mKey;
@@ -29,9 +28,9 @@ class PaytmConfig {
       "custId": FirebaseAuth.instance.currentUser?.uid ?? "", // Pass users Customer ID here
     });
   }
+
   Future<void> generateTxnToken(double amount, String orderId) async {
-    final callBackUrl =
-        'https://securegw.paytm.in/theia/paytmCallback?ORDER_ID=$orderId';
+    final callBackUrl = 'https://securegw.paytm.in/theia/paytmCallback?ORDER_ID=$orderId';
     final body = getMap(amount, callBackUrl, orderId);
 
     try {
@@ -46,8 +45,8 @@ class PaytmConfig {
       EasyLoading.showError(e.toString());
     }
   }
-  Future<void> initiateTransaction(String orderId, double amount,
-      String txnToken, String callBackUrl) async {
+
+  Future<void> initiateTransaction(String orderId, double amount, String txnToken, String callBackUrl) async {
     try {
       var response = AllInOneSdk.startTransaction(
         mid,
@@ -58,8 +57,7 @@ class PaytmConfig {
         false, // isStaging
         false, // restrictAppInvoke
       );
-      response.then((value) {
-      }).catchError((onError) {
+      response.then((value) {}).catchError((onError) {
         if (onError is PlatformException) {
           EasyLoading.showError("${onError.message!} \n  ${onError.details}");
         } else {

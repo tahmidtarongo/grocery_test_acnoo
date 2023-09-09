@@ -135,9 +135,9 @@ class _PhoneAuthState extends State<PhoneAuth> {
                         const LoginForm(isEmailLogin: true).launch(context);
                       },
                       child: Text(
-                          lang.S.of(context).logInWithMail,
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 1,
+                        lang.S.of(context).logInWithMail,
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
                       ),
                     ),
                   ),

@@ -61,7 +61,7 @@ class _UserRoleScreenState extends State<UserRoleScreen> {
                   },
                 );
               } else {
-                return  Center(child: Text(lang.S.of(context).noRoleFound));
+                return Center(child: Text(lang.S.of(context).noRoleFound));
               }
             }, error: (e, stack) {
               return Text(e.toString());
@@ -82,7 +82,7 @@ class _UserRoleScreenState extends State<UserRoleScreen> {
                 color: kMainColor,
                 borderRadius: BorderRadius.all(Radius.circular(10)),
               ),
-              child:  Center(
+              child: Center(
                 child: Text(
                   lang.S.of(context).addUserRole,
                   style: TextStyle(fontSize: 18, color: Colors.white),

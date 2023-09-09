@@ -76,8 +76,7 @@ class _SettingScreenState extends State<SettingScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Consumer(builder: (context, ref, _) {
-        AsyncValue<PersonalInformationModel> userProfileDetails =
-            ref.watch(profileDetailsProvider);
+        AsyncValue<PersonalInformationModel> userProfileDetails = ref.watch(profileDetailsProvider);
 
         return Scaffold(
           body: SingleChildScrollView(
@@ -92,18 +91,13 @@ class _SettingScreenState extends State<SettingScreen> {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              isSubUser
-                                  ? null
-                                  : const ProfileDetails().launch(context);
+                              isSubUser ? null : const ProfileDetails().launch(context);
                             },
                             child: Container(
                               height: 42,
                               width: 42,
                               decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image:
-                                        NetworkImage(details.pictureUrl ?? ''),
-                                    fit: BoxFit.cover),
+                                image: DecorationImage(image: NetworkImage(details.pictureUrl ?? ''), fit: BoxFit.cover),
                                 borderRadius: BorderRadius.circular(50),
                               ),
                             ),
@@ -116,9 +110,7 @@ class _SettingScreenState extends State<SettingScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                isSubUser
-                                    ? '${details.companyName ?? ''} [$subUserTitle]'
-                                    : details.companyName ?? '',
+                                isSubUser ? '${details.companyName ?? ''} [$subUserTitle]' : details.companyName ?? '',
                                 style: GoogleFonts.poppins(
                                   fontSize: 20.0,
                                   fontWeight: FontWeight.bold,
@@ -691,7 +683,6 @@ class _SettingScreenState extends State<SettingScreen> {
                     EasyLoading.show(status: 'Log out');
                     await _signOut();
                     Future.delayed(const Duration(milliseconds: 1000), () async {
-
                       ///________subUser_logout___________________________________________________
                       final prefs = await SharedPreferences.getInstance();
                       await prefs.setBool('isSubUser', false);
