@@ -42,11 +42,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("단위 추가"),
         "addUserRole": MessageLookupByLibrary.simpleMessage("사용자 역할 추가"),
         "address": MessageLookupByLibrary.simpleMessage("주소"),
-        "allBusinessSolutions": MessageLookupByLibrary.simpleMessage("모든 비즈니스 솔루션"),
-        "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage("Sales Pro는 재고, 계정, 판매, 지출 및 손익을 모두 다루는 완벽한 비즈니스 솔루션입니다."),
+        "allBusinessSolutions":
+            MessageLookupByLibrary.simpleMessage("모든 비즈니스 솔루션"),
+        "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
+            "Sales Pro는 재고, 계정, 판매, 지출 및 손익을 모두 다루는 완벽한 비즈니스 솔루션입니다."),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("이미 추가됨"),
         "amount": MessageLookupByLibrary.simpleMessage("양"),
-        "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage("새 업데이트가 가능합니다.\n앱을 업데이트하세요"),
+        "anewUpdateAvailable":
+            MessageLookupByLibrary.simpleMessage("새 업데이트가 가능합니다.\n앱을 업데이트하세요"),
         "apply": MessageLookupByLibrary.simpleMessage("적용"),
         "backToHome": MessageLookupByLibrary.simpleMessage("홈으로 돌아가기"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("방글라데시"),
@@ -68,7 +71,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "chooseCustomer": MessageLookupByLibrary.simpleMessage("고객 선택"),
         "chooseSupplier": MessageLookupByLibrary.simpleMessage("공급업체 선택"),
         "choseYourFeature": MessageLookupByLibrary.simpleMessage("기능 선택"),
-        "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage("기능은 Sales Pro를 전통적인 솔루션과 다르게 만드는 중요한 요소입니다."),
+        "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
+            "기능은 Sales Pro를 전통적인 솔루션과 다르게 만드는 중요한 요소입니다."),
         "clarence": MessageLookupByLibrary.simpleMessage("클라렌스"),
         "clickToConnect": MessageLookupByLibrary.simpleMessage("클릭하여 연결"),
         "close": MessageLookupByLibrary.simpleMessage("닫다"),
@@ -102,7 +106,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "dueList": MessageLookupByLibrary.simpleMessage("예정 목록"),
         "dueReport": MessageLookupByLibrary.simpleMessage("기한 보고서"),
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage("쉬운 사용 모바일 포스"),
-        "easytheusedesciption": MessageLookupByLibrary.simpleMessage("Sales Pro 앱은 무료이며 사용하기 쉽습니다. 실제로 세계 최고의 POS 시스템 중 하나입니다."),
+        "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
+            "Sales Pro 앱은 무료이며 사용하기 쉽습니다. 실제로 세계 최고의 POS 시스템 중 하나입니다."),
         "edit": MessageLookupByLibrary.simpleMessage("편집하다"),
         "editPhone": MessageLookupByLibrary.simpleMessage("전화번호 수정?"),
         "editPurchaseInvoice": MessageLookupByLibrary.simpleMessage("구매 송장 편집"),
@@ -111,14 +116,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "email": MessageLookupByLibrary.simpleMessage("이메일 주소"),
         "emailText": MessageLookupByLibrary.simpleMessage("이메일"),
         "enterAmount": MessageLookupByLibrary.simpleMessage("금액 입력"),
-        "enterEmail": MessageLookupByLibrary.simpleMessage("비밀번호 재설정 링크를 받으려면 아래에 이메일 주소를 입력하세요."),
+        "enterEmail": MessageLookupByLibrary.simpleMessage(
+            "비밀번호 재설정 링크를 받으려면 아래에 이메일 주소를 입력하세요."),
         "enterExpenseDate": MessageLookupByLibrary.simpleMessage("지출 날짜 입력"),
-        "enterFullAddress": MessageLookupByLibrary.simpleMessage("전체 주소를 입력하세요"),
+        "enterFullAddress":
+            MessageLookupByLibrary.simpleMessage("전체 주소를 입력하세요"),
         "enterName": MessageLookupByLibrary.simpleMessage("이름 입력"),
         "enterRefNumber": MessageLookupByLibrary.simpleMessage("참조 번호 입력"),
-        "enterYourEmailAddress": MessageLookupByLibrary.simpleMessage("이메일 주소를 입력하세요"),
+        "enterYourEmailAddress":
+            MessageLookupByLibrary.simpleMessage("이메일 주소를 입력하세요"),
         "enterYourName": MessageLookupByLibrary.simpleMessage("이름을 입력하세요"),
-        "enterYourPhoneNumber": MessageLookupByLibrary.simpleMessage("전화번호를 입력하세요"),
+        "enterYourPhoneNumber":
+            MessageLookupByLibrary.simpleMessage("전화번호를 입력하세요"),
         "expense": MessageLookupByLibrary.simpleMessage("지출"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("비용 범주"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("비용 날짜"),
@@ -163,7 +172,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noAcc": MessageLookupByLibrary.simpleMessage("계정이 없으신가요?"),
         "noData": MessageLookupByLibrary.simpleMessage("자료 없음"),
         "noDataAvailabe": MessageLookupByLibrary.simpleMessage("데이터 없음"),
-        "noRoleFound": MessageLookupByLibrary.simpleMessage("사용자 역할을 찾을 수 없습니다"),
+        "noRoleFound":
+            MessageLookupByLibrary.simpleMessage("사용자 역할을 찾을 수 없습니다"),
         "noSupplier": MessageLookupByLibrary.simpleMessage("공급업체 없음"),
         "note": MessageLookupByLibrary.simpleMessage("메모"),
         "notification": MessageLookupByLibrary.simpleMessage("알림"),
@@ -182,11 +192,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "paypalPay": MessageLookupByLibrary.simpleMessage("페이팔로 지불"),
         "phone": MessageLookupByLibrary.simpleMessage("전화 번호"),
         "phoneVerification": MessageLookupByLibrary.simpleMessage("전화 확인"),
-        "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage("프린터를 먼저 연결하세요"),
-        "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage("블루투스 프린터를 연결하세요"),
-        "pleaseEnterAConfirmPassword": MessageLookupByLibrary.simpleMessage("확인 비밀번호를 입력하세요"),
-        "pleaseEnterAPassword": MessageLookupByLibrary.simpleMessage("비밀번호를 입력하세요"),
-        "powerdedByAcnoo": MessageLookupByLibrary.simpleMessage("Powered By Acnoo"),
+        "pleaseConnectThePrinterFirst":
+            MessageLookupByLibrary.simpleMessage("프린터를 먼저 연결하세요"),
+        "pleaseConnectYourBlutohPrinter":
+            MessageLookupByLibrary.simpleMessage("블루투스 프린터를 연결하세요"),
+        "pleaseEnterAConfirmPassword":
+            MessageLookupByLibrary.simpleMessage("확인 비밀번호를 입력하세요"),
+        "pleaseEnterAPassword":
+            MessageLookupByLibrary.simpleMessage("비밀번호를 입력하세요"),
+        "powerdedByAcnoo":
+            MessageLookupByLibrary.simpleMessage("Powered By Acnoo"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("프리미엄 플랜"),
         "previousDue": MessageLookupByLibrary.simpleMessage("이전 기한"),
         "previousPayAmount": MessageLookupByLibrary.simpleMessage("이전 지불 금액"),
@@ -213,7 +228,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "recivethePin": MessageLookupByLibrary.simpleMessage("핀 코드 받기"),
         "referenceNo": MessageLookupByLibrary.simpleMessage("참조 번호"),
         "register": MessageLookupByLibrary.simpleMessage("등록하다"),
-        "registerTitle": MessageLookupByLibrary.simpleMessage("시작하지 않고 전화를 등록해야 합니다!"),
+        "registerTitle":
+            MessageLookupByLibrary.simpleMessage("시작하지 않고 전화를 등록해야 합니다!"),
         "remainingDue": MessageLookupByLibrary.simpleMessage("미지급액 남음"),
         "rememberMeLater": MessageLookupByLibrary.simpleMessage("나중에 기억하기"),
         "reports": MessageLookupByLibrary.simpleMessage("보고서"),
@@ -229,18 +245,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "save": MessageLookupByLibrary.simpleMessage("구하다"),
         "saveNPublish": MessageLookupByLibrary.simpleMessage("저장 및 게시"),
         "search": MessageLookupByLibrary.simpleMessage("찾다"),
-        "seeAllPromoCode": MessageLookupByLibrary.simpleMessage("모든 프로모션 코드 보기"),
+        "seeAllPromoCode":
+            MessageLookupByLibrary.simpleMessage("모든 프로모션 코드 보기"),
         "select": MessageLookupByLibrary.simpleMessage("선택하다"),
         "selectCategory": MessageLookupByLibrary.simpleMessage("카테고리 선택"),
         "selectLang": MessageLookupByLibrary.simpleMessage("언어 선택"),
         "send": MessageLookupByLibrary.simpleMessage("보내기"),
         "sendCode": MessageLookupByLibrary.simpleMessage("코드 보내기"),
-        "sendEmail": MessageLookupByLibrary.simpleMessage("비밀번호를 재설정하는 방법에 대한 지침이 포함된 이메일을 다음 주소로 보냈습니다."),
+        "sendEmail": MessageLookupByLibrary.simpleMessage(
+            "비밀번호를 재설정하는 방법에 대한 지침이 포함된 이메일을 다음 주소로 보냈습니다."),
         "sendLink": MessageLookupByLibrary.simpleMessage("재설정 링크 보내기"),
         "sendMessage": MessageLookupByLibrary.simpleMessage("메시지 보내기"),
         "sendSms": MessageLookupByLibrary.simpleMessage("문자 보내기"),
         "sendYourEmail": MessageLookupByLibrary.simpleMessage("이메일 보내기"),
-        "setUpDesc": MessageLookupByLibrary.simpleMessage("프로필을 업데이트하여 의사에게 더 나은 인상을 심어주세요."),
+        "setUpDesc": MessageLookupByLibrary.simpleMessage(
+            "프로필을 업데이트하여 의사에게 더 나은 인상을 심어주세요."),
         "setUpProfile": MessageLookupByLibrary.simpleMessage("프로필 설정"),
         "setting": MessageLookupByLibrary.simpleMessage("설정"),
         "share": MessageLookupByLibrary.simpleMessage("공유"),
@@ -258,8 +277,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "subscription": MessageLookupByLibrary.simpleMessage("신청"),
         "supplier": MessageLookupByLibrary.simpleMessage("공급자"),
         "supplierName": MessageLookupByLibrary.simpleMessage("공급 업체 이름"),
-        "thakYouForYourPurchase": MessageLookupByLibrary.simpleMessage("구매해 주셔서 감사합니다"),
-        "thankYouForYourDuePayment": MessageLookupByLibrary.simpleMessage("미지급액에 대한 감사합니다"),
+        "thakYouForYourPurchase":
+            MessageLookupByLibrary.simpleMessage("구매해 주셔서 감사합니다"),
+        "thankYouForYourDuePayment":
+            MessageLookupByLibrary.simpleMessage("미지급액에 대한 감사합니다"),
         "toDate": MessageLookupByLibrary.simpleMessage("현재까지"),
         "total": MessageLookupByLibrary.simpleMessage("총"),
         "totalAmount": MessageLookupByLibrary.simpleMessage("총액"),
@@ -289,11 +310,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "whatNew": MessageLookupByLibrary.simpleMessage("새로운 기능"),
         "wholeSalePrice": MessageLookupByLibrary.simpleMessage("도매 가격"),
         "wholesaler": MessageLookupByLibrary.simpleMessage("도매상"),
-        "writeYourMessageHere": MessageLookupByLibrary.simpleMessage("여기에 메시지를 작성하세요"),
+        "writeYourMessageHere":
+            MessageLookupByLibrary.simpleMessage("여기에 메시지를 작성하세요"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("당신은 사용하고 있습니다 "),
-        "youWantTodeletetheProduct": MessageLookupByLibrary.simpleMessage("이 제품을 삭제하시겠습니까?"),
+        "youWantTodeletetheProduct":
+            MessageLookupByLibrary.simpleMessage("이 제품을 삭제하시겠습니까?"),
         "yourPack": MessageLookupByLibrary.simpleMessage("귀하의 패키지"),
-        "yourPackageExpiredInDays": MessageLookupByLibrary.simpleMessage("귀하의 패키지는 5일 후에 만료됩니다"),
-        "yourPackageExpiredToday": MessageLookupByLibrary.simpleMessage("귀하의 패키지는 오늘 만료됩니다\n\n다시 구매해주세요")
+        "yourPackageExpiredInDays":
+            MessageLookupByLibrary.simpleMessage("귀하의 패키지는 5일 후에 만료됩니다"),
+        "yourPackageExpiredToday": MessageLookupByLibrary.simpleMessage(
+            "귀하의 패키지는 오늘 만료됩니다\n\n다시 구매해주세요")
       };
 }

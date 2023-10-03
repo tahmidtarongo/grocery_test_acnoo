@@ -26,6 +26,7 @@ class SuccessScreen extends StatelessWidget {
         if (email == 'phone') {
           currentUserData.putUserData(userId: FirebaseAuth.instance.currentUser!.uid, isSubUser: false, title: '', email: '');
         } else {
+          currentUserData.putUserData(userId: FirebaseAuth.instance.currentUser!.uid, isSubUser: false, title: '', email: '');
           for (var element in data) {
             if (element.email == email) {
               currentUserData.putUserData(userId: element.databaseId, isSubUser: true, title: element.userTitle, email: element.email);

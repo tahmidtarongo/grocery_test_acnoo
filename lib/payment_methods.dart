@@ -9,7 +9,6 @@ import 'package:flutter_sslcommerz/model/SSLCTransactionInfoModel.dart';
 import 'package:flutter_sslcommerz/model/SSLCommerzInitialization.dart';
 import 'package:flutter_sslcommerz/model/SSLCurrencyType.dart';
 import 'package:flutter_sslcommerz/sslcommerz.dart';
-import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:flutter_tap_payment/flutter_tap_payment.dart';
 import 'package:flutterwave_standard/core/flutterwave.dart';
 import 'package:flutterwave_standard/models/requests/customer.dart';
@@ -19,7 +18,6 @@ import 'package:mobile_pos/payment_credentials.dart';
 import 'package:mobile_pos/paytm_config.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:http/http.dart' as http;
-import 'package:razorpay_flutter/razorpay_flutter.dart';
 import 'Screens/Home/home.dart';
 import 'constant.dart' as cns;
 import 'model/subscription_model.dart';
@@ -59,7 +57,7 @@ class _PaymentPageState extends State<PaymentPage> {
         elevation: 0.0,
         title: Text(
           lang.S.of(context).paymentMethods,
-          style: TextStyle(color: Colors.black),
+          style: const TextStyle(color: Colors.black),
         ),
       ),
       body: SingleChildScrollView(
@@ -74,7 +72,8 @@ class _PaymentPageState extends State<PaymentPage> {
                   Material(
                     elevation: 0.0,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0), side: BorderSide(color: whichPaymentIsChecked == 'Paypal' ? primaryColor : kGreyTextColor.withOpacity(0.2))),
+                        borderRadius: BorderRadius.circular(10.0),
+                        side: BorderSide(color: whichPaymentIsChecked == 'Paypal' ? primaryColor : kGreyTextColor.withOpacity(0.2))),
                     color: Colors.white,
                     child: CheckboxListTile(
                       value: whichPaymentIsChecked == 'Paypal',
@@ -86,7 +85,7 @@ class _PaymentPageState extends State<PaymentPage> {
                       },
                       contentPadding: const EdgeInsets.all(10.0),
                       activeColor: primaryColor,
-                      title: Text(
+                      title: const Text(
                         'Paypal',
                         style: TextStyle(
                           color: Colors.black,
@@ -131,13 +130,12 @@ class _PaymentPageState extends State<PaymentPage> {
                   //     ),
                   //   ),
                   // ).visible(useStripe),
-                  const SizedBox(
-                    height: 20.0,
-                  ).visible(usePaytm),
+                  const SizedBox(height: 20.0).visible(usePaytm),
                   Material(
                     elevation: 0.0,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0), side: BorderSide(color: whichPaymentIsChecked == 'Paytm' ? primaryColor : kGreyTextColor.withOpacity(0.2))),
+                        borderRadius: BorderRadius.circular(10.0),
+                        side: BorderSide(color: whichPaymentIsChecked == 'Paytm' ? primaryColor : kGreyTextColor.withOpacity(0.2))),
                     color: Colors.white,
                     child: CheckboxListTile(
                       value: whichPaymentIsChecked == 'Paytm',
@@ -147,9 +145,9 @@ class _PaymentPageState extends State<PaymentPage> {
                           val == true ? whichPaymentIsChecked = 'Paytm' : whichPaymentIsChecked = 'Paypal';
                         });
                       },
-                      contentPadding: EdgeInsets.all(10.0),
+                      contentPadding: const EdgeInsets.all(10.0),
                       activeColor: primaryColor,
-                      title: Text(
+                      title: const Text(
                         'Paytm',
                         style: TextStyle(
                           color: Colors.black,
@@ -162,44 +160,45 @@ class _PaymentPageState extends State<PaymentPage> {
                       ),
                     ),
                   ).visible(usePaytm),
-                  const SizedBox(
-                    height: 20.0,
-                  ).visible(useRazorpay),
-                  Material(
-                    elevation: 0.0,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0), side: BorderSide(color: whichPaymentIsChecked == 'Razorpay' ? primaryColor : kGreyTextColor.withOpacity(0.2))),
-                    color: Colors.white,
-                    child: CheckboxListTile(
-                      value: whichPaymentIsChecked == 'Razorpay',
-                      checkboxShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
-                      onChanged: (val) {
-                        setState(() {
-                          val == true ? whichPaymentIsChecked = 'Razorpay' : whichPaymentIsChecked = 'Paypal';
-                        });
-                      },
-                      contentPadding: const EdgeInsets.all(10.0),
-                      activeColor: primaryColor,
-                      title: const Text(
-                        'Rezorpay',
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      ),
-                      secondary: Image.asset(
-                        'images/razorpay-logo.png',
-                        height: 50.0,
-                        width: 80.0,
-                      ),
-                    ),
-                  ).visible(useRazorpay),
+                  // const SizedBox(
+                  //   height: 20.0,
+                  // ).visible(useRazorpay),
+                  // Material(
+                  //   elevation: 0.0,
+                  //   shape: RoundedRectangleBorder(
+                  //       borderRadius: BorderRadius.circular(10.0), side: BorderSide(color: whichPaymentIsChecked == 'Razorpay' ? primaryColor : kGreyTextColor.withOpacity(0.2))),
+                  //   color: Colors.white,
+                  //   child: CheckboxListTile(
+                  //     value: whichPaymentIsChecked == 'Razorpay',
+                  //     checkboxShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
+                  //     onChanged: (val) {
+                  //       setState(() {
+                  //         val == true ? whichPaymentIsChecked = 'Razorpay' : whichPaymentIsChecked = 'Paypal';
+                  //       });
+                  //     },
+                  //     contentPadding: const EdgeInsets.all(10.0),
+                  //     activeColor: primaryColor,
+                  //     title: const Text(
+                  //       'Rezorpay',
+                  //       style: TextStyle(
+                  //         color: Colors.black,
+                  //       ),
+                  //     ),
+                  //     secondary: Image.asset(
+                  //       'images/razorpay-logo.png',
+                  //       height: 50.0,
+                  //       width: 80.0,
+                  //     ),
+                  //   ),
+                  // ).visible(useRazorpay),
                   const SizedBox(
                     height: 20.0,
                   ).visible(useSslCommerz),
                   Material(
                     elevation: 0.0,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0), side: BorderSide(color: whichPaymentIsChecked == 'SSLCommerz' ? primaryColor : kGreyTextColor.withOpacity(0.2))),
+                        borderRadius: BorderRadius.circular(10.0),
+                        side: BorderSide(color: whichPaymentIsChecked == 'SSLCommerz' ? primaryColor : kGreyTextColor.withOpacity(0.2))),
                     color: Colors.white,
                     child: CheckboxListTile(
                       value: whichPaymentIsChecked == 'SSLCommerz',
@@ -233,7 +232,8 @@ class _PaymentPageState extends State<PaymentPage> {
                   Material(
                     elevation: 0.0,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0), side: BorderSide(color: whichPaymentIsChecked == 'Tap' ? primaryColor : kGreyTextColor.withOpacity(0.2))),
+                        borderRadius: BorderRadius.circular(10.0),
+                        side: BorderSide(color: whichPaymentIsChecked == 'Tap' ? primaryColor : kGreyTextColor.withOpacity(0.2))),
                     color: Colors.white,
                     child: CheckboxListTile(
                       value: whichPaymentIsChecked == 'Tap',
@@ -245,9 +245,9 @@ class _PaymentPageState extends State<PaymentPage> {
                       },
                       contentPadding: const EdgeInsets.all(10.0),
                       activeColor: primaryColor,
-                      title: Text(
+                      title: const Text(
                         'Tap',
-                        style: const TextStyle(
+                        style: TextStyle(
                           color: Colors.black,
                         ),
                       ),
@@ -325,7 +325,7 @@ class _PaymentPageState extends State<PaymentPage> {
   _handlePayment(String totalAmount, String currency) {
     switch (whichPaymentIsChecked) {
       case 'Razorpay':
-        _handleRazorpayPayment(totalAmount, currency);
+        // _handleRazorpayPayment(totalAmount, currency);
         break;
       case 'Paypal':
         _handlePaypalPayment(totalAmount, currency);
@@ -340,7 +340,7 @@ class _PaymentPageState extends State<PaymentPage> {
       //   _handlePayStackPayment(totalAmount, currency);
       //   break;
       case 'Stripe':
-        _handleStripePayment(totalAmount, currency);
+        // _handleStripePayment(totalAmount, currency);
         break;
       case 'Tap':
         _handleTapPayment(totalAmount, currency);
@@ -379,27 +379,27 @@ class _PaymentPageState extends State<PaymentPage> {
     }
   }
 
-  _handleStripePayment(String totalAmount, String currency) async {
-    try {
-      //STEP 1: Create Payment Intent
-      var paymentIntent = await createPaymentIntent((totalAmount * 100).toString(), stripeCurrency);
-      Stripe.publishableKey = stripePublishableKey;
-      //STEP 2: Initialize Payment Sheet
-      await Stripe.instance.initPaymentSheet(
-          paymentSheetParameters: SetupPaymentSheetParameters(
-              paymentIntentClientSecret: paymentIntent!['client_secret'], //Gotten from payment intent
-              style: ThemeMode.light,
-              merchantDisplayName: ''));
-
-      //STEP 3: Display Payment sheet
-      await Stripe.instance.presentPaymentSheet().then((value) {
-        onSuccess();
-        paymentIntent = null;
-      });
-    } on StripeException catch (e) {
-      widget.onError();
-    }
-  }
+  // _handleStripePayment(String totalAmount, String currency) async {
+  //   try {
+  //     //STEP 1: Create Payment Intent
+  //     var paymentIntent = await createPaymentIntent((totalAmount * 100).toString(), stripeCurrency);
+  //     Stripe.publishableKey = stripePublishableKey;
+  //     //STEP 2: Initialize Payment Sheet
+  //     await Stripe.instance.initPaymentSheet(
+  //         paymentSheetParameters: SetupPaymentSheetParameters(
+  //             paymentIntentClientSecret: paymentIntent!['client_secret'], //Gotten from payment intent
+  //             style: ThemeMode.light,
+  //             merchantDisplayName: ''));
+  //
+  //     //STEP 3: Display Payment sheet
+  //     await Stripe.instance.presentPaymentSheet().then((value) {
+  //       onSuccess();
+  //       paymentIntent = null;
+  //     });
+  //   } on StripeException catch (e) {
+  //     widget.onError();
+  //   }
+  // }
 
   Future<void> _handleSslCommerzPayment(String totalAmount, String currency) async {
     Sslcommerz sslcommerz = Sslcommerz(
@@ -448,26 +448,26 @@ class _PaymentPageState extends State<PaymentPage> {
     }
   }
 
-  //Razorpay payment
-  _handleRazorpayPayment(String totalAmount, String currency) {
-    Razorpay razorpay = Razorpay();
-    var options = {
-      'key': razorpayid,
-      'amount': totalAmount,
-      "currency": razorpayCurrency,
-      'name': 'Test',
-      'retry': {'enabled': true, 'max_count': 1},
-      'send_sms_hash': true,
-    };
-    razorpay.on(Razorpay.EVENT_PAYMENT_ERROR, () {
-      widget.onError();
-    });
-    razorpay.on(Razorpay.EVENT_PAYMENT_SUCCESS, (PaymentSuccessResponse response) {
-      onSuccess();
-    });
-    razorpay.on(Razorpay.EVENT_EXTERNAL_WALLET, () {});
-    razorpay.open(options);
-  }
+  // Razorpay payment
+  // _handleRazorpayPayment(String totalAmount, String currency) {
+  //   Razorpay razorpay = Razorpay();
+  //   var options = {
+  //     'key': razorpayid,
+  //     'amount': totalAmount,
+  //     "currency": razorpayCurrency,
+  //     'name': 'Test',
+  //     'retry': {'enabled': true, 'max_count': 1},
+  //     'send_sms_hash': true,
+  //   };
+  //   razorpay.on(Razorpay.EVENT_PAYMENT_ERROR, () {
+  //     widget.onError();
+  //   });
+  //   razorpay.on(Razorpay.EVENT_PAYMENT_SUCCESS, (PaymentSuccessResponse response) {
+  //     onSuccess();
+  //   });
+  //   razorpay.on(Razorpay.EVENT_EXTERNAL_WALLET, () {});
+  //   razorpay.open(options);
+  // }
 
   //Paypal payment
   _handlePaypalPayment(String totalAmount, String currency) {
