@@ -100,58 +100,58 @@ class _UnitListState extends State<UnitList> {
                       itemBuilder: (context, i) {
                         return data[i].unitName.contains(search)
                             ? Padding(
-                                padding: const EdgeInsets.only(left: 10.0, right: 10.0),
-                                child: Row(
+                          padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Expanded(
+                                flex: 3,
+                                child: Column(
                                   mainAxisSize: MainAxisSize.min,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Expanded(
-                                      flex: 3,
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.min,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          Text(
-                                            data[i].unitName,
-                                            style: GoogleFonts.poppins(
-                                              fontSize: 18.0,
-                                              color: Colors.black,
-                                            ),
-                                          ),
-                                          // SizedBox(
-                                          //   height: 20,
-                                          //   width: context.width(),
-                                          //   child: ListView.builder(
-                                          //       shrinkWrap: true,
-                                          //       physics: const NeverScrollableScrollPhysics(),
-                                          //       scrollDirection: Axis.horizontal,
-                                          //       itemCount: data[i]..length,
-                                          //       itemBuilder: (context, index) {
-                                          //         return Text(
-                                          //           '${variations[index]}, ',
-                                          //           style: GoogleFonts.poppins(
-                                          //             fontSize: 14.0,
-                                          //             color: Colors.grey,
-                                          //           ),
-                                          //         );
-                                          //       }),
-                                          // ),
-                                        ],
+                                    Text(
+                                      data[i].unitName,
+                                      style: GoogleFonts.poppins(
+                                        fontSize: 18.0,
+                                        color: Colors.black,
                                       ),
                                     ),
-                                    Expanded(
-                                      flex: 1,
-                                      child: ButtonGlobalWithoutIcon(
-                                        buttontext: 'Select',
-                                        buttonDecoration: kButtonDecoration.copyWith(color: kDarkWhite),
-                                        onPressed: () {
-                                          Navigator.pop(context, data[i].unitName);
-                                        },
-                                        buttonTextColor: Colors.black,
-                                      ),
-                                    ),
+                                    // SizedBox(
+                                    //   height: 20,
+                                    //   width: context.width(),
+                                    //   child: ListView.builder(
+                                    //       shrinkWrap: true,
+                                    //       physics: const NeverScrollableScrollPhysics(),
+                                    //       scrollDirection: Axis.horizontal,
+                                    //       itemCount: data[i]..length,
+                                    //       itemBuilder: (context, index) {
+                                    //         return Text(
+                                    //           '${variations[index]}, ',
+                                    //           style: GoogleFonts.poppins(
+                                    //             fontSize: 14.0,
+                                    //             color: Colors.grey,
+                                    //           ),
+                                    //         );
+                                    //       }),
+                                    // ),
                                   ],
                                 ),
-                              )
+                              ),
+                              Expanded(
+                                flex: 1,
+                                child: ButtonGlobalWithoutIcon(
+                                  buttontext: 'Select',
+                                  buttonDecoration: kButtonDecoration.copyWith(color: kDarkWhite),
+                                  onPressed: () {
+                                    Navigator.pop(context, data[i].unitName);
+                                  },
+                                  buttonTextColor: Colors.black,
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
                             : Container();
                       });
                 }, error: (_, __) {
