@@ -302,7 +302,7 @@ class _SalesReportScreenState extends State<SalesReportScreen> {
                                               ),
                                               const SizedBox(height: 10),
                                               Text(
-                                                '  ${lang.S.of(context).total} : $currency ${reTransaction[index].totalAmount.toString()}',
+                                                '${lang.S.of(context).total} : $currency ${reTransaction[index].totalAmount.toString()}',
                                                 style: const TextStyle(color: Colors.grey),
                                               ),
                                               const SizedBox(height: 10),

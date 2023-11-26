@@ -6,7 +6,7 @@ class PrintTransactionModel {
   PrintTransactionModel({required this.transitionModel, required this.personalInformationModel});
 
   PersonalInformationModel personalInformationModel;
-  TransitionModel? transitionModel;
+  SaleTransactionModel? transitionModel;
 }
 
 class PrintPurchaseTransactionModel {

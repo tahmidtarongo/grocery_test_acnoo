@@ -25,7 +25,7 @@ class EditSaleInvoiceSaleProducts extends StatefulWidget {
   // ignore: prefer_typing_uninitialized_variables
   var catName;
   CustomerModel? customerModel;
-  TransitionModel transitionModel;
+  SaleTransactionModel transitionModel;
 
   @override
   // ignore: library_private_types_in_public_api

@@ -26,7 +26,7 @@ import 'package:mobile_pos/generated/l10n.dart' as lang;
 // ignore: must_be_immutable
 class SalesReportEditScreen extends StatefulWidget {
   SalesReportEditScreen({Key? key, required this.transitionModel}) : super(key: key);
-  TransitionModel transitionModel;
+  SaleTransactionModel transitionModel;
 
   @override
   State<SalesReportEditScreen> createState() => _SalesReportEditScreenState();
@@ -92,7 +92,7 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
     return returnAmount <= 0 ? 0 : subTotal - paidAmount;
   }
 
-  late TransitionModel transitionModel = TransitionModel(
+  late SaleTransactionModel transitionModel = SaleTransactionModel(
     customerName: widget.transitionModel.customerName,
     customerPhone: '',
     customerType: '',
@@ -697,7 +697,7 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                                   String? key;
                                   await FirebaseDatabase.instance.ref(constUserId).child('Sales Transition').orderByKey().get().then((value) {
                                     for (var element in value.children) {
-                                      final t = TransitionModel.fromJson(jsonDecode(jsonEncode(element.value)));
+                                      final t = SaleTransactionModel.fromJson(jsonDecode(jsonEncode(element.value)));
                                       if (transitionModel.invoiceNumber == t.invoiceNumber) {
                                         key = element.key;
                                       }

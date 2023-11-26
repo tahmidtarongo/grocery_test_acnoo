@@ -2,11 +2,12 @@ import 'package:mobile_pos/model/product_model.dart';
 
 import 'add_to_cart_model.dart';
 
-class TransitionModel {
+class SaleTransactionModel {
   late String customerName, customerPhone, customerType, invoiceNumber, purchaseDate;
   double? totalAmount;
   double? dueAmount;
   double? returnAmount;
+  num? vat;
   double? discountAmount;
   double? lossProfit;
   int? totalQuantity;
@@ -16,7 +17,7 @@ class TransitionModel {
   List<AddToCartModel>? productList;
   String? sellerName;
 
-  TransitionModel({
+  SaleTransactionModel({
     required this.customerName,
     required this.customerType,
     required this.customerPhone,
@@ -26,6 +27,7 @@ class TransitionModel {
     this.totalAmount,
     this.returnAmount,
     this.discountAmount,
+    this.vat,
     this.isPaid,
     this.paymentType,
     this.productList,
@@ -34,7 +36,7 @@ class TransitionModel {
     this.sellerName,
   });
 
-  TransitionModel.fromJson(Map<dynamic, dynamic> json) {
+  SaleTransactionModel.fromJson(Map<dynamic, dynamic> json) {
     customerName = json['customerName'] as String;
     customerPhone = json['customerPhone'].toString();
     invoiceNumber = json['invoiceNumber'].toString();
@@ -42,6 +44,7 @@ class TransitionModel {
     purchaseDate = json['purchaseDate'].toString();
     lossProfit = double.parse(json['lossProfit'].toString());
     totalQuantity = json['totalQuantity'];
+    vat = json['vat'] ?? 0;
     totalAmount = double.parse(json['totalAmount'].toString());
     discountAmount = double.parse(json['discountAmount'].toString());
     dueAmount = double.parse(json['dueAmount'].toString());
@@ -65,6 +68,7 @@ class TransitionModel {
         'purchaseDate': purchaseDate,
         'totalQuantity': totalQuantity,
         'lossProfit': lossProfit,
+        'vat': vat,
         'discountAmount': discountAmount,
         'totalAmount': totalAmount,
         'dueAmount': dueAmount,

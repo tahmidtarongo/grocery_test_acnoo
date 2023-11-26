@@ -16,7 +16,7 @@ import '../../model/transition_model.dart';
 class SalesInvoiceDetails extends StatefulWidget {
   const SalesInvoiceDetails({Key? key, required this.transitionModel, required this.personalInformationModel}) : super(key: key);
 
-  final TransitionModel transitionModel;
+  final SaleTransactionModel transitionModel;
   final PersonalInformationModel personalInformationModel;
 
   @override

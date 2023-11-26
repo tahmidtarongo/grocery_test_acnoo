@@ -72,8 +72,7 @@ class _PaymentPageState extends State<PaymentPage> {
                   Material(
                     elevation: 0.0,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                        side: BorderSide(color: whichPaymentIsChecked == 'Paypal' ? primaryColor : kGreyTextColor.withOpacity(0.2))),
+                        borderRadius: BorderRadius.circular(10.0), side: BorderSide(color: whichPaymentIsChecked == 'Paypal' ? primaryColor : kGreyTextColor.withOpacity(0.2))),
                     color: Colors.white,
                     child: CheckboxListTile(
                       value: whichPaymentIsChecked == 'Paypal',
@@ -134,8 +133,7 @@ class _PaymentPageState extends State<PaymentPage> {
                   Material(
                     elevation: 0.0,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                        side: BorderSide(color: whichPaymentIsChecked == 'Paytm' ? primaryColor : kGreyTextColor.withOpacity(0.2))),
+                        borderRadius: BorderRadius.circular(10.0), side: BorderSide(color: whichPaymentIsChecked == 'Paytm' ? primaryColor : kGreyTextColor.withOpacity(0.2))),
                     color: Colors.white,
                     child: CheckboxListTile(
                       value: whichPaymentIsChecked == 'Paytm',
@@ -197,8 +195,7 @@ class _PaymentPageState extends State<PaymentPage> {
                   Material(
                     elevation: 0.0,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                        side: BorderSide(color: whichPaymentIsChecked == 'SSLCommerz' ? primaryColor : kGreyTextColor.withOpacity(0.2))),
+                        borderRadius: BorderRadius.circular(10.0), side: BorderSide(color: whichPaymentIsChecked == 'SSLCommerz' ? primaryColor : kGreyTextColor.withOpacity(0.2))),
                     color: Colors.white,
                     child: CheckboxListTile(
                       value: whichPaymentIsChecked == 'SSLCommerz',
@@ -232,8 +229,7 @@ class _PaymentPageState extends State<PaymentPage> {
                   Material(
                     elevation: 0.0,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                        side: BorderSide(color: whichPaymentIsChecked == 'Tap' ? primaryColor : kGreyTextColor.withOpacity(0.2))),
+                        borderRadius: BorderRadius.circular(10.0), side: BorderSide(color: whichPaymentIsChecked == 'Tap' ? primaryColor : kGreyTextColor.withOpacity(0.2))),
                     color: Colors.white,
                     child: CheckboxListTile(
                       value: whichPaymentIsChecked == 'Tap',

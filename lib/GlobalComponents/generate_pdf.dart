@@ -471,7 +471,7 @@ class GeneratePdf {
     // }
   }
 
-  Future<void> generateSaleDocument(TransitionModel transactions, PersonalInformationModel personalInformation, BuildContext context) async {
+  Future<void> generateSaleDocument(SaleTransactionModel transactions, PersonalInformationModel personalInformation, BuildContext context) async {
     final pw.Document doc = pw.Document();
 
     doc.addPage(
@@ -485,14 +485,6 @@ class GeneratePdf {
             child: pw.Column(
               children: [
                 pw.Row(children: [
-                  // pw.Container(
-                  //   height: 50.0,
-                  //   width: 50.0,
-                  //   alignment: pw.Alignment.centerRight,
-                  //   margin: const pw.EdgeInsets.only(bottom: 3.0 * PdfPageFormat.mm),
-                  //   padding: const pw.EdgeInsets.only(bottom: 3.0 * PdfPageFormat.mm),
-                  //   decoration: pw.BoxDecoration(image: pw.DecorationImage(image: netImage), shape: pw.BoxShape.circle),
-                  // ),
                   pw.SizedBox(width: 10.0),
                   pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
                     pw.Text(
@@ -778,21 +770,21 @@ class GeneratePdf {
                         ),
                         pw.SizedBox(height: 5.0),
                         pw.Text(
-                          "Vat: 0.00",
+                          "VAT/GST: ${transactions.vat ?? 0.00}",
                           style: pw.TextStyle(
                             color: PdfColors.black,
                             fontWeight: pw.FontWeight.bold,
                           ),
                         ),
                         pw.SizedBox(height: 5.0),
-                        pw.Text(
-                          "Tax: 0.00",
-                          style: pw.TextStyle(
-                            color: PdfColors.black,
-                            fontWeight: pw.FontWeight.bold,
-                          ),
-                        ),
-                        pw.SizedBox(height: 5.0),
+                        // pw.Text(
+                        //   "Tax: 0.00",
+                        //   style: pw.TextStyle(
+                        //     color: PdfColors.black,
+                        //     fontWeight: pw.FontWeight.bold,
+                        //   ),
+                        // ),
+                        // pw.SizedBox(height: 5.0),
                         pw.Text(
                           "Discount: ${transactions.discountAmount}",
                           style: pw.TextStyle(

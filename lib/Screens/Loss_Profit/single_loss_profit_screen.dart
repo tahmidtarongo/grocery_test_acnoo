@@ -13,7 +13,7 @@ class SingleLossProfitScreen extends StatefulWidget {
     required this.transactionModel,
   }) : super(key: key);
 
-  final TransitionModel transactionModel;
+  final SaleTransactionModel transactionModel;
 
   @override
   State<SingleLossProfitScreen> createState() => _SingleLossProfitScreenState();

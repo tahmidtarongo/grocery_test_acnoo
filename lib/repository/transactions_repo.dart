@@ -6,13 +6,13 @@ import 'package:mobile_pos/model/transition_model.dart';
 import '../model/due_transaction_model.dart';
 
 class TransitionRepo {
-  Future<List<TransitionModel>> getAllTransition() async {
+  Future<List<SaleTransactionModel>> getAllTransition() async {
     final ref = FirebaseDatabase.instance.ref(constUserId).child('Sales Transition');
 
-    List<TransitionModel> transitionList = [];
+    List<SaleTransactionModel> transitionList = [];
     await ref.orderByKey().get().then((value) {
       for (var element in value.children) {
-        transitionList.add(TransitionModel.fromJson(jsonDecode(jsonEncode(element.value))));
+        transitionList.add(SaleTransactionModel.fromJson(jsonDecode(jsonEncode(element.value))));
       }
     });
     ref.keepSynced(true);
