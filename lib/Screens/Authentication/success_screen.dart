@@ -20,9 +20,11 @@ class SuccessScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('Came on Susees screen');
     return Consumer(builder: (context, ref, _) {
       final userRoleData = ref.watch(allUserRoleProvider);
       return userRoleData.when(data: (data) {
+        print('Data');
         if (email == 'phone') {
           currentUserData.putUserData(userId: FirebaseAuth.instance.currentUser!.uid, isSubUser: false, title: '', email: '');
         } else {

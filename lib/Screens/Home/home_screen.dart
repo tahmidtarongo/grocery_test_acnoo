@@ -288,25 +288,25 @@ class _HomeScreenState extends State<HomeScreen> {
                           // SizedBox(
                           //   width: 10.0,
                           // ),
-                          Container(
-                            height: 40.0,
-                            width: 40.0,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10.0),
-                              color: kDarkWhite,
-                            ),
-                            child: Center(
-                              child: GestureDetector(
-                                onTap: () {
-                                  EasyLoading.showInfo('Coming Soon');
-                                },
-                                child: const Icon(
-                                  Icons.notifications_active,
-                                  color: kMainColor,
-                                ),
-                              ),
-                            ),
-                          ),
+                          // Container(
+                          //   height: 40.0,
+                          //   width: 40.0,
+                          //   decoration: BoxDecoration(
+                          //     borderRadius: BorderRadius.circular(10.0),
+                          //     color: kDarkWhite,
+                          //   ),
+                          //   child: Center(
+                          //     child: GestureDetector(
+                          //       onTap: () {
+                          //         EasyLoading.showInfo('Coming Soon');
+                          //       },
+                          //       child: const Icon(
+                          //         Icons.notifications_active,
+                          //         color: kMainColor,
+                          //       ),
+                          //     ),
+                          //   ),
+                          // ),
                         ],
                       ),
                     );
