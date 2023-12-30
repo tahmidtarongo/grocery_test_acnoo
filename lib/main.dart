@@ -6,7 +6,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mobile_pos/Screens/Authentication/forgot_password.dart';
 import 'package:mobile_pos/Screens/Authentication/login_form.dart';
-import 'package:mobile_pos/Screens/Authentication/register_form.dart';
+import 'package:mobile_pos/Screens/Authentication/register_screen.dart';
 import 'package:mobile_pos/Screens/Authentication/sign_in.dart';
 import 'package:mobile_pos/Screens/Customers/customer_list.dart';
 import 'package:mobile_pos/Screens/Delivery/delivery_address_list.dart';

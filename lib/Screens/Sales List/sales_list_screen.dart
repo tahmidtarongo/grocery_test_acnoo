@@ -49,9 +49,9 @@ class _SalesListScreenState extends State<SalesListScreen> {
         ),
         body: Consumer(builder: (context, ref, __) {
           final providerData = ref.watch(transitionProvider);
-          final profile = ref.watch(profileDetailsProvider);
+          final profile = ref.watch(businessInfoProvider);
           final printerData = ref.watch(printerProviderNotifier);
-          final personalData = ref.watch(profileDetailsProvider);
+          final personalData = ref.watch(businessInfoProvider);
           final cart = ref.watch(cartNotifier);
           return SingleChildScrollView(
             child: providerData.when(data: (transaction) {

@@ -76,7 +76,7 @@ class _SalesReportScreenState extends State<SalesReportScreen> {
         body: Consumer(builder: (context, ref, __) {
           final providerData = ref.watch(transitionProvider);
           final printerData = ref.watch(printerProviderNotifier);
-          final personalData = ref.watch(profileDetailsProvider);
+          final personalData = ref.watch(businessInfoProvider);
           return SingleChildScrollView(
             child: Column(
               children: [

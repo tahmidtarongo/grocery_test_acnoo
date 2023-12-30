@@ -1,179 +1,155 @@
-import 'dart:convert';
 import 'dart:io';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart' as firebase_core;
-import 'package:firebase_database/firebase_database.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
-import 'package:mobile_pos/Screens/Authentication/phone.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import '../../GlobalComponents/Model/seller_info_model.dart';
+import '../../Const/lalnguage_data.dart';
 import '../../Provider/shop_category_provider.dart';
+import '../../Repository/API/business_setup_repo.dart';
 import '../../constant.dart';
-import '../../model/personal_information_model.dart';
-import '../../model/shop_category_model.dart';
-import '../../model/subscription_plan_model.dart';
-import '../../subscription.dart';
-import '../subscription/purchase_premium_plan_screen.dart';
+import '../../model/business_category_model.dart';
+import '../../model/lalnguage_model.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class ProfileSetup extends StatefulWidget {
-  const ProfileSetup({Key? key, required this.loginWithPhone}) : super(key: key);
-
-  final bool loginWithPhone;
+  const ProfileSetup({Key? key}) : super(key: key);
 
   @override
   State<ProfileSetup> createState() => _ProfileSetupState();
 }
 
 class _ProfileSetupState extends State<ProfileSetup> {
-  final CurrentUserData currentUserData = CurrentUserData();
-
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    currentUserData.putUserData(userId: FirebaseAuth.instance.currentUser!.uid, isSubUser: false, title: '', email: '');
-
-    freeSubscription();
+    _loadLanguages();
   }
 
-  String dropdownLangValue = 'English';
-  String initialCountry = 'Bangladesh';
-  String dropdownValue = '';
-  late String companyName, phoneNumber;
-  double progress = 0.0;
-  int openingBalance = 0;
-  bool showProgress = false;
-  String profilePicture =
-      'https://firebasestorage.googleapis.com/v0/b/salespro-saas-4a6d5.appspot.com/o/Importent%20Images%2Fno_profile_pic.png?alt=media&token=29376639-ca70-4c92-a30f-d3ce905cdf53';
+  Language? selectedLanguage;
+  BusinessCategory? selectedBusinessCategory;
+  List<Language> language = [];
 
   final ImagePicker _picker = ImagePicker();
   XFile? pickedImage;
-  File imageFile = File('No File');
-  String imagePath = 'No Data';
-  TextEditingController controller = TextEditingController();
+  TextEditingController addressController = TextEditingController();
+  TextEditingController openingBalanceController = TextEditingController();
+  TextEditingController phoneController = TextEditingController();
+  TextEditingController nameController = TextEditingController();
 
-  Future<void> uploadFile(String filePath) async {
-    File file = File(filePath);
-    try {
-      EasyLoading.show(
-        status: 'Uploading... ',
-        dismissOnTap: false,
-      );
-      var snapshot = await FirebaseStorage.instance.ref('Profile Picture/${DateTime.now().millisecondsSinceEpoch}').putFile(file);
-      var url = await snapshot.ref.getDownloadURL();
-      setState(() {
-        profilePicture = url.toString();
-      });
-    } on firebase_core.FirebaseException catch (e) {
-      EasyLoading.dismiss();
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.code.toString())));
+  void _loadLanguages() async {
+    for (var element in languageData) {
+      final data = Language.fromJson(element);
+
+      language.add(data);
+      if (data.code == "en") {
+        selectedLanguage = data;
+      }
     }
   }
 
-  DropdownButton<String> getCategory({required String category, required List<ShopCategoryModel> list}) {
-    List<String> categories = [];
+  DropdownButton<BusinessCategory> getCategory({required List<BusinessCategory> list}) {
+    List<DropdownMenuItem<BusinessCategory>> dropDownItems = [];
 
-    for (var element in list) {
-      categories.add(element.categoryName ?? '');
-    }
-
-    List<DropdownMenuItem<String>> dropDownItems = [];
-
-    for (String category in categories) {
+    for (BusinessCategory category in list) {
       var item = DropdownMenuItem(
         value: category,
-        child: Text(category),
+        child: Text(category.name),
       );
       dropDownItems.add(item);
     }
     return DropdownButton(
+      hint: const Text('Select Business Category'),
       items: dropDownItems,
-      value: dropdownValue,
+      value: selectedBusinessCategory,
       onChanged: (value) {
         setState(() {
-          dropdownValue = value!;
+          selectedBusinessCategory = value!;
         });
       },
     );
   }
 
-  bool firstTime = true;
-
-  DropdownButton<String> getLanguage() {
-    List<DropdownMenuItem<String>> dropDownLangItems = [];
-    for (String lang in language) {
+  DropdownButton<Language> getLanguage() {
+    List<DropdownMenuItem<Language>> dropDownLangItems = [];
+    for (Language lang in language) {
       var item = DropdownMenuItem(
         value: lang,
-        child: Text(lang),
+        child: Text(lang.name),
       );
       dropDownLangItems.add(item);
     }
     return DropdownButton(
       items: dropDownLangItems,
-      value: dropdownLangValue,
+      value: selectedLanguage,
       onChanged: (value) {
         setState(() {
-          dropdownLangValue = value!;
+          selectedLanguage = value!;
         });
       },
     );
   }
 
-  void freeSubscription() async {
-    await FirebaseDatabase.instance.ref().child('Admin Panel').child('Subscription Plan').orderByKey().get().then((value) {
-      for (var element in value.children) {
-        Subscription.subscriptionPlan.add(SubscriptionPlanModel.fromJson(jsonDecode(jsonEncode(element.value))));
-      }
-    });
-    for (var element in Subscription.subscriptionPlan) {
-      if (element.subscriptionName == 'Free') {
-        Subscription.freeSubscriptionModel.products = element.products;
-        Subscription.freeSubscriptionModel.duration = element.duration;
-        Subscription.freeSubscriptionModel.dueNumber = element.dueNumber;
-        Subscription.freeSubscriptionModel.partiesNumber = element.partiesNumber;
-        Subscription.freeSubscriptionModel.purchaseNumber = element.purchaseNumber;
-        Subscription.freeSubscriptionModel.saleNumber = element.purchaseNumber;
-        Subscription.freeSubscriptionModel.subscriptionDate = DateTime.now().toString();
-      }
-    }
-    final DatabaseReference subscriptionRef = FirebaseDatabase.instance.ref().child(FirebaseAuth.instance.currentUser!.uid).child('Subscription');
-
-    await subscriptionRef.set(Subscription.freeSubscriptionModel.toJson());
-  }
+  final GlobalKey<FormState> _formKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, ref, __) {
-      final categoryList = ref.watch(shopCategoryProvider);
+      final businessCategoryList = ref.watch(businessCategoryProvider);
 
-      return categoryList.when(data: (categoryList) {
-        firstTime ? dropdownValue = categoryList.first.categoryName ?? '' : null;
-        firstTime = false;
-        return WillPopScope(
-          onWillPop: () async => false,
-          child: Scaffold(
-            appBar: AppBar(
-              iconTheme: const IconThemeData(color: Colors.black),
-              title: Text(
-                lang.S.of(context).setUpProfile,
-                style: GoogleFonts.poppins(
-                  color: Colors.black,
-                ),
+      return businessCategoryList.when(data: (categoryList) {
+        return Scaffold(
+          appBar: AppBar(
+            iconTheme: const IconThemeData(color: Colors.black),
+            title: Text(
+              lang.S.of(context).setUpProfile,
+              style: GoogleFonts.poppins(
+                color: Colors.black,
               ),
-              centerTitle: true,
-              backgroundColor: Colors.white,
-              elevation: 0.0,
             ),
-            body: SingleChildScrollView(
-              child: Center(
+            centerTitle: true,
+            backgroundColor: Colors.white,
+            elevation: 0.0,
+          ),
+          bottomNavigationBar: ButtonGlobal(
+            iconWidget: Icons.arrow_forward,
+            buttontext: lang.S.of(context).continueButton,
+            iconColor: Colors.white,
+            buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
+            onPressed: () async {
+              if (selectedBusinessCategory != null) {
+                if (_formKey.currentState!.validate()) {
+                  try {
+                    BusinessSetupRepo businessSetupRepo = BusinessSetupRepo();
+                    await businessSetupRepo.businessSetup(
+                      context: context,
+                      name: nameController.text,
+                      address: addressController.text.isEmptyOrNull ? null : addressController.text,
+                      categoryId: selectedBusinessCategory!.id.toString(),
+                      image: pickedImage == null ? null : File(pickedImage!.path),
+                      languageCode: selectedLanguage!.code,
+                      openingBalance: openingBalanceController.text.isEmptyOrNull ? null : openingBalanceController.text,
+                      phone: phoneController.text,
+                    );
+                  } catch (e) {
+                    EasyLoading.dismiss();
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
+                  }
+                }
+              } else {
+                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Select a Business Category')));
+              }
+
+              // Navigator.pushNamed(context, '/otp');
+            },
+          ),
+          body: SingleChildScrollView(
+            child: Center(
+              child: Form(
+                key: _formKey,
                 child: Column(
                   children: [
                     Padding(
@@ -209,13 +185,8 @@ class _ProfileSetupState extends State<ProfileSetup> {
                                         GestureDetector(
                                           onTap: () async {
                                             pickedImage = await _picker.pickImage(source: ImageSource.gallery);
-                                            setState(() {
-                                              imageFile = File(pickedImage!.path);
-                                              imagePath = pickedImage!.path;
-                                            });
-                                            Future.delayed(const Duration(milliseconds: 100), () {
-                                              Navigator.pop(context);
-                                            });
+                                            setState(() {});
+                                            Navigator.pop(context);
                                           },
                                           child: Column(
                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -241,13 +212,8 @@ class _ProfileSetupState extends State<ProfileSetup> {
                                         GestureDetector(
                                           onTap: () async {
                                             pickedImage = await _picker.pickImage(source: ImageSource.camera);
-                                            setState(() {
-                                              imageFile = File(pickedImage!.path);
-                                              imagePath = pickedImage!.path;
-                                            });
-                                            Future.delayed(const Duration(milliseconds: 100), () {
-                                              Navigator.pop(context);
-                                            });
+                                            setState(() {});
+                                            Navigator.pop(context);
                                           },
                                           child: Column(
                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -282,13 +248,13 @@ class _ProfileSetupState extends State<ProfileSetup> {
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.black54, width: 1),
                               borderRadius: const BorderRadius.all(Radius.circular(120)),
-                              image: imagePath == 'No Data'
-                                  ? DecorationImage(
-                                      image: NetworkImage(profilePicture),
+                              image: pickedImage == null
+                                  ? const DecorationImage(
+                                      image: AssetImage('images/no_shop_image.png'),
                                       fit: BoxFit.cover,
                                     )
                                   : DecorationImage(
-                                      image: FileImage(imageFile),
+                                      image: FileImage(File(pickedImage!.path)),
                                       fit: BoxFit.cover,
                                     ),
                             ),
@@ -330,40 +296,48 @@ class _ProfileSetupState extends State<ProfileSetup> {
                                     fontSize: 20.0,
                                   ),
                                   border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.0))),
-                              child: DropdownButtonHideUnderline(child: getCategory(category: dropdownValue, list: categoryList)),
+                              child: DropdownButtonHideUnderline(child: getCategory(list: categoryList)),
                             );
                           },
                         ),
                       ),
                     ),
+
+                    ///_________Name________________________
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: AppTextField(
-                        onChanged: (value) {
-                          setState(() {
-                            companyName = value;
-                          });
-                        }, // Optional
+                        // Optional
                         textFieldType: TextFieldType.NAME,
+                        controller: nameController,
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please enter a valid business name';
+                          }
+                          return null;
+                        },
                         decoration: InputDecoration(
                           labelText: lang.S.of(context).businessName,
                           border: const OutlineInputBorder(),
                         ),
                       ),
                     ),
+
+                    ///__________Phone_________________________
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: SizedBox(
                         height: 60.0,
                         child: AppTextField(
-                          readOnly: widget.loginWithPhone ? true : false,
-                          textFieldType: TextFieldType.PHONE,
-                          initialValue: PhoneAuth.phoneNumber,
-                          onChanged: (value) {
-                            setState(() {
-                              phoneNumber = value;
-                            });
+                          controller: phoneController,
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Please enter a valid phone number';
+                            }
+                            // You can add more validation logic as needed
+                            return null;
                           },
+                          textFieldType: TextFieldType.PHONE,
                           decoration: InputDecoration(
                             labelText: lang.S.of(context).phone,
                             hintText: lang.S.of(context).enterYourPhoneNumber,
@@ -372,12 +346,14 @@ class _ProfileSetupState extends State<ProfileSetup> {
                         ),
                       ),
                     ),
+
+                    ///_________Address___________________________
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: AppTextField(
                         // ignore: deprecated_member_use
                         textFieldType: TextFieldType.ADDRESS,
-                        controller: controller,
+                        controller: addressController,
                         decoration: InputDecoration(
                           focusedBorder: const OutlineInputBorder(
                             borderSide: BorderSide(color: kGreyTextColor),
@@ -388,6 +364,24 @@ class _ProfileSetupState extends State<ProfileSetup> {
                         ),
                       ),
                     ),
+
+                    ///________Opening_balance_______________________
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: AppTextField(
+                        validator: (value) {
+                          return null;
+                        },
+                        controller: openingBalanceController, // Optional
+                        textFieldType: TextFieldType.PHONE,
+                        decoration: InputDecoration(
+                          labelText: lang.S.of(context).openingBalance,
+                          border: const OutlineInputBorder(),
+                        ),
+                      ),
+                    ),
+
+                    ///_________Language___________________________
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: SizedBox(
@@ -408,75 +402,6 @@ class _ProfileSetupState extends State<ProfileSetup> {
                           },
                         ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: AppTextField(
-                        onChanged: (value) {
-                          setState(() {
-                            openingBalance = value.toInt();
-                          });
-                        }, // Optional
-                        textFieldType: TextFieldType.PHONE,
-                        decoration: InputDecoration(
-                          labelText: lang.S.of(context).openingBalance,
-                          border: const OutlineInputBorder(),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 40.0,
-                    ),
-                    ButtonGlobal(
-                      iconWidget: Icons.arrow_forward,
-                      buttontext: lang.S.of(context).continueButton,
-                      iconColor: Colors.white,
-                      buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
-                      onPressed: () async {
-                        try {
-                          EasyLoading.show(status: 'Loading...', dismissOnTap: false);
-                          imagePath == 'No Data' ? null : await uploadFile(imagePath);
-
-                          final DatabaseReference personalInformationRef = FirebaseDatabase.instance.ref().child(constUserId).child('Personal Information');
-                          PersonalInformationModel personalInformation = PersonalInformationModel(
-                            businessCategory: dropdownValue,
-                            companyName: companyName,
-                            phoneNumber: widget.loginWithPhone ? PhoneAuth.phoneNumber : phoneNumber,
-                            countryName: controller.text,
-                            language: dropdownLangValue,
-                            pictureUrl: profilePicture,
-                            shopOpeningBalance: openingBalance,
-                            remainingShopBalance: openingBalance,
-                            invoiceCounter: 1,
-                          );
-                          await personalInformationRef.set(personalInformation.toJson());
-                          SellerInfoModel sellerInfoModel = SellerInfoModel(
-                            businessCategory: dropdownValue,
-                            companyName: companyName,
-                            phoneNumber: widget.loginWithPhone ? PhoneAuth.phoneNumber : phoneNumber,
-                            countryName: controller.text,
-                            language: dropdownLangValue,
-                            pictureUrl: profilePicture,
-                            userID: FirebaseAuth.instance.currentUser!.uid,
-                            email: FirebaseAuth.instance.currentUser!.email,
-                            subscriptionDate: DateTime.now().toString(),
-                            subscriptionName: 'Free',
-                            subscriptionMethod: 'Not Provided',
-                          );
-                          await FirebaseDatabase.instance.ref().child('Admin Panel').child('Seller List').push().set(sellerInfoModel.toJson());
-
-                          EasyLoading.showSuccess('Added Successfully', duration: const Duration(milliseconds: 1000));
-
-                          // ignore: use_build_context_synchronously
-                          const PurchasePremiumPlanScreen(
-                            isCameBack: false,
-                          ).launch(context);
-                        } catch (e) {
-                          EasyLoading.dismiss();
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
-                        }
-                        // Navigator.pushNamed(context, '/otp');
-                      },
                     ),
                   ],
                 ),

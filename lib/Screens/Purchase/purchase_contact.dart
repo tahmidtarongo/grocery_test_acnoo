@@ -2,7 +2,7 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mobile_pos/Screens/Customers/Model/customer_model.dart';
+import 'package:mobile_pos/Screens/Customers/Model/parties_model.dart';
 import 'package:mobile_pos/Screens/Purchase/purchase_details.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -52,12 +52,12 @@ class _PurchaseContactState extends State<PurchaseContact> {
                 .child('Customers'),
             itemBuilder: (context, snapshot, animation, index) {
               final json = snapshot.value as Map<dynamic, dynamic>;
-              final customer = CustomerModel.fromJson(json);
+              final customer = Party.fromJson(json);
               return Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: GestureDetector(
                   onTap: () {
-                    PurchaseDetails(customerName: customer.customerName).launch(context);
+                    PurchaseDetails(customerName: customer.name).launch(context);
                   },
                   child: Row(
                     children: [
@@ -70,7 +70,7 @@ class _PurchaseContactState extends State<PurchaseContact> {
                           radius: 70.0,
                           child: ClipOval(
                             child: Image.network(
-                              customer.profilePicture,
+                              customer.image??'',
                               fit: BoxFit.cover,
                               width: 120.0,
                               height: 120.0,
@@ -86,14 +86,14 @@ class _PurchaseContactState extends State<PurchaseContact> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            customer.customerName,
+                            customer.name??'',
                             style: GoogleFonts.poppins(
                               color: Colors.black,
                               fontSize: 15.0,
                             ),
                           ),
                           Text(
-                            customer.phoneNumber,
+                            customer.phone??'',
                             style: GoogleFonts.poppins(
                               color: kGreyTextColor,
                               fontSize: 15.0,

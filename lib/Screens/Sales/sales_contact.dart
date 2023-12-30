@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Provider/add_to_cart.dart';
-import 'package:mobile_pos/Screens/Customers/Model/customer_model.dart';
+import 'package:mobile_pos/Screens/Customers/Model/parties_model.dart';
 import 'package:mobile_pos/Screens/Customers/add_customer.dart';
 import 'package:mobile_pos/Screens/Sales/add_sales.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -27,7 +27,7 @@ class _SalesContactState extends State<SalesContact> {
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, ref, __) {
-      final providerData = ref.watch(customerProvider);
+      final providerData = ref.watch(partiesProvider);
       final cart = ref.watch(cartNotifier);
       return Scaffold(
         resizeToAvoidBottomInset: true,
@@ -71,14 +71,7 @@ class _SalesContactState extends State<SalesContact> {
                         ),
                         GestureDetector(
                           onTap: () {
-                            CustomerModel guestModel = CustomerModel(
-                              'Guest',
-                              'Guest',
-                              'Guest',
-                              'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png',
-                              'Guest',
-                              'Guest',
-                              '0',
+                            Party guestModel = Party(
                             );
                             AddSalesScreen(customerModel: guestModel).launch(context);
                             cart.clearCart();
@@ -144,7 +137,7 @@ class _SalesContactState extends State<SalesContact> {
                               customer[index].type == 'Wholesaler' ? color = const Color(0xFF25a9e0) : Colors.white;
                               customer[index].type == 'Dealer' ? color = const Color(0xFFff5f00) : Colors.white;
                               customer[index].type == 'Supplier' ? color = const Color(0xFFA569BD) : Colors.white;
-                              return customer[index].customerName.contains(searchCustomer) && !customer[index].type.contains('Supplier')
+                              return customer[index].name!.contains(searchCustomer) && !customer[index].type!.contains('Supplier')
                                   ? GestureDetector(
                                       onTap: () {
                                         AddSalesScreen(customerModel: customer[index]).launch(context);
@@ -163,7 +156,7 @@ class _SalesContactState extends State<SalesContact> {
                                                 radius: 70.0,
                                                 child: ClipOval(
                                                   child: Image.network(
-                                                    customer[index].profilePicture,
+                                                    customer[index].image??'',
                                                     fit: BoxFit.cover,
                                                     width: 120.0,
                                                     height: 120.0,
@@ -177,14 +170,14 @@ class _SalesContactState extends State<SalesContact> {
                                               crossAxisAlignment: CrossAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  customer[index].customerName,
+                                                  customer[index].name??'',
                                                   style: GoogleFonts.poppins(
                                                     color: Colors.black,
                                                     fontSize: 15.0,
                                                   ),
                                                 ),
                                                 Text(
-                                                  customer[index].type,
+                                                  customer[index].type??'',
                                                   style: GoogleFonts.poppins(
                                                     color: color,
                                                     fontSize: 15.0,
@@ -198,7 +191,7 @@ class _SalesContactState extends State<SalesContact> {
                                               crossAxisAlignment: CrossAxisAlignment.end,
                                               children: [
                                                 Text(
-                                                  '$currency ${customer[index].dueAmount}',
+                                                  '$currency ${customer[index].due}',
                                                   style: GoogleFonts.poppins(
                                                     color: Colors.black,
                                                     fontSize: 15.0,
@@ -212,7 +205,7 @@ class _SalesContactState extends State<SalesContact> {
                                                   ),
                                                 ),
                                               ],
-                                            ).visible(customer[index].dueAmount != '' && customer[index].dueAmount != '0'),
+                                            ).visible(customer[index].due != null && customer[index].due != 0),
                                             const SizedBox(width: 20),
                                             const Icon(
                                               Icons.arrow_forward_ios,
@@ -228,14 +221,7 @@ class _SalesContactState extends State<SalesContact> {
                     )
                   : GestureDetector(
                       onTap: () {
-                        CustomerModel guestModel = CustomerModel(
-                          'Guest',
-                          'Guest',
-                          'Guest',
-                          'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png',
-                          'Guest',
-                          'Guest',
-                          '0',
+                        Party guestModel = Party(
                         );
                         AddSalesScreen(customerModel: guestModel).launch(context);
                         cart.clearCart();
@@ -302,7 +288,7 @@ class _SalesContactState extends State<SalesContact> {
         floatingActionButton: FloatingActionButton(
             child: const Icon(Icons.add),
             onPressed: () {
-              const AddCustomer().launch(context);
+              const AddParty().launch(context);
             }),
       );
     });

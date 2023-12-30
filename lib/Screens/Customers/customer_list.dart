@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile_pos/Const/api_config.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/Provider/customer_provider.dart';
 import 'package:mobile_pos/Screens/Customers/add_customer.dart';
@@ -39,7 +40,7 @@ class _CustomerListState extends State<CustomerList> {
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Consumer(builder: (context, ref, __) {
-          final providerData = ref.watch(customerProvider);
+          final providerData = ref.watch(partiesProvider);
 
           return providerData.when(data: (customer) {
             return customer.isNotEmpty
@@ -54,7 +55,7 @@ class _CustomerListState extends State<CustomerList> {
                       return GestureDetector(
                         onTap: () {
                           CustomerDetails(
-                            customerModel: customer[index],
+                            party: customer[index],
                           ).launch(context);
                         },
                         child: Padding(
@@ -69,12 +70,19 @@ class _CustomerListState extends State<CustomerList> {
                                   backgroundColor: Colors.white,
                                   radius: 70.0,
                                   child: ClipOval(
-                                    child: Image.network(
-                                      customer[index].profilePicture,
-                                      fit: BoxFit.cover,
-                                      width: 120.0,
-                                      height: 120.0,
-                                    ),
+                                    child: customer[index].image != null
+                                        ? Image.network(
+                                            '${APIConfig.domain}${customer[index].image ?? ''}',
+                                            fit: BoxFit.cover,
+                                            width: 120.0,
+                                            height: 120.0,
+                                          )
+                                        : Image.asset(
+                                            'images/no_shop_image.png',
+                                            fit: BoxFit.cover,
+                                            width: 120.0,
+                                            height: 120.0,
+                                          ),
                                   ),
                                 ),
                               ),
@@ -84,14 +92,14 @@ class _CustomerListState extends State<CustomerList> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    customer[index].customerName,
+                                    customer[index].name ?? '',
                                     style: GoogleFonts.poppins(
                                       color: Colors.black,
                                       fontSize: 15.0,
                                     ),
                                   ),
                                   Text(
-                                    customer[index].type,
+                                    customer[index].type ?? '',
                                     style: GoogleFonts.poppins(
                                       color: color,
                                       fontSize: 15.0,
@@ -105,7 +113,7 @@ class _CustomerListState extends State<CustomerList> {
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
                                   Text(
-                                    '$currency ${customer[index].dueAmount}',
+                                    '$currency ${customer[index].due}',
                                     style: GoogleFonts.poppins(
                                       color: Colors.black,
                                       fontSize: 15.0,
@@ -119,7 +127,7 @@ class _CustomerListState extends State<CustomerList> {
                                     ),
                                   ),
                                 ],
-                              ).visible(customer[index].dueAmount != '' && customer[index].dueAmount != '0'),
+                              ).visible(customer[index].due != null && customer[index].due != 0),
                               const SizedBox(width: 20),
                               const Icon(
                                 Icons.arrow_forward_ios,
@@ -150,7 +158,7 @@ class _CustomerListState extends State<CustomerList> {
         iconColor: Colors.white,
         buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
         onPressed: () {
-          const AddCustomer().launch(context);
+          const AddParty().launch(context);
         },
       ),
     );

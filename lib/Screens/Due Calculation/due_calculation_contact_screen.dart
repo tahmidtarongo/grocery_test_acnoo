@@ -38,7 +38,7 @@ class _DueCalculationContactScreenState extends State<DueCalculationContactScree
         child: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Consumer(builder: (context, ref, __) {
-            final providerData = ref.watch(customerProvider);
+            final providerData = ref.watch(partiesProvider);
 
             return providerData.when(data: (customer) {
               return customer.isNotEmpty
@@ -52,7 +52,7 @@ class _DueCalculationContactScreenState extends State<DueCalculationContactScree
                         customer[index].type == 'Dealer' ? color = const Color(0xFFff5f00) : Colors.white;
                         customer[index].type == 'Supplier' ? color = const Color(0xFFA569BD) : Colors.white;
 
-                        return customer[index].dueAmount.toInt() > 0
+                        return (customer[index].due??0) > 0
                             ? GestureDetector(
                                 onTap: () {
                                   DueCollectionScreen(customerModel: customer[index]).launch(context);
@@ -70,7 +70,7 @@ class _DueCalculationContactScreenState extends State<DueCalculationContactScree
                                           radius: 70.0,
                                           child: ClipOval(
                                             child: Image.network(
-                                              customer[index].profilePicture,
+                                              customer[index].image??'',
                                               fit: BoxFit.cover,
                                               width: 120.0,
                                               height: 120.0,
@@ -84,14 +84,14 @@ class _DueCalculationContactScreenState extends State<DueCalculationContactScree
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            customer[index].customerName,
+                                            customer[index].name??'',
                                             style: GoogleFonts.poppins(
                                               color: Colors.black,
                                               fontSize: 15.0,
                                             ),
                                           ),
                                           Text(
-                                            customer[index].type,
+                                            customer[index].type??'',
                                             style: GoogleFonts.poppins(
                                               color: color,
                                               fontSize: 15.0,
@@ -105,7 +105,7 @@ class _DueCalculationContactScreenState extends State<DueCalculationContactScree
                                         crossAxisAlignment: CrossAxisAlignment.end,
                                         children: [
                                           Text(
-                                            '$currency ${customer[index].dueAmount}',
+                                            '$currency ${customer[index].due}',
                                             style: GoogleFonts.poppins(
                                               color: Colors.black,
                                               fontSize: 15.0,
@@ -119,7 +119,7 @@ class _DueCalculationContactScreenState extends State<DueCalculationContactScree
                                             ),
                                           ),
                                         ],
-                                      ).visible(customer[index].dueAmount != '' && customer[index].dueAmount != '0'),
+                                      ).visible( customer[index].due != 0),
                                       const SizedBox(width: 20),
                                       const Icon(
                                         Icons.arrow_forward_ios,

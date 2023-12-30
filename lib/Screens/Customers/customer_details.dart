@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile_pos/Const/api_config.dart';
 import 'package:mobile_pos/Provider/customer_provider.dart';
 import 'package:mobile_pos/Provider/print_purchase_provider.dart';
 import 'package:mobile_pos/Provider/transactions_provider.dart';
@@ -18,42 +19,59 @@ import 'package:url_launcher/url_launcher.dart';
 import '../../GlobalComponents/button_global.dart';
 import '../../Provider/printer_provider.dart';
 import '../../Provider/profile_provider.dart';
+import '../../Repository/API/create_party_repo.dart';
 import '../../currency.dart';
 import '../../model/print_transaction_model.dart';
 import '../invoice_details/purchase_invoice_details.dart';
 import '../invoice_details/sales_invoice_details_screen.dart';
-import 'Model/customer_model.dart';
+import 'Model/parties_model.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 // ignore: must_be_immutable
 class CustomerDetails extends StatefulWidget {
-  CustomerDetails({Key? key, required this.customerModel}) : super(key: key);
-  CustomerModel customerModel;
+  CustomerDetails({Key? key, required this.party}) : super(key: key);
+  Party party;
 
   @override
   State<CustomerDetails> createState() => _CustomerDetailsState();
 }
 
 class _CustomerDetailsState extends State<CustomerDetails> {
-  late String customerKey;
   String buttonsSelected = '';
-
-  void getCustomerKey(String phoneNumber) async {
-    final userId = constUserId;
-    await FirebaseDatabase.instance.ref(userId).child('Customers').orderByKey().get().then((value) {
-      for (var element in value.children) {
-        var data = jsonDecode(jsonEncode(element.value));
-        if (data['phoneNumber'].toString() == phoneNumber) {
-          customerKey = element.key.toString();
-        }
-      }
-    });
-  }
 
   @override
   void initState() {
-    getCustomerKey(widget.customerModel.phoneNumber);
     super.initState();
+  }
+
+  Future<void> showDeleteConfirmationAlert({
+    required BuildContext context,
+    required String id,
+    required WidgetRef ref,
+  }) async {
+    return showDialog(
+      context: context,
+      builder: (BuildContext context1) {
+        return AlertDialog(
+          title: const Text('Confirm Delete'),
+          content: const Text('Are you sure you want to delete this party?'),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text('Cancel'),
+            ),
+            TextButton(
+              onPressed: () async {
+                Navigator.pop(context);
+                final party = PartyRepository();
+                await party.deleteParty(id: id, context: context,ref: ref);
+              },
+              child: const Text('Delete',style: TextStyle(color: Colors.red)),
+            ),
+          ],
+        );
+      },
+    );
   }
 
   @override
@@ -63,7 +81,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
       final providerDataPurchase = cRef.watch(purchaseTransitionProvider);
       final printerData = cRef.watch(printerProviderNotifier);
       final printerDataPurchase = cRef.watch(printerPurchaseProviderNotifier);
-      final personalData = cRef.watch(profileDetailsProvider);
+      final personalData = cRef.watch(businessInfoProvider);
       return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
@@ -76,7 +94,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
           actions: [
             IconButton(
               onPressed: () {
-                EditCustomer(customerModel: widget.customerModel).launch(context);
+                EditCustomer(customerModel: widget.party).launch(context);
               },
               icon: const Icon(
                 FeatherIcons.edit2,
@@ -85,12 +103,16 @@ class _CustomerDetailsState extends State<CustomerDetails> {
             ),
             IconButton(
               onPressed: () async {
-                DatabaseReference ref = FirebaseDatabase.instance.ref("$constUserId/Customers/$customerKey");
-                await ref.remove();
-                cRef.refresh(customerProvider);
-                // ignore: use_build_context_synchronously
-                Navigator.pop(context);
+                await showDeleteConfirmationAlert(context: context, id: widget.party.id.toString(),ref: cRef);
               },
+
+              // onPressed: () async {
+              //   // DatabaseReference ref = FirebaseDatabase.instance.ref("$constUserId/Customers/$customerKey");
+              //   // await ref.remove();
+              //   cRef.refresh(partiesProvider);
+              //   // ignore: use_build_context_synchronously
+              //   Navigator.pop(context);
+              // },
               icon: const Icon(
                 FeatherIcons.trash2,
                 color: Colors.grey,
@@ -110,25 +132,28 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                 width: 120,
                 decoration: BoxDecoration(
                   borderRadius: const BorderRadius.all(Radius.circular(20)),
-                  image: DecorationImage(
-                    image: NetworkImage(widget.customerModel.profilePicture),
-                    fit: BoxFit.cover,
-                  ),
+                  image: widget.party.image == null
+                      ? const DecorationImage(
+                          image: AssetImage('images/no_shop_image.png'),
+                          fit: BoxFit.cover,
+                        )
+                      : DecorationImage(
+                          image: NetworkImage('${APIConfig.domain}${widget.party.image!}'),
+                          fit: BoxFit.cover,
+                        ),
                 ),
               ),
               const SizedBox(height: 20),
               Text(
-                widget.customerModel.customerName,
+                widget.party.name ?? '',
                 style: const TextStyle(
                   fontSize: 20,
                 ),
               ),
               const SizedBox(height: 10),
               Text(
-                widget.customerModel.phoneNumber,
-                style: const TextStyle(
-                  fontSize: 20,
-                ),
+                widget.party.phone ?? '',
+                style: const TextStyle(fontSize: 20),
               ),
               const SizedBox(height: 30),
               Row(
@@ -136,7 +161,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                 children: [
                   GestureDetector(
                     onTap: () async {
-                      final Uri url = Uri.parse('tel:${widget.customerModel.phoneNumber}');
+                      final Uri url = Uri.parse('tel:${widget.party.phone}');
 
                       if (await canLaunchUrl(url)) {
                         await launchUrl(url);
@@ -175,7 +200,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                   ),
                   GestureDetector(
                     onTap: () async {
-                      final Uri url = Uri.parse('sms:${widget.customerModel.phoneNumber}');
+                      final Uri url = Uri.parse('sms:${widget.party.phone}');
 
                       if (await canLaunchUrl(url)) {
                         await launchUrl(url);
@@ -253,7 +278,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                 lang.S.of(context).recentTransaction,
                 style: const TextStyle(fontSize: 18),
               ),
-              widget.customerModel.type != 'Supplier'
+              widget.party.type != 'Supplier'
                   ? providerData.when(data: (transaction) {
                       return ListView.builder(
                         shrinkWrap: true,
@@ -261,7 +286,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                         itemCount: transaction.length,
                         itemBuilder: (context, index) {
                           final reTransaction = transaction.reversed.toList();
-                          return reTransaction[index].customerPhone == widget.customerModel.phoneNumber
+                          return reTransaction[index].customerPhone == widget.party.phone
                               ? GestureDetector(
                                   onTap: () {
                                     SalesInvoiceDetails(
@@ -325,58 +350,61 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                                                   Row(
                                                     children: [
                                                       IconButton(
-                                                          onPressed: () async {
-                                                            await printerData.getBluetooth();
-                                                            PrintTransactionModel model =
-                                                                PrintTransactionModel(transitionModel: reTransaction[index], personalInformationModel: data);
-                                                            connected
-                                                                ? printerData.printTicket(
-                                                                    printTransactionModel: model,
-                                                                    productList: model.transitionModel!.productList,
-                                                                  )
-                                                                // ignore: use_build_context_synchronously
-                                                                : showDialog(
-                                                                    context: context,
-                                                                    builder: (_) {
-                                                                      return Dialog(
-                                                                        child: SizedBox(
-                                                                          height: 200,
-                                                                          child: ListView.builder(
-                                                                            itemCount:
-                                                                                printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
-                                                                            itemBuilder: (context, index) {
-                                                                              return ListTile(
-                                                                                onTap: () async {
-                                                                                  String select = printerData.availableBluetoothDevices[index];
-                                                                                  List list = select.split("#");
-                                                                                  // String name = list[0];
-                                                                                  String mac = list[1];
-                                                                                  bool isConnect = await printerData.setConnect(mac);
-                                                                                  // ignore: use_build_context_synchronously
-                                                                                  isConnect
-                                                                                      // ignore: use_build_context_synchronously
-                                                                                      ? finish(context)
-                                                                                      : toast('Try Again');
-                                                                                },
-                                                                                title: Text('${printerData.availableBluetoothDevices[index]}'),
-                                                                                subtitle: Text(lang.S.of(context).clickToConnect),
-                                                                              );
-                                                                            },
-                                                                          ),
+                                                        onPressed: () async {
+                                                          await printerData.getBluetooth();
+                                                          PrintTransactionModel model =
+                                                              PrintTransactionModel(transitionModel: reTransaction[index], personalInformationModel: data);
+                                                          connected
+                                                              ? printerData.printTicket(
+                                                                  printTransactionModel: model,
+                                                                  productList: model.transitionModel!.productList,
+                                                                )
+                                                              // ignore: use_build_context_synchronously
+                                                              : showDialog(
+                                                                  context: context,
+                                                                  builder: (_) {
+                                                                    return Dialog(
+                                                                      child: SizedBox(
+                                                                        height: 200,
+                                                                        child: ListView.builder(
+                                                                          itemCount:
+                                                                              printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
+                                                                          itemBuilder: (context, index) {
+                                                                            return ListTile(
+                                                                              onTap: () async {
+                                                                                String select = printerData.availableBluetoothDevices[index];
+                                                                                List list = select.split("#");
+                                                                                // String name = list[0];
+                                                                                String mac = list[1];
+                                                                                bool isConnect = await printerData.setConnect(mac);
+                                                                                // ignore: use_build_context_synchronously
+                                                                                isConnect
+                                                                                    // ignore: use_build_context_synchronously
+                                                                                    ? finish(context)
+                                                                                    : toast('Try Again');
+                                                                              },
+                                                                              title: Text('${printerData.availableBluetoothDevices[index]}'),
+                                                                              subtitle: Text(lang.S.of(context).clickToConnect),
+                                                                            );
+                                                                          },
                                                                         ),
-                                                                      );
-                                                                    });
-                                                          },
-                                                          icon: const Icon(
-                                                            FeatherIcons.printer,
-                                                            color: Colors.grey,
-                                                          )),
+                                                                      ),
+                                                                    );
+                                                                  },
+                                                                );
+                                                        },
+                                                        icon: const Icon(
+                                                          FeatherIcons.printer,
+                                                          color: Colors.grey,
+                                                        ),
+                                                      ),
                                                       IconButton(
-                                                          onPressed: () {},
-                                                          icon: const Icon(
-                                                            FeatherIcons.share,
-                                                            color: Colors.grey,
-                                                          )),
+                                                        onPressed: () {},
+                                                        icon: const Icon(
+                                                          FeatherIcons.share,
+                                                          color: Colors.grey,
+                                                        ),
+                                                      ),
                                                       IconButton(
                                                           onPressed: () {},
                                                           icon: const Icon(
@@ -418,7 +446,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                         physics: const NeverScrollableScrollPhysics(),
                         itemCount: reTransaction.length,
                         itemBuilder: (context, index) {
-                          return reTransaction[index].customerPhone == widget.customerModel.phoneNumber
+                          return reTransaction[index].customerPhone == widget.party.phone
                               ? GestureDetector(
                                   onTap: () {
                                     PurchaseInvoiceDetails(

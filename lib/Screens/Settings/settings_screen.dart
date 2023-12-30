@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile_pos/Const/api_config.dart';
 import 'package:mobile_pos/Screens/Profile%20Screen/profile_details.dart';
 import 'package:mobile_pos/Screens/SplashScreen/splash_screen.dart';
 import 'package:mobile_pos/Screens/User%20Roles/user_role_screen.dart';
@@ -11,7 +12,7 @@ import 'package:restart_app/restart_app.dart';
 import '../../Provider/profile_provider.dart';
 import '../../constant.dart';
 import '../../currency.dart';
-import '../../model/personal_information_model.dart';
+import '../../model/business_info_model.dart';
 import '../Currency/currency_screen.dart';
 import '../Shimmers/home_screen_appbar_shimmer.dart';
 import '../language/language.dart';
@@ -34,8 +35,28 @@ class _SettingScreenState extends State<SettingScreen> {
   bool selected = false;
 
   Future<void> _signOut() async {
-    await FirebaseAuth.instance.signOut();
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove("userId");
+    await prefs.remove("tokenType");
+    await prefs.remove("token");
     EasyLoading.showSuccess('Successfully Logged Out');
+    const SplashScreen().launch(context, isNewTask: true);
+
+    // Future.delayed(const Duration(milliseconds: 1000), () async {
+    //   ///________subUser_logout___________________________________________________
+    //   final prefs = await SharedPreferences.getInstance();
+    //   await prefs.setBool('isSubUser', false);
+    //   Future.delayed(const Duration(milliseconds: 1000), () {
+    //     if ((Theme.of(context).platform == TargetPlatform.android)) {
+    //       Restart.restartApp();
+    //     } else {
+    //       const SplashScreen().launch(context, isNewTask: true);
+    //     }
+    //
+    //     // const SignInScreen().launch(context);
+    //   });
+    //   // Phoenix.rebirth(context);
+    // });
   }
 
   @override
@@ -76,7 +97,7 @@ class _SettingScreenState extends State<SettingScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Consumer(builder: (context, ref, _) {
-        AsyncValue<PersonalInformationModel> userProfileDetails = ref.watch(profileDetailsProvider);
+        AsyncValue<BusinessInformationModel> businessInfo = ref.watch(businessInfoProvider);
 
         return Scaffold(
           body: SingleChildScrollView(
@@ -86,7 +107,7 @@ class _SettingScreenState extends State<SettingScreen> {
                   elevation: 0.0,
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
-                    child: userProfileDetails.when(data: (details) {
+                    child: businessInfo.when(data: (details) {
                       return Row(
                         children: [
                           GestureDetector(
@@ -97,7 +118,9 @@ class _SettingScreenState extends State<SettingScreen> {
                               height: 42,
                               width: 42,
                               decoration: BoxDecoration(
-                                image: DecorationImage(image: NetworkImage(details.pictureUrl ?? ''), fit: BoxFit.cover),
+                                image: details.pictureUrl == null
+                                    ? const DecorationImage(image: AssetImage('images/no_shop_image.png'), fit: BoxFit.cover)
+                                    : DecorationImage(image: NetworkImage(APIConfig.domain + details.pictureUrl), fit: BoxFit.cover),
                                 borderRadius: BorderRadius.circular(50),
                               ),
                             ),
@@ -118,7 +141,7 @@ class _SettingScreenState extends State<SettingScreen> {
                                 ),
                               ),
                               Text(
-                                details.businessCategory ?? '',
+                                details.category?.name ?? '',
                                 style: GoogleFonts.poppins(
                                   fontSize: 15.0,
                                   fontWeight: FontWeight.normal,
@@ -682,21 +705,6 @@ class _SettingScreenState extends State<SettingScreen> {
                   onTap: () async {
                     EasyLoading.show(status: 'Log out');
                     await _signOut();
-                    Future.delayed(const Duration(milliseconds: 1000), () async {
-                      ///________subUser_logout___________________________________________________
-                      final prefs = await SharedPreferences.getInstance();
-                      await prefs.setBool('isSubUser', false);
-                      Future.delayed(const Duration(milliseconds: 1000), () {
-                        if ((Theme.of(context).platform == TargetPlatform.android)) {
-                          Restart.restartApp();
-                        } else {
-                          const SplashScreen().launch(context, isNewTask: true);
-                        }
-
-                        // const SignInScreen().launch(context);
-                      });
-                      // Phoenix.rebirth(context);
-                    });
                   },
                   leading: const Icon(
                     Icons.logout,

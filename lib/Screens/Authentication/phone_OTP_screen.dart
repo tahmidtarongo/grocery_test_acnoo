@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:mobile_pos/Screens/Authentication/phone.dart';
-import 'package:mobile_pos/Screens/Authentication/profile_setup.dart';
+import 'package:mobile_pos/Screens/Authentication/profile_setup_screen.dart';
 import 'package:mobile_pos/Screens/Authentication/success_screen.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -83,9 +83,7 @@ class _OTPVerifyState extends State<OTPVerify> {
                           if (value.additionalUserInfo!.isNewUser) {
                             EasyLoading.dismiss();
 
-                            const ProfileSetup(
-                              loginWithPhone: true,
-                            ).launch(context);
+                            const ProfileSetup().launch(context);
                           } else {
                             EasyLoading.dismiss();
                             SuccessScreen(

@@ -69,8 +69,8 @@ class _DueReportScreenState extends State<DueReportScreen> {
         body: Consumer(builder: (context, ref, __) {
           final providerData = ref.watch(dueTransactionProvider);
           final printerData = ref.watch(printerDueProviderNotifier);
-          final personalData = ref.watch(profileDetailsProvider);
-          final profile = ref.watch(profileDetailsProvider);
+          final personalData = ref.watch(businessInfoProvider);
+          final profile = ref.watch(businessInfoProvider);
           return SingleChildScrollView(
             child: Column(
               children: [

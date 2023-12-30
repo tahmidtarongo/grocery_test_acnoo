@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
+import 'package:mobile_pos/Repository/constant_functions.dart';
 import 'package:mobile_pos/Screens/SplashScreen/on_board.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -54,10 +55,11 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    init();
+    // init();
     getPermission();
     getCurrency();
-    currentUserData.getUserData();
+    nextPage();
+    // currentUserData.getUserData();
   }
 
   getCurrency() async {
@@ -66,7 +68,7 @@ class _SplashScreenState extends State<SplashScreen> {
     currencyName = prefs.getString('currencyName') ?? 'United States Dollar';
   }
 
-  var currentUser = FirebaseAuth.instance.currentUser;
+  // var currentUser = FirebaseAuth.instance.currentUser;
 
   // bool isis = FirebaseAuth.instance.currentUser
 
@@ -205,270 +207,280 @@ class _SplashScreenState extends State<SplashScreen> {
                                                                                                                                                                                                     : context.read<LanguageChangeProvider>().changeLocale("en");
   }
 
-  void init() async {
-    setLanguage();
+  Future<void> nextPage() async {
     final prefs = await SharedPreferences.getInstance();
-    isPrintEnable = prefs.getBool('isPrintEnable') ?? true;
-    final String? skipVersion = prefs.getString('skipVersion');
-    bool result = await InternetConnectionChecker().hasConnection;
-    if (result) {
-      bool isValid = await PurchaseModel().isActiveBuyer();
-      if (isValid) {
-        await Future.delayed(const Duration(seconds: 2), () {
-          if (isUpdateAvailable && (skipVersion == null || skipVersion != newUpdateVersion)) {
-            showDialog(
-              context: context,
-              builder: (BuildContext context) {
-                return Padding(
-                  padding: const EdgeInsets.all(30.0),
-                  child: Center(
-                    child: Container(
-                      height: MediaQuery.of(context).size.height / 2,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.all(Radius.circular(30)),
-                      ),
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(20),
-                            child: Column(
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.only(top: 20, bottom: 10),
-                                  child: Text(
-                                    lang.S.of(context).anewUpdateAvailable,
-                                    style: TextStyle(
-                                      fontSize: 20,
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(
-                                  height: 30,
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.all(10.0),
-                                  child: GestureDetector(
-                                    onTap: () async {
-                                      await prefs.remove('skipVersion');
-                                    },
-                                    child: Container(
-                                      height: 50,
-                                      decoration: const BoxDecoration(
-                                        color: kMainColor,
-                                        borderRadius: BorderRadius.all(Radius.circular(20)),
-                                      ),
-                                      child: Center(
-                                          child: Text(
-                                        lang.S.of(context).updateNow,
-                                        style: TextStyle(color: Colors.white),
-                                      )),
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.all(10.0),
-                                  child: GestureDetector(
-                                    onTap: () async {
-                                      await prefs.setBool('isSkipUpdate', false);
-                                      await prefs.setString('skipVersion', newUpdateVersion);
-
-                                      if (currentUser != null) {
-                                        const Home().launch(context);
-                                      } else {
-                                        const OnBoard().launch(context);
-                                      }
-                                    },
-                                    child: Container(
-                                      height: 50,
-                                      decoration: const BoxDecoration(
-                                        color: kMainColor,
-                                        borderRadius: BorderRadius.all(Radius.circular(20)),
-                                      ),
-                                      child: Center(
-                                          child: Text(
-                                        lang.S.of(context).skipTheUpdate,
-                                        style: TextStyle(color: Colors.white),
-                                      )),
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.all(10.0),
-                                  child: GestureDetector(
-                                    onTap: () {
-                                      if (currentUser != null) {
-                                        const Home().launch(context);
-                                      } else {
-                                        const OnBoard().launch(context);
-                                      }
-                                    },
-                                    child: Container(
-                                      height: 50,
-                                      decoration: const BoxDecoration(
-                                        color: kMainColor,
-                                        borderRadius: BorderRadius.all(Radius.circular(20)),
-                                      ),
-                                      child: Center(
-                                          child: Text(
-                                        lang.S.of(context).rememberMeLater,
-                                        style: TextStyle(color: Colors.white),
-                                      )),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                );
-              },
-            );
-            // const RedeemConfirmationScreen().launch(context);
-          } else {
-            if (currentUser != null) {
-              const Home().launch(context);
-            } else {
-              const OnBoard().launch(context);
-            }
-          }
-        });
-      } else {
-        showLicense(context: context);
-      }
+    await Future.delayed(const Duration(seconds: 2));
+    if (prefs.getString('token') != null) {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const Home()));
     } else {
-      await Future.delayed(const Duration(seconds: 2), () {
-        if (isUpdateAvailable && (skipVersion == null || skipVersion != newUpdateVersion)) {
-          showDialog(
-            context: context,
-            builder: (BuildContext context) {
-              return Padding(
-                padding: const EdgeInsets.all(30.0),
-                child: Center(
-                  child: Container(
-                    height: MediaQuery.of(context).size.height / 2,
-                    width: double.infinity,
-                    decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(30)),
-                    ),
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(20),
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.only(top: 20, bottom: 10),
-                                child: Text(
-                                  lang.S.of(context).anewUpdateAvailable,
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 30,
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(10.0),
-                                child: GestureDetector(
-                                  onTap: () async {
-                                    await prefs.remove('skipVersion');
-                                  },
-                                  child: Container(
-                                    height: 50,
-                                    decoration: const BoxDecoration(
-                                      color: kMainColor,
-                                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                                    ),
-                                    child: Center(
-                                        child: Text(
-                                      lang.S.of(context).updateNow,
-                                      style: TextStyle(color: Colors.white),
-                                    )),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(10.0),
-                                child: GestureDetector(
-                                  onTap: () async {
-                                    await prefs.setBool('isSkipUpdate', false);
-                                    await prefs.setString('skipVersion', newUpdateVersion);
-
-                                    if (currentUser != null) {
-                                      const Home().launch(context);
-                                    } else {
-                                      const OnBoard().launch(context);
-                                    }
-                                  },
-                                  child: Container(
-                                    height: 50,
-                                    decoration: const BoxDecoration(
-                                      color: kMainColor,
-                                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                                    ),
-                                    child: Center(
-                                        child: Text(
-                                      lang.S.of(context).skipTheUpdate,
-                                      style: TextStyle(color: Colors.white),
-                                    )),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(10.0),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    if (currentUser != null) {
-                                      const Home().launch(context);
-                                    } else {
-                                      const OnBoard().launch(context);
-                                    }
-                                  },
-                                  child: Container(
-                                    height: 50,
-                                    decoration: const BoxDecoration(
-                                      color: kMainColor,
-                                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                                    ),
-                                    child: Center(
-                                        child: Text(
-                                      lang.S.of(context).rememberMeLater,
-                                      style: TextStyle(color: Colors.white),
-                                    )),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              );
-            },
-          );
-          // const RedeemConfirmationScreen().launch(context);
-        } else {
-          if (currentUser != null) {
-            const Home().launch(context);
-          } else {
-            const OnBoard().launch(context);
-          }
-        }
-      });
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const OnBoard()));
     }
-
-    defaultBlurRadius = 10.0;
-    defaultSpreadRadius = 0.5;
   }
+
+  // void init() async {
+  //   setLanguage();
+  //   final prefs = await SharedPreferences.getInstance();
+  //   isPrintEnable = prefs.getBool('isPrintEnable') ?? true;
+  //   final String? skipVersion = prefs.getString('skipVersion');
+  //   bool result = await InternetConnectionChecker().hasConnection;
+  //   if (result) {
+  //     bool isValid = await PurchaseModel().isActiveBuyer();
+  //     if (isValid) {
+  //       await Future.delayed(const Duration(seconds: 2), () {
+  //         if (isUpdateAvailable && (skipVersion == null || skipVersion != newUpdateVersion)) {
+  //           showDialog(
+  //             context: context,
+  //             builder: (BuildContext context) {
+  //               return Padding(
+  //                 padding: const EdgeInsets.all(30.0),
+  //                 child: Center(
+  //                   child: Container(
+  //                     height: MediaQuery.of(context).size.height / 2,
+  //                     width: double.infinity,
+  //                     decoration: BoxDecoration(
+  //                       color: Colors.white,
+  //                       borderRadius: BorderRadius.all(Radius.circular(30)),
+  //                     ),
+  //                     child: Column(
+  //                       children: [
+  //                         Padding(
+  //                           padding: const EdgeInsets.all(20),
+  //                           child: Column(
+  //                             children: [
+  //                               Padding(
+  //                                 padding: EdgeInsets.only(top: 20, bottom: 10),
+  //                                 child: Text(
+  //                                   lang.S.of(context).anewUpdateAvailable,
+  //                                   style: TextStyle(
+  //                                     fontSize: 20,
+  //                                   ),
+  //                                 ),
+  //                               ),
+  //                               const SizedBox(
+  //                                 height: 30,
+  //                               ),
+  //                               Padding(
+  //                                 padding: const EdgeInsets.all(10.0),
+  //                                 child: GestureDetector(
+  //                                   onTap: () async {
+  //                                     await prefs.remove('skipVersion');
+  //                                   },
+  //                                   child: Container(
+  //                                     height: 50,
+  //                                     decoration: const BoxDecoration(
+  //                                       color: kMainColor,
+  //                                       borderRadius: BorderRadius.all(Radius.circular(20)),
+  //                                     ),
+  //                                     child: Center(
+  //                                         child: Text(
+  //                                       lang.S.of(context).updateNow,
+  //                                       style: TextStyle(color: Colors.white),
+  //                                     )),
+  //                                   ),
+  //                                 ),
+  //                               ),
+  //                               Padding(
+  //                                 padding: const EdgeInsets.all(10.0),
+  //                                 child: GestureDetector(
+  //                                   onTap: () async {
+  //                                     await prefs.setBool('isSkipUpdate', false);
+  //                                     await prefs.setString('skipVersion', newUpdateVersion);
+  //
+  //                                     if (currentUser != null) {
+  //                                       const Home().launch(context);
+  //                                     } else {
+  //                                       const OnBoard().launch(context);
+  //                                     }
+  //                                   },
+  //                                   child: Container(
+  //                                     height: 50,
+  //                                     decoration: const BoxDecoration(
+  //                                       color: kMainColor,
+  //                                       borderRadius: BorderRadius.all(Radius.circular(20)),
+  //                                     ),
+  //                                     child: Center(
+  //                                         child: Text(
+  //                                       lang.S.of(context).skipTheUpdate,
+  //                                       style: TextStyle(color: Colors.white),
+  //                                     )),
+  //                                   ),
+  //                                 ),
+  //                               ),
+  //                               Padding(
+  //                                 padding: const EdgeInsets.all(10.0),
+  //                                 child: GestureDetector(
+  //                                   onTap: () {
+  //                                     if (currentUser != null) {
+  //                                       const Home().launch(context);
+  //                                     } else {
+  //                                       const OnBoard().launch(context);
+  //                                     }
+  //                                   },
+  //                                   child: Container(
+  //                                     height: 50,
+  //                                     decoration: const BoxDecoration(
+  //                                       color: kMainColor,
+  //                                       borderRadius: BorderRadius.all(Radius.circular(20)),
+  //                                     ),
+  //                                     child: Center(
+  //                                         child: Text(
+  //                                       lang.S.of(context).rememberMeLater,
+  //                                       style: TextStyle(color: Colors.white),
+  //                                     )),
+  //                                   ),
+  //                                 ),
+  //                               ),
+  //                             ],
+  //                           ),
+  //                         ),
+  //                       ],
+  //                     ),
+  //                   ),
+  //                 ),
+  //               );
+  //             },
+  //           );
+  //           // const RedeemConfirmationScreen().launch(context);
+  //         } else {
+  //           if (currentUser != null) {
+  //             const Home().launch(context);
+  //           } else {
+  //             const OnBoard().launch(context);
+  //           }
+  //         }
+  //       });
+  //     } else {
+  //       showLicense(context: context);
+  //     }
+  //   } else {
+  //     await Future.delayed(const Duration(seconds: 2), () {
+  //       if (isUpdateAvailable && (skipVersion == null || skipVersion != newUpdateVersion)) {
+  //         showDialog(
+  //           context: context,
+  //           builder: (BuildContext context) {
+  //             return Padding(
+  //               padding: const EdgeInsets.all(30.0),
+  //               child: Center(
+  //                 child: Container(
+  //                   height: MediaQuery.of(context).size.height / 2,
+  //                   width: double.infinity,
+  //                   decoration: const BoxDecoration(
+  //                     color: Colors.white,
+  //                     borderRadius: BorderRadius.all(Radius.circular(30)),
+  //                   ),
+  //                   child: Column(
+  //                     children: [
+  //                       Padding(
+  //                         padding: const EdgeInsets.all(20),
+  //                         child: Column(
+  //                           children: [
+  //                             Padding(
+  //                               padding: EdgeInsets.only(top: 20, bottom: 10),
+  //                               child: Text(
+  //                                 lang.S.of(context).anewUpdateAvailable,
+  //                                 style: TextStyle(
+  //                                   fontSize: 20,
+  //                                 ),
+  //                               ),
+  //                             ),
+  //                             const SizedBox(
+  //                               height: 30,
+  //                             ),
+  //                             Padding(
+  //                               padding: const EdgeInsets.all(10.0),
+  //                               child: GestureDetector(
+  //                                 onTap: () async {
+  //                                   await prefs.remove('skipVersion');
+  //                                 },
+  //                                 child: Container(
+  //                                   height: 50,
+  //                                   decoration: const BoxDecoration(
+  //                                     color: kMainColor,
+  //                                     borderRadius: BorderRadius.all(Radius.circular(20)),
+  //                                   ),
+  //                                   child: Center(
+  //                                       child: Text(
+  //                                     lang.S.of(context).updateNow,
+  //                                     style: TextStyle(color: Colors.white),
+  //                                   )),
+  //                                 ),
+  //                               ),
+  //                             ),
+  //                             Padding(
+  //                               padding: const EdgeInsets.all(10.0),
+  //                               child: GestureDetector(
+  //                                 onTap: () async {
+  //                                   await prefs.setBool('isSkipUpdate', false);
+  //                                   await prefs.setString('skipVersion', newUpdateVersion);
+  //
+  //                                   if (currentUser != null) {
+  //                                     const Home().launch(context);
+  //                                   } else {
+  //                                     const OnBoard().launch(context);
+  //                                   }
+  //                                 },
+  //                                 child: Container(
+  //                                   height: 50,
+  //                                   decoration: const BoxDecoration(
+  //                                     color: kMainColor,
+  //                                     borderRadius: BorderRadius.all(Radius.circular(20)),
+  //                                   ),
+  //                                   child: Center(
+  //                                       child: Text(
+  //                                     lang.S.of(context).skipTheUpdate,
+  //                                     style: TextStyle(color: Colors.white),
+  //                                   )),
+  //                                 ),
+  //                               ),
+  //                             ),
+  //                             Padding(
+  //                               padding: const EdgeInsets.all(10.0),
+  //                               child: GestureDetector(
+  //                                 onTap: () {
+  //                                   if (currentUser != null) {
+  //                                     const Home().launch(context);
+  //                                   } else {
+  //                                     const OnBoard().launch(context);
+  //                                   }
+  //                                 },
+  //                                 child: Container(
+  //                                   height: 50,
+  //                                   decoration: const BoxDecoration(
+  //                                     color: kMainColor,
+  //                                     borderRadius: BorderRadius.all(Radius.circular(20)),
+  //                                   ),
+  //                                   child: Center(
+  //                                       child: Text(
+  //                                     lang.S.of(context).rememberMeLater,
+  //                                     style: TextStyle(color: Colors.white),
+  //                                   )),
+  //                                 ),
+  //                               ),
+  //                             ),
+  //                           ],
+  //                         ),
+  //                       ),
+  //                     ],
+  //                   ),
+  //                 ),
+  //               ),
+  //             );
+  //           },
+  //         );
+  //         // const RedeemConfirmationScreen().launch(context);
+  //       } else {
+  //         if (currentUser != null) {
+  //           const Home().launch(context);
+  //         } else {
+  //           const OnBoard().launch(context);
+  //         }
+  //       }
+  //     });
+  //   }
+  //
+  //   defaultBlurRadius = 10.0;
+  //   defaultSpreadRadius = 0.5;
+  // }
 
   @override
   Widget build(BuildContext context) {

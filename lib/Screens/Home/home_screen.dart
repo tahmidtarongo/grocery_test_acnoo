@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile_pos/Const/api_config.dart';
 import 'package:mobile_pos/Screens/Home/components/grid_items.dart';
 import 'package:mobile_pos/Screens/Profile%20Screen/profile_details.dart';
 import 'package:mobile_pos/constant.dart';
@@ -203,9 +204,9 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    subscriptionRemainder();
-    getPaypalInfo();
-    getAllSubscriptionPlan();
+    // subscriptionRemainder();
+    // getPaypalInfo();
+    // getAllSubscriptionPlan();
   }
 
   @override
@@ -215,7 +216,7 @@ class _HomeScreenState extends State<HomeScreen> {
     freeIcons = getFreeIcons(context: context);
     return SafeArea(
       child: Consumer(builder: (_, ref, __) {
-        final userProfileDetails = ref.watch(profileDetailsProvider);
+        final businessInfo = ref.watch(businessInfoProvider);
         final homePageImageProvider = ref.watch(homepageImageProvider);
 
         return Scaffold(
@@ -226,7 +227,7 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: userProfileDetails.when(data: (details) {
+                  child: businessInfo.when(data: (details) {
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
@@ -238,10 +239,15 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: Container(
                               height: 50,
                               width: 50,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(image: NetworkImage(details.pictureUrl ?? ''), fit: BoxFit.cover),
-                                borderRadius: BorderRadius.circular(50),
-                              ),
+                              decoration: details.pictureUrl == null
+                                  ? BoxDecoration(
+                                      image: const DecorationImage(image: AssetImage('images/no_shop_image.png'), fit: BoxFit.cover),
+                                      borderRadius: BorderRadius.circular(50),
+                                    )
+                                  : BoxDecoration(
+                                      image: DecorationImage(image: NetworkImage('${APIConfig.domain}' + details.pictureUrl), fit: BoxFit.cover),
+                                      borderRadius: BorderRadius.circular(50),
+                                    ),
                             ),
                           ),
                           const SizedBox(
@@ -260,7 +266,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ),
                               Text(
-                                '$customerPackage Plan',
+                                details.category?.name ?? '',
                                 style: GoogleFonts.poppins(
                                   color: Colors.black,
                                 ),
@@ -522,43 +528,6 @@ class HomeGridCards extends StatefulWidget {
 }
 
 class _HomeGridCardsState extends State<HomeGridCards> {
-  Future<bool> subscriptionChecker({
-    required String item,
-  }) async {
-    final DatabaseReference subscriptionRef = FirebaseDatabase.instance.ref().child(constUserId).child('Subscription');
-    DatabaseReference ref = FirebaseDatabase.instance.ref('$constUserId/Subscription');
-    ref.keepSynced(true);
-    subscriptionRef.keepSynced(true);
-
-    bool boolValue = true;
-
-    await ref.get().then((value) async {
-      final dataModel = SubscriptionModel.fromJson(jsonDecode(jsonEncode(value.value)));
-      final remainTime = DateTime.parse(dataModel.subscriptionDate).difference(DateTime.now());
-      for (var element in Subscription.subscriptionPlan) {
-        if (dataModel.subscriptionName == element.subscriptionName) {
-          if (remainTime.inHours.abs() > element.duration * 24) {
-            Subscription.freeSubscriptionModel.subscriptionDate = DateTime.now().toString();
-            subscriptionRef.set(Subscription.freeSubscriptionModel.toJson());
-            final prefs = await SharedPreferences.getInstance();
-            await prefs.setBool('isFiveDayRemainderShown', true);
-          } else if (item == 'Sales' && dataModel.saleNumber <= 0 && dataModel.saleNumber != -202) {
-            boolValue = false;
-          } else if (item == 'Parties' && dataModel.partiesNumber <= 0 && dataModel.partiesNumber != -202) {
-            boolValue = false;
-          } else if (item == 'Purchase' && dataModel.purchaseNumber <= 0 && dataModel.purchaseNumber != -202) {
-            boolValue = false;
-          } else if (item == 'Products' && dataModel.products <= 0 && dataModel.products != -202) {
-            boolValue = false;
-          } else if (item == 'Due List' && dataModel.dueNumber <= 0 && dataModel.dueNumber != -202) {
-            boolValue = false;
-          }
-        }
-      }
-    });
-    return boolValue;
-  }
-
   bool checkPermission({required String item}) {
     if (item == 'Sales' && finalUserRoleModel.salePermission) {
       return true;
@@ -601,39 +570,23 @@ class _HomeGridCardsState extends State<HomeGridCards> {
               child: Column(
                 children: [
                   TextButton(
-                      onPressed: () async {
-                        setState(() {});
+                    onPressed: () async {
+                      // setState(() {});
 
-                        isSubUser
-                            ? checkPermission(item: widget.gridItems.title)
-                                ? await subscriptionChecker(item: widget.gridItems.title)
-                                    ? Navigator.of(context).pushNamed('/${widget.gridItems.route}')
-                                    : EasyLoading.showError('Update your plan first,\nyour limit is over.')
-                                : EasyLoading.showError('Sorry, you have no permission to access this service')
-                            : await subscriptionChecker(item: widget.gridItems.title)
-                                ? Navigator.of(context).pushNamed('/${widget.gridItems.route}')
-                                : EasyLoading.showError('Update your plan first,\nyour limit is over.');
-                      },
-                      child: Container(
-                        height: 70,
-                        width: 70,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage(
-                                widget.gridItems.icon.toString(),
-                              ),
-                              fit: BoxFit.fill),
-                        ),
-                      )
-
-                      // Image(
-                      //   height: 70,
-                      //   width: 70,
-                      //   image: AssetImage(
-                      //     widget.gridItems.icon.toString(),
-                      //   ),
-                      // ),
+                      Navigator.of(context).pushNamed('/${widget.gridItems.route}');
+                    },
+                    child: Container(
+                      height: 70,
+                      width: 70,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage(
+                              widget.gridItems.icon.toString(),
+                            ),
+                            fit: BoxFit.fill),
                       ),
+                    ),
+                  ),
                 ],
               ),
             ),

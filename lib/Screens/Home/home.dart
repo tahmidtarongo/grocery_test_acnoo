@@ -33,25 +33,25 @@ class _HomeState extends State<Home> {
     });
   }
 
-  void signOutAutoLogin() async {
-    CurrentUserData currentUserData = CurrentUserData();
-    if (await currentUserData.isSubUserEmailNotFound() && isSubUser) {
-      await FirebaseAuth.instance.signOut();
-      Future.delayed(const Duration(milliseconds: 5000), () async {
-        EasyLoading.showError('User is deleted');
-      });
-      Future.delayed(const Duration(milliseconds: 1000), () async {
-        Restart.restartApp();
-      });
-    }
-  }
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    isSubUser ? signOutAutoLogin() : null;
-  }
+  // void signOutAutoLogin() async {
+  //   CurrentUserData currentUserData = CurrentUserData();
+  //   if (await currentUserData.isSubUserEmailNotFound() && isSubUser) {
+  //     await FirebaseAuth.instance.signOut();
+  //     Future.delayed(const Duration(milliseconds: 5000), () async {
+  //       EasyLoading.showError('User is deleted');
+  //     });
+  //     Future.delayed(const Duration(milliseconds: 1000), () async {
+  //       Restart.restartApp();
+  //     });
+  //   }
+  // }
+  //
+  // @override
+  // void initState() {
+  //   // TODO: implement initState
+  //   super.initState();
+  //   isSubUser ? signOutAutoLogin() : null;
+  // }
 
   @override
   Widget build(BuildContext context) {

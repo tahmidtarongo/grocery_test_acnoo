@@ -19,7 +19,7 @@ import '../../constant.dart';
 import '../../currency.dart';
 import '../../model/due_transaction_model.dart';
 import '../../subscription.dart';
-import '../Customers/Model/customer_model.dart';
+import '../Customers/Model/parties_model.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class DueCollectionScreen extends StatefulWidget {
@@ -27,7 +27,7 @@ class DueCollectionScreen extends StatefulWidget {
 
   @override
   State<DueCollectionScreen> createState() => _DueCollectionScreenState();
-  final CustomerModel customerModel;
+  final Party customerModel;
 }
 
 class _DueCollectionScreenState extends State<DueCollectionScreen> {
@@ -62,9 +62,9 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
   TextEditingController paidText = TextEditingController();
   TextEditingController dateController = TextEditingController(text: DateTime.now().toString());
   late DueTransactionModel dueTransactionModel = DueTransactionModel(
-    customerName: widget.customerModel.customerName,
-    customerPhone: widget.customerModel.phoneNumber,
-    customerType: widget.customerModel.type,
+    customerName: widget.customerModel.name??'',
+    customerPhone: widget.customerModel.phone??'',
+    customerType: widget.customerModel.type??'',
     invoiceNumber: invoice.toString(),
     purchaseDate: DateTime.now().toString(),
   );
@@ -82,9 +82,8 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
     return Consumer(builder: (context, consumerRef, __) {
       final customerProviderRef = widget.customerModel.type == 'Supplier' ? consumerRef.watch(purchaseTransitionProvider) : consumerRef.watch(transitionProvider);
       final printerData = consumerRef.watch(printerDueProviderNotifier);
-      final personalData = consumerRef.watch(profileDetailsProvider);
+      final personalData = consumerRef.watch(businessInfoProvider);
       return personalData.when(data: (data) {
-        invoice = data.invoiceCounter!.toInt();
         return Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.white,
@@ -108,7 +107,8 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                     children: [
                       customerProviderRef.when(data: (customer) {
                         for (var element in customer) {
-                          if (element.customerPhone == widget.customerModel.phoneNumber && element.dueAmount != 0 && count < 2) {
+                          if (element.customerPhone == widget.customerModel.phone
+                              && element.dueAmount != 0 && count < 2) {
                             items.add(element.invoiceNumber);
                           }
                           if (selectedInvoice == element.invoiceNumber) {
@@ -194,7 +194,7 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                             lang.S.of(context).dueAmount,
                           ),
                           Text(
-                            widget.customerModel.dueAmount == '' ? '$currency 0' : '$currency${widget.customerModel.dueAmount}',
+                            widget.customerModel.due == null ? '$currency 0' : '$currency${widget.customerModel.due}',
                             style: const TextStyle(color: Color(0xFFFF8C34)),
                           ),
                         ],
@@ -205,7 +205,7 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                       AppTextField(
                         textFieldType: TextFieldType.NAME,
                         readOnly: true,
-                        initialValue: widget.customerModel.customerName,
+                        initialValue: widget.customerModel.name,
                         decoration: InputDecoration(
                           floatingLabelBehavior: FloatingLabelBehavior.always,
                           labelText: lang.S.of(context).customerName,
@@ -434,7 +434,7 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
 
                                 ///_____UpdateInvoice__________________________________________________
                                 updateInvoice(
-                                  type: widget.customerModel.type,
+                                  type: widget.customerModel.type??'',
                                   invoice: selectedInvoice.toString(),
                                   remainDueAmount: remainDueAmount.toInt(),
                                 );
@@ -443,7 +443,7 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
 
                                 ///_________DueUpdate______________________________________________________
                                 getSpecificCustomers(
-                                  phoneNumber: widget.customerModel.phoneNumber,
+                                  phoneNumber: widget.customerModel.phone??'',
                                   due: paidAmount.toInt(),
                                 );
 
@@ -456,11 +456,11 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                                   PrintDueTransactionModel model = PrintDueTransactionModel(dueTransactionModel: dueTransactionModel, personalInformationModel: data);
                                   if (connected) {
                                     await printerData.printTicket(printDueTransactionModel: model);
-                                    consumerRef.refresh(customerProvider);
+                                    consumerRef.refresh(partiesProvider);
                                     consumerRef.refresh(dueTransactionProvider);
                                     consumerRef.refresh(purchaseTransitionProvider);
                                     consumerRef.refresh(transitionProvider);
-                                    consumerRef.refresh(profileDetailsProvider);
+                                    consumerRef.refresh(businessInfoProvider);
 
                                     EasyLoading.dismiss();
                                     Future.delayed(const Duration(milliseconds: 500), () {
@@ -495,11 +495,11 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                                                             bool isConnect = await printerData.setConnect(mac);
                                                             if (isConnect) {
                                                               await printerData.printTicket(printDueTransactionModel: model);
-                                                              consumerRef.refresh(customerProvider);
+                                                              consumerRef.refresh(partiesProvider);
                                                               consumerRef.refresh(dueTransactionProvider);
                                                               consumerRef.refresh(purchaseTransitionProvider);
                                                               consumerRef.refresh(transitionProvider);
-                                                              consumerRef.refresh(profileDetailsProvider);
+                                                              consumerRef.refresh(businessInfoProvider);
                                                               EasyLoading.showSuccess('Added Successfully');
                                                               Future.delayed(const Duration(milliseconds: 500), () {
                                                                 const DueReportScreen().launch(context);
@@ -522,11 +522,11 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                                                     const SizedBox(height: 15),
                                                     GestureDetector(
                                                       onTap: () {
-                                                        consumerRef.refresh(customerProvider);
+                                                        consumerRef.refresh(partiesProvider);
                                                         consumerRef.refresh(dueTransactionProvider);
                                                         consumerRef.refresh(purchaseTransitionProvider);
                                                         consumerRef.refresh(transitionProvider);
-                                                        consumerRef.refresh(profileDetailsProvider);
+                                                        consumerRef.refresh(businessInfoProvider);
                                                         const DueReportScreen().launch(context);
                                                       },
                                                       child: Center(
@@ -546,11 +546,11 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                                     EasyLoading.showSuccess('Added Successfully');
                                   }
                                 } else {
-                                  consumerRef.refresh(customerProvider);
+                                  consumerRef.refresh(partiesProvider);
                                   consumerRef.refresh(dueTransactionProvider);
                                   consumerRef.refresh(purchaseTransitionProvider);
                                   consumerRef.refresh(transitionProvider);
-                                  consumerRef.refresh(profileDetailsProvider);
+                                  consumerRef.refresh(businessInfoProvider);
 
                                   EasyLoading.showSuccess('Added Successfully');
                                   Future.delayed(const Duration(milliseconds: 500), () {

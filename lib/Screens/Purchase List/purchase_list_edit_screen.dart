@@ -20,7 +20,7 @@ import '../../Provider/product_provider.dart';
 import '../../Provider/profile_provider.dart';
 import '../../Provider/purchase_report_provider.dart';
 import '../../constant.dart';
-import '../Customers/Model/customer_model.dart';
+import '../Customers/Model/parties_model.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class PurchaseListEditScreen extends StatefulWidget {
@@ -102,7 +102,7 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
   Widget build(BuildContext context) {
     return Consumer(builder: (context, consumerRef, __) {
       final providerData = consumerRef.watch(cartNotifierPurchase);
-      final personalData = consumerRef.watch(profileDetailsProvider);
+      final personalData = consumerRef.watch(businessInfoProvider);
       final productList = consumerRef.watch(productProvider);
 
       ///__________Add_previous_products_in_the_List___________________________________________
@@ -275,12 +275,12 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                   ///_______Add_Button__________________________________________________
                   GestureDetector(
                     onTap: () {
-                      EditPurchaseInvoiceSaleProducts(
-                        catName: null,
-                        customerModel:
-                            CustomerModel(widget.transitionModel.customerName, widget.transitionModel.customerPhone, widget.transitionModel.customerType, '', '', '', ''),
-                        transitionModel: widget.transitionModel,
-                      ).launch(context);
+                      // EditPurchaseInvoiceSaleProducts(
+                      //   catName: null,
+                      //   customerModel:
+                      //       Party(widget.transitionModel.customerName, widget.transitionModel.customerPhone, widget.transitionModel.customerType, '', '', '', ''),
+                      //   transitionModel: widget.transitionModel,
+                      // ).launch(context);
                     },
                     child: Container(
                       height: 50,
@@ -634,11 +634,11 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                                 }
 
                                 providerData.clearCart();
-                                consumerRef.refresh(customerProvider);
+                                consumerRef.refresh(partiesProvider);
                                 consumerRef.refresh(productProvider);
                                 consumerRef.refresh(purchaseReportProvider);
                                 consumerRef.refresh(purchaseTransitionProvider);
-                                consumerRef.refresh(profileDetailsProvider);
+                                consumerRef.refresh(businessInfoProvider);
                                 EasyLoading.dismiss();
 
                                 // ignore: use_build_context_synchronously

@@ -25,7 +25,7 @@ class _PurchaseContactsState extends State<PurchaseContacts> {
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, ref, __) {
-      final providerData = ref.watch(customerProvider);
+      final providerData = ref.watch(partiesProvider);
       final cart = ref.watch(cartNotifierPurchase);
       return Scaffold(
         resizeToAvoidBottomInset: true,
@@ -73,7 +73,7 @@ class _PurchaseContactsState extends State<PurchaseContacts> {
                           itemCount: customer.length,
                           itemBuilder: (_, index) {
                             customer[index].type == 'Supplier' ? color = const Color(0xFFA569BD) : Colors.white;
-                            return customer[index].customerName.contains(searchCustomer) && customer[index].type.contains('Supplier')
+                            return customer[index].name!.contains(searchCustomer) && customer[index].type!.contains('Supplier')
                                 ? GestureDetector(
                                     onTap: () {
                                       AddPurchaseScreen(customerModel: customer[index]).launch(context);
@@ -92,7 +92,7 @@ class _PurchaseContactsState extends State<PurchaseContacts> {
                                               radius: 70.0,
                                               child: ClipOval(
                                                 child: Image.network(
-                                                  customer[index].profilePicture,
+                                                  customer[index].image??'',
                                                   fit: BoxFit.cover,
                                                   width: 120.0,
                                                   height: 120.0,
@@ -106,14 +106,14 @@ class _PurchaseContactsState extends State<PurchaseContacts> {
                                             crossAxisAlignment: CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                customer[index].customerName,
+                                                customer[index].name??'',
                                                 style: GoogleFonts.poppins(
                                                   color: Colors.black,
                                                   fontSize: 15.0,
                                                 ),
                                               ),
                                               Text(
-                                                customer[index].type,
+                                                customer[index].type??'',
                                                 style: GoogleFonts.poppins(
                                                   color: color,
                                                   fontSize: 15.0,
@@ -127,7 +127,7 @@ class _PurchaseContactsState extends State<PurchaseContacts> {
                                             crossAxisAlignment: CrossAxisAlignment.end,
                                             children: [
                                               Text(
-                                                '$currency ${customer[index].dueAmount}',
+                                                '$currency ${customer[index].due}',
                                                 style: GoogleFonts.poppins(
                                                   color: Colors.black,
                                                   fontSize: 15.0,
@@ -141,7 +141,7 @@ class _PurchaseContactsState extends State<PurchaseContacts> {
                                                 ),
                                               ),
                                             ],
-                                          ).visible(customer[index].dueAmount != '' && customer[index].dueAmount != '0'),
+                                          ).visible(customer[index].due != null && customer[index].due != 0),
                                           const SizedBox(width: 20),
                                           const Icon(
                                             Icons.arrow_forward_ios,
@@ -173,7 +173,7 @@ class _PurchaseContactsState extends State<PurchaseContacts> {
         floatingActionButton: FloatingActionButton(
             child: const Icon(Icons.add),
             onPressed: () {
-              const AddCustomer().launch(context);
+              const AddParty().launch(context);
             }),
       );
     });

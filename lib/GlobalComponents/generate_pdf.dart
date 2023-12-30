@@ -9,12 +9,12 @@ import 'package:pdf/pdf.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:pdf/widgets.dart' as pw;
 import '../Screens/PDF/pdf.dart';
-import '../model/personal_information_model.dart';
+import '../model/business_info_model.dart';
 import '../model/transition_model.dart';
 import 'package:path_provider/path_provider.dart';
 
 class GeneratePdf {
-  Future<void> generatePurchaseDocument(PurchaseTransitionModel transactions, PersonalInformationModel personalInformation, BuildContext context) async {
+  Future<void> generatePurchaseDocument(PurchaseTransitionModel transactions, BusinessInformationModel personalInformation, BuildContext context) async {
     final pw.Document doc = pw.Document();
     // final netImage = await networkImage(
     //   personalInformation.pictureUrl.toString(),
@@ -471,7 +471,7 @@ class GeneratePdf {
     // }
   }
 
-  Future<void> generateSaleDocument(SaleTransactionModel transactions, PersonalInformationModel personalInformation, BuildContext context) async {
+  Future<void> generateSaleDocument(SaleTransactionModel transactions, BusinessInformationModel personalInformation, BuildContext context) async {
     final pw.Document doc = pw.Document();
 
     doc.addPage(
@@ -889,7 +889,7 @@ class GeneratePdf {
     }
   }
 
-  Future<void> generateDueDocument(DueTransactionModel transactions, PersonalInformationModel personalInformation, BuildContext context) async {
+  Future<void> generateDueDocument(DueTransactionModel transactions, BusinessInformationModel personalInformation, BuildContext context) async {
     final pw.Document doc = pw.Document();
     // final netImage = await networkImage(
     //   personalInformation.pictureUrl.toString(),

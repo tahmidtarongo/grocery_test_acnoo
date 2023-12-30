@@ -1,7 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../Repository/API/business_category_repo.dart';
+import '../model/business_category_model.dart';
 
-import '../model/shop_category_model.dart';
-import '../repository/shop_category_repo.dart';
-
-ShopCategoryRepo categoryRepo = ShopCategoryRepo();
-final shopCategoryProvider = FutureProvider.autoDispose<List<ShopCategoryModel>>((ref) => categoryRepo.getAllCategory());
+BusinessCategoryRepository businessCategoryRepository = BusinessCategoryRepository();
+final businessCategoryProvider = FutureProvider<List<BusinessCategory>>((ref) => businessCategoryRepository.getBusinessCategories());

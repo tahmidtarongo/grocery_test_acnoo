@@ -24,14 +24,14 @@ import '../../Provider/purchase_report_provider.dart';
 import '../../constant.dart';
 import '../../currency.dart';
 import '../../subscription.dart';
-import '../Customers/Model/customer_model.dart';
+import '../Customers/Model/parties_model.dart';
 import '../Home/home.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class AddPurchaseScreen extends StatefulWidget {
   const AddPurchaseScreen({Key? key, required this.customerModel}) : super(key: key);
 
-  final CustomerModel customerModel;
+  final Party customerModel;
 
   @override
   State<AddPurchaseScreen> createState() => _AddPurchaseScreenState();
@@ -67,9 +67,9 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
   }
 
   late PurchaseTransitionModel transitionModel = PurchaseTransitionModel(
-    customerName: widget.customerModel.customerName,
-    customerPhone: widget.customerModel.phoneNumber,
-    customerType: widget.customerModel.type,
+    customerName: widget.customerModel.name??'',
+    customerPhone: widget.customerModel.phone??'',
+    customerType: widget.customerModel.type??'',
     invoiceNumber: invoice.toString(),
     purchaseDate: DateTime.now().toString(),
   );
@@ -80,9 +80,8 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
     return Consumer(builder: (context, consumerRef, __) {
       final providerData = consumerRef.watch(cartNotifierPurchase);
       final printerData = consumerRef.watch(printerPurchaseProviderNotifier);
-      final personalData = consumerRef.watch(profileDetailsProvider);
+      final personalData = consumerRef.watch(businessInfoProvider);
       return personalData.when(data: (data) {
-        invoice = data.invoiceCounter!.toInt();
         return Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.white,
@@ -107,7 +106,7 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                         child: AppTextField(
                           textFieldType: TextFieldType.NAME,
                           readOnly: true,
-                          initialValue: data.invoiceCounter.toString(),
+                          initialValue: '',
                           decoration: InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             labelText: lang.S.of(context).inv,
@@ -156,7 +155,7 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                         children: [
                           const Text('Due Amount: '),
                           Text(
-                            widget.customerModel.dueAmount == '' ? '$currency 0' : '$currency${widget.customerModel.dueAmount}',
+                            widget.customerModel.due == null ? '$currency 0' : '$currency${widget.customerModel.due}',
                             style: const TextStyle(color: Color(0xFFFF8C34)),
                           ),
                         ],
@@ -167,7 +166,7 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                       AppTextField(
                         textFieldType: TextFieldType.NAME,
                         readOnly: true,
-                        initialValue: widget.customerModel.customerName,
+                        initialValue: widget.customerModel.name,
                         decoration: InputDecoration(
                           floatingLabelBehavior: FloatingLabelBehavior.always,
                           labelText: lang.S.of(context).supplierName,
@@ -772,7 +771,7 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                                 Subscription.decreaseSubscriptionLimits(itemType: 'purchaseNumber', context: context);
 
                                 ///_________DueUpdate______________________________________________________
-                                getSpecificCustomers(phoneNumber: widget.customerModel.phoneNumber, due: transitionModel.dueAmount!.toInt());
+                                getSpecificCustomers(phoneNumber: widget.customerModel.phone??'', due: transitionModel.dueAmount!.toInt());
 
                                 ///________Print_______________________________________________________
                                 if (isPrintEnable && (Theme.of(context).platform == TargetPlatform.android)) {
@@ -781,11 +780,11 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                                   if (connected) {
                                     await printerData.printTicket(printTransactionModel: model, productList: providerData.cartItemPurchaseList);
                                     providerData.clearCart();
-                                    consumerRef.refresh(customerProvider);
+                                    consumerRef.refresh(partiesProvider);
                                     consumerRef.refresh(productProvider);
                                     consumerRef.refresh(purchaseReportProvider);
                                     consumerRef.refresh(purchaseTransitionProvider);
-                                    consumerRef.refresh(profileDetailsProvider);
+                                    consumerRef.refresh(businessInfoProvider);
 
                                     EasyLoading.showSuccess('Added Successfully');
                                     Future.delayed(const Duration(milliseconds: 500), () {
@@ -821,11 +820,11 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                                                             if (isConnect) {
                                                               await printerData.printTicket(printTransactionModel: model, productList: transitionModel.productList);
                                                               providerData.clearCart();
-                                                              consumerRef.refresh(customerProvider);
+                                                              consumerRef.refresh(partiesProvider);
                                                               consumerRef.refresh(productProvider);
                                                               consumerRef.refresh(purchaseReportProvider);
                                                               consumerRef.refresh(purchaseTransitionProvider);
-                                                              consumerRef.refresh(profileDetailsProvider);
+                                                              consumerRef.refresh(businessInfoProvider);
                                                               EasyLoading.showSuccess('Added Successfully');
                                                               Future.delayed(const Duration(milliseconds: 500), () {
                                                                 const PurchaseReportScreen().launch(context);
@@ -848,11 +847,11 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                                                     const SizedBox(height: 15),
                                                     GestureDetector(
                                                       onTap: () {
-                                                        consumerRef.refresh(customerProvider);
+                                                        consumerRef.refresh(partiesProvider);
                                                         consumerRef.refresh(productProvider);
                                                         consumerRef.refresh(purchaseReportProvider);
                                                         consumerRef.refresh(purchaseTransitionProvider);
-                                                        consumerRef.refresh(profileDetailsProvider);
+                                                        consumerRef.refresh(businessInfoProvider);
                                                         const PurchaseReportScreen().launch(context);
                                                       },
                                                       child: const Center(
@@ -873,11 +872,11 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                                   }
                                 } else {
                                   providerData.clearCart();
-                                  consumerRef.refresh(customerProvider);
+                                  consumerRef.refresh(partiesProvider);
                                   consumerRef.refresh(productProvider);
                                   consumerRef.refresh(purchaseReportProvider);
                                   consumerRef.refresh(purchaseTransitionProvider);
-                                  consumerRef.refresh(profileDetailsProvider);
+                                  consumerRef.refresh(businessInfoProvider);
                                   EasyLoading.showSuccess('Added Successfully');
                                   Future.delayed(const Duration(milliseconds: 500), () {
                                     const PurchaseReportScreen().launch(context);

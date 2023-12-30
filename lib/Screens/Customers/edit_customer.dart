@@ -1,30 +1,25 @@
 // ignore: import_of_legacy_library_into_null_safe
 // ignore_for_file: unused_result
-
-import 'dart:convert';
 import 'dart:io';
-
-import 'package:firebase_core/firebase_core.dart' as firebase_core;
-import 'package:firebase_database/firebase_database.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:mobile_pos/Const/api_config.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
-import 'package:mobile_pos/Screens/Customers/Model/customer_model.dart';
+import 'package:mobile_pos/Screens/Customers/Model/parties_model.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../Provider/customer_provider.dart';
-import 'customer_list.dart';
+import '../../Repository/API/create_party_repo.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 // ignore: must_be_immutable
 class EditCustomer extends StatefulWidget {
   EditCustomer({Key? key, required this.customerModel}) : super(key: key);
-  CustomerModel customerModel;
+  Party customerModel;
 
   @override
   // ignore: library_private_types_in_public_api
@@ -32,58 +27,30 @@ class EditCustomer extends StatefulWidget {
 }
 
 class _EditCustomerState extends State<EditCustomer> {
-  late CustomerModel updatedCustomerModel;
   String groupValue = '';
-
-  // ignore: prefer_typing_uninitialized_variables
-  var dialogContext;
   bool expanded = false;
   final ImagePicker _picker = ImagePicker();
   bool showProgress = false;
-  double progress = 0.0;
   XFile? pickedImage;
-  File imageFile = File('No File');
-  String imagePath = 'No Data';
-  late String customerKey;
-
-  void getCustomerKey(String phoneNumber) async {
-    final userId = constUserId;
-    await FirebaseDatabase.instance.ref(userId).child('Customers').orderByKey().get().then((value) {
-      for (var element in value.children) {
-        var data = jsonDecode(jsonEncode(element.value));
-        if (data['phoneNumber'].toString() == phoneNumber) {
-          customerKey = element.key.toString();
-        }
-      }
-    });
-  }
-
-  Future<void> uploadFile(String filePath) async {
-    File file = File(filePath);
-    try {
-      EasyLoading.show(
-        status: 'Uploading... ',
-        dismissOnTap: false,
-      );
-      var snapshot = await FirebaseStorage.instance.ref('Customer Picture/${DateTime.now().millisecondsSinceEpoch}').putFile(file);
-      var url = await snapshot.ref.getDownloadURL();
-      setState(() {
-        updatedCustomerModel.profilePicture = url.toString();
-      });
-    } on firebase_core.FirebaseException catch (e) {
-      EasyLoading.dismiss();
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.code.toString())));
-    }
-  }
 
   @override
   void initState() {
-    getCustomerKey(widget.customerModel.phoneNumber);
-    updatedCustomerModel = widget.customerModel;
-    groupValue = widget.customerModel.type;
+    phoneController.text = widget.customerModel.phone ?? '';
+    nameController.text = widget.customerModel.name ?? '';
+    emailController.text = widget.customerModel.email ?? '';
+    dueController.text = (widget.customerModel.due ?? 0).toString();
+    addressController.text = widget.customerModel.address ?? '';
+    groupValue = widget.customerModel.type ?? '';
     super.initState();
   }
 
+  final GlobalKey<FormState> _formKay = GlobalKey();
+
+  TextEditingController phoneController = TextEditingController();
+  TextEditingController nameController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController dueController = TextEditingController();
+  TextEditingController addressController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, cRef, __) {
@@ -103,42 +70,58 @@ class _EditCustomerState extends State<EditCustomer> {
         ),
         body: Consumer(builder: (context, ref, __) {
           // ignore: unused_local_variable
-          final customerData = ref.watch(customerProvider);
+          final customerData = ref.watch(partiesProvider);
 
           return SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.all(10.0),
               child: Column(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: AppTextField(
-                      initialValue: widget.customerModel.phoneNumber,
-                      readOnly: true,
-                      textFieldType: TextFieldType.PHONE,
-                      decoration: InputDecoration(
-                        floatingLabelBehavior: FloatingLabelBehavior.always,
-                        labelText: lang.S.of(context).phone,
-                        border: const OutlineInputBorder(),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: AppTextField(
-                      initialValue: widget.customerModel.customerName,
-                      textFieldType: TextFieldType.NAME,
-                      onChanged: (value) {
-                        setState(() {
-                          updatedCustomerModel.customerName = value;
-                        });
-                      },
-                      decoration: InputDecoration(
-                        floatingLabelBehavior: FloatingLabelBehavior.always,
-                        labelText: lang.S.of(context).name,
-                        hintText: 'John Doe',
-                        border: const OutlineInputBorder(),
-                      ),
+                  Form(
+                    key: _formKay,
+                    child: Column(
+                      children: [
+                        ///_________Phone_______________________
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: TextFormField(
+                            controller: phoneController,
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return 'Please enter a valid phone number';
+                              }
+                              return null;
+                            },
+                            decoration: InputDecoration(
+                              floatingLabelBehavior: FloatingLabelBehavior.always,
+                              labelText: lang.S.of(context).phone,
+                              hintText: lang.S.of(context).enterYourPhoneNumber,
+                              border: const OutlineInputBorder(),
+                            ),
+                          ),
+                        ),
+
+                        ///_________Name_______________________
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: TextFormField(
+                            controller: nameController,
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return 'Please enter a valid Name';
+                              }
+                              // You can add more validation logic as needed
+                              return null;
+                            },
+                            decoration: InputDecoration(
+                              floatingLabelBehavior: FloatingLabelBehavior.always,
+                              labelText: lang.S.of(context).name,
+                              hintText: lang.S.of(context).enterYourName,
+                              border: const OutlineInputBorder(),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   Row(
@@ -158,7 +141,6 @@ class _EditCustomerState extends State<EditCustomer> {
                           onChanged: (value) {
                             setState(() {
                               groupValue = value.toString();
-                              updatedCustomerModel.type = value.toString();
                             });
                           },
                         ),
@@ -178,7 +160,6 @@ class _EditCustomerState extends State<EditCustomer> {
                           onChanged: (value) {
                             setState(() {
                               groupValue = value.toString();
-                              updatedCustomerModel.type = value.toString();
                             });
                           },
                         ),
@@ -203,7 +184,6 @@ class _EditCustomerState extends State<EditCustomer> {
                           onChanged: (value) {
                             setState(() {
                               groupValue = value.toString();
-                              updatedCustomerModel.type = value.toString();
                             });
                           },
                         ),
@@ -224,7 +204,6 @@ class _EditCustomerState extends State<EditCustomer> {
                           onChanged: (value) {
                             setState(() {
                               groupValue = value.toString();
-                              updatedCustomerModel.type = value.toString();
                             });
                           },
                         ),
@@ -288,13 +267,8 @@ class _EditCustomerState extends State<EditCustomer> {
                                                 GestureDetector(
                                                   onTap: () async {
                                                     pickedImage = await _picker.pickImage(source: ImageSource.gallery);
-                                                    setState(() {
-                                                      imageFile = File(pickedImage!.path);
-                                                      imagePath = pickedImage!.path;
-                                                    });
-                                                    Future.delayed(const Duration(milliseconds: 100), () {
-                                                      Navigator.pop(context);
-                                                    });
+                                                    setState(() {});
+                                                    Navigator.pop(context);
                                                   },
                                                   child: Column(
                                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -320,13 +294,8 @@ class _EditCustomerState extends State<EditCustomer> {
                                                 GestureDetector(
                                                   onTap: () async {
                                                     pickedImage = await _picker.pickImage(source: ImageSource.camera);
-                                                    setState(() {
-                                                      imageFile = File(pickedImage!.path);
-                                                      imagePath = pickedImage!.path;
-                                                    });
-                                                    Future.delayed(const Duration(milliseconds: 100), () {
-                                                      Navigator.pop(context);
-                                                    });
+                                                    setState(() {});
+                                                    Navigator.pop(context);
                                                   },
                                                   child: Column(
                                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -361,13 +330,18 @@ class _EditCustomerState extends State<EditCustomer> {
                                     decoration: BoxDecoration(
                                       border: Border.all(color: Colors.black54, width: 1),
                                       borderRadius: const BorderRadius.all(Radius.circular(120)),
-                                      image: imagePath == 'No Data'
-                                          ? DecorationImage(
-                                              image: NetworkImage(updatedCustomerModel.profilePicture),
-                                              fit: BoxFit.cover,
-                                            )
+                                      image: pickedImage == null
+                                          ? widget.customerModel.image.isEmptyOrNull
+                                              ? const DecorationImage(
+                                                  image: AssetImage('images/no_shop_image.png'),
+                                                  fit: BoxFit.cover,
+                                                )
+                                              : DecorationImage(
+                                                  image: NetworkImage('${APIConfig.domain}${widget.customerModel.image!}'),
+                                                  fit: BoxFit.cover,
+                                                )
                                           : DecorationImage(
-                                              image: FileImage(imageFile),
+                                              image: FileImage(File(pickedImage!.path)),
                                               fit: BoxFit.cover,
                                             ),
                                     ),
@@ -396,47 +370,33 @@ class _EditCustomerState extends State<EditCustomer> {
                             const SizedBox(height: 10),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: AppTextField(
-                                initialValue: widget.customerModel.emailAddress,
-                                textFieldType: TextFieldType.EMAIL,
-                                onChanged: (value) {
-                                  setState(() {
-                                    updatedCustomerModel.emailAddress = value;
-                                  });
-                                },
+                              child: TextFormField(
+                                controller: emailController,
                                 decoration: InputDecoration(
                                   border: const OutlineInputBorder(),
                                   floatingLabelBehavior: FloatingLabelBehavior.always,
                                   labelText: lang.S.of(context).email,
-                                  hintText: 'example@example.com',
+                                  hintText: 'Enter your email',
                                 ),
                               ),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: AppTextField(
-                                initialValue: widget.customerModel.customerAddress,
-                                textFieldType: TextFieldType.NAME,
+                              child: TextFormField(
+                                controller: addressController,
                                 maxLines: 2,
-                                onChanged: (value) {
-                                  setState(() {
-                                    updatedCustomerModel.customerAddress = value;
-                                  });
-                                },
                                 decoration: InputDecoration(
                                     border: const OutlineInputBorder(),
                                     floatingLabelBehavior: FloatingLabelBehavior.always,
                                     labelText: lang.S.of(context).address,
-                                    hintText: 'Placentia, California(CA), 92870'),
+                                    hintText: 'Enter your address'),
                               ),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: AppTextField(
+                              child: TextFormField(
                                 readOnly: true,
-                                initialValue: widget.customerModel.dueAmount,
-                                textFieldType: TextFieldType.NAME,
-                                maxLines: 2,
+                                controller: dueController,
                                 decoration: InputDecoration(
                                   border: const OutlineInputBorder(),
                                   floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -454,26 +414,27 @@ class _EditCustomerState extends State<EditCustomer> {
                       buttontext: lang.S.of(context).update,
                       buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
                       onPressed: () async {
-                        try {
-                          EasyLoading.show(status: 'Loading...', dismissOnTap: false);
-                          imagePath == 'No Data' ? null : await uploadFile(imagePath);
-                          DatabaseReference ref = FirebaseDatabase.instance.ref("$constUserId/Customers/$customerKey");
-                          await ref.update({
-                            'customerName': updatedCustomerModel.customerName,
-                            'type': updatedCustomerModel.type,
-                            'profilePicture': updatedCustomerModel.profilePicture,
-                            'emailAddress': updatedCustomerModel.emailAddress,
-                            'customerAddress': updatedCustomerModel.customerAddress,
-                          });
-                          EasyLoading.showSuccess('Added Successfully', duration: const Duration(milliseconds: 500));
-                          //ref.refresh(productProvider);
-                          Future.delayed(const Duration(milliseconds: 100), () {
-                            cRef.refresh(customerProvider);
-                            const CustomerList().launch(context, isNewTask: true);
-                          });
-                        } catch (e) {
-                          EasyLoading.dismiss();
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
+                        if (_formKay.currentState!.validate()) {
+                          try {
+                            EasyLoading.show(status: 'Updating...');
+                            final party = PartyRepository();
+                            await party.updateParty(
+                              id: widget.customerModel.id.toString(), // Assuming id is a property in customerModel
+                              ref: ref,
+                              context: context,
+                              name: nameController.text,
+                              phone: phoneController.text,
+                              type: groupValue,
+                              image: pickedImage != null ? File(pickedImage!.path) : null,
+                              email: emailController.text,
+                              address: addressController.text,
+                              due: dueController.text,
+                            );
+                            EasyLoading.dismiss();
+                          } catch (e) {
+                            EasyLoading.dismiss();
+                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
+                          }
                         }
                       },
                       buttonTextColor: Colors.white),

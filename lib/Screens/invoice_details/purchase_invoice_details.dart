@@ -8,7 +8,7 @@ import '../../currency.dart';
 import '../../invoice_constant.dart';
 // ignore: library_prefixes
 import '../../constant.dart' as mainConstant;
-import '../../model/personal_information_model.dart';
+import '../../model/business_info_model.dart';
 import '../../model/print_transaction_model.dart';
 import '../../model/transition_model.dart';
 
@@ -16,7 +16,7 @@ class PurchaseInvoiceDetails extends StatefulWidget {
   const PurchaseInvoiceDetails({Key? key, required this.transitionModel, required this.personalInformationModel}) : super(key: key);
 
   final PurchaseTransitionModel transitionModel;
-  final PersonalInformationModel personalInformationModel;
+  final BusinessInformationModel personalInformationModel;
 
   @override
   State<PurchaseInvoiceDetails> createState() => _PurchaseInvoiceDetailsState();
@@ -57,7 +57,7 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          widget.personalInformationModel.countryName.toString(),
+                          widget.personalInformationModel.address.toString(),
                           style: kTextStyle.copyWith(
                             color: kGreyTextColor,
                           ),

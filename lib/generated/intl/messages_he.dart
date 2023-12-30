@@ -29,9 +29,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "addCustomer": MessageLookupByLibrary.simpleMessage("נא הוסף לקוח"),
         "addDelivery": MessageLookupByLibrary.simpleMessage("הוסף משלוח"),
         "addExpense": MessageLookupByLibrary.simpleMessage("הוסף הוצאה"),
-        "addExpenseCat": MessageLookupByLibrary.simpleMessage("הוסף קטגוריית הוצאות"),
+        "addExpenseCat":
+            MessageLookupByLibrary.simpleMessage("הוסף קטגוריית הוצאות"),
         "addItems": MessageLookupByLibrary.simpleMessage("הוסף פריטים"),
-        "addNewAddress": MessageLookupByLibrary.simpleMessage("הוסף כתובת חדשה"),
+        "addNewAddress":
+            MessageLookupByLibrary.simpleMessage("הוסף כתובת חדשה"),
         "addNewProduct": MessageLookupByLibrary.simpleMessage("הוסף מוצר חדש"),
         "addNewPurchase": MessageLookupByLibrary.simpleMessage("נא הוסף רכישה"),
         "addNote": MessageLookupByLibrary.simpleMessage("הוסף הערה"),
@@ -42,11 +44,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("הוסף יחידה"),
         "addUserRole": MessageLookupByLibrary.simpleMessage("הוסף תפקיד משתמש"),
         "address": MessageLookupByLibrary.simpleMessage("כתובת"),
-        "allBusinessSolutions": MessageLookupByLibrary.simpleMessage("כל פתרונות העסק"),
-        "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage("Sales Pro היא פתרון עסקי מוחלט עם מלאי, חשבונות, מכירות, הוצאות והפסד/רווח."),
+        "allBusinessSolutions":
+            MessageLookupByLibrary.simpleMessage("כל פתרונות העסק"),
+        "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
+            "Sales Pro היא פתרון עסקי מוחלט עם מלאי, חשבונות, מכירות, הוצאות והפסד/רווח."),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("כבר נוסף"),
         "amount": MessageLookupByLibrary.simpleMessage("כמות"),
-        "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage("קיימת עדכון חדש זמין\nאנא עדכן את האפליקציה שלך"),
+        "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
+            "קיימת עדכון חדש זמין\nאנא עדכן את האפליקציה שלך"),
         "apply": MessageLookupByLibrary.simpleMessage("החל"),
         "backToHome": MessageLookupByLibrary.simpleMessage("חזרה לדף הבית"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("בנגלדש"),
@@ -55,7 +60,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "brands": MessageLookupByLibrary.simpleMessage("מותגים"),
         "businessCat": MessageLookupByLibrary.simpleMessage("קטגורית עסקים"),
         "businessName": MessageLookupByLibrary.simpleMessage("שם החברה והעסק"),
-        "buyPremium": MessageLookupByLibrary.simpleMessage("קנה תוכנית פרימיום"),
+        "buyPremium":
+            MessageLookupByLibrary.simpleMessage("קנה תוכנית פרימיום"),
         "call": MessageLookupByLibrary.simpleMessage("התקשר"),
         "camera": MessageLookupByLibrary.simpleMessage("מַצלֵמָה"),
         "cancel": MessageLookupByLibrary.simpleMessage("לְבַטֵל"),
@@ -64,13 +70,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "categories": MessageLookupByLibrary.simpleMessage("קטגוריות"),
         "categoryName": MessageLookupByLibrary.simpleMessage("שם קטגוריה"),
         "changePassword": MessageLookupByLibrary.simpleMessage("שנה סיסמא"),
-        "checkEmail": MessageLookupByLibrary.simpleMessage("בדוק דואר אלקטרוני"),
+        "checkEmail":
+            MessageLookupByLibrary.simpleMessage("בדוק דואר אלקטרוני"),
         "chooseCustomer": MessageLookupByLibrary.simpleMessage("בחר לקוח"),
         "chooseSupplier": MessageLookupByLibrary.simpleMessage("בחר ספק"),
-        "choseYourFeature": MessageLookupByLibrary.simpleMessage("בחר את התכונות שלך"),
-        "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage("התכונות הן החלק החשוב שהופך את Sales Pro לשונה מהפתרונות המסורתיים."),
+        "choseYourFeature":
+            MessageLookupByLibrary.simpleMessage("בחר את התכונות שלך"),
+        "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
+            "התכונות הן החלק החשוב שהופך את Sales Pro לשונה מהפתרונות המסורתיים."),
         "clarence": MessageLookupByLibrary.simpleMessage("קלרנס"),
-        "clickToConnect": MessageLookupByLibrary.simpleMessage("לחץ כדי להתחבר"),
+        "clickToConnect":
+            MessageLookupByLibrary.simpleMessage("לחץ כדי להתחבר"),
         "close": MessageLookupByLibrary.simpleMessage("סגור"),
         "collectDue": MessageLookupByLibrary.simpleMessage("איסוף בתשלום"),
         "collectDues": MessageLookupByLibrary.simpleMessage("נא לאסוף חובה"),
@@ -79,15 +89,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "confirmPass": MessageLookupByLibrary.simpleMessage("אשר סיסמה"),
         "congratulation": MessageLookupByLibrary.simpleMessage("מזל טוב"),
         "connect": MessageLookupByLibrary.simpleMessage("לחץ כדי להתחבר"),
-        "connectPrinter": MessageLookupByLibrary.simpleMessage("חבר את המדפסת שלך"),
-        "contactDetials": MessageLookupByLibrary.simpleMessage("פרטי יצירת קשר"),
+        "connectPrinter":
+            MessageLookupByLibrary.simpleMessage("חבר את המדפסת שלך"),
+        "contactDetials":
+            MessageLookupByLibrary.simpleMessage("פרטי יצירת קשר"),
         "contactUs": MessageLookupByLibrary.simpleMessage("צור קשר"),
         "continueButton": MessageLookupByLibrary.simpleMessage("לְהַמשִׁיך"),
         "country": MessageLookupByLibrary.simpleMessage("מדינה"),
         "createAcc": MessageLookupByLibrary.simpleMessage("צור חשבון בחינם"),
         "currency": MessageLookupByLibrary.simpleMessage("מַטְבֵּעַ"),
         "customerName": MessageLookupByLibrary.simpleMessage("שם לקוח"),
-        "dailyTransaction": MessageLookupByLibrary.simpleMessage("עסקאות יומיומיות"),
+        "dailyTransaction":
+            MessageLookupByLibrary.simpleMessage("עסקאות יומיומיות"),
         "date": MessageLookupByLibrary.simpleMessage("תַאֲרִיך"),
         "dates": MessageLookupByLibrary.simpleMessage("תַאֲרִיך:"),
         "dealer": MessageLookupByLibrary.simpleMessage("סוֹחֵר"),
@@ -101,24 +114,35 @@ class MessageLookup extends MessageLookupByLibrary {
         "dueAmount": MessageLookupByLibrary.simpleMessage("סכום לתשלום: "),
         "dueList": MessageLookupByLibrary.simpleMessage("רשימת תאריכים"),
         "dueReport": MessageLookupByLibrary.simpleMessage("דוח מועד"),
-        "easyToUseThePos": MessageLookupByLibrary.simpleMessage("שימוש קל במכשיר POS נייד"),
-        "easytheusedesciption": MessageLookupByLibrary.simpleMessage("אפליקציית Sales Pro חינמית וקלה לשימוש. למעשה, זו אחת מהמערכות POS הטובות ביותר בעולם."),
+        "easyToUseThePos":
+            MessageLookupByLibrary.simpleMessage("שימוש קל במכשיר POS נייד"),
+        "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
+            "אפליקציית Sales Pro חינמית וקלה לשימוש. למעשה, זו אחת מהמערכות POS הטובות ביותר בעולם."),
         "edit": MessageLookupByLibrary.simpleMessage("לַעֲרוֹך"),
         "editPhone": MessageLookupByLibrary.simpleMessage("לערוך מספר טלפון?"),
-        "editPurchaseInvoice": MessageLookupByLibrary.simpleMessage("ערוך חשבונית רכישה"),
-        "editSalesInvoice": MessageLookupByLibrary.simpleMessage("ערוך חשבונית מכירה"),
-        "editSocailMedia": MessageLookupByLibrary.simpleMessage("ערוך מדיה חברתית"),
+        "editPurchaseInvoice":
+            MessageLookupByLibrary.simpleMessage("ערוך חשבונית רכישה"),
+        "editSalesInvoice":
+            MessageLookupByLibrary.simpleMessage("ערוך חשבונית מכירה"),
+        "editSocailMedia":
+            MessageLookupByLibrary.simpleMessage("ערוך מדיה חברתית"),
         "email": MessageLookupByLibrary.simpleMessage("כתובת דוא\"ל"),
         "emailText": MessageLookupByLibrary.simpleMessage("אימייל"),
         "enterAmount": MessageLookupByLibrary.simpleMessage("הזן סכום"),
-        "enterEmail": MessageLookupByLibrary.simpleMessage("אנא הזן את כתובת הדוא\"ל שלך למטה כדי לקבל קישור לאיפוס סיסמה."),
-        "enterExpenseDate": MessageLookupByLibrary.simpleMessage("הזן תאריך הוצאה"),
-        "enterFullAddress": MessageLookupByLibrary.simpleMessage("הזן את הכתובת המלאה"),
+        "enterEmail": MessageLookupByLibrary.simpleMessage(
+            "אנא הזן את כתובת הדוא\"ל שלך למטה כדי לקבל קישור לאיפוס סיסמה."),
+        "enterExpenseDate":
+            MessageLookupByLibrary.simpleMessage("הזן תאריך הוצאה"),
+        "enterFullAddress":
+            MessageLookupByLibrary.simpleMessage("הזן את הכתובת המלאה"),
         "enterName": MessageLookupByLibrary.simpleMessage("הזן שם"),
-        "enterRefNumber": MessageLookupByLibrary.simpleMessage("הזן מספר ייחוס"),
-        "enterYourEmailAddress": MessageLookupByLibrary.simpleMessage("הזן את כתובת האימייל שלך"),
+        "enterRefNumber":
+            MessageLookupByLibrary.simpleMessage("הזן מספר ייחוס"),
+        "enterYourEmailAddress":
+            MessageLookupByLibrary.simpleMessage("הזן את כתובת האימייל שלך"),
         "enterYourName": MessageLookupByLibrary.simpleMessage("הזן את שמך"),
-        "enterYourPhoneNumber": MessageLookupByLibrary.simpleMessage("הזן את מספר הטלפון שלך"),
+        "enterYourPhoneNumber":
+            MessageLookupByLibrary.simpleMessage("הזן את מספר הטלפון שלך"),
         "expense": MessageLookupByLibrary.simpleMessage("הוצאה"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("קטגוריות הוצאות"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("תאריך הוצאה"),
@@ -126,7 +150,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenseReport": MessageLookupByLibrary.simpleMessage("דו\"ח הוצאות"),
         "fashions": MessageLookupByLibrary.simpleMessage("אופנה"),
         "firstName": MessageLookupByLibrary.simpleMessage("שם פרטי"),
-        "forgotPassword": MessageLookupByLibrary.simpleMessage("שכחת את הסיסמא"),
+        "forgotPassword":
+            MessageLookupByLibrary.simpleMessage("שכחת את הסיסמא"),
         "freePack": MessageLookupByLibrary.simpleMessage("חבילה חינם"),
         "freePlan": MessageLookupByLibrary.simpleMessage("תוכנית חינם"),
         "fromDate": MessageLookupByLibrary.simpleMessage("מתאריך"),
@@ -145,9 +170,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "lastName": MessageLookupByLibrary.simpleMessage("שם משפחה"),
         "loading": MessageLookupByLibrary.simpleMessage("טוען"),
         "logIn": MessageLookupByLibrary.simpleMessage("התחברות"),
-        "logInWithMail": MessageLookupByLibrary.simpleMessage("התחבר עם דואר אלקטרוני"),
+        "logInWithMail":
+            MessageLookupByLibrary.simpleMessage("התחבר עם דואר אלקטרוני"),
         "logOut": MessageLookupByLibrary.simpleMessage("להתנתק"),
-        "loginWithPhone": MessageLookupByLibrary.simpleMessage("כניסה באמצעות טלפון"),
+        "loginWithPhone":
+            MessageLookupByLibrary.simpleMessage("כניסה באמצעות טלפון"),
         "loss": MessageLookupByLibrary.simpleMessage("הֶפסֵד"),
         "lossOrProfit": MessageLookupByLibrary.simpleMessage("הפסד/רווח"),
         "lp": MessageLookupByLibrary.simpleMessage("הפסד/רווח"),
@@ -162,8 +189,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "next": MessageLookupByLibrary.simpleMessage("הבא"),
         "noAcc": MessageLookupByLibrary.simpleMessage("אין לך חשבון?"),
         "noData": MessageLookupByLibrary.simpleMessage("אין נתונים זמינים"),
-        "noDataAvailabe": MessageLookupByLibrary.simpleMessage("אין נתונים זמינים"),
-        "noRoleFound": MessageLookupByLibrary.simpleMessage("לא נמצא תפקיד משתמש"),
+        "noDataAvailabe":
+            MessageLookupByLibrary.simpleMessage("אין נתונים זמינים"),
+        "noRoleFound":
+            MessageLookupByLibrary.simpleMessage("לא נמצא תפקיד משתמש"),
         "noSupplier": MessageLookupByLibrary.simpleMessage("אין ספק זמין"),
         "note": MessageLookupByLibrary.simpleMessage("הערה"),
         "notification": MessageLookupByLibrary.simpleMessage("התראה"),
@@ -181,15 +210,22 @@ class MessageLookup extends MessageLookupByLibrary {
         "paymentsAmount": MessageLookupByLibrary.simpleMessage("סכומי תשלום"),
         "paypalPay": MessageLookupByLibrary.simpleMessage("שלם עם Paypal"),
         "phone": MessageLookupByLibrary.simpleMessage("מספר טלפון"),
-        "phoneVerification": MessageLookupByLibrary.simpleMessage("אימות טלפוני"),
-        "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage("אנא התחבר תחילה למדפסת"),
-        "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage("אנא התחבר למדפסת Bluetooth שלך"),
-        "pleaseEnterAConfirmPassword": MessageLookupByLibrary.simpleMessage("אנא הזן אימות לסיסמה"),
-        "pleaseEnterAPassword": MessageLookupByLibrary.simpleMessage("אנא הזן סיסמה"),
-        "powerdedByAcnoo": MessageLookupByLibrary.simpleMessage("מופעל על ידי Acnoo"),
+        "phoneVerification":
+            MessageLookupByLibrary.simpleMessage("אימות טלפוני"),
+        "pleaseConnectThePrinterFirst":
+            MessageLookupByLibrary.simpleMessage("אנא התחבר תחילה למדפסת"),
+        "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
+            "אנא התחבר למדפסת Bluetooth שלך"),
+        "pleaseEnterAConfirmPassword":
+            MessageLookupByLibrary.simpleMessage("אנא הזן אימות לסיסמה"),
+        "pleaseEnterAPassword":
+            MessageLookupByLibrary.simpleMessage("אנא הזן סיסמה"),
+        "powerdedByAcnoo":
+            MessageLookupByLibrary.simpleMessage("מופעל על ידי Acnoo"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("תוכנית פרימיום"),
         "previousDue": MessageLookupByLibrary.simpleMessage("הקודם בשל"),
-        "previousPayAmount": MessageLookupByLibrary.simpleMessage("סכום תשלום קודם"),
+        "previousPayAmount":
+            MessageLookupByLibrary.simpleMessage("סכום תשלום קודם"),
         "print": MessageLookupByLibrary.simpleMessage("הדפס"),
         "printing": MessageLookupByLibrary.simpleMessage("אפשרות הדפסה"),
         "product": MessageLookupByLibrary.simpleMessage("מוצר"),
@@ -202,20 +238,25 @@ class MessageLookup extends MessageLookupByLibrary {
         "promoCode": MessageLookupByLibrary.simpleMessage("קוד פרומו"),
         "purchase": MessageLookupByLibrary.simpleMessage("לִרְכּוֹשׁ"),
         "purchaseAlarm": MessageLookupByLibrary.simpleMessage("התראת רכישה"),
-        "purchaseConfirmed": MessageLookupByLibrary.simpleMessage("רכישה מאושרת"),
+        "purchaseConfirmed":
+            MessageLookupByLibrary.simpleMessage("רכישה מאושרת"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("רשימת רכישות"),
         "purchaseNow": MessageLookupByLibrary.simpleMessage("רכוש עכשיו"),
-        "purchasePremium": MessageLookupByLibrary.simpleMessage("רכישת תוכנית פרימיום"),
+        "purchasePremium":
+            MessageLookupByLibrary.simpleMessage("רכישת תוכנית פרימיום"),
         "purchasePrice": MessageLookupByLibrary.simpleMessage("מחיר הרכישה"),
         "purchaseReport": MessageLookupByLibrary.simpleMessage("דוח רכישה"),
         "quantity": MessageLookupByLibrary.simpleMessage("כַּמוּת"),
-        "recentTransaction": MessageLookupByLibrary.simpleMessage("תנועות אחרונות"),
+        "recentTransaction":
+            MessageLookupByLibrary.simpleMessage("תנועות אחרונות"),
         "recivethePin": MessageLookupByLibrary.simpleMessage("קיבלת את ה-PIN"),
         "referenceNo": MessageLookupByLibrary.simpleMessage("מספר סימוכין"),
         "register": MessageLookupByLibrary.simpleMessage("הירשם"),
-        "registerTitle": MessageLookupByLibrary.simpleMessage("אנחנו צריכים לרשום את הטלפון שלך בלי להתחיל!"),
+        "registerTitle": MessageLookupByLibrary.simpleMessage(
+            "אנחנו צריכים לרשום את הטלפון שלך בלי להתחיל!"),
         "remainingDue": MessageLookupByLibrary.simpleMessage("יתרת חוב"),
-        "rememberMeLater": MessageLookupByLibrary.simpleMessage("זכור אותי מאוחר יותר"),
+        "rememberMeLater":
+            MessageLookupByLibrary.simpleMessage("זכור אותי מאוחר יותר"),
         "reports": MessageLookupByLibrary.simpleMessage("דיווחים"),
         "retailer": MessageLookupByLibrary.simpleMessage("קִמעוֹנַאִי"),
         "retur": MessageLookupByLibrary.simpleMessage("החזרה"),
@@ -229,19 +270,24 @@ class MessageLookup extends MessageLookupByLibrary {
         "save": MessageLookupByLibrary.simpleMessage("להציל"),
         "saveNPublish": MessageLookupByLibrary.simpleMessage("שמור ופרסם"),
         "search": MessageLookupByLibrary.simpleMessage("לחפש"),
-        "seeAllPromoCode": MessageLookupByLibrary.simpleMessage("צפה בכל הקודים הפרומוטים"),
+        "seeAllPromoCode":
+            MessageLookupByLibrary.simpleMessage("צפה בכל הקודים הפרומוטים"),
         "select": MessageLookupByLibrary.simpleMessage("בחר"),
         "selectCategory": MessageLookupByLibrary.simpleMessage("בחר קטגוריה"),
         "selectLang": MessageLookupByLibrary.simpleMessage("בחר את השפה שלך"),
         "send": MessageLookupByLibrary.simpleMessage("שלח"),
         "sendCode": MessageLookupByLibrary.simpleMessage("שלח את הקוד"),
-        "sendEmail": MessageLookupByLibrary.simpleMessage("שלחנו אימייל עם הוראות כיצד לאפס את הסיסמה ל:"),
+        "sendEmail": MessageLookupByLibrary.simpleMessage(
+            "שלחנו אימייל עם הוראות כיצד לאפס את הסיסמה ל:"),
         "sendLink": MessageLookupByLibrary.simpleMessage("שלח קישור איפוס"),
         "sendMessage": MessageLookupByLibrary.simpleMessage("שלח הודעה"),
         "sendSms": MessageLookupByLibrary.simpleMessage("שלח SMS"),
-        "sendYourEmail": MessageLookupByLibrary.simpleMessage("שלח את האימייל שלך"),
-        "setUpDesc": MessageLookupByLibrary.simpleMessage("עדכן את הפרופיל שלך כדי לחבר את הרופא שלך עם רושם טוב יותר"),
-        "setUpProfile": MessageLookupByLibrary.simpleMessage("הגדר את הפרופיל שלך"),
+        "sendYourEmail":
+            MessageLookupByLibrary.simpleMessage("שלח את האימייל שלך"),
+        "setUpDesc": MessageLookupByLibrary.simpleMessage(
+            "עדכן את הפרופיל שלך כדי לחבר את הרופא שלך עם רושם טוב יותר"),
+        "setUpProfile":
+            MessageLookupByLibrary.simpleMessage("הגדר את הפרופיל שלך"),
         "setting": MessageLookupByLibrary.simpleMessage("הגדרות"),
         "share": MessageLookupByLibrary.simpleMessage("שתף"),
         "size": MessageLookupByLibrary.simpleMessage("גודל"),
@@ -258,8 +304,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "subscription": MessageLookupByLibrary.simpleMessage("מִנוּי"),
         "supplier": MessageLookupByLibrary.simpleMessage("ספק"),
         "supplierName": MessageLookupByLibrary.simpleMessage("שם ספק"),
-        "thakYouForYourPurchase": MessageLookupByLibrary.simpleMessage("תודה על הרכישה שלך"),
-        "thankYouForYourDuePayment": MessageLookupByLibrary.simpleMessage("תודה על התשלום הממומן שלך"),
+        "thakYouForYourPurchase":
+            MessageLookupByLibrary.simpleMessage("תודה על הרכישה שלך"),
+        "thankYouForYourDuePayment":
+            MessageLookupByLibrary.simpleMessage("תודה על התשלום הממומן שלך"),
         "toDate": MessageLookupByLibrary.simpleMessage("עד היום"),
         "total": MessageLookupByLibrary.simpleMessage("סה\"כ"),
         "totalAmount": MessageLookupByLibrary.simpleMessage("הכמות הכוללת"),
@@ -282,18 +330,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact": MessageLookupByLibrary.simpleMessage("עדכן איש קשר"),
         "updateNow": MessageLookupByLibrary.simpleMessage("עדכן כעת"),
         "updateProduct": MessageLookupByLibrary.simpleMessage("עדכן את המוצר"),
-        "updateProfile": MessageLookupByLibrary.simpleMessage("עדכן את הפרופיל שלך"),
+        "updateProfile":
+            MessageLookupByLibrary.simpleMessage("עדכן את הפרופיל שלך"),
         "userRole": MessageLookupByLibrary.simpleMessage("תפקיד משתמש"),
         "viewAll": MessageLookupByLibrary.simpleMessage("צפה בהכל"),
         "weight": MessageLookupByLibrary.simpleMessage("משקל"),
         "whatNew": MessageLookupByLibrary.simpleMessage("מה חדש"),
         "wholeSalePrice": MessageLookupByLibrary.simpleMessage("מחיר סיטונאי"),
         "wholesaler": MessageLookupByLibrary.simpleMessage("סִיטוֹנַאי"),
-        "writeYourMessageHere": MessageLookupByLibrary.simpleMessage("כתוב את ההודעה שלך כאן"),
+        "writeYourMessageHere":
+            MessageLookupByLibrary.simpleMessage("כתוב את ההודעה שלך כאן"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("אתה משתמש "),
-        "youWantTodeletetheProduct": MessageLookupByLibrary.simpleMessage("האם ברצונך למחוק את המוצר הזה?"),
+        "youWantTodeletetheProduct": MessageLookupByLibrary.simpleMessage(
+            "האם ברצונך למחוק את המוצר הזה?"),
         "yourPack": MessageLookupByLibrary.simpleMessage("החבילה שלך"),
-        "yourPackageExpiredInDays": MessageLookupByLibrary.simpleMessage("החבילה שלך תפוגה בעוד 5 ימים"),
-        "yourPackageExpiredToday": MessageLookupByLibrary.simpleMessage("החבילה שלך תפוגה היום\n\nנא לרכוש מחדש")
+        "yourPackageExpiredInDays": MessageLookupByLibrary.simpleMessage(
+            "החבילה שלך תפוגה בעוד 5 ימים"),
+        "yourPackageExpiredToday": MessageLookupByLibrary.simpleMessage(
+            "החבילה שלך תפוגה היום\n\nנא לרכוש מחדש")
       };
 }

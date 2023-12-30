@@ -67,8 +67,8 @@ class _PurchaseReportState extends State<PurchaseReportScreen> {
         body: Consumer(builder: (context, ref, __) {
           final providerData = ref.watch(purchaseTransitionProvider);
           final printerData = ref.watch(printerPurchaseProviderNotifier);
-          final personalData = ref.watch(profileDetailsProvider);
-          final profile = ref.watch(profileDetailsProvider);
+          final personalData = ref.watch(businessInfoProvider);
+          final profile = ref.watch(businessInfoProvider);
 
           return SingleChildScrollView(
             child: Column(

@@ -23,10 +23,10 @@ import '../../Provider/product_provider.dart';
 import '../../Provider/seles_report_provider.dart';
 import '../../constant.dart';
 import '../../currency.dart';
-import '../../model/personal_information_model.dart';
+import '../../model/business_info_model.dart';
 import '../../model/print_transaction_model.dart';
 import '../../subscription.dart';
-import '../Customers/Model/customer_model.dart';
+import '../Customers/Model/parties_model.dart';
 import '../Home/home.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 
@@ -34,7 +34,7 @@ import 'package:mobile_pos/generated/l10n.dart' as lang;
 class AddSalesScreen extends StatefulWidget {
   AddSalesScreen({Key? key, required this.customerModel}) : super(key: key);
 
-  CustomerModel customerModel;
+  Party customerModel;
 
   @override
   State<AddSalesScreen> createState() => _AddSalesScreenState();
@@ -78,24 +78,23 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
   }
 
   late SaleTransactionModel transitionModel = SaleTransactionModel(
-    customerName: widget.customerModel.customerName,
-    customerPhone: widget.customerModel.phoneNumber,
-    customerType: widget.customerModel.type,
+    customerName: widget.customerModel.name??'',
+    customerPhone: widget.customerModel.phone??'',
+    customerType: widget.customerModel.type??'',
     invoiceNumber: invoice.toString(),
     purchaseDate: DateTime.now().toString(),
   );
   DateTime selectedDate = DateTime.now();
 
-  late PersonalInformationModel personalInformationModel;
+  late BusinessInformationModel personalInformationModel;
 
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, consumerRef, __) {
       final providerData = consumerRef.watch(cartNotifier);
       final printerData = consumerRef.watch(printerProviderNotifier);
-      final personalData = consumerRef.watch(profileDetailsProvider);
+      final personalData = consumerRef.watch(businessInfoProvider);
       return personalData.when(data: (data) {
-        invoice = data.invoiceCounter!.toInt();
         personalInformationModel = data;
         return Scaffold(
           appBar: AppBar(
@@ -121,7 +120,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                         child: AppTextField(
                           textFieldType: TextFieldType.NAME,
                           readOnly: true,
-                          initialValue: data.invoiceCounter.toString(),
+                          initialValue: 'data.invoiceCounter.toString()',
                           decoration: InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             labelText: lang.S.of(context).inv,
@@ -170,7 +169,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                         children: [
                           Text(lang.S.of(context).dueAmount),
                           Text(
-                            widget.customerModel.dueAmount == '' ? '$currency 0' : '$currency${widget.customerModel.dueAmount}',
+                            widget.customerModel.due == null ? '$currency 0' : '$currency${widget.customerModel.due}',
                             style: const TextStyle(color: Color(0xFFFF8C34)),
                           ),
                         ],
@@ -181,7 +180,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                       AppTextField(
                         textFieldType: TextFieldType.NAME,
                         readOnly: true,
-                        initialValue: widget.customerModel.customerName,
+                        initialValue: widget.customerModel.name,
                         decoration: InputDecoration(
                           floatingLabelBehavior: FloatingLabelBehavior.always,
                           labelText: lang.S.of(context).customerName,
@@ -932,7 +931,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
 
                                     ///_______invoice_Update_____________________________________________
                                     final DatabaseReference personalInformationRef = FirebaseDatabase.instance.ref().child(constUserId).child('Personal Information');
-                                    personalInformationModel.invoiceCounter = invoice + 1;
+                                    // personalInformationModel.invoiceCounter = invoice + 1;
                                     personalInformationRef.keepSynced(true);
 
                                     personalInformationRef.set(personalInformationModel.toJson());
@@ -942,7 +941,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                     Subscription.decreaseSubscriptionLimits(itemType: 'saleNumber', context: context);
 
                                     ///_________DueUpdate______________________________________________________
-                                    getSpecificCustomers(phoneNumber: widget.customerModel.phoneNumber, due: transitionModel.dueAmount!.toInt());
+                                    // getSpecificCustomers(phoneNumber: widget.customerModel.phoneNumber, due: transitionModel.dueAmount!.toInt());
 
                                     ///________Print_______________________________________________________
 
@@ -952,11 +951,11 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                       if (connected) {
                                         await printerData.printTicket(printTransactionModel: model, productList: providerData.cartItemList);
                                         providerData.clearCart();
-                                        consumerRef.refresh(customerProvider);
+                                        consumerRef.refresh(partiesProvider);
                                         consumerRef.refresh(productProvider);
                                         consumerRef.refresh(salesReportProvider);
                                         consumerRef.refresh(transitionProvider);
-                                        consumerRef.refresh(profileDetailsProvider);
+                                        consumerRef.refresh(businessInfoProvider);
 
                                         EasyLoading.showSuccess('Added Successfully');
                                         Future.delayed(const Duration(milliseconds: 500), () {
@@ -991,11 +990,11 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                                                 if (isConnect) {
                                                                   await printerData.printTicket(printTransactionModel: model, productList: transitionModel.productList);
                                                                   providerData.clearCart();
-                                                                  consumerRef.refresh(customerProvider);
+                                                                  consumerRef.refresh(partiesProvider);
                                                                   consumerRef.refresh(productProvider);
                                                                   consumerRef.refresh(salesReportProvider);
                                                                   consumerRef.refresh(transitionProvider);
-                                                                  consumerRef.refresh(profileDetailsProvider);
+                                                                  consumerRef.refresh(businessInfoProvider);
                                                                   EasyLoading.showSuccess('Added Successfully');
                                                                   Future.delayed(const Duration(milliseconds: 500), () {
                                                                     const SalesReportScreen().launch(context);
@@ -1018,11 +1017,11 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                                         const SizedBox(height: 15),
                                                         GestureDetector(
                                                           onTap: () {
-                                                            consumerRef.refresh(customerProvider);
+                                                            consumerRef.refresh(partiesProvider);
                                                             consumerRef.refresh(productProvider);
                                                             consumerRef.refresh(salesReportProvider);
                                                             consumerRef.refresh(transitionProvider);
-                                                            consumerRef.refresh(profileDetailsProvider);
+                                                            consumerRef.refresh(businessInfoProvider);
                                                             const SalesReportScreen().launch(context);
                                                           },
                                                           child: const Center(
@@ -1042,11 +1041,11 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                       }
                                     } else {
                                       providerData.clearCart();
-                                      consumerRef.refresh(customerProvider);
+                                      consumerRef.refresh(partiesProvider);
                                       consumerRef.refresh(productProvider);
                                       consumerRef.refresh(salesReportProvider);
                                       consumerRef.refresh(transitionProvider);
-                                      consumerRef.refresh(profileDetailsProvider);
+                                      consumerRef.refresh(businessInfoProvider);
                                       EasyLoading.showSuccess('Added Successfully');
                                       Future.delayed(const Duration(milliseconds: 500), () {
                                         const SalesReportScreen().launch(context);

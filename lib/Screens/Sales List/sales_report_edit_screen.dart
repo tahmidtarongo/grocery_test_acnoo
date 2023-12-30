@@ -20,7 +20,7 @@ import '../../Provider/seles_report_provider.dart';
 import '../../Provider/transactions_provider.dart';
 import '../../constant.dart';
 import '../../model/add_to_cart_model.dart';
-import '../Customers/Model/customer_model.dart';
+import '../Customers/Model/parties_model.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 // ignore: must_be_immutable
@@ -106,7 +106,7 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
   Widget build(BuildContext context) {
     return Consumer(builder: (context, consumerRef, __) {
       final providerData = consumerRef.watch(cartNotifier);
-      final personalData = consumerRef.watch(profileDetailsProvider);
+      final personalData = consumerRef.watch(businessInfoProvider);
       final productList = consumerRef.watch(productProvider);
 
       if (!doNotCheckProducts) {
@@ -379,8 +379,7 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                     onTap: () {
                       EditSaleInvoiceSaleProducts(
                         catName: null,
-                        customerModel: CustomerModel(
-                            widget.transitionModel.customerName, widget.transitionModel.customerPhone, widget.transitionModel.customerType, '', '', 'customerAddress', ''),
+                        customerModel: Party(),
                         transitionModel: widget.transitionModel,
                       ).launch(context);
                     },
@@ -773,11 +772,11 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                                   // getSpecificCustomersDueUpdate(phoneNumber: widget.transitionModel.customerPhone, isDuePaid: true, due: 20);
 
                                   providerData.clearCart();
-                                  consumerRef.refresh(customerProvider);
+                                  consumerRef.refresh(partiesProvider);
                                   consumerRef.refresh(productProvider);
                                   consumerRef.refresh(salesReportProvider);
                                   consumerRef.refresh(transitionProvider);
-                                  consumerRef.refresh(profileDetailsProvider);
+                                  consumerRef.refresh(businessInfoProvider);
 
                                   EasyLoading.dismiss();
 

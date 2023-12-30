@@ -6,7 +6,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Provider/product_provider.dart';
-import 'package:mobile_pos/Screens/Customers/Model/customer_model.dart';
+import 'package:mobile_pos/Screens/Customers/Model/parties_model.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:nb_utils/nb_utils.dart';
 
@@ -21,7 +21,7 @@ class SaleProducts extends StatefulWidget {
 
   // ignore: prefer_typing_uninitialized_variables
   var catName;
-  CustomerModel? customerModel;
+  Party? customerModel;
 
   @override
   // ignore: library_private_types_in_public_api
@@ -212,15 +212,15 @@ class _SaleProductsState extends State<SaleProducts> {
                       physics: const NeverScrollableScrollPhysics(),
                       itemCount: products.length,
                       itemBuilder: (_, i) {
-                        if (widget.customerModel!.type.contains('Retailer')) {
+                        if (widget.customerModel!.type!.contains('Retailer')) {
                           productPrice = products[i].productSalePrice;
-                        } else if (widget.customerModel!.type.contains('Dealer')) {
+                        } else if (widget.customerModel!.type!.contains('Dealer')) {
                           productPrice = products[i].productDealerPrice;
-                        } else if (widget.customerModel!.type.contains('Wholesaler')) {
+                        } else if (widget.customerModel!.type!.contains('Wholesaler')) {
                           productPrice = products[i].productWholeSalePrice;
-                        } else if (widget.customerModel!.type.contains('Supplier')) {
+                        } else if (widget.customerModel!.type!.contains('Supplier')) {
                           productPrice = products[i].productPurchasePrice;
-                        } else if (widget.customerModel!.type.contains('Guest')) {
+                        } else if (widget.customerModel!.type!.contains('Guest')) {
                           productPrice = products[i].productSalePrice;
                         }
                         return GestureDetector(
@@ -228,15 +228,15 @@ class _SaleProductsState extends State<SaleProducts> {
                             if (products[i].productStock.toInt() <= 0) {
                               EasyLoading.showError('Out of stock');
                             } else {
-                              if (widget.customerModel!.type.contains('Retailer')) {
+                              if (widget.customerModel!.type!.contains('Retailer')) {
                                 sentProductPrice = products[i].productSalePrice;
-                              } else if (widget.customerModel!.type.contains('Dealer')) {
+                              } else if (widget.customerModel!.type!.contains('Dealer')) {
                                 sentProductPrice = products[i].productDealerPrice;
-                              } else if (widget.customerModel!.type.contains('Wholesaler')) {
+                              } else if (widget.customerModel!.type!.contains('Wholesaler')) {
                                 sentProductPrice = products[i].productWholeSalePrice;
-                              } else if (widget.customerModel!.type.contains('Supplier')) {
+                              } else if (widget.customerModel!.type!.contains('Supplier')) {
                                 sentProductPrice = products[i].productPurchasePrice;
-                              } else if (widget.customerModel!.type.contains('Guest')) {
+                              } else if (widget.customerModel!.type!.contains('Guest')) {
                                 sentProductPrice = products[i].productSalePrice;
                               }
 

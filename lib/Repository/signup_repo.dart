@@ -7,7 +7,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../Provider/customer_provider.dart';
 import '../Provider/profile_provider.dart';
-import '../Screens/Authentication/profile_setup.dart';
+import '../Screens/Authentication/profile_setup_screen.dart';
 
 final signUpProvider = ChangeNotifierProvider((ref) => SignUpRepo());
 
@@ -25,8 +25,8 @@ class SignUpRepo extends ChangeNotifier {
         // ignore: use_build_context_synchronously
         Consumer(
           builder: (BuildContext context, WidgetRef ref, Widget? child) {
-            ref.refresh(profileDetailsProvider);
-            ref.refresh(customerProvider);
+            ref.refresh(businessInfoProvider);
+            ref.refresh(partiesProvider);
             return Container();
           },
         );
@@ -34,9 +34,7 @@ class SignUpRepo extends ChangeNotifier {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const ProfileSetup(
-              loginWithPhone: false,
-            ),
+            builder: (context) => const ProfileSetup(),
           ),
         );
       }

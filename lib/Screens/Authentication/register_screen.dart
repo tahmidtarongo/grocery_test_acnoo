@@ -1,10 +1,14 @@
+// ignore_for_file: curly_braces_in_flow_control_structures
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/Screens/Authentication/phone.dart';
+import 'package:mobile_pos/Screens/Authentication/profile_setup_screen.dart';
 import 'package:nb_utils/nb_utils.dart';
 
+import '../../Repository/API/register_repo.dart';
 import '../../constant.dart';
 import '../../repository/signup_repo.dart';
 import 'login_form.dart';
@@ -24,6 +28,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
   bool passwordShow = false;
   String? givenPassword;
   String? givenPassword2;
+
+  late String email;
+  late String password;
+  late String passwordConfirmation;
 
   bool validateAndSave() {
     final form = globalKey.currentState;
@@ -78,7 +86,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               return null;
                             },
                             onSaved: (value) {
-                              auth.email = value!;
+                              email = value!;
                             },
                           ),
                           const SizedBox(height: 20),
@@ -112,7 +120,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               return null;
                             },
                             onSaved: (value) {
-                              auth.password = value!;
+                              password = value!;
                             },
                           ),
                           const SizedBox(height: 20),
@@ -153,9 +161,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ButtonGlobalWithoutIcon(
                     buttontext: lang.S.of(context).register,
                     buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
-                    onPressed: () {
+                    onPressed: () async {
                       if (validateAndSave()) {
-                        auth.signUp(context);
+                        RegisterRepo reg = RegisterRepo();
+                        if (await reg.registerRepo(email: email, context: context, password: password, confirmPassword: password))
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const ProfileSetup(),
+                              ));
+                        // auth.signUp(context);
                       }
                     },
                     buttonTextColor: Colors.white,

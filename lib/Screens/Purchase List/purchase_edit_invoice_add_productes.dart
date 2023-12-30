@@ -7,7 +7,7 @@ import 'package:flutter_cart/flutter_cart.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Provider/product_provider.dart';
-import 'package:mobile_pos/Screens/Customers/Model/customer_model.dart';
+import 'package:mobile_pos/Screens/Customers/Model/parties_model.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:mobile_pos/model/product_model.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -23,7 +23,7 @@ class EditPurchaseInvoiceSaleProducts extends StatefulWidget {
 
   // ignore: prefer_typing_uninitialized_variables
   var catName;
-  CustomerModel? customerModel;
+  Party? customerModel;
   PurchaseTransitionModel transitionModel;
 
   @override
@@ -139,13 +139,13 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
                       physics: const NeverScrollableScrollPhysics(),
                       itemCount: products.length,
                       itemBuilder: (_, i) {
-                        if (widget.customerModel!.type.contains('Retailer')) {
+                        if (widget.customerModel!.type?.contains('Retailer')??false) {
                           productPrice = products[i].productSalePrice;
-                        } else if (widget.customerModel!.type.contains('Dealer')) {
+                        } else if (widget.customerModel!.type?.contains('Dealer')??false) {
                           productPrice = products[i].productDealerPrice;
-                        } else if (widget.customerModel!.type.contains('Wholesaler')) {
+                        } else if (widget.customerModel!.type?.contains('Wholesaler')??false) {
                           productPrice = products[i].productWholeSalePrice;
-                        } else if (widget.customerModel!.type.contains('Supplier')) {
+                        } else if (widget.customerModel!.type?.contains('Supplier')??false) {
                           productPrice = products[i].productPurchasePrice;
                         }
                         return GestureDetector(

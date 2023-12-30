@@ -1,143 +1,93 @@
 // ignore_for_file: unused_result
 
 import 'dart:io';
-import 'package:firebase_core/firebase_core.dart' as firebase_core;
-import 'package:firebase_database/firebase_database.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:mobile_pos/Const/api_config.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../Provider/profile_provider.dart';
 import '../../Provider/shop_category_provider.dart';
+import '../../Repository/API/business_info_update_repo.dart';
 import '../../constant.dart';
-import '../../model/personal_information_model.dart';
+import '../../model/business_category_model.dart';
+import '../../model/business_info_model.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 
-import '../../model/shop_category_model.dart';
-
 class EditProfile extends StatefulWidget {
-  const EditProfile({Key? key, required this.profile}) : super(key: key);
+  const EditProfile({Key? key, required this.profile, required this.ref}) : super(key: key);
 
-  final PersonalInformationModel profile;
+  final BusinessInformationModel profile;
+  final WidgetRef ref;
 
   @override
   State<EditProfile> createState() => _EditProfileState();
 }
 
 class _EditProfileState extends State<EditProfile> {
-  String dropdownLangValue = 'English';
-  String initialCountry = 'Bangladesh';
+  TextEditingController addressController = TextEditingController();
+  TextEditingController phoneController = TextEditingController();
+  TextEditingController nameController = TextEditingController();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    nameController.text = widget.profile.companyName ?? '';
+    phoneController.text = widget.profile.phoneNumber ?? '';
+    addressController.text = widget.profile.address ?? '';
+  }
+
+  int counter = 0;
+
   String dropdownValue = '';
   String companyName = 'nodata', phoneNumber = 'nodata';
   double progress = 0.0;
   int invoiceNumber = 0;
   bool showProgress = false;
   String profilePicture = 'nodata';
-  int openingBalance = 0;
-  int remainingShopBalance = 0;
+  num openingBalance = 0;
+  num remainingShopBalance = 0;
 
   // ignore: prefer_typing_uninitialized_variables
   var dialogContext;
   final ImagePicker _picker = ImagePicker();
   XFile? pickedImage;
   File imageFile = File('No File');
-  String imagePath = 'No Data';
 
-  int loopCount = 0;
+  BusinessCategory? selectedBusinessCategory;
 
-  Future<void> uploadFile(String filePath) async {
-    File file = File(filePath);
-    try {
-      EasyLoading.show(
-        status: 'Uploading... ',
-        dismissOnTap: false,
-      );
-      final ref = FirebaseStorage.instance.ref('Profile Picture/${DateTime.now().millisecondsSinceEpoch}');
+  DropdownButton<BusinessCategory> getCategory({required List<BusinessCategory> list}) {
+    List<DropdownMenuItem<BusinessCategory>> dropDownItems = [];
 
-      var snapshot = await ref.putFile(file);
-      var url = await snapshot.ref.getDownloadURL();
-      setState(() {
-        profilePicture = url.toString();
-      });
-    } on firebase_core.FirebaseException catch (e) {
-      EasyLoading.dismiss();
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.code.toString())));
-    }
-  }
-
-  DropdownButton<String> getCategory({required String category, required List<ShopCategoryModel> list}) {
-    List<String> categories = [];
-    bool inNotInList = true;
-    for (var element in list) {
-      categories.add(element.categoryName ?? '');
-      if (element.categoryName == dropdownValue) {
-        inNotInList = false;
-      }
-    }
-
-    List<DropdownMenuItem<String>> dropDownItems = [];
-    if (inNotInList) {
-      dropDownItems = [
-        DropdownMenuItem(
-          value: category,
-          child: Text(category),
-        ),
-      ];
-    }
-    for (String category in categories) {
+    for (BusinessCategory category in list) {
       var item = DropdownMenuItem(
         value: category,
-        child: Text(category),
+        child: Text(category.name),
       );
       dropDownItems.add(item);
     }
     return DropdownButton(
+      hint: const Text('Select Business Category'),
       items: dropDownItems,
-      value: category,
+      value: selectedBusinessCategory,
       onChanged: (value) {
         setState(() {
-          dropdownValue = value!;
+          selectedBusinessCategory = value!;
         });
       },
     );
   }
 
-  DropdownButton<String> getLanguage(String lang) {
-    List<DropdownMenuItem<String>> dropDownLangItems = [];
-    for (String lang in language) {
-      var item = DropdownMenuItem(
-        value: lang,
-        child: Text(lang),
-      );
-      dropDownLangItems.add(item);
-    }
-    return DropdownButton(
-      items: dropDownLangItems,
-      value: lang,
-      onChanged: (value) {
-        setState(() {
-          dropdownLangValue = value!;
-        });
-      },
-    );
-  }
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    dropdownValue = widget.profile.businessCategory ?? '';
-    dropdownLangValue = widget.profile.language ?? '';
-    profilePicture = widget.profile.pictureUrl ?? '';
-  }
+  final GlobalKey<FormState> _formKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
+    counter++;
     return Scaffold(
       appBar: AppBar(
         iconTheme: const IconThemeData(color: Colors.black),
@@ -151,12 +101,46 @@ class _EditProfileState extends State<EditProfile> {
         backgroundColor: Colors.white,
         elevation: 0.0,
       ),
+      bottomNavigationBar: ButtonGlobal(
+        iconWidget: Icons.arrow_forward,
+        buttontext: lang.S.of(context).continueButton,
+        iconColor: Colors.white,
+        buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
+        onPressed: () async {
+          if (_formKey.currentState!.validate()) {
+            final businessRepository = BusinessUpdateRepository();
+            final isProfileUpdated = await businessRepository.updateProfile(
+              id: widget.profile.id.toString(),
+              name: nameController.text,
+              categoryId: selectedBusinessCategory!.id.toString(),
+              phone: phoneController.text,
+              address: addressController.text,
+              image: pickedImage != null ? File(pickedImage!.path) : null,
+            );
+
+            if (isProfileUpdated) {
+              widget.ref.refresh(businessInfoProvider);
+              EasyLoading.showSuccess('Data saved successfully.');
+              Navigator.pop(context);
+            } else {
+              EasyLoading.showError('Something is ');
+            }
+          }
+        },
+      ),
       body: SingleChildScrollView(
         child: Consumer(builder: (context, ref, child) {
-          AsyncValue<PersonalInformationModel> userProfileDetails = ref.watch(profileDetailsProvider);
-          AsyncValue<List<ShopCategoryModel>> categoryList = ref.watch(shopCategoryProvider);
+          final categoryList = ref.watch(businessCategoryProvider);
 
           return categoryList.when(data: (categoryList) {
+            if (counter == 1) {
+              for (var element in categoryList) {
+                if (element.id == widget.profile.category!.id) {
+                  selectedBusinessCategory = element;
+                }
+              }
+            }
+
             return Center(
               child: Column(
                 children: [
@@ -173,6 +157,8 @@ class _EditProfileState extends State<EditProfile> {
                       ),
                     ),
                   ),
+
+                  ///__________Image_section________________________________________
                   GestureDetector(
                     onTap: () {
                       showDialog(
@@ -196,7 +182,6 @@ class _EditProfileState extends State<EditProfile> {
 
                                           setState(() {
                                             imageFile = File(pickedImage!.path);
-                                            imagePath = pickedImage!.path;
                                           });
 
                                           Future.delayed(const Duration(milliseconds: 100), () {
@@ -229,7 +214,6 @@ class _EditProfileState extends State<EditProfile> {
                                           pickedImage = await _picker.pickImage(source: ImageSource.camera);
                                           setState(() {
                                             imageFile = File(pickedImage!.path);
-                                            imagePath = pickedImage!.path;
                                           });
                                           Future.delayed(const Duration(milliseconds: 100), () {
                                             Navigator.pop(context);
@@ -259,88 +243,6 @@ class _EditProfileState extends State<EditProfile> {
                               ),
                             );
                           });
-                      // showDialog(
-                      //     context: context,
-                      //     builder: (BuildContext context) {
-                      //       return Dialog(
-                      //         shape: RoundedRectangleBorder(
-                      //           borderRadius: BorderRadius.circular(12.0),
-                      //         ),
-                      //         // ignore: sized_box_for_whitespace
-                      //         child: Container(
-                      //           height: 200.0,
-                      //           width: MediaQuery.of(context).size.width - 80,
-                      //           child: Center(
-                      //             child: Row(
-                      //               mainAxisAlignment: MainAxisAlignment.center,
-                      //               children: [
-                      //                 GestureDetector(
-                      //                   onTap: () async {
-                      //                     pickedImage = await _picker.pickImage(source: ImageSource.gallery);
-                      //                     setState(() {
-                      //                       imageFile = File(pickedImage!.path);
-                      //                       imagePath = pickedImage!.path;
-                      //                     });
-                      //                     Future.delayed(const Duration(milliseconds: 100), () {
-                      //                       Navigator.pop(context);
-                      //                     });
-                      //                   },
-                      //                   child: Column(
-                      //                     mainAxisAlignment: MainAxisAlignment.center,
-                      //                     children: [
-                      //                       const Icon(
-                      //                         Icons.photo_library_rounded,
-                      //                         size: 60.0,
-                      //                         color: kMainColor,
-                      //                       ),
-                      //                       Text(
-                      //                         'Gallery',
-                      //                         style: GoogleFonts.poppins(
-                      //                           fontSize: 20.0,
-                      //                           color: kMainColor,
-                      //                         ),
-                      //                       ),
-                      //                     ],
-                      //                   ),
-                      //                 ),
-                      //                 const SizedBox(
-                      //                   width: 40.0,
-                      //                 ),
-                      //                 GestureDetector(
-                      //                   onTap: () async {
-                      //                     pickedImage = await _picker.pickImage(source: ImageSource.camera);
-                      //                     setState(() {
-                      //                       imageFile = File(pickedImage!.path);
-                      //                       imagePath = pickedImage!.path;
-                      //                     });
-                      //                     Future.delayed(const Duration(milliseconds: 100), () {
-                      //                       Navigator.pop(context);
-                      //                     });
-                      //                   },
-                      //                   child: Column(
-                      //                     mainAxisAlignment: MainAxisAlignment.center,
-                      //                     children: [
-                      //                       const Icon(
-                      //                         Icons.camera,
-                      //                         size: 60.0,
-                      //                         color: kGreyTextColor,
-                      //                       ),
-                      //                       Text(
-                      //                         'Camera',
-                      //                         style: GoogleFonts.poppins(
-                      //                           fontSize: 20.0,
-                      //                           color: kGreyTextColor,
-                      //                         ),
-                      //                       ),
-                      //                     ],
-                      //                   ),
-                      //                 ),
-                      //               ],
-                      //             ),
-                      //           ),
-                      //         ),
-                      //       );
-                      //     });
                     },
                     child: Stack(
                       children: [
@@ -350,11 +252,16 @@ class _EditProfileState extends State<EditProfile> {
                           decoration: BoxDecoration(
                             border: Border.all(color: Colors.black54, width: 1),
                             borderRadius: const BorderRadius.all(Radius.circular(120)),
-                            image: imagePath == 'No Data'
-                                ? DecorationImage(
-                                    image: NetworkImage(profilePicture),
-                                    fit: BoxFit.cover,
-                                  )
+                            image: pickedImage == null
+                                ? widget.profile.pictureUrl == null
+                                    ? const DecorationImage(
+                                        image: AssetImage('images/no_shop_image.png'),
+                                        fit: BoxFit.cover,
+                                      )
+                                    : DecorationImage(
+                                        image: NetworkImage(APIConfig.domain + widget.profile.pictureUrl),
+                                        fit: BoxFit.cover,
+                                      )
                                 : DecorationImage(
                                     image: FileImage(imageFile),
                                     fit: BoxFit.cover,
@@ -383,6 +290,8 @@ class _EditProfileState extends State<EditProfile> {
                     ),
                   ),
                   const SizedBox(height: 20.0),
+
+                  ///________Category_______________________________________________
                   Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: SizedBox(
@@ -398,28 +307,26 @@ class _EditProfileState extends State<EditProfile> {
                                   fontSize: 20.0,
                                 ),
                                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.0))),
-                            child: DropdownButtonHideUnderline(child: getCategory(category: dropdownValue, list: categoryList)),
+                            child: DropdownButtonHideUnderline(child: getCategory(list: categoryList)),
                           );
                         },
                       ),
                     ),
                   ),
-                  userProfileDetails.when(data: (details) {
-                    invoiceNumber = details.invoiceCounter!;
-                    openingBalance = details.shopOpeningBalance;
-                    remainingShopBalance = details.remainingShopBalance;
-
-                    return Column(
+                  Form(
+                    key: _formKey,
+                    child: Column(
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: AppTextField(
-                            initialValue: details.companyName,
-                            onChanged: (value) {
-                              setState(() {
-                                companyName = value;
-                              });
-                            }, // Optional
+                            controller: nameController, // Optional
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return 'Please enter a valid business name';
+                              }
+                              return null;
+                            },
                             textFieldType: TextFieldType.NAME,
                             decoration: InputDecoration(
                               labelText: lang.S.of(context).businessName,
@@ -432,14 +339,15 @@ class _EditProfileState extends State<EditProfile> {
                           child: SizedBox(
                             height: 60.0,
                             child: AppTextField(
-                              readOnly: true,
-                              textFieldType: TextFieldType.PHONE,
-                              initialValue: details.phoneNumber,
-                              onChanged: (value) {
-                                setState(() {
-                                  phoneNumber = value;
-                                });
+                              controller: phoneController,
+                              validator: (value) {
+                                if (value == null || value.isEmpty) {
+                                  return 'Please enter a valid phone number';
+                                }
+                                // You can add more validation logic as needed
+                                return null;
                               },
+                              textFieldType: TextFieldType.PHONE,
                               decoration: InputDecoration(
                                 labelText: lang.S.of(context).phone,
                                 border: const OutlineInputBorder(),
@@ -450,12 +358,10 @@ class _EditProfileState extends State<EditProfile> {
                         Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: AppTextField(
-                            initialValue: details.countryName,
-                            onChanged: (value) {
-                              setState(() {
-                                initialCountry = value;
-                              });
-                            }, // Optional
+                            controller: addressController,
+                            validator: (value) {
+                              return null;
+                            },
                             textFieldType: TextFieldType.NAME,
                             decoration: InputDecoration(
                               labelText: lang.S.of(context).address,
@@ -463,86 +369,8 @@ class _EditProfileState extends State<EditProfile> {
                             ),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: SizedBox(
-                            height: 60.0,
-                            child: FormField(
-                              builder: (FormFieldState<dynamic> field) {
-                                return InputDecorator(
-                                  decoration: InputDecoration(
-                                      floatingLabelBehavior: FloatingLabelBehavior.always,
-                                      labelText: lang.S.of(context).language,
-                                      labelStyle: GoogleFonts.poppins(
-                                        color: Colors.black,
-                                        fontSize: 20.0,
-                                      ),
-                                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.0))),
-                                  child: DropdownButtonHideUnderline(child: getLanguage(dropdownLangValue)),
-                                );
-                              },
-                            ),
-                          ),
-                        ),
                       ],
-                    );
-                  }, error: (e, stack) {
-                    return Text(e.toString());
-                  }, loading: () {
-                    return const CircularProgressIndicator();
-                  }),
-                  const SizedBox(
-                    height: 40.0,
-                  ),
-                  ButtonGlobal(
-                    iconWidget: Icons.arrow_forward,
-                    buttontext: lang.S.of(context).continueButton,
-                    iconColor: Colors.white,
-                    buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
-                    onPressed: () async {
-                      if (profilePicture == 'nodata') {
-                        setState(() {
-                          profilePicture = userProfileDetails.value!.pictureUrl.toString();
-                        });
-                      }
-                      if (companyName == 'nodata') {
-                        setState(() {
-                          companyName = userProfileDetails.value!.companyName.toString();
-                        });
-                      }
-                      if (phoneNumber == 'nodata') {
-                        setState(() {
-                          phoneNumber = userProfileDetails.value!.phoneNumber.toString();
-                        });
-                      }
-                      try {
-                        EasyLoading.show(status: 'Loading...', dismissOnTap: false);
-                        imagePath == 'No Data' ? null : await uploadFile(imagePath);
-                        // ignore: no_leading_underscores_for_local_identifiers
-                        final DatabaseReference _personalInformationRef = FirebaseDatabase.instance.ref().child(constUserId).child('Personal Information');
-                        _personalInformationRef.keepSynced(true);
-                        PersonalInformationModel personalInformation = PersonalInformationModel(
-                          businessCategory: dropdownValue,
-                          companyName: companyName,
-                          phoneNumber: phoneNumber,
-                          countryName: initialCountry,
-                          invoiceCounter: invoiceNumber,
-                          language: dropdownLangValue,
-                          pictureUrl: profilePicture,
-                          remainingShopBalance: remainingShopBalance,
-                          shopOpeningBalance: openingBalance,
-                        );
-                        _personalInformationRef.set(personalInformation.toJson());
-                        ref.refresh(profileDetailsProvider);
-                        EasyLoading.showSuccess('Updated Successfully', duration: const Duration(milliseconds: 1000));
-                        // ignore: use_build_context_synchronously
-                        Navigator.pushNamed(context, '/home');
-                      } catch (e) {
-                        EasyLoading.dismiss();
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
-                      }
-                      // Navigator.pushNamed(context, '/otp');
-                    },
+                    ),
                   ),
                 ],
               ),
