@@ -13,7 +13,7 @@ import 'package:mobile_pos/Provider/transactions_provider.dart';
 import 'package:mobile_pos/Screens/Purchase/purchase_products.dart';
 import 'package:mobile_pos/Screens/Report/Screens/purchase_report.dart';
 import 'package:mobile_pos/model/print_transaction_model.dart';
-import 'package:mobile_pos/model/product_model.dart';
+import 'package:mobile_pos/Screens/Products/Model/product_model.dart';
 import 'package:mobile_pos/model/transition_model.dart';
 import 'package:nb_utils/nb_utils.dart';
 import '../../Provider/add_to_cart_purchase.dart';
@@ -222,7 +222,7 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                                   contentPadding: const EdgeInsets.all(0),
                                   title: Text(providerData.cartItemPurchaseList[index].productName.toString()),
                                   subtitle: Text(
-                                      '${providerData.cartItemPurchaseList[index].productStock} X ${providerData.cartItemPurchaseList[index].productPurchasePrice} = ${(double.parse(providerData.cartItemPurchaseList[index].productStock) * providerData.cartItemPurchaseList[index].productPurchasePrice.toInt()).toStringAsFixed(2)}'),
+                                      '${providerData.cartItemPurchaseList[index].productStock} X ${providerData.cartItemPurchaseList[index].productPurchasePrice} = ${((providerData.cartItemPurchaseList[index].productStock??0) * (providerData.cartItemPurchaseList[index].productPurchasePrice??0)).toStringAsFixed(2)}'),
                                   trailing: Row(
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
@@ -252,7 +252,7 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                                             ),
                                             const SizedBox(width: 5),
                                             Text(
-                                              providerData.cartItemPurchaseList[index].productStock,
+                                              providerData.cartItemPurchaseList[index].productStock.toString(),
                                               style: GoogleFonts.poppins(
                                                 color: kGreyTextColor,
                                                 fontSize: 15.0,
@@ -755,9 +755,9 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
 
                                 ///__________StockMange_________________________________________________-
 
-                                for (var element in providerData.cartItemPurchaseList) {
-                                  increaseStock(productCode: element.productCode, productModel: element);
-                                }
+                                // for (var element in providerData.cartItemPurchaseList) {
+                                //   increaseStock(productCode: element.productCode, productModel: element);
+                                // }
 
                                 ///_______invoice_Update_____________________________________________
                                 final DatabaseReference personalInformationRef =
@@ -767,8 +767,7 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
 
                                 personalInformationRef.update({'invoiceCounter': invoice + 1});
 
-                                ///________Subscription_____________________________________________________
-                                Subscription.decreaseSubscriptionLimits(itemType: 'purchaseNumber', context: context);
+
 
                                 ///_________DueUpdate______________________________________________________
                                 getSpecificCustomers(phoneNumber: widget.customerModel.phone??'', due: transitionModel.dueAmount!.toInt());
@@ -922,42 +921,42 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
     });
   }
 
-  void increaseStock({required String productCode, required ProductModel productModel}) async {
-    final ref = FirebaseDatabase.instance.ref('$constUserId/Products/');
-    ref.keepSynced(true);
-    ref.orderByKey().get().then((value) {
-      for (var element in value.children) {
-        var data = jsonDecode(jsonEncode(element.value));
-        if (data['productCode'] == productCode) {
-          String? key = element.key;
-          int previousStock = element.child('productStock').value.toString().toInt();
-          int remainStock = previousStock + productModel.productStock.toInt();
-          ref.child(key!).update({
-            'productSalePrice': productModel.productSalePrice,
-            'productPurchasePrice': productModel.productPurchasePrice,
-            'productWholeSalePrice': productModel.productWholeSalePrice,
-            'productDealerPrice': productModel.productDealerPrice,
-            'productStock': '$remainStock',
-          });
-        }
-      }
-    });
-
-    // var data = await ref.orderByChild('productCode').equalTo(productCode).once();
-    // String productPath = data.snapshot.value.toString().substring(1, 21);
-    //
-    // var data1 = await ref.child('$productPath/productStock').once();
-    // int stock = int.parse(data1.snapshot.value.toString());
-    // int remainStock = stock + productModel.productStock.toInt();
-    //
-    // ref.child(productPath).update({
-    //   'productSalePrice': productModel.productSalePrice,
-    //   'productPurchasePrice': productModel.productPurchasePrice,
-    //   'productWholeSalePrice': productModel.productWholeSalePrice,
-    //   'productDealerPrice': productModel.productDealerPrice,
-    //   'productStock': '$remainStock',
-    // });
-  }
+  // void increaseStock({required String productCode, required ProductModel productModel}) async {
+  //   final ref = FirebaseDatabase.instance.ref('$constUserId/Products/');
+  //   ref.keepSynced(true);
+  //   ref.orderByKey().get().then((value) {
+  //     for (var element in value.children) {
+  //       var data = jsonDecode(jsonEncode(element.value));
+  //       if (data['productCode'] == productCode) {
+  //         String? key = element.key;
+  //         int previousStock = element.child('productStock').value.toString().toInt();
+  //         int remainStock = previousStock + productModel.productStock.toInt();
+  //         ref.child(key!).update({
+  //           'productSalePrice': productModel.productSalePrice,
+  //           'productPurchasePrice': productModel.productPurchasePrice,
+  //           'productWholeSalePrice': productModel.productWholeSalePrice,
+  //           'productDealerPrice': productModel.productDealerPrice,
+  //           'productStock': '$remainStock',
+  //         });
+  //       }
+  //     }
+  //   });
+  //
+  //   // var data = await ref.orderByChild('productCode').equalTo(productCode).once();
+  //   // String productPath = data.snapshot.value.toString().substring(1, 21);
+  //   //
+  //   // var data1 = await ref.child('$productPath/productStock').once();
+  //   // int stock = int.parse(data1.snapshot.value.toString());
+  //   // int remainStock = stock + productModel.productStock.toInt();
+  //   //
+  //   // ref.child(productPath).update({
+  //   //   'productSalePrice': productModel.productSalePrice,
+  //   //   'productPurchasePrice': productModel.productPurchasePrice,
+  //   //   'productWholeSalePrice': productModel.productWholeSalePrice,
+  //   //   'productDealerPrice': productModel.productDealerPrice,
+  //   //   'productStock': '$remainStock',
+  //   // });
+  // }
 
   void decreaseSubscriptionSale() async {
     final ref = FirebaseDatabase.instance.ref('$constUserId/Subscription/purchaseNumber');

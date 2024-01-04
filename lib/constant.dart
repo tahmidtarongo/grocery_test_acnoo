@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:mobile_pos/model/user_role_model.dart';
+import 'package:mobile_pos/Screens/User%20Roles/Model/user_role_model.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 // const kMainColor = Color(0xFF3F8CFF);
@@ -21,7 +21,7 @@ const String appVersion = '5.3';
 String paypalClientId = '';
 String paypalClientSecret = '';
 const bool sandbox = true;
-
+String noProductImageUrl = 'images/no_product_image.png';
 String purchaseCode = '528cdb9a-5d37-4292-a2b5-b792d5eca03a';
 
 const kButtonDecoration = BoxDecoration(
@@ -70,23 +70,7 @@ String subUserEmail = '';
 bool isSubUserDeleted = true;
 //
 
-UserRoleModel finalUserRoleModel = UserRoleModel(
-  email: '',
-  userTitle: '',
-  databaseId: '',
-  salePermission: true,
-  partiesPermission: true,
-  purchasePermission: true,
-  productPermission: true,
-  profileEditPermission: true,
-  addExpensePermission: true,
-  lossProfitPermission: true,
-  dueListPermission: true,
-  stockPermission: true,
-  reportsPermission: true,
-  salesListPermission: true,
-  purchaseListPermission: true,
-);
+UserRoleModel finalUserRoleModel = UserRoleModel();
 
 class CurrentUserData {
   void getUserData() async {
@@ -94,26 +78,8 @@ class CurrentUserData {
     constUserId = prefs.getString('userId') ?? '';
     isSubUser = prefs.getBool('isSubUser') ?? false;
     subUserEmail = prefs.getString('subUserEmail') ?? '';
-    await updateData();
   }
 
-  Future<void> updateData() async {
-    // bool subUserEmailMatch = false;
-    final prefs = await SharedPreferences.getInstance();
-    final ref = FirebaseDatabase.instance.ref(constUserId).child('User Role');
-    ref.keepSynced(true);
-    ref.orderByKey().get().then((value) async {
-      for (var element in value.children) {
-        var data = UserRoleModel.fromJson(jsonDecode(jsonEncode(element.value)));
-        if (data.email == subUserEmail) {
-          isSubUserDeleted = false;
-          finalUserRoleModel = data;
-          await prefs.setString('userTitle', data.userTitle);
-          subUserTitle = prefs.getString('userTitle') ?? '';
-        }
-      }
-    });
-  }
 
   Future<bool> isSubUserEmailNotFound() async {
     bool isMailMatch = true;

@@ -7,20 +7,30 @@ import 'package:firebase_core/firebase_core.dart' as firebase_core;
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:mobile_pos/Const/api_config.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/Provider/product_provider.dart';
-import 'package:mobile_pos/model/product_model.dart';
+import 'package:mobile_pos/Screens/Products/Repo/product_repo.dart';
+import 'package:mobile_pos/Screens/Products/unit_list.dart';
+import 'package:mobile_pos/Screens/Products/Model/product_model.dart';
 import 'package:nb_utils/nb_utils.dart';
 
-import '../../GlobalComponents/Model/category_model.dart';
+import 'Model/product_model.dart';
+import 'Model/category_model.dart';
 import '../../constant.dart';
 import '../../currency.dart';
 import '../Home/home_screen.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
+import 'package:mobile_pos/Screens/Products/Model/brands_model.dart' as brand;
+import 'package:mobile_pos/Screens/Products/Model/unit_model.dart' as unit;
+
+import 'brands_list.dart';
+import 'category_list_screen.dart';
 
 // ignore: must_be_immutable
 class UpdateProduct extends StatefulWidget {
@@ -34,60 +44,53 @@ class UpdateProduct extends StatefulWidget {
 }
 
 class _UpdateProductState extends State<UpdateProduct> {
-  late String productKey;
-  late ProductModel updatedProductModel;
-  GetCategoryAndVariationModel data = GetCategoryAndVariationModel(variations: [], categoryName: '');
+  GetCategoryAndVariationModel data = GetCategoryAndVariationModel(variations: [], categoryName: CategoryModel());
   bool showProgress = false;
   final ImagePicker _picker = ImagePicker();
   XFile? pickedImage;
-  File imageFile = File('No File');
-  String imagePath = 'No Data';
+  GlobalKey<FormState> key = GlobalKey();
 
-  Future<void> uploadFile(String filePath) async {
-    File file = File(filePath);
-    try {
-      EasyLoading.show(
-        status: 'Uploading... ',
-        dismissOnTap: false,
-      );
-      var snapshot = await FirebaseStorage.instance.ref('Product Picture/${DateTime.now().millisecondsSinceEpoch}').putFile(file);
-      var url = await snapshot.ref.getDownloadURL();
-      setState(() {
-        updatedProductModel.productPicture = url.toString();
-      });
-    } on firebase_core.FirebaseException catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.code.toString())));
-    }
-  }
-
-  void getProductKey(String code) {
-    // ignore: unused_local_variable
-    List<ProductModel> productList = [];
-    final ref = FirebaseDatabase.instance.ref(constUserId).child('Products');
-    ref.keepSynced(true);
-    ref.orderByKey().get().then((value) {
-      for (var element in value.children) {
-        var data = jsonDecode(jsonEncode(element.value));
-        if (data['productCode'].toString() == code) {
-          productKey = element.key.toString();
-        }
-      }
-    });
-  }
-
-  void deleteProduct({required WidgetRef wRef}) {
-    DatabaseReference ref = FirebaseDatabase.instance.ref("$constUserId/Products/$productKey");
-    ref.keepSynced(true);
-
-    ref.remove();
-    wRef.refresh(productProvider);
-  }
+  TextEditingController nameController = TextEditingController();
+  TextEditingController categoryController = TextEditingController();
+  TextEditingController brandController = TextEditingController();
+  TextEditingController productUnitController = TextEditingController();
+  TextEditingController productStockController = TextEditingController();
+  TextEditingController salePriceController = TextEditingController();
+  TextEditingController discountPriceController = TextEditingController();
+  TextEditingController purchasePriceController = TextEditingController();
+  TextEditingController productCodeController = TextEditingController();
+  TextEditingController wholeSalePriceController = TextEditingController();
+  TextEditingController dealerPriceController = TextEditingController();
+  TextEditingController manufacturerController = TextEditingController();
+  TextEditingController sizeController = TextEditingController();
+  TextEditingController colorController = TextEditingController();
+  TextEditingController weightController = TextEditingController();
+  TextEditingController typeController = TextEditingController();
+  TextEditingController capacityController = TextEditingController();
+  CategoryModel? selectedCategory;
+  brand.Brand? selectedBrand;
+  unit.Unit? selectedUnit;
 
   @override
   void initState() {
-    getProductKey(widget.productModel!.productCode);
-    updatedProductModel = widget.productModel!;
     super.initState();
+    nameController.text = widget.productModel?.productName ?? '';
+    categoryController.text = widget.productModel?.category?.categoryName ?? '';
+    brandController.text = widget.productModel?.brand?.brandName ?? '';
+    productUnitController.text = widget.productModel?.unit?.unitName ?? '';
+    productStockController.text = widget.productModel?.productStock.toString() ?? '';
+    salePriceController.text = widget.productModel?.productSalePrice.toString() ?? '';
+    discountPriceController.text = widget.productModel?.productDiscount.toString() ?? '';
+    purchasePriceController.text = widget.productModel?.productPurchasePrice.toString() ?? '';
+    productCodeController.text = widget.productModel?.productCode ?? '';
+    wholeSalePriceController.text = widget.productModel?.productWholeSalePrice.toString() ?? '';
+    dealerPriceController.text = widget.productModel?.productDealerPrice.toString() ?? '';
+    manufacturerController.text = widget.productModel?.productManufacturer ?? '';
+    sizeController.text = widget.productModel?.size ?? '';
+    colorController.text = widget.productModel?.color ?? '';
+    weightController.text = widget.productModel?.weight ?? '';
+    typeController.text = widget.productModel?.type ?? '';
+    capacityController.text = widget.productModel?.capacity ?? '';
   }
 
   @override
@@ -130,7 +133,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                                 Text(
                                   lang.S.of(context).youWantTodeletetheProduct,
                                   textAlign: TextAlign.center,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontSize: 22,
                                   ),
                                 ),
@@ -152,13 +155,10 @@ class _UpdateProductState extends State<UpdateProduct> {
                                       child: ButtonGlobalWithoutIcon(
                                         buttontext: lang.S.of(context).delete,
                                         buttonDecoration: kButtonDecoration.copyWith(color: Colors.red),
-                                        onPressed: (() {
-                                          deleteProduct(wRef: ref);
-                                          Future.delayed(const Duration(milliseconds: 500), () {
-                                            ref.refresh(productProvider);
-                                            Navigator.pop(context1);
-                                            Navigator.pop(context);
-                                          });
+                                        onPressed: (() async {
+                                          EasyLoading.show(status: 'Deleting....');
+                                          ProductRepo productRepo = ProductRepo();
+                                          await productRepo.deleteProduct(id: widget.productModel!.id.toString(), context: context, ref: ref);
                                         }),
                                         buttonTextColor: Colors.white,
                                       ),
@@ -185,577 +185,573 @@ class _UpdateProductState extends State<UpdateProduct> {
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.only(left: 10.0, right: 10.0),
-            child: Column(
-              children: [
-                const SizedBox(height: 10.0),
-                Visibility(
-                  visible: showProgress,
-                  child: const CircularProgressIndicator(
-                    color: kMainColor,
-                    strokeWidth: 5.0,
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: AppTextField(
-                    initialValue: widget.productModel!.productName,
-                    textFieldType: TextFieldType.NAME,
-                    onChanged: (value) {
-                      setState(() {
-                        updatedProductModel.productName = value;
-                      });
-                    },
-                    decoration: InputDecoration(
-                      floatingLabelBehavior: FloatingLabelBehavior.always,
-                      labelText: lang.S.of(context).productName,
-                      hintText: 'Smart Watch',
-                      border: const OutlineInputBorder(),
+            child: Form(
+              key: key,
+              child: Column(
+                children: [
+                  const SizedBox(height: 10.0),
+                  Visibility(
+                    visible: showProgress,
+                    child: const CircularProgressIndicator(
+                      color: kMainColor,
+                      strokeWidth: 5.0,
                     ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Container(
-                    height: 60.0,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5.0),
-                      border: Border.all(color: kGreyTextColor),
-                    ),
-                    child: Row(
-                      children: [
-                        const SizedBox(
-                          width: 10.0,
-                        ),
-                        Text(widget.productModel!.productCategory),
-                        const Spacer(),
-                        const Icon(Icons.keyboard_arrow_down),
-                        const SizedBox(
-                          width: 10.0,
-                        ),
-                      ],
+
+                  ///___________Name_____________________________
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: TextFormField(
+                      controller: nameController,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please enter a valid product Name';
+                        }
+                        // You can add more validation logic as needed
+                        return null;
+                      },
+                      decoration: InputDecoration(
+                        floatingLabelBehavior: FloatingLabelBehavior.always,
+                        labelText: lang.S.of(context).productName,
+                        hintText: 'Enter product Name',
+                        border: const OutlineInputBorder(),
+                      ),
                     ),
                   ),
-                ),
-                Row(
-                  children: [
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: AppTextField(
-                          initialValue: widget.productModel!.size,
-                          textFieldType: TextFieldType.NAME,
-                          onChanged: (value) {
-                            setState(() {
-                              updatedProductModel.size = value;
-                            });
-                          },
-                          decoration: const InputDecoration(
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: 'Size',
-                            hintText: 'M',
-                            border: OutlineInputBorder(),
-                          ),
-                        ),
-                      ),
-                    ).visible(widget.productModel!.size != 'Not Provided'),
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: AppTextField(
-                          initialValue: widget.productModel!.color,
-                          textFieldType: TextFieldType.NAME,
-                          onChanged: (value) {
-                            setState(() {
-                              updatedProductModel.color = value;
-                            });
-                          },
-                          decoration: InputDecoration(
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: lang.S.of(context).color,
-                            hintText: 'Green',
-                            border: OutlineInputBorder(),
-                          ),
-                        ),
-                      ),
-                    ).visible(widget.productModel!.color != 'Not Provided'),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: AppTextField(
-                          initialValue: widget.productModel!.weight,
-                          textFieldType: TextFieldType.NAME,
-                          onChanged: (value) {
-                            setState(() {
-                              updatedProductModel.weight = value;
-                            });
-                          },
-                          decoration: InputDecoration(
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: lang.S.of(context).weight,
-                            hintText: '10 inc',
-                            border: OutlineInputBorder(),
-                          ),
-                        ),
-                      ),
-                    ).visible(widget.productModel!.weight != 'Not Provided'),
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: AppTextField(
-                          initialValue: widget.productModel!.capacity,
-                          textFieldType: TextFieldType.NAME,
-                          onChanged: (value) {
-                            setState(() {
-                              updatedProductModel.capacity = value;
-                            });
-                          },
-                          decoration: InputDecoration(
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: lang.S.of(context).capacity,
-                            hintText: '244 liter',
-                            border: OutlineInputBorder(),
-                          ),
-                        ),
-                      ),
-                    ).visible(widget.productModel!.capacity != 'Not Provided'),
-                  ],
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: AppTextField(
-                    initialValue: widget.productModel!.type,
-                    textFieldType: TextFieldType.NAME,
-                    onChanged: (value) {
-                      setState(() {
-                        updatedProductModel.type = value;
-                      });
-                    },
-                    decoration: InputDecoration(
-                      floatingLabelBehavior: FloatingLabelBehavior.always,
-                      labelText: lang.S.of(context).type,
-                      hintText: 'Usb C',
-                      border: OutlineInputBorder(),
-                    ),
-                  ),
-                ).visible(widget.productModel!.type != 'Not Provided'),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Container(
-                    height: 60.0,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5.0),
-                      border: Border.all(color: kGreyTextColor),
-                    ),
-                    child: Row(
-                      children: [
-                        const SizedBox(
-                          width: 10.0,
-                        ),
-                        Text(widget.productModel!.brandName),
-                        const Spacer(),
-                        const Icon(Icons.keyboard_arrow_down),
-                        const SizedBox(
-                          width: 10.0,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Row(
-                  children: [
-                    Expanded(
-                      flex: 3,
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: AppTextField(
-                          readOnly: true,
-                          textFieldType: TextFieldType.NAME,
-                          decoration: InputDecoration(
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: lang.S.of(context).productCode,
-                            hintText: widget.productModel!.productCode,
-                            border: const OutlineInputBorder(),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      flex: 1,
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Container(
-                          height: 60.0,
-                          width: 100.0,
-                          padding: const EdgeInsets.all(5.0),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8.0),
-                            border: Border.all(color: kGreyTextColor),
-                          ),
-                          child: const Image(
-                            image: AssetImage('images/barcode.png'),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: AppTextField(
-                          initialValue: widget.productModel!.productStock,
-                          onChanged: (value) {
-                            setState(() {
-                              updatedProductModel.productStock = value;
-                            });
-                          },
-                          textFieldType: TextFieldType.PHONE,
-                          decoration: InputDecoration(
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: lang.S.of(context).stock,
-                            hintText: '20',
-                            border: const OutlineInputBorder(),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Container(
-                          height: 60.0,
-                          width: MediaQuery.of(context).size.width,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5.0),
-                            border: Border.all(color: kGreyTextColor),
-                          ),
-                          child: Row(
-                            children: [
-                              const SizedBox(
-                                width: 10.0,
-                              ),
-                              Text(widget.productModel!.productUnit),
-                              const Spacer(),
-                              const Icon(Icons.keyboard_arrow_down),
-                              const SizedBox(
-                                width: 10.0,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: AppTextField(
-                          initialValue: widget.productModel!.productPurchasePrice,
-                          textFieldType: TextFieldType.PHONE,
-                          onChanged: (value) {
-                            setState(() {
-                              updatedProductModel.productPurchasePrice = value;
-                            });
-                          },
-                          decoration: InputDecoration(
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: lang.S.of(context).purchasePrice,
-                            hintText: '$currency 300.90',
-                            border: const OutlineInputBorder(),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: AppTextField(
-                          initialValue: widget.productModel!.productSalePrice,
-                          textFieldType: TextFieldType.PHONE,
-                          onChanged: (value) {
-                            setState(() {
-                              updatedProductModel.productSalePrice = value;
-                            });
-                          },
-                          decoration: InputDecoration(
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: lang.S.of(context).salePrice,
-                            hintText: '$currency 234.09',
-                            border: const OutlineInputBorder(),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: AppTextField(
-                          initialValue: widget.productModel!.productWholeSalePrice,
-                          textFieldType: TextFieldType.PHONE,
-                          onChanged: (value) {
-                            setState(() {
-                              updatedProductModel.productWholeSalePrice = value;
-                            });
-                          },
-                          decoration: InputDecoration(
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: lang.S.of(context).wholeSalePrice,
-                            hintText: '$currency 155',
-                            border: const OutlineInputBorder(),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: AppTextField(
-                          initialValue: widget.productModel!.productDealerPrice,
-                          textFieldType: TextFieldType.PHONE,
-                          onChanged: (value) {
-                            setState(() {
-                              updatedProductModel.productDealerPrice = value;
-                            });
-                          },
-                          decoration: InputDecoration(
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: lang.S.of(context).dealerPrice,
-                            hintText: '$currency 130',
-                            border: const OutlineInputBorder(),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Expanded(
-                        child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: AppTextField(
-                        textFieldType: TextFieldType.PHONE,
-                        initialValue: widget.productModel!.productDiscount,
-                        onChanged: (value) {
-                          setState(() {
-                            updatedProductModel.productDiscount = value;
-                          });
-                        },
-                        decoration: InputDecoration(
-                          floatingLabelBehavior: FloatingLabelBehavior.always,
-                          labelText: lang.S.of(context).discount,
-                          hintText: '$currency 34.90',
-                          border: const OutlineInputBorder(),
-                        ),
-                      ),
-                    )),
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: AppTextField(
-                          initialValue: widget.productModel!.productManufacturer,
-                          textFieldType: TextFieldType.NAME,
-                          onChanged: (value) {
-                            setState(() {
-                              updatedProductModel.productManufacturer = value;
-                            });
-                          },
-                          decoration: InputDecoration(
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: lang.S.of(context).manufacturer,
-                            hintText: 'Apple',
-                            border: const OutlineInputBorder(),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 10),
-                GestureDetector(
-                  onTap: () {
-                    showDialog(
-                        context: context,
-                        builder: (BuildContext context) {
-                          return Dialog(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12.0),
-                            ),
-                            // ignore: sized_box_for_whitespace
-                            child: Container(
-                              height: 200.0,
-                              width: MediaQuery.of(context).size.width - 80,
-                              child: Center(
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    GestureDetector(
-                                      onTap: () async {
-                                        pickedImage = await _picker.pickImage(source: ImageSource.gallery);
-                                        setState(() {
-                                          imageFile = File(pickedImage!.path);
-                                          imagePath = pickedImage!.path;
-                                        });
-                                        Future.delayed(const Duration(milliseconds: 100), () {
-                                          Navigator.pop(context);
-                                        });
-                                      },
-                                      child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          const Icon(
-                                            Icons.photo_library_rounded,
-                                            size: 60.0,
-                                            color: kMainColor,
-                                          ),
-                                          Text(
-                                            'Gallery',
-                                            style: GoogleFonts.poppins(
-                                              fontSize: 20.0,
-                                              color: kMainColor,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      width: 40.0,
-                                    ),
-                                    GestureDetector(
-                                      onTap: () async {
-                                        pickedImage = await _picker.pickImage(source: ImageSource.camera);
-                                        setState(() {
-                                          imageFile = File(pickedImage!.path);
-                                          imagePath = pickedImage!.path;
-                                        });
-                                        Future.delayed(const Duration(milliseconds: 100), () {
-                                          Navigator.pop(context);
-                                        });
-                                      },
-                                      child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          const Icon(
-                                            Icons.camera,
-                                            size: 60.0,
-                                            color: kGreyTextColor,
-                                          ),
-                                          Text(
-                                            lang.S.of(context).camera,
-                                            style: GoogleFonts.poppins(
-                                              fontSize: 20.0,
-                                              color: kGreyTextColor,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          );
+
+                  ///_______Category__________________________________
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: TextFormField(
+                      readOnly: true,
+                      controller: categoryController,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please select a category';
+                        }
+                        return null;
+                      },
+                      onTap: () async {
+                        data = await const CategoryList().launch(context);
+                        setState(() {
+                          categoryController.text = data.categoryName.categoryName ?? '';
+                          selectedCategory = data.categoryName;
                         });
-                  },
-                  child: Stack(
-                    children: [
-                      Container(
-                        height: 120,
-                        width: 120,
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.black54, width: 1),
-                          borderRadius: const BorderRadius.all(Radius.circular(120)),
-                          image: imagePath == 'No Data'
-                              ? DecorationImage(
-                                  image: NetworkImage(widget.productModel!.productPicture),
-                                  fit: BoxFit.cover,
-                                )
-                              : DecorationImage(
-                                  image: FileImage(imageFile),
-                                  fit: BoxFit.cover,
-                                ),
-                        ),
+                      },
+                      decoration: const InputDecoration(
+                        suffixIcon: Icon(Icons.keyboard_arrow_down),
+                        floatingLabelBehavior: FloatingLabelBehavior.always,
+                        labelText: 'Product Category',
+                        hintText: 'Select Product Category',
+                        border: OutlineInputBorder(),
                       ),
-                      Positioned(
-                        bottom: 0,
-                        right: 0,
-                        child: Container(
-                          height: 35,
-                          width: 35,
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Colors.white, width: 2),
-                            borderRadius: const BorderRadius.all(Radius.circular(120)),
-                            color: kMainColor,
-                          ),
-                          child: const Icon(
-                            Icons.camera_alt_outlined,
-                            size: 20,
-                            color: Colors.white,
+                    ),
+                  ),
+                  // Padding(
+                  //   padding: const EdgeInsets.all(10.0),
+                  //   child: Container(
+                  //     height: 60.0,
+                  //     width: MediaQuery.of(context).size.width,
+                  //     decoration: BoxDecoration(
+                  //       borderRadius: BorderRadius.circular(5.0),
+                  //       border: Border.all(color: kGreyTextColor),
+                  //     ),
+                  //     child: Row(
+                  //       children: [
+                  //         const SizedBox(
+                  //           width: 10.0,
+                  //         ),
+                  //         Text(widget.productModel?.category?.categoryName ?? ''),
+                  //         const Spacer(),
+                  //         const Icon(Icons.keyboard_arrow_down),
+                  //         const SizedBox(
+                  //           width: 10.0,
+                  //         ),
+                  //       ],
+                  //     ),
+                  //   ),
+                  // ),
+                  ///________Size__Color_________________________
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: TextFormField(
+                            validator: (value) => null,
+                            controller: sizeController,
+                            decoration: InputDecoration(
+                              floatingLabelBehavior: FloatingLabelBehavior.always,
+                              labelText: lang.S.of(context).size,
+                              hintText: 'Enter Size',
+                              border: const OutlineInputBorder(),
+                            ),
                           ),
                         ),
-                      )
+                      ).visible(widget.productModel!.size != null || data.variations.contains('Size')),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: TextFormField(
+                            controller: colorController,
+                            decoration: InputDecoration(
+                              floatingLabelBehavior: FloatingLabelBehavior.always,
+                              labelText: lang.S.of(context).color,
+                              hintText: 'Enter color',
+                              border: const OutlineInputBorder(),
+                            ),
+                          ),
+                        ),
+                      ).visible(widget.productModel!.color != null || data.variations.contains('Color')),
                     ],
                   ),
-                ),
-                const SizedBox(height: 20),
-                ButtonGlobalWithoutIcon(
-                  buttontext: lang.S.of(context).saveNPublish,
-                  buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
-                  onPressed: () async {
-                    try {
-                      imagePath == 'No Data' ? null : await uploadFile(imagePath);
-                      EasyLoading.show(status: 'Loading...', dismissOnTap: false);
-                      DatabaseReference ref = FirebaseDatabase.instance.ref("$constUserId/Products/$productKey");
-                      ref.keepSynced(true);
-                      ref.update({
-                        'productName': updatedProductModel.productName,
-                        'productCategory': updatedProductModel.productCategory,
-                        'size': updatedProductModel.size,
-                        'color': updatedProductModel.color,
-                        'weight': updatedProductModel.weight,
-                        'capacity': updatedProductModel.capacity,
-                        'type': updatedProductModel.type,
-                        'brandName': updatedProductModel.brandName,
-                        'productCode': updatedProductModel.productCode,
-                        'productStock': updatedProductModel.productStock,
-                        'productUnit': updatedProductModel.productUnit,
-                        'productSalePrice': updatedProductModel.productSalePrice,
-                        'productPurchasePrice': updatedProductModel.productPurchasePrice,
-                        'productDiscount': updatedProductModel.productDiscount,
-                        'productWholeSalePrice': updatedProductModel.productWholeSalePrice,
-                        'productDealerPrice': updatedProductModel.productDealerPrice,
-                        'productManufacturer': updatedProductModel.productManufacturer,
-                        'productPicture': updatedProductModel.productPicture,
-                      });
-                      EasyLoading.showSuccess('Added Successfully', duration: const Duration(milliseconds: 500));
 
-                      //ref.refresh(productProvider);
-                      Future.delayed(const Duration(milliseconds: 100), () {
-                        const HomeScreen().launch(context, isNewTask: true);
-                      });
-                    } catch (e) {
-                      EasyLoading.dismiss();
-                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
-                    }
-                  },
-                  buttonTextColor: Colors.white,
-                ),
-              ],
+                  ///________Capacity_and_weight_____________________________
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: TextFormField(
+                            controller: weightController,
+                            decoration: InputDecoration(
+                              floatingLabelBehavior: FloatingLabelBehavior.always,
+                              labelText: lang.S.of(context).weight,
+                              hintText: 'Enter weight',
+                              border: const OutlineInputBorder(),
+                            ),
+                          ),
+                        ),
+                      ).visible(widget.productModel!.weight != null || data.variations.contains('Weight')),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: TextFormField(
+                            controller: capacityController,
+                            decoration: InputDecoration(
+                              floatingLabelBehavior: FloatingLabelBehavior.always,
+                              labelText: lang.S.of(context).capacity,
+                              hintText: 'Enter Capacity',
+                              border: const OutlineInputBorder(),
+                            ),
+                          ),
+                        ),
+                      ).visible(widget.productModel!.capacity != null || data.variations.contains('Capacity')),
+                    ],
+                  ),
+
+                  ///___________Type______________________________________
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: TextFormField(
+                      controller: typeController,
+                      decoration: InputDecoration(
+                        floatingLabelBehavior: FloatingLabelBehavior.always,
+                        labelText: lang.S.of(context).type,
+                        hintText: 'Enter Type',
+                        border: const OutlineInputBorder(),
+                      ),
+                    ),
+                  ).visible(widget.productModel!.type != null || data.variations.contains('Type')),
+
+                  ///_______Brand__________________________________
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: TextFormField(
+                      readOnly: true,
+                      controller: brandController,
+                      validator: (value) {
+                        return null;
+                      },
+                      onTap: () async {
+                        selectedBrand = await const BrandsList().launch(context);
+                        setState(() {
+                          brandController.text = selectedBrand?.brandName ?? '';
+                        });
+                      },
+                      decoration: const InputDecoration(
+                        suffixIcon: Icon(Icons.keyboard_arrow_down),
+                        floatingLabelBehavior: FloatingLabelBehavior.always,
+                        labelText: 'Product Brand',
+                        hintText: 'Select a brand',
+                        border: OutlineInputBorder(),
+                      ),
+                    ),
+                  ),
+
+                  ///__________Code__________________________
+                  Row(
+                    children: [
+                      Expanded(
+                        flex: 3,
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: AppTextField(
+                            readOnly: true,
+                            controller: productCodeController,
+                            textFieldType: TextFieldType.NAME,
+                            decoration: InputDecoration(
+                              floatingLabelBehavior: FloatingLabelBehavior.always,
+                              labelText: lang.S.of(context).productCode,
+                              hintText: widget.productModel!.productCode,
+                              border: const OutlineInputBorder(),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        flex: 1,
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Container(
+                            height: 60.0,
+                            width: 100.0,
+                            padding: const EdgeInsets.all(5.0),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8.0),
+                              border: Border.all(color: kGreyTextColor),
+                            ),
+                            child: const Image(
+                              image: AssetImage('images/barcode.png'),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  ///_____________Stock__&_Unit__________________________
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: TextFormField(
+                            readOnly: true,
+                            controller: productStockController,
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return 'Enter a valid stock';
+                              }
+                              return null;
+                            },
+                            inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
+                            keyboardType: TextInputType.number,
+                            decoration: InputDecoration(
+                              floatingLabelBehavior: FloatingLabelBehavior.always,
+                              labelText: lang.S.of(context).stock,
+                              hintText: 'Enter stock',
+                              border: const OutlineInputBorder(),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: TextFormField(
+                            readOnly: true,
+                            controller: productUnitController,
+                            validator: (value) {
+                              return null;
+                            },
+                            onTap: () async {
+                              selectedUnit = await const UnitList().launch(context);
+                              setState(() {
+                                productUnitController.text = selectedUnit?.unitName ?? '';
+                              });
+                            },
+                            decoration: const InputDecoration(
+                              suffixIcon: Icon(Icons.keyboard_arrow_down),
+                              floatingLabelBehavior: FloatingLabelBehavior.always,
+                              labelText: 'Product Unit',
+                              hintText: 'Select Product Unit',
+                              border: OutlineInputBorder(),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  ///_________Purchase_price__&&______mrp_____________________
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: TextFormField(
+                            controller: purchasePriceController,
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return 'Please enter a valid purchase price';
+                              }
+                              // You can add more validation logic as needed
+                              return null;
+                            },
+                            inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
+                            keyboardType: TextInputType.number,
+                            decoration: InputDecoration(
+                              floatingLabelBehavior: FloatingLabelBehavior.always,
+                              labelText: lang.S.of(context).purchasePrice,
+                              hintText: 'Enter Purchase price',
+                              border: const OutlineInputBorder(),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: TextFormField(
+                            controller: salePriceController,
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return 'Please enter a valid Sale price';
+                              }
+                              // You can add more validation logic as needed
+                              return null;
+                            },
+                            inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
+                            keyboardType: TextInputType.number,
+                            decoration: InputDecoration(
+                              floatingLabelBehavior: FloatingLabelBehavior.always,
+                              labelText: lang.S.of(context).mrp,
+                              hintText: 'Enter Salting price',
+                              border: const OutlineInputBorder(),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  ///_______-wholesalePrice_dealerprice_________________
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: TextFormField(
+                            controller: wholeSalePriceController,
+                            inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
+                            keyboardType: TextInputType.number,
+                            decoration: InputDecoration(
+                              floatingLabelBehavior: FloatingLabelBehavior.always,
+                              labelText: lang.S.of(context).wholeSalePrice,
+                              hintText: 'Enter wholesale price',
+                              border: const OutlineInputBorder(),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: TextFormField(
+                            controller: dealerPriceController,
+                            inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
+                            keyboardType: TextInputType.number,
+                            decoration: InputDecoration(
+                              floatingLabelBehavior: FloatingLabelBehavior.always,
+                              labelText: lang.S.of(context).dealerPrice,
+                              hintText: 'Enter dealer price',
+                              border: const OutlineInputBorder(),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Expanded(
+                          child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: TextFormField(
+                          controller: discountPriceController,
+                          inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
+                          keyboardType: TextInputType.number,
+                          decoration: InputDecoration(
+                            floatingLabelBehavior: FloatingLabelBehavior.always,
+                            labelText: lang.S.of(context).discount,
+                            hintText: 'Enter discount',
+                            border: const OutlineInputBorder(),
+                          ),
+                        ),
+                      )).visible(false),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: TextFormField(
+                            controller: manufacturerController,
+                            decoration: InputDecoration(
+                              floatingLabelBehavior: FloatingLabelBehavior.always,
+                              labelText: lang.S.of(context).manufacturer,
+                              hintText: 'Enter manufacturer name',
+                              border: const OutlineInputBorder(),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 10),
+                  GestureDetector(
+                    onTap: () {
+                      showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return Dialog(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12.0),
+                              ),
+                              // ignore: sized_box_for_whitespace
+                              child: Container(
+                                height: 200.0,
+                                width: MediaQuery.of(context).size.width - 80,
+                                child: Center(
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      GestureDetector(
+                                        onTap: () async {
+                                          pickedImage = await _picker.pickImage(source: ImageSource.gallery);
+                                          setState(() {});
+                                          Navigator.pop(context);
+                                        },
+                                        child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          children: [
+                                            const Icon(
+                                              Icons.photo_library_rounded,
+                                              size: 60.0,
+                                              color: kMainColor,
+                                            ),
+                                            Text(
+                                              'Gallery',
+                                              style: GoogleFonts.poppins(
+                                                fontSize: 20.0,
+                                                color: kMainColor,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        width: 40.0,
+                                      ),
+                                      GestureDetector(
+                                        onTap: () async {
+                                          pickedImage = await _picker.pickImage(source: ImageSource.camera);
+                                          setState(() {});
+                                          Navigator.pop(context);
+                                        },
+                                        child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          children: [
+                                            const Icon(
+                                              Icons.camera,
+                                              size: 60.0,
+                                              color: kGreyTextColor,
+                                            ),
+                                            Text(
+                                              lang.S.of(context).camera,
+                                              style: GoogleFonts.poppins(
+                                                fontSize: 20.0,
+                                                color: kGreyTextColor,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            );
+                          });
+                    },
+                    child: Stack(
+                      children: [
+                        Container(
+                          height: 120,
+                          width: 120,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.black54, width: 1),
+                            borderRadius: const BorderRadius.all(Radius.circular(120)),
+                            image: pickedImage == null
+                                ? widget.productModel?.productPicture == null
+                                    ? DecorationImage(
+                                        image: AssetImage(noProductImageUrl),
+                                        fit: BoxFit.cover,
+                                      )
+                                    : DecorationImage(
+                                        image: NetworkImage('${APIConfig.domain}${widget.productModel?.productPicture ?? ''}'),
+                                        fit: BoxFit.cover,
+                                      )
+                                : DecorationImage(
+                                    image: FileImage(File(pickedImage!.path)),
+                                    fit: BoxFit.cover,
+                                  ),
+                          ),
+                        ),
+                        Positioned(
+                          bottom: 0,
+                          right: 0,
+                          child: Container(
+                            height: 35,
+                            width: 35,
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Colors.white, width: 2),
+                              borderRadius: const BorderRadius.all(Radius.circular(120)),
+                              color: kMainColor,
+                            ),
+                            child: const Icon(
+                              Icons.camera_alt_outlined,
+                              size: 20,
+                              color: Colors.white,
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  ButtonGlobalWithoutIcon(
+                    buttontext: lang.S.of(context).saveNPublish,
+                    buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
+                    onPressed: () async {
+                      if (key.currentState!.validate()) {
+                        ProductRepo repo = ProductRepo();
+                        repo.updateProduct(
+                          ref: ref,
+                          context: context,
+                          productCode: productCodeController.text,
+                          productId: widget.productModel!.id.toString(),
+                          productName: nameController.text,
+                          categoryId: selectedCategory?.id.toString(),
+                          brandId: selectedBrand?.id.toString(),
+                          unitId: selectedUnit?.id.toString(),
+                          productSalePrice: salePriceController.text,
+                          productPurchasePrice: purchasePriceController.text,
+                          color: colorController.text.isEmptyOrNull ? null : colorController.text,
+                          size: sizeController.text.isEmptyOrNull ? null : sizeController.text,
+                          type: typeController.text.isEmptyOrNull ? null : typeController.text,
+                          weight: weightController.text.isEmptyOrNull ? null : weightController.text,
+                          capacity: capacityController.text.isEmptyOrNull ? null : capacityController.text,
+                          productDealerPrice: dealerPriceController.text.isEmptyOrNull ? null : dealerPriceController.text,
+                          productDiscount: discountPriceController.text.isEmptyOrNull ? null : discountPriceController.text,
+                          productManufacturer: manufacturerController.text.isEmptyOrNull ? null : manufacturerController.text,
+                          productWholeSalePrice: wholeSalePriceController.text.isEmptyOrNull ? null : wholeSalePriceController.text,
+                          image: pickedImage == null ? null : File(pickedImage!.path),
+                        );
+                      }
+                    },
+                    buttonTextColor: Colors.white,
+                  ),
+                ],
+              ),
             ),
           ),
         ),

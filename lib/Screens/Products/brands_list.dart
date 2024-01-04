@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mobile_pos/Provider/category,brans,units_provide.dart';
+import 'package:mobile_pos/Screens/Products/Providers/category,brans,units_provide.dart';
 import 'package:mobile_pos/Screens/Products/add_brans.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -99,7 +99,7 @@ class _BrandsListState extends State<BrandsList> {
                       itemCount: data.length,
                       physics: const NeverScrollableScrollPhysics(),
                       itemBuilder: (context, i) {
-                        return data[i].brandName.contains(search)
+                        return (data[i].brandName??'').toLowerCase().contains(search.toLowerCase())
                             ? Padding(
                                 padding: const EdgeInsets.only(left: 10.0, right: 10.0),
                                 child: Row(
@@ -112,7 +112,7 @@ class _BrandsListState extends State<BrandsList> {
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            data[i].brandName,
+                                            data[i].brandName??'',
                                             style: GoogleFonts.poppins(
                                               fontSize: 18.0,
                                               color: Colors.black,
@@ -145,7 +145,7 @@ class _BrandsListState extends State<BrandsList> {
                                         buttontext: 'Select',
                                         buttonDecoration: kButtonDecoration.copyWith(color: kDarkWhite),
                                         onPressed: () {
-                                          Navigator.pop(context, data[i].brandName);
+                                          Navigator.pop(context, data[i]);
                                         },
                                         buttonTextColor: Colors.black,
                                       ),

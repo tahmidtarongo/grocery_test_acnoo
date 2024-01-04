@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Screens/User%20Roles/user_role_details.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
-import '../../Provider/user_role_provider.dart';
+import 'Provider/user_role_provider.dart';
 import '../../constant.dart';
 import 'add_user_role_screen.dart';
 
@@ -51,8 +51,8 @@ class _UserRoleScreenState extends State<UserRoleScreen> {
                             userRoleModel: users[index],
                           ).launch(context);
                         },
-                        title: Text(users[index].email),
-                        subtitle: Text(users[index].userTitle),
+                        title: Text(users[index].phone ?? ''),
+                        subtitle: Text(users[index].name ?? ''),
                         trailing: const Icon(
                           (Icons.arrow_forward_ios),
                         ),
@@ -85,7 +85,7 @@ class _UserRoleScreenState extends State<UserRoleScreen> {
               child: Center(
                 child: Text(
                   lang.S.of(context).addUserRole,
-                  style: TextStyle(fontSize: 18, color: Colors.white),
+                  style: const TextStyle(fontSize: 18, color: Colors.white),
                 ),
               ),
             ),

@@ -447,8 +447,6 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                                   due: paidAmount.toInt(),
                                 );
 
-                                ///________Subscription_____________________________________________________
-                                Subscription.decreaseSubscriptionLimits(itemType: 'dueNumber', context: context);
 
                                 ///________Print_______________________________________________________
                                 if (isPrintEnable && (Theme.of(context).platform == TargetPlatform.android)) {

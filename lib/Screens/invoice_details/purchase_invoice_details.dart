@@ -184,7 +184,7 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                                 ),
                                 const Spacer(),
                                 Text(
-                                  '$currency ${double.parse(widget.transitionModel.productList![i].productPurchasePrice) * double.parse(widget.transitionModel.productList![i].productStock)}',
+                                  '$currency ${(widget.transitionModel.productList![i].productPurchasePrice ?? 0) * (widget.transitionModel.productList![i].productStock ?? 0)}',
                                   maxLines: 2,
                                   style: kTextStyle.copyWith(color: kTitleColor),
                                 ),

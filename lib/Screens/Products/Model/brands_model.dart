@@ -1,11 +1,36 @@
-class BrandsModel {
-  late String brandName;
+class Brand {
+  Brand({
+    this.id,
+    this.businessId,
+    this.brandName,
+    this.status,
+    this.createdAt,
+    this.updatedAt,
+  });
 
-  BrandsModel(this.brandName);
+  Brand.fromJson(dynamic json) {
+    id = json['id'];
+    businessId = json['business_id'];
+    brandName = json['brandName'];
+    status = json['status'];
+    createdAt = json['created_at'];
+    updatedAt = json['updated_at'];
+  }
+  num? id;
+  num? businessId;
+  String? brandName;
+  num? status;
+  String? createdAt;
+  String? updatedAt;
 
-  BrandsModel.fromJson(Map<dynamic, dynamic> json) : brandName = json['brandName'] as String;
-
-  Map<dynamic, dynamic> toJson() => <dynamic, dynamic>{
-        'brandName': brandName,
-      };
+  Map<String, dynamic> toJson() {
+    final map = <String, dynamic>{};
+    map['id'] = id;
+    map['business_id'] = businessId;
+    map['brandName'] = brandName;
+    map['status'] = status;
+    map['created_at'] = createdAt;
+    map['updated_at'] = updatedAt;
+    return map;
+  }
 }

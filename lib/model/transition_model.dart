@@ -1,4 +1,4 @@
-import 'package:mobile_pos/model/product_model.dart';
+import 'package:mobile_pos/Screens/Products/Model/product_model.dart';
 
 import 'add_to_cart_model.dart';
 

@@ -19,9 +19,9 @@ import 'package:mobile_pos/paytm_config.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:http/http.dart' as http;
 import 'Screens/Home/home.dart';
+import 'Screens/subscription/Model/subscription_plan_model.dart';
 import 'constant.dart' as cns;
 import 'model/subscription_model.dart';
-import 'model/subscription_plan_model.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class PaymentPage extends StatefulWidget {
@@ -619,16 +619,16 @@ class _PaymentPageState extends State<PaymentPage> {
 
       final DatabaseReference subscriptionRef = FirebaseDatabase.instance.ref().child(cns.constUserId).child('Subscription');
 
-      SubscriptionModel subscriptionModel = SubscriptionModel(
-        subscriptionName: widget.selectedPlan.subscriptionName,
-        subscriptionDate: DateTime.now().toString(),
-        saleNumber: widget.selectedPlan.saleNumber.toInt(),
-        purchaseNumber: widget.selectedPlan.purchaseNumber.toInt(),
-        partiesNumber: widget.selectedPlan.partiesNumber.toInt(),
-        dueNumber: widget.selectedPlan.dueNumber.toInt(),
-        duration: widget.selectedPlan.duration.toInt(),
-        products: widget.selectedPlan.products.toInt(),
-      );
+      // SubscriptionModel subscriptionModel = SubscriptionModel(
+      //   subscriptionName: widget.selectedPlan.subscriptionName,
+      //   subscriptionDate: DateTime.now().toString(),
+      //   saleNumber: widget.selectedPlan.saleNumber.toInt(),
+      //   purchaseNumber: widget.selectedPlan.purchaseNumber.toInt(),
+      //   partiesNumber: widget.selectedPlan.partiesNumber.toInt(),
+      //   dueNumber: widget.selectedPlan.dueNumber.toInt(),
+      //   duration: widget.selectedPlan.duration.toInt(),
+      //   products: widget.selectedPlan.products.toInt(),
+      // );
       // print('here');
 
       // SubscriptionModel subscriptionModel = SubscriptionModel(
@@ -642,7 +642,7 @@ class _PaymentPageState extends State<PaymentPage> {
       //   products: Subscription.subscriptionPlansService[Subscription.selectedItem]!['Products'].toInt(),
       // );
 
-      await subscriptionRef.set(subscriptionModel.toJson());
+      // await subscriptionRef.set(subscriptionModel.toJson());
       EasyLoading.showSuccess('Added Successfully', duration: const Duration());
     } catch (e) {
       EasyLoading.dismiss();

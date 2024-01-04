@@ -117,15 +117,15 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
           widget.transitionModel.productList?.forEach((element) {
             if (element.productId == products.productCode) {
               if (widget.transitionModel.customerType.contains('Retailer')) {
-                sentProductPrice = products.productSalePrice;
+                sentProductPrice = products.productSalePrice.toString();
               } else if (widget.transitionModel.customerType.contains('Dealer')) {
-                sentProductPrice = products.productDealerPrice;
+                sentProductPrice = products.productDealerPrice.toString();
               } else if (widget.transitionModel.customerType.contains('Wholesaler')) {
-                sentProductPrice = products.productWholeSalePrice;
+                sentProductPrice = products.productWholeSalePrice.toString();
               } else if (widget.transitionModel.customerType.contains('Supplier')) {
-                sentProductPrice = products.productPurchasePrice;
+                sentProductPrice = products.productPurchasePrice.toString();
               } else if (widget.transitionModel.customerType.contains('Guest')) {
-                sentProductPrice = products.productSalePrice;
+                sentProductPrice = products.productSalePrice.toString();
                 isGuestCustomer = true;
               }
 
@@ -134,8 +134,8 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                 subTotal: sentProductPrice,
                 quantity: element.quantity,
                 productId: products.productCode,
-                productBrandName: products.brandName,
-                stock: int.parse(products.productStock),
+                productBrandName: products.brand?.brandName??'',
+                stock: (products.productStock??0).round(),
               );
               list.add(cartItem);
 

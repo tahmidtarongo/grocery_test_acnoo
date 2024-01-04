@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:mobile_pos/model/product_model.dart';
+import 'package:mobile_pos/Screens/Products/Model/product_model.dart';
 
 final cartNotifierPurchase = ChangeNotifierProvider((ref) => CartNotifier());
 
@@ -28,7 +28,7 @@ class CartNotifier extends ChangeNotifier {
     bool isNotInList = true;
     for (var element in cartItemPurchaseList) {
       if (element.productCode == cartItem.productCode) {
-        element.productStock = (int.parse(element.productStock) + int.parse(cartItem.productStock)).toString();
+        element.productStock = ((element.productStock??0) + (cartItem.productStock??0));
         isNotInList = false;
         return;
       } else {
@@ -46,18 +46,18 @@ class CartNotifier extends ChangeNotifier {
   }
 
   quantityDecrease(int index) {
-    if (int.parse(cartItemPurchaseList[index].productStock) > 1) {
-      int quantity = int.parse(cartItemPurchaseList[index].productStock);
+    if ((cartItemPurchaseList[index].productStock??0) > 1) {
+      int quantity = (cartItemPurchaseList[index].productStock??0).round();
       quantity--;
-      cartItemPurchaseList[index].productStock = quantity.toString();
+      cartItemPurchaseList[index].productStock = quantity;
     }
     notifyListeners();
   }
 
   quantityIncrease(int index) {
-    int quantity = int.parse(cartItemPurchaseList[index].productStock);
+    int quantity = (cartItemPurchaseList[index].productStock??0).round();
     quantity++;
-    cartItemPurchaseList[index].productStock = quantity.toString();
+    cartItemPurchaseList[index].productStock = quantity;
     notifyListeners();
   }
 

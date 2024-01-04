@@ -13,6 +13,7 @@ import '../../Provider/profile_provider.dart';
 import '../../constant.dart';
 import '../../currency.dart';
 import '../../model/business_info_model.dart';
+import '../Authentication/Repo/logout_repo.dart';
 import '../Currency/currency_screen.dart';
 import '../Shimmers/home_screen_appbar_shimmer.dart';
 import '../language/language.dart';
@@ -34,30 +35,7 @@ class _SettingScreenState extends State<SettingScreen> {
   bool expandedAbout = false;
   bool selected = false;
 
-  Future<void> _signOut() async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.remove("userId");
-    await prefs.remove("tokenType");
-    await prefs.remove("token");
-    EasyLoading.showSuccess('Successfully Logged Out');
-    const SplashScreen().launch(context, isNewTask: true);
 
-    // Future.delayed(const Duration(milliseconds: 1000), () async {
-    //   ///________subUser_logout___________________________________________________
-    //   final prefs = await SharedPreferences.getInstance();
-    //   await prefs.setBool('isSubUser', false);
-    //   Future.delayed(const Duration(milliseconds: 1000), () {
-    //     if ((Theme.of(context).platform == TargetPlatform.android)) {
-    //       Restart.restartApp();
-    //     } else {
-    //       const SplashScreen().launch(context, isNewTask: true);
-    //     }
-    //
-    //     // const SignInScreen().launch(context);
-    //   });
-    //   // Phoenix.rebirth(context);
-    // });
-  }
 
   @override
   void initState() {
@@ -120,7 +98,7 @@ class _SettingScreenState extends State<SettingScreen> {
                               decoration: BoxDecoration(
                                 image: details.pictureUrl == null
                                     ? const DecorationImage(image: AssetImage('images/no_shop_image.png'), fit: BoxFit.cover)
-                                    : DecorationImage(image: NetworkImage(APIConfig.domain + details.pictureUrl), fit: BoxFit.cover),
+                                    : DecorationImage(image: NetworkImage(APIConfig.domain + details.pictureUrl.toString()), fit: BoxFit.cover),
                                 borderRadius: BorderRadius.circular(50),
                               ),
                             ),
@@ -704,7 +682,8 @@ class _SettingScreenState extends State<SettingScreen> {
                   ),
                   onTap: () async {
                     EasyLoading.show(status: 'Log out');
-                    await _signOut();
+                    LogOutRepo repo =LogOutRepo();
+                   await repo.signOutApi(context: context);
                   },
                   leading: const Icon(
                     Icons.logout,

@@ -11,7 +11,7 @@ import 'package:intl/intl.dart';
 import 'package:mobile_pos/Provider/customer_provider.dart';
 import 'package:mobile_pos/Provider/transactions_provider.dart';
 import 'package:mobile_pos/Screens/Purchase%20List/purchase_edit_invoice_add_productes.dart';
-import 'package:mobile_pos/model/product_model.dart';
+import 'package:mobile_pos/Screens/Products/Model/product_model.dart';
 import 'package:mobile_pos/model/transition_model.dart';
 import 'package:nb_utils/nb_utils.dart';
 
@@ -242,7 +242,7 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                                   contentPadding: const EdgeInsets.all(0),
                                   title: Text(providerData.cartItemPurchaseList[index].productName.toString()),
                                   subtitle: Text(
-                                      '${providerData.cartItemPurchaseList[index].productStock} X ${providerData.cartItemPurchaseList[index].productPurchasePrice} = ${double.parse(providerData.cartItemPurchaseList[index].productStock) * providerData.cartItemPurchaseList[index].productPurchasePrice.toInt()}'),
+                                      '${providerData.cartItemPurchaseList[index].productStock} X ${providerData.cartItemPurchaseList[index].productPurchasePrice} = ${(providerData.cartItemPurchaseList[index].productStock ?? 0) * (providerData.cartItemPurchaseList[index].productPurchasePrice ?? 0)}'),
                                   trailing: Row(
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
@@ -558,98 +558,98 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                       Expanded(
                         child: GestureDetector(
                           onTap: () async {
-                            if (providerData.cartItemPurchaseList.isNotEmpty) {
-                              try {
-                                EasyLoading.show(status: 'Loading...', dismissOnTap: false);
-
-                                dueAmount <= 0 ? transitionModel.isPaid = true : transitionModel.isPaid = false;
-                                dueAmount <= 0 ? transitionModel.dueAmount = 0 : transitionModel.dueAmount = dueAmount;
-                                returnAmount < 0 ? transitionModel.returnAmount = returnAmount.abs() : transitionModel.returnAmount = 0;
-                                transitionModel.discountAmount = discountAmount;
-                                transitionModel.totalAmount = subTotal;
-                                transitionModel.productList = providerData.cartItemPurchaseList;
-                                transitionModel.paymentType = dropdownValue;
-                                transitionModel.invoiceNumber = invoice.toString();
-
-                                ///________________updateInvoice___________________________________________________________
-                                String? key;
-                                await FirebaseDatabase.instance.ref(constUserId).child('Purchase Transition').orderByKey().get().then((value) {
-                                  for (var element in value.children) {
-                                    final t = PurchaseTransitionModel.fromJson(jsonDecode(jsonEncode(element.value)));
-                                    if (transitionModel.invoiceNumber == t.invoiceNumber) {
-                                      key = element.key;
-                                    }
-                                  }
-                                });
-                                await FirebaseDatabase.instance.ref(constUserId).child('Purchase Transition').child(key!).update(transitionModel.toJson());
-
-                                ///__________StockMange_________________________________________________
-
-                                presentProducts = transitionModel.productList!;
-
-                                for (var pastElement in pastProducts) {
-                                  int i = 0;
-                                  for (var futureElement in presentProducts) {
-                                    if (pastElement.productCode == futureElement.productCode) {
-                                      if (pastElement.productStock.toInt() < futureElement.productStock.toInt() && pastElement.productStock != futureElement.productStock) {
-                                        ProductModel m = pastElement;
-                                        m.productStock = (futureElement.productStock.toInt() - pastElement.productStock.toInt()).toString();
-                                        // ignore: iterable_contains_unrelated_type
-                                        increaseStockList.contains(pastElement.productCode) ? null : increaseStockList.add(m);
-                                      } else if (pastElement.productStock.toInt() > futureElement.productStock.toInt() &&
-                                          pastElement.productStock.toInt() != futureElement.productStock.toInt()) {
-                                        ProductModel n = pastElement;
-                                        n.productStock = (pastElement.productStock.toInt() - futureElement.productStock.toInt()).toString();
-                                        // ignore: iterable_contains_unrelated_type
-                                        decreaseStockList2.contains(pastElement.productCode) ? null : decreaseStockList2.add(n);
-                                      }
-                                      break;
-                                    } else {
-                                      i++;
-                                      if (i == presentProducts.length) {
-                                        ProductModel n = pastElement;
-                                        decreaseStockList2.add(n);
-                                      }
-                                    }
-                                  }
-                                }
-
-                                ///_____________StockUpdate_______________________________________________________
-
-                                for (var element in increaseStockList) {
-                                  increaseStock(productCode: element.productCode, productModel: element);
-                                }
-
-                                for (var element in decreaseStockList2) {
-                                  decreaseStock(productCode: element.productCode, productModel: element);
-                                }
-
-                                ///_________DueUpdate______________________________________________________
-                                if (pastDue < transitionModel.dueAmount!) {
-                                  double due = pastDue - transitionModel.dueAmount!;
-                                  getSpecificCustomersDueUpdate(phoneNumber: widget.transitionModel.customerPhone, isDuePaid: false, due: due.toInt());
-                                } else if (pastDue > transitionModel.dueAmount!) {
-                                  double due = transitionModel.dueAmount! - pastDue;
-                                  getSpecificCustomersDueUpdate(phoneNumber: widget.transitionModel.customerPhone, isDuePaid: true, due: due.toInt());
-                                }
-
-                                providerData.clearCart();
-                                consumerRef.refresh(partiesProvider);
-                                consumerRef.refresh(productProvider);
-                                consumerRef.refresh(purchaseReportProvider);
-                                consumerRef.refresh(purchaseTransitionProvider);
-                                consumerRef.refresh(businessInfoProvider);
-                                EasyLoading.dismiss();
-
-                                // ignore: use_build_context_synchronously
-                                Navigator.pop(context);
-                              } catch (e) {
-                                EasyLoading.dismiss();
-                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
-                              }
-                            } else {
-                              EasyLoading.showError('Add product first');
-                            }
+                            // if (providerData.cartItemPurchaseList.isNotEmpty) {
+                            //   try {
+                            //     EasyLoading.show(status: 'Loading...', dismissOnTap: false);
+                            //
+                            //     dueAmount <= 0 ? transitionModel.isPaid = true : transitionModel.isPaid = false;
+                            //     dueAmount <= 0 ? transitionModel.dueAmount = 0 : transitionModel.dueAmount = dueAmount;
+                            //     returnAmount < 0 ? transitionModel.returnAmount = returnAmount.abs() : transitionModel.returnAmount = 0;
+                            //     transitionModel.discountAmount = discountAmount;
+                            //     transitionModel.totalAmount = subTotal;
+                            //     transitionModel.productList = providerData.cartItemPurchaseList;
+                            //     transitionModel.paymentType = dropdownValue;
+                            //     transitionModel.invoiceNumber = invoice.toString();
+                            //
+                            //     ///________________updateInvoice___________________________________________________________
+                            //     String? key;
+                            //     await FirebaseDatabase.instance.ref(constUserId).child('Purchase Transition').orderByKey().get().then((value) {
+                            //       for (var element in value.children) {
+                            //         final t = PurchaseTransitionModel.fromJson(jsonDecode(jsonEncode(element.value)));
+                            //         if (transitionModel.invoiceNumber == t.invoiceNumber) {
+                            //           key = element.key;
+                            //         }
+                            //       }
+                            //     });
+                            //     await FirebaseDatabase.instance.ref(constUserId).child('Purchase Transition').child(key!).update(transitionModel.toJson());
+                            //
+                            //     ///__________StockMange_________________________________________________
+                            //
+                            //     presentProducts = transitionModel.productList!;
+                            //
+                            //     for (var pastElement in pastProducts) {
+                            //       int i = 0;
+                            //       for (var futureElement in presentProducts) {
+                            //         if (pastElement.productCode == futureElement.productCode) {
+                            //           if (pastElement.productStock.toInt() < futureElement.productStock.toInt() && pastElement.productStock != futureElement.productStock) {
+                            //             ProductModel m = pastElement;
+                            //             m.productStock = (futureElement.productStock.toInt() - pastElement.productStock.toInt()).toString();
+                            //             // ignore: iterable_contains_unrelated_type
+                            //             increaseStockList.contains(pastElement.productCode) ? null : increaseStockList.add(m);
+                            //           } else if (pastElement.productStock.toInt() > futureElement.productStock.toInt() &&
+                            //               pastElement.productStock.toInt() != futureElement.productStock.toInt()) {
+                            //             ProductModel n = pastElement;
+                            //             n.productStock = (pastElement.productStock.toInt() - futureElement.productStock.toInt()).toString();
+                            //             // ignore: iterable_contains_unrelated_type
+                            //             decreaseStockList2.contains(pastElement.productCode) ? null : decreaseStockList2.add(n);
+                            //           }
+                            //           break;
+                            //         } else {
+                            //           i++;
+                            //           if (i == presentProducts.length) {
+                            //             ProductModel n = pastElement;
+                            //             decreaseStockList2.add(n);
+                            //           }
+                            //         }
+                            //       }
+                            //     }
+                            //
+                            //     ///_____________StockUpdate_______________________________________________________
+                            //
+                            //     for (var element in increaseStockList) {
+                            //       increaseStock(productCode: element.productCode, productModel: element);
+                            //     }
+                            //
+                            //     for (var element in decreaseStockList2) {
+                            //       decreaseStock(productCode: element.productCode, productModel: element);
+                            //     }
+                            //
+                            //     ///_________DueUpdate______________________________________________________
+                            //     if (pastDue < transitionModel.dueAmount!) {
+                            //       double due = pastDue - transitionModel.dueAmount!;
+                            //       getSpecificCustomersDueUpdate(phoneNumber: widget.transitionModel.customerPhone, isDuePaid: false, due: due.toInt());
+                            //     } else if (pastDue > transitionModel.dueAmount!) {
+                            //       double due = transitionModel.dueAmount! - pastDue;
+                            //       getSpecificCustomersDueUpdate(phoneNumber: widget.transitionModel.customerPhone, isDuePaid: true, due: due.toInt());
+                            //     }
+                            //
+                            //     providerData.clearCart();
+                            //     consumerRef.refresh(partiesProvider);
+                            //     consumerRef.refresh(productProvider);
+                            //     consumerRef.refresh(purchaseReportProvider);
+                            //     consumerRef.refresh(purchaseTransitionProvider);
+                            //     consumerRef.refresh(businessInfoProvider);
+                            //     EasyLoading.dismiss();
+                            //
+                            //     // ignore: use_build_context_synchronously
+                            //     Navigator.pop(context);
+                            //   } catch (e) {
+                            //     EasyLoading.dismiss();
+                            //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
+                            //   }
+                            // } else {
+                            //   EasyLoading.showError('Add product first');
+                            // }
                           },
                           child: Container(
                             height: 60,
@@ -683,62 +683,63 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
     });
   }
 
-  void increaseStock({required String productCode, required ProductModel productModel}) async {
-    final ref = FirebaseDatabase.instance.ref('$constUserId/Products/');
-
-    var data = await ref.orderByChild('productCode').equalTo(productCode).once();
-    String productPath = data.snapshot.value.toString().substring(1, 21);
-
-    var data1 = await ref.child('$productPath/productStock').once();
-    int stock = int.parse(data1.snapshot.value.toString());
-    int remainStock = stock + productModel.productStock.toInt();
-
-    ref.child(productPath).update({
-      'productSalePrice': productModel.productSalePrice,
-      'productPurchasePrice': productModel.productPurchasePrice,
-      'productWholeSalePrice': productModel.productWholeSalePrice,
-      'productDealerPrice': productModel.productDealerPrice,
-      'productStock': '$remainStock',
-    });
-  }
-
-  void decreaseStock({required String productCode, required ProductModel productModel}) async {
-    final ref = FirebaseDatabase.instance.ref('$constUserId/Products/');
-
-    var data = await ref.orderByChild('productCode').equalTo(productCode).once();
-    String productPath = data.snapshot.value.toString().substring(1, 21);
-
-    var data1 = await ref.child('$productPath/productStock').once();
-    int stock = int.parse(data1.snapshot.value.toString());
-    int remainStock = stock - productModel.productStock.toInt();
-
-    ref.child(productPath).update({
-      'productSalePrice': productModel.productSalePrice,
-      'productPurchasePrice': productModel.productPurchasePrice,
-      'productWholeSalePrice': productModel.productWholeSalePrice,
-      'productDealerPrice': productModel.productDealerPrice,
-      'productStock': '$remainStock',
-    });
-  }
-
-  void getSpecificCustomersDueUpdate({required String phoneNumber, required bool isDuePaid, required int due}) async {
-    final ref = FirebaseDatabase.instance.ref('$constUserId/Customers/');
-    String? key;
-
-    await FirebaseDatabase.instance.ref(constUserId).child('Customers').orderByKey().get().then((value) {
-      for (var element in value.children) {
-        var data = jsonDecode(jsonEncode(element.value));
-        if (data['phoneNumber'] == phoneNumber) {
-          key = element.key;
-        }
-      }
-    });
-    var data1 = await ref.child('$key/due').once();
-    int previousDue = data1.snapshot.value.toString().toInt();
-
-    int totalDue;
-
-    isDuePaid ? totalDue = previousDue + due : totalDue = previousDue - due;
-    ref.child(key!).update({'due': '$totalDue'});
-  }
+//   void increaseStock({required String productCode, required ProductModel productModel}) async {
+//     final ref = FirebaseDatabase.instance.ref('$constUserId/Products/');
+//
+//     var data = await ref.orderByChild('productCode').equalTo(productCode).once();
+//     String productPath = data.snapshot.value.toString().substring(1, 21);
+//
+//     var data1 = await ref.child('$productPath/productStock').once();
+//     int stock = int.parse(data1.snapshot.value.toString());
+//     int remainStock = stock + productModel.productStock.toInt();
+//
+//     ref.child(productPath).update({
+//       'productSalePrice': productModel.productSalePrice,
+//       'productPurchasePrice': productModel.productPurchasePrice,
+//       'productWholeSalePrice': productModel.productWholeSalePrice,
+//       'productDealerPrice': productModel.productDealerPrice,
+//       'productStock': '$remainStock',
+//     });
+//   }
+//
+//   void decreaseStock({required String productCode, required ProductModel productModel}) async {
+//     final ref = FirebaseDatabase.instance.ref('$constUserId/Products/');
+//
+//     var data = await ref.orderByChild('productCode').equalTo(productCode).once();
+//     String productPath = data.snapshot.value.toString().substring(1, 21);
+//
+//     var data1 = await ref.child('$productPath/productStock').once();
+//     int stock = int.parse(data1.snapshot.value.toString());
+//     int remainStock = stock - productModel.productStock.toInt();
+//
+//     ref.child(productPath).update({
+//       'productSalePrice': productModel.productSalePrice,
+//       'productPurchasePrice': productModel.productPurchasePrice,
+//       'productWholeSalePrice': productModel.productWholeSalePrice,
+//       'productDealerPrice': productModel.productDealerPrice,
+//       'productStock': '$remainStock',
+//     });
+//   }
+//
+//   void getSpecificCustomersDueUpdate({required String phoneNumber, required bool isDuePaid, required int due}) async {
+//     final ref = FirebaseDatabase.instance.ref('$constUserId/Customers/');
+//     String? key;
+//
+//     await FirebaseDatabase.instance.ref(constUserId).child('Customers').orderByKey().get().then((value) {
+//       for (var element in value.children) {
+//         var data = jsonDecode(jsonEncode(element.value));
+//         if (data['phoneNumber'] == phoneNumber) {
+//           key = element.key;
+//         }
+//       }
+//     });
+//     var data1 = await ref.child('$key/due').once();
+//     int previousDue = data1.snapshot.value.toString().toInt();
+//
+//     int totalDue;
+//
+//     isDuePaid ? totalDue = previousDue + due : totalDue = previousDue - due;
+//     ref.child(key!).update({'due': '$totalDue'});
+//   }
+// }
 }

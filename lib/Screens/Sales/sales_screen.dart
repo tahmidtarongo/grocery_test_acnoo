@@ -213,40 +213,40 @@ class _SaleProductsState extends State<SaleProducts> {
                       itemCount: products.length,
                       itemBuilder: (_, i) {
                         if (widget.customerModel!.type!.contains('Retailer')) {
-                          productPrice = products[i].productSalePrice;
+                          productPrice = products[i].productSalePrice.toString();
                         } else if (widget.customerModel!.type!.contains('Dealer')) {
-                          productPrice = products[i].productDealerPrice;
+                          productPrice = products[i].productDealerPrice.toString();
                         } else if (widget.customerModel!.type!.contains('Wholesaler')) {
-                          productPrice = products[i].productWholeSalePrice;
+                          productPrice = products[i].productWholeSalePrice.toString().toString();
                         } else if (widget.customerModel!.type!.contains('Supplier')) {
-                          productPrice = products[i].productPurchasePrice;
+                          productPrice = products[i].productPurchasePrice.toString();
                         } else if (widget.customerModel!.type!.contains('Guest')) {
-                          productPrice = products[i].productSalePrice;
+                          productPrice = products[i].productSalePrice.toString();
                         }
                         return GestureDetector(
                           onTap: () async {
-                            if (products[i].productStock.toInt() <= 0) {
+                            if ((products[i].productStock??0) <= 0) {
                               EasyLoading.showError('Out of stock');
                             } else {
                               if (widget.customerModel!.type!.contains('Retailer')) {
-                                sentProductPrice = products[i].productSalePrice;
+                                sentProductPrice = products[i].productSalePrice.toString();
                               } else if (widget.customerModel!.type!.contains('Dealer')) {
-                                sentProductPrice = products[i].productDealerPrice;
+                                sentProductPrice = products[i].productDealerPrice.toString();
                               } else if (widget.customerModel!.type!.contains('Wholesaler')) {
-                                sentProductPrice = products[i].productWholeSalePrice;
+                                sentProductPrice = products[i].productWholeSalePrice.toString();
                               } else if (widget.customerModel!.type!.contains('Supplier')) {
-                                sentProductPrice = products[i].productPurchasePrice;
+                                sentProductPrice = products[i].productPurchasePrice.toString();
                               } else if (widget.customerModel!.type!.contains('Guest')) {
-                                sentProductPrice = products[i].productSalePrice;
+                                sentProductPrice = products[i].productSalePrice.toString();
                               }
 
                               AddToCartModel cartItem = AddToCartModel(
                                 productName: products[i].productName,
                                 subTotal: sentProductPrice,
                                 productId: products[i].productCode,
-                                productBrandName: products[i].brandName,
+                                productBrandName: products[i].brand?.brandName??'',
                                 productPurchasePrice: products[i].productPurchasePrice,
-                                stock: int.parse(products[i].productStock),
+                                stock: (products[i].productStock??0).round(),
                                 uuid: products[i].productCode,
                               );
                               providerData.addToCartRiverPod(cartItem);
@@ -255,10 +255,10 @@ class _SaleProductsState extends State<SaleProducts> {
                             }
                           },
                           child: ProductCard(
-                            productTitle: products[i].productName,
-                            productDescription: products[i].brandName,
+                            productTitle: products[i].productName.toString(),
+                            productDescription: products[i].brand?.brandName??'',
                             productPrice: productPrice,
-                            productImage: products[i].productPicture,
+                            productImage: products[i].productPicture??'',
                           ).visible((products[i].productCode == productCode || productCode == '0000' || productCode == '-1') && productPrice != '0'),
                         );
                       });

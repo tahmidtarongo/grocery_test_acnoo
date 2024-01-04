@@ -10,7 +10,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Provider/product_provider.dart';
 import 'package:mobile_pos/Screens/Customers/Model/parties_model.dart';
 import 'package:mobile_pos/constant.dart';
-import 'package:mobile_pos/model/product_model.dart';
+import 'package:mobile_pos/Screens/Products/Model/product_model.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../Provider/add_to_cart.dart';
@@ -139,13 +139,13 @@ class _PurchaseProductsState extends State<PurchaseProducts> {
                       itemCount: products.length,
                       itemBuilder: (_, i) {
                         if (widget.customerModel!.type!.contains('Retailer')) {
-                          productPrice = products[i].productSalePrice;
+                          productPrice = products[i].productSalePrice.toString();
                         } else if (widget.customerModel!.type!.contains('Dealer')) {
-                          productPrice = products[i].productDealerPrice;
+                          productPrice = products[i].productDealerPrice.toString();
                         } else if (widget.customerModel!.type!.contains('Wholesaler')) {
-                          productPrice = products[i].productWholeSalePrice;
+                          productPrice = products[i].productWholeSalePrice.toString();
                         } else if (widget.customerModel!.type!.contains('Supplier')) {
-                          productPrice = products[i].productPurchasePrice;
+                          productPrice = products[i].productPurchasePrice.toString();
                         }
                         return GestureDetector(
                           onTap: () {
@@ -153,7 +153,7 @@ class _PurchaseProductsState extends State<PurchaseProducts> {
                                 context: context,
                                 builder: (_) {
                                   ProductModel tempProductModel = products[i];
-                                  tempProductModel.productStock = '0';
+                                  tempProductModel.productStock = 0;
                                   return AlertDialog(
                                       content: SizedBox(
                                     child: SingleChildScrollView(
@@ -194,11 +194,11 @@ class _PurchaseProductsState extends State<PurchaseProducts> {
                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                 children: [
                                                   Text(
-                                                    products[i].productName,
+                                                    products[i].productName.toString(),
                                                     style: const TextStyle(fontSize: 16),
                                                   ),
                                                   Text(
-                                                    products[i].brandName,
+                                                    products[i].brand?.brandName??'',
                                                     style: const TextStyle(
                                                       fontSize: 16,
                                                       color: Colors.grey,
@@ -215,7 +215,7 @@ class _PurchaseProductsState extends State<PurchaseProducts> {
                                                     style: const TextStyle(fontSize: 16),
                                                   ),
                                                   Text(
-                                                    products[i].productStock,
+                                                    products[i].productStock.toString(),
                                                     style: const TextStyle(
                                                       fontSize: 16,
                                                       color: Colors.grey,
@@ -233,7 +233,7 @@ class _PurchaseProductsState extends State<PurchaseProducts> {
                                                 child: AppTextField(
                                                   textFieldType: TextFieldType.PHONE,
                                                   onChanged: (value) {
-                                                    tempProductModel.productStock = value;
+                                                    // tempProductModel.productStock = value;
                                                   },
                                                   decoration: InputDecoration(
                                                     floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -251,11 +251,11 @@ class _PurchaseProductsState extends State<PurchaseProducts> {
                                             children: [
                                               Expanded(
                                                 child: AppTextField(
-                                                  initialValue: products[i].productPurchasePrice,
+                                                  initialValue: products[i].productPurchasePrice.toString(),
                                                   keyboardType: TextInputType.number,
                                                   textFieldType: TextFieldType.NAME,
                                                   onChanged: (value) {
-                                                    tempProductModel.productPurchasePrice = value;
+                                                    // tempProductModel.productPurchasePrice = value;
                                                   },
                                                   decoration: InputDecoration(
                                                     floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -267,11 +267,11 @@ class _PurchaseProductsState extends State<PurchaseProducts> {
                                               const SizedBox(width: 10),
                                               Expanded(
                                                 child: AppTextField(
-                                                  initialValue: products[i].productSalePrice,
+                                                  initialValue: products[i].productSalePrice.toString(),
                                                   keyboardType: TextInputType.number,
                                                   textFieldType: TextFieldType.NAME,
                                                   onChanged: (value) {
-                                                    tempProductModel.productSalePrice = value;
+                                                    // tempProductModel.productSalePrice = value;
                                                   },
                                                   decoration: InputDecoration(
                                                     floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -288,11 +288,11 @@ class _PurchaseProductsState extends State<PurchaseProducts> {
                                             children: [
                                               Expanded(
                                                 child: AppTextField(
-                                                  initialValue: products[i].productWholeSalePrice,
+                                                  initialValue: products[i].productWholeSalePrice.toString(),
                                                   keyboardType: TextInputType.number,
                                                   textFieldType: TextFieldType.NAME,
                                                   onChanged: (value) {
-                                                    tempProductModel.productWholeSalePrice = value;
+                                                    // tempProductModel.productWholeSalePrice = value;
                                                   },
                                                   decoration: InputDecoration(
                                                     floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -304,11 +304,11 @@ class _PurchaseProductsState extends State<PurchaseProducts> {
                                               const SizedBox(width: 10),
                                               Expanded(
                                                 child: AppTextField(
-                                                  initialValue: products[i].productDealerPrice,
+                                                  initialValue: products[i].productDealerPrice.toString(),
                                                   keyboardType: TextInputType.number,
                                                   textFieldType: TextFieldType.NAME,
                                                   onChanged: (value) {
-                                                    tempProductModel.productDealerPrice = value;
+                                                    // tempProductModel.productDealerPrice = value;
                                                   },
                                                   decoration: InputDecoration(
                                                     floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -378,10 +378,10 @@ class _PurchaseProductsState extends State<PurchaseProducts> {
                             // }
                           },
                           child: ProductCard(
-                            productTitle: products[i].productName,
-                            productDescription: products[i].brandName,
-                            stock: products[i].productStock,
-                            productImage: products[i].productPicture,
+                            productTitle: products[i].productName.toString(),
+                            productDescription: products[i].brand?.brandName??'',
+                            stock: products[i].productStock.toString(),
+                            productImage: products[i].productPicture??'',
                           ).visible((products[i].productCode == productCode || productCode == '0000' || productCode == '-1') && productPrice != '0'),
                         );
                       });

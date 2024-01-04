@@ -1,19 +1,15 @@
 // ignore_for_file: unused_result
-
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
+import 'package:mobile_pos/Screens/User%20Roles/Repo/user_role_repo.dart';
 import 'package:mobile_pos/constant.dart';
-import 'package:mobile_pos/model/user_role_model.dart';
-import 'package:mobile_pos/repository/get_user_role_repo.dart';
+import 'package:mobile_pos/Screens/User%20Roles/Model/user_role_model.dart' as user;
 import 'package:nb_utils/nb_utils.dart';
 
-import '../../Provider/user_role_provider.dart';
-import '../Authentication/phone.dart';
+import 'Model/user_role_model.dart';
 
 class UserRoleDetails extends StatefulWidget {
   const UserRoleDetails({Key? key, required this.userRoleModel}) : super(key: key);
@@ -28,6 +24,15 @@ class UserRoleDetails extends StatefulWidget {
 class _UserRoleDetailsState extends State<UserRoleDetails> {
   GlobalKey<FormState> globalKey = GlobalKey<FormState>();
 
+  bool validateAndSave() {
+    final form = globalKey.currentState;
+    if (form!.validate()) {
+      form.save();
+      return true;
+    }
+    return false;
+  }
+
   bool allPermissions = false;
   bool salePermission = false;
   bool partiesPermission = false;
@@ -41,54 +46,34 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
   bool reportsPermission = false;
   bool salesListPermission = false;
   bool purchaseListPermission = false;
+  TextEditingController phoneController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController titleController = TextEditingController();
   bool isMailSent = false;
 
   @override
   void initState() {
-    getAllUserData();
     // TODO: implement initState
     super.initState();
-    salePermission = widget.userRoleModel.salePermission;
-    partiesPermission = widget.userRoleModel.partiesPermission;
-    purchasePermission = widget.userRoleModel.purchasePermission;
-    productPermission = widget.userRoleModel.productPermission;
-    profileEditPermission = widget.userRoleModel.profileEditPermission;
-    addExpensePermission = widget.userRoleModel.addExpensePermission;
-    lossProfitPermission = widget.userRoleModel.lossProfitPermission;
-    dueListPermission = widget.userRoleModel.dueListPermission;
-    stockPermission = widget.userRoleModel.stockPermission;
-    reportsPermission = widget.userRoleModel.reportsPermission;
-    salesListPermission = widget.userRoleModel.salePermission;
-    purchaseListPermission = widget.userRoleModel.purchaseListPermission;
-    emailController.text = widget.userRoleModel.email;
-    titleController.text = widget.userRoleModel.userTitle;
+    salePermission = widget.userRoleModel.visibility?.salePermission ?? false;
+    partiesPermission = widget.userRoleModel.visibility?.partiesPermission ?? false;
+    purchasePermission = widget.userRoleModel.visibility?.purchasePermission ?? false;
+    productPermission = widget.userRoleModel.visibility?.productPermission ?? false;
+    profileEditPermission = widget.userRoleModel.visibility?.profileEditPermission ?? false;
+    addExpensePermission = widget.userRoleModel.visibility?.addExpensePermission ?? false;
+    lossProfitPermission = widget.userRoleModel.visibility?.lossProfitPermission ?? false;
+    dueListPermission = widget.userRoleModel.visibility?.dueListPermission ?? false;
+    stockPermission = widget.userRoleModel.visibility?.stockPermission ?? false;
+    reportsPermission = widget.userRoleModel.visibility?.reportsPermission ?? false;
+    salesListPermission = widget.userRoleModel.visibility?.salesListPermission ?? false;
+    purchaseListPermission = widget.userRoleModel.visibility?.purchaseListPermission ?? false;
+    emailController.text = widget.userRoleModel.email ?? '';
+    phoneController.text = widget.userRoleModel.phone ?? '';
+    titleController.text = widget.userRoleModel.name ?? '';
   }
 
-  UserRoleRepo repo = UserRoleRepo();
   List<UserRoleModel> adminRoleList = [];
   List<UserRoleModel> userRoleList = [];
-
-  String adminRoleKey = '';
-  String userRoleKey = '';
-
-  void getAllUserData() async {
-    adminRoleList = await repo.getAllUserRoleFromAdmin();
-    userRoleList = await repo.getAllUserRole();
-    for (var element in adminRoleList) {
-      if (element.email == widget.userRoleModel.email) {
-        adminRoleKey = element.userKey ?? '';
-        break;
-      }
-    }
-    for (var element in userRoleList) {
-      if (element.email == widget.userRoleModel.email) {
-        userRoleKey = element.userKey ?? '';
-        break;
-      }
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -109,8 +94,7 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                   showDialog(
                     context: context,
                     barrierDismissible: false,
-                    builder: (BuildContext context) {
-                      String pass = '';
+                    builder: (BuildContext context1) {
                       return Padding(
                         padding: const EdgeInsets.all(30.0),
                         child: Center(
@@ -125,13 +109,7 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
-                                  AppTextField(
-                                    textFieldType: TextFieldType.EMAIL,
-                                    onChanged: (value) {
-                                      pass = value;
-                                    },
-                                    decoration: const InputDecoration(labelText: 'Enter Password', border: OutlineInputBorder()),
-                                  ),
+                                  const Text('Do you want to delete the user?', style: TextStyle(fontSize: 20)),
                                   const SizedBox(height: 20),
                                   Row(
                                     children: [
@@ -140,7 +118,7 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                           buttontext: 'Cancel',
                                           buttonDecoration: kButtonDecoration.copyWith(color: Colors.green),
                                           onPressed: (() {
-                                            Navigator.pop(context);
+                                            Navigator.pop(context1);
                                           }),
                                           buttonTextColor: Colors.white,
                                         ),
@@ -150,12 +128,9 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                             buttontext: 'Delete',
                                             buttonDecoration: kButtonDecoration.copyWith(color: Colors.red),
                                             onPressed: (() async {
-                                              if (pass != '' && pass.isNotEmpty) {
-                                                await deleteUserRole(
-                                                    email: widget.userRoleModel.email, password: pass, adminKey: adminRoleKey, userKey: userRoleKey, context: context);
-                                              } else {
-                                                EasyLoading.showError('Please Enter Password');
-                                              }
+                                              EasyLoading.show(status: 'loading..');
+                                              UserRoleRepo repo = UserRoleRepo();
+                                              await repo.deleteUser(id: widget.userRoleModel.id.toString(), context: context, ref: ref);
                                             }),
                                             buttonTextColor: Colors.white),
                                       ),
@@ -426,14 +401,43 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         ///__________email_________________________________________________________
-                        AppTextField(
-                          readOnly: true,
-                          initialValue: widget.userRoleModel.email,
+                        // AppTextField(
+                        //   readOnly: true,
+                        //   initialValue: widget.userRoleModel.email,
+                        //   // cursorColor: kTitleColor,
+                        //   decoration: kInputDecoration.copyWith(
+                        //     labelText: 'Email',
+                        //     // labelStyle: kTextStyle.copyWith(color: kTitleColor),
+                        //     hintText: 'Enter your email address',
+                        //     // hintStyle: kTextStyle.copyWith(color: kLitGreyColor),
+                        //     contentPadding: const EdgeInsets.all(10.0),
+                        //     enabledBorder: const OutlineInputBorder(
+                        //       borderRadius: BorderRadius.all(
+                        //         Radius.circular(4.0),
+                        //       ),
+                        //       borderSide: BorderSide(color: kBorderColorTextField, width: 1),
+                        //     ),
+                        //     errorBorder: const OutlineInputBorder(borderSide: BorderSide(color: Colors.red)),
+                        //     focusedBorder: const OutlineInputBorder(
+                        //       borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                        //       borderSide: BorderSide(color: kBorderColorTextField, width: 2),
+                        //     ),
+                        //   ),
+                        //   textFieldType: TextFieldType.EMAIL,
+                        // ),
+                        TextFormField(
+                          controller: phoneController,
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'User Phone can\'n be empty';
+                            }
+                            return null;
+                          },
                           // cursorColor: kTitleColor,
                           decoration: kInputDecoration.copyWith(
-                            labelText: 'Email',
+                            labelText: 'Phone',
                             // labelStyle: kTextStyle.copyWith(color: kTitleColor),
-                            hintText: 'Enter your email address',
+                            hintText: 'Enter your phone number',
                             // hintStyle: kTextStyle.copyWith(color: kLitGreyColor),
                             contentPadding: const EdgeInsets.all(10.0),
                             enabledBorder: const OutlineInputBorder(
@@ -448,12 +452,11 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                               borderSide: BorderSide(color: kBorderColorTextField, width: 2),
                             ),
                           ),
-                          textFieldType: TextFieldType.EMAIL,
                         ),
                         const SizedBox(height: 20.0),
 
                         ///__________Title_________________________________________________________
-                        AppTextField(
+                        TextFormField(
                           validator: (value) {
                             if (value == null || value.isEmpty) {
                               return 'User title can\'n be empty';
@@ -478,28 +481,27 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                               borderSide: BorderSide(color: kBorderColorTextField, width: 2),
                             ),
                           ),
-                          textFieldType: TextFieldType.EMAIL,
                         ),
-                        const SizedBox(height: 20.0),
-
-                        TextButton(
-                          onPressed: () async {
-                            try {
-                              EasyLoading.show(status: 'Loading....');
-                              await FirebaseAuth.instance.sendPasswordResetEmail(
-                                email: widget.userRoleModel.email,
-                              );
-
-                              EasyLoading.showSuccess('An Email has been sent\nCheck your inbox');
-                              setState(() {
-                                isMailSent = true;
-                              });
-                            } catch (e) {
-                              EasyLoading.showError(e.toString());
-                            }
-                          },
-                          child: const Text('Forget password? '),
-                        ).visible(!isMailSent),
+                        // const SizedBox(height: 20.0),
+                        //
+                        // TextButton(
+                        //   onPressed: () async {
+                        //     try {
+                        //       EasyLoading.show(status: 'Loading....');
+                        //       await FirebaseAuth.instance.sendPasswordResetEmail(
+                        //         email: widget.userRoleModel.email ?? '',
+                        //       );
+                        //
+                        //       EasyLoading.showSuccess('An Email has been sent\nCheck your inbox');
+                        //       setState(() {
+                        //         isMailSent = true;
+                        //       });
+                        //     } catch (e) {
+                        //       EasyLoading.showError(e.toString());
+                        //     }
+                        //   },
+                        //   child: const Text('Forget password? '),
+                        // ).visible(!isMailSent),
                       ],
                     ),
                   ),
@@ -526,48 +528,31 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                     reportsPermission ||
                     salesListPermission ||
                     purchaseListPermission) {
-                  try {
-                    EasyLoading.show(status: 'Loading...', dismissOnTap: false);
-                    DatabaseReference dataRef = FirebaseDatabase.instance.ref("$constUserId/User Role/$userRoleKey");
-                    DatabaseReference adminDataRef = FirebaseDatabase.instance.ref("Admin Panel/User Role/$adminRoleKey");
-                    await dataRef.update({
-                      'userTitle': titleController.text,
-                      'salePermission': salePermission,
-                      'partiesPermission': partiesPermission,
-                      'purchasePermission': purchasePermission,
-                      'productPermission': productPermission,
-                      'profileEditPermission': profileEditPermission,
-                      'addExpensePermission': addExpensePermission,
-                      'lossProfitPermission': lossProfitPermission,
-                      'dueListPermission': dueListPermission,
-                      'stockPermission': stockPermission,
-                      'reportsPermission': reportsPermission,
-                      'salesListPermission': salesListPermission,
-                      'purchaseListPermission': purchaseListPermission,
-                    });
-                    await adminDataRef.update({
-                      'userTitle': titleController.text,
-                      'salePermission': salePermission,
-                      'partiesPermission': partiesPermission,
-                      'purchasePermission': purchasePermission,
-                      'productPermission': productPermission,
-                      'profileEditPermission': profileEditPermission,
-                      'addExpensePermission': addExpensePermission,
-                      'lossProfitPermission': lossProfitPermission,
-                      'dueListPermission': dueListPermission,
-                      'stockPermission': stockPermission,
-                      'reportsPermission': reportsPermission,
-                      'salesListPermission': salesListPermission,
-                      'purchaseListPermission': purchaseListPermission,
-                    });
-                    ref.refresh(userRoleProvider);
-
-                    EasyLoading.showSuccess('Successfully Updated', duration: const Duration(milliseconds: 500));
-                    // ignore: use_build_context_synchronously
-                    Navigator.pop(context);
-                  } catch (e) {
-                    EasyLoading.dismiss();
-                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
+                  if (validateAndSave()) {
+                    EasyLoading.show(status: 'loading..');
+                    user.Permission permission = user.Permission(
+                      salePermission: salePermission,
+                      partiesPermission: partiesPermission,
+                      purchasePermission: purchasePermission,
+                      productPermission: productPermission,
+                      profileEditPermission: profileEditPermission,
+                      addExpensePermission: addExpensePermission,
+                      lossProfitPermission: lossProfitPermission,
+                      dueListPermission: dueListPermission,
+                      stockPermission: stockPermission,
+                      reportsPermission: reportsPermission,
+                      salesListPermission: salesListPermission,
+                      purchaseListPermission: purchaseListPermission,
+                    );
+                    UserRoleRepo repo = UserRoleRepo();
+                    await repo.updateUser(
+                      userId: widget.userRoleModel.id.toString(),
+                      ref: ref,
+                      context: context,
+                      userName: titleController.text,
+                      phone: phoneController.text,
+                      permission: permission,
+                    );
                   }
                 } else {
                   EasyLoading.showError('You Have To Give Permission');
@@ -578,83 +563,4 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
       );
     });
   }
-}
-
-Future<void> deleteUserRole({required String email, required String password, required String adminKey, required String userKey, required BuildContext context}) async {
-  EasyLoading.show(status: 'Loading...');
-  try {
-    final userCredential = await FirebaseAuth.instance.signInWithCredential(EmailAuthProvider.credential(email: email, password: password));
-    final user = userCredential.user;
-    await user?.delete();
-    DatabaseReference dataRef = FirebaseDatabase.instance.ref("$constUserId/User Role/$userKey");
-    DatabaseReference adminDataRef = FirebaseDatabase.instance.ref("Admin Panel/User Role/$adminKey");
-
-    await dataRef.remove();
-    await adminDataRef.remove();
-
-    EasyLoading.dismiss();
-    // ignore: use_build_context_synchronously
-    await showSussesScreenAndLogOut(context: context);
-  } catch (e) {
-    EasyLoading.dismiss();
-    EasyLoading.showError(e.toString());
-  }
-}
-
-Future showSussesScreenAndLogOut({required BuildContext context}) {
-  return showDialog(
-    context: context,
-    barrierDismissible: false,
-    builder: (BuildContext context) {
-      return WillPopScope(
-        onWillPop: () async {
-          return false;
-        },
-        child: Padding(
-          padding: const EdgeInsets.all(30.0),
-          child: Center(
-            child: Container(
-              width: double.infinity,
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(30)),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    const SizedBox(height: 20),
-                    const Text(
-                      'Delete Successful',
-                      style: TextStyle(fontSize: 22),
-                    ),
-                    const SizedBox(height: 10),
-                    const Text(
-                      'You have to RE-LOGIN on your account.',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 18,
-                      ),
-                    ),
-                    const SizedBox(height: 20),
-                    ButtonGlobalWithoutIcon(
-                      buttontext: 'Ok',
-                      buttonDecoration: kButtonDecoration.copyWith(color: Colors.green),
-                      onPressed: (() {
-                        const PhoneAuth().launch(context, isNewTask: true);
-                        // const SplashScreen().launch(context, isNewTask: true);
-                      }),
-                      buttonTextColor: Colors.white,
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-        ),
-      );
-    },
-  );
 }

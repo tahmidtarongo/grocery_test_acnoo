@@ -9,7 +9,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Provider/product_provider.dart';
 import 'package:mobile_pos/Screens/Customers/Model/parties_model.dart';
 import 'package:mobile_pos/constant.dart';
-import 'package:mobile_pos/model/product_model.dart';
+import 'package:mobile_pos/Screens/Products/Model/product_model.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../Provider/add_to_cart.dart';
@@ -140,13 +140,13 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
                       itemCount: products.length,
                       itemBuilder: (_, i) {
                         if (widget.customerModel!.type?.contains('Retailer')??false) {
-                          productPrice = products[i].productSalePrice;
+                          productPrice = products[i].productSalePrice.toString();
                         } else if (widget.customerModel!.type?.contains('Dealer')??false) {
-                          productPrice = products[i].productDealerPrice;
+                          productPrice = products[i].productDealerPrice.toString();
                         } else if (widget.customerModel!.type?.contains('Wholesaler')??false) {
-                          productPrice = products[i].productWholeSalePrice;
+                          productPrice = products[i].productWholeSalePrice.toString();
                         } else if (widget.customerModel!.type?.contains('Supplier')??false) {
-                          productPrice = products[i].productPurchasePrice;
+                          productPrice = products[i].productPurchasePrice.toString();
                         }
                         return GestureDetector(
                           onTap: () {
@@ -188,11 +188,11 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                 children: [
                                                   Text(
-                                                    products[i].productName,
+                                                    products[i].productName.toString(),
                                                     style: const TextStyle(fontSize: 16),
                                                   ),
                                                   Text(
-                                                    products[i].brandName,
+                                                    products[i].brand?.brandName??'',
                                                     style: const TextStyle(
                                                       fontSize: 16,
                                                       color: Colors.grey,
@@ -209,7 +209,7 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
                                                     style: const TextStyle(fontSize: 16),
                                                   ),
                                                   Text(
-                                                    products[i].productStock,
+                                                    products[i].productStock.toString(),
                                                     style: const TextStyle(
                                                       fontSize: 16,
                                                       color: Colors.grey,
@@ -227,7 +227,7 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
                                                 child: AppTextField(
                                                   textFieldType: TextFieldType.PHONE,
                                                   onChanged: (value) {
-                                                    tempProductModel.productStock = value;
+                                                    // tempProductModel.productStock = value;
                                                   },
                                                   decoration: InputDecoration(
                                                     floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -245,11 +245,11 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
                                             children: [
                                               Expanded(
                                                 child: AppTextField(
-                                                  initialValue: products[i].productPurchasePrice,
+                                                  initialValue: products[i].productPurchasePrice.toString(),
                                                   keyboardType: TextInputType.number,
                                                   textFieldType: TextFieldType.NAME,
                                                   onChanged: (value) {
-                                                    tempProductModel.productPurchasePrice = value;
+                                                    // tempProductModel.productPurchasePrice = value;
                                                   },
                                                   decoration: InputDecoration(
                                                     floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -261,11 +261,11 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
                                               const SizedBox(width: 10),
                                               Expanded(
                                                 child: AppTextField(
-                                                  initialValue: products[i].productSalePrice,
+                                                  initialValue: products[i].productSalePrice.toString(),
                                                   keyboardType: TextInputType.number,
                                                   textFieldType: TextFieldType.NAME,
                                                   onChanged: (value) {
-                                                    tempProductModel.productSalePrice = value;
+                                                    // tempProductModel.productSalePrice = value;
                                                   },
                                                   decoration: InputDecoration(
                                                     floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -282,11 +282,11 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
                                             children: [
                                               Expanded(
                                                 child: AppTextField(
-                                                  initialValue: products[i].productWholeSalePrice,
+                                                  initialValue: products[i].productWholeSalePrice.toString(),
                                                   keyboardType: TextInputType.number,
                                                   textFieldType: TextFieldType.NAME,
                                                   onChanged: (value) {
-                                                    tempProductModel.productWholeSalePrice = value;
+                                                    // tempProductModel.productWholeSalePrice = value;
                                                   },
                                                   decoration: InputDecoration(
                                                     floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -298,11 +298,11 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
                                               const SizedBox(width: 10),
                                               Expanded(
                                                 child: AppTextField(
-                                                  initialValue: products[i].productDealerPrice,
+                                                  initialValue: products[i].productDealerPrice.toString(),
                                                   keyboardType: TextInputType.number,
                                                   textFieldType: TextFieldType.NAME,
                                                   onChanged: (value) {
-                                                    tempProductModel.productDealerPrice = value;
+                                                    // tempProductModel.productDealerPrice = value;
                                                   },
                                                   decoration: InputDecoration(
                                                     floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -368,10 +368,10 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
                             // }
                           },
                           child: ProductCard(
-                            productTitle: products[i].productName,
-                            productDescription: products[i].brandName,
-                            stock: products[i].productStock,
-                            productImage: products[i].productPicture,
+                            productTitle: products[i].productName.toString(),
+                            productDescription: products[i].brand?.brandName??'',
+                            stock: products[i].productStock.toString(),
+                            productImage: products[i].productPicture??'',
                           ).visible((products[i].productCode == productCode || productCode == '0000' || productCode == '-1') && productPrice != '0'),
                         );
                       });

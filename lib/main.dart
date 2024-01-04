@@ -14,7 +14,7 @@ import 'package:mobile_pos/Screens/Expense/expense_list.dart';
 import 'package:mobile_pos/Screens/Home/home.dart';
 import 'package:mobile_pos/Screens/Payment/payment_options.dart';
 import 'package:mobile_pos/Screens/Products/add_product.dart';
-import 'package:mobile_pos/Screens/Products/product_list.dart';
+import 'package:mobile_pos/Screens/Products/product_list_screen.dart';
 import 'package:mobile_pos/Screens/Profile/profile_screen.dart';
 import 'package:mobile_pos/Screens/Purchase/purchase_contact.dart';
 import 'package:mobile_pos/Screens/Report/reports.dart';

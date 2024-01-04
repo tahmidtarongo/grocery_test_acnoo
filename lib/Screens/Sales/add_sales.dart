@@ -937,8 +937,6 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                     personalInformationRef.set(personalInformationModel.toJson());
                                     // await personalInformationRef.update({'invoiceCounter': invoice + 1});
 
-                                    ///________Subscription_____________________________________________________
-                                    Subscription.decreaseSubscriptionLimits(itemType: 'saleNumber', context: context);
 
                                     ///_________DueUpdate______________________________________________________
                                     // getSpecificCustomers(phoneNumber: widget.customerModel.phoneNumber, due: transitionModel.dueAmount!.toInt());

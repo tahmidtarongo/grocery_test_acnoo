@@ -14,7 +14,7 @@ class BusinessInformationModel {
     this.createdAt,
     this.updatedAt,
     this.category,
-  });
+    this.enrolledPlan,});
 
   BusinessInformationModel.fromJson(dynamic json) {
     id = json['id'];
@@ -31,6 +31,7 @@ class BusinessInformationModel {
     createdAt = json['created_at'];
     updatedAt = json['updated_at'];
     category = json['category'] != null ? Category.fromJson(json['category']) : null;
+    enrolledPlan = json['enrolled_plan'] != null ? EnrolledPlan.fromJson(json['enrolled_plan']) : null;
   }
   num? id;
   num? planSubscribeId;
@@ -38,7 +39,7 @@ class BusinessInformationModel {
   String? companyName;
   String? address;
   String? phoneNumber;
-  dynamic pictureUrl;
+  String? pictureUrl;
   String? language;
   dynamic subscriptionDate;
   num? remainingShopBalance;
@@ -46,6 +47,7 @@ class BusinessInformationModel {
   String? createdAt;
   String? updatedAt;
   Category? category;
+  EnrolledPlan? enrolledPlan;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
@@ -65,43 +67,91 @@ class BusinessInformationModel {
     if (category != null) {
       map['category'] = category?.toJson();
     }
+    if (enrolledPlan != null) {
+      map['enrolled_plan'] = enrolledPlan?.toJson();
+    }
     return map;
   }
+
+}
+
+class EnrolledPlan {
+  EnrolledPlan({
+    this.id,
+    this.planId,
+    this.businessId,
+    this.price,
+    this.duration,
+    this.plan,});
+
+  EnrolledPlan.fromJson(dynamic json) {
+    id = json['id'];
+    planId = json['plan_id'];
+    businessId = json['business_id'];
+    price = json['price'];
+    duration = json['duration'];
+    plan = json['plan'] != null ? Plan.fromJson(json['plan']) : null;
+  }
+  num? id;
+  num? planId;
+  num? businessId;
+  num? price;
+  num? duration;
+  Plan? plan;
+
+  Map<String, dynamic> toJson() {
+    final map = <String, dynamic>{};
+    map['id'] = id;
+    map['plan_id'] = planId;
+    map['business_id'] = businessId;
+    map['price'] = price;
+    map['duration'] = duration;
+    if (plan != null) {
+      map['plan'] = plan?.toJson();
+    }
+    return map;
+  }
+
+}
+
+class Plan {
+  Plan({
+    this.id,
+    this.subscriptionName,});
+
+  Plan.fromJson(dynamic json) {
+    id = json['id'];
+    subscriptionName = json['subscriptionName'];
+  }
+  num? id;
+  String? subscriptionName;
+
+  Map<String, dynamic> toJson() {
+    final map = <String, dynamic>{};
+    map['id'] = id;
+    map['subscriptionName'] = subscriptionName;
+    return map;
+  }
+
 }
 
 class Category {
   Category({
     this.id,
-    this.name,
-    this.description,
-    this.status,
-    this.createdAt,
-    this.updatedAt,
-  });
+    this.name,});
 
   Category.fromJson(dynamic json) {
     id = json['id'];
     name = json['name'];
-    description = json['description'];
-    status = json['status'];
-    createdAt = json['created_at'];
-    updatedAt = json['updated_at'];
   }
   num? id;
   String? name;
-  dynamic description;
-  String? status;
-  String? createdAt;
-  String? updatedAt;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
     map['id'] = id;
     map['name'] = name;
-    map['description'] = description;
-    map['status'] = status;
-    map['created_at'] = createdAt;
-    map['updated_at'] = updatedAt;
     return map;
   }
+
 }

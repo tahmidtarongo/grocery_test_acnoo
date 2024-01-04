@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile_pos/Const/api_config.dart';
 import 'package:mobile_pos/Provider/product_provider.dart';
 import 'package:mobile_pos/Screens/Products/update_product.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -51,13 +52,21 @@ class _ProductListState extends State<ProductList> {
                             height: 50,
                             width: 50,
                             decoration: BoxDecoration(
-                                borderRadius: const BorderRadius.all(Radius.circular(90)),
-                                image: DecorationImage(
-                                  image: NetworkImage(
-                                    products[i].productPicture,
-                                  ),
-                                  fit: BoxFit.cover,
-                                )),
+                              borderRadius: const BorderRadius.all(Radius.circular(90)),
+                              image: products[i].productPicture == null
+                                  ? DecorationImage(
+                                      image: AssetImage(
+                                        noProductImageUrl,
+                                      ),
+                                      fit: BoxFit.cover,
+                                    )
+                                  : DecorationImage(
+                                      image: NetworkImage(
+                                        '${APIConfig.domain}${products[i].productPicture!}',
+                                      ),
+                                      fit: BoxFit.cover,
+                                    ),
+                            ),
                             // child: CachedNetworkImage(
                             //   imageUrl: products[i].productPicture,
                             //   placeholder: (context, url) => const SizedBox(height: 50, width: 50, ),
@@ -65,7 +74,7 @@ class _ProductListState extends State<ProductList> {
                             //   fit: BoxFit.cover,
                             // ),
                           ),
-                          title: Text(products[i].productName),
+                          title: Text(products[i].productName ?? ''),
                           subtitle: Text("${lang.S.of(context).stock} : ${products[i].productStock}"),
                           trailing: Text(
                             "$currency ${products[i].productSalePrice}",

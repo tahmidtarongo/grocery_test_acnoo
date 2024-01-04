@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:mobile_pos/model/product_model.dart';
-import 'package:mobile_pos/repository/product_repo.dart';
+import 'package:mobile_pos/Screens/Products/Model/product_model.dart';
+
+import '../Screens/Products/Repo/product_repo.dart';
 
 ProductRepo productRepo = ProductRepo();
-final productProvider = FutureProvider.autoDispose<List<ProductModel>>((ref) => productRepo.getAllProduct());
+final productProvider = FutureProvider<List<ProductModel>>((ref) => productRepo.fetchAllProducts());

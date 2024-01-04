@@ -7,7 +7,7 @@ import 'package:nb_utils/nb_utils.dart';
 import '../../Provider/product_provider.dart';
 import '../../constant.dart';
 import '../../currency.dart';
-import '../../model/product_model.dart';
+import '../Products/Model/product_model.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class StockList extends StatefulWidget {
@@ -136,18 +136,18 @@ class _StockListState extends State<StockList> {
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          product[index].productName,
+                                          product[index].productName.toString(),
                                           textAlign: TextAlign.start,
                                           style: GoogleFonts.poppins(
-                                            color: product[index].productStock.toInt() < 20 ? Colors.red : Colors.black,
+                                            color: (product[index].productStock ?? 0) < 20 ? Colors.red : Colors.black,
                                             fontSize: 16.0,
                                           ),
                                         ),
                                         Text(
-                                          product[index].brandName,
+                                          product[index].brand?.brandName ?? '',
                                           textAlign: TextAlign.start,
                                           style: GoogleFonts.poppins(
-                                            color: product[index].productStock.toInt() < 20 ? Colors.red : kGreyTextColor,
+                                            color: (product[index].productStock ?? 0) < 20 ? Colors.red : kGreyTextColor,
                                             fontSize: 12.0,
                                           ),
                                         ),
@@ -158,9 +158,9 @@ class _StockListState extends State<StockList> {
                                     flex: 2,
                                     child: Center(
                                       child: Text(
-                                        product[index].productStock,
+                                        product[index].productStock.toString(),
                                         style: GoogleFonts.poppins(
-                                          color: product[index].productStock.toInt() < 20 ? Colors.red : Colors.black,
+                                          color: (product[index].productStock ?? 0) < 20 ? Colors.red : Colors.black,
                                         ),
                                       ),
                                     ),
@@ -171,7 +171,7 @@ class _StockListState extends State<StockList> {
                                         child: Text(
                                           '$currency${product[index].productPurchasePrice}',
                                           style: GoogleFonts.poppins(
-                                            color: product[index].productStock.toInt() < 20 ? Colors.red : Colors.black,
+                                            color: (product[index].productStock ?? 0) < 20 ? Colors.red : Colors.black,
                                           ),
                                         ),
                                       )),
@@ -180,7 +180,7 @@ class _StockListState extends State<StockList> {
                                       child: Text(
                                         '$currency${product[index].productSalePrice}',
                                         style: GoogleFonts.poppins(
-                                          color: product[index].productStock.toInt() < 20 ? Colors.red : Colors.black,
+                                          color: (product[index].productStock ?? 0) < 20 ? Colors.red : Colors.black,
                                         ),
                                       ),
                                     ),

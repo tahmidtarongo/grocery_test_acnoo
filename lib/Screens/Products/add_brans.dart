@@ -6,8 +6,9 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
-import 'package:mobile_pos/Provider/category,brans,units_provide.dart';
+import 'package:mobile_pos/Screens/Products/Providers/category,brans,units_provide.dart';
 import 'package:mobile_pos/Screens/Products/Model/brands_model.dart';
+import 'package:mobile_pos/Screens/Products/Repo/brand_repo.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
@@ -22,12 +23,13 @@ class AddBrands extends StatefulWidget {
 
 class _AddBrandsState extends State<AddBrands> {
   bool showProgress = false;
-  late String brandName;
+  TextEditingController brandController = TextEditingController();
+
+  final GlobalKey<FormState> _key = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, ref, __) {
-      final allBrands = ref.watch(brandsProvider);
       return Scaffold(
         appBar: AppBar(
           leading: IconButton(
@@ -61,45 +63,33 @@ class _AddBrandsState extends State<AddBrands> {
                     strokeWidth: 5.0,
                   ),
                 ),
-                AppTextField(
-                  textFieldType: TextFieldType.NAME,
-                  onChanged: (value) {
-                    setState(() {
-                      brandName = value;
-                    });
-                  },
-                  decoration: InputDecoration(
-                    border: const OutlineInputBorder(),
-                    hintText: 'Apple',
-                    floatingLabelBehavior: FloatingLabelBehavior.always,
-                    labelText: lang.S.of(context).brandName,
+                Form(
+                  key: _key,
+                  child: TextFormField(
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter a valid brand name';
+                      }
+                      return null;
+                    },
+                    controller: brandController,
+                    decoration: InputDecoration(
+                      border: const OutlineInputBorder(),
+                      hintText: 'Enter a brand name',
+                      floatingLabelBehavior: FloatingLabelBehavior.always,
+                      labelText: lang.S.of(context).brandName,
+                    ),
                   ),
                 ),
                 ButtonGlobalWithoutIcon(
                   buttontext: lang.S.of(context).save,
                   buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
                   onPressed: () async {
-                    bool isAlreadyAdded = false;
-                    allBrands.value?.forEach((element) {
-                      if (element.brandName.toLowerCase().removeAllWhiteSpace() == brandName.toLowerCase().removeAllWhiteSpace()) {
-                        isAlreadyAdded = true;
-                      }
-                    });
-                    setState(() {
-                      showProgress = true;
-                    });
-                    final DatabaseReference categoryInformationRef = FirebaseDatabase.instance.ref().child(constUserId).child('Brands');
-                    categoryInformationRef.keepSynced(true);
-                    BrandsModel brandModel = BrandsModel(brandName);
-                    isAlreadyAdded ? EasyLoading.showError('Already Added') : categoryInformationRef.push().set(brandModel.toJson());
-                    setState(() {
-                      showProgress = false;
-                      isAlreadyAdded ? null : ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Data Saved Successfully")));
-                    });
-                    ref.refresh(brandsProvider);
+                    if (_key.currentState!.validate()) {
 
-                    // ignore: use_build_context_synchronously
-                    isAlreadyAdded ? null : Navigator.pop(context);
+                      BrandsRepo brandRepo = BrandsRepo();
+                      await brandRepo.addBrand(ref: ref, context: context, name: brandController.text);
+                    }
                   },
                   buttonTextColor: Colors.white,
                 ),

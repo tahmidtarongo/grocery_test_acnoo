@@ -298,10 +298,10 @@ class GeneratePdf {
                         for (int i = 0; i < transactions.productList!.length; i++)
                           <String>[
                             ('${i + 1}'),
-                            (transactions.productList!.elementAt(i).productName),
-                            (transactions.productList!.elementAt(i).productStock),
-                            (transactions.productList!.elementAt(i).productSalePrice),
-                            ((transactions.productList!.elementAt(i).productSalePrice.toInt() * transactions.productList!.elementAt(i).productStock.toInt()).toString())
+                            (transactions.productList!.elementAt(i).productName).toString(),
+                            (transactions.productList!.elementAt(i).productStock).toString(),
+                            (transactions.productList!.elementAt(i).productSalePrice).toString(),
+                            (((transactions.productList!.elementAt(i).productSalePrice??0) * (transactions.productList!.elementAt(i).productStock??0)).toString())
                           ],
                       ]),
                   pw.Paragraph(text: ""),

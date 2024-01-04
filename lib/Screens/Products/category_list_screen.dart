@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mobile_pos/GlobalComponents/Model/category_model.dart';
-import 'package:mobile_pos/GlobalComponents/add_category.dart';
+import 'package:mobile_pos/Screens/Products/Model/category_model.dart';
+
 import 'package:mobile_pos/constant.dart';
 import 'package:nb_utils/nb_utils.dart';
 
-import '../Provider/category,brans,units_provide.dart';
-import 'button_global.dart';
+import 'Providers/category,brans,units_provide.dart';
+import '../../GlobalComponents/button_global.dart';
+import 'add_category_screen.dart';
 
 // ignore: must_be_immutable
 class CategoryList extends StatefulWidget {
@@ -93,19 +94,19 @@ class _CategoryListState extends State<CategoryList> {
                 child: categoryData.when(data: (data) {
                   return SingleChildScrollView(
                     child: ListView.builder(
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: const NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
                         itemCount: data.length,
                         itemBuilder: (context, i) {
                           final List<String> variations = [];
-                          data[i].size ? variations.add('Size') : null;
-                          data[i].color ? variations.add('Color') : null;
-                          data[i].capacity ? variations.add('Capacity') : null;
-                          data[i].type ? variations.add('Type') : null;
-                          data[i].weight ? variations.add('Weight') : null;
+                          (data[i].variationSize ?? false) ? variations.add('Size') : null;
+                          (data[i].variationColor ?? false) ? variations.add('Color') : null;
+                          data[i].variationCapacity ?? false ? variations.add('Capacity') : null;
+                          data[i].variationType ?? false ? variations.add('Type') : null;
+                          data[i].variationWeight ?? false ? variations.add('Weight') : null;
 
-                          GetCategoryAndVariationModel get = GetCategoryAndVariationModel(categoryName: data[i].categoryName, variations: variations);
-                          return data[i].categoryName.contains(search)
+                          GetCategoryAndVariationModel get = GetCategoryAndVariationModel(categoryName: data[i], variations: variations);
+                          return (data[i].categoryName ?? '').toLowerCase().contains(search.toLowerCase())
                               ? Padding(
                                   padding: const EdgeInsets.only(left: 10.0, right: 10.0),
                                   child: Row(
@@ -118,30 +119,12 @@ class _CategoryListState extends State<CategoryList> {
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              data[i].categoryName,
+                                              data[i].categoryName.toString(),
                                               style: GoogleFonts.poppins(
                                                 fontSize: 18.0,
                                                 color: Colors.black,
                                               ),
                                             ),
-                                            // SizedBox(
-                                            //   height: 20,
-                                            //   width: context.width(),
-                                            //   child: ListView.builder(
-                                            //       shrinkWrap: true,
-                                            //       physics: const NeverScrollableScrollPhysics(),
-                                            //       scrollDirection: Axis.horizontal,
-                                            //       itemCount: data[i]..length,
-                                            //       itemBuilder: (context, index) {
-                                            //         return Text(
-                                            //           '${variations[index]}, ',
-                                            //           style: GoogleFonts.poppins(
-                                            //             fontSize: 14.0,
-                                            //             color: Colors.grey,
-                                            //           ),
-                                            //         );
-                                            //       }),
-                                            // ),
                                           ],
                                         ),
                                       ),
@@ -165,7 +148,7 @@ class _CategoryListState extends State<CategoryList> {
                 }, error: (_, __) {
                   return Container();
                 }, loading: () {
-                  return const CircularProgressIndicator();
+                  return const Center(child: SizedBox(height: 40, width: 40, child: CircularProgressIndicator()));
                 }),
               ),
             ],

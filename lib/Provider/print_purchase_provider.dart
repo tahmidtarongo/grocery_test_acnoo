@@ -2,7 +2,7 @@ import 'package:bluetooth_thermal_printer/bluetooth_thermal_printer.dart';
 import 'package:esc_pos_utils/esc_pos_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:mobile_pos/model/product_model.dart';
+import 'package:mobile_pos/Screens/Products/Model/product_model.dart';
 import 'package:nb_utils/nb_utils.dart';
 import '../constant.dart';
 import '../model/print_transaction_model.dart';
@@ -90,16 +90,13 @@ class PrinterPurchase extends ChangeNotifier {
               align: PosAlign.left,
             )),
         PosColumn(
-            text: productList?[index].productPurchasePrice ?? 'Not Defined',
+            text: productList?[index].productPurchasePrice.toString() ?? 'Not Defined',
             width: 2,
             styles: const PosStyles(
               align: PosAlign.center,
             )),
         PosColumn(text: productList?[index].productStock.toString() ?? 'Not Defined', width: 2, styles: const PosStyles(align: PosAlign.center)),
-        PosColumn(
-            text: "${double.parse(productList?[index].productPurchasePrice ?? '') * productList![index].productStock.toInt()}",
-            width: 3,
-            styles: const PosStyles(align: PosAlign.right)),
+        PosColumn(text: "${(productList?[index].productPurchasePrice ?? 0) * (productList![index].productStock ?? 0)}", width: 3, styles: const PosStyles(align: PosAlign.right)),
       ]);
     });
 

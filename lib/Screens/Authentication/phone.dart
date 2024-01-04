@@ -28,7 +28,6 @@ class _PhoneAuthState extends State<PhoneAuth> {
 
   @override
   void initState() {
-    // TODO: implement initState
     countryController.text = "+880";
     super.initState();
   }

@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Const/api_config.dart';
@@ -9,10 +8,9 @@ import 'package:mobile_pos/Screens/Home/components/grid_items.dart';
 import 'package:mobile_pos/Screens/Profile%20Screen/profile_details.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:mobile_pos/model/subscription_model.dart';
-import 'package:mobile_pos/model/subscription_plan_model.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
-import '../../Provider/homepage_image_provider.dart';
+import '../subscription/Model/subscription_plan_model.dart';
+import 'Provider/banner_provider.dart';
 import '../../Provider/profile_provider.dart';
 import '../../model/paypal_info_model.dart';
 import '../../subscription.dart';
@@ -153,7 +151,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             },
                             child: Text(
                               lang.S.of(context).cancel,
-                              style: TextStyle(color: Colors.red),
+                              style: const TextStyle(color: Colors.red),
                             ),
                           ),
                         ],
@@ -178,27 +176,6 @@ class _HomeScreenState extends State<HomeScreen> {
     paypalClientSecret = paypalInfoModel.paypalClientSecret;
   }
 
-  Future<void> getAllSubscriptionPlan() async {
-    final ref = FirebaseDatabase.instance.ref().child('Admin Panel').child('Subscription Plan');
-    ref.keepSynced(true);
-
-    ref.orderByKey().get().then((value) {
-      for (var element in value.children) {
-        Subscription.subscriptionPlan.add(SubscriptionPlanModel.fromJson(jsonDecode(jsonEncode(element.value))));
-      }
-    });
-    for (var element in Subscription.subscriptionPlan) {
-      if (element.subscriptionName == 'Free') {
-        Subscription.freeSubscriptionModel.products = element.products;
-        Subscription.freeSubscriptionModel.duration = element.duration;
-        Subscription.freeSubscriptionModel.dueNumber = element.dueNumber;
-        Subscription.freeSubscriptionModel.partiesNumber = element.partiesNumber;
-        Subscription.freeSubscriptionModel.purchaseNumber = element.purchaseNumber;
-        Subscription.freeSubscriptionModel.saleNumber = element.purchaseNumber;
-        Subscription.freeSubscriptionModel.subscriptionDate = DateTime.now().toString();
-      }
-    }
-  }
 
   @override
   void initState() {
@@ -217,13 +194,13 @@ class _HomeScreenState extends State<HomeScreen> {
     return SafeArea(
       child: Consumer(builder: (_, ref, __) {
         final businessInfo = ref.watch(businessInfoProvider);
-        final homePageImageProvider = ref.watch(homepageImageProvider);
+        final banner = ref.watch(bannerProvider);
 
         return Scaffold(
           resizeToAvoidBottomInset: true,
           body: SingleChildScrollView(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Padding(
                   padding: const EdgeInsets.all(10.0),
@@ -245,7 +222,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       borderRadius: BorderRadius.circular(50),
                                     )
                                   : BoxDecoration(
-                                      image: DecorationImage(image: NetworkImage('${APIConfig.domain}' + details.pictureUrl), fit: BoxFit.cover),
+                                      image: DecorationImage(image: NetworkImage('${APIConfig.domain}${details.pictureUrl}'), fit: BoxFit.cover),
                                       borderRadius: BorderRadius.circular(50),
                                     ),
                             ),
@@ -266,7 +243,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ),
                               Text(
-                                details.category?.name ?? '',
+                                "${details.enrolledPlan?.plan?.subscriptionName ?? ''} Plan",
                                 style: GoogleFonts.poppins(
                                   color: Colors.black,
                                 ),
@@ -348,7 +325,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 const SizedBox(height: 10),
 
-                homePageImageProvider.when(data: (images) {
+                banner.when(data: (images) {
                   if (images.isNotEmpty) {
                     return SizedBox(
                       width: double.infinity,
@@ -382,32 +359,43 @@ class _HomeScreenState extends State<HomeScreen> {
                                   itemCount: images.length,
                                   controller: pageController,
                                   itemBuilder: (_, index) {
-                                    if (images[index].imageUrl.contains('https://firebasestorage.googleapis.com')) {
-                                      return GestureDetector(
-                                        onTap: () {
-                                          const PackageScreen().launch(context);
-                                        },
-                                        child: Image(
-                                          image: NetworkImage(
-                                            images[index].imageUrl,
-                                          ),
-                                          fit: BoxFit.cover,
+                                    return GestureDetector(
+                                      onTap: () {
+                                        const PackageScreen().launch(context);
+                                      },
+                                      child: Image(
+                                        image: NetworkImage(
+                                          "${APIConfig.domain}${images[index].imageUrl}",
                                         ),
-                                      );
-                                    } else {
-                                      YoutubePlayerController videoController = YoutubePlayerController(
-                                        flags: const YoutubePlayerFlags(
-                                          autoPlay: false,
-                                          mute: false,
-                                        ),
-                                        initialVideoId: images[index].imageUrl,
-                                      );
-                                      return YoutubePlayer(
-                                        controller: videoController,
-                                        showVideoProgressIndicator: true,
-                                        onReady: () {},
-                                      );
-                                    }
+                                        fit: BoxFit.fill,
+                                      ),
+                                    );
+                                    // if (images[index].imageUrl.contains('https://firebasestorage.googleapis.com')) {
+                                    //   return GestureDetector(
+                                    //     onTap: () {
+                                    //       const PackageScreen().launch(context);
+                                    //     },
+                                    //     child: Image(
+                                    //       image: NetworkImage(
+                                    //         "${APIConfig.domain}${images[index].imageUrl}",
+                                    //       ),
+                                    //       fit: BoxFit.cover,
+                                    //     ),
+                                    //   );
+                                    // } else {
+                                    //   YoutubePlayerController videoController = YoutubePlayerController(
+                                    //     flags: const YoutubePlayerFlags(
+                                    //       autoPlay: false,
+                                    //       mute: false,
+                                    //     ),
+                                    //     initialVideoId: images[index].imageUrl,
+                                    //   );
+                                    //   return YoutubePlayer(
+                                    //     controller: videoController,
+                                    //     showVideoProgressIndicator: true,
+                                    //     onReady: () {},
+                                    //   );
+                                    // }
                                   },
                                 ),
                               ),
@@ -424,19 +412,28 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     );
                   } else {
-                    return Container(
-                      padding: const EdgeInsets.all(10),
-                      height: 180,
-                      width: 320,
-                      decoration: const BoxDecoration(image: DecorationImage(image: AssetImage('images/banner1.png'))),
+                    return Center(
+                      child: Container(
+                        padding: const EdgeInsets.all(10),
+                        height: 180,
+                        width: 320,
+                        decoration: const BoxDecoration(image: DecorationImage(image: AssetImage('images/banner1.png'))),
+                      ),
                     );
                   }
                 }, error: (e, stack) {
-                  return Container(
-                    padding: const EdgeInsets.all(10),
-                    height: 180,
-                    width: 320,
-                    decoration: const BoxDecoration(image: DecorationImage(image: AssetImage('images/banner1.png'))),
+                  return Padding(
+                    padding: const EdgeInsets.only(bottom: 20),
+                    child: Container(
+                      padding: const EdgeInsets.all(10),
+                      height: 180,
+                      width: 320,
+                      color: Colors.grey.shade200,
+                      child: const Center(
+                        child: Text('No Data Found'),
+                      ),
+                      // decoration: const BoxDecoration(image: DecorationImage(image: AssetImage('images/banner1.png'))),
+                    ),
                   );
                 }, loading: () {
                   return const CircularProgressIndicator();
@@ -528,32 +525,32 @@ class HomeGridCards extends StatefulWidget {
 }
 
 class _HomeGridCardsState extends State<HomeGridCards> {
-  bool checkPermission({required String item}) {
-    if (item == 'Sales' && finalUserRoleModel.salePermission) {
-      return true;
-    } else if (item == 'Parties' && finalUserRoleModel.partiesPermission) {
-      return true;
-    } else if (item == 'Purchase' && finalUserRoleModel.purchasePermission) {
-      return true;
-    } else if (item == 'Products' && finalUserRoleModel.productPermission) {
-      return true;
-    } else if (item == 'Due List' && finalUserRoleModel.dueListPermission) {
-      return true;
-    } else if (item == 'Stock' && finalUserRoleModel.stockPermission) {
-      return true;
-    } else if (item == 'Reports' && finalUserRoleModel.reportsPermission) {
-      return true;
-    } else if (item == 'Sales List' && finalUserRoleModel.salesListPermission) {
-      return true;
-    } else if (item == 'Purchase List' && finalUserRoleModel.purchaseListPermission) {
-      return true;
-    } else if (item == 'Loss/Profit' && finalUserRoleModel.lossProfitPermission) {
-      return true;
-    } else if (item == 'Expense' && finalUserRoleModel.addExpensePermission) {
-      return true;
-    }
-    return false;
-  }
+  // bool checkPermission({required String item}) {
+  //   if (item == 'Sales' && finalUserRoleModel.salePermission) {
+  //     return true;
+  //   } else if (item == 'Parties' && finalUserRoleModel.partiesPermission) {
+  //     return true;
+  //   } else if (item == 'Purchase' && finalUserRoleModel.purchasePermission) {
+  //     return true;
+  //   } else if (item == 'Products' && finalUserRoleModel.productPermission) {
+  //     return true;
+  //   } else if (item == 'Due List' && finalUserRoleModel.dueListPermission) {
+  //     return true;
+  //   } else if (item == 'Stock' && finalUserRoleModel.stockPermission) {
+  //     return true;
+  //   } else if (item == 'Reports' && finalUserRoleModel.reportsPermission) {
+  //     return true;
+  //   } else if (item == 'Sales List' && finalUserRoleModel.salesListPermission) {
+  //     return true;
+  //   } else if (item == 'Purchase List' && finalUserRoleModel.purchaseListPermission) {
+  //     return true;
+  //   } else if (item == 'Loss/Profit' && finalUserRoleModel.lossProfitPermission) {
+  //     return true;
+  //   } else if (item == 'Expense' && finalUserRoleModel.addExpensePermission) {
+  //     return true;
+  //   }
+  //   return false;
+  // }
 
   @override
   Widget build(BuildContext context) {

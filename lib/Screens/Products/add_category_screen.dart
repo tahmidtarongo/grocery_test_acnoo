@@ -5,11 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mobile_pos/GlobalComponents/Model/category_model.dart';
+import 'package:mobile_pos/Screens/Products/Model/category_model.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
-import 'package:mobile_pos/Provider/category,brans,units_provide.dart';
+import 'package:mobile_pos/Screens/Products/Providers/category,brans,units_provide.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:nb_utils/nb_utils.dart';
+
+import 'Repo/category_repo.dart';
 
 class AddCategory extends StatefulWidget {
   const AddCategory({Key? key}) : super(key: key);
@@ -27,11 +29,11 @@ class _AddCategoryState extends State<AddCategory> {
   bool weightCheckbox = false;
   bool capacityCheckbox = false;
   bool typeCheckbox = false;
+  TextEditingController categoryNameController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, ref, __) {
-      final allCategory = ref.watch(categoryProvider);
       return Scaffold(
         appBar: AppBar(
           leading: IconButton(
@@ -66,16 +68,11 @@ class _AddCategoryState extends State<AddCategory> {
                     strokeWidth: 5.0,
                   ),
                 ),
-                AppTextField(
-                  textFieldType: TextFieldType.NAME,
-                  onChanged: (value) {
-                    setState(() {
-                      categoryName = value;
-                    });
-                  },
+                TextFormField(
+                  controller: categoryNameController,
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),
-                    hintText: 'Fashion',
+                    hintText: 'Enter category name',
                     floatingLabelBehavior: FloatingLabelBehavior.always,
                     labelText: 'Category name',
                   ),
@@ -157,34 +154,50 @@ class _AddCategoryState extends State<AddCategory> {
                   buttontext: 'Save',
                   buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
                   onPressed: () async {
-                    bool isAlreadyAdded = false;
-                    allCategory.value?.forEach((element) {
-                      if (element.categoryName.toLowerCase().removeAllWhiteSpace().contains(
-                            categoryName.toLowerCase().removeAllWhiteSpace(),
-                          )) {
-                        isAlreadyAdded = true;
-                      }
-                    });
                     setState(() {
                       showProgress = true;
                     });
-                    // ignore: no_leading_underscores_for_local_identifiers
-                    final DatabaseReference _categoryInformationRef = FirebaseDatabase.instance.ref().child(constUserId).child('Categories');
-                    _categoryInformationRef.keepSynced(true);
-
-                    CategoryModel categoryModel = CategoryModel(
-                      categoryName: categoryName,
-                      size: sizeCheckbox,
-                      color: colorCheckbox,
-                      capacity: capacityCheckbox,
-                      type: typeCheckbox,
-                      weight: weightCheckbox,
+                    final categoryRepo = CategoryRepo();
+                    await categoryRepo.addCategory(
+                      ref: ref,
+                      context: context,
+                      name: categoryNameController.text,
+                      variationSize: sizeCheckbox,
+                      variationColor: colorCheckbox,
+                      variationCapacity: capacityCheckbox,
+                      variationType: typeCheckbox,
+                      variationWeight: weightCheckbox,
                     );
-                    isAlreadyAdded ? EasyLoading.showError('Already Added') : _categoryInformationRef.push().set(categoryModel.toJson());
                     setState(() {
                       showProgress = false;
-                      isAlreadyAdded ? null : ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Data Saved Successfully")));
                     });
+                    bool isAlreadyAdded = false;
+                    // allCategory.value?.forEach((element) {
+                    //   if (element.categoryName.toLowerCase().removeAllWhiteSpace().contains(
+                    //         categoryName.toLowerCase().removeAllWhiteSpace(),
+                    //       )) {
+                    //     isAlreadyAdded = true;
+                    //   }
+                    // });
+
+                    // ignore: no_leading_underscores_for_local_identifiers
+                    // final DatabaseReference _categoryInformationRef = FirebaseDatabase.instance.ref().child(constUserId).child('Categories');
+                    // _categoryInformationRef.keepSynced(true);
+                    //
+                    // CategoryModel categoryModel = CategoryModel(
+                    //   categoryName: categoryName,
+                    //
+                    //   size: sizeCheckbox,
+                    //   color: colorCheckbox,
+                    //   capacity: capacityCheckbox,
+                    //   type: typeCheckbox,
+                    //   weight: weightCheckbox,
+                    // );
+                    // isAlreadyAdded ? EasyLoading.showError('Already Added') : _categoryInformationRef.push().set(categoryModel.toJson());
+                    // setState(() {
+                    //   showProgress = false;
+                    //   isAlreadyAdded ? null : ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Data Saved Successfully")));
+                    // });
                     ref.refresh(categoryProvider);
 
                     // ignore: use_build_context_synchronously

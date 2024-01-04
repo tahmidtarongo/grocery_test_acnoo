@@ -259,7 +259,7 @@ class _EditProfileState extends State<EditProfile> {
                                         fit: BoxFit.cover,
                                       )
                                     : DecorationImage(
-                                        image: NetworkImage(APIConfig.domain + widget.profile.pictureUrl),
+                                        image: NetworkImage(APIConfig.domain + widget.profile.pictureUrl.toString()),
                                         fit: BoxFit.cover,
                                       )
                                 : DecorationImage(

@@ -3,7 +3,6 @@ import 'package:flutter_cart/flutter_cart.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mobile_pos/GlobalComponents/add_category.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/Provider/product_provider.dart';
 import 'package:mobile_pos/Screens/Purchase/purchase_details.dart';
@@ -12,6 +11,7 @@ import 'package:nb_utils/nb_utils.dart';
 
 import '../../constant.dart';
 import '../../currency.dart';
+import '../Products/add_category_screen.dart';
 
 // ignore: must_be_immutable
 class PurchaseScreen extends StatefulWidget {
@@ -190,7 +190,7 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
                       itemBuilder: (context, index) {
                         return GestureDetector(
                           onTap: () {
-                            cart.addToCart(productId: items, unitPrice: products[index].productSalePrice.toInt(), productName: products[index].productName);
+                            cart.addToCart(productId: items, unitPrice: products[index].productSalePrice, productName: products[index].productName);
                             EasyLoading.showSuccess('Added To Cart', duration: const Duration(milliseconds: 1000));
                             setState(() {
                               total = cart.getTotalAmount().toString();
@@ -198,10 +198,10 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
                             });
                           },
                           child: ProductCard(
-                            productTitle: products[index].productName,
-                            productDescription: products[index].brandName,
-                            productPrice: products[index].productSalePrice,
-                            productImage: products[index].productPicture,
+                            productTitle: products[index].productName.toString(),
+                            productDescription: products[index].brand?.brandName??'',
+                            productPrice: products[index].productSalePrice.toString(),
+                            productImage: products[index].productPicture??'',
                           ),
                         );
                       });

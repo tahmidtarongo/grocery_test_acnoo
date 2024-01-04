@@ -81,28 +81,28 @@ class _ProfileDetailsState extends State<ProfileDetails> {
             backgroundColor: Colors.white,
             elevation: 0.0,
           ),
-          bottomNavigationBar: ButtonGlobal(
-            iconWidget: Icons.arrow_forward,
-            buttontext: lang.S.of(context).changePassword,
-            iconColor: Colors.white,
-            buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
-            onPressed: () async {
-              try {
-                EasyLoading.show(status: 'Sending Email', dismissOnTap: false);
-                await FirebaseAuth.instance.sendPasswordResetEmail(
-                  email: FirebaseAuth.instance.currentUser!.email.toString(),
-                );
-                EasyLoading.showSuccess('Email Sent! Check your Inbox');
-                // ignore: use_build_context_synchronously
-                const LoginForm(
-                  isEmailLogin: true,
-                ).launch(context);
-                FirebaseAuth.instance.signOut();
-              } catch (e) {
-                EasyLoading.showError(e.toString());
-              }
-            },
-          ),
+          // bottomNavigationBar: ButtonGlobal(
+          //   iconWidget: Icons.arrow_forward,
+          //   buttontext: lang.S.of(context).changePassword,
+          //   iconColor: Colors.white,
+          //   buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
+          //   onPressed: () async {
+          //     try {
+          //       EasyLoading.show(status: 'Sending Email', dismissOnTap: false);
+          //       await FirebaseAuth.instance.sendPasswordResetEmail(
+          //         email: FirebaseAuth.instance.currentUser!.email.toString(),
+          //       );
+          //       EasyLoading.showSuccess('Email Sent! Check your Inbox');
+          //       // ignore: use_build_context_synchronously
+          //       const LoginForm(
+          //         isEmailLogin: true,
+          //       ).launch(context);
+          //       FirebaseAuth.instance.signOut();
+          //     } catch (e) {
+          //       EasyLoading.showError(e.toString());
+          //     }
+          //   },
+          // ),
           body: Padding(
             padding: const EdgeInsets.all(10.0),
             child: SingleChildScrollView(
@@ -118,7 +118,7 @@ class _ProfileDetailsState extends State<ProfileDetails> {
                               borderRadius: BorderRadius.circular(50),
                             )
                           : BoxDecoration(
-                              image: DecorationImage(image: NetworkImage(APIConfig.domain + details.pictureUrl), fit: BoxFit.cover),
+                              image: DecorationImage(image: NetworkImage(APIConfig.domain + details.pictureUrl.toString()), fit: BoxFit.cover),
                               borderRadius: BorderRadius.circular(50),
                             ),
                     ),
