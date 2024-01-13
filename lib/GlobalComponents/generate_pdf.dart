@@ -9,12 +9,13 @@ import 'package:pdf/pdf.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:pdf/widgets.dart' as pw;
 import '../Screens/PDF/pdf.dart';
+import '../Screens/Purchase/Model/purchase_transaction_model.dart';
 import '../model/business_info_model.dart';
 import '../model/transition_model.dart';
 import 'package:path_provider/path_provider.dart';
 
 class GeneratePdf {
-  Future<void> generatePurchaseDocument(PurchaseTransitionModel transactions, BusinessInformationModel personalInformation, BuildContext context) async {
+  Future<void> generatePurchaseDocument(PurchaseTransaction transactions, BusinessInformationModel personalInformation, BuildContext context) async {
     final pw.Document doc = pw.Document();
     // final netImage = await networkImage(
     //   personalInformation.pictureUrl.toString(),
@@ -96,7 +97,7 @@ class GeneratePdf {
                       pw.SizedBox(
                         width: 100.0,
                         child: pw.Text(
-                          transactions.customerName,
+                          transactions.party?.name??'',
                           style: pw.Theme.of(context).defaultTextStyle.copyWith(color: PdfColors.black),
                         ),
                       ),
@@ -119,7 +120,7 @@ class GeneratePdf {
                       pw.SizedBox(
                         width: 100.0,
                         child: pw.Text(
-                          transactions.customerPhone,
+                          transactions.party?.phone??'',
                           style: pw.Theme.of(context).defaultTextStyle.copyWith(color: PdfColors.black),
                         ),
                       ),
@@ -190,7 +191,7 @@ class GeneratePdf {
                       pw.SizedBox(
                         width: 100.0,
                         child: pw.Text(
-                          DateTimeFormat.format(DateTime.parse(transactions.purchaseDate), format: 'D, M j'),
+                          DateTimeFormat.format(DateTime.parse(transactions.purchaseDate??''), format: 'D, M j'),
                           style: pw.Theme.of(context).defaultTextStyle.copyWith(color: PdfColors.black),
                         ),
                       ),
@@ -295,13 +296,13 @@ class GeneratePdf {
                       },
                       data: <List<String>>[
                         <String>['SL', 'Item', 'Quantity', 'Unit Price', 'Total Price'],
-                        for (int i = 0; i < transactions.productList!.length; i++)
+                        for (int i = 0; i < transactions.details!.length; i++)
                           <String>[
                             ('${i + 1}'),
-                            (transactions.productList!.elementAt(i).productName).toString(),
-                            (transactions.productList!.elementAt(i).productStock).toString(),
-                            (transactions.productList!.elementAt(i).productSalePrice).toString(),
-                            (((transactions.productList!.elementAt(i).productSalePrice??0) * (transactions.productList!.elementAt(i).productStock??0)).toString())
+                            (transactions.details!.elementAt(i).product?.productName).toString(),
+                            (transactions.details!.elementAt(i).quantities).toString(),
+                            (transactions.details!.elementAt(i).productPurchasePrice??0).toString(),
+                            (((transactions.details!.elementAt(i).productPurchasePrice??0) * (transactions.details!.elementAt(i).quantities??0)).toString())
                           ],
                       ]),
                   pw.Paragraph(text: ""),

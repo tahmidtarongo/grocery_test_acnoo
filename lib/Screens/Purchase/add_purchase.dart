@@ -1,37 +1,29 @@
 // ignore_for_file: unused_result
 
-import 'dart:convert';
 import 'dart:core';
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mobile_pos/Provider/customer_provider.dart';
-import 'package:mobile_pos/Provider/transactions_provider.dart';
 import 'package:mobile_pos/Screens/Purchase/purchase_products.dart';
-import 'package:mobile_pos/Screens/Report/Screens/purchase_report.dart';
-import 'package:mobile_pos/model/print_transaction_model.dart';
-import 'package:mobile_pos/Screens/Products/Model/product_model.dart';
-import 'package:mobile_pos/model/transition_model.dart';
 import 'package:nb_utils/nb_utils.dart';
 import '../../Provider/add_to_cart_purchase.dart';
 import '../../Provider/print_purchase_provider.dart';
-import '../../Provider/product_provider.dart';
 import '../../Provider/profile_provider.dart';
-import '../../Provider/purchase_report_provider.dart';
 import '../../constant.dart';
 import '../../currency.dart';
-import '../../subscription.dart';
 import '../Customers/Model/parties_model.dart';
-import '../Home/home.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 
-class AddPurchaseScreen extends StatefulWidget {
-  const AddPurchaseScreen({Key? key, required this.customerModel}) : super(key: key);
+import '../Purchase List/purchase_list_screen.dart';
+import 'Model/purchase_transaction_model.dart' as purchase;
+import 'Repo/purchase_repo.dart';
 
-  final Party customerModel;
+class AddPurchaseScreen extends StatefulWidget {
+  const AddPurchaseScreen({Key? key, required this.party}) : super(key: key);
+
+  final Party party;
 
   @override
   State<AddPurchaseScreen> createState() => _AddPurchaseScreenState();
@@ -45,7 +37,7 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
   double returnAmount = 0;
   double dueAmount = 0;
   double subTotal = 0;
-  String? dropdownValue = 'Cash';
+  String? paymentType = 'Cash';
 
   double calculateSubtotal({required double total}) {
     subTotal = total - discountAmount;
@@ -66,14 +58,9 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
     return returnAmount <= 0 ? 0 : subTotal - paidAmount;
   }
 
-  late PurchaseTransitionModel transitionModel = PurchaseTransitionModel(
-    customerName: widget.customerModel.name??'',
-    customerPhone: widget.customerModel.phone??'',
-    customerType: widget.customerModel.type??'',
-    invoiceNumber: invoice.toString(),
-    purchaseDate: DateTime.now().toString(),
-  );
   DateTime selectedDate = DateTime.now();
+
+  TextEditingController dateController = TextEditingController(text: DateTime.now().toString().substring(0, 10));
 
   @override
   Widget build(BuildContext context) {
@@ -81,7 +68,7 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
       final providerData = consumerRef.watch(cartNotifierPurchase);
       final printerData = consumerRef.watch(printerPurchaseProviderNotifier);
       final personalData = consumerRef.watch(businessInfoProvider);
-      return personalData.when(data: (data) {
+      return personalData.when(data: (businessInfo) {
         return Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.white,
@@ -116,10 +103,9 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                       ),
                       const SizedBox(width: 20),
                       Expanded(
-                        child: AppTextField(
-                          textFieldType: TextFieldType.NAME,
+                        child: TextFormField(
                           readOnly: true,
-                          initialValue: transitionModel.purchaseDate,
+                          controller: dateController,
                           decoration: InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             labelText: lang.S.of(context).date,
@@ -135,7 +121,7 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                                 if (picked != null && picked != selectedDate) {
                                   setState(() {
                                     selectedDate = picked;
-                                    transitionModel.purchaseDate = selectedDate.toString();
+                                    dateController.text = picked.toString();
                                   });
                                 }
                               },
@@ -155,7 +141,7 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                         children: [
                           const Text('Due Amount: '),
                           Text(
-                            widget.customerModel.due == null ? '$currency 0' : '$currency${widget.customerModel.due}',
+                            widget.party.due == null ? '$currency 0' : '$currency${widget.party.due}',
                             style: const TextStyle(color: Color(0xFFFF8C34)),
                           ),
                         ],
@@ -166,7 +152,7 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                       AppTextField(
                         textFieldType: TextFieldType.NAME,
                         readOnly: true,
-                        initialValue: widget.customerModel.name,
+                        initialValue: widget.party.name,
                         decoration: InputDecoration(
                           floatingLabelBehavior: FloatingLabelBehavior.always,
                           labelText: lang.S.of(context).supplierName,
@@ -222,7 +208,7 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                                   contentPadding: const EdgeInsets.all(0),
                                   title: Text(providerData.cartItemPurchaseList[index].productName.toString()),
                                   subtitle: Text(
-                                      '${providerData.cartItemPurchaseList[index].productStock} X ${providerData.cartItemPurchaseList[index].productPurchasePrice} = ${((providerData.cartItemPurchaseList[index].productStock??0) * (providerData.cartItemPurchaseList[index].productPurchasePrice??0)).toStringAsFixed(2)}'),
+                                      '${providerData.cartItemPurchaseList[index].productStock} X ${providerData.cartItemPurchaseList[index].productPurchasePrice} = ${((providerData.cartItemPurchaseList[index].productStock ?? 0) * (providerData.cartItemPurchaseList[index].productPurchasePrice ?? 0)).toStringAsFixed(2)}'),
                                   trailing: Row(
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
@@ -310,7 +296,7 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                     onTap: () {
                       PurchaseProducts(
                         catName: null,
-                        customerModel: widget.customerModel,
+                        customerModel: widget.party,
                       ).launch(context);
                     },
                     child: Container(
@@ -498,7 +484,7 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                         ],
                       ),
                       DropdownButton(
-                        value: dropdownValue,
+                        value: paymentType,
                         icon: const Icon(Icons.keyboard_arrow_down),
                         items: paymentsTypeList.map((String items) {
                           return DropdownMenuItem(
@@ -508,7 +494,7 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                         }).toList(),
                         onChanged: (newValue) {
                           setState(() {
-                            dropdownValue = newValue.toString();
+                            paymentType = newValue.toString();
                           });
                         },
                       ),
@@ -567,156 +553,10 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                       Expanded(
                           child: GestureDetector(
                         onTap: () async {
-                          const Home().launch(context);
-                          // if (providerData.cartItemPurchaseList.isNotEmpty) {
-                          //   try {
-                          //     EasyLoading.show(status: 'Loading...', dismissOnTap: false);
-                          //     DatabaseReference ref = FirebaseDatabase.instance.ref("$constUserId/Purchase Transition");
-                          //
-                          //     dueAmount <= 0 ? transitionModel.isPaid = true : transitionModel.isPaid = false;
-                          //     dueAmount <= 0 ? transitionModel.dueAmount = 0 : transitionModel.dueAmount = dueAmount;
-                          //     returnAmount < 0 ? transitionModel.returnAmount = returnAmount.abs() : transitionModel.returnAmount = 0;
-                          //     transitionModel.discountAmount = discountAmount;
-                          //     transitionModel.totalAmount = subTotal;
-                          //     transitionModel.productList = providerData.cartItemPurchaseList;
-                          //     isSubUser ? transitionModel.sellerName = subUserTitle : null;
-                          //
-                          //     transitionModel.paymentType = dropdownValue;
-                          //     transitionModel.invoiceNumber = invoice.toString();
-                          //     await ref.push().set(transitionModel.toJson());
-                          //
-                          //     ///__________StockMange_________________________________________________
-                          //
-                          //     for (var element in providerData.cartItemPurchaseList) {
-                          //       increaseStock(productCode: element.productCode, productModel: element);
-                          //     }
-                          //
-                          //     ///_______invoice_Update_____________________________________________
-                          //     final DatabaseReference personalInformationRef =
-                          //         // ignore: deprecated_member_use
-                          //         FirebaseDatabase.instance.ref().child(constUserId).child('Personal Information');
-                          //
-                          //     await personalInformationRef.update({'invoiceCounter': invoice + 1});
-                          //
-                          //     ///________Subscription_____________________________________________________
-                          //     decreaseSubscriptionSale();
-                          //
-                          //     ///_________DueUpdate______________________________________________________
-                          //     getSpecificCustomers(phoneNumber: widget.customerModel.phoneNumber, due: transitionModel.dueAmount!.toInt());
-                          //
-                          //     ///________Print_______________________________________________________
-                          //     if (isPrintEnable) {
-                          //       await printerData.getBluetooth();
-                          //       PrintPurchaseTransactionModel model = PrintPurchaseTransactionModel(purchaseTransitionModel: transitionModel, personalInformationModel: data);
-                          //       if (connected) {
-                          //         await printerData.printTicket(printTransactionModel: model, productList: providerData.cartItemPurchaseList);
-                          //         providerData.clearCart();
-                          //         consumerRef.refresh(customerProvider);
-                          //         consumerRef.refresh(productProvider);
-                          //         consumerRef.refresh(purchaseReportProvider);
-                          //         consumerRef.refresh(purchaseTransitionProvider);
-                          //         consumerRef.refresh(profileDetailsProvider);
-                          //
-                          //         EasyLoading.showSuccess('Added Successfully');
-                          //         Future.delayed(const Duration(milliseconds: 500), () {
-                          //           const PurchaseReportScreen().launch(context);
-                          //         });
-                          //       } else {
-                          //         // ignore: use_build_context_synchronously
-                          //         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                          //           content: Text("Please Connect The Printer First"),
-                          //         ));
-                          //         showDialog(
-                          //             context: context,
-                          //             builder: (_) {
-                          //               return WillPopScope(
-                          //                 onWillPop: () async => false,
-                          //                 child: Dialog(
-                          //                   child: SizedBox(
-                          //                     child: Column(
-                          //                       mainAxisSize: MainAxisSize.min,
-                          //                       children: [
-                          //                         ListView.builder(
-                          //                           shrinkWrap: true,
-                          //                           itemCount: printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
-                          //                           itemBuilder: (context, index) {
-                          //                             return ListTile(
-                          //                               onTap: () async {
-                          //                                 String select = printerData.availableBluetoothDevices[index];
-                          //                                 List list = select.split("#");
-                          //                                 // String name = list[0];
-                          //                                 String mac = list[1];
-                          //                                 bool isConnect = await printerData.setConnect(mac);
-                          //                                 if (isConnect) {
-                          //                                   await printerData.printTicket(printTransactionModel: model, productList: transitionModel.productList);
-                          //                                   providerData.clearCart();
-                          //                                   consumerRef.refresh(customerProvider);
-                          //                                   consumerRef.refresh(productProvider);
-                          //                                   consumerRef.refresh(purchaseReportProvider);
-                          //                                   consumerRef.refresh(purchaseTransitionProvider);
-                          //                                   consumerRef.refresh(profileDetailsProvider);
-                          //                                   EasyLoading.showSuccess('Added Successfully');
-                          //                                   Future.delayed(const Duration(milliseconds: 500), () {
-                          //                                     const Home().launch(context);
-                          //                                   });
-                          //                                 }
-                          //                               },
-                          //                               title: Text('${printerData.availableBluetoothDevices[index]}'),
-                          //                               subtitle: const Text("Click to connect"),
-                          //                             );
-                          //                           },
-                          //                         ),
-                          //                         const SizedBox(height: 10),
-                          //                         Container(
-                          //                           height: 1,
-                          //                           width: double.infinity,
-                          //                           color: Colors.grey,
-                          //                         ),
-                          //                         const SizedBox(height: 15),
-                          //                         GestureDetector(
-                          //                           onTap: () {
-                          //                             consumerRef.refresh(customerProvider);
-                          //                             consumerRef.refresh(productProvider);
-                          //                             consumerRef.refresh(purchaseReportProvider);
-                          //                             consumerRef.refresh(purchaseTransitionProvider);
-                          //                             consumerRef.refresh(profileDetailsProvider);
-                          //                             const Home().launch(context);
-                          //                           },
-                          //                           child: const Center(
-                          //                             child: Text(
-                          //                               'Cancel',
-                          //                               style: TextStyle(color: kMainColor),
-                          //                             ),
-                          //                           ),
-                          //                         ),
-                          //                         const SizedBox(height: 15),
-                          //                       ],
-                          //                     ),
-                          //                   ),
-                          //                 ),
-                          //               );
-                          //             });
-                          //         EasyLoading.showSuccess('Added Successfully');
-                          //       }
-                          //     } else {
-                          //       providerData.clearCart();
-                          //       consumerRef.refresh(customerProvider);
-                          //       consumerRef.refresh(productProvider);
-                          //       consumerRef.refresh(purchaseReportProvider);
-                          //       consumerRef.refresh(purchaseTransitionProvider);
-                          //       consumerRef.refresh(profileDetailsProvider);
-                          //       EasyLoading.showSuccess('Added Successfully');
-                          //       Future.delayed(const Duration(milliseconds: 500), () {
-                          //         const Home().launch(context);
-                          //       });
-                          //     }
-                          //   } catch (e) {
-                          //     EasyLoading.dismiss();
-                          //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
-                          //   }
-                          // } else {
-                          //   EasyLoading.showError('Add Product first');
-                          // }
+                          int count = 0;
+                          Navigator.popUntil(context, (route) {
+                            return count++ == 2;
+                          });
                         },
                         child: Container(
                           height: 60,
@@ -739,147 +579,131 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                             if (providerData.cartItemPurchaseList.isNotEmpty) {
                               try {
                                 EasyLoading.show(status: 'Loading...', dismissOnTap: false);
-                                DatabaseReference ref = FirebaseDatabase.instance.ref("$constUserId/Purchase Transition");
-                                ref.keepSynced(true);
+                                List<CartProducts> selectedProductList = [];
 
-                                dueAmount <= 0 ? transitionModel.isPaid = true : transitionModel.isPaid = false;
-                                dueAmount <= 0 ? transitionModel.dueAmount = 0 : transitionModel.dueAmount = double.parse(dueAmount.toStringAsFixed(2));
-                                returnAmount < 0 ? transitionModel.returnAmount = returnAmount.abs() : transitionModel.returnAmount = 0;
-                                transitionModel.discountAmount = double.parse(discountAmount.toStringAsFixed(2));
-                                transitionModel.totalAmount = double.parse(subTotal.toStringAsFixed(2));
-                                transitionModel.productList = providerData.cartItemPurchaseList;
-                                transitionModel.paymentType = dropdownValue;
-                                transitionModel.invoiceNumber = invoice.toString();
-                                isSubUser ? transitionModel.sellerName = subUserTitle : null;
-                                ref.push().set(transitionModel.toJson());
+                                for (var element in providerData.cartItemPurchaseList) {
+                                  selectedProductList.add(
+                                    CartProducts(
+                                      productId: element.id ?? 0,
+                                      quantities: element.productStock,
+                                      productWholeSalePrice: element.productWholeSalePrice,
+                                      productSalePrice: element.productSalePrice,
+                                      productPurchasePrice: element.productPurchasePrice,
+                                      productDealerPrice: element.productDealerPrice,
+                                    ),
+                                  );
+                                }
 
-                                ///__________StockMange_________________________________________________-
+                                PurchaseRepo repo = PurchaseRepo();
+                                purchase.PurchaseTransaction? purchaseData;
+                                purchaseData = await repo.createPurchase(
+                                  ref: consumerRef,
+                                  context: context,
+                                  totalAmount: subTotal,
+                                  purchaseDate: selectedDate.toString(),
+                                  products: selectedProductList,
+                                  paymentType: paymentType ?? 'Cash',
+                                  partyId: widget.party.id ?? 0,
+                                  isPaid: dueAmount <= 0 ? true : false,
+                                  dueAmount: dueAmount <= 0 ? 0 : dueAmount,
+                                  discountAmount: discountAmount,
+                                  paidAmount: paidAmount,
+                                );
 
-                                // for (var element in providerData.cartItemPurchaseList) {
-                                //   increaseStock(productCode: element.productCode, productModel: element);
-                                // }
-
-                                ///_______invoice_Update_____________________________________________
-                                final DatabaseReference personalInformationRef =
-                                    // ignore: deprecated_member_use
-                                    FirebaseDatabase.instance.ref().child(constUserId).child('Personal Information');
-                                personalInformationRef.keepSynced(true);
-
-                                personalInformationRef.update({'invoiceCounter': invoice + 1});
-
-
-
-                                ///_________DueUpdate______________________________________________________
-                                getSpecificCustomers(phoneNumber: widget.customerModel.phone??'', due: transitionModel.dueAmount!.toInt());
-
-                                ///________Print_______________________________________________________
-                                if (isPrintEnable && (Theme.of(context).platform == TargetPlatform.android)) {
-                                  await printerData.getBluetooth();
-                                  PrintPurchaseTransactionModel model = PrintPurchaseTransactionModel(purchaseTransitionModel: transitionModel, personalInformationModel: data);
-                                  if (connected) {
-                                    await printerData.printTicket(printTransactionModel: model, productList: providerData.cartItemPurchaseList);
-                                    providerData.clearCart();
-                                    consumerRef.refresh(partiesProvider);
-                                    consumerRef.refresh(productProvider);
-                                    consumerRef.refresh(purchaseReportProvider);
-                                    consumerRef.refresh(purchaseTransitionProvider);
-                                    consumerRef.refresh(businessInfoProvider);
-
-                                    EasyLoading.showSuccess('Added Successfully');
-                                    Future.delayed(const Duration(milliseconds: 500), () {
-                                      const PurchaseReportScreen().launch(context);
-                                    });
-                                  } else {
-                                    // ignore: use_build_context_synchronously
-                                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                                      content: Text("Please Connect The Printer First"),
-                                    ));
-                                    // ignore: use_build_context_synchronously
-                                    showDialog(
-                                        context: context,
-                                        builder: (_) {
-                                          return WillPopScope(
-                                            onWillPop: () async => false,
-                                            child: Dialog(
-                                              child: SizedBox(
-                                                child: Column(
-                                                  mainAxisSize: MainAxisSize.min,
-                                                  children: [
-                                                    ListView.builder(
-                                                      shrinkWrap: true,
-                                                      itemCount: printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
-                                                      itemBuilder: (context, index) {
-                                                        return ListTile(
-                                                          onTap: () async {
-                                                            String select = printerData.availableBluetoothDevices[index];
-                                                            List list = select.split("#");
-                                                            // String name = list[0];
-                                                            String mac = list[1];
-                                                            bool isConnect = await printerData.setConnect(mac);
-                                                            if (isConnect) {
-                                                              await printerData.printTicket(printTransactionModel: model, productList: transitionModel.productList);
-                                                              providerData.clearCart();
-                                                              consumerRef.refresh(partiesProvider);
-                                                              consumerRef.refresh(productProvider);
-                                                              consumerRef.refresh(purchaseReportProvider);
-                                                              consumerRef.refresh(purchaseTransitionProvider);
-                                                              consumerRef.refresh(businessInfoProvider);
-                                                              EasyLoading.showSuccess('Added Successfully');
-                                                              Future.delayed(const Duration(milliseconds: 500), () {
-                                                                const PurchaseReportScreen().launch(context);
-                                                              });
-                                                            }
-                                                          },
-                                                          title: Text('${printerData.availableBluetoothDevices[index]}'),
-                                                          subtitle: const Text("Click to connect"),
-                                                        );
-                                                      },
-                                                    ),
-                                                    const SizedBox(height: 10),
-                                                    const Text('Connect Your printer'),
-                                                    const SizedBox(height: 10),
-                                                    Container(
-                                                      height: 1,
-                                                      width: double.infinity,
-                                                      color: Colors.grey,
-                                                    ),
-                                                    const SizedBox(height: 15),
-                                                    GestureDetector(
-                                                      onTap: () {
-                                                        consumerRef.refresh(partiesProvider);
-                                                        consumerRef.refresh(productProvider);
-                                                        consumerRef.refresh(purchaseReportProvider);
-                                                        consumerRef.refresh(purchaseTransitionProvider);
-                                                        consumerRef.refresh(businessInfoProvider);
-                                                        const PurchaseReportScreen().launch(context);
-                                                      },
-                                                      child: const Center(
-                                                        child: Text(
-                                                          'Cancel',
-                                                          style: TextStyle(color: kMainColor),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                    const SizedBox(height: 15),
-                                                  ],
-                                                ),
-                                              ),
-                                            ),
-                                          );
-                                        });
-                                    EasyLoading.showSuccess('Added Successfully');
-                                  }
-                                } else {
+                                if (purchaseData != null) {
                                   providerData.clearCart();
-                                  consumerRef.refresh(partiesProvider);
-                                  consumerRef.refresh(productProvider);
-                                  consumerRef.refresh(purchaseReportProvider);
-                                  consumerRef.refresh(purchaseTransitionProvider);
-                                  consumerRef.refresh(businessInfoProvider);
-                                  EasyLoading.showSuccess('Added Successfully');
-                                  Future.delayed(const Duration(milliseconds: 500), () {
-                                    const PurchaseReportScreen().launch(context);
-                                  });
+                                  // consumerRef.refresh(partiesProvider);
+                                  // consumerRef.refresh(productProvider);
+                                  // consumerRef.refresh(purchaseTransactionProvider);
+                                  // consumerRef.refresh(businessInfoProvider);
+
+
+
+                                  const PurchaseListScreen().launch(context);
+
+                                  ///________Print_______________________________________________________
+                                  // if (isPrintEnable && (Theme.of(context).platform == TargetPlatform.android)) {
+                                  //   await printerData.getBluetooth();
+                                  //   PrintPurchaseTransactionModel model =
+                                  //       PrintPurchaseTransactionModel(purchaseTransitionModel: purchaseData, personalInformationModel: businessInfo);
+                                  //   if (connected) {
+                                  //     await printerData.printPurchaseThermalInvoice(printTransactionModel: model, productList: purchaseData.details);
+                                  //
+                                  //     const PurchaseListScreen().launch(context);
+                                  //   } else {
+                                  //     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                                  //       content: Text("Please Connect The Printer First"),
+                                  //     ));
+                                  //
+                                  //     showDialog(
+                                  //         context: context,
+                                  //         builder: (_) {
+                                  //           return WillPopScope(
+                                  //             onWillPop: () async => false,
+                                  //             child: Dialog(
+                                  //               child: SizedBox(
+                                  //                 child: Column(
+                                  //                   mainAxisSize: MainAxisSize.min,
+                                  //                   children: [
+                                  //                     ListView.builder(
+                                  //                       shrinkWrap: true,
+                                  //                       itemCount: printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
+                                  //                       itemBuilder: (context, index) {
+                                  //                         return ListTile(
+                                  //                           onTap: () async {
+                                  //                             String select = printerData.availableBluetoothDevices[index];
+                                  //                             List list = select.split("#");
+                                  //                             // String name = list[0];
+                                  //                             String mac = list[1];
+                                  //                             bool isConnect = await printerData.setConnect(mac);
+                                  //                             if (isConnect) {
+                                  //                               await printerData.printPurchaseThermalInvoice(printTransactionModel: model, productList: purchaseData?.details ?? []);
+                                  //
+                                  //                               EasyLoading.showSuccess('Added Successfully');
+                                  //                               Future.delayed(const Duration(milliseconds: 500), () {
+                                  //                                 const PurchaseListScreen().launch(context);
+                                  //                               });
+                                  //                             }
+                                  //                           },
+                                  //                           title: Text('${printerData.availableBluetoothDevices[index]}'),
+                                  //                           subtitle: const Text("Click to connect"),
+                                  //                         );
+                                  //                       },
+                                  //                     ),
+                                  //                     const SizedBox(height: 10),
+                                  //                     const Text('Connect Your printer'),
+                                  //                     const SizedBox(height: 10),
+                                  //                     Container(
+                                  //                       height: 1,
+                                  //                       width: double.infinity,
+                                  //                       color: Colors.grey,
+                                  //                     ),
+                                  //                     const SizedBox(height: 15),
+                                  //                     GestureDetector(
+                                  //                       onTap: () {
+                                  //                         Future.delayed(Duration(seconds: 1,),(){
+                                  //                           const PurchaseListScreen().launch(context,isNewTask: true);
+                                  //                         });
+                                  //                       },
+                                  //                       child: const Center(
+                                  //                         child: Text(
+                                  //                           'Cancel',
+                                  //                           style: TextStyle(color: kMainColor),
+                                  //                         ),
+                                  //                       ),
+                                  //                     ),
+                                  //                     const SizedBox(height: 15),
+                                  //                   ],
+                                  //                 ),
+                                  //               ),
+                                  //             ),
+                                  //           );
+                                  //         });
+                                  //     EasyLoading.showSuccess('Added Successfully');
+                                  //   }
+                                  // } else {
+                                  //   const PurchaseListScreen().launch(context);
+                                  // }
                                 }
                               } catch (e) {
                                 EasyLoading.dismiss();
@@ -919,81 +743,5 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
         return const Center(child: CircularProgressIndicator());
       });
     });
-  }
-
-  // void increaseStock({required String productCode, required ProductModel productModel}) async {
-  //   final ref = FirebaseDatabase.instance.ref('$constUserId/Products/');
-  //   ref.keepSynced(true);
-  //   ref.orderByKey().get().then((value) {
-  //     for (var element in value.children) {
-  //       var data = jsonDecode(jsonEncode(element.value));
-  //       if (data['productCode'] == productCode) {
-  //         String? key = element.key;
-  //         int previousStock = element.child('productStock').value.toString().toInt();
-  //         int remainStock = previousStock + productModel.productStock.toInt();
-  //         ref.child(key!).update({
-  //           'productSalePrice': productModel.productSalePrice,
-  //           'productPurchasePrice': productModel.productPurchasePrice,
-  //           'productWholeSalePrice': productModel.productWholeSalePrice,
-  //           'productDealerPrice': productModel.productDealerPrice,
-  //           'productStock': '$remainStock',
-  //         });
-  //       }
-  //     }
-  //   });
-  //
-  //   // var data = await ref.orderByChild('productCode').equalTo(productCode).once();
-  //   // String productPath = data.snapshot.value.toString().substring(1, 21);
-  //   //
-  //   // var data1 = await ref.child('$productPath/productStock').once();
-  //   // int stock = int.parse(data1.snapshot.value.toString());
-  //   // int remainStock = stock + productModel.productStock.toInt();
-  //   //
-  //   // ref.child(productPath).update({
-  //   //   'productSalePrice': productModel.productSalePrice,
-  //   //   'productPurchasePrice': productModel.productPurchasePrice,
-  //   //   'productWholeSalePrice': productModel.productWholeSalePrice,
-  //   //   'productDealerPrice': productModel.productDealerPrice,
-  //   //   'productStock': '$remainStock',
-  //   // });
-  // }
-
-  void decreaseSubscriptionSale() async {
-    final ref = FirebaseDatabase.instance.ref('$constUserId/Subscription/purchaseNumber');
-    var data = await ref.once();
-    int beforeSale = int.parse(data.snapshot.value.toString());
-    int afterSale = beforeSale - 1;
-    beforeSale != -202 ? FirebaseDatabase.instance.ref('$constUserId/Subscription').update({'purchaseNumber': afterSale}) : null;
-  }
-
-  void getSpecificCustomers({required String phoneNumber, required int due}) async {
-    final ref = FirebaseDatabase.instance.ref('$constUserId/Customers/');
-    ref.keepSynced(true);
-    String? key;
-    ref.orderByKey().get().then((value) {
-      for (var element in value.children) {
-        var data = jsonDecode(jsonEncode(element.value));
-        if (data['phoneNumber'] == phoneNumber) {
-          key = element.key;
-          int previousDue = element.child('due').value.toString().toInt();
-          int totalDue = previousDue + due;
-          ref.child(key!).update({'due': '$totalDue'});
-        }
-      }
-    });
-
-    // await FirebaseDatabase.instance.ref(constUserId).child('Customers').orderByKey().get().then((value) {
-    //   for (var element in value.children) {
-    //     var data = jsonDecode(jsonEncode(element.value));
-    //     if (data['phoneNumber'] == phoneNumber) {
-    //       key = element.key;
-    //     }
-    //   }
-    // });
-    // var data1 = await ref.child('$key/due').once();
-    // int previousDue = data1.snapshot.value.toString().toInt();
-    //
-    // int totalDue = previousDue + due;
-    // ref.child(key!).update({'due': '$totalDue'});
   }
 }

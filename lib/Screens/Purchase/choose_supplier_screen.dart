@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile_pos/Const/api_config.dart';
 import 'package:mobile_pos/Screens/Customers/add_customer.dart';
 import 'package:mobile_pos/Screens/Purchase/add_purchase.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -62,7 +63,7 @@ class _PurchaseContactsState extends State<PurchaseContacts> {
                             ),
                             onChanged: (value) {
                               setState(() {
-                                searchCustomer = value;
+                                searchCustomer = value.toLowerCase().trim();
                               });
                             },
                           ),
@@ -73,10 +74,10 @@ class _PurchaseContactsState extends State<PurchaseContacts> {
                           itemCount: customer.length,
                           itemBuilder: (_, index) {
                             customer[index].type == 'Supplier' ? color = const Color(0xFFA569BD) : Colors.white;
-                            return customer[index].name!.contains(searchCustomer) && customer[index].type!.contains('Supplier')
+                            return customer[index].name!.toLowerCase().trim().contains(searchCustomer) && customer[index].type!.contains('Supplier')
                                 ? GestureDetector(
                                     onTap: () {
-                                      AddPurchaseScreen(customerModel: customer[index]).launch(context);
+                                      AddPurchaseScreen(party: customer[index]).launch(context);
                                       cart.clearCart();
                                     },
                                     child: Padding(
@@ -91,12 +92,19 @@ class _PurchaseContactsState extends State<PurchaseContacts> {
                                               backgroundColor: Colors.white,
                                               radius: 70.0,
                                               child: ClipOval(
-                                                child: Image.network(
-                                                  customer[index].image??'',
-                                                  fit: BoxFit.cover,
-                                                  width: 120.0,
-                                                  height: 120.0,
-                                                ),
+                                                child: customer[index].image == null
+                                                    ? Image.asset(
+                                                        'images/no_shop_image.png',
+                                                        fit: BoxFit.cover,
+                                                        width: 120.0,
+                                                        height: 120.0,
+                                                      )
+                                                    : Image.network(
+                                                        '${APIConfig.domain}${customer[index].image}',
+                                                        fit: BoxFit.cover,
+                                                        width: 120.0,
+                                                        height: 120.0,
+                                                      ),
                                               ),
                                             ),
                                           ),
@@ -106,14 +114,14 @@ class _PurchaseContactsState extends State<PurchaseContacts> {
                                             crossAxisAlignment: CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                customer[index].name??'',
+                                                customer[index].name ?? '',
                                                 style: GoogleFonts.poppins(
                                                   color: Colors.black,
                                                   fontSize: 15.0,
                                                 ),
                                               ),
                                               Text(
-                                                customer[index].type??'',
+                                                customer[index].type ?? '',
                                                 style: GoogleFonts.poppins(
                                                   color: color,
                                                   fontSize: 15.0,

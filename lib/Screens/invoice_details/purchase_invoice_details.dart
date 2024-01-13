@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
+import 'package:mobile_pos/Const/api_config.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import '../../Provider/print_purchase_provider.dart';
@@ -10,13 +11,13 @@ import '../../invoice_constant.dart';
 import '../../constant.dart' as mainConstant;
 import '../../model/business_info_model.dart';
 import '../../model/print_transaction_model.dart';
-import '../../model/transition_model.dart';
+import '../Purchase/Model/purchase_transaction_model.dart';
 
 class PurchaseInvoiceDetails extends StatefulWidget {
-  const PurchaseInvoiceDetails({Key? key, required this.transitionModel, required this.personalInformationModel}) : super(key: key);
+  const PurchaseInvoiceDetails({Key? key, required this.transitionModel, required this.businessInfo}) : super(key: key);
 
-  final PurchaseTransitionModel transitionModel;
-  final BusinessInformationModel personalInformationModel;
+  final PurchaseTransaction transitionModel;
+  final BusinessInformationModel businessInfo;
 
   @override
   State<PurchaseInvoiceDetails> createState() => _PurchaseInvoiceDetailsState();
@@ -41,29 +42,33 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                     leading: Container(
                       height: 50.0,
                       width: 50.0,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: NetworkImage(widget.personalInformationModel.pictureUrl ?? ''),
-                        ),
-                      ),
+                      decoration: widget.businessInfo.pictureUrl.isEmptyOrNull
+                          ? const BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage('images/no_shop_image.png'),
+                              ),
+                            )
+                          : BoxDecoration(
+                              image: DecorationImage(
+                                image: NetworkImage('${APIConfig.domain}${widget.businessInfo.pictureUrl ?? ''}'),
+                              ),
+                            ),
                     ),
                     title: Text(
-                      widget.transitionModel.sellerName.isEmptyOrNull
-                          ? widget.personalInformationModel.companyName.toString()
-                          : '${widget.personalInformationModel.companyName} [${widget.transitionModel.sellerName}]',
+                      '${widget.businessInfo.companyName}',
                       style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold, fontSize: 18.0),
                     ),
                     subtitle: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          widget.personalInformationModel.address.toString(),
+                          widget.businessInfo.address.toString(),
                           style: kTextStyle.copyWith(
                             color: kGreyTextColor,
                           ),
                         ),
                         Text(
-                          widget.personalInformationModel.phoneNumber.toString(),
+                          widget.businessInfo.phoneNumber.toString(),
                           style: kTextStyle.copyWith(
                             color: kGreyTextColor,
                           ),
@@ -94,12 +99,12 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                   Row(
                     children: [
                       Text(
-                        widget.transitionModel.customerName,
+                        widget.transitionModel.party?.name ?? '',
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                       const Spacer(),
                       Text(
-                        DateFormat.yMMMd().format(DateTime.parse(widget.transitionModel.purchaseDate)),
+                        DateFormat.yMMMd().format(DateTime.parse(widget.transitionModel.purchaseDate ?? '')),
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                     ],
@@ -108,12 +113,12 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                   Row(
                     children: [
                       Text(
-                        widget.transitionModel.customerPhone,
+                        widget.transitionModel.party?.phone ?? '',
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                       const Spacer(),
                       Text(
-                        widget.transitionModel.purchaseDate.substring(10, 16),
+                        widget.transitionModel.purchaseDate?.substring(10, 16) ?? '',
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                     ],
@@ -157,7 +162,7 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                   ListView.builder(
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
-                      itemCount: widget.transitionModel.productList!.length,
+                      itemCount: widget.transitionModel.details!.length,
                       itemBuilder: (_, i) {
                         return Padding(
                           padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
@@ -166,25 +171,25 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                             child: Row(
                               children: [
                                 Text(
-                                  widget.transitionModel.productList![i].productName.toString(),
+                                  widget.transitionModel.details![i].product?.productName.toString() ?? '',
                                   maxLines: 2,
                                   style: kTextStyle.copyWith(color: kGreyTextColor),
                                 ),
                                 SizedBox(width: MediaQuery.of(context).size.width / 12),
                                 Text(
-                                  '$currency ${widget.transitionModel.productList![i].productPurchasePrice}',
+                                  '$currency ${widget.transitionModel.details![i].productPurchasePrice}',
                                   maxLines: 2,
                                   style: kTextStyle.copyWith(color: kGreyTextColor),
                                 ),
                                 const Spacer(),
                                 Text(
-                                  widget.transitionModel.productList![i].productStock.toString(),
+                                  widget.transitionModel.details![i].quantities.toString(),
                                   maxLines: 1,
                                   style: kTextStyle.copyWith(color: kGreyTextColor),
                                 ),
                                 const Spacer(),
                                 Text(
-                                  '$currency ${(widget.transitionModel.productList![i].productPurchasePrice ?? 0) * (widget.transitionModel.productList![i].productStock ?? 0)}',
+                                  '$currency ${(widget.transitionModel.details![i].productPurchasePrice ?? 0) * (widget.transitionModel.details![i].quantities ?? 0)}',
                                   maxLines: 2,
                                   style: kTextStyle.copyWith(color: kTitleColor),
                                 ),
@@ -218,27 +223,27 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                     ],
                   ),
                   const SizedBox(height: 5.0),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(
-                        lang.S.of(context).totalVat,
-                        maxLines: 1,
-                        style: kTextStyle.copyWith(color: kGreyTextColor),
-                      ),
-                      const SizedBox(width: 20.0),
-                      SizedBox(
-                        width: 120,
-                        child: Text(
-                          '$currency 0.00',
-                          maxLines: 2,
-                          style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
-                          textAlign: TextAlign.end,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 5.0),
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.end,
+                  //   children: [
+                  //     Text(
+                  //       lang.S.of(context).totalVat,
+                  //       maxLines: 1,
+                  //       style: kTextStyle.copyWith(color: kGreyTextColor),
+                  //     ),
+                  //     const SizedBox(width: 20.0),
+                  //     SizedBox(
+                  //       width: 120,
+                  //       child: Text(
+                  //         '$currency 0.00',
+                  //         maxLines: 2,
+                  //         style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+                  //         textAlign: TextAlign.end,
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
+                  // const SizedBox(height: 5.0),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
@@ -259,27 +264,27 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 5.0),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(
-                        lang.S.of(context).deliveryCharge,
-                        maxLines: 1,
-                        style: kTextStyle.copyWith(color: kGreyTextColor),
-                      ),
-                      const SizedBox(width: 20.0),
-                      SizedBox(
-                        width: 120,
-                        child: Text(
-                          '$currency 0.00',
-                          maxLines: 2,
-                          style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
-                          textAlign: TextAlign.end,
-                        ),
-                      ),
-                    ],
-                  ),
+                  // const SizedBox(height: 5.0),
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.end,
+                  //   children: [
+                  //     Text(
+                  //       lang.S.of(context).deliveryCharge,
+                  //       maxLines: 1,
+                  //       style: kTextStyle.copyWith(color: kGreyTextColor),
+                  //     ),
+                  //     const SizedBox(width: 20.0),
+                  //     SizedBox(
+                  //       width: 120,
+                  //       child: Text(
+                  //         '$currency 0.00',
+                  //         maxLines: 2,
+                  //         style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+                  //         textAlign: TextAlign.end,
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
                   const SizedBox(height: 20.0),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -365,12 +370,11 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
             child: GestureDetector(
               onTap: () async {
                 await printerData.getBluetooth();
-                PrintPurchaseTransactionModel model =
-                    PrintPurchaseTransactionModel(purchaseTransitionModel: widget.transitionModel, personalInformationModel: widget.personalInformationModel);
+                PrintPurchaseTransactionModel model = PrintPurchaseTransactionModel(purchaseTransitionModel: widget.transitionModel, personalInformationModel: widget.businessInfo);
                 mainConstant.connected
-                    ? printerData.printTicket(
+                    ? printerData.printPurchaseThermalInvoice(
                         printTransactionModel: model,
-                        productList: model.purchaseTransitionModel!.productList,
+                        productList: model.purchaseTransitionModel!.details,
                       )
                     // ignore: use_build_context_synchronously
                     : showDialog(

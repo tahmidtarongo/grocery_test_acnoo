@@ -65,7 +65,7 @@ class _PurchaseReportState extends State<PurchaseReportScreen> {
           elevation: 0.0,
         ),
         body: Consumer(builder: (context, ref, __) {
-          final providerData = ref.watch(purchaseTransitionProvider);
+          final purchaseData = ref.watch(purchaseTransactionProvider);
           final printerData = ref.watch(printerPurchaseProviderNotifier);
           final personalData = ref.watch(businessInfoProvider);
           final profile = ref.watch(businessInfoProvider);
@@ -140,15 +140,14 @@ class _PurchaseReportState extends State<PurchaseReportScreen> {
                     ],
                   ),
                 ),
-                providerData.when(data: (transaction) {
-                  final reTransaction = transaction.reversed.toList();
-                  for (var element in reTransaction) {
-                    if ((fromDate.isBefore(DateTime.parse(element.purchaseDate)) || DateTime.parse(element.purchaseDate).isAtSameMomentAs(fromDate)) &&
-                        (toDate.isAfter(DateTime.parse(element.purchaseDate)) || DateTime.parse(element.purchaseDate).isAtSameMomentAs(toDate))) {
+                purchaseData.when(data: (transaction) {
+                  for (var element in transaction) {
+                    if ((fromDate.isBefore(DateTime.parse(element.purchaseDate ?? '')) || DateTime.parse(element.purchaseDate ?? '').isAtSameMomentAs(fromDate)) &&
+                        (toDate.isAfter(DateTime.parse(element.purchaseDate ?? '')) || DateTime.parse(element.purchaseDate ?? '').isAtSameMomentAs(toDate))) {
                       totalPurchase = totalPurchase + element.totalAmount!;
                     }
                   }
-                  return reTransaction.isNotEmpty
+                  return transaction.isNotEmpty
                       ? Column(
                           children: [
                             Padding(
@@ -237,18 +236,18 @@ class _PurchaseReportState extends State<PurchaseReportScreen> {
                             ListView.builder(
                               shrinkWrap: true,
                               physics: const NeverScrollableScrollPhysics(),
-                              itemCount: reTransaction.length,
+                              itemCount: transaction.length,
                               itemBuilder: (context, index) {
                                 return Visibility(
-                                  visible: (fromDate.isBefore(DateTime.parse(reTransaction[index].purchaseDate)) ||
-                                          DateTime.parse(reTransaction[index].purchaseDate).isAtSameMomentAs(fromDate)) &&
-                                      (toDate.isAfter(DateTime.parse(reTransaction[index].purchaseDate)) ||
-                                          DateTime.parse(reTransaction[index].purchaseDate).isAtSameMomentAs(toDate)),
+                                  visible: (fromDate.isBefore(DateTime.parse(transaction[index].purchaseDate ?? '')) ||
+                                          DateTime.parse(transaction[index].purchaseDate ?? '').isAtSameMomentAs(fromDate)) &&
+                                      (toDate.isAfter(DateTime.parse(transaction[index].purchaseDate ?? '')) ||
+                                          DateTime.parse(transaction[index].purchaseDate ?? '').isAtSameMomentAs(toDate)),
                                   child: GestureDetector(
                                     onTap: () {
                                       PurchaseInvoiceDetails(
-                                        personalInformationModel: profile.value!,
-                                        transitionModel: reTransaction[index],
+                                        businessInfo: profile.value!,
+                                        transitionModel: transaction[index],
                                       ).launch(context);
                                     },
                                     child: Column(
@@ -263,10 +262,10 @@ class _PurchaseReportState extends State<PurchaseReportScreen> {
                                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                 children: [
                                                   Text(
-                                                    reTransaction[index].customerName,
+                                                    transaction[index].party?.name ?? '',
                                                     style: const TextStyle(fontSize: 16),
                                                   ),
-                                                  Text('#${reTransaction[index].invoiceNumber}'),
+                                                  Text('#${transaction[index].invoiceNumber}'),
                                                 ],
                                               ),
                                               const SizedBox(height: 10),
@@ -276,38 +275,38 @@ class _PurchaseReportState extends State<PurchaseReportScreen> {
                                                   Container(
                                                     padding: const EdgeInsets.all(8),
                                                     decoration: BoxDecoration(
-                                                        color: reTransaction[index].dueAmount! <= 0
+                                                        color: transaction[index].dueAmount! <= 0
                                                             ? const Color(0xff0dbf7d).withOpacity(0.1)
                                                             : const Color(0xFFED1A3B).withOpacity(0.1),
                                                         borderRadius: const BorderRadius.all(Radius.circular(10))),
                                                     child: Text(
-                                                      reTransaction[index].dueAmount! <= 0 ? lang.S.of(context).paid : lang.S.of(context).unPaid,
-                                                      style: TextStyle(color: reTransaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d) : const Color(0xFFED1A3B)),
+                                                      transaction[index].dueAmount! <= 0 ? lang.S.of(context).paid : lang.S.of(context).unPaid,
+                                                      style: TextStyle(color: transaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d) : const Color(0xFFED1A3B)),
                                                     ),
                                                   ),
                                                   Text(
-                                                    DateFormat.yMMMd().format(DateTime.parse(reTransaction[index].purchaseDate)),
+                                                    DateFormat.yMMMd().format(DateTime.parse(transaction[index].purchaseDate ?? '')),
                                                     style: const TextStyle(color: Colors.grey),
                                                   ),
                                                 ],
                                               ),
                                               const SizedBox(height: 10),
                                               Text(
-                                                '${lang.S.of(context).total} : $currency ${reTransaction[index].totalAmount.toString()}',
+                                                '${lang.S.of(context).total} : $currency ${transaction[index].totalAmount.toString()}',
                                                 style: const TextStyle(color: Colors.grey),
                                               ),
                                               const SizedBox(height: 10),
                                               Text(
-                                                '${lang.S.of(context).paid} : $currency ${reTransaction[index].totalAmount!.toDouble() - reTransaction[index].dueAmount!.toDouble()}',
+                                                '${lang.S.of(context).paid} : $currency ${transaction[index].totalAmount!.toDouble() - transaction[index].dueAmount!.toDouble()}',
                                                 style: const TextStyle(color: Colors.grey),
                                               ),
                                               Row(
                                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                 children: [
                                                   Text(
-                                                    '${lang.S.of(context).due}: $currency ${reTransaction[index].dueAmount.toString()}',
+                                                    '${lang.S.of(context).due}: $currency ${transaction[index].dueAmount.toString()}',
                                                     style: const TextStyle(fontSize: 16),
-                                                  ).visible(reTransaction[index].dueAmount!.toInt() != 0),
+                                                  ).visible(transaction[index].dueAmount!.toInt() != 0),
                                                   personalData.when(data: (data) {
                                                     return Row(
                                                       children: [
@@ -317,12 +316,12 @@ class _PurchaseReportState extends State<PurchaseReportScreen> {
                                                                 ///________Print_______________________________________________________
                                                                 await printerData.getBluetooth();
                                                                 PrintPurchaseTransactionModel model =
-                                                                    PrintPurchaseTransactionModel(purchaseTransitionModel: reTransaction[index], personalInformationModel: data);
+                                                                    PrintPurchaseTransactionModel(purchaseTransitionModel: transaction[index], personalInformationModel: data);
                                                                 if (connected) {
-                                                                  await printerData.printTicket(
-                                                                    printTransactionModel: model,
-                                                                    productList: model.purchaseTransitionModel!.productList,
-                                                                  );
+                                                                  // await printerData.printTicket(
+                                                                  //   printTransactionModel: model,
+                                                                  //   productList: model.purchaseTransitionModel!.productList,
+                                                                  // );
                                                                 } else {
                                                                   // ignore: use_build_context_synchronously
                                                                   showDialog(
@@ -389,7 +388,7 @@ class _PurchaseReportState extends State<PurchaseReportScreen> {
                                                               color: Colors.grey,
                                                             )),
                                                         IconButton(
-                                                            onPressed: () => GeneratePdf().generatePurchaseDocument(reTransaction[index], data, context),
+                                                            onPressed: () => GeneratePdf().generatePurchaseDocument(transaction[index], data, context),
                                                             icon: const Icon(
                                                               Icons.picture_as_pdf,
                                                               color: Colors.grey,

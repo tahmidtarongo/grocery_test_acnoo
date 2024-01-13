@@ -64,9 +64,9 @@ class _CustomerDetailsState extends State<CustomerDetails> {
               onPressed: () async {
                 Navigator.pop(context);
                 final party = PartyRepository();
-                await party.deleteParty(id: id, context: context,ref: ref);
+                await party.deleteParty(id: id, context: context, ref: ref);
               },
-              child: const Text('Delete',style: TextStyle(color: Colors.red)),
+              child: const Text('Delete', style: TextStyle(color: Colors.red)),
             ),
           ],
         );
@@ -78,7 +78,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
   Widget build(BuildContext context) {
     return Consumer(builder: (context, cRef, __) {
       final providerData = cRef.watch(transitionProvider);
-      final providerDataPurchase = cRef.watch(purchaseTransitionProvider);
+      final purchaseList = cRef.watch(purchaseTransactionProvider);
       final printerData = cRef.watch(printerProviderNotifier);
       final printerDataPurchase = cRef.watch(printerPurchaseProviderNotifier);
       final personalData = cRef.watch(businessInfoProvider);
@@ -103,7 +103,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
             ),
             IconButton(
               onPressed: () async {
-                await showDeleteConfirmationAlert(context: context, id: widget.party.id.toString(),ref: cRef);
+                await showDeleteConfirmationAlert(context: context, id: widget.party.id.toString(), ref: cRef);
               },
 
               // onPressed: () async {
@@ -286,152 +286,150 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                         itemCount: transaction.length,
                         itemBuilder: (context, index) {
                           final reTransaction = transaction.reversed.toList();
-                          return reTransaction[index].customerPhone == widget.party.phone
-                              ? GestureDetector(
-                                  onTap: () {
-                                    SalesInvoiceDetails(
-                                      personalInformationModel: personalData.value!,
-                                      transitionModel: reTransaction[index],
-                                    ).launch(context);
-                                  },
-                                  child: Column(
-                                    children: [
-                                      Container(
-                                        padding: const EdgeInsets.all(20),
-                                        width: context.width(),
-                                        child: Column(
-                                          crossAxisAlignment: CrossAxisAlignment.start,
+                          return Visibility(
+                            visible: reTransaction[index].customerPhone == widget.party.phone,
+                            child: GestureDetector(
+                              onTap: () {
+                                SalesInvoiceDetails(
+                                  personalInformationModel: personalData.value!,
+                                  transitionModel: reTransaction[index],
+                                ).launch(context);
+                              },
+                              child: Column(
+                                children: [
+                                  Container(
+                                    padding: const EdgeInsets.all(20),
+                                    width: context.width(),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Row(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                           children: [
-                                            Row(
-                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                              children: [
-                                                Text(
-                                                  "${lang.S.of(context).totalProduct} : ${reTransaction[index].productList!.length.toString()}",
-                                                  style: const TextStyle(fontSize: 16),
-                                                ),
-                                                Text('#${reTransaction[index].invoiceNumber}'),
-                                              ],
-                                            ),
-                                            const SizedBox(height: 10),
-                                            Row(
-                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                              children: [
-                                                Container(
-                                                  padding: const EdgeInsets.all(8),
-                                                  decoration: BoxDecoration(
-                                                      color: reTransaction[index].dueAmount! <= 0
-                                                          ? const Color(0xff0dbf7d).withOpacity(0.1)
-                                                          : const Color(0xFFED1A3B).withOpacity(0.1),
-                                                      borderRadius: const BorderRadius.all(Radius.circular(10))),
-                                                  child: Text(
-                                                    reTransaction[index].dueAmount! <= 0 ? lang.S.of(context).paid : lang.S.of(context).unPaid,
-                                                    style: TextStyle(color: reTransaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d) : const Color(0xFFED1A3B)),
-                                                  ),
-                                                ),
-                                                Text(
-                                                  reTransaction[index].purchaseDate.substring(0, 10),
-                                                  style: const TextStyle(color: Colors.grey),
-                                                ),
-                                              ],
-                                            ),
-                                            const SizedBox(height: 10),
                                             Text(
-                                              '${lang.S.of(context).total} : $currency ${reTransaction[index].totalAmount.toString()}',
-                                              style: const TextStyle(color: Colors.grey),
+                                              "${lang.S.of(context).totalProduct} : ${reTransaction[index].productList!.length.toString()}",
+                                              style: const TextStyle(fontSize: 16),
                                             ),
-                                            personalData.when(data: (data) {
-                                              return Row(
-                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                children: [
-                                                  Text(
-                                                    '${lang.S.of(context).due}: $currency ${reTransaction[index].dueAmount.toString()}',
-                                                    style: const TextStyle(fontSize: 16),
-                                                  ),
-                                                  Row(
-                                                    children: [
-                                                      IconButton(
-                                                        onPressed: () async {
-                                                          await printerData.getBluetooth();
-                                                          PrintTransactionModel model =
-                                                              PrintTransactionModel(transitionModel: reTransaction[index], personalInformationModel: data);
-                                                          connected
-                                                              ? printerData.printTicket(
-                                                                  printTransactionModel: model,
-                                                                  productList: model.transitionModel!.productList,
-                                                                )
-                                                              // ignore: use_build_context_synchronously
-                                                              : showDialog(
-                                                                  context: context,
-                                                                  builder: (_) {
-                                                                    return Dialog(
-                                                                      child: SizedBox(
-                                                                        height: 200,
-                                                                        child: ListView.builder(
-                                                                          itemCount:
-                                                                              printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
-                                                                          itemBuilder: (context, index) {
-                                                                            return ListTile(
-                                                                              onTap: () async {
-                                                                                String select = printerData.availableBluetoothDevices[index];
-                                                                                List list = select.split("#");
-                                                                                // String name = list[0];
-                                                                                String mac = list[1];
-                                                                                bool isConnect = await printerData.setConnect(mac);
-                                                                                // ignore: use_build_context_synchronously
-                                                                                isConnect
-                                                                                    // ignore: use_build_context_synchronously
-                                                                                    ? finish(context)
-                                                                                    : toast('Try Again');
-                                                                              },
-                                                                              title: Text('${printerData.availableBluetoothDevices[index]}'),
-                                                                              subtitle: Text(lang.S.of(context).clickToConnect),
-                                                                            );
-                                                                          },
-                                                                        ),
-                                                                      ),
-                                                                    );
-                                                                  },
-                                                                );
-                                                        },
-                                                        icon: const Icon(
-                                                          FeatherIcons.printer,
-                                                          color: Colors.grey,
-                                                        ),
-                                                      ),
-                                                      IconButton(
-                                                        onPressed: () {},
-                                                        icon: const Icon(
-                                                          FeatherIcons.share,
-                                                          color: Colors.grey,
-                                                        ),
-                                                      ),
-                                                      IconButton(
-                                                          onPressed: () {},
-                                                          icon: const Icon(
-                                                            FeatherIcons.moreVertical,
-                                                            color: Colors.grey,
-                                                          )),
-                                                    ],
-                                                  )
-                                                ],
-                                              );
-                                            }, error: (e, stack) {
-                                              return Text(e.toString());
-                                            }, loading: () {
-                                              return const Text('Loading');
-                                            }),
+                                            Text('#${reTransaction[index].invoiceNumber}'),
                                           ],
                                         ),
-                                      ),
-                                      Container(
-                                        height: 0.5,
-                                        width: context.width(),
-                                        color: Colors.grey,
-                                      )
-                                    ],
+                                        const SizedBox(height: 10),
+                                        Row(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Container(
+                                              padding: const EdgeInsets.all(8),
+                                              decoration: BoxDecoration(
+                                                  color: reTransaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d).withOpacity(0.1) : const Color(0xFFED1A3B).withOpacity(0.1),
+                                                  borderRadius: const BorderRadius.all(Radius.circular(10))),
+                                              child: Text(
+                                                reTransaction[index].dueAmount! <= 0 ? lang.S.of(context).paid : lang.S.of(context).unPaid,
+                                                style: TextStyle(color: reTransaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d) : const Color(0xFFED1A3B)),
+                                              ),
+                                            ),
+                                            Text(
+                                              reTransaction[index].purchaseDate.substring(0, 10),
+                                              style: const TextStyle(color: Colors.grey),
+                                            ),
+                                          ],
+                                        ),
+                                        const SizedBox(height: 10),
+                                        Text(
+                                          '${lang.S.of(context).total} : $currency ${reTransaction[index].totalAmount.toString()}',
+                                          style: const TextStyle(color: Colors.grey),
+                                        ),
+                                        personalData.when(data: (data) {
+                                          return Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Text(
+                                                '${lang.S.of(context).due}: $currency ${reTransaction[index].dueAmount.toString()}',
+                                                style: const TextStyle(fontSize: 16),
+                                              ),
+                                              Row(
+                                                children: [
+                                                  IconButton(
+                                                    onPressed: () async {
+                                                      await printerData.getBluetooth();
+                                                      PrintTransactionModel model = PrintTransactionModel(transitionModel: reTransaction[index], personalInformationModel: data);
+                                                      connected
+                                                          ? printerData.printTicket(
+                                                              printTransactionModel: model,
+                                                              productList: model.transitionModel!.productList,
+                                                            )
+                                                          // ignore: use_build_context_synchronously
+                                                          : showDialog(
+                                                              context: context,
+                                                              builder: (_) {
+                                                                return Dialog(
+                                                                  child: SizedBox(
+                                                                    height: 200,
+                                                                    child: ListView.builder(
+                                                                      itemCount:
+                                                                          printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
+                                                                      itemBuilder: (context, index) {
+                                                                        return ListTile(
+                                                                          onTap: () async {
+                                                                            String select = printerData.availableBluetoothDevices[index];
+                                                                            List list = select.split("#");
+                                                                            // String name = list[0];
+                                                                            String mac = list[1];
+                                                                            bool isConnect = await printerData.setConnect(mac);
+                                                                            // ignore: use_build_context_synchronously
+                                                                            isConnect
+                                                                                // ignore: use_build_context_synchronously
+                                                                                ? finish(context)
+                                                                                : toast('Try Again');
+                                                                          },
+                                                                          title: Text('${printerData.availableBluetoothDevices[index]}'),
+                                                                          subtitle: Text(lang.S.of(context).clickToConnect),
+                                                                        );
+                                                                      },
+                                                                    ),
+                                                                  ),
+                                                                );
+                                                              },
+                                                            );
+                                                    },
+                                                    icon: const Icon(
+                                                      FeatherIcons.printer,
+                                                      color: Colors.grey,
+                                                    ),
+                                                  ),
+                                                  IconButton(
+                                                    onPressed: () {},
+                                                    icon: const Icon(
+                                                      FeatherIcons.share,
+                                                      color: Colors.grey,
+                                                    ),
+                                                  ),
+                                                  IconButton(
+                                                      onPressed: () {},
+                                                      icon: const Icon(
+                                                        FeatherIcons.moreVertical,
+                                                        color: Colors.grey,
+                                                      )),
+                                                ],
+                                              )
+                                            ],
+                                          );
+                                        }, error: (e, stack) {
+                                          return Text(e.toString());
+                                        }, loading: () {
+                                          return const Text('Loading');
+                                        }),
+                                      ],
+                                    ),
                                   ),
-                                )
-                              : Container();
+                                  Container(
+                                    height: 0.5,
+                                    width: context.width(),
+                                    color: Colors.grey,
+                                  )
+                                ],
+                              ),
+                            ),
+                          );
                         },
                       );
                     }, error: (e, stack) {
@@ -439,159 +437,158 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                     }, loading: () {
                       return const Center(child: CircularProgressIndicator());
                     })
-                  : providerDataPurchase.when(data: (transaction) {
+                  : purchaseList.when(data: (transaction) {
                       final reTransaction = transaction.reversed.toList();
                       return ListView.builder(
                         shrinkWrap: true,
                         physics: const NeverScrollableScrollPhysics(),
                         itemCount: reTransaction.length,
                         itemBuilder: (context, index) {
-                          return reTransaction[index].customerPhone == widget.party.phone
-                              ? GestureDetector(
-                                  onTap: () {
-                                    PurchaseInvoiceDetails(
-                                      transitionModel: reTransaction[index],
-                                      personalInformationModel: personalData.value!,
-                                    ).launch(context);
-                                  },
-                                  child: Column(
-                                    children: [
-                                      Container(
-                                        padding: const EdgeInsets.all(20),
-                                        width: context.width(),
-                                        child: Column(
-                                          crossAxisAlignment: CrossAxisAlignment.start,
+                          return Visibility(
+                            visible: reTransaction[index].party?.id == widget.party.id,
+                            child: GestureDetector(
+                              onTap: () {
+                                PurchaseInvoiceDetails(
+                                  transitionModel: reTransaction[index],
+                                  businessInfo: personalData.value!,
+                                ).launch(context);
+                              },
+                              child: Column(
+                                children: [
+                                  Container(
+                                    padding: const EdgeInsets.all(20),
+                                    width: context.width(),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Row(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                           children: [
-                                            Row(
-                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                              children: [
-                                                Text(
-                                                  "${lang.S.of(context).totalProduct} : ${reTransaction[index].productList!.length.toString()}",
-                                                  style: const TextStyle(fontSize: 16),
-                                                ),
-                                                Text('#${reTransaction[index].invoiceNumber}'),
-                                              ],
-                                            ),
-                                            const SizedBox(height: 10),
-                                            Row(
-                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                              children: [
-                                                Container(
-                                                  padding: const EdgeInsets.all(8),
-                                                  decoration: BoxDecoration(
-                                                      color: reTransaction[index].dueAmount! <= 0
-                                                          ? const Color(0xff0dbf7d).withOpacity(0.1)
-                                                          : const Color(0xFFED1A3B).withOpacity(0.1),
-                                                      borderRadius: const BorderRadius.all(Radius.circular(10))),
-                                                  child: Text(
-                                                    reTransaction[index].dueAmount! <= 0 ? lang.S.of(context).paid : lang.S.of(context).unPaid,
-                                                    style: TextStyle(color: reTransaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d) : const Color(0xFFED1A3B)),
-                                                  ),
-                                                ),
-                                                Text(
-                                                  reTransaction[index].purchaseDate.substring(0, 10),
-                                                  style: const TextStyle(color: Colors.grey),
-                                                ),
-                                              ],
-                                            ),
-                                            const SizedBox(height: 10),
                                             Text(
-                                              '${lang.S.of(context).total} : $currency ${reTransaction[index].totalAmount.toString()}',
-                                              style: const TextStyle(color: Colors.grey),
+                                              "${lang.S.of(context).totalProduct} : ${reTransaction[index].details!.length.toString()}",
+                                              style: const TextStyle(fontSize: 16),
                                             ),
-                                            Row(
-                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                              children: [
-                                                Text(
-                                                  '${lang.S.of(context).due}: $currency ${reTransaction[index].dueAmount.toString()}',
-                                                  style: const TextStyle(fontSize: 16),
-                                                ),
-                                                personalData.when(data: (data) {
-                                                  return Row(
-                                                    children: [
-                                                      IconButton(
-                                                          onPressed: () async {
-                                                            await printerData.getBluetooth();
-                                                            PrintPurchaseTransactionModel model = PrintPurchaseTransactionModel(
-                                                              personalInformationModel: data,
-                                                              purchaseTransitionModel: reTransaction[index],
-                                                            );
-                                                            connected
-                                                                ? printerDataPurchase.printTicket(
-                                                                    printTransactionModel: model,
-                                                                    productList: model.purchaseTransitionModel!.productList,
-                                                                  )
-                                                                // ignore: use_build_context_synchronously
-                                                                : showDialog(
-                                                                    context: context,
-                                                                    builder: (_) {
-                                                                      return Dialog(
-                                                                        child: SizedBox(
-                                                                          height: 200,
-                                                                          child: ListView.builder(
-                                                                            itemCount:
-                                                                                printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
-                                                                            itemBuilder: (context, index) {
-                                                                              return ListTile(
-                                                                                onTap: () async {
-                                                                                  String select = printerData.availableBluetoothDevices[index];
-                                                                                  List list = select.split("#");
-                                                                                  // String name = list[0];
-                                                                                  String mac = list[1];
-                                                                                  bool isConnect = await printerData.setConnect(mac);
-                                                                                  // ignore: use_build_context_synchronously
-                                                                                  isConnect
-                                                                                      // ignore: use_build_context_synchronously
-                                                                                      ? finish(context)
-                                                                                      // ignore: use_build_context_synchronously
-                                                                                      : toast(lang.S.of(context).tryAgain);
-                                                                                },
-                                                                                title: Text('${printerData.availableBluetoothDevices[index]}'),
-                                                                                subtitle: Text(lang.S.of(context).connect),
-                                                                              );
-                                                                            },
-                                                                          ),
-                                                                        ),
-                                                                      );
-                                                                    });
-                                                          },
-                                                          icon: const Icon(
-                                                            FeatherIcons.printer,
-                                                            color: Colors.grey,
-                                                          )),
-                                                      IconButton(
-                                                          onPressed: () {},
-                                                          icon: const Icon(
-                                                            FeatherIcons.share,
-                                                            color: Colors.grey,
-                                                          )),
-                                                      IconButton(
-                                                          onPressed: () {},
-                                                          icon: const Icon(
-                                                            FeatherIcons.moreVertical,
-                                                            color: Colors.grey,
-                                                          )),
-                                                    ],
-                                                  );
-                                                }, error: (e, stack) {
-                                                  return Text(e.toString());
-                                                }, loading: () {
-                                                  return Text(lang.S.of(context).loading);
-                                                }),
-                                              ],
+                                            Text('#${reTransaction[index].invoiceNumber}'),
+                                          ],
+                                        ),
+                                        const SizedBox(height: 10),
+                                        Row(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Container(
+                                              padding: const EdgeInsets.all(8),
+                                              decoration: BoxDecoration(
+                                                  color: reTransaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d).withOpacity(0.1) : const Color(0xFFED1A3B).withOpacity(0.1),
+                                                  borderRadius: const BorderRadius.all(Radius.circular(10))),
+                                              child: Text(
+                                                reTransaction[index].dueAmount! <= 0 ? lang.S.of(context).paid : lang.S.of(context).unPaid,
+                                                style: TextStyle(color: reTransaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d) : const Color(0xFFED1A3B)),
+                                              ),
+                                            ),
+                                            Text(
+                                              reTransaction[index].purchaseDate!.substring(0, 10),
+                                              style: const TextStyle(color: Colors.grey),
                                             ),
                                           ],
                                         ),
-                                      ),
-                                      Container(
-                                        height: 0.5,
-                                        width: context.width(),
-                                        color: Colors.grey,
-                                      )
-                                    ],
+                                        const SizedBox(height: 10),
+                                        Text(
+                                          '${lang.S.of(context).total} : $currency ${reTransaction[index].totalAmount.toString()}',
+                                          style: const TextStyle(color: Colors.grey),
+                                        ),
+                                        Row(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              '${lang.S.of(context).due}: $currency ${reTransaction[index].dueAmount.toString()}',
+                                              style: const TextStyle(fontSize: 16),
+                                            ),
+                                            personalData.when(data: (data) {
+                                              return Row(
+                                                children: [
+                                                  IconButton(
+                                                      onPressed: () async {
+                                                        await printerData.getBluetooth();
+                                                        PrintPurchaseTransactionModel model = PrintPurchaseTransactionModel(
+                                                          personalInformationModel: data,
+                                                          purchaseTransitionModel: reTransaction[index],
+                                                        );
+                                                        connected
+                                                            ? printerDataPurchase.printPurchaseThermalInvoice(
+                                                                printTransactionModel: model,
+                                                                productList: model.purchaseTransitionModel!.details ?? [],
+                                                              )
+                                                            // ignore: use_build_context_synchronously
+                                                            : showDialog(
+                                                                context: context,
+                                                                builder: (_) {
+                                                                  return Dialog(
+                                                                    child: SizedBox(
+                                                                      height: 200,
+                                                                      child: ListView.builder(
+                                                                        itemCount:
+                                                                            printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
+                                                                        itemBuilder: (context, index) {
+                                                                          return ListTile(
+                                                                            onTap: () async {
+                                                                              String select = printerData.availableBluetoothDevices[index];
+                                                                              List list = select.split("#");
+                                                                              // String name = list[0];
+                                                                              String mac = list[1];
+                                                                              bool isConnect = await printerData.setConnect(mac);
+                                                                              // ignore: use_build_context_synchronously
+                                                                              isConnect
+                                                                                  // ignore: use_build_context_synchronously
+                                                                                  ? finish(context)
+                                                                                  // ignore: use_build_context_synchronously
+                                                                                  : toast(lang.S.of(context).tryAgain);
+                                                                            },
+                                                                            title: Text('${printerData.availableBluetoothDevices[index]}'),
+                                                                            subtitle: Text(lang.S.of(context).connect),
+                                                                          );
+                                                                        },
+                                                                      ),
+                                                                    ),
+                                                                  );
+                                                                });
+                                                      },
+                                                      icon: const Icon(
+                                                        FeatherIcons.printer,
+                                                        color: Colors.grey,
+                                                      )),
+                                                  IconButton(
+                                                      onPressed: () {},
+                                                      icon: const Icon(
+                                                        FeatherIcons.share,
+                                                        color: Colors.grey,
+                                                      )),
+                                                  IconButton(
+                                                      onPressed: () {},
+                                                      icon: const Icon(
+                                                        FeatherIcons.moreVertical,
+                                                        color: Colors.grey,
+                                                      )),
+                                                ],
+                                              );
+                                            }, error: (e, stack) {
+                                              return Text(e.toString());
+                                            }, loading: () {
+                                              return Text(lang.S.of(context).loading);
+                                            }),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
                                   ),
-                                )
-                              : Container();
+                                  Container(
+                                    height: 0.5,
+                                    width: context.width(),
+                                    color: Colors.grey,
+                                  )
+                                ],
+                              ),
+                            ),
+                          );
                         },
                       );
                     }, error: (e, stack) {

@@ -20,21 +20,6 @@ class TransitionRepo {
   }
 }
 
-class PurchaseTransitionRepo {
-  Future<List<dynamic>> getAllTransition() async {
-    final ref = FirebaseDatabase.instance.ref(constUserId).child('Purchase Transition');
-
-    List<dynamic> transitionList = [];
-    await ref.orderByKey().get().then((value) {
-      for (var element in value.children) {
-        transitionList.add(PurchaseTransitionModel.fromJson(jsonDecode(jsonEncode(element.value))));
-      }
-    });
-    ref.keepSynced(true);
-    return transitionList;
-  }
-}
-
 class DueTransitionRepo {
   Future<List<DueTransactionModel>> getAllTransition() async {
     final ref = FirebaseDatabase.instance.ref(constUserId).child('Due Transaction');

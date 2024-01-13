@@ -48,15 +48,15 @@ class _PurchaseReportState extends State<PurchaseListScreen> {
           elevation: 0.0,
         ),
         body: Consumer(builder: (context, ref, __) {
-          final providerData = ref.watch(purchaseTransitionProvider);
+          final providerData = ref.watch(purchaseTransactionProvider);
           final printerData = ref.watch(printerPurchaseProviderNotifier);
           final personalData = ref.watch(businessInfoProvider);
           final profile = ref.watch(businessInfoProvider);
           final cart = ref.watch(cartNotifierPurchase);
 
           return SingleChildScrollView(
-            child: providerData.when(data: (transaction) {
-              final reTransaction = transaction.reversed.toList();
+            child: providerData.when(data: (reTransaction) {
+              // final reTransaction = transaction.reversed.toList();
               return reTransaction.isNotEmpty
                   ? ListView.builder(
                       shrinkWrap: true,
@@ -66,7 +66,7 @@ class _PurchaseReportState extends State<PurchaseListScreen> {
                         return GestureDetector(
                           onTap: () {
                             PurchaseInvoiceDetails(
-                              personalInformationModel: profile.value!,
+                              businessInfo: profile.value!,
                               transitionModel: reTransaction[index],
                             ).launch(context);
                           },
@@ -82,7 +82,7 @@ class _PurchaseReportState extends State<PurchaseListScreen> {
                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
                                         Text(
-                                          reTransaction[index].customerName,
+                                          reTransaction[index].party?.name ?? '',
                                           style: const TextStyle(fontSize: 16),
                                         ),
                                         Text('#${reTransaction[index].invoiceNumber}'),
@@ -103,7 +103,7 @@ class _PurchaseReportState extends State<PurchaseListScreen> {
                                           ),
                                         ),
                                         Text(
-                                          DateFormat.yMMMd().format(DateTime.parse(reTransaction[index].purchaseDate)),
+                                          DateFormat.yMMMd().format(DateTime.parse(reTransaction[index].purchaseDate ?? '')),
                                           style: const TextStyle(color: Colors.grey),
                                         ),
                                       ],
@@ -135,9 +135,9 @@ class _PurchaseReportState extends State<PurchaseListScreen> {
                                                     PrintPurchaseTransactionModel model =
                                                         PrintPurchaseTransactionModel(purchaseTransitionModel: reTransaction[index], personalInformationModel: data);
                                                     if (connected) {
-                                                      await printerData.printTicket(
+                                                      await printerData.printPurchaseThermalInvoice(
                                                         printTransactionModel: model,
-                                                        productList: model.purchaseTransitionModel!.productList,
+                                                        productList: model.purchaseTransitionModel!.details,
                                                       );
                                                     } else {
                                                       // ignore: use_build_context_synchronously

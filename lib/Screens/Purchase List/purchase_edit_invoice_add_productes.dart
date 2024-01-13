@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 import 'package:flutter_cart/flutter_cart.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Provider/product_provider.dart';
@@ -12,19 +13,22 @@ import 'package:mobile_pos/constant.dart';
 import 'package:mobile_pos/Screens/Products/Model/product_model.dart';
 import 'package:nb_utils/nb_utils.dart';
 
+import '../../Const/api_config.dart';
 import '../../Provider/add_to_cart.dart';
 import '../../Provider/add_to_cart_purchase.dart';
 import '../../model/transition_model.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 
+import '../Purchase/Model/purchase_transaction_model.dart' as parchase;
+
 // ignore: must_be_immutable
 class EditPurchaseInvoiceSaleProducts extends StatefulWidget {
-  EditPurchaseInvoiceSaleProducts({Key? key, @required this.catName, this.customerModel, required this.transitionModel}) : super(key: key);
+  EditPurchaseInvoiceSaleProducts({Key? key, @required this.catName, this.customerModel, required this.purchaseTransaction}) : super(key: key);
 
   // ignore: prefer_typing_uninitialized_variables
   var catName;
   Party? customerModel;
-  PurchaseTransitionModel transitionModel;
+  parchase.PurchaseTransaction purchaseTransaction;
 
   @override
   State<EditPurchaseInvoiceSaleProducts> createState() => _EditPurchaseInvoiceSaleProductsState();
@@ -58,6 +62,15 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
     setState(() {
       productCode = barcodeScanRes;
     });
+  }
+
+  num giveStock({required num id}) {
+    for (var element in widget.purchaseTransaction.details!) {
+      if (element.productId == id) {
+        return element.quantities ?? 0;
+      }
+    }
+    return 0;
   }
 
   @override
@@ -139,13 +152,13 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
                       physics: const NeverScrollableScrollPhysics(),
                       itemCount: products.length,
                       itemBuilder: (_, i) {
-                        if (widget.customerModel!.type?.contains('Retailer')??false) {
+                        if (widget.customerModel!.type?.contains('Retailer') ?? false) {
                           productPrice = products[i].productSalePrice.toString();
-                        } else if (widget.customerModel!.type?.contains('Dealer')??false) {
+                        } else if (widget.customerModel!.type?.contains('Dealer') ?? false) {
                           productPrice = products[i].productDealerPrice.toString();
-                        } else if (widget.customerModel!.type?.contains('Wholesaler')??false) {
+                        } else if (widget.customerModel!.type?.contains('Wholesaler') ?? false) {
                           productPrice = products[i].productWholeSalePrice.toString();
-                        } else if (widget.customerModel!.type?.contains('Supplier')??false) {
+                        } else if (widget.customerModel!.type?.contains('Supplier') ?? false) {
                           productPrice = products[i].productPurchasePrice.toString();
                         }
                         return GestureDetector(
@@ -153,7 +166,33 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
                             showDialog(
                                 context: context,
                                 builder: (_) {
-                                  ProductModel tempProductModel = products[i];
+                                  ProductModel tempProduct = ProductModel(
+                                    type: products[i].type,
+                                    weight: products[i].weight,
+                                    size: products[i].size,
+                                    color: products[i].color,
+                                    capacity: products[i].capacity,
+                                    category: products[i].category,
+                                    unitId: products[i].unitId,
+                                    id: products[i].id,
+                                    brand: products[i].brand,
+                                    brandId: products[i].unitId,
+                                    businessId: products[i].businessId,
+                                    categoryId: products[i].categoryId,
+                                    createdAt: products[i].createdAt,
+                                    unit: products[i].unit,
+                                    updatedAt: products[i].updatedAt,
+                                    productCode: products[i].productCode,
+                                    productDealerPrice: products[i].productDealerPrice,
+                                    productDiscount: products[i].productDiscount,
+                                    productManufacturer: products[i].productManufacturer,
+                                    productName: products[i].productName,
+                                    productPicture: products[i].productPicture,
+                                    productPurchasePrice: products[i].productPurchasePrice,
+                                    productSalePrice: products[i].productSalePrice,
+                                    productStock: 0, //giveStock(id: products[i].id??0),
+                                    productWholeSalePrice: products[i].productWholeSalePrice,
+                                  );
                                   return AlertDialog(
                                       content: SizedBox(
                                     child: SingleChildScrollView(
@@ -192,7 +231,7 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
                                                     style: const TextStyle(fontSize: 16),
                                                   ),
                                                   Text(
-                                                    products[i].brand?.brandName??'',
+                                                    products[i].brand?.brandName ?? '',
                                                     style: const TextStyle(
                                                       fontSize: 16,
                                                       color: Colors.grey,
@@ -225,14 +264,16 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
                                             children: [
                                               Expanded(
                                                 child: AppTextField(
-                                                  textFieldType: TextFieldType.PHONE,
+                                                  textFieldType: TextFieldType.NUMBER,
+                                                  initialValue: tempProduct.productStock.toString(),
+                                                  inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
                                                   onChanged: (value) {
-                                                    // tempProductModel.productStock = value;
+                                                    tempProduct.productStock = num.tryParse(value);
                                                   },
                                                   decoration: InputDecoration(
                                                     floatingLabelBehavior: FloatingLabelBehavior.always,
                                                     labelText: lang.S.of(context).quantity,
-                                                    hintText: '02',
+                                                    hintText: 'Enter quantity',
                                                     border: const OutlineInputBorder(),
                                                   ),
                                                 ),
@@ -244,12 +285,12 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
                                             mainAxisSize: MainAxisSize.min,
                                             children: [
                                               Expanded(
-                                                child: AppTextField(
+                                                child: TextFormField(
                                                   initialValue: products[i].productPurchasePrice.toString(),
                                                   keyboardType: TextInputType.number,
-                                                  textFieldType: TextFieldType.NAME,
+                                                  inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
                                                   onChanged: (value) {
-                                                    // tempProductModel.productPurchasePrice = value;
+                                                    tempProduct.productPurchasePrice = num.tryParse(value);
                                                   },
                                                   decoration: InputDecoration(
                                                     floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -260,12 +301,12 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
                                               ),
                                               const SizedBox(width: 10),
                                               Expanded(
-                                                child: AppTextField(
+                                                child: TextFormField(
                                                   initialValue: products[i].productSalePrice.toString(),
                                                   keyboardType: TextInputType.number,
-                                                  textFieldType: TextFieldType.NAME,
+                                                  inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
                                                   onChanged: (value) {
-                                                    // tempProductModel.productSalePrice = value;
+                                                    tempProduct.productSalePrice = num.tryParse(value);
                                                   },
                                                   decoration: InputDecoration(
                                                     floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -281,12 +322,12 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
                                             mainAxisSize: MainAxisSize.min,
                                             children: [
                                               Expanded(
-                                                child: AppTextField(
+                                                child: TextFormField(
                                                   initialValue: products[i].productWholeSalePrice.toString(),
                                                   keyboardType: TextInputType.number,
-                                                  textFieldType: TextFieldType.NAME,
+                                                  inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
                                                   onChanged: (value) {
-                                                    // tempProductModel.productWholeSalePrice = value;
+                                                    tempProduct.productWholeSalePrice = num.tryParse(value);
                                                   },
                                                   decoration: InputDecoration(
                                                     floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -297,12 +338,12 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
                                               ),
                                               const SizedBox(width: 10),
                                               Expanded(
-                                                child: AppTextField(
+                                                child: TextFormField(
                                                   initialValue: products[i].productDealerPrice.toString(),
                                                   keyboardType: TextInputType.number,
-                                                  textFieldType: TextFieldType.NAME,
+                                                  inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
                                                   onChanged: (value) {
-                                                    // tempProductModel.productDealerPrice = value;
+                                                    tempProduct.productDealerPrice = num.tryParse(value);
                                                   },
                                                   decoration: InputDecoration(
                                                     floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -316,13 +357,17 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
                                           const SizedBox(height: 20),
                                           GestureDetector(
                                             onTap: () {
-                                              providerData.addToCartRiverPod(tempProductModel);
-                                              providerData.addProductsInSales(products[i]);
-                                              ref.refresh(productProvider);
-                                              int count = 0;
-                                              Navigator.popUntil(context, (route) {
-                                                return count++ == 2;
-                                              });
+                                              if ((tempProduct.productStock ?? 0) > 0) {
+                                                providerData.addToCartRiverPod(tempProduct);
+                                                providerData.addProductsInSales(products[i]);
+                                                ref.refresh(productProvider);
+                                                int count = 0;
+                                                Navigator.popUntil(context, (route) {
+                                                  return count++ == 2;
+                                                });
+                                              } else {
+                                                EasyLoading.showError('Please add quantity');
+                                              }
                                             },
                                             child: Container(
                                               height: 60,
@@ -369,10 +414,11 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
                           },
                           child: ProductCard(
                             productTitle: products[i].productName.toString(),
-                            productDescription: products[i].brand?.brandName??'',
+                            productDescription: products[i].brand?.brandName ?? '',
                             stock: products[i].productStock.toString(),
-                            productImage: products[i].productPicture??'',
-                          ).visible((products[i].productCode == productCode || productCode == '0000' || productCode == '-1') && productPrice != '0'),
+                            productImage: products[i].productPicture,
+                          ).visible((products[i].productCode == productCode || productCode == '0000' || productCode == '-1') && productPrice != '0' ||
+                              products[i].productName!.toLowerCase().contains(productCode.toLowerCase())),
                         );
                       });
                 }, error: (e, stack) {
@@ -394,7 +440,8 @@ class ProductCard extends StatefulWidget {
   ProductCard({Key? key, required this.productTitle, required this.productDescription, required this.stock, required this.productImage}) : super(key: key);
 
   // final Product product;
-  String productImage, productTitle, productDescription, stock;
+  String productTitle, productDescription, stock;
+  String? productImage;
 
   @override
   State<ProductCard> createState() => _ProductCardState();
@@ -421,10 +468,15 @@ class _ProductCardState extends State<ProductCard> {
               child: Container(
                 height: 50,
                 width: 50,
-                decoration: BoxDecoration(
-                  image: DecorationImage(image: NetworkImage(widget.productImage), fit: BoxFit.cover),
-                  borderRadius: BorderRadius.circular(90.0),
-                ),
+                decoration: widget.productImage == null
+                    ? BoxDecoration(
+                        image: DecorationImage(image: AssetImage(noProductImageUrl), fit: BoxFit.cover),
+                        borderRadius: BorderRadius.circular(90.0),
+                      )
+                    : BoxDecoration(
+                        image: DecorationImage(image: NetworkImage("${APIConfig.domain}${widget.productImage}"), fit: BoxFit.cover),
+                        borderRadius: BorderRadius.circular(90.0),
+                      ),
               ),
             ),
             Padding(

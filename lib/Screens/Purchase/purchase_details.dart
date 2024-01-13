@@ -5,7 +5,6 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/Screens/Payment/payment_options.dart';
-import 'package:mobile_pos/Screens/Purchase/Model/purchase_report.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../constant.dart';
@@ -178,16 +177,16 @@ class _PurchaseDetailsState extends State<PurchaseDetails> {
             buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
             onPressed: () async {
               try {
-                EasyLoading.show(status: 'Loading...', dismissOnTap: false);
-                // ignore: no_leading_underscores_for_local_identifiers
-                final DatabaseReference _purchaseReportRef = FirebaseDatabase.instance
-                    // ignore: deprecated_member_use
-                    .reference()
-                    .child(constUserId)
-                    .child('Purchase Report');
-                PurchaseReport purchaseReport = PurchaseReport(customer, cart.getTotalAmount().toString(), cart.getCartItemCount().toString());
-                await _purchaseReportRef.push().set(purchaseReport.toJson());
-                EasyLoading.dismiss();
+                // EasyLoading.show(status: 'Loading...', dismissOnTap: false);
+                // // ignore: no_leading_underscores_for_local_identifiers
+                // final DatabaseReference _purchaseReportRef = FirebaseDatabase.instance
+                //     // ignore: deprecated_member_use
+                //     .reference()
+                //     .child(constUserId)
+                //     .child('Purchase Report');
+                // PurchaseReport purchaseReport = PurchaseReport(customer, cart.getTotalAmount().toString(), cart.getCartItemCount().toString());
+                // await _purchaseReportRef.push().set(purchaseReport.toJson());
+                // EasyLoading.dismiss();
                 // ignore: use_build_context_synchronously
                 const PaymentOptions().launch(context);
               } catch (e) {

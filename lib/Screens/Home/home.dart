@@ -55,32 +55,57 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        elevation: 6.0,
-        selectedItemColor: kMainColor,
-        // ignore: prefer_const_literals_to_create_immutables
-        items: [
-          BottomNavigationBarItem(
-            icon: const Icon(FeatherIcons.home),
-            label: lang.S.of(context).home,
+    return WillPopScope(
+      onWillPop: () async {
+        final shouldPop = await showDialog<bool>(
+          context: context,
+          builder: (context) => AlertDialog(
+            title: Text('Are you sure?'),
+            content: Text('Do you want to exit the app?'),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.of(context).pop(false),
+                child: Text('No'),
+              ),
+              TextButton(
+                onPressed: () => Navigator.of(context).pop(true),
+                child: Text('Yes'),
+              ),
+            ],
           ),
-          BottomNavigationBarItem(
-            icon: const Icon(FeatherIcons.shoppingCart),
-            label: lang.S.of(context).sales,
-          ),
-          BottomNavigationBarItem(
-            icon: const Icon(FeatherIcons.fileText),
-            label: lang.S.of(context).reports,
-          ),
-          BottomNavigationBarItem(icon: const Icon(FeatherIcons.settings), label: lang.S.of(context).setting),
-        ],
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
+        );
+        return shouldPop ?? false; // Allow default back button behavior if dialog is dismissed
+      },
+      // onWillPop: () async {
+      //   return await const Home().launch(context, isNewTask: true);
+      // },
+      child: Scaffold(
+        body: Center(
+          child: _widgetOptions.elementAt(_selectedIndex),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          elevation: 6.0,
+          selectedItemColor: kMainColor,
+          // ignore: prefer_const_literals_to_create_immutables
+          items: [
+            BottomNavigationBarItem(
+              icon: const Icon(FeatherIcons.home),
+              label: lang.S.of(context).home,
+            ),
+            BottomNavigationBarItem(
+              icon: const Icon(FeatherIcons.shoppingCart),
+              label: lang.S.of(context).sales,
+            ),
+            BottomNavigationBarItem(
+              icon: const Icon(FeatherIcons.fileText),
+              label: lang.S.of(context).reports,
+            ),
+            BottomNavigationBarItem(icon: const Icon(FeatherIcons.settings), label: lang.S.of(context).setting),
+          ],
+          currentIndex: _selectedIndex,
+          onTap: _onItemTapped,
+        ),
       ),
     );
   }

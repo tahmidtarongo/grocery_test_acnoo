@@ -1,32 +1,30 @@
 // ignore_for_file: unused_result
 
-import 'dart:convert';
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-import 'package:mobile_pos/Provider/customer_provider.dart';
-import 'package:mobile_pos/Provider/transactions_provider.dart';
 import 'package:mobile_pos/Screens/Purchase%20List/purchase_edit_invoice_add_productes.dart';
 import 'package:mobile_pos/Screens/Products/Model/product_model.dart';
-import 'package:mobile_pos/model/transition_model.dart';
+import 'package:mobile_pos/Screens/Purchase%20List/purchase_list_screen.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../Provider/add_to_cart_purchase.dart';
 import '../../Provider/product_provider.dart';
 import '../../Provider/profile_provider.dart';
-import '../../Provider/purchase_report_provider.dart';
 import '../../constant.dart';
-import '../Customers/Model/parties_model.dart';
+import '../Customers/Model/parties_model.dart' as party;
 import 'package:mobile_pos/generated/l10n.dart' as lang;
+
+import '../Purchase/Model/purchase_transaction_model.dart';
+import '../Purchase/Repo/purchase_repo.dart';
 
 class PurchaseListEditScreen extends StatefulWidget {
   const PurchaseListEditScreen({Key? key, required this.transitionModel}) : super(key: key);
 
-  final PurchaseTransitionModel transitionModel;
+  final PurchaseTransaction transitionModel;
 
   @override
   State<PurchaseListEditScreen> createState() => _PurchaseListEditScreenState();
@@ -35,17 +33,15 @@ class PurchaseListEditScreen extends StatefulWidget {
 class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
   @override
   void initState() {
-    pastProducts = widget.transitionModel.productList!;
+    // pastProducts = widget.transitionModel.details!;
     transitionModel = widget.transitionModel;
-    paidAmount = double.parse(widget.transitionModel.totalAmount.toString()) -
-        double.parse(widget.transitionModel.dueAmount.toString()) +
-        double.parse(widget.transitionModel.returnAmount.toString());
-    dropdownValue = widget.transitionModel.paymentType;
+    paidAmount = double.parse(widget.transitionModel.paidAmount.toString());
+    paymentType = widget.transitionModel.paymentType;
     discountAmount = widget.transitionModel.discountAmount!;
     discountText.text = discountAmount.toString();
     paidText.text = paidAmount.toString();
     pastDue = widget.transitionModel.dueAmount!.toInt();
-    returnAmount = widget.transitionModel.returnAmount!;
+    // returnAmount = widget.transitionModel.returnAmount!;
     invoice = widget.transitionModel.invoiceNumber.toInt();
     // TODO: implement initState
     super.initState();
@@ -53,10 +49,10 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
 
   int pastDue = 0;
 
-  late PurchaseTransitionModel transitionModel = PurchaseTransitionModel(
-    customerName: widget.transitionModel.customerName,
-    customerPhone: widget.transitionModel.customerPhone,
-    customerType: widget.transitionModel.customerType,
+  late PurchaseTransaction transitionModel = PurchaseTransaction(
+    // customerName: widget.transitionModel.customerName,
+    // customerPhone: widget.transitionModel.customerPhone,
+    // customerType: widget.transitionModel.customerType,
     invoiceNumber: invoice.toString(),
     purchaseDate: DateTime.now().toString(),
   );
@@ -71,11 +67,11 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
 
   int invoice = 0;
   double paidAmount = 0;
-  double discountAmount = 0;
+  num discountAmount = 0;
   double returnAmount = 0;
   double dueAmount = 0;
   double subTotal = 0;
-  String? dropdownValue = 'Cash';
+  String? paymentType = 'Cash';
 
   double calculateSubtotal({required double total}) {
     subTotal = total - discountAmount;
@@ -109,17 +105,47 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
 
       if (!doNotCheckProducts) {
         List<ProductModel> cartList = [];
-        for (var element in widget.transitionModel.productList!) {
+        for (var element in widget.transitionModel.details!) {
           productList.value?.forEach((products) {
-            if (element.productCode == products.productCode) {
-              ProductModel cartItem = products;
-              cartItem.productStock = element.productStock;
-              cartList.add(cartItem);
+            if (element.productId == products.id) {
+              ProductModel tempProduct = ProductModel(
+                type: products.type,
+                weight: products.weight,
+                size: products.size,
+                color: products.color,
+                capacity: products.capacity,
+                category: products.category,
+                unitId: products.unitId,
+                id: products.id,
+                brand: products.brand,
+                brandId: products.unitId,
+                businessId: products.businessId,
+                categoryId: products.categoryId,
+                createdAt: products.createdAt,
+                unit: products.unit,
+                updatedAt: products.updatedAt,
+                productCode: products.productCode,
+                productDealerPrice: products.productDealerPrice,
+                productDiscount: products.productDiscount,
+                productManufacturer: products.productManufacturer,
+                productName: products.productName,
+                productPicture: products.productPicture,
+                productPurchasePrice: products.productPurchasePrice,
+                productSalePrice: products.productSalePrice,
+                productStock: element.quantities,
+                productWholeSalePrice: products.productWholeSalePrice,
+              );
+              // ProductModel cartItem = products;
+              // cartItem.productStock = element.quantities;
+              cartList.add(tempProduct);
+              providerData.addToCartRiverPod(tempProduct);
+              // consumerRef.refresh(productProvider);
             }
           });
-          if (widget.transitionModel.productList?.length == cartList.length) {
-            providerData.addToCartRiverPodForEdit(cartList);
+          if (widget.transitionModel.details?.length == cartList.length) {
+            // providerData.addToCartRiverPodForEdit(cartList);
             doNotCheckProducts = true;
+            consumerRef.refresh(productProvider);
           }
         }
       }
@@ -162,7 +188,7 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                           textFieldType: TextFieldType.NAME,
                           readOnly: true,
                           initialValue: DateFormat.yMMMd().format(DateTime.parse(
-                            widget.transitionModel.purchaseDate,
+                            widget.transitionModel.purchaseDate ?? '',
                           )),
                           decoration: InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -181,7 +207,7 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                   AppTextField(
                     textFieldType: TextFieldType.NAME,
                     readOnly: true,
-                    initialValue: widget.transitionModel.customerName,
+                    initialValue: widget.transitionModel.party?.name ?? '',
                     decoration: InputDecoration(
                       floatingLabelBehavior: FloatingLabelBehavior.always,
                       labelText: lang.S.of(context).customerName,
@@ -275,12 +301,11 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                   ///_______Add_Button__________________________________________________
                   GestureDetector(
                     onTap: () {
-                      // EditPurchaseInvoiceSaleProducts(
-                      //   catName: null,
-                      //   customerModel:
-                      //       Party(widget.transitionModel.customerName, widget.transitionModel.customerPhone, widget.transitionModel.customerType, '', '', '', ''),
-                      //   transitionModel: widget.transitionModel,
-                      // ).launch(context);
+                      EditPurchaseInvoiceSaleProducts(
+                        catName: null,
+                        customerModel: party.Party(type: 'Retailer'),
+                        purchaseTransaction: widget.transitionModel,
+                      ).launch(context);
                     },
                     child: Container(
                       height: 50,
@@ -469,7 +494,7 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                         ],
                       ),
                       DropdownButton(
-                        value: dropdownValue,
+                        value: paymentType,
                         icon: const Icon(Icons.keyboard_arrow_down),
                         items: paymentsTypeList.map((String items) {
                           return DropdownMenuItem(
@@ -479,7 +504,7 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                         }).toList(),
                         onChanged: (newValue) {
                           setState(() {
-                            dropdownValue = newValue.toString();
+                            paymentType = newValue.toString();
                           });
                         },
                       ),
@@ -558,98 +583,52 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                       Expanded(
                         child: GestureDetector(
                           onTap: () async {
-                            // if (providerData.cartItemPurchaseList.isNotEmpty) {
-                            //   try {
-                            //     EasyLoading.show(status: 'Loading...', dismissOnTap: false);
-                            //
-                            //     dueAmount <= 0 ? transitionModel.isPaid = true : transitionModel.isPaid = false;
-                            //     dueAmount <= 0 ? transitionModel.dueAmount = 0 : transitionModel.dueAmount = dueAmount;
-                            //     returnAmount < 0 ? transitionModel.returnAmount = returnAmount.abs() : transitionModel.returnAmount = 0;
-                            //     transitionModel.discountAmount = discountAmount;
-                            //     transitionModel.totalAmount = subTotal;
-                            //     transitionModel.productList = providerData.cartItemPurchaseList;
-                            //     transitionModel.paymentType = dropdownValue;
-                            //     transitionModel.invoiceNumber = invoice.toString();
-                            //
-                            //     ///________________updateInvoice___________________________________________________________
-                            //     String? key;
-                            //     await FirebaseDatabase.instance.ref(constUserId).child('Purchase Transition').orderByKey().get().then((value) {
-                            //       for (var element in value.children) {
-                            //         final t = PurchaseTransitionModel.fromJson(jsonDecode(jsonEncode(element.value)));
-                            //         if (transitionModel.invoiceNumber == t.invoiceNumber) {
-                            //           key = element.key;
-                            //         }
-                            //       }
-                            //     });
-                            //     await FirebaseDatabase.instance.ref(constUserId).child('Purchase Transition').child(key!).update(transitionModel.toJson());
-                            //
-                            //     ///__________StockMange_________________________________________________
-                            //
-                            //     presentProducts = transitionModel.productList!;
-                            //
-                            //     for (var pastElement in pastProducts) {
-                            //       int i = 0;
-                            //       for (var futureElement in presentProducts) {
-                            //         if (pastElement.productCode == futureElement.productCode) {
-                            //           if (pastElement.productStock.toInt() < futureElement.productStock.toInt() && pastElement.productStock != futureElement.productStock) {
-                            //             ProductModel m = pastElement;
-                            //             m.productStock = (futureElement.productStock.toInt() - pastElement.productStock.toInt()).toString();
-                            //             // ignore: iterable_contains_unrelated_type
-                            //             increaseStockList.contains(pastElement.productCode) ? null : increaseStockList.add(m);
-                            //           } else if (pastElement.productStock.toInt() > futureElement.productStock.toInt() &&
-                            //               pastElement.productStock.toInt() != futureElement.productStock.toInt()) {
-                            //             ProductModel n = pastElement;
-                            //             n.productStock = (pastElement.productStock.toInt() - futureElement.productStock.toInt()).toString();
-                            //             // ignore: iterable_contains_unrelated_type
-                            //             decreaseStockList2.contains(pastElement.productCode) ? null : decreaseStockList2.add(n);
-                            //           }
-                            //           break;
-                            //         } else {
-                            //           i++;
-                            //           if (i == presentProducts.length) {
-                            //             ProductModel n = pastElement;
-                            //             decreaseStockList2.add(n);
-                            //           }
-                            //         }
-                            //       }
-                            //     }
-                            //
-                            //     ///_____________StockUpdate_______________________________________________________
-                            //
-                            //     for (var element in increaseStockList) {
-                            //       increaseStock(productCode: element.productCode, productModel: element);
-                            //     }
-                            //
-                            //     for (var element in decreaseStockList2) {
-                            //       decreaseStock(productCode: element.productCode, productModel: element);
-                            //     }
-                            //
-                            //     ///_________DueUpdate______________________________________________________
-                            //     if (pastDue < transitionModel.dueAmount!) {
-                            //       double due = pastDue - transitionModel.dueAmount!;
-                            //       getSpecificCustomersDueUpdate(phoneNumber: widget.transitionModel.customerPhone, isDuePaid: false, due: due.toInt());
-                            //     } else if (pastDue > transitionModel.dueAmount!) {
-                            //       double due = transitionModel.dueAmount! - pastDue;
-                            //       getSpecificCustomersDueUpdate(phoneNumber: widget.transitionModel.customerPhone, isDuePaid: true, due: due.toInt());
-                            //     }
-                            //
-                            //     providerData.clearCart();
-                            //     consumerRef.refresh(partiesProvider);
-                            //     consumerRef.refresh(productProvider);
-                            //     consumerRef.refresh(purchaseReportProvider);
-                            //     consumerRef.refresh(purchaseTransitionProvider);
-                            //     consumerRef.refresh(businessInfoProvider);
-                            //     EasyLoading.dismiss();
-                            //
-                            //     // ignore: use_build_context_synchronously
-                            //     Navigator.pop(context);
-                            //   } catch (e) {
-                            //     EasyLoading.dismiss();
-                            //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
-                            //   }
-                            // } else {
-                            //   EasyLoading.showError('Add product first');
-                            // }
+                            if (providerData.cartItemPurchaseList.isNotEmpty) {
+                              try {
+                                EasyLoading.show(status: 'Loading...', dismissOnTap: false);
+                                List<CartProducts> selectedProductList = [];
+
+                                for (var element in providerData.cartItemPurchaseList) {
+                                  selectedProductList.add(
+                                    CartProducts(
+                                      productId: element.id ?? 0,
+                                      quantities: element.productStock,
+                                      productWholeSalePrice: element.productWholeSalePrice,
+                                      productSalePrice: element.productSalePrice,
+                                      productPurchasePrice: element.productPurchasePrice,
+                                      productDealerPrice: element.productDealerPrice,
+                                    ),
+                                  );
+                                }
+
+                                PurchaseRepo repo = PurchaseRepo();
+                                PurchaseTransaction? purchaseData;
+                                purchaseData = await repo.updatePurchase(
+                                  id: widget.transitionModel.id!,
+                                  ref: consumerRef,
+                                  context: context,
+                                  totalAmount: subTotal,
+                                  purchaseDate: widget.transitionModel.purchaseDate ?? '',
+                                  products: selectedProductList,
+                                  paymentType: paymentType ?? 'Cash',
+                                  partyId: widget.transitionModel.party?.id ?? 0,
+                                  isPaid: dueAmount <= 0 ? true : false,
+                                  dueAmount: dueAmount <= 0 ? 0 : dueAmount,
+                                  discountAmount: discountAmount,
+                                  paidAmount: paidAmount,
+                                );
+
+                                if (purchaseData != null) {
+                                  providerData.clearCart();
+                                  const PurchaseListScreen().launch(context);
+                                }
+                              } catch (e) {
+                                EasyLoading.dismiss();
+                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
+                              }
+                            } else {
+                              EasyLoading.showError('Add product first');
+                            }
                           },
                           child: Container(
                             height: 60,
@@ -682,64 +661,4 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
       });
     });
   }
-
-//   void increaseStock({required String productCode, required ProductModel productModel}) async {
-//     final ref = FirebaseDatabase.instance.ref('$constUserId/Products/');
-//
-//     var data = await ref.orderByChild('productCode').equalTo(productCode).once();
-//     String productPath = data.snapshot.value.toString().substring(1, 21);
-//
-//     var data1 = await ref.child('$productPath/productStock').once();
-//     int stock = int.parse(data1.snapshot.value.toString());
-//     int remainStock = stock + productModel.productStock.toInt();
-//
-//     ref.child(productPath).update({
-//       'productSalePrice': productModel.productSalePrice,
-//       'productPurchasePrice': productModel.productPurchasePrice,
-//       'productWholeSalePrice': productModel.productWholeSalePrice,
-//       'productDealerPrice': productModel.productDealerPrice,
-//       'productStock': '$remainStock',
-//     });
-//   }
-//
-//   void decreaseStock({required String productCode, required ProductModel productModel}) async {
-//     final ref = FirebaseDatabase.instance.ref('$constUserId/Products/');
-//
-//     var data = await ref.orderByChild('productCode').equalTo(productCode).once();
-//     String productPath = data.snapshot.value.toString().substring(1, 21);
-//
-//     var data1 = await ref.child('$productPath/productStock').once();
-//     int stock = int.parse(data1.snapshot.value.toString());
-//     int remainStock = stock - productModel.productStock.toInt();
-//
-//     ref.child(productPath).update({
-//       'productSalePrice': productModel.productSalePrice,
-//       'productPurchasePrice': productModel.productPurchasePrice,
-//       'productWholeSalePrice': productModel.productWholeSalePrice,
-//       'productDealerPrice': productModel.productDealerPrice,
-//       'productStock': '$remainStock',
-//     });
-//   }
-//
-//   void getSpecificCustomersDueUpdate({required String phoneNumber, required bool isDuePaid, required int due}) async {
-//     final ref = FirebaseDatabase.instance.ref('$constUserId/Customers/');
-//     String? key;
-//
-//     await FirebaseDatabase.instance.ref(constUserId).child('Customers').orderByKey().get().then((value) {
-//       for (var element in value.children) {
-//         var data = jsonDecode(jsonEncode(element.value));
-//         if (data['phoneNumber'] == phoneNumber) {
-//           key = element.key;
-//         }
-//       }
-//     });
-//     var data1 = await ref.child('$key/due').once();
-//     int previousDue = data1.snapshot.value.toString().toInt();
-//
-//     int totalDue;
-//
-//     isDuePaid ? totalDue = previousDue + due : totalDue = previousDue - due;
-//     ref.child(key!).update({'due': '$totalDue'});
-//   }
-// }
 }

@@ -28,7 +28,12 @@ class CartNotifier extends ChangeNotifier {
     bool isNotInList = true;
     for (var element in cartItemPurchaseList) {
       if (element.productCode == cartItem.productCode) {
-        element.productStock = ((element.productStock??0) + (cartItem.productStock??0));
+        element.productStock = ((element.productStock ?? 0) + (cartItem.productStock ?? 0));
+        element.productSalePrice = cartItem.productSalePrice;
+        element.productPurchasePrice = cartItem.productPurchasePrice;
+        element.productDealerPrice = cartItem.productDealerPrice;
+        element.productWholeSalePrice = cartItem.productWholeSalePrice;
+
         isNotInList = false;
         return;
       } else {
@@ -42,12 +47,14 @@ class CartNotifier extends ChangeNotifier {
   }
 
   addToCartRiverPodForEdit(List<ProductModel> cartItem) {
+    // cartItemPurchaseList.addAll(iterable)
     cartItemPurchaseList = cartItem;
+    notifyListeners();
   }
 
   quantityDecrease(int index) {
-    if ((cartItemPurchaseList[index].productStock??0) > 1) {
-      int quantity = (cartItemPurchaseList[index].productStock??0).round();
+    if ((cartItemPurchaseList[index].productStock ?? 0) > 1) {
+      int quantity = (cartItemPurchaseList[index].productStock ?? 0).round();
       quantity--;
       cartItemPurchaseList[index].productStock = quantity;
     }
@@ -55,7 +62,7 @@ class CartNotifier extends ChangeNotifier {
   }
 
   quantityIncrease(int index) {
-    int quantity = (cartItemPurchaseList[index].productStock??0).round();
+    int quantity = (cartItemPurchaseList[index].productStock ?? 0).round();
     quantity++;
     cartItemPurchaseList[index].productStock = quantity;
     notifyListeners();

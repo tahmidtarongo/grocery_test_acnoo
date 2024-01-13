@@ -1,6 +1,7 @@
 import 'package:mobile_pos/model/due_transaction_model.dart';
 import 'package:mobile_pos/model/transition_model.dart';
 
+import '../Screens/Purchase/Model/purchase_transaction_model.dart';
 import 'business_info_model.dart';
 
 class PrintTransactionModel {
@@ -14,7 +15,7 @@ class PrintPurchaseTransactionModel {
   PrintPurchaseTransactionModel({required this.purchaseTransitionModel, required this.personalInformationModel});
 
   BusinessInformationModel personalInformationModel;
-  PurchaseTransitionModel? purchaseTransitionModel;
+  PurchaseTransaction? purchaseTransitionModel;
 }
 
 class PrintDueTransactionModel {
