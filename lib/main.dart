@@ -71,25 +71,18 @@ class MyApp extends StatelessWidget {
                 builder: EasyLoading.init(),
                 routes: {
                   '/': (context) => const SplashScreen(),
-                  // '/': (context) => const ProPackagesScreen(),
                   '/onBoard': (context) => const OnBoard(),
                   '/signIn': (context) => const SignInScreen(),
                   '/loginForm': (context) => const LoginForm(isEmailLogin: true),
                   '/signup': (context) => const RegisterScreen(),
                   '/purchaseCustomer': (context) => const PurchaseContact(),
                   '/forgotPassword': (context) => const ForgotPassword(),
-                  // '/success': (context) =>  SuccessScreen(),
-                  // '/setupProfile': (context) => const ProfileSetup(),
                   '/home': (context) => const Home(),
                   '/profile': (context) => const ProfileScreen(),
-                  // ignore: missing_required_param
-
                   '/AddProducts': (context) => AddProduct(),
                   '/UpdateProducts': (context) => UpdateProduct(),
-
                   '/Products': (context) => const ProductList(),
-                  // ignore: prefer_const_constructors
-                  '/salesCustomer': (context) => SalesContact(),
+                  '/salesCustomer': (context) => const SalesContact(),
                   '/addPromoCode': (context) => const AddPromoCode(),
                   '/addDiscount': (context) => const AddDiscount(),
                   '/Sales': (context) => const SalesContact(),
