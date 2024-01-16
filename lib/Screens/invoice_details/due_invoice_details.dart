@@ -3,20 +3,19 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
+import '../../Const/api_config.dart';
 import '../../Provider/printer_due_provider.dart';
 import '../../currency.dart';
 import '../../invoice_constant.dart';
-
-// ignore: library_prefixes
 import '../../constant.dart' as mainConstant;
 import '../../model/business_info_model.dart';
-import '../../model/due_transaction_model.dart';
 import '../../model/print_transaction_model.dart';
+import '../Due Calculation/Model/due_collection_model.dart';
 
 class DueInvoiceDetails extends StatefulWidget {
-  const DueInvoiceDetails({Key? key, required this.transitionModel, required this.personalInformationModel}) : super(key: key);
+  const DueInvoiceDetails({Key? key, required this.dueCollection, required this.personalInformationModel}) : super(key: key);
 
-  final DueTransactionModel transitionModel;
+  final DueCollection dueCollection;
   final BusinessInformationModel personalInformationModel;
 
   @override
@@ -42,16 +41,20 @@ class _DueInvoiceDetailsState extends State<DueInvoiceDetails> {
                     leading: Container(
                       height: 50.0,
                       width: 50.0,
-                      decoration: BoxDecoration(
+                      decoration: widget.personalInformationModel.pictureUrl.isEmptyOrNull
+                          ? const BoxDecoration(
                         image: DecorationImage(
-                          image: NetworkImage(widget.personalInformationModel.pictureUrl ?? ''),
+                          image: AssetImage('images/no_shop_image.png'),
+                        ),
+                      )
+                          : BoxDecoration(
+                        image: DecorationImage(
+                          image: NetworkImage('${APIConfig.domain}${widget.personalInformationModel.pictureUrl ?? ''}'),
                         ),
                       ),
                     ),
                     title: Text(
-                      widget.transitionModel.sellerName.isEmptyOrNull
-                          ? widget.personalInformationModel.companyName.toString()
-                          : '${widget.personalInformationModel.companyName} [${widget.transitionModel.sellerName}]',
+                      '${widget.dueCollection.user?.name}',
                       style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold, fontSize: 18.0),
                     ),
                     subtitle: Column(
@@ -86,7 +89,7 @@ class _DueInvoiceDetailsState extends State<DueInvoiceDetails> {
                       ),
                       const Spacer(),
                       Text(
-                        '${lang.S.of(context).invoice}# ${widget.transitionModel.invoiceNumber}',
+                        '${lang.S.of(context).invoice}# ${widget.dueCollection.invoiceNumber}',
                         style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
                       ),
                     ],
@@ -95,12 +98,12 @@ class _DueInvoiceDetailsState extends State<DueInvoiceDetails> {
                   Row(
                     children: [
                       Text(
-                        widget.transitionModel.customerName,
+                        widget.dueCollection.party?.name ?? '',
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                       const Spacer(),
                       Text(
-                        DateFormat.yMMMd().format(DateTime.parse(widget.transitionModel.purchaseDate)),
+                        DateFormat.yMMMd().format(DateTime.parse(widget.dueCollection.paymentDate ?? '')),
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                     ],
@@ -109,12 +112,12 @@ class _DueInvoiceDetailsState extends State<DueInvoiceDetails> {
                   Row(
                     children: [
                       Text(
-                        widget.transitionModel.customerPhone,
+                        widget.dueCollection.party?.name ?? '',
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                       const Spacer(),
                       Text(
-                        widget.transitionModel.purchaseDate.substring(10, 16),
+                        widget.dueCollection.paymentDate!.substring(10, 16),
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                     ],
@@ -136,7 +139,7 @@ class _DueInvoiceDetailsState extends State<DueInvoiceDetails> {
                       SizedBox(
                         width: 120,
                         child: Text(
-                          '$currency ${widget.transitionModel.totalDue}',
+                          '$currency ${widget.dueCollection.totalDue}',
                           maxLines: 2,
                           style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
                           textAlign: TextAlign.end,
@@ -157,7 +160,7 @@ class _DueInvoiceDetailsState extends State<DueInvoiceDetails> {
                       SizedBox(
                         width: 120,
                         child: Text(
-                          '$currency ${widget.transitionModel.payDueAmount}',
+                          '$currency ${widget.dueCollection.payDueAmount}',
                           maxLines: 2,
                           style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
                           textAlign: TextAlign.end,
@@ -178,7 +181,7 @@ class _DueInvoiceDetailsState extends State<DueInvoiceDetails> {
                       SizedBox(
                         width: 120,
                         child: Text(
-                          '$currency ${widget.transitionModel.dueAmountAfterPay}',
+                          '$currency ${widget.dueCollection.dueAmountAfterPay}',
                           maxLines: 2,
                           style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
                           textAlign: TextAlign.end,
@@ -203,90 +206,122 @@ class _DueInvoiceDetailsState extends State<DueInvoiceDetails> {
               ),
             ),
           ),
-          floatingActionButton: Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: GestureDetector(
-              onTap: () async {
-                await printerData.getBluetooth();
-                PrintDueTransactionModel model = PrintDueTransactionModel(dueTransactionModel: widget.transitionModel, personalInformationModel: widget.personalInformationModel);
-                mainConstant.connected
-                    ? printerData.printTicket(
-                        printDueTransactionModel: model,
-                      )
-                    // ignore: use_build_context_synchronously
-                    : showDialog(
-                        context: context,
-                        builder: (_) {
-                          return WillPopScope(
-                            onWillPop: () async => false,
-                            child: Dialog(
-                              child: SizedBox(
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    ListView.builder(
-                                      shrinkWrap: true,
-                                      itemCount: printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
-                                      itemBuilder: (context, index) {
-                                        return ListTile(
-                                          onTap: () async {
-                                            String select = printerData.availableBluetoothDevices[index];
-                                            List list = select.split("#");
-                                            // String name = list[0];
-                                            String mac = list[1];
-                                            bool isConnect = await printerData.setConnect(mac);
-                                            // ignore: use_build_context_synchronously
-                                            isConnect ? finish(context) : toast('Try Again');
-                                          },
-                                          title: Text('${printerData.availableBluetoothDevices[index]}'),
-                                          subtitle: Text(lang.S.of(context).clickToConnect),
-                                        );
-                                      },
-                                    ),
-                                    const SizedBox(height: 10),
-                                    Text(lang.S.of(context).connectPrinter),
-                                    const SizedBox(height: 10),
-                                    Container(height: 1, width: double.infinity, color: Colors.grey),
-                                    const SizedBox(height: 15),
-                                    GestureDetector(
-                                      onTap: () {
-                                        Navigator.pop(context);
-                                      },
-                                      child: Center(
-                                        child: Text(
-                                          lang.S.of(context).cancel,
-                                          style: const TextStyle(color: mainConstant.kMainColor),
-                                        ),
-                                      ),
-                                    ),
-                                    const SizedBox(height: 15),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          );
-                        });
-              },
-              child: Container(
-                height: 60,
-                width: context.width() / 3,
-                decoration: const BoxDecoration(
-                  color: mainConstant.kMainColor,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(30),
-                  ),
-                ),
-                child: Center(
-                  child: Text(
-                    lang.S.of(context).print,
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.white,
+          floatingActionButton: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Container(
+                    height: 60,
+                    width: context.width() / 3,
+                    decoration: const BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(30),
+                      ),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Cancel',
+                        style: const TextStyle(
+                          fontSize: 18,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: GestureDetector(
+                  onTap: () async {
+                    await printerData.getBluetooth();
+                    PrintDueTransactionModel model = PrintDueTransactionModel(dueTransactionModel: widget.dueCollection, personalInformationModel: widget.personalInformationModel);
+                    mainConstant.connected
+                        ? printerData.printTicket(
+                            printDueTransactionModel: model,
+                          )
+                        // ignore: use_build_context_synchronously
+                        : showDialog(
+                            context: context,
+                            builder: (_) {
+                              return WillPopScope(
+                                onWillPop: () async => false,
+                                child: Dialog(
+                                  child: SizedBox(
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        ListView.builder(
+                                          shrinkWrap: true,
+                                          itemCount: printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
+                                          itemBuilder: (context, index) {
+                                            return ListTile(
+                                              onTap: () async {
+                                                String select = printerData.availableBluetoothDevices[index];
+                                                List list = select.split("#");
+                                                // String name = list[0];
+                                                String mac = list[1];
+                                                bool isConnect = await printerData.setConnect(mac);
+                                                // ignore: use_build_context_synchronously
+                                                isConnect ? finish(context) : toast('Try Again');
+                                              },
+                                              title: Text('${printerData.availableBluetoothDevices[index]}'),
+                                              subtitle: Text(lang.S.of(context).clickToConnect),
+                                            );
+                                          },
+                                        ),
+                                        const SizedBox(height: 10),
+                                        Text(lang.S.of(context).connectPrinter),
+                                        const SizedBox(height: 10),
+                                        Container(height: 1, width: double.infinity, color: Colors.grey),
+                                        const SizedBox(height: 15),
+                                        GestureDetector(
+                                          onTap: () {
+                                            Navigator.pop(context);
+                                          },
+                                          child: Center(
+                                            child: Text(
+                                              lang.S.of(context).cancel,
+                                              style: const TextStyle(color: mainConstant.kMainColor),
+                                            ),
+                                          ),
+                                        ),
+                                        const SizedBox(height: 15),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              );
+                            });
+                  },
+                  child: Container(
+                    height: 60,
+                    width: context.width() / 3,
+                    decoration: const BoxDecoration(
+                      color: mainConstant.kMainColor,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(30),
+                      ),
+                    ),
+                    child: Center(
+                      child: Text(
+                        lang.S.of(context).print,
+                        style: const TextStyle(
+                          fontSize: 18,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
           floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         ),

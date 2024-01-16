@@ -3,7 +3,7 @@ import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-import 'package:mobile_pos/Provider/printer_provider.dart';
+import 'package:mobile_pos/Provider/print_sales_invoice_provider.dart';
 import 'package:mobile_pos/Provider/transactions_provider.dart';
 import 'package:mobile_pos/Screens/Loss_Profit/single_loss_profit_screen.dart';
 import 'package:mobile_pos/model/print_transaction_model.dart';
@@ -54,8 +54,8 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
           child: Column(
             children: [
               Consumer(builder: (context, ref, __) {
-                final providerData = ref.watch(transitionProvider);
-                final printerData = ref.watch(printerProviderNotifier);
+                final providerData = ref.watch(salesTransactionProvider);
+                final printerData = ref.watch(salesPrinterProvider);
                 final personalData = ref.watch(businessInfoProvider);
 
                 return SingleChildScrollView(
@@ -129,16 +129,15 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                         ),
                       ),
                       providerData.when(data: (transaction) {
-                        final reTransaction = transaction.reversed.toList();
 
-                        for (var element in reTransaction) {
-                          if ((fromDate.isBefore(DateTime.parse(element.purchaseDate)) || DateTime.parse(element.purchaseDate).isAtSameMomentAs(fromDate)) &&
-                              (toDate.isAfter(DateTime.parse(element.purchaseDate)) || DateTime.parse(element.purchaseDate).isAtSameMomentAs(toDate))) {
-                            element.lossProfit!.isNegative ? totalLoss = totalLoss + element.lossProfit!.abs() : totalProfit = totalProfit + element.lossProfit!;
+                        for (var element in transaction) {
+                          if ((fromDate.isBefore(DateTime.parse(element.saleDate ?? '')) || DateTime.parse(element.saleDate ?? '').isAtSameMomentAs(fromDate)) &&
+                              (toDate.isAfter(DateTime.parse(element.saleDate ?? '')) || DateTime.parse(element.saleDate ?? '').isAtSameMomentAs(toDate))) {
+                            (element.detailsSumLossProfit??0).isNegative ? totalLoss = totalLoss + (element.detailsSumLossProfit??0).abs() : totalProfit = totalProfit + (element.detailsSumLossProfit??0);
                           }
                         }
 
-                        return reTransaction.isNotEmpty
+                        return transaction.isNotEmpty
                             ? Column(
                                 children: [
                                   Padding(
@@ -207,16 +206,16 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                                   ListView.builder(
                                     shrinkWrap: true,
                                     physics: const NeverScrollableScrollPhysics(),
-                                    itemCount: reTransaction.length,
+                                    itemCount: transaction.length,
                                     itemBuilder: (context, index) {
-                                      return (fromDate.isBefore(DateTime.parse(reTransaction[index].purchaseDate)) ||
-                                                  DateTime.parse(reTransaction[index].purchaseDate).isAtSameMomentAs(fromDate)) &&
-                                              (toDate.isAfter(DateTime.parse(reTransaction[index].purchaseDate)) ||
-                                                  DateTime.parse(reTransaction[index].purchaseDate).isAtSameMomentAs(toDate))
+                                      return (fromDate.isBefore(DateTime.parse(transaction[index].saleDate ?? '')) ||
+                                                  DateTime.parse(transaction[index].saleDate ?? '').isAtSameMomentAs(fromDate)) &&
+                                              (toDate.isAfter(DateTime.parse(transaction[index].saleDate ?? '')) ||
+                                                  DateTime.parse(transaction[index].saleDate ?? '').isAtSameMomentAs(toDate))
                                           ? GestureDetector(
                                               onTap: () {
                                                 SingleLossProfitScreen(
-                                                  transactionModel: reTransaction[index],
+                                                  transactionModel: transaction[index],
                                                 ).launch(context);
                                               },
                                               child: Column(
@@ -231,11 +230,13 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                                                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                           children: [
                                                             Text(
-                                                              reTransaction[index].customerName.isNotEmpty ? reTransaction[index].customerName : reTransaction[index].customerPhone,
+                                                              (transaction[index].party?.name?.isEmptyOrNull ?? false)
+                                                                  ? transaction[index].party?.name ?? ''
+                                                                  : transaction[index].party?.phone ?? '',
                                                               style: const TextStyle(fontSize: 16),
                                                             ),
                                                             Text(
-                                                              '#${reTransaction[index].invoiceNumber}',
+                                                              '#${transaction[index].invoiceNumber}',
                                                               style: const TextStyle(color: Colors.black),
                                                             ),
                                                           ],
@@ -247,25 +248,25 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                                                             Container(
                                                               padding: const EdgeInsets.all(8),
                                                               decoration: BoxDecoration(
-                                                                  color: reTransaction[index].dueAmount! <= 0
+                                                                  color: transaction[index].dueAmount! <= 0
                                                                       ? const Color(0xff0dbf7d).withOpacity(0.1)
                                                                       : const Color(0xFFED1A3B).withOpacity(0.1),
                                                                   borderRadius: const BorderRadius.all(Radius.circular(10))),
                                                               child: Text(
-                                                                reTransaction[index].dueAmount! <= 0 ? lang.S.of(context).paid : lang.S.of(context).unPaid,
-                                                                style: TextStyle(color: reTransaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d) : const Color(0xFFED1A3B)),
+                                                                transaction[index].dueAmount! <= 0 ? lang.S.of(context).paid : lang.S.of(context).unPaid,
+                                                                style: TextStyle(color: transaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d) : const Color(0xFFED1A3B)),
                                                               ),
                                                             ),
                                                             Column(
                                                               crossAxisAlignment: CrossAxisAlignment.end,
                                                               children: [
                                                                 Text(
-                                                                  DateFormat.yMMMd().format(DateTime.parse(reTransaction[index].purchaseDate)),
+                                                                  DateFormat.yMMMd().format(DateTime.parse(transaction[index].saleDate ?? '')),
                                                                   style: const TextStyle(color: Colors.grey),
                                                                 ),
                                                                 const SizedBox(height: 5),
                                                                 Text(
-                                                                  DateFormat.jm().format(DateTime.parse(reTransaction[index].purchaseDate)),
+                                                                  DateFormat.jm().format(DateTime.parse(transaction[index].saleDate ?? '')),
                                                                   style: const TextStyle(color: Colors.grey),
                                                                 ),
                                                               ],
@@ -278,18 +279,18 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                                                           children: [
                                                             Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                                                               Text(
-                                                                '${lang.S.of(context).total} : $currency ${reTransaction[index].totalAmount.toString()}',
+                                                                '${lang.S.of(context).total} : $currency ${transaction[index].totalAmount.toString()}',
                                                                 style: const TextStyle(color: Colors.grey),
                                                               ),
                                                               const SizedBox(height: 5),
                                                               Text(
-                                                                '${lang.S.of(context).profit} : $currency ${reTransaction[index].lossProfit}',
+                                                                '${lang.S.of(context).profit} : $currency ${transaction[index].detailsSumLossProfit}',
                                                                 style: const TextStyle(color: Colors.green, fontWeight: FontWeight.bold),
-                                                              ).visible(!reTransaction[index].lossProfit!.isNegative),
+                                                              ).visible(!transaction[index].detailsSumLossProfit!.isNegative),
                                                               Text(
-                                                                '${lang.S.of(context).loss}: $currency ${reTransaction[index].lossProfit!.abs()}',
+                                                                '${lang.S.of(context).loss}: $currency ${transaction[index].detailsSumLossProfit!.abs()}',
                                                                 style: const TextStyle(color: Colors.redAccent, fontWeight: FontWeight.bold),
-                                                              ).visible(reTransaction[index].lossProfit!.isNegative),
+                                                              ).visible(transaction[index].detailsSumLossProfit!.isNegative),
                                                             ]),
                                                             personalData.when(data: (data) {
                                                               return Row(
@@ -300,11 +301,11 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                                                                         totalLoss = 0;
                                                                         await printerData.getBluetooth();
                                                                         PrintTransactionModel model =
-                                                                            PrintTransactionModel(transitionModel: reTransaction[index], personalInformationModel: data);
+                                                                            PrintTransactionModel(transitionModel: transaction[index], personalInformationModel: data);
                                                                         connected
-                                                                            ? printerData.printTicket(
+                                                                            ? printerData.printSalesTicket(
                                                                                 printTransactionModel: model,
-                                                                                productList: model.transitionModel!.productList,
+                                                                                productList: model.transitionModel!.details,
                                                                               )
                                                                             // ignore: use_build_context_synchronously
                                                                             : showDialog(

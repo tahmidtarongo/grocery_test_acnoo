@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/GlobalComponents/category_card.dart';
 import 'package:mobile_pos/Screens/Products/product_data.dart';
-import 'package:mobile_pos/Screens/Sales/sales_screen.dart';
+import 'package:mobile_pos/Screens/Sales/sales_products_list_screen.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import '../../constant.dart';
@@ -97,7 +97,7 @@ class _SalesCategoryListState extends State<SalesCategoryList> {
                     (index) => CategoryCard(
                       product: demoCategory[index],
                       pressed: () {
-                        SaleProducts(catName: demoCategory[index].title).launch(context);
+                        SaleProductsList(catName: demoCategory[index].title).launch(context);
                       },
                     ),
                   ),

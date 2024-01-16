@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile_pos/Const/api_config.dart';
 import 'package:mobile_pos/Provider/add_to_cart.dart';
 import 'package:mobile_pos/Screens/Customers/Model/parties_model.dart';
 import 'package:mobile_pos/Screens/Customers/add_customer.dart';
@@ -71,9 +72,7 @@ class _SalesContactState extends State<SalesContact> {
                         ),
                         GestureDetector(
                           onTap: () {
-                            Party guestModel = Party(
-                            );
-                            AddSalesScreen(customerModel: guestModel).launch(context);
+                            AddSalesScreen(customerModel: null).launch(context);
                             cart.clearCart();
                           },
                           child: Padding(
@@ -88,8 +87,8 @@ class _SalesContactState extends State<SalesContact> {
                                     backgroundColor: Colors.white,
                                     radius: 70.0,
                                     child: ClipOval(
-                                      child: Image.network(
-                                        'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png',
+                                      child: Image.asset(
+                                        'images/no_shop_image.png',
                                         fit: BoxFit.cover,
                                         width: 120.0,
                                         height: 120.0,
@@ -155,12 +154,19 @@ class _SalesContactState extends State<SalesContact> {
                                                 backgroundColor: Colors.white,
                                                 radius: 70.0,
                                                 child: ClipOval(
-                                                  child: Image.network(
-                                                    customer[index].image??'',
-                                                    fit: BoxFit.cover,
-                                                    width: 120.0,
-                                                    height: 120.0,
-                                                  ),
+                                                  child: customer[index].image == null
+                                                      ? Image.asset(
+                                                          'images/no_shop_image.png',
+                                                          fit: BoxFit.cover,
+                                                          width: 120.0,
+                                                          height: 120.0,
+                                                        )
+                                                      : Image.network(
+                                                          '${APIConfig.domain}${customer[index].image}',
+                                                          fit: BoxFit.cover,
+                                                          width: 120.0,
+                                                          height: 120.0,
+                                                        ),
                                                 ),
                                               ),
                                             ),
@@ -170,14 +176,14 @@ class _SalesContactState extends State<SalesContact> {
                                               crossAxisAlignment: CrossAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  customer[index].name??'',
+                                                  customer[index].name ?? '',
                                                   style: GoogleFonts.poppins(
                                                     color: Colors.black,
                                                     fontSize: 15.0,
                                                   ),
                                                 ),
                                                 Text(
-                                                  customer[index].type??'',
+                                                  customer[index].type ?? '',
                                                   style: GoogleFonts.poppins(
                                                     color: color,
                                                     fontSize: 15.0,
@@ -221,9 +227,7 @@ class _SalesContactState extends State<SalesContact> {
                     )
                   : GestureDetector(
                       onTap: () {
-                        Party guestModel = Party(
-                        );
-                        AddSalesScreen(customerModel: guestModel).launch(context);
+                        AddSalesScreen(customerModel: null).launch(context);
                         cart.clearCart();
                       },
                       child: Padding(
@@ -238,8 +242,8 @@ class _SalesContactState extends State<SalesContact> {
                                 backgroundColor: Colors.white,
                                 radius: 70.0,
                                 child: ClipOval(
-                                  child: Image.network(
-                                    'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png',
+                                  child: Image.asset(
+                                    'images/no_shop_image.png',
                                     fit: BoxFit.cover,
                                     width: 120.0,
                                     height: 120.0,

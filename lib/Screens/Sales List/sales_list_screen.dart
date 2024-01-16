@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:mobile_pos/Provider/add_to_cart.dart';
-import 'package:mobile_pos/Provider/printer_provider.dart';
+import 'package:mobile_pos/Provider/print_sales_invoice_provider.dart';
 import 'package:mobile_pos/Provider/transactions_provider.dart';
 import 'package:mobile_pos/Screens/Sales%20List/sales_report_edit_screen.dart';
 import 'package:mobile_pos/model/print_transaction_model.dart';
@@ -48,25 +48,24 @@ class _SalesListScreenState extends State<SalesListScreen> {
           elevation: 0.0,
         ),
         body: Consumer(builder: (context, ref, __) {
-          final providerData = ref.watch(transitionProvider);
+          final providerData = ref.watch(salesTransactionProvider);
           final profile = ref.watch(businessInfoProvider);
-          final printerData = ref.watch(printerProviderNotifier);
+          final printerData = ref.watch(salesPrinterProvider);
           final personalData = ref.watch(businessInfoProvider);
           final cart = ref.watch(cartNotifier);
           return SingleChildScrollView(
             child: providerData.when(data: (transaction) {
-              final reTransaction = transaction.reversed.toList();
-              return reTransaction.isNotEmpty
+              return transaction.isNotEmpty
                   ? ListView.builder(
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
-                      itemCount: reTransaction.length,
+                      itemCount: transaction.length,
                       itemBuilder: (context, index) {
                         return GestureDetector(
                           onTap: () {
                             SalesInvoiceDetails(
-                              transitionModel: reTransaction[index],
-                              personalInformationModel: profile.value!,
+                              saleTransaction: transaction[index],
+                              businessInfo: profile.value!,
                             ).launch(context);
                           },
                           child: Column(
@@ -81,10 +80,10 @@ class _SalesListScreenState extends State<SalesListScreen> {
                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
                                         Text(
-                                          reTransaction[index].customerName,
+                                          transaction[index].party?.name??'',
                                           style: const TextStyle(fontSize: 16),
                                         ),
-                                        Text('#${reTransaction[index].invoiceNumber}'),
+                                        Text('#${transaction[index].invoiceNumber}'),
                                       ],
                                     ),
                                     const SizedBox(height: 10),
@@ -94,47 +93,47 @@ class _SalesListScreenState extends State<SalesListScreen> {
                                         Container(
                                           padding: const EdgeInsets.all(8),
                                           decoration: BoxDecoration(
-                                              color: reTransaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d).withOpacity(0.1) : const Color(0xFFED1A3B).withOpacity(0.1),
+                                              color: transaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d).withOpacity(0.1) : const Color(0xFFED1A3B).withOpacity(0.1),
                                               borderRadius: const BorderRadius.all(Radius.circular(10))),
                                           child: Text(
-                                            reTransaction[index].dueAmount! <= 0 ? lang.S.of(context).paid : lang.S.of(context).unPaid,
-                                            style: TextStyle(color: reTransaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d) : const Color(0xFFED1A3B)),
+                                            transaction[index].dueAmount! <= 0 ? lang.S.of(context).paid : lang.S.of(context).unPaid,
+                                            style: TextStyle(color: transaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d) : const Color(0xFFED1A3B)),
                                           ),
                                         ),
                                         Text(
-                                          DateFormat.yMMMd().format(DateTime.parse(reTransaction[index].purchaseDate)),
+                                          DateFormat.yMMMd().format(DateTime.parse(transaction[index].saleDate??'')),
                                           style: const TextStyle(color: Colors.grey),
                                         ),
                                       ],
                                     ),
                                     const SizedBox(height: 10),
                                     Text(
-                                      ' ${lang.S.of(context).total} : $currency ${reTransaction[index].totalAmount.toString()}',
+                                      ' ${lang.S.of(context).total} : $currency ${transaction[index].totalAmount.toString()}',
                                       style: const TextStyle(color: Colors.grey),
                                     ),
                                     const SizedBox(height: 10),
                                     Text(
-                                      '${lang.S.of(context).paid} : $currency ${reTransaction[index].totalAmount!.toDouble() - reTransaction[index].dueAmount!.toDouble()}',
+                                      '${lang.S.of(context).paid} : $currency ${transaction[index].totalAmount!.toDouble() - transaction[index].dueAmount!.toDouble()}',
                                       style: const TextStyle(color: Colors.grey),
                                     ),
                                     Row(
                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
                                         Text(
-                                          '${lang.S.of(context).due}: $currency ${reTransaction[index].dueAmount.toString()}',
+                                          '${lang.S.of(context).due}: $currency ${transaction[index].dueAmount.toString()}',
                                           style: const TextStyle(fontSize: 16),
-                                        ).visible(reTransaction[index].dueAmount!.toInt() != 0),
+                                        ).visible(transaction[index].dueAmount!.toInt() != 0),
                                         personalData.when(data: (data) {
                                           return Row(
                                             children: [
                                               IconButton(
                                                   onPressed: () async {
                                                     await printerData.getBluetooth();
-                                                    PrintTransactionModel model = PrintTransactionModel(transitionModel: reTransaction[index], personalInformationModel: data);
+                                                    PrintTransactionModel model = PrintTransactionModel(transitionModel: transaction[index], personalInformationModel: data);
                                                     connected
-                                                        ? printerData.printTicket(
+                                                        ? printerData.printSalesTicket(
                                                             printTransactionModel: model,
-                                                            productList: model.transitionModel!.productList,
+                                                            productList: model.transitionModel!.details,
                                                           )
                                                         // ignore: use_build_context_synchronously
                                                         : showDialog(
@@ -199,7 +198,7 @@ class _SalesListScreenState extends State<SalesListScreen> {
                                                     color: Colors.grey,
                                                   )),
                                               IconButton(
-                                                  onPressed: () => GeneratePdf().generateSaleDocument(reTransaction[index], data, context),
+                                                  onPressed: () => GeneratePdf().generateSaleDocument(transaction[index], data, context),
                                                   icon: const Icon(
                                                     Icons.picture_as_pdf,
                                                     color: Colors.grey,
@@ -208,7 +207,7 @@ class _SalesListScreenState extends State<SalesListScreen> {
                                                   onPressed: () {
                                                     cart.clearCart();
                                                     SalesReportEditScreen(
-                                                      transitionModel: reTransaction[index],
+                                                      transitionModel: transaction[index],
                                                     ).launch(context);
                                                   },
                                                   icon: const Icon(

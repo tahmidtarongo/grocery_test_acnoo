@@ -8,7 +8,6 @@ import 'package:nb_utils/nb_utils.dart';
 import 'Provider/subacription_plan_provider.dart';
 import '../../constant.dart';
 import '../../currency.dart';
-import '../../subscription.dart';
 import '../Home/home.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 

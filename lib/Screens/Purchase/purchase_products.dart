@@ -378,38 +378,14 @@ class _PurchaseProductsState extends State<PurchaseProducts> {
                                     ),
                                   ));
                                 });
-                            // if (products[i].productStock.toInt() <= 0) {
-                            //   EasyLoading.showError('Out of stock');
-                            // } else {
-                            //   if (widget.customerModel!.type.contains('Retailer')) {
-                            //     sentProductPrice = products[i].productSalePrice;
-                            //   } else if (widget.customerModel!.type.contains('Dealer')) {
-                            //     sentProductPrice = products[i].productDealerPrice;
-                            //   } else if (widget.customerModel!.type.contains('Wholesaler')) {
-                            //     sentProductPrice = products[i].productWholeSalePrice;
-                            //   } else if (widget.customerModel!.type.contains('Supplier')) {
-                            //     sentProductPrice = products[i].productPurchasePrice;
-                            //   }
-                            //
-                            //   AddToCartModel cartItem = AddToCartModel(
-                            //     productName: products[i].productName,
-                            //     subTotal: sentProductPrice,
-                            //     productId: products[i].productCode,
-                            //     productBrandName: products[i].brandName,
-                            //     stock: int.parse(products[i].productStock),
-                            //   );
-                            //   providerData.addToCartRiverPod(cartItem);
-                            //
-                            //   EasyLoading.showSuccess('Added To Cart');
-                            //   Navigator.pop(context);
-                            // }
                           },
                           child: ProductCard(
                             productTitle: products[i].productName.toString(),
                             productDescription: products[i].brand?.brandName ?? '',
                             stock: products[i].productStock.toString(),
                             productImage: products[i].productPicture,
-                          ).visible(((products[i].productCode == productCode || productCode == '0000' || productCode == '-1') && productPrice != '0')||products[i].productName!.toLowerCase().contains(productCode.toLowerCase())),
+                          ).visible(((products[i].productCode == productCode || productCode == '0000' || productCode == '-1') && productPrice != '0') ||
+                              products[i].productName!.toLowerCase().contains(productCode.toLowerCase())),
                         );
                       });
                 }, error: (e, stack) {

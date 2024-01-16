@@ -1,26 +1,20 @@
 // ignore_for_file: unused_result
-
-import 'dart:convert';
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mobile_pos/Provider/customer_provider.dart';
-import 'package:mobile_pos/Provider/due_transaction_provider.dart';
-import 'package:mobile_pos/Screens/Report/Screens/due_report_screen.dart';
-import 'package:mobile_pos/model/print_transaction_model.dart';
+import 'package:mobile_pos/Screens/Due%20Calculation/Repo/due_repo.dart';
 import 'package:nb_utils/nb_utils.dart';
 import '../../Provider/printer_due_provider.dart';
 import '../../Provider/profile_provider.dart';
-import '../../Provider/transactions_provider.dart';
 import '../../constant.dart';
 import '../../currency.dart';
-import '../../model/due_transaction_model.dart';
-import '../../subscription.dart';
 import '../Customers/Model/parties_model.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
+
+import 'Model/due_collection_invoice_model.dart';
+import 'Providers/due_provider.dart';
 
 class DueCollectionScreen extends StatefulWidget {
   const DueCollectionScreen({Key? key, required this.customerModel}) : super(key: key);
@@ -31,25 +25,11 @@ class DueCollectionScreen extends StatefulWidget {
 }
 
 class _DueCollectionScreenState extends State<DueCollectionScreen> {
-  int invoice = 0;
-  double paidAmount = 0;
-  double discountAmount = 0;
-  double returnAmount = 0;
-  double remainDueAmount = 0;
-  double subTotal = 0;
-  double dueAmount = 0;
+  num paidAmount = 0;
+  num remainDueAmount = 0;
+  num dueAmount = 0;
 
-  double calculateSubtotal({required double total}) {
-    subTotal = total - discountAmount;
-    return total - discountAmount;
-  }
-
-  // double calculateReturnAmount({required double total}) {
-  //   returnAmount = total - paidAmount;
-  //   return paidAmount <= 0 || paidAmount <= subTotal ? 0 : total - paidAmount;
-  // }
-
-  double calculateDueAmount({required double total}) {
+  num calculateDueAmount({required num total}) {
     if (total < 0) {
       remainDueAmount = 0;
     } else {
@@ -58,32 +38,26 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
     return dueAmount - total;
   }
 
-  TextEditingController controller = TextEditingController();
   TextEditingController paidText = TextEditingController();
   TextEditingController dateController = TextEditingController(text: DateTime.now().toString());
-  late DueTransactionModel dueTransactionModel = DueTransactionModel(
-    customerName: widget.customerModel.name??'',
-    customerPhone: widget.customerModel.phone??'',
-    customerType: widget.customerModel.type??'',
-    invoiceNumber: invoice.toString(),
-    purchaseDate: DateTime.now().toString(),
-  );
-  String? dropdownValue = 'Select an invoice';
-  String? dropdownPaymentValue = 'Cash';
-  String? selectedInvoice;
+
+  SalesDuesInvoice? selectedInvoice;
+  String paymentType = 'Cash';
 
   // List of items in our dropdown menu
-  List<String> items = ['Select an invoice'];
+
   int count = 0;
 
   @override
   Widget build(BuildContext context) {
     count++;
     return Consumer(builder: (context, consumerRef, __) {
-      final customerProviderRef = widget.customerModel.type == 'Supplier' ? consumerRef.watch(purchaseTransactionProvider) : consumerRef.watch(transitionProvider);
       final printerData = consumerRef.watch(printerDueProviderNotifier);
       final personalData = consumerRef.watch(businessInfoProvider);
+      final dueInvoiceData = consumerRef.watch(dueInvoiceListProvider(widget.customerModel.id?.round() ?? 0));
       return personalData.when(data: (data) {
+        List<SalesDuesInvoice> items = [];
+        num openingDueAmount = 0;
         return Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.white,
@@ -105,16 +79,19 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                   const SizedBox(height: 20),
                   Row(
                     children: [
-                      customerProviderRef.when(data: (customer) {
-                        // for (var element in customer) {
-                        //   if (element == widget.customerModel.phone
-                        //       && element.dueAmount != 0 && count < 2) {
-                        //     items.add(element.invoiceNumber);
-                        //   }
-                        //   if (selectedInvoice == element.invoiceNumber) {
-                        //     dueAmount = element.dueAmount!.toDouble();
-                        //   }
-                        // }
+                      dueInvoiceData.when(data: (data) {
+                        num totalDueInInvoice = 0;
+                        if (data.salesDues?.isNotEmpty ?? false) {
+                          for (var element in data.salesDues!) {
+                            totalDueInInvoice += element.dueAmount ?? 0;
+                            items.add(element);
+                          }
+                        }
+
+                        openingDueAmount = (data.due ?? 0) - totalDueInInvoice;
+
+                        if (selectedInvoice == null) dueAmount = openingDueAmount;
+
                         return Container(
                           height: 60,
                           width: 180,
@@ -125,24 +102,30 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                             border: Border.all(width: 1, color: Colors.grey),
                           ),
                           child: Center(
-                            child: DropdownButton(
-                              value: dropdownValue,
-                              icon: const Icon(Icons.keyboard_arrow_down),
-                              items: items.map((String items) {
-                                return DropdownMenuItem(
-                                  value: items,
-                                  child: Text(items),
-                                );
-                              }).toList(),
-                              onChanged: (newValue) {
-                                setState(() {
-                                  paidAmount = 0;
-                                  paidText.clear();
-                                  dropdownValue = newValue.toString();
-                                  controller.text = newValue.toString();
-                                  selectedInvoice = newValue.toString();
-                                });
-                              },
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: DropdownButtonHideUnderline(
+                                child: DropdownButton<SalesDuesInvoice>(
+                                  isExpanded: true,
+                                  value: selectedInvoice,
+                                  hint: const Text('Select a invoice'),
+                                  icon: const Icon(Icons.keyboard_arrow_down),
+                                  items: items.map((SalesDuesInvoice items) {
+                                    return DropdownMenuItem(
+                                      value: items,
+                                      child: Text(items.invoiceNumber.toString()),
+                                    );
+                                  }).toList(),
+                                  onChanged: (newValue) {
+                                    setState(() {
+                                      dueAmount = newValue?.dueAmount ?? 0;
+                                      paidAmount = 0;
+                                      paidText.clear();
+                                      selectedInvoice = newValue;
+                                    });
+                                  },
+                                ),
+                              ),
                             ),
                           ),
                         );
@@ -172,7 +155,6 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                                 if (picked != null) {
                                   setState(() {
                                     dateController.text = picked.toString();
-                                    dueTransactionModel.purchaseDate = picked.toString();
                                   });
                                 }
                               },
@@ -190,8 +172,8 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Text(
-                            lang.S.of(context).dueAmount,
+                          const Text(
+                            'Total Due amount ',
                           ),
                           Text(
                             widget.customerModel.due == null ? '$currency 0' : '$currency${widget.customerModel.due}',
@@ -325,7 +307,7 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                         ],
                       ),
                       DropdownButton(
-                        value: dropdownPaymentValue,
+                        value: paymentType,
                         icon: const Icon(Icons.keyboard_arrow_down),
                         items: paymentsTypeList.map((String items) {
                           return DropdownMenuItem(
@@ -335,7 +317,7 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                         }).toList(),
                         onChanged: (newValue) {
                           setState(() {
-                            dropdownPaymentValue = newValue.toString();
+                            paymentType = newValue.toString();
                           });
                         },
                       ),
@@ -362,7 +344,7 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             labelText: lang.S.of(context).description,
                             hintText: lang.S.of(context).addNote,
-                            border: OutlineInputBorder(),
+                            border: const OutlineInputBorder(),
                           ),
                         ),
                       ),
@@ -379,7 +361,7 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                                   FeatherIcons.camera,
                                   color: Colors.grey,
                                 ),
-                                SizedBox(width: 5),
+                                const SizedBox(width: 5),
                                 Text(
                                   lang.S.of(context).image,
                                   style: const TextStyle(color: Colors.grey, fontSize: 16),
@@ -414,153 +396,19 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                       Expanded(
                         child: GestureDetector(
                           onTap: () async {
-                            if (paidAmount >= 0) {
-                              try {
-                                EasyLoading.show(status: 'Loading...', dismissOnTap: false);
-
-                                DatabaseReference ref = FirebaseDatabase.instance.ref("$constUserId/Due Transaction");
-                                final DatabaseReference personalInformationRef = FirebaseDatabase.instance.ref().child(constUserId).child('Personal Information');
-                                ref.keepSynced(true);
-                                personalInformationRef.keepSynced(true);
-
-                                dueTransactionModel.totalDue = dueAmount;
-                                remainDueAmount <= 0 ? dueTransactionModel.isPaid = true : dueTransactionModel.isPaid = false;
-                                remainDueAmount <= 0 ? dueTransactionModel.dueAmountAfterPay = 0 : dueTransactionModel.dueAmountAfterPay = remainDueAmount;
-                                dueTransactionModel.payDueAmount = paidAmount;
-                                dueTransactionModel.paymentType = dropdownPaymentValue;
-                                dueTransactionModel.invoiceNumber = invoice.toString();
-                                isSubUser ? dueTransactionModel.sellerName = subUserTitle : null;
-                                ref.push().set(dueTransactionModel.toJson());
-
-                                ///_____UpdateInvoice__________________________________________________
-                                updateInvoice(
-                                  type: widget.customerModel.type??'',
-                                  invoice: selectedInvoice.toString(),
-                                  remainDueAmount: remainDueAmount.toInt(),
-                                );
-
-                                personalInformationRef.update({'invoiceCounter': invoice + 1});
-
-                                ///_________DueUpdate______________________________________________________
-                                getSpecificCustomers(
-                                  phoneNumber: widget.customerModel.phone??'',
-                                  due: paidAmount.toInt(),
-                                );
-
-
-                                ///________Print_______________________________________________________
-                                if (isPrintEnable && (Theme.of(context).platform == TargetPlatform.android)) {
-                                  await printerData.getBluetooth();
-                                  PrintDueTransactionModel model = PrintDueTransactionModel(dueTransactionModel: dueTransactionModel, personalInformationModel: data);
-                                  if (connected) {
-                                    await printerData.printTicket(printDueTransactionModel: model);
-                                    consumerRef.refresh(partiesProvider);
-                                    consumerRef.refresh(dueTransactionProvider);
-                                    consumerRef.refresh(purchaseTransactionProvider);
-                                    consumerRef.refresh(transitionProvider);
-                                    consumerRef.refresh(businessInfoProvider);
-
-                                    EasyLoading.dismiss();
-                                    Future.delayed(const Duration(milliseconds: 500), () {
-                                      const DueReportScreen().launch(context);
-                                    });
-                                  } else {
-                                    // ignore: use_build_context_synchronously
-                                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                                      content: Text(lang.S.of(context).pleaseConnectThePrinterFirst),
-                                    ));
-                                    // ignore: use_build_context_synchronously
-                                    showDialog(
-                                        context: context,
-                                        builder: (_) {
-                                          return WillPopScope(
-                                            onWillPop: () async => false,
-                                            child: Dialog(
-                                              child: SizedBox(
-                                                child: Column(
-                                                  mainAxisSize: MainAxisSize.min,
-                                                  children: [
-                                                    ListView.builder(
-                                                      shrinkWrap: true,
-                                                      itemCount: printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
-                                                      itemBuilder: (context, index) {
-                                                        return ListTile(
-                                                          onTap: () async {
-                                                            String select = printerData.availableBluetoothDevices[index];
-                                                            List list = select.split("#");
-                                                            // String name = list[0];
-                                                            String mac = list[1];
-                                                            bool isConnect = await printerData.setConnect(mac);
-                                                            if (isConnect) {
-                                                              await printerData.printTicket(printDueTransactionModel: model);
-                                                              consumerRef.refresh(partiesProvider);
-                                                              consumerRef.refresh(dueTransactionProvider);
-                                                              consumerRef.refresh(purchaseTransactionProvider);
-                                                              consumerRef.refresh(transitionProvider);
-                                                              consumerRef.refresh(businessInfoProvider);
-                                                              EasyLoading.showSuccess('Added Successfully');
-                                                              Future.delayed(const Duration(milliseconds: 500), () {
-                                                                const DueReportScreen().launch(context);
-                                                              });
-                                                            }
-                                                          },
-                                                          title: Text('${printerData.availableBluetoothDevices[index]}'),
-                                                          subtitle: Text(lang.S.of(context).clickToConnect),
-                                                        );
-                                                      },
-                                                    ),
-                                                    const SizedBox(height: 10),
-                                                    Text(lang.S.of(context).connectPrinter),
-                                                    const SizedBox(height: 10),
-                                                    Container(
-                                                      height: 1,
-                                                      width: double.infinity,
-                                                      color: Colors.grey,
-                                                    ),
-                                                    const SizedBox(height: 15),
-                                                    GestureDetector(
-                                                      onTap: () {
-                                                        consumerRef.refresh(partiesProvider);
-                                                        consumerRef.refresh(dueTransactionProvider);
-                                                        consumerRef.refresh(purchaseTransactionProvider);
-                                                        consumerRef.refresh(transitionProvider);
-                                                        consumerRef.refresh(businessInfoProvider);
-                                                        const DueReportScreen().launch(context);
-                                                      },
-                                                      child: Center(
-                                                        child: Text(
-                                                          lang.S.of(context).cancel,
-                                                          style: TextStyle(color: kMainColor),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                    const SizedBox(height: 15),
-                                                  ],
-                                                ),
-                                              ),
-                                            ),
-                                          );
-                                        });
-                                    EasyLoading.showSuccess('Added Successfully');
-                                  }
-                                } else {
-                                  consumerRef.refresh(partiesProvider);
-                                  consumerRef.refresh(dueTransactionProvider);
-                                  consumerRef.refresh(purchaseTransactionProvider);
-                                  consumerRef.refresh(transitionProvider);
-                                  consumerRef.refresh(businessInfoProvider);
-
-                                  EasyLoading.showSuccess('Added Successfully');
-                                  Future.delayed(const Duration(milliseconds: 500), () {
-                                    const DueReportScreen().launch(context);
-                                  });
-                                }
-                              } catch (e) {
-                                EasyLoading.dismiss();
-                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
-                              }
+                            if (paidAmount > 0 && dueAmount > 0) {
+                              DueRepo repo = DueRepo();
+                              await repo.dueCollect(
+                                ref: consumerRef,
+                                context: context,
+                                partyId: widget.customerModel.id ?? 0,
+                                invoiceNumber: selectedInvoice?.invoiceNumber,
+                                paymentDate: dateController.text,
+                                paymentType: paymentType,
+                                payDueAmount: paidAmount,
+                              );
                             } else {
-                              EasyLoading.showError('Add product first');
+                              EasyLoading.showError('No Due Selected');
                             }
                           },
                           child: Container(
@@ -593,62 +441,5 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
         return const Center(child: CircularProgressIndicator());
       });
     });
-  }
-
-  void updateInvoice({required String type, required String invoice, required int remainDueAmount}) {
-    final ref = type == 'Supplier' ? FirebaseDatabase.instance.ref('$constUserId/Purchase Transition/') : FirebaseDatabase.instance.ref('$constUserId/Sales Transition/');
-    String? key;
-    ref.keepSynced(true);
-
-    type == 'Supplier'
-        ? ref.orderByKey().get().then((value) {
-            for (var element in value.children) {
-              var data = jsonDecode(jsonEncode(element.value));
-              if (data['invoiceNumber'] == invoice) {
-                key = element.key;
-                ref.child(key!).update({
-                  'dueAmount': '$remainDueAmount',
-                });
-              }
-            }
-          })
-        : ref.orderByKey().get().then((value) {
-            for (var element in value.children) {
-              var data = jsonDecode(jsonEncode(element.value));
-              if (data['invoiceNumber'] == invoice) {
-                key = element.key;
-                ref.child(key!).update({
-                  'dueAmount': '$remainDueAmount',
-                });
-              }
-            }
-          });
-  }
-
-  void getSpecificCustomers({required String phoneNumber, required int due}) async {
-    final ref = FirebaseDatabase.instance.ref('$constUserId/Customers/');
-    String? key;
-
-    await FirebaseDatabase.instance.ref(constUserId).child('Customers').orderByKey().get().then((value) {
-      for (var element in value.children) {
-        var data = jsonDecode(jsonEncode(element.value));
-        if (data['phoneNumber'] == phoneNumber) {
-          key = element.key;
-        }
-      }
-    });
-    var data1 = await ref.child('$key/due').once();
-    int previousDue = data1.snapshot.value.toString().toInt();
-
-    int totalDue = previousDue - due;
-    ref.child(key!).update({'due': '$totalDue'});
-  }
-
-  void decreaseSubscriptionSale() async {
-    final ref = FirebaseDatabase.instance.ref('$constUserId/Subscription/dueNumber');
-    var data = await ref.once();
-    int beforeSale = int.parse(data.snapshot.value.toString());
-    int afterSale = beforeSale - 1;
-    beforeSale != -202 ? FirebaseDatabase.instance.ref('$constUserId/Subscription').update({'dueNumber': afterSale}) : null;
   }
 }

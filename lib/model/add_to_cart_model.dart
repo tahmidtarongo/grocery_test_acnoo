@@ -2,7 +2,7 @@ import 'dart:convert';
 
 class AddToCartModel {
   AddToCartModel({
-    this.uuid,
+    required this.uuid,
     this.productId,
     this.productName,
     this.unitPrice,
@@ -16,7 +16,7 @@ class AddToCartModel {
     this.productPurchasePrice,
   });
 
-  dynamic uuid;
+  num uuid;
   dynamic productId;
   String? productName;
   dynamic unitPrice;

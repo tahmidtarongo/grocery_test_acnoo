@@ -1,15 +1,16 @@
 import 'package:bluetooth_thermal_printer/bluetooth_thermal_printer.dart';
 import 'package:esc_pos_utils/esc_pos_utils.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nb_utils/nb_utils.dart';
 import '../constant.dart';
-import '../model/add_to_cart_model.dart';
 import '../model/print_transaction_model.dart';
+import '../model/sale_transaction_model.dart';
 
-final printerProviderNotifier = ChangeNotifierProvider((ref) => Printer());
+final salesPrinterProvider = ChangeNotifierProvider((ref) => SalesPrinter());
 
-class Printer extends ChangeNotifier {
+class SalesPrinter extends ChangeNotifier {
   List availableBluetoothDevices = [];
   Future<void> getBluetooth() async {
     final List? bluetooths = await BluetoothThermalPrinter.getBluetooths;
@@ -28,13 +29,14 @@ class Printer extends ChangeNotifier {
     return status;
   }
 
-  Future<bool> printTicket({required PrintTransactionModel printTransactionModel, required List<AddToCartModel>? productList}) async {
+  Future<bool> printSalesTicket({required PrintTransactionModel printTransactionModel, required List<SalesDetails>? productList}) async {
     bool isPrinted = false;
     String? isConnected = await BluetoothThermalPrinter.connectionStatus;
     if (isConnected == "true") {
-      List<int> bytes = await getTicket(printTransactionModel: printTransactionModel, productList: productList);
+      List<int> bytes = await getSalesTicket(printTransactionModel: printTransactionModel, productList: productList);
       if (productList!.isNotEmpty) {
         await BluetoothThermalPrinter.writeBytes(bytes);
+        EasyLoading.showSuccess('Successfully Printed');
       } else {
         toast('No Product Found');
       }
@@ -47,14 +49,10 @@ class Printer extends ChangeNotifier {
     return isPrinted;
   }
 
-  Future<List<int>> getTicket({required PrintTransactionModel printTransactionModel, required List<AddToCartModel>? productList}) async {
+  Future<List<int>> getSalesTicket({required PrintTransactionModel printTransactionModel, required List<SalesDetails>? productList}) async {
     List<int> bytes = [];
     CapabilityProfile profile = await CapabilityProfile.load();
     final generator = Generator(PaperSize.mm58, profile);
-    // final ByteData data = await rootBundle.load('images/logo.png');
-    // final Uint8List imageBytes = data.buffer.asUint8List();
-    // final images.Image? imagez = decodeImage(imageBytes);
-    // bytes += generator.image(imagez!);
     bytes += generator.text(printTransactionModel.personalInformationModel.companyName ?? '',
         styles: const PosStyles(
           align: PosAlign.center,
@@ -63,13 +61,11 @@ class Printer extends ChangeNotifier {
         ),
         linesAfter: 1);
 
-    printTransactionModel.transitionModel!.sellerName.isEmptyOrNull
-        ? bytes += generator.text('Seller : Admin', styles: const PosStyles(align: PosAlign.center))
-        : bytes += generator.text('Seller :${printTransactionModel.transitionModel!.sellerName}', styles: const PosStyles(align: PosAlign.center));
+    bytes += generator.text('Seller :${printTransactionModel.transitionModel!.user?.name}', styles: const PosStyles(align: PosAlign.center));
     bytes += generator.text(printTransactionModel.personalInformationModel.address ?? '', styles: const PosStyles(align: PosAlign.center));
     bytes += generator.text('Tel: ${printTransactionModel.personalInformationModel.phoneNumber ?? ''}', styles: const PosStyles(align: PosAlign.center), linesAfter: 1);
-    bytes += generator.text('Name: ${printTransactionModel.transitionModel?.customerName ?? 'Guest'}', styles: const PosStyles(align: PosAlign.left));
-    bytes += generator.text('mobile: ${printTransactionModel.transitionModel?.customerPhone ?? 'Not Provided'}', styles: const PosStyles(align: PosAlign.left));
+    bytes += generator.text('Name: ${printTransactionModel.transitionModel?.party?.name ?? 'Guest'}', styles: const PosStyles(align: PosAlign.left));
+    bytes += generator.text('mobile: ${printTransactionModel.transitionModel?.party?.phone ?? 'Not Provided'}', styles: const PosStyles(align: PosAlign.left));
     bytes +=
         generator.text('Invoice Number: ${printTransactionModel.transitionModel?.invoiceNumber ?? 'Not Provided'}', styles: const PosStyles(align: PosAlign.left), linesAfter: 1);
 
@@ -83,72 +79,21 @@ class Printer extends ChangeNotifier {
     List.generate(productList?.length ?? 1, (index) {
       return bytes += generator.row([
         PosColumn(
-            text: productList?[index].productName ?? 'Not Defined',
+            text: productList?[index].product?.productName ?? 'Not Defined',
             width: 5,
             styles: const PosStyles(
               align: PosAlign.left,
             )),
         PosColumn(
-            text: productList?[index].subTotal ?? 'Not Defined',
+            text: productList?[index].price?.toStringAsFixed(2) ?? 'Not Defined',
             width: 2,
             styles: const PosStyles(
               align: PosAlign.center,
             )),
-        PosColumn(text: productList?[index].quantity.toString() ?? 'Not Defined', width: 2, styles: const PosStyles(align: PosAlign.center)),
-        PosColumn(text: "${double.parse(productList?[index].subTotal) * productList![index].quantity.toInt()}", width: 3, styles: const PosStyles(align: PosAlign.right)),
+        PosColumn(text: productList?[index].quantities.toString() ?? 'Not Defined', width: 2, styles: const PosStyles(align: PosAlign.center)),
+        PosColumn(text: "${(productList?[index].price ?? 0) * (productList![index].quantities ?? 0)}", width: 3, styles: const PosStyles(align: PosAlign.right)),
       ]);
     });
-
-    // bytes += generator.row([
-    //   PosColumn(
-    //       text: "Sada Dosa",
-    //       width: 5,
-    //       styles: PosStyles(
-    //         align: PosAlign.left,
-    //       )),
-    //   PosColumn(
-    //       text: "30",
-    //       width: 2,
-    //       styles: PosStyles(
-    //         align: PosAlign.center,
-    //       )),
-    //   PosColumn(text: "1", width: 2, styles: PosStyles(align: PosAlign.center)),
-    //   PosColumn(text: "30", width: 3, styles: PosStyles(align: PosAlign.right)),
-    // ]);
-    //
-    // bytes += generator.row([
-    //   PosColumn(
-    //       text: "Masala Dosa",
-    //       width: 5,
-    //       styles: PosStyles(
-    //         align: PosAlign.left,
-    //       )),
-    //   PosColumn(
-    //       text: "50",
-    //       width: 2,
-    //       styles: PosStyles(
-    //         align: PosAlign.center,
-    //       )),
-    //   PosColumn(text: "1", width: 2, styles: PosStyles(align: PosAlign.center)),
-    //   PosColumn(text: "50", width: 3, styles: PosStyles(align: PosAlign.right)),
-    // ]);
-    //
-    // bytes += generator.row([
-    //   PosColumn(
-    //       text: "Rova Dosa",
-    //       width: 5,
-    //       styles: PosStyles(
-    //         align: PosAlign.left,
-    //       )),
-    //   PosColumn(
-    //       text: "70",
-    //       width: 2,
-    //       styles: PosStyles(
-    //         align: PosAlign.center,
-    //       )),
-    //   PosColumn(text: "1", width: 2, styles: PosStyles(align: PosAlign.center)),
-    //   PosColumn(text: "70", width: 3, styles: PosStyles(align: PosAlign.right)),
-    // ]);
     bytes += generator.hr();
     bytes += generator.row([
       PosColumn(
@@ -159,6 +104,20 @@ class Printer extends ChangeNotifier {
           )),
       PosColumn(
           text: '${printTransactionModel.transitionModel!.totalAmount!.toDouble() + printTransactionModel.transitionModel!.discountAmount!.toDouble()}',
+          width: 4,
+          styles: const PosStyles(
+            align: PosAlign.right,
+          )),
+    ]);
+    bytes += generator.row([
+      PosColumn(
+          text: 'VAT/GST',
+          width: 8,
+          styles: const PosStyles(
+            align: PosAlign.left,
+          )),
+      PosColumn(
+          text: '${printTransactionModel.transitionModel?.vatAmount ?? 0}',
           width: 4,
           styles: const PosStyles(
             align: PosAlign.right,
@@ -223,7 +182,9 @@ class Printer extends ChangeNotifier {
             align: PosAlign.left,
           )),
       PosColumn(
-          text: printTransactionModel.transitionModel!.returnAmount.toString(),
+          text: (printTransactionModel.transitionModel?.paidAmount ?? 0) > (printTransactionModel.transitionModel?.totalAmount ?? 0)
+              ? ((printTransactionModel.transitionModel?.paidAmount ?? 0) - (printTransactionModel.transitionModel?.totalAmount ?? 0)).toString()
+              : '0',
           width: 4,
           styles: const PosStyles(
             align: PosAlign.right,
@@ -248,7 +209,7 @@ class Printer extends ChangeNotifier {
     // ticket.feed(2);
     bytes += generator.text('Thank you!', styles: const PosStyles(align: PosAlign.center, bold: true));
 
-    bytes += generator.text(printTransactionModel.transitionModel!.purchaseDate, styles: const PosStyles(align: PosAlign.center), linesAfter: 1);
+    bytes += generator.text(printTransactionModel.transitionModel!.saleDate ?? '', styles: const PosStyles(align: PosAlign.center), linesAfter: 1);
 
     bytes += generator.text('Note: Goods once sold will not be taken back or exchanged.', styles: const PosStyles(align: PosAlign.center, bold: false), linesAfter: 1);
 

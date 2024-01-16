@@ -9,7 +9,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Screens/Purchase/purchase_products.dart';
 import 'package:nb_utils/nb_utils.dart';
 import '../../Provider/add_to_cart_purchase.dart';
-import '../../Provider/print_purchase_provider.dart';
+import '../../Provider/print_purchase_invoice_provider.dart';
 import '../../Provider/profile_provider.dart';
 import '../../constant.dart';
 import '../../currency.dart';

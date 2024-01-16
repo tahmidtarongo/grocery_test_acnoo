@@ -21,8 +21,6 @@ import 'package:mobile_pos/Screens/Report/reports.dart';
 import 'package:mobile_pos/Screens/Sales/add_discount.dart';
 import 'package:mobile_pos/Screens/Sales/add_promo_code.dart';
 import 'package:mobile_pos/Screens/Sales/sales_contact.dart';
-import 'package:mobile_pos/Screens/Sales/sales_details.dart';
-import 'package:mobile_pos/Screens/Sales/sales_list.dart';
 import 'package:mobile_pos/Screens/stock_list/stock_list.dart';
 import 'package:mobile_pos/Screens/SplashScreen/on_board.dart';
 import 'package:mobile_pos/Screens/SplashScreen/splash_screen.dart';
@@ -90,9 +88,6 @@ class MyApp extends StatelessWidget {
                   '/UpdateProducts': (context) => UpdateProduct(),
 
                   '/Products': (context) => const ProductList(),
-                  '/SalesList': (context) => const SalesScreen(),
-                  // ignore: missing_required_param
-                  '/SalesDetails': (context) => SalesDetails(),
                   // ignore: prefer_const_constructors
                   '/salesCustomer': (context) => SalesContact(),
                   '/addPromoCode': (context) => const AddPromoCode(),

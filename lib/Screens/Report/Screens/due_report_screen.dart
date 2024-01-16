@@ -6,12 +6,12 @@ import 'package:intl/intl.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../../GlobalComponents/generate_pdf.dart';
-import '../../../Provider/due_transaction_provider.dart';
 import '../../../Provider/printer_due_provider.dart';
 import '../../../Provider/profile_provider.dart';
 import '../../../constant.dart';
 import '../../../currency.dart';
 import '../../../model/print_transaction_model.dart';
+import '../../Due Calculation/Providers/due_provider.dart';
 import '../../Home/home.dart';
 import '../../invoice_details/due_invoice_details.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
@@ -67,7 +67,7 @@ class _DueReportScreenState extends State<DueReportScreen> {
           elevation: 0.0,
         ),
         body: Consumer(builder: (context, ref, __) {
-          final providerData = ref.watch(dueTransactionProvider);
+          final providerData = ref.watch(dueCollectionListProvider);
           final printerData = ref.watch(printerDueProviderNotifier);
           final personalData = ref.watch(businessInfoProvider);
           final profile = ref.watch(businessInfoProvider);
@@ -144,14 +144,13 @@ class _DueReportScreenState extends State<DueReportScreen> {
                   ),
                 ),
                 providerData.when(data: (transaction) {
-                  final reTransaction = transaction.reversed.toList();
-                  for (var element in reTransaction) {
-                    if ((fromDate.isBefore(DateTime.parse(element.purchaseDate)) || DateTime.parse(element.purchaseDate).isAtSameMomentAs(fromDate)) &&
-                        (toDate.isAfter(DateTime.parse(element.purchaseDate)) || DateTime.parse(element.purchaseDate).isAtSameMomentAs(toDate))) {
-                      element.customerType != 'Supplier' ? totalReceiveDue = totalReceiveDue + element.payDueAmount! : totalPaidDue = totalPaidDue + element.payDueAmount!;
+                  for (var element in transaction) {
+                    if ((fromDate.isBefore(DateTime.parse(element.paymentDate ?? '')) || DateTime.parse(element.paymentDate ?? '').isAtSameMomentAs(fromDate)) &&
+                        (toDate.isAfter(DateTime.parse(element.paymentDate ?? '')) || DateTime.parse(element.paymentDate ?? '').isAtSameMomentAs(toDate))) {
+                      element.party?.type != 'Supplier' ? totalReceiveDue = totalReceiveDue + element.payDueAmount! : totalPaidDue = totalPaidDue + element.payDueAmount!;
                     }
                   }
-                  return reTransaction.isNotEmpty
+                  return transaction.isNotEmpty
                       ? Column(
                           children: [
                             Padding(
@@ -279,17 +278,17 @@ class _DueReportScreenState extends State<DueReportScreen> {
                             ListView.builder(
                               shrinkWrap: true,
                               physics: const NeverScrollableScrollPhysics(),
-                              itemCount: reTransaction.length,
+                              itemCount: transaction.length,
                               itemBuilder: (context, index) {
                                 return Visibility(
-                                  visible: (fromDate.isBefore(DateTime.parse(reTransaction[index].purchaseDate)) ||
-                                          DateTime.parse(reTransaction[index].purchaseDate).isAtSameMomentAs(fromDate)) &&
-                                      (toDate.isAfter(DateTime.parse(reTransaction[index].purchaseDate)) ||
-                                          DateTime.parse(reTransaction[index].purchaseDate).isAtSameMomentAs(toDate)),
+                                  visible: (fromDate.isBefore(DateTime.parse(transaction[index].paymentDate ?? '')) ||
+                                          DateTime.parse(transaction[index].paymentDate ?? '').isAtSameMomentAs(fromDate)) &&
+                                      (toDate.isAfter(DateTime.parse(transaction[index].paymentDate ?? '')) ||
+                                          DateTime.parse(transaction[index].paymentDate ?? '').isAtSameMomentAs(toDate)),
                                   child: GestureDetector(
                                     onTap: () {
                                       DueInvoiceDetails(
-                                        transitionModel: reTransaction[index],
+                                        dueCollection: transaction[index],
                                         personalInformationModel: profile.value!,
                                       ).launch(context);
                                     },
@@ -307,21 +306,24 @@ class _DueReportScreenState extends State<DueReportScreen> {
                                                   Row(
                                                     children: [
                                                       Text(
-                                                        reTransaction[index].customerName,
+                                                        transaction[index].party?.name ?? '',
                                                         style: const TextStyle(fontSize: 16),
                                                       ),
                                                       const SizedBox(
                                                         width: 10,
                                                       ),
-                                                      reTransaction[index].customerType == 'Supplier'
-                                                          ? const Text(
-                                                              '[S]',
-                                                              style: TextStyle(fontSize: 16, color: kMainColor),
-                                                            )
-                                                          : const Text('')
+                                                      Visibility(
+                                                        visible: transaction[index].party?.type == 'Supplier',
+                                                        child: const Text(
+                                                          '[S]',
+                                                          style: TextStyle(
+                                                              //fontSize: 16,
+                                                              color: kMainColor),
+                                                        ),
+                                                      )
                                                     ],
                                                   ),
-                                                  Text('#${reTransaction[index].invoiceNumber}'),
+                                                  Text('#${transaction[index].invoiceNumber}'),
                                                 ],
                                               ),
                                               const SizedBox(height: 10),
@@ -331,38 +333,38 @@ class _DueReportScreenState extends State<DueReportScreen> {
                                                   Container(
                                                     padding: const EdgeInsets.all(8),
                                                     decoration: BoxDecoration(
-                                                        color: reTransaction[index].dueAmountAfterPay! <= 0
+                                                        color: transaction[index].dueAmountAfterPay! <= 0
                                                             ? const Color(0xff0dbf7d).withOpacity(0.1)
                                                             : const Color(0xFFED1A3B).withOpacity(0.1),
                                                         borderRadius: const BorderRadius.all(Radius.circular(10))),
                                                     child: Text(
-                                                      reTransaction[index].dueAmountAfterPay! <= 0 ? lang.S.of(context).fullyPaid : lang.S.of(context).stillUnpaid,
-                                                      style: TextStyle(color: reTransaction[index].dueAmountAfterPay! <= 0 ? const Color(0xff0dbf7d) : const Color(0xFFED1A3B)),
+                                                      transaction[index].dueAmountAfterPay! <= 0 ? lang.S.of(context).fullyPaid : lang.S.of(context).stillUnpaid,
+                                                      style: TextStyle(color: transaction[index].dueAmountAfterPay! <= 0 ? const Color(0xff0dbf7d) : const Color(0xFFED1A3B)),
                                                     ),
                                                   ),
                                                   Text(
-                                                    DateFormat.yMMMd().format(DateTime.parse(reTransaction[index].purchaseDate)),
+                                                    DateFormat.yMMMd().format(DateTime.parse(transaction[index].paymentDate ?? '')),
                                                     style: const TextStyle(color: Colors.grey),
                                                   ),
                                                 ],
                                               ),
                                               const SizedBox(height: 10),
                                               Text(
-                                                '${lang.S.of(context).total} : $currency ${reTransaction[index].totalDue.toString()}',
+                                                '${lang.S.of(context).total} : $currency ${transaction[index].totalDue.toString()}',
                                                 style: const TextStyle(color: Colors.grey),
                                               ),
                                               const SizedBox(height: 10),
                                               Text(
-                                                '${lang.S.of(context).paid} : $currency ${reTransaction[index].totalDue!.toDouble() - reTransaction[index].dueAmountAfterPay!.toDouble()}',
+                                                '${lang.S.of(context).paid} : $currency ${transaction[index].totalDue!.toDouble() - transaction[index].dueAmountAfterPay!.toDouble()}',
                                                 style: const TextStyle(color: Colors.grey),
                                               ),
                                               Row(
                                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                 children: [
                                                   Text(
-                                                    '${lang.S.of(context).due}: $currency ${reTransaction[index].dueAmountAfterPay.toString()}',
+                                                    '${lang.S.of(context).due}: $currency ${transaction[index].dueAmountAfterPay.toString()}',
                                                     style: const TextStyle(fontSize: 16),
-                                                  ).visible(reTransaction[index].dueAmountAfterPay!.toInt() != 0),
+                                                  ).visible(transaction[index].dueAmountAfterPay!.toInt() != 0),
                                                   personalData.when(data: (data) {
                                                     return Row(
                                                       children: [
@@ -372,7 +374,7 @@ class _DueReportScreenState extends State<DueReportScreen> {
                                                                 ///________Print_______________________________________________________
                                                                 await printerData.getBluetooth();
                                                                 PrintDueTransactionModel model =
-                                                                    PrintDueTransactionModel(dueTransactionModel: reTransaction[index], personalInformationModel: data);
+                                                                    PrintDueTransactionModel(dueTransactionModel: transaction[index], personalInformationModel: data);
                                                                 if (connected) {
                                                                   await printerData.printTicket(printDueTransactionModel: model);
                                                                 } else {
@@ -441,7 +443,7 @@ class _DueReportScreenState extends State<DueReportScreen> {
                                                               color: Colors.grey,
                                                             )),
                                                         IconButton(
-                                                            onPressed: () => GeneratePdf().generateDueDocument(reTransaction[index], data, context),
+                                                            onPressed: () => GeneratePdf().generateDueDocument(transaction[index], data, context),
                                                             icon: const Icon(
                                                               Icons.picture_as_pdf,
                                                               color: Colors.grey,

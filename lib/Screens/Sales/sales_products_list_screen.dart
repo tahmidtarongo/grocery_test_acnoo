@@ -10,14 +10,15 @@ import 'package:mobile_pos/Screens/Customers/Model/parties_model.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:nb_utils/nb_utils.dart';
 
+import '../../Const/api_config.dart';
 import '../../Provider/add_to_cart.dart';
 import '../../currency.dart';
 import '../../model/add_to_cart_model.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 // ignore: must_be_immutable
-class SaleProducts extends StatefulWidget {
-  SaleProducts({Key? key, @required this.catName, this.customerModel}) : super(key: key);
+class SaleProductsList extends StatefulWidget {
+  SaleProductsList({Key? key, @required this.catName, this.customerModel}) : super(key: key);
 
   // ignore: prefer_typing_uninitialized_variables
   var catName;
@@ -25,15 +26,15 @@ class SaleProducts extends StatefulWidget {
 
   @override
   // ignore: library_private_types_in_public_api
-  _SaleProductsState createState() => _SaleProductsState();
+  _SaleProductsListState createState() => _SaleProductsListState();
 }
 
-class _SaleProductsState extends State<SaleProducts> {
+class _SaleProductsListState extends State<SaleProductsList> {
   String dropdownValue = '';
   String productCode = '0000';
 
   var salesCart = FlutterCart();
-  String productPrice = '0';
+  num productPrice = 0;
   String sentProductPrice = '';
 
   @override
@@ -212,42 +213,49 @@ class _SaleProductsState extends State<SaleProducts> {
                       physics: const NeverScrollableScrollPhysics(),
                       itemCount: products.length,
                       itemBuilder: (_, i) {
-                        if (widget.customerModel!.type!.contains('Retailer')) {
-                          productPrice = products[i].productSalePrice.toString();
-                        } else if (widget.customerModel!.type!.contains('Dealer')) {
-                          productPrice = products[i].productDealerPrice.toString();
-                        } else if (widget.customerModel!.type!.contains('Wholesaler')) {
-                          productPrice = products[i].productWholeSalePrice.toString().toString();
-                        } else if (widget.customerModel!.type!.contains('Supplier')) {
-                          productPrice = products[i].productPurchasePrice.toString();
-                        } else if (widget.customerModel!.type!.contains('Guest')) {
-                          productPrice = products[i].productSalePrice.toString();
+                        if (widget.customerModel != null) {
+                          if (widget.customerModel!.type!.contains('Retailer')) {
+                            productPrice = products[i].productSalePrice ?? 0;
+                          } else if (widget.customerModel!.type!.contains('Dealer')) {
+                            productPrice = products[i].productDealerPrice ?? 0;
+                          } else if (widget.customerModel!.type!.contains('Wholesaler')) {
+                            productPrice = products[i].productWholeSalePrice ?? 0;
+                          } else if (widget.customerModel!.type!.contains('Supplier')) {
+                            productPrice = products[i].productPurchasePrice ?? 0;
+                          } else if (widget.customerModel!.type!.contains('Guest')) {
+                            productPrice = products[i].productSalePrice ?? 0;
+                          }
+                        } else {
+                          productPrice = products[i].productSalePrice ?? 0;
                         }
+
                         return GestureDetector(
                           onTap: () async {
-                            if ((products[i].productStock??0) <= 0) {
+                            if ((products[i].productStock ?? 0) <= 0) {
                               EasyLoading.showError('Out of stock');
                             } else {
-                              if (widget.customerModel!.type!.contains('Retailer')) {
+                              if (widget.customerModel == null) {
                                 sentProductPrice = products[i].productSalePrice.toString();
-                              } else if (widget.customerModel!.type!.contains('Dealer')) {
-                                sentProductPrice = products[i].productDealerPrice.toString();
-                              } else if (widget.customerModel!.type!.contains('Wholesaler')) {
-                                sentProductPrice = products[i].productWholeSalePrice.toString();
-                              } else if (widget.customerModel!.type!.contains('Supplier')) {
-                                sentProductPrice = products[i].productPurchasePrice.toString();
-                              } else if (widget.customerModel!.type!.contains('Guest')) {
-                                sentProductPrice = products[i].productSalePrice.toString();
+                              } else {
+                                if (widget.customerModel!.type!.contains('Retailer')) {
+                                  sentProductPrice = products[i].productSalePrice.toString();
+                                } else if (widget.customerModel!.type!.contains('Dealer')) {
+                                  sentProductPrice = products[i].productDealerPrice.toString();
+                                } else if (widget.customerModel!.type!.contains('Wholesaler')) {
+                                  sentProductPrice = products[i].productWholeSalePrice.toString();
+                                } else if (widget.customerModel!.type!.contains('Supplier')) {
+                                  sentProductPrice = products[i].productPurchasePrice.toString();
+                                }
                               }
 
                               AddToCartModel cartItem = AddToCartModel(
                                 productName: products[i].productName,
                                 subTotal: sentProductPrice,
                                 productId: products[i].productCode,
-                                productBrandName: products[i].brand?.brandName??'',
+                                productBrandName: products[i].brand?.brandName ?? '',
                                 productPurchasePrice: products[i].productPurchasePrice,
-                                stock: (products[i].productStock??0).round(),
-                                uuid: products[i].productCode,
+                                stock: (products[i].productStock ?? 0).round(),
+                                uuid: products[i].id ?? 0,
                               );
                               providerData.addToCartRiverPod(cartItem);
                               providerData.addProductsInSales(products[i]);
@@ -256,10 +264,12 @@ class _SaleProductsState extends State<SaleProducts> {
                           },
                           child: ProductCard(
                             productTitle: products[i].productName.toString(),
-                            productDescription: products[i].brand?.brandName??'',
+                            productDescription: products[i].brand?.brandName ?? '',
                             productPrice: productPrice,
-                            productImage: products[i].productPicture??'',
-                          ).visible((products[i].productCode == productCode || productCode == '0000' || productCode == '-1') && productPrice != '0'),
+                            productImage: products[i].productPicture,
+                            stock: products[i].productStock ?? 0,
+                          ).visible((products[i].productCode == productCode || productCode == '0000' || productCode == '-1') && productPrice != '0' ||
+                              products[i].productName!.toLowerCase().contains(productCode.toLowerCase())),
                         );
                       });
                 }, error: (e, stack) {
@@ -292,11 +302,13 @@ class _SaleProductsState extends State<SaleProducts> {
 
 // ignore: must_be_immutable
 class ProductCard extends StatefulWidget {
-  ProductCard({Key? key, required this.productTitle, required this.productDescription, required this.productPrice, required this.productImage}) : super(key: key);
+  ProductCard({Key? key, required this.productTitle, required this.productDescription, required this.productPrice, required this.productImage, required this.stock})
+      : super(key: key);
 
   // final Product product;
-  String productImage, productTitle, productDescription, productPrice;
-
+  String productTitle, productDescription;
+  num productPrice, stock;
+  String? productImage;
   @override
   State<ProductCard> createState() => _ProductCardState();
 }
@@ -322,10 +334,15 @@ class _ProductCardState extends State<ProductCard> {
               child: Container(
                 height: 50,
                 width: 50,
-                decoration: BoxDecoration(
-                  image: DecorationImage(image: NetworkImage(widget.productImage), fit: BoxFit.cover),
-                  borderRadius: BorderRadius.circular(90.0),
-                ),
+                decoration: widget.productImage == null
+                    ? BoxDecoration(
+                        image: DecorationImage(image: AssetImage(noProductImageUrl), fit: BoxFit.cover),
+                        borderRadius: BorderRadius.circular(90.0),
+                      )
+                    : BoxDecoration(
+                        image: DecorationImage(image: NetworkImage("${APIConfig.domain}${widget.productImage}"), fit: BoxFit.cover),
+                        borderRadius: BorderRadius.circular(90.0),
+                      ),
               ),
             ),
             Padding(
@@ -334,12 +351,20 @@ class _ProductCardState extends State<ProductCard> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Row(
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
                         widget.productTitle,
                         style: GoogleFonts.jost(
                           fontSize: 20.0,
+                          color: Colors.black,
+                        ),
+                      ),
+                      Text(
+                        'Stock: ${widget.stock}',
+                        style: GoogleFonts.jost(
                           color: Colors.black,
                         ),
                       ),

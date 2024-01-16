@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/Provider/product_provider.dart';
 import 'package:mobile_pos/Screens/Purchase/purchase_details.dart';
-import 'package:mobile_pos/Screens/Sales/sales_screen.dart';
+import 'package:mobile_pos/Screens/Sales/sales_products_list_screen.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../constant.dart';
@@ -199,9 +199,10 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
                           },
                           child: ProductCard(
                             productTitle: products[index].productName.toString(),
-                            productDescription: products[index].brand?.brandName??'',
-                            productPrice: products[index].productSalePrice.toString(),
-                            productImage: products[index].productPicture??'',
+                            productDescription: products[index].brand?.brandName ?? '',
+                            productPrice: products[index].productSalePrice ?? 0,
+                            productImage: products[index].productPicture,
+                            stock: products[index].productStock ?? 0,
                           ),
                         );
                       });

@@ -2,7 +2,6 @@ import 'package:bluetooth_thermal_printer/bluetooth_thermal_printer.dart';
 import 'package:esc_pos_utils/esc_pos_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:mobile_pos/Screens/Products/Model/product_model.dart';
 import 'package:mobile_pos/Screens/Purchase/Model/purchase_transaction_model.dart';
 import 'package:nb_utils/nb_utils.dart';
 import '../constant.dart';

@@ -3,7 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:nb_utils/nb_utils.dart';
 
-import '../../Provider/printer_provider.dart';
+import '../../Const/api_config.dart';
+import '../../Provider/print_sales_invoice_provider.dart';
 import '../../currency.dart';
 import '../../invoice_constant.dart';
 // ignore: library_prefixes
@@ -11,13 +12,14 @@ import '../../constant.dart' as mainConstant;
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import '../../model/business_info_model.dart';
 import '../../model/print_transaction_model.dart';
-import '../../model/transition_model.dart';
+import '../../model/sale_transaction_model.dart';
 
 class SalesInvoiceDetails extends StatefulWidget {
-  const SalesInvoiceDetails({Key? key, required this.transitionModel, required this.personalInformationModel}) : super(key: key);
+  const SalesInvoiceDetails({Key? key, required this.saleTransaction, required this.businessInfo, this.fromSale}) : super(key: key);
 
-  final SaleTransactionModel transitionModel;
-  final BusinessInformationModel personalInformationModel;
+  final SalesTransaction saleTransaction;
+  final BusinessInformationModel businessInfo;
+  final bool? fromSale;
 
   @override
   State<SalesInvoiceDetails> createState() => _SalesInvoiceDetailsState();
@@ -27,7 +29,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, ref, __) {
-      final printerData = ref.watch(printerProviderNotifier);
+      final printerData = ref.watch(salesPrinterProvider);
       return SafeArea(
         child: Scaffold(
           body: SingleChildScrollView(
@@ -42,30 +44,33 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                     leading: Container(
                       height: 50.0,
                       width: 50.0,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: NetworkImage(widget.personalInformationModel.pictureUrl ?? ''),
-                          // image: AssetImage('images/logoPos.png'),
-                        ),
-                      ),
+                      decoration: widget.businessInfo.pictureUrl.isEmptyOrNull
+                          ? const BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage('images/no_shop_image.png'),
+                              ),
+                            )
+                          : BoxDecoration(
+                              image: DecorationImage(
+                                image: NetworkImage('${APIConfig.domain}${widget.businessInfo.pictureUrl ?? ''}'),
+                              ),
+                            ),
                     ),
                     title: Text(
-                      widget.transitionModel.sellerName.isEmptyOrNull
-                          ? widget.personalInformationModel.companyName.toString()
-                          : '${widget.personalInformationModel.companyName} [${widget.transitionModel.sellerName}]',
+                      '${widget.saleTransaction.user?.name}',
                       style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold, fontSize: 18.0),
                     ),
                     subtitle: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          widget.personalInformationModel.address.toString(),
+                          widget.businessInfo.address.toString(),
                           style: kTextStyle.copyWith(
                             color: kGreyTextColor,
                           ),
                         ),
                         Text(
-                          widget.personalInformationModel.phoneNumber.toString(),
+                          widget.businessInfo.phoneNumber.toString(),
                           style: kTextStyle.copyWith(
                             color: kGreyTextColor,
                           ),
@@ -87,7 +92,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                       ),
                       const Spacer(),
                       Text(
-                        '${lang.S.of(context).invoice}# ${widget.transitionModel.invoiceNumber}',
+                        '${lang.S.of(context).invoice}# ${widget.saleTransaction.invoiceNumber}',
                         style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
                       ),
                     ],
@@ -96,12 +101,12 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                   Row(
                     children: [
                       Text(
-                        widget.transitionModel.customerName,
+                        widget.saleTransaction.party?.name ?? '',
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                       const Spacer(),
                       Text(
-                        DateFormat.yMMMd().format(DateTime.parse(widget.transitionModel.purchaseDate)),
+                        DateFormat.yMMMd().format(DateTime.parse(widget.saleTransaction.saleDate ?? DateTime.now().toString())),
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                     ],
@@ -110,12 +115,12 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                   Row(
                     children: [
                       Text(
-                        widget.transitionModel.customerPhone,
+                        widget.saleTransaction.party?.phone ?? '',
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                       const Spacer(),
                       Text(
-                        widget.transitionModel.purchaseDate.substring(10, 16),
+                        widget.saleTransaction.saleDate?.substring(10, 16) ?? '',
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                     ],
@@ -159,7 +164,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                   ListView.builder(
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
-                      itemCount: widget.transitionModel.productList!.length,
+                      itemCount: widget.saleTransaction.details!.length,
                       itemBuilder: (_, i) {
                         return Padding(
                           padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
@@ -168,25 +173,25 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                             child: Row(
                               children: [
                                 Text(
-                                  widget.transitionModel.productList![i].productName.toString(),
+                                  widget.saleTransaction.details![i].product?.productName.toString() ?? '',
                                   maxLines: 2,
                                   style: kTextStyle.copyWith(color: kGreyTextColor),
                                 ),
                                 SizedBox(width: MediaQuery.of(context).size.width / 12),
                                 Text(
-                                  '$currency ${widget.transitionModel.productList![i].subTotal}',
+                                  '$currency ${widget.saleTransaction.details![i].price}',
                                   maxLines: 2,
                                   style: kTextStyle.copyWith(color: kGreyTextColor),
                                 ),
                                 const Spacer(),
                                 Text(
-                                  widget.transitionModel.productList![i].quantity.toString(),
+                                  widget.saleTransaction.details![i].quantities.toString(),
                                   maxLines: 1,
                                   style: kTextStyle.copyWith(color: kGreyTextColor),
                                 ),
                                 const Spacer(),
                                 Text(
-                                  '$currency ${double.parse(widget.transitionModel.productList![i].subTotal) * widget.transitionModel.productList![i].quantity}',
+                                  '$currency ${(widget.saleTransaction.details![i].price ?? 0) * (widget.saleTransaction.details![i].quantities ?? 0)}',
                                   maxLines: 2,
                                   style: kTextStyle.copyWith(color: kTitleColor),
                                 ),
@@ -211,7 +216,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                       SizedBox(
                         width: 120,
                         child: Text(
-                          '$currency ${widget.transitionModel.totalAmount!.toDouble() + widget.transitionModel.discountAmount!.toDouble()}',
+                          '$currency ${widget.saleTransaction.totalAmount!.toDouble() + widget.saleTransaction.discountAmount!.toDouble()}',
                           maxLines: 2,
                           style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
                           textAlign: TextAlign.end,
@@ -253,28 +258,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                       SizedBox(
                         width: 120,
                         child: Text(
-                          '$currency ${widget.transitionModel.discountAmount}',
-                          maxLines: 2,
-                          style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
-                          textAlign: TextAlign.end,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 5.0),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(
-                        lang.S.of(context).deliveryCharge,
-                        maxLines: 1,
-                        style: kTextStyle.copyWith(color: kGreyTextColor),
-                      ),
-                      const SizedBox(width: 20.0),
-                      SizedBox(
-                        width: 120,
-                        child: Text(
-                          '$currency 0.00',
+                          '$currency ${widget.saleTransaction.discountAmount}',
                           maxLines: 2,
                           style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
                           textAlign: TextAlign.end,
@@ -295,7 +279,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                       SizedBox(
                         width: 120,
                         child: Text(
-                          '$currency ${widget.transitionModel.totalAmount}',
+                          '$currency ${widget.saleTransaction.totalAmount}',
                           maxLines: 2,
                           style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
                           textAlign: TextAlign.end,
@@ -316,7 +300,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                       SizedBox(
                         width: 120,
                         child: Text(
-                          '$currency ${widget.transitionModel.totalAmount! - widget.transitionModel.dueAmount!.toDouble()}',
+                          '$currency ${widget.saleTransaction.totalAmount! - widget.saleTransaction.dueAmount!.toDouble()}',
                           maxLines: 2,
                           style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
                           textAlign: TextAlign.end,
@@ -337,7 +321,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                       SizedBox(
                         width: 120,
                         child: Text(
-                          '$currency ${widget.transitionModel.dueAmount}',
+                          '$currency ${widget.saleTransaction.dueAmount}',
                           maxLines: 2,
                           style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
                           textAlign: TextAlign.end,
@@ -362,91 +346,130 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
               ),
             ),
           ),
-          floatingActionButton: Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: GestureDetector(
-              onTap: () async {
-                await printerData.getBluetooth();
-                PrintTransactionModel model = PrintTransactionModel(transitionModel: widget.transitionModel, personalInformationModel: widget.personalInformationModel);
-                mainConstant.connected
-                    ? printerData.printTicket(
-                        printTransactionModel: model,
-                        productList: model.transitionModel!.productList,
-                      )
-                    // ignore: use_build_context_synchronously
-                    : showDialog(
-                        context: context,
-                        builder: (_) {
-                          return WillPopScope(
-                            onWillPop: () async => false,
-                            child: Dialog(
-                              child: SizedBox(
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    ListView.builder(
-                                      shrinkWrap: true,
-                                      itemCount: printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
-                                      itemBuilder: (context, index) {
-                                        return ListTile(
-                                          onTap: () async {
-                                            String select = printerData.availableBluetoothDevices[index];
-                                            List list = select.split("#");
-                                            // String name = list[0];
-                                            String mac = list[1];
-                                            bool isConnect = await printerData.setConnect(mac);
-                                            // ignore: use_build_context_synchronously
-                                            isConnect ? finish(context) : toast('Try Again');
-                                          },
-                                          title: Text('${printerData.availableBluetoothDevices[index]}'),
-                                          subtitle: Text(lang.S.of(context).clickToConnect),
-                                        );
-                                      },
-                                    ),
-                                    const SizedBox(height: 10),
-                                    Text(lang.S.of(context).connectPrinter),
-                                    const SizedBox(height: 10),
-                                    Container(height: 1, width: double.infinity, color: Colors.grey),
-                                    const SizedBox(height: 15),
-                                    GestureDetector(
-                                      onTap: () {
-                                        Navigator.pop(context);
-                                      },
-                                      child: Center(
-                                        child: Text(
-                                          lang.S.of(context).cancel,
-                                          style: TextStyle(color: mainConstant.kMainColor),
-                                        ),
-                                      ),
-                                    ),
-                                    const SizedBox(height: 15),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          );
-                        });
-              },
-              child: Container(
-                height: 60,
-                width: context.width() / 3,
-                decoration: const BoxDecoration(
-                  color: mainConstant.kMainColor,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(30),
-                  ),
-                ),
-                child: Center(
-                  child: Text(
-                    lang.S.of(context).print,
-                    style: const TextStyle(
-                      fontSize: 18,
-                      color: Colors.white,
+          floatingActionButton: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: GestureDetector(
+                  onTap: () async {
+                    if (widget.fromSale ?? false) {
+                      int count = 0;
+                      Navigator.popUntil(context, (route) {
+                        return count++ == 2;
+                      });
+                    } else {
+                      Navigator.pop(context);
+                    }
+                  },
+                  child: Container(
+                    height: 60,
+                    width: context.width() / 3,
+                    decoration: const BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(30),
+                      ),
+                    ),
+                    child: const Center(
+                      child: Text(
+                        'Cancel',
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: GestureDetector(
+                  onTap: () async {
+                    await printerData.getBluetooth();
+                    PrintTransactionModel model = PrintTransactionModel(transitionModel: widget.saleTransaction, personalInformationModel: widget.businessInfo);
+                    mainConstant.connected
+                        ? printerData.printSalesTicket(
+                            printTransactionModel: model,
+                            productList: model.transitionModel!.details,
+                          )
+                        // ignore: use_build_context_synchronously
+                        : showDialog(
+                            context: context,
+                            builder: (_) {
+                              return WillPopScope(
+                                onWillPop: () async => false,
+                                child: Dialog(
+                                  child: SizedBox(
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        ListView.builder(
+                                          shrinkWrap: true,
+                                          itemCount: printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
+                                          itemBuilder: (context, index) {
+                                            return ListTile(
+                                              onTap: () async {
+                                                String select = printerData.availableBluetoothDevices[index];
+                                                List list = select.split("#");
+                                                // String name = list[0];
+                                                String mac = list[1];
+                                                bool isConnect = await printerData.setConnect(mac);
+                                                // ignore: use_build_context_synchronously
+                                                isConnect ? finish(context) : toast('Try Again');
+                                              },
+                                              title: Text('${printerData.availableBluetoothDevices[index]}'),
+                                              subtitle: Text(lang.S.of(context).clickToConnect),
+                                            );
+                                          },
+                                        ),
+                                        const SizedBox(height: 10),
+                                        Text(lang.S.of(context).connectPrinter),
+                                        const SizedBox(height: 10),
+                                        Container(height: 1, width: double.infinity, color: Colors.grey),
+                                        const SizedBox(height: 15),
+                                        GestureDetector(
+                                          onTap: () {
+                                            Navigator.pop(context);
+                                          },
+                                          child: Center(
+                                            child: Text(
+                                              lang.S.of(context).cancel,
+                                              style: TextStyle(color: mainConstant.kMainColor),
+                                            ),
+                                          ),
+                                        ),
+                                        const SizedBox(height: 15),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              );
+                            });
+                  },
+                  child: Container(
+                    height: 60,
+                    width: context.width() / 3,
+                    decoration: const BoxDecoration(
+                      color: mainConstant.kMainColor,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(30),
+                      ),
+                    ),
+                    child: Center(
+                      child: Text(
+                        lang.S.of(context).print,
+                        style: const TextStyle(
+                          fontSize: 18,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
           floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         ),

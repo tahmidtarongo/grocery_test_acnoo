@@ -1,6 +1,7 @@
-import 'package:mobile_pos/model/due_transaction_model.dart';
-import 'package:mobile_pos/model/transition_model.dart';
 
+import 'package:mobile_pos/model/sale_transaction_model.dart';
+
+import '../Screens/Due Calculation/Model/due_collection_model.dart';
 import '../Screens/Purchase/Model/purchase_transaction_model.dart';
 import 'business_info_model.dart';
 
@@ -8,7 +9,7 @@ class PrintTransactionModel {
   PrintTransactionModel({required this.transitionModel, required this.personalInformationModel});
 
   BusinessInformationModel personalInformationModel;
-  SaleTransactionModel? transitionModel;
+  SalesTransaction? transitionModel;
 }
 
 class PrintPurchaseTransactionModel {
@@ -21,6 +22,6 @@ class PrintPurchaseTransactionModel {
 class PrintDueTransactionModel {
   PrintDueTransactionModel({required this.dueTransactionModel, required this.personalInformationModel});
 
-  DueTransactionModel? dueTransactionModel;
+  DueCollection? dueTransactionModel;
   BusinessInformationModel personalInformationModel;
 }

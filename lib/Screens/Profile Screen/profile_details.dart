@@ -1,10 +1,6 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mobile_pos/GlobalComponents/button_global.dart';
-import 'package:mobile_pos/Screens/Authentication/login_form.dart';
 import 'package:mobile_pos/Screens/Profile%20Screen/edit_profile.dart';
 import 'package:nb_utils/nb_utils.dart';
 
@@ -29,6 +25,7 @@ class _ProfileDetailsState extends State<ProfileDetails> {
       return businessInfo.when(data: (details) {
         TextEditingController addressController = TextEditingController(text: details.address);
         TextEditingController openingBalanceController = TextEditingController(text: details.shopOpeningBalance.toString());
+        TextEditingController remainingBalanceController = TextEditingController(text: details.remainingShopBalance.toString());
         TextEditingController phoneController = TextEditingController(text: details.phoneNumber);
         TextEditingController nameController = TextEditingController(text: details.companyName);
         TextEditingController categoryController = TextEditingController(text: details.category?.name);
@@ -202,6 +199,23 @@ class _ProfileDetailsState extends State<ProfileDetails> {
                       controller: openingBalanceController,
                       decoration: InputDecoration(
                         labelText: 'Shop Opening Balance',
+                        border: const OutlineInputBorder().copyWith(borderSide: const BorderSide(color: kGreyTextColor)),
+                        hoverColor: kGreyTextColor,
+                        fillColor: kGreyTextColor,
+                      ),
+                      textFieldType: TextFieldType.NAME,
+                    ),
+                  ),
+
+                  ///__________Remaining_Balance________________________
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: AppTextField(
+                      readOnly: true,
+                      cursorColor: kGreyTextColor,
+                      controller: remainingBalanceController,
+                      decoration: InputDecoration(
+                        labelText: 'Shop Remaining Balance',
                         border: const OutlineInputBorder().copyWith(borderSide: const BorderSide(color: kGreyTextColor)),
                         hoverColor: kGreyTextColor,
                         fillColor: kGreyTextColor,

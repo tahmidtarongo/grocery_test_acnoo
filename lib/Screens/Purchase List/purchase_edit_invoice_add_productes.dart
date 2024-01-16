@@ -16,7 +16,7 @@ import 'package:nb_utils/nb_utils.dart';
 import '../../Const/api_config.dart';
 import '../../Provider/add_to_cart.dart';
 import '../../Provider/add_to_cart_purchase.dart';
-import '../../model/transition_model.dart';
+import '../../model/sale_transaction_model.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 import '../Purchase/Model/purchase_transaction_model.dart' as parchase;

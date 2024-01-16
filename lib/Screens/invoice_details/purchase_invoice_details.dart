@@ -4,7 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:mobile_pos/Const/api_config.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
-import '../../Provider/print_purchase_provider.dart';
+import '../../Provider/print_purchase_invoice_provider.dart';
 import '../../currency.dart';
 import '../../invoice_constant.dart';
 // ignore: library_prefixes
@@ -365,91 +365,123 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
               ),
             ),
           ),
-          floatingActionButton: Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: GestureDetector(
-              onTap: () async {
-                await printerData.getBluetooth();
-                PrintPurchaseTransactionModel model = PrintPurchaseTransactionModel(purchaseTransitionModel: widget.transitionModel, personalInformationModel: widget.businessInfo);
-                mainConstant.connected
-                    ? printerData.printPurchaseThermalInvoice(
-                        printTransactionModel: model,
-                        productList: model.purchaseTransitionModel!.details,
-                      )
-                    // ignore: use_build_context_synchronously
-                    : showDialog(
-                        context: context,
-                        builder: (_) {
-                          return WillPopScope(
-                            onWillPop: () async => false,
-                            child: Dialog(
-                              child: SizedBox(
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    ListView.builder(
-                                      shrinkWrap: true,
-                                      itemCount: printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
-                                      itemBuilder: (context, index) {
-                                        return ListTile(
-                                          onTap: () async {
-                                            String select = printerData.availableBluetoothDevices[index];
-                                            List list = select.split("#");
-                                            // String name = list[0];
-                                            String mac = list[1];
-                                            bool isConnect = await printerData.setConnect(mac);
-                                            // ignore: use_build_context_synchronously
-                                            isConnect ? finish(context) : toast('Try Again');
-                                          },
-                                          title: Text('${printerData.availableBluetoothDevices[index]}'),
-                                          subtitle: Text(lang.S.of(context).clickToConnect),
-                                        );
-                                      },
-                                    ),
-                                    const SizedBox(height: 10),
-                                    Text(lang.S.of(context).connectPrinter),
-                                    const SizedBox(height: 10),
-                                    Container(height: 1, width: double.infinity, color: Colors.grey),
-                                    const SizedBox(height: 15),
-                                    GestureDetector(
-                                      onTap: () {
-                                        Navigator.pop(context);
-                                      },
-                                      child: Center(
-                                        child: Text(
-                                          lang.S.of(context).cancel,
-                                          style: const TextStyle(color: mainConstant.kMainColor),
-                                        ),
-                                      ),
-                                    ),
-                                    const SizedBox(height: 15),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          );
-                        });
-              },
-              child: Container(
-                height: 60,
-                width: context.width() / 3,
-                decoration: const BoxDecoration(
-                  color: mainConstant.kMainColor,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(30),
-                  ),
-                ),
-                child: Center(
-                  child: Text(
-                    lang.S.of(context).print,
-                    style: const TextStyle(
-                      fontSize: 18,
-                      color: Colors.white,
+          floatingActionButton: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Container(
+                    height: 60,
+                    width: context.width() / 3,
+                    decoration: const BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(30),
+                      ),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Cancel',
+                        style: const TextStyle(
+                          fontSize: 18,
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: GestureDetector(
+                  onTap: () async {
+                    await printerData.getBluetooth();
+                    PrintPurchaseTransactionModel model = PrintPurchaseTransactionModel(purchaseTransitionModel: widget.transitionModel, personalInformationModel: widget.businessInfo);
+                    mainConstant.connected
+                        ? printerData.printPurchaseThermalInvoice(
+                            printTransactionModel: model,
+                            productList: model.purchaseTransitionModel!.details,
+                          )
+                        // ignore: use_build_context_synchronously
+                        : showDialog(
+                            context: context,
+                            builder: (_) {
+                              return WillPopScope(
+                                onWillPop: () async => false,
+                                child: Dialog(
+                                  child: SizedBox(
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: [
+                                        ListView.builder(
+                                          shrinkWrap: true,
+                                          itemCount: printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
+                                          itemBuilder: (context, index) {
+                                            return ListTile(
+                                              onTap: () async {
+                                                String select = printerData.availableBluetoothDevices[index];
+                                                List list = select.split("#");
+                                                // String name = list[0];
+                                                String mac = list[1];
+                                                bool isConnect = await printerData.setConnect(mac);
+                                                // ignore: use_build_context_synchronously
+                                                isConnect ? finish(context) : toast('Try Again');
+                                              },
+                                              title: Text('${printerData.availableBluetoothDevices[index]}'),
+                                              subtitle: Text(lang.S.of(context).clickToConnect),
+                                            );
+                                          },
+                                        ),
+                                        const SizedBox(height: 10),
+                                        Text(lang.S.of(context).connectPrinter),
+                                        const SizedBox(height: 10),
+                                        Container(height: 1, width: double.infinity, color: Colors.grey),
+                                        const SizedBox(height: 15),
+                                        GestureDetector(
+                                          onTap: () {
+                                            Navigator.pop(context);
+                                          },
+                                          child: Center(
+                                            child: Text(
+                                              lang.S.of(context).cancel,
+                                              style: const TextStyle(color: mainConstant.kMainColor),
+                                            ),
+                                          ),
+                                        ),
+                                        const SizedBox(height: 15),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              );
+                            });
+                  },
+                  child: Container(
+                    height: 60,
+                    width: context.width() / 3,
+                    decoration: const BoxDecoration(
+                      color: mainConstant.kMainColor,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(30),
+                      ),
+                    ),
+                    child: Center(
+                      child: Text(
+                        lang.S.of(context).print,
+                        style: const TextStyle(
+                          fontSize: 18,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
           floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         ),

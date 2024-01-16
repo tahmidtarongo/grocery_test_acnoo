@@ -8,7 +8,6 @@ import 'package:mobile_pos/constant.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import '../../Provider/add_to_cart.dart';
-import '../../Provider/seles_report_provider.dart';
 import '../../currency.dart';
 
 class PaymentCompleted extends StatefulWidget {
@@ -25,8 +24,6 @@ class _PaymentCompletedState extends State<PaymentCompleted> {
   Widget build(BuildContext context) {
     return Consumer(builder: (context, ref, __) {
       final providerData = ref.watch(cartNotifier);
-      // ignore: unused_result
-      ref.refresh(salesReportProvider);
       return Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(

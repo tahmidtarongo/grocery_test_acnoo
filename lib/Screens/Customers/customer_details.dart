@@ -9,7 +9,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Const/api_config.dart';
 import 'package:mobile_pos/Provider/customer_provider.dart';
-import 'package:mobile_pos/Provider/print_purchase_provider.dart';
+import 'package:mobile_pos/Provider/print_purchase_invoice_provider.dart';
 import 'package:mobile_pos/Provider/transactions_provider.dart';
 import 'package:mobile_pos/Screens/Customers/edit_customer.dart';
 import 'package:mobile_pos/constant.dart';
@@ -17,7 +17,7 @@ import 'package:nb_utils/nb_utils.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../GlobalComponents/button_global.dart';
-import '../../Provider/printer_provider.dart';
+import '../../Provider/print_sales_invoice_provider.dart';
 import '../../Provider/profile_provider.dart';
 import '../../Repository/API/create_party_repo.dart';
 import '../../currency.dart';
@@ -77,9 +77,9 @@ class _CustomerDetailsState extends State<CustomerDetails> {
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, cRef, __) {
-      final providerData = cRef.watch(transitionProvider);
+      final providerData = cRef.watch(salesTransactionProvider);
       final purchaseList = cRef.watch(purchaseTransactionProvider);
-      final printerData = cRef.watch(printerProviderNotifier);
+      final printerData = cRef.watch(salesPrinterProvider);
       final printerDataPurchase = cRef.watch(printerPurchaseProviderNotifier);
       final personalData = cRef.watch(businessInfoProvider);
       return Scaffold(
@@ -287,12 +287,12 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                         itemBuilder: (context, index) {
                           final reTransaction = transaction.reversed.toList();
                           return Visibility(
-                            visible: reTransaction[index].customerPhone == widget.party.phone,
+                            visible: reTransaction[index].party?.id == widget.party.id,
                             child: GestureDetector(
                               onTap: () {
                                 SalesInvoiceDetails(
-                                  personalInformationModel: personalData.value!,
-                                  transitionModel: reTransaction[index],
+                                  businessInfo: personalData.value!,
+                                  saleTransaction: reTransaction[index],
                                 ).launch(context);
                               },
                               child: Column(
@@ -307,7 +307,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                           children: [
                                             Text(
-                                              "${lang.S.of(context).totalProduct} : ${reTransaction[index].productList!.length.toString()}",
+                                              "${lang.S.of(context).totalProduct} : ${reTransaction[index].details!.length.toString()}",
                                               style: const TextStyle(fontSize: 16),
                                             ),
                                             Text('#${reTransaction[index].invoiceNumber}'),
@@ -328,7 +328,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                                               ),
                                             ),
                                             Text(
-                                              reTransaction[index].purchaseDate.substring(0, 10),
+                                              reTransaction[index].saleDate!.substring(0, 10),
                                               style: const TextStyle(color: Colors.grey),
                                             ),
                                           ],
@@ -353,9 +353,9 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                                                       await printerData.getBluetooth();
                                                       PrintTransactionModel model = PrintTransactionModel(transitionModel: reTransaction[index], personalInformationModel: data);
                                                       connected
-                                                          ? printerData.printTicket(
+                                                          ? printerData.printSalesTicket(
                                                               printTransactionModel: model,
-                                                              productList: model.transitionModel!.productList,
+                                                              productList: model.transitionModel!.details,
                                                             )
                                                           // ignore: use_build_context_synchronously
                                                           : showDialog(

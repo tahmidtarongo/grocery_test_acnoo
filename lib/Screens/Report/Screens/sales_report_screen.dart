@@ -5,7 +5,7 @@ import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-import 'package:mobile_pos/Provider/printer_provider.dart';
+import 'package:mobile_pos/Provider/print_sales_invoice_provider.dart';
 import 'package:mobile_pos/Provider/transactions_provider.dart';
 import 'package:mobile_pos/model/print_transaction_model.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -74,8 +74,8 @@ class _SalesReportScreenState extends State<SalesReportScreen> {
           elevation: 0.0,
         ),
         body: Consumer(builder: (context, ref, __) {
-          final providerData = ref.watch(transitionProvider);
-          final printerData = ref.watch(printerProviderNotifier);
+          final providerData = ref.watch(salesTransactionProvider);
+          final printerData = ref.watch(salesPrinterProvider);
           final personalData = ref.watch(businessInfoProvider);
           return SingleChildScrollView(
             child: Column(
@@ -148,16 +148,14 @@ class _SalesReportScreenState extends State<SalesReportScreen> {
                   ),
                 ),
                 providerData.when(data: (transaction) {
-                  final reTransaction = transaction.reversed.toList();
-
-                  for (var element in reTransaction) {
-                    if ((fromDate.isBefore(DateTime.parse(element.purchaseDate)) || DateTime.parse(element.purchaseDate).isAtSameMomentAs(fromDate)) &&
-                        (toDate.isAfter(DateTime.parse(element.purchaseDate)) || DateTime.parse(element.purchaseDate).isAtSameMomentAs(toDate))) {
+                  for (var element in transaction) {
+                    if ((fromDate.isBefore(DateTime.parse(element.saleDate ?? '')) || DateTime.parse(element.saleDate ?? '').isAtSameMomentAs(fromDate)) &&
+                        (toDate.isAfter(DateTime.parse(element.saleDate ?? '')) || DateTime.parse(element.saleDate ?? '').isAtSameMomentAs(toDate))) {
                       totalSale = totalSale + element.totalAmount!;
                     }
                   }
 
-                  return reTransaction.isNotEmpty
+                  return transaction.isNotEmpty
                       ? Column(
                           children: [
                             Padding(
@@ -246,18 +244,18 @@ class _SalesReportScreenState extends State<SalesReportScreen> {
                             ListView.builder(
                               shrinkWrap: true,
                               physics: const NeverScrollableScrollPhysics(),
-                              itemCount: reTransaction.length,
+                              itemCount: transaction.length,
                               itemBuilder: (context, index) {
                                 return Visibility(
-                                  visible: (fromDate.isBefore(DateTime.parse(reTransaction[index].purchaseDate)) ||
-                                          DateTime.parse(reTransaction[index].purchaseDate).isAtSameMomentAs(fromDate)) &&
-                                      (toDate.isAfter(DateTime.parse(reTransaction[index].purchaseDate)) ||
-                                          DateTime.parse(reTransaction[index].purchaseDate).isAtSameMomentAs(toDate)),
+                                  visible: (fromDate.isBefore(DateTime.parse(transaction[index].saleDate ?? '')) ||
+                                          DateTime.parse(transaction[index].saleDate ?? '').isAtSameMomentAs(fromDate)) &&
+                                      (toDate.isAfter(DateTime.parse(transaction[index].saleDate ?? '')) ||
+                                          DateTime.parse(transaction[index].saleDate ?? '').isAtSameMomentAs(toDate)),
                                   child: GestureDetector(
                                     onTap: () {
                                       SalesInvoiceDetails(
-                                        transitionModel: reTransaction[index],
-                                        personalInformationModel: personalData.value!,
+                                        saleTransaction: transaction[index],
+                                        businessInfo: personalData.value!,
                                       ).launch(context);
                                     },
                                     child: Column(
@@ -272,10 +270,10 @@ class _SalesReportScreenState extends State<SalesReportScreen> {
                                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                 children: [
                                                   Text(
-                                                    reTransaction[index].customerName,
+                                                    transaction[index].party?.name ?? '',
                                                     style: const TextStyle(fontSize: 16),
                                                   ),
-                                                  Text('#${reTransaction[index].invoiceNumber}'),
+                                                  Text('#${transaction[index].invoiceNumber}'),
                                                 ],
                                               ),
                                               const SizedBox(height: 10),
@@ -285,38 +283,38 @@ class _SalesReportScreenState extends State<SalesReportScreen> {
                                                   Container(
                                                     padding: const EdgeInsets.all(8),
                                                     decoration: BoxDecoration(
-                                                        color: reTransaction[index].dueAmount! <= 0
+                                                        color: transaction[index].dueAmount! <= 0
                                                             ? const Color(0xff0dbf7d).withOpacity(0.1)
                                                             : const Color(0xFFED1A3B).withOpacity(0.1),
                                                         borderRadius: const BorderRadius.all(Radius.circular(10))),
                                                     child: Text(
-                                                      reTransaction[index].dueAmount! <= 0 ? lang.S.of(context).paid : lang.S.of(context).unPaid,
-                                                      style: TextStyle(color: reTransaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d) : const Color(0xFFED1A3B)),
+                                                      transaction[index].dueAmount! <= 0 ? lang.S.of(context).paid : lang.S.of(context).unPaid,
+                                                      style: TextStyle(color: transaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d) : const Color(0xFFED1A3B)),
                                                     ),
                                                   ),
                                                   Text(
-                                                    DateFormat.yMMMd().format(DateTime.parse(reTransaction[index].purchaseDate)),
+                                                    DateFormat.yMMMd().format(DateTime.parse(transaction[index].saleDate ?? '')),
                                                     style: const TextStyle(color: Colors.grey),
                                                   ),
                                                 ],
                                               ),
                                               const SizedBox(height: 10),
                                               Text(
-                                                '${lang.S.of(context).total} : $currency ${reTransaction[index].totalAmount.toString()}',
+                                                '${lang.S.of(context).total} : $currency ${transaction[index].totalAmount.toString()}',
                                                 style: const TextStyle(color: Colors.grey),
                                               ),
                                               const SizedBox(height: 10),
                                               Text(
-                                                '${lang.S.of(context).paid} : $currency ${reTransaction[index].totalAmount!.toDouble() - reTransaction[index].dueAmount!.toDouble()}',
+                                                '${lang.S.of(context).paid} : $currency ${transaction[index].totalAmount!.toDouble() - transaction[index].dueAmount!.toDouble()}',
                                                 style: const TextStyle(color: Colors.grey),
                                               ),
                                               Row(
                                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                 children: [
                                                   Text(
-                                                    '${lang.S.of(context).due}: $currency ${reTransaction[index].dueAmount.toString()}',
+                                                    '${lang.S.of(context).due}: $currency ${transaction[index].dueAmount.toString()}',
                                                     style: const TextStyle(fontSize: 16),
-                                                  ).visible(reTransaction[index].dueAmount!.toInt() != 0),
+                                                  ).visible(transaction[index].dueAmount!.toInt() != 0),
                                                   personalData.when(data: (data) {
                                                     return Row(
                                                       children: [
@@ -325,11 +323,11 @@ class _SalesReportScreenState extends State<SalesReportScreen> {
                                                               if ((Theme.of(context).platform == TargetPlatform.android)) {
                                                                 await printerData.getBluetooth();
                                                                 PrintTransactionModel model =
-                                                                    PrintTransactionModel(transitionModel: reTransaction[index], personalInformationModel: data);
+                                                                    PrintTransactionModel(transitionModel: transaction[index], personalInformationModel: data);
                                                                 connected
-                                                                    ? printerData.printTicket(
+                                                                    ? printerData.printSalesTicket(
                                                                         printTransactionModel: model,
-                                                                        productList: model.transitionModel!.productList,
+                                                                        productList: model.transitionModel!.details,
                                                                       )
                                                                     // ignore: use_build_context_synchronously
                                                                     : showDialog(
@@ -396,7 +394,7 @@ class _SalesReportScreenState extends State<SalesReportScreen> {
                                                               color: Colors.grey,
                                                             )),
                                                         IconButton(
-                                                            onPressed: () => GeneratePdf().generateSaleDocument(reTransaction[index], data, context),
+                                                            onPressed: () => GeneratePdf().generateSaleDocument(transaction[index], data, context),
                                                             icon: const Icon(
                                                               Icons.picture_as_pdf,
                                                               color: Colors.grey,
