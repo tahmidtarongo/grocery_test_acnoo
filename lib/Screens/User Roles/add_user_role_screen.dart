@@ -1,5 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -8,7 +6,6 @@ import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:mobile_pos/Screens/User%20Roles/Model/user_role_model.dart' as user;
 import 'package:nb_utils/nb_utils.dart';
-import '../Authentication/phone.dart';
 import 'Repo/user_role_repo.dart';
 
 class AddUserRole extends StatefulWidget {
@@ -319,6 +316,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                             }
                             return null;
                           },
+                          keyboardType: TextInputType.phone,
                           showCursor: true,
                           controller: phoneController,
                           // cursorColor: kTitleColor,

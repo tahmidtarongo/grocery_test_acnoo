@@ -105,7 +105,7 @@ class _PackageScreenState extends State<PackageScreen> {
                             ),
                             child: Center(
                                 child: Text(
-                              '${(DateTime.parse(info.subscriptionDate).difference(DateTime.now()).inDays.abs() - (info.enrolledPlan?.duration ?? 0)).abs()} \nDays Left',
+                              '${(DateTime.parse(info.subscriptionDate ?? '').difference(DateTime.now()).inDays.abs() - (info.enrolledPlan?.duration ?? 0)).abs()} \nDays Left',
                               textAlign: TextAlign.center,
                               style: const TextStyle(fontSize: 12, color: Colors.white),
                             )),
@@ -214,22 +214,25 @@ class _PackageScreenState extends State<PackageScreen> {
                     //   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     // ).visible(initialSelectedPackage != 'Lifetime'),
                     // const SizedBox(height: 20).visible(initialSelectedPackage != 'Lifetime'),
-                    GestureDetector(
-                      onTap: () {
-                        const PurchasePremiumPlanScreen(
-                          isCameBack: true,
-                        ).launch(context);
-                      },
-                      child: Container(
-                        height: 60,
-                        decoration: const BoxDecoration(
-                          color: kMainColor,
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
-                        ),
-                        child: Center(
-                          child: Text(
-                            lang.S.of(context).updateNow,
-                            style: const TextStyle(fontSize: 18, color: Colors.white),
+                    Visibility(
+                      visible: info.user?.role !='staff',
+                      child: GestureDetector(
+                        onTap: () {
+                          const PurchasePremiumPlanScreen(
+                            isCameBack: true,
+                          ).launch(context);
+                        },
+                        child: Container(
+                          height: 60,
+                          decoration: const BoxDecoration(
+                            color: kMainColor,
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                          ),
+                          child: Center(
+                            child: Text(
+                              lang.S.of(context).updateNow,
+                              style: const TextStyle(fontSize: 18, color: Colors.white),
+                            ),
                           ),
                         ),
                       ),

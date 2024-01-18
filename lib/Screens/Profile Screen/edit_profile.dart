@@ -21,7 +21,7 @@ import 'package:mobile_pos/generated/l10n.dart' as lang;
 class EditProfile extends StatefulWidget {
   const EditProfile({Key? key, required this.profile, required this.ref}) : super(key: key);
 
-  final BusinessInformationModel profile;
+  final BusinessInformation profile;
   final WidgetRef ref;
 
   @override

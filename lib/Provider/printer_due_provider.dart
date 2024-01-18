@@ -2,7 +2,6 @@ import 'package:bluetooth_thermal_printer/bluetooth_thermal_printer.dart';
 import 'package:esc_pos_utils/esc_pos_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:nb_utils/nb_utils.dart';
 import '../constant.dart';
 import '../model/print_transaction_model.dart';
 
@@ -58,12 +57,13 @@ class PrinterDue extends ChangeNotifier {
         ),
         linesAfter: 1);
 
-    bytes += generator.text('Seller :${printDueTransactionModel.dueTransactionModel?.party?.name??''}', styles: const PosStyles(align: PosAlign.center));
+    bytes += generator.text('Seller :${printDueTransactionModel.dueTransactionModel?.user?.name??''}', styles: const PosStyles(align: PosAlign.center));
 
     bytes += generator.text(printDueTransactionModel.personalInformationModel.address ?? '', styles: const PosStyles(align: PosAlign.center));
     bytes += generator.text(printDueTransactionModel.personalInformationModel.phoneNumber??'', styles: const PosStyles(align: PosAlign.center), linesAfter: 1);
     bytes += generator.text('Received From: ${printDueTransactionModel.dueTransactionModel?.party?.name} ', styles: const PosStyles(align: PosAlign.left));
-    bytes += generator.text('mobile: ${printDueTransactionModel.dueTransactionModel?.party?.phone}', styles: const PosStyles(align: PosAlign.left));
+    bytes += generator.text('Mobile: ${printDueTransactionModel.dueTransactionModel?.party?.phone}', styles: const PosStyles(align: PosAlign.left));
+    // bytes += generator.text('Received By: ${printDueTransactionModel.dueTransactionModel?.user?.name}', styles: const PosStyles(align: PosAlign.left));
     bytes += generator.text('Invoice Number: ${printDueTransactionModel.dueTransactionModel?.invoiceNumber ?? 'Not Provided'}',
         styles: const PosStyles(align: PosAlign.left), linesAfter: 1);
 

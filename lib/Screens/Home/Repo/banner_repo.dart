@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'package:firebase_database/firebase_database.dart';
 import '../../../Const/api_config.dart';
 import '../../../Repository/constant_functions.dart';
 import '../Model/banner_model.dart';

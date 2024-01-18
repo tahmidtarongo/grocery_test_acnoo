@@ -52,7 +52,7 @@ class PurchaseTransaction {
   num? paidAmount;
   num? totalAmount;
   String? invoiceNumber;
-  num? isPaid;
+  bool? isPaid;
   String? paymentType;
   String? purchaseDate;
   String? createdAt;

@@ -39,36 +39,39 @@ class _ProfileDetailsState extends State<ProfileDetails> {
               ),
             ),
             actions: [
-              Padding(
-                padding: const EdgeInsets.only(right: 15.0),
-                child: GestureDetector(
-                  onTap: () async {
-                    await Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => EditProfile(
-                            profile: details,
-                            ref: ref,
-                          ),
-                        ));
-                    setState(() {});
-                  },
-                  child: Row(
-                    children: [
-                      const Icon(
-                        Icons.edit,
-                        color: kMainColor,
-                      ),
-                      const SizedBox(
-                        width: 5.0,
-                      ),
-                      Text(
-                        lang.S.of(context).edit,
-                        style: GoogleFonts.poppins(
+              Visibility(
+                visible: details.user?.visibility?.profileEditPermission??true,
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 15.0),
+                  child: GestureDetector(
+                    onTap: () async {
+                      await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => EditProfile(
+                              profile: details,
+                              ref: ref,
+                            ),
+                          ));
+                      setState(() {});
+                    },
+                    child: Row(
+                      children: [
+                        const Icon(
+                          Icons.edit,
                           color: kMainColor,
                         ),
-                      ),
-                    ],
+                        const SizedBox(
+                          width: 5.0,
+                        ),
+                        Text(
+                          lang.S.of(context).edit,
+                          style: GoogleFonts.poppins(
+                            color: kMainColor,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),

@@ -8,14 +8,14 @@ import 'business_info_model.dart';
 class PrintTransactionModel {
   PrintTransactionModel({required this.transitionModel, required this.personalInformationModel});
 
-  BusinessInformationModel personalInformationModel;
+  BusinessInformation personalInformationModel;
   SalesTransaction? transitionModel;
 }
 
 class PrintPurchaseTransactionModel {
   PrintPurchaseTransactionModel({required this.purchaseTransitionModel, required this.personalInformationModel});
 
-  BusinessInformationModel personalInformationModel;
+  BusinessInformation personalInformationModel;
   PurchaseTransaction? purchaseTransitionModel;
 }
 
@@ -23,5 +23,5 @@ class PrintDueTransactionModel {
   PrintDueTransactionModel({required this.dueTransactionModel, required this.personalInformationModel});
 
   DueCollection? dueTransactionModel;
-  BusinessInformationModel personalInformationModel;
+  BusinessInformation personalInformationModel;
 }

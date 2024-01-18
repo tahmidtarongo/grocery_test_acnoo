@@ -1,11 +1,6 @@
 // ignore_for_file: unused_result
 
-import 'dart:convert';
 import 'dart:io';
-
-import 'package:firebase_core/firebase_core.dart' as firebase_core;
-import 'package:firebase_database/firebase_database.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -14,17 +9,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:mobile_pos/Const/api_config.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
-import 'package:mobile_pos/Provider/product_provider.dart';
 import 'package:mobile_pos/Screens/Products/Repo/product_repo.dart';
 import 'package:mobile_pos/Screens/Products/unit_list.dart';
 import 'package:mobile_pos/Screens/Products/Model/product_model.dart';
 import 'package:nb_utils/nb_utils.dart';
-
-import 'Model/product_model.dart';
 import 'Model/category_model.dart';
 import '../../constant.dart';
-import '../../currency.dart';
-import '../Home/home_screen.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:mobile_pos/Screens/Products/Model/brands_model.dart' as brand;
 import 'package:mobile_pos/Screens/Products/Model/unit_model.dart' as unit;

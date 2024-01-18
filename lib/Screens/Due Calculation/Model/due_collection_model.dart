@@ -43,8 +43,8 @@ class DueCollection {
   num? businessId;
   num? partyId;
   num? userId;
-  dynamic saleId;
-  dynamic purchaseId;
+  num? saleId;
+  num? purchaseId;
   num? totalDue;
   num? dueAmountAfterPay;
   num? payDueAmount;

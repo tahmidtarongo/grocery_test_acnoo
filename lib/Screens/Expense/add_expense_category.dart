@@ -1,14 +1,13 @@
 // ignore_for_file: unused_result
 
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
-import 'package:mobile_pos/Provider/expense_category_proivder.dart';
+import 'package:mobile_pos/Screens/Expense/Providers/expense_category_proivder.dart';
+import 'package:mobile_pos/Screens/Expense/Repo/expanse_category_repo.dart';
 import 'package:mobile_pos/constant.dart';
-import 'package:mobile_pos/model/expense_category_model.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 
@@ -21,14 +20,15 @@ class AddExpenseCategory extends StatefulWidget {
 }
 
 class _AddExpenseCategoryState extends State<AddExpenseCategory> {
-  final CurrentUserData currentUserData = CurrentUserData();
   bool showProgress = false;
-  late String categoryName;
+
+  TextEditingController nameController = TextEditingController();
+  GlobalKey<FormState> key = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, ref, __) {
-      final allCategory = ref.watch(expenseCategoryProvider);
+      final allCategory = ref.watch(expanseCategoryProvider);
       return Scaffold(
         appBar: AppBar(
           leading: IconButton(
@@ -63,63 +63,39 @@ class _AddExpenseCategoryState extends State<AddExpenseCategory> {
                     strokeWidth: 5.0,
                   ),
                 ),
-                AppTextField(
-                  textFieldType: TextFieldType.NAME,
-                  onChanged: (value) {
-                    setState(() {
-                      categoryName = value;
-                    });
-                  },
-                  decoration: InputDecoration(
-                    border: const OutlineInputBorder(),
-                    hintText: lang.S.of(context).fashions,
-                    floatingLabelBehavior: FloatingLabelBehavior.always,
-                    labelText: lang.S.of(context).categoryName,
+                Form(
+                  key: key,
+                  child: TextFormField(
+                    validator: (value) {
+                      if(value?.trim().isEmptyOrNull??true){
+                        return 'Enter expanse category name';
+                      }
+                      return null;
+                    },
+                    controller: nameController,
+                    decoration: InputDecoration(
+                      border: const OutlineInputBorder(),
+                      hintText: lang.S.of(context).fashions,
+                      floatingLabelBehavior: FloatingLabelBehavior.always,
+                      labelText: lang.S.of(context).categoryName,
+                    ),
                   ),
                 ),
                 const SizedBox(height: 20),
                 ButtonGlobalWithoutIcon(
                   buttontext: lang.S.of(context).save,
                   buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
-                  onPressed: () {
-                    bool isAlreadyAdded = false;
-                    allCategory.value?.forEach((element) {
-                      if (element.categoryName.toLowerCase().removeAllWhiteSpace().contains(
-                            categoryName.toLowerCase().removeAllWhiteSpace(),
-                          )) {
-                        isAlreadyAdded = true;
-                      }
-                    });
-                    setState(() {
-                      showProgress = true;
-                    });
-                    final DatabaseReference categoryInformationRef = FirebaseDatabase.instance.ref().child(constUserId).child('Expense Category');
-                    categoryInformationRef.keepSynced(true);
+                  onPressed: () async {
+                    if(key.currentState?.validate()??false){
+                      EasyLoading.show();
+                      final categoryRepo = ExpanseCategoryRepo();
+                      await categoryRepo.addExpanseCategory(
+                        ref: ref,
+                        context: context,
+                        categoryName: nameController.text.trim(),
+                      );
+                    }
 
-                    ExpenseCategoryModel categoryModel = ExpenseCategoryModel(
-                      categoryName: categoryName,
-                      categoryDescription: '',
-                    );
-                    isAlreadyAdded
-                        ? EasyLoading.showError(lang.S.of(context).alreadyAdded)
-                        : categoryInformationRef.push().set(
-                              categoryModel.toJson(),
-                            );
-                    setState(
-                      () {
-                        showProgress = false;
-                        isAlreadyAdded
-                            ? null
-                            : ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(
-                                  content: Text("Data Saved Successfully"),
-                                ),
-                              );
-                      },
-                    );
-
-                    ref.refresh(expenseCategoryProvider);
-                    isAlreadyAdded ? null : Navigator.pop(context);
                   },
                   buttonTextColor: Colors.white,
                 ),

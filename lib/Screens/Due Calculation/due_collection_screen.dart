@@ -4,7 +4,9 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mobile_pos/Screens/Due%20Calculation/Model/due_collection_model.dart';
 import 'package:mobile_pos/Screens/Due%20Calculation/Repo/due_repo.dart';
+import 'package:mobile_pos/Screens/invoice_details/due_invoice_details.dart';
 import 'package:nb_utils/nb_utils.dart';
 import '../../Provider/printer_due_provider.dart';
 import '../../Provider/profile_provider.dart';
@@ -398,7 +400,8 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                           onTap: () async {
                             if (paidAmount > 0 && dueAmount > 0) {
                               DueRepo repo = DueRepo();
-                              await repo.dueCollect(
+                              DueCollection? dueData;
+                              dueData = await repo.dueCollect(
                                 ref: consumerRef,
                                 context: context,
                                 partyId: widget.customerModel.id ?? 0,
@@ -407,6 +410,13 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                                 paymentType: paymentType,
                                 payDueAmount: paidAmount,
                               );
+                              if (dueData != null) {
+                                DueInvoiceDetails(
+                                  dueCollection: dueData,
+                                  personalInformationModel: data,
+                                  isFromDue: true,
+                                ).launch(context);
+                              }
                             } else {
                               EasyLoading.showError('No Due Selected');
                             }

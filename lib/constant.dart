@@ -1,8 +1,5 @@
-import 'dart:convert';
-import 'package:firebase_database/firebase_database.dart';
+
 import 'package:flutter/material.dart';
-import 'package:mobile_pos/Screens/User%20Roles/Model/user_role_model.dart';
-import 'package:nb_utils/nb_utils.dart';
 
 // const kMainColor = Color(0xFF3F8CFF);
 const kMainColor = Color(0xFF007AD0);
@@ -64,47 +61,7 @@ List<String> productCategory = ['Fashion', 'Electronics', 'Computer', 'Gadgets',
 
 ///______________________________________________________________________________________________
 String constUserId = '';
-bool isSubUser = false;
 String subUserTitle = '';
 String subUserEmail = '';
 bool isSubUserDeleted = true;
-//
-
-UserRoleModel finalUserRoleModel = UserRoleModel();
-
-class CurrentUserData {
-  void getUserData() async {
-    final prefs = await SharedPreferences.getInstance();
-    constUserId = prefs.getString('userId') ?? '';
-    isSubUser = prefs.getBool('isSubUser') ?? false;
-    subUserEmail = prefs.getString('subUserEmail') ?? '';
-  }
-
-
-  Future<bool> isSubUserEmailNotFound() async {
-    bool isMailMatch = true;
-    final ref = FirebaseDatabase.instance.ref(constUserId).child('User Role');
-
-    await ref.orderByKey().get().then((value) async {
-      for (var element in value.children) {
-        var data = UserRoleModel.fromJson(jsonDecode(jsonEncode(element.value)));
-        if (data.email == subUserEmail) {
-          isMailMatch = false;
-          return;
-        }
-      }
-    });
-    return isMailMatch;
-  }
-
-  void putUserData({required String userId, required bool isSubUser, required String title, required String email}) async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setString('userId', userId);
-    await prefs.setString('subUserEmail', email);
-    await prefs.setString('userTitle', title);
-    await prefs.setBool('isSubUser', isSubUser);
-    getUserData();
-  }
-}
-
 bool newSelect = false;

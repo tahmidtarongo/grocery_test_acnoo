@@ -97,327 +97,330 @@ class _ProfileSetupState extends State<ProfileSetup> {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer(builder: (context, ref, __) {
-      final businessCategoryList = ref.watch(businessCategoryProvider);
+    return WillPopScope(
+      onWillPop: ()async =>false,
+      child: Consumer(builder: (context, ref, __) {
+        final businessCategoryList = ref.watch(businessCategoryProvider);
 
-      return businessCategoryList.when(data: (categoryList) {
-        return Scaffold(
-          appBar: AppBar(
-            iconTheme: const IconThemeData(color: Colors.black),
-            title: Text(
-              lang.S.of(context).setUpProfile,
-              style: GoogleFonts.poppins(
-                color: Colors.black,
+        return businessCategoryList.when(data: (categoryList) {
+          return Scaffold(
+            appBar: AppBar(
+              iconTheme: const IconThemeData(color: Colors.black),
+              title: Text(
+                lang.S.of(context).setUpProfile,
+                style: GoogleFonts.poppins(
+                  color: Colors.black,
+                ),
               ),
+              centerTitle: true,
+              backgroundColor: Colors.white,
+              elevation: 0.0,
             ),
-            centerTitle: true,
-            backgroundColor: Colors.white,
-            elevation: 0.0,
-          ),
-          bottomNavigationBar: ButtonGlobal(
-            iconWidget: Icons.arrow_forward,
-            buttontext: lang.S.of(context).continueButton,
-            iconColor: Colors.white,
-            buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
-            onPressed: () async {
-              if (selectedBusinessCategory != null) {
-                if (_formKey.currentState!.validate()) {
-                  try {
-                    BusinessSetupRepo businessSetupRepo = BusinessSetupRepo();
-                    await businessSetupRepo.businessSetup(
-                      context: context,
-                      name: nameController.text,
-                      address: addressController.text.isEmptyOrNull ? null : addressController.text,
-                      categoryId: selectedBusinessCategory!.id.toString(),
-                      image: pickedImage == null ? null : File(pickedImage!.path),
-                      languageCode: selectedLanguage!.code,
-                      openingBalance: openingBalanceController.text.isEmptyOrNull ? null : openingBalanceController.text,
-                      phone: phoneController.text,
-                    );
-                  } catch (e) {
-                    EasyLoading.dismiss();
-                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
+            bottomNavigationBar: ButtonGlobal(
+              iconWidget: Icons.arrow_forward,
+              buttontext: lang.S.of(context).continueButton,
+              iconColor: Colors.white,
+              buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
+              onPressed: () async {
+                if (selectedBusinessCategory != null) {
+                  if (_formKey.currentState!.validate()) {
+                    try {
+                      BusinessSetupRepo businessSetupRepo = BusinessSetupRepo();
+                      await businessSetupRepo.businessSetup(
+                        context: context,
+                        name: nameController.text,
+                        address: addressController.text.isEmptyOrNull ? null : addressController.text,
+                        categoryId: selectedBusinessCategory!.id.toString(),
+                        image: pickedImage == null ? null : File(pickedImage!.path),
+                        languageCode: selectedLanguage!.code,
+                        openingBalance: openingBalanceController.text.isEmptyOrNull ? null : openingBalanceController.text,
+                        phone: phoneController.text,
+                      );
+                    } catch (e) {
+                      EasyLoading.dismiss();
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
+                    }
                   }
+                } else {
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Select a Business Category')));
                 }
-              } else {
-                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Select a Business Category')));
-              }
 
-              // Navigator.pushNamed(context, '/otp');
-            },
-          ),
-          body: SingleChildScrollView(
-            child: Center(
-              child: Form(
-                key: _formKey,
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Text(
-                        lang.S.of(context).setUpDesc,
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.poppins(
-                          color: kGreyTextColor,
-                          fontSize: 15.0,
+                // Navigator.pushNamed(context, '/otp');
+              },
+            ),
+            body: SingleChildScrollView(
+              child: Center(
+                child: Form(
+                  key: _formKey,
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          lang.S.of(context).setUpDesc,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.poppins(
+                            color: kGreyTextColor,
+                            fontSize: 15.0,
+                          ),
                         ),
                       ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        showDialog(
-                            context: context,
-                            builder: (BuildContext context) {
-                              return Dialog(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(12.0),
-                                ),
-                                // ignore: sized_box_for_whitespace
-                                child: Container(
-                                  height: 200.0,
-                                  width: MediaQuery.of(context).size.width - 80,
-                                  child: Center(
-                                    child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        GestureDetector(
-                                          onTap: () async {
-                                            pickedImage = await _picker.pickImage(source: ImageSource.gallery);
-                                            setState(() {});
-                                            Navigator.pop(context);
-                                          },
-                                          child: Column(
-                                            mainAxisAlignment: MainAxisAlignment.center,
-                                            children: [
-                                              const Icon(
-                                                Icons.photo_library_rounded,
-                                                size: 60.0,
-                                                color: kMainColor,
-                                              ),
-                                              Text(
-                                                lang.S.of(context).gallery,
-                                                style: GoogleFonts.poppins(
-                                                  fontSize: 20.0,
+                      GestureDetector(
+                        onTap: () {
+                          showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return Dialog(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(12.0),
+                                  ),
+                                  // ignore: sized_box_for_whitespace
+                                  child: Container(
+                                    height: 200.0,
+                                    width: MediaQuery.of(context).size.width - 80,
+                                    child: Center(
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          GestureDetector(
+                                            onTap: () async {
+                                              pickedImage = await _picker.pickImage(source: ImageSource.gallery);
+                                              setState(() {});
+                                              Navigator.pop(context);
+                                            },
+                                            child: Column(
+                                              mainAxisAlignment: MainAxisAlignment.center,
+                                              children: [
+                                                const Icon(
+                                                  Icons.photo_library_rounded,
+                                                  size: 60.0,
                                                   color: kMainColor,
                                                 ),
-                                              ),
-                                            ],
+                                                Text(
+                                                  lang.S.of(context).gallery,
+                                                  style: GoogleFonts.poppins(
+                                                    fontSize: 20.0,
+                                                    color: kMainColor,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
                                           ),
-                                        ),
-                                        const SizedBox(
-                                          width: 40.0,
-                                        ),
-                                        GestureDetector(
-                                          onTap: () async {
-                                            pickedImage = await _picker.pickImage(source: ImageSource.camera);
-                                            setState(() {});
-                                            Navigator.pop(context);
-                                          },
-                                          child: Column(
-                                            mainAxisAlignment: MainAxisAlignment.center,
-                                            children: [
-                                              const Icon(
-                                                Icons.camera,
-                                                size: 60.0,
-                                                color: kGreyTextColor,
-                                              ),
-                                              Text(
-                                                lang.S.of(context).camera,
-                                                style: GoogleFonts.poppins(
-                                                  fontSize: 20.0,
+                                          const SizedBox(
+                                            width: 40.0,
+                                          ),
+                                          GestureDetector(
+                                            onTap: () async {
+                                              pickedImage = await _picker.pickImage(source: ImageSource.camera);
+                                              setState(() {});
+                                              Navigator.pop(context);
+                                            },
+                                            child: Column(
+                                              mainAxisAlignment: MainAxisAlignment.center,
+                                              children: [
+                                                const Icon(
+                                                  Icons.camera,
+                                                  size: 60.0,
                                                   color: kGreyTextColor,
                                                 ),
-                                              ),
-                                            ],
+                                                Text(
+                                                  lang.S.of(context).camera,
+                                                  style: GoogleFonts.poppins(
+                                                    fontSize: 20.0,
+                                                    color: kGreyTextColor,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
                                           ),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
                                   ),
-                                ),
-                              );
-                            });
-                      },
-                      child: Stack(
-                        children: [
-                          Container(
-                            height: 120,
-                            width: 120,
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Colors.black54, width: 1),
-                              borderRadius: const BorderRadius.all(Radius.circular(120)),
-                              image: pickedImage == null
-                                  ? const DecorationImage(
-                                      image: AssetImage('images/no_shop_image.png'),
-                                      fit: BoxFit.cover,
-                                    )
-                                  : DecorationImage(
-                                      image: FileImage(File(pickedImage!.path)),
-                                      fit: BoxFit.cover,
-                                    ),
-                            ),
-                          ),
-                          Positioned(
-                            bottom: 0,
-                            right: 0,
-                            child: Container(
-                              height: 35,
-                              width: 35,
-                              decoration: BoxDecoration(
-                                border: Border.all(color: Colors.white, width: 2),
-                                borderRadius: const BorderRadius.all(Radius.circular(120)),
-                                color: kMainColor,
-                              ),
-                              child: const Icon(
-                                Icons.camera_alt_outlined,
-                                size: 20,
-                                color: Colors.white,
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 20.0),
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: SizedBox(
-                        height: 60.0,
-                        child: FormField(
-                          builder: (FormFieldState<dynamic> field) {
-                            return InputDecorator(
-                              decoration: InputDecoration(
-                                  floatingLabelBehavior: FloatingLabelBehavior.always,
-                                  labelText: lang.S.of(context).businessCat,
-                                  labelStyle: GoogleFonts.poppins(
-                                    color: Colors.black,
-                                    fontSize: 20.0,
-                                  ),
-                                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.0))),
-                              child: DropdownButtonHideUnderline(child: getCategory(list: categoryList)),
-                            );
-                          },
-                        ),
-                      ),
-                    ),
-
-                    ///_________Name________________________
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: AppTextField(
-                        // Optional
-                        textFieldType: TextFieldType.NAME,
-                        controller: nameController,
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return 'Please enter a valid business name';
-                          }
-                          return null;
+                                );
+                              });
                         },
-                        decoration: InputDecoration(
-                          labelText: lang.S.of(context).businessName,
-                          border: const OutlineInputBorder(),
+                        child: Stack(
+                          children: [
+                            Container(
+                              height: 120,
+                              width: 120,
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.black54, width: 1),
+                                borderRadius: const BorderRadius.all(Radius.circular(120)),
+                                image: pickedImage == null
+                                    ? const DecorationImage(
+                                        image: AssetImage('images/no_shop_image.png'),
+                                        fit: BoxFit.cover,
+                                      )
+                                    : DecorationImage(
+                                        image: FileImage(File(pickedImage!.path)),
+                                        fit: BoxFit.cover,
+                                      ),
+                              ),
+                            ),
+                            Positioned(
+                              bottom: 0,
+                              right: 0,
+                              child: Container(
+                                height: 35,
+                                width: 35,
+                                decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.white, width: 2),
+                                  borderRadius: const BorderRadius.all(Radius.circular(120)),
+                                  color: kMainColor,
+                                ),
+                                child: const Icon(
+                                  Icons.camera_alt_outlined,
+                                  size: 20,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            )
+                          ],
                         ),
                       ),
-                    ),
+                      const SizedBox(height: 20.0),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: SizedBox(
+                          height: 60.0,
+                          child: FormField(
+                            builder: (FormFieldState<dynamic> field) {
+                              return InputDecorator(
+                                decoration: InputDecoration(
+                                    floatingLabelBehavior: FloatingLabelBehavior.always,
+                                    labelText: lang.S.of(context).businessCat,
+                                    labelStyle: GoogleFonts.poppins(
+                                      color: Colors.black,
+                                      fontSize: 20.0,
+                                    ),
+                                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.0))),
+                                child: DropdownButtonHideUnderline(child: getCategory(list: categoryList)),
+                              );
+                            },
+                          ),
+                        ),
+                      ),
 
-                    ///__________Phone_________________________
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: SizedBox(
-                        height: 60.0,
+                      ///_________Name________________________
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
                         child: AppTextField(
-                          controller: phoneController,
+                          // Optional
+                          textFieldType: TextFieldType.NAME,
+                          controller: nameController,
                           validator: (value) {
                             if (value == null || value.isEmpty) {
-                              return 'Please enter a valid phone number';
+                              return 'Please enter a valid business name';
                             }
-                            // You can add more validation logic as needed
                             return null;
                           },
-                          textFieldType: TextFieldType.PHONE,
                           decoration: InputDecoration(
-                            labelText: lang.S.of(context).phone,
-                            hintText: lang.S.of(context).enterYourPhoneNumber,
+                            labelText: lang.S.of(context).businessName,
                             border: const OutlineInputBorder(),
                           ),
                         ),
                       ),
-                    ),
 
-                    ///_________Address___________________________
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: AppTextField(
-                        // ignore: deprecated_member_use
-                        textFieldType: TextFieldType.ADDRESS,
-                        controller: addressController,
-                        decoration: InputDecoration(
-                          focusedBorder: const OutlineInputBorder(
-                            borderSide: BorderSide(color: kGreyTextColor),
+                      ///__________Phone_________________________
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: SizedBox(
+                          height: 60.0,
+                          child: AppTextField(
+                            controller: phoneController,
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return 'Please enter a valid phone number';
+                              }
+                              // You can add more validation logic as needed
+                              return null;
+                            },
+                            textFieldType: TextFieldType.PHONE,
+                            decoration: InputDecoration(
+                              labelText: lang.S.of(context).phone,
+                              hintText: lang.S.of(context).enterYourPhoneNumber,
+                              border: const OutlineInputBorder(),
+                            ),
                           ),
-                          labelText: lang.S.of(context).companyAddress,
-                          hintText: lang.S.of(context).enterFullAddress,
-                          border: const OutlineInputBorder(),
                         ),
                       ),
-                    ),
 
-                    ///________Opening_balance_______________________
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: AppTextField(
-                        validator: (value) {
-                          return null;
-                        },
-                        controller: openingBalanceController, // Optional
-                        textFieldType: TextFieldType.PHONE,
-                        decoration: InputDecoration(
-                          labelText: lang.S.of(context).openingBalance,
-                          border: const OutlineInputBorder(),
+                      ///_________Address___________________________
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: AppTextField(
+                          // ignore: deprecated_member_use
+                          textFieldType: TextFieldType.ADDRESS,
+                          controller: addressController,
+                          decoration: InputDecoration(
+                            focusedBorder: const OutlineInputBorder(
+                              borderSide: BorderSide(color: kGreyTextColor),
+                            ),
+                            labelText: lang.S.of(context).companyAddress,
+                            hintText: lang.S.of(context).enterFullAddress,
+                            border: const OutlineInputBorder(),
+                          ),
                         ),
                       ),
-                    ),
 
-                    ///_________Language___________________________
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: SizedBox(
-                        height: 60.0,
-                        child: FormField(
-                          builder: (FormFieldState<dynamic> field) {
-                            return InputDecorator(
-                              decoration: InputDecoration(
-                                  floatingLabelBehavior: FloatingLabelBehavior.always,
-                                  labelText: lang.S.of(context).language,
-                                  labelStyle: GoogleFonts.poppins(
-                                    color: Colors.black,
-                                    fontSize: 20.0,
-                                  ),
-                                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.0))),
-                              child: DropdownButtonHideUnderline(child: getLanguage()),
-                            );
+                      ///________Opening_balance_______________________
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: AppTextField(
+                          validator: (value) {
+                            return null;
                           },
+                          controller: openingBalanceController, // Optional
+                          textFieldType: TextFieldType.PHONE,
+                          decoration: InputDecoration(
+                            labelText: lang.S.of(context).openingBalance,
+                            border: const OutlineInputBorder(),
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+
+                      ///_________Language___________________________
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: SizedBox(
+                          height: 60.0,
+                          child: FormField(
+                            builder: (FormFieldState<dynamic> field) {
+                              return InputDecorator(
+                                decoration: InputDecoration(
+                                    floatingLabelBehavior: FloatingLabelBehavior.always,
+                                    labelText: lang.S.of(context).language,
+                                    labelStyle: GoogleFonts.poppins(
+                                      color: Colors.black,
+                                      fontSize: 20.0,
+                                    ),
+                                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.0))),
+                                child: DropdownButtonHideUnderline(child: getLanguage()),
+                              );
+                            },
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
-        );
-      }, error: (e, stack) {
-        return Center(
-          child: Text(e.toString()),
-        );
-      }, loading: () {
-        return const Center(
-          child: CircularProgressIndicator(),
-        );
-      });
-    });
+          );
+        }, error: (e, stack) {
+          return Center(
+            child: Text(e.toString()),
+          );
+        }, loading: () {
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
+        });
+      }),
+    );
   }
 }

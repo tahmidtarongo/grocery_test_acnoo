@@ -13,10 +13,11 @@ import '../../model/print_transaction_model.dart';
 import '../Due Calculation/Model/due_collection_model.dart';
 
 class DueInvoiceDetails extends StatefulWidget {
-  const DueInvoiceDetails({Key? key, required this.dueCollection, required this.personalInformationModel}) : super(key: key);
+  const DueInvoiceDetails({Key? key, required this.dueCollection, required this.personalInformationModel, this.isFromDue}) : super(key: key);
 
   final DueCollection dueCollection;
-  final BusinessInformationModel personalInformationModel;
+  final BusinessInformation personalInformationModel;
+  final bool? isFromDue;
 
   @override
   State<DueInvoiceDetails> createState() => _DueInvoiceDetailsState();
@@ -43,18 +44,18 @@ class _DueInvoiceDetailsState extends State<DueInvoiceDetails> {
                       width: 50.0,
                       decoration: widget.personalInformationModel.pictureUrl.isEmptyOrNull
                           ? const BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage('images/no_shop_image.png'),
-                        ),
-                      )
+                              image: DecorationImage(
+                                image: AssetImage('images/no_shop_image.png'),
+                              ),
+                            )
                           : BoxDecoration(
-                        image: DecorationImage(
-                          image: NetworkImage('${APIConfig.domain}${widget.personalInformationModel.pictureUrl ?? ''}'),
-                        ),
-                      ),
+                              image: DecorationImage(
+                                image: NetworkImage('${APIConfig.domain}${widget.personalInformationModel.pictureUrl ?? ''}'),
+                              ),
+                            ),
                     ),
                     title: Text(
-                      '${widget.dueCollection.user?.name}',
+                      '${widget.personalInformationModel.companyName}',
                       style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold, fontSize: 18.0),
                     ),
                     subtitle: Column(
@@ -98,7 +99,7 @@ class _DueInvoiceDetailsState extends State<DueInvoiceDetails> {
                   Row(
                     children: [
                       Text(
-                        widget.dueCollection.party?.name ?? '',
+                        'Name: ${widget.dueCollection.party?.name ?? ''}',
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                       const Spacer(),
@@ -112,7 +113,7 @@ class _DueInvoiceDetailsState extends State<DueInvoiceDetails> {
                   Row(
                     children: [
                       Text(
-                        widget.dueCollection.party?.name ?? '',
+                        'Phone: ${widget.dueCollection.party?.phone ?? ''}',
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                       const Spacer(),
@@ -121,6 +122,11 @@ class _DueInvoiceDetailsState extends State<DueInvoiceDetails> {
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                     ],
+                  ),
+                  const SizedBox(height: 5.0),
+                  Text(
+                    'Collected By: ${widget.dueCollection.user?.name ?? ''}',
+                    style: kTextStyle.copyWith(color: kGreyTextColor),
                   ),
                   const SizedBox(height: 10.0),
                   Divider(
@@ -212,8 +218,15 @@ class _DueInvoiceDetailsState extends State<DueInvoiceDetails> {
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: GestureDetector(
-                  onTap: () {
-                    Navigator.pop(context);
+                  onTap: () async {
+                    if (widget.isFromDue ?? false) {
+                      int count = 0;
+                      Navigator.popUntil(context, (route) {
+                        return count++ == 2;
+                      });
+                    } else {
+                      Navigator.pop(context);
+                    }
                   },
                   child: Container(
                     height: 60,
@@ -224,10 +237,10 @@ class _DueInvoiceDetailsState extends State<DueInvoiceDetails> {
                         Radius.circular(30),
                       ),
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         'Cancel',
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 18,
                           color: Colors.white,
                         ),

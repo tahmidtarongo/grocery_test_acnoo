@@ -14,7 +14,7 @@ import '../model/business_info_model.dart';
 import 'package:path_provider/path_provider.dart';
 
 class GeneratePdf {
-  Future<void> generatePurchaseDocument(PurchaseTransaction transactions, BusinessInformationModel personalInformation, BuildContext context) async {
+  Future<void> generatePurchaseDocument(PurchaseTransaction transactions, BusinessInformation personalInformation, BuildContext context) async {
     final pw.Document doc = pw.Document();
     // final netImage = await networkImage(
     //   personalInformation.pictureUrl.toString(),
@@ -130,7 +130,7 @@ class GeneratePdf {
                       pw.SizedBox(
                         width: 100.0,
                         child: pw.Text(
-                          'Sells By',
+                          'Purchase By',
                           style: pw.Theme.of(context).defaultTextStyle.copyWith(color: PdfColors.black),
                         ),
                       ),
@@ -144,7 +144,7 @@ class GeneratePdf {
                       pw.SizedBox(
                         width: 100.0,
                         child: pw.Text(
-                          'Admin',
+                          transactions.user?.name??'',
                           style: pw.Theme.of(context).defaultTextStyle.copyWith(color: PdfColors.black),
                         ),
                       ),
@@ -471,7 +471,7 @@ class GeneratePdf {
     // }
   }
 
-  Future<void> generateSaleDocument(SalesTransaction transactions, BusinessInformationModel personalInformation, BuildContext context) async {
+  Future<void> generateSaleDocument(SalesTransaction transactions, BusinessInformation personalInformation, BuildContext context) async {
     final pw.Document doc = pw.Document();
 
     doc.addPage(
@@ -591,7 +591,7 @@ class GeneratePdf {
                       pw.SizedBox(
                         width: 100.0,
                         child: pw.Text(
-                          'Admin',
+                          transactions.user?.name??'',
                           style: pw.Theme.of(context).defaultTextStyle.copyWith(color: PdfColors.black),
                         ),
                       ),
@@ -889,7 +889,7 @@ class GeneratePdf {
     }
   }
 
-  Future<void> generateDueDocument(DueCollection transactions, BusinessInformationModel personalInformation, BuildContext context) async {
+  Future<void> generateDueDocument(DueCollection transactions, BusinessInformation personalInformation, BuildContext context) async {
     final pw.Document doc = pw.Document();
     // final netImage = await networkImage(
     //   personalInformation.pictureUrl.toString(),
@@ -995,7 +995,7 @@ class GeneratePdf {
                       pw.SizedBox(
                         width: 100.0,
                         child: pw.Text(
-                          transactions?.party?.phone??'',
+                          transactions.party?.phone??'',
                           style: pw.Theme.of(context).defaultTextStyle.copyWith(color: PdfColors.black),
                         ),
                       ),
@@ -1006,7 +1006,7 @@ class GeneratePdf {
                       pw.SizedBox(
                         width: 100.0,
                         child: pw.Text(
-                          'Sells By',
+                          'Collected By',
                           style: pw.Theme.of(context).defaultTextStyle.copyWith(color: PdfColors.black),
                         ),
                       ),
@@ -1020,7 +1020,7 @@ class GeneratePdf {
                       pw.SizedBox(
                         width: 100.0,
                         child: pw.Text(
-                          'Admin',
+                          transactions.user?.name??'',
                           style: pw.Theme.of(context).defaultTextStyle.copyWith(color: PdfColors.black),
                         ),
                       ),

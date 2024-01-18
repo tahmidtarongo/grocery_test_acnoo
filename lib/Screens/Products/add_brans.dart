@@ -1,16 +1,11 @@
 // ignore_for_file: unused_result
 
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
-import 'package:mobile_pos/Screens/Products/Providers/category,brans,units_provide.dart';
-import 'package:mobile_pos/Screens/Products/Model/brands_model.dart';
 import 'package:mobile_pos/Screens/Products/Repo/brand_repo.dart';
 import 'package:mobile_pos/constant.dart';
-import 'package:nb_utils/nb_utils.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class AddBrands extends StatefulWidget {

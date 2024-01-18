@@ -22,13 +22,14 @@ class RegisterRepo {
     try {
       final response = await http.post(url, headers: headers, body: body);
 
-      final errorData = jsonDecode(response.body);
+      final responseData = jsonDecode(response.body);
       if (response.statusCode == 200) {
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(errorData['message'])));
-        await saveUserData(userData: errorData['data']);
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(responseData['message'])));
+        await saveUserData(userData: responseData['data']);
+
         return true;
       } else {
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(errorData['message'])));
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(responseData['message'])));
       }
     } catch (error) {
       print(error);

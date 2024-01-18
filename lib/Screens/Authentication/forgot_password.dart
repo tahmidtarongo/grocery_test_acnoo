@@ -1,4 +1,4 @@
-import 'package:firebase_auth/firebase_auth.dart';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
@@ -68,54 +68,55 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 ButtonGlobalWithoutIcon(
                     buttontext: lang.S.of(context).sendLink,
                     buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
-                    onPressed: () async {
-                      setState(() {
-                        showProgress = true;
-                      });
-                      try {
-                        await FirebaseAuth.instance.sendPasswordResetEmail(
-                          email: email,
-                        );
-                        // ScaffoldMessenger.of(context).showSnackBar(
-                        //   const SnackBar(
-                        //     content: Text('Check your Inbox'),
-                        //     duration: Duration(seconds: 3),
-                        //   ),
-                        // );
-                        if (!mounted) return;
-                        const LoginForm(
-                          isEmailLogin: true,
-                        ).launch(context);
-                      } on FirebaseAuthException catch (e) {
-                        if (e.code == 'user-not-found') {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(
-                              content: Text('No user found for that email.'),
-                              duration: Duration(seconds: 3),
-                            ),
-                          );
-                        } else if (e.code == 'wrong-password') {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(
-                              content: Text('Wrong password provided for that user.'),
-                              duration: Duration(seconds: 3),
-                            ),
-                          );
-                        }
-                      } catch (e) {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            content: Text(e.toString()),
-                            duration: const Duration(seconds: 3),
-                          ),
-                        );
-                      }
-                      setState(
-                        () {
-                          showProgress = false;
-                        },
-                      );
-                    },
+                    onPressed: (){},
+                    // onPressed: () async {
+                    //   setState(() {
+                    //     showProgress = true;
+                    //   });
+                    //   try {
+                    //     await FirebaseAuth.instance.sendPasswordResetEmail(
+                    //       email: email,
+                    //     );
+                    //     // ScaffoldMessenger.of(context).showSnackBar(
+                    //     //   const SnackBar(
+                    //     //     content: Text('Check your Inbox'),
+                    //     //     duration: Duration(seconds: 3),
+                    //     //   ),
+                    //     // );
+                    //     if (!mounted) return;
+                    //     const LoginForm(
+                    //       isEmailLogin: true,
+                    //     ).launch(context);
+                    //   } on FirebaseAuthException catch (e) {
+                    //     if (e.code == 'user-not-found') {
+                    //       ScaffoldMessenger.of(context).showSnackBar(
+                    //         const SnackBar(
+                    //           content: Text('No user found for that email.'),
+                    //           duration: Duration(seconds: 3),
+                    //         ),
+                    //       );
+                    //     } else if (e.code == 'wrong-password') {
+                    //       ScaffoldMessenger.of(context).showSnackBar(
+                    //         const SnackBar(
+                    //           content: Text('Wrong password provided for that user.'),
+                    //           duration: Duration(seconds: 3),
+                    //         ),
+                    //       );
+                    //     }
+                    //   } catch (e) {
+                    //     ScaffoldMessenger.of(context).showSnackBar(
+                    //       SnackBar(
+                    //         content: Text(e.toString()),
+                    //         duration: const Duration(seconds: 3),
+                    //       ),
+                    //     );
+                    //   }
+                    //   setState(
+                    //     () {
+                    //       showProgress = false;
+                    //     },
+                    //   );
+                    // },
                     buttonTextColor: Colors.white),
               ],
             ),

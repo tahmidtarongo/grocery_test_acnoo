@@ -1,14 +1,12 @@
-import 'package:firebase_auth/firebase_auth.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Const/api_config.dart';
 import 'package:mobile_pos/Screens/Profile%20Screen/profile_details.dart';
-import 'package:mobile_pos/Screens/SplashScreen/splash_screen.dart';
 import 'package:mobile_pos/Screens/User%20Roles/user_role_screen.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:restart_app/restart_app.dart';
 import '../../Provider/profile_provider.dart';
 import '../../constant.dart';
 import '../../currency.dart';
@@ -34,8 +32,6 @@ class _SettingScreenState extends State<SettingScreen> {
   bool expandedHelp = false;
   bool expandedAbout = false;
   bool selected = false;
-
-
 
   @override
   void initState() {
@@ -75,7 +71,7 @@ class _SettingScreenState extends State<SettingScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Consumer(builder: (context, ref, _) {
-        AsyncValue<BusinessInformationModel> businessInfo = ref.watch(businessInfoProvider);
+        AsyncValue<BusinessInformation> businessInfo = ref.watch(businessInfoProvider);
 
         return Scaffold(
           body: SingleChildScrollView(
@@ -90,7 +86,7 @@ class _SettingScreenState extends State<SettingScreen> {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              isSubUser ? null : const ProfileDetails().launch(context);
+                              const ProfileDetails().launch(context);
                             },
                             child: Container(
                               height: 42,
@@ -111,7 +107,7 @@ class _SettingScreenState extends State<SettingScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                isSubUser ? '${details.companyName ?? ''} [$subUserTitle]' : details.companyName ?? '',
+                                details.user?.role == 'staff' ? '${details.companyName ?? ''} [${details.user?.name ?? ''}]' : details.companyName ?? '',
                                 style: GoogleFonts.poppins(
                                   fontSize: 20.0,
                                   fontWeight: FontWeight.bold,
@@ -159,7 +155,7 @@ class _SettingScreenState extends State<SettingScreen> {
                     Icons.arrow_forward_ios,
                     color: kGreyTextColor,
                   ),
-                ).visible(!isSubUser),
+                ),
                 // ListTile(
                 //   onTap: () => EasyLoading.showError('Coming Soon'),
                 //   title: Text(
@@ -595,7 +591,7 @@ class _SettingScreenState extends State<SettingScreen> {
                     Icons.arrow_forward_ios,
                     color: kGreyTextColor,
                   ),
-                ).visible(!isSubUser),
+                ).visible(businessInfo.value?.user?.role != 'staff'),
 
                 ///____________Currency________________________________________________
                 ListTile(
@@ -681,9 +677,29 @@ class _SettingScreenState extends State<SettingScreen> {
                     ),
                   ),
                   onTap: () async {
+                    ref.invalidate(businessInfoProvider);
                     EasyLoading.show(status: 'Log out');
-                    LogOutRepo repo =LogOutRepo();
-                   await repo.signOutApi(context: context);
+                    // final container = ProviderContainer();
+                    // container.dispose();
+
+                    // SplashScreen().launch(context);
+                    //
+                    // ref.invalidate(expenseProvider);
+                    // ref.invalidate(productProvider);
+                    // ref.invalidate(unitsProvider);
+                    // ref.invalidate(brandsProvider);
+                    // ref.invalidate(categoryProvider);
+                    // ref.invalidate(bannerProvider);
+                    // ref.invalidate(partiesProvider);
+                    // ref.invalidate(salesTransactionProvider);
+                    // ref.invalidate(purchaseTransactionProvider);
+                    // ref.invalidate(dueCollectionListProvider);
+                    // ref.invalidate(dueInvoiceListProvider);
+                    // ref.invalidate(userRoleProvider);
+                    // ref.invalidate(subscriptionPlanProvider);
+                    // ref.invalidate(expanseCategoryProvider);
+                    LogOutRepo repo = LogOutRepo();
+                    await repo.signOutApi(context: context, ref: ref);
                   },
                   leading: const Icon(
                     Icons.logout,

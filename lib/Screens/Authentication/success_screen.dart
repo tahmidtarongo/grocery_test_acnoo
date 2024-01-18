@@ -1,41 +1,26 @@
 // ignore_for_file: unused_result
 
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
+import 'package:mobile_pos/Provider/profile_provider.dart';
 import 'package:nb_utils/nb_utils.dart';
-import '../User Roles/Provider/user_role_provider.dart';
 import '../../constant.dart';
 import '../Home/home.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class SuccessScreen extends StatelessWidget {
-  SuccessScreen({Key? key, required this.email}) : super(key: key);
+  const SuccessScreen({Key? key, required this.email}) : super(key: key);
 
   final String? email;
-
-  final CurrentUserData currentUserData = CurrentUserData();
 
   @override
   Widget build(BuildContext context) {
     print('Came on Susees screen');
     return Consumer(builder: (context, ref, _) {
-      final userRoleData = ref.watch(userRoleProvider);
+      final userRoleData = ref.watch(businessInfoProvider);
       return userRoleData.when(data: (data) {
-        print('Data');
-        if (email == 'phone') {
-          currentUserData.putUserData(userId: FirebaseAuth.instance.currentUser!.uid, isSubUser: false, title: '', email: '');
-        } else {
-          currentUserData.putUserData(userId: FirebaseAuth.instance.currentUser!.uid, isSubUser: false, title: '', email: '');
-          for (var element in data) {
-            if (element.email == email) {
-              // currentUserData.putUserData(userId: element.databaseId, isSubUser: true, title: element.userTitle, email: element.email);
-              // subUserTitle = element.userTitle;
-            }
-          }
-        }
         return Scaffold(
           resizeToAvoidBottomInset: true,
           body: Column(

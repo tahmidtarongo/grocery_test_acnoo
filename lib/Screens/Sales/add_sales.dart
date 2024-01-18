@@ -70,7 +70,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
 
   DateTime selectedDate = DateTime.now();
 
-  late BusinessInformationModel personalInformationModel;
+  late BusinessInformation personalInformationModel;
   TextEditingController dateController = TextEditingController(text: DateTime.now().toString().substring(0, 10));
 
   @override

@@ -32,6 +32,61 @@ class PurchaseRepo {
       throw Exception('Failed to fetch Purchase List');
     }
   }
+  Future<PurchaseTransaction?> createPurchase({
+    required WidgetRef ref,
+    required BuildContext context,
+    required num partyId,
+    required String purchaseDate,
+    required num discountAmount,
+    required num totalAmount,
+    required num dueAmount,
+    required num paidAmount,
+    required bool isPaid,
+    required String paymentType,
+    required List<CartProducts> products,
+  }) async {
+    final uri = Uri.parse('${APIConfig.url}/purchase');
+    final requestBody = jsonEncode({
+      'party_id': partyId,
+      'purchaseDate': purchaseDate,
+      'discountAmount': discountAmount,
+      'totalAmount': totalAmount,
+      'dueAmount': dueAmount,
+      'paidAmount': paidAmount,
+      'isPaid': isPaid,
+      'paymentType': paymentType,
+      'products': products.map((product) => product.toJson()).toList(),
+    });
+
+    try {
+      var responseData = await http.post(
+        uri,
+        headers: {"Accept": 'application/json', 'Authorization': await getAuthToken(), 'Content-Type': 'application/json'},
+        body: requestBody,
+      );
+
+      final parsedData = jsonDecode(responseData.body);
+
+      if (responseData.statusCode == 200) {
+        EasyLoading.showSuccess('Added successful!');
+        ref.refresh(productProvider);
+        ref.refresh(partiesProvider);
+        ref.refresh(purchaseTransactionProvider);
+        ref.refresh(businessInfoProvider);
+        // Navigator.pop(context);
+        return PurchaseTransaction.fromJson(parsedData['data']);
+      } else {
+        EasyLoading.dismiss();
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Purchase creation failed: ${parsedData['message']}')));
+        return null;
+      }
+    } catch (error) {
+      EasyLoading.dismiss();
+      // Handle unexpected errors gracefully
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('An error occurred: $error')));
+      return null;
+    }
+  }
 
   Future<PurchaseTransaction?> updatePurchase({
     required WidgetRef ref,
@@ -93,61 +148,7 @@ class PurchaseRepo {
     }
   }
 
-  Future<PurchaseTransaction?> createPurchase({
-    required WidgetRef ref,
-    required BuildContext context,
-    required num partyId,
-    required String purchaseDate,
-    required num discountAmount,
-    required num totalAmount,
-    required num dueAmount,
-    required num paidAmount,
-    required bool isPaid,
-    required String paymentType,
-    required List<CartProducts> products,
-  }) async {
-    final uri = Uri.parse('${APIConfig.url}/purchase');
-    final requestBody = jsonEncode({
-      'party_id': partyId,
-      'purchaseDate': purchaseDate,
-      'discountAmount': discountAmount,
-      'totalAmount': totalAmount,
-      'dueAmount': dueAmount,
-      'paidAmount': paidAmount,
-      'isPaid': isPaid,
-      'paymentType': paymentType,
-      'products': products.map((product) => product.toJson()).toList(),
-    });
 
-    try {
-      var responseData = await http.post(
-        uri,
-        headers: {"Accept": 'application/json', 'Authorization': await getAuthToken(), 'Content-Type': 'application/json'},
-        body: requestBody,
-      );
-
-      final parsedData = jsonDecode(responseData.body);
-
-      if (responseData.statusCode == 200) {
-        EasyLoading.showSuccess('Added successful!');
-        ref.refresh(productProvider);
-        ref.refresh(partiesProvider);
-        ref.refresh(purchaseTransactionProvider);
-        ref.refresh(businessInfoProvider);
-        Navigator.pop(context);
-        return PurchaseTransaction.fromJson(parsedData);
-      } else {
-        EasyLoading.dismiss();
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Purchase creation failed: ${parsedData['message']}')));
-        return null;
-      }
-    } catch (error) {
-      EasyLoading.dismiss();
-      // Handle unexpected errors gracefully
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('An error occurred: $error')));
-      return null;
-    }
-  }
 
   Future<void> deletePurchase({
     required String id,

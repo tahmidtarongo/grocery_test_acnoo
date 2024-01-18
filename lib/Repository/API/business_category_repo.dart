@@ -1,8 +1,8 @@
-
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 import '../../Const/api_config.dart';
+import '../../Screens/Authentication/Repo/logout_repo.dart';
 import '../../model/business_category_model.dart';
 import '../constant_functions.dart';
 
@@ -21,6 +21,7 @@ class BusinessCategoryRepository {
         final data = jsonDecode(response.body)['data'] as List;
         return data.map((category) => BusinessCategory.fromJson(category)).toList();
       } else {
+
         throw Exception('Failed to fetch business categories');
       }
     } catch (error) {

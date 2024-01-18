@@ -14,10 +14,11 @@ import '../../model/print_transaction_model.dart';
 import '../Purchase/Model/purchase_transaction_model.dart';
 
 class PurchaseInvoiceDetails extends StatefulWidget {
-  const PurchaseInvoiceDetails({Key? key, required this.transitionModel, required this.businessInfo}) : super(key: key);
+  const PurchaseInvoiceDetails({Key? key, required this.transitionModel, required this.businessInfo, this.isFromPurchase}) : super(key: key);
 
   final PurchaseTransaction transitionModel;
-  final BusinessInformationModel businessInfo;
+  final BusinessInformation businessInfo;
+  final bool? isFromPurchase;
 
   @override
   State<PurchaseInvoiceDetails> createState() => _PurchaseInvoiceDetailsState();
@@ -99,7 +100,7 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                   Row(
                     children: [
                       Text(
-                        widget.transitionModel.party?.name ?? '',
+                        'Name: ${widget.transitionModel.party?.name ?? ''}',
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                       const Spacer(),
@@ -113,7 +114,7 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                   Row(
                     children: [
                       Text(
-                        widget.transitionModel.party?.phone ?? '',
+                        'Phone: ${widget.transitionModel.party?.phone ?? ''}',
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                       const Spacer(),
@@ -122,6 +123,11 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                     ],
+                  ),
+                  const SizedBox(height: 5.0),
+                  Text(
+                    'Purchase By: ${widget.transitionModel.user?.name ?? ''}',
+                    style: kTextStyle.copyWith(color: kGreyTextColor),
                   ),
                   const SizedBox(height: 10.0),
                   Divider(
@@ -372,7 +378,14 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                 padding: const EdgeInsets.all(15.0),
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.pop(context);
+                    if (widget.isFromPurchase ?? false) {
+                      int count = 0;
+                      Navigator.popUntil(context, (route) {
+                        return count++ == 2;
+                      });
+                    } else {
+                      Navigator.pop(context);
+                    }
                   },
                   child: Container(
                     height: 60,
@@ -383,10 +396,10 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                         Radius.circular(30),
                       ),
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         'Cancel',
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 18,
                           color: Colors.white,
                         ),
@@ -400,7 +413,8 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                 child: GestureDetector(
                   onTap: () async {
                     await printerData.getBluetooth();
-                    PrintPurchaseTransactionModel model = PrintPurchaseTransactionModel(purchaseTransitionModel: widget.transitionModel, personalInformationModel: widget.businessInfo);
+                    PrintPurchaseTransactionModel model =
+                        PrintPurchaseTransactionModel(purchaseTransitionModel: widget.transitionModel, personalInformationModel: widget.businessInfo);
                     mainConstant.connected
                         ? printerData.printPurchaseThermalInvoice(
                             printTransactionModel: model,

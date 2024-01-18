@@ -50,7 +50,7 @@ class DueRepo {
     }
   }
 
-  Future<void> dueCollect({
+  Future<DueCollection?> dueCollect({
     required WidgetRef ref,
     required BuildContext context,
     required num partyId,
@@ -86,16 +86,20 @@ class DueRepo {
         ref.refresh(businessInfoProvider);
         ref.refresh(dueInvoiceListProvider(partyId.round()));
         ref.refresh(dueCollectionListProvider);
-        Navigator.pop(context);
+
+        return DueCollection.fromJson(parsedData['data']);
+        // Navigator.pop(context);
         // return PurchaseTransaction.fromJson(parsedData);
       } else {
         EasyLoading.dismiss();
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Purchase creation failed: ${parsedData['message']}')));
+        return null;
       }
     } catch (error) {
       EasyLoading.dismiss();
       // Handle unexpected errors gracefully
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('An error occurred: $error')));
+      return null;
     }
   }
 }

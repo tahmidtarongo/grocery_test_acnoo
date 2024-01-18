@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/Screens/Authentication/register_screen.dart';
-import 'package:mobile_pos/repository/login_repo.dart';
 import 'package:nb_utils/nb_utils.dart';
 import '../../constant.dart';
 import 'forgot_password.dart';
@@ -38,7 +37,6 @@ class _LoginFormState extends State<LoginForm> {
     return SafeArea(
       child: Scaffold(
         body: Consumer(builder: (context, ref, child) {
-          final loginProvider = ref.watch(logInProvider);
           return Center(
             child: SingleChildScrollView(
               child: Column(
@@ -71,7 +69,7 @@ class _LoginFormState extends State<LoginForm> {
                               return null;
                             },
                             onSaved: (value) {
-                              loginProvider.email = value!;
+                              // loginProvider.email = value!;
                             },
                           ),
                           const SizedBox(height: 20),
@@ -100,7 +98,7 @@ class _LoginFormState extends State<LoginForm> {
                               return null;
                             },
                             onSaved: (value) {
-                              loginProvider.password = value!;
+                              // loginProvider.password = value!;
                             },
                           ),
                         ],
@@ -130,7 +128,7 @@ class _LoginFormState extends State<LoginForm> {
                       buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
                       onPressed: () {
                         if (validateAndSave()) {
-                          loginProvider.signIn(context);
+                          // loginProvider.signIn(context);
                         }
                       },
                       buttonTextColor: Colors.white),

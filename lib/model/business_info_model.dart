@@ -1,9 +1,10 @@
-class BusinessInformationModel {
-  BusinessInformationModel({
+class BusinessInformation {
+  BusinessInformation({
     this.id,
     this.planSubscribeId,
     this.businessCategoryId,
     this.companyName,
+    this.willExpire,
     this.address,
     this.phoneNumber,
     this.pictureUrl,
@@ -14,13 +15,16 @@ class BusinessInformationModel {
     this.createdAt,
     this.updatedAt,
     this.category,
-    this.enrolledPlan,});
+    this.enrolledPlan,
+    this.user,
+  });
 
-  BusinessInformationModel.fromJson(dynamic json) {
+  BusinessInformation.fromJson(dynamic json) {
     id = json['id'];
     planSubscribeId = json['plan_subscribe_id'];
     businessCategoryId = json['business_category_id'];
     companyName = json['companyName'];
+    willExpire = json['will_expire'];
     address = json['address'];
     phoneNumber = json['phoneNumber'];
     pictureUrl = json['pictureUrl'];
@@ -32,22 +36,25 @@ class BusinessInformationModel {
     updatedAt = json['updated_at'];
     category = json['category'] != null ? Category.fromJson(json['category']) : null;
     enrolledPlan = json['enrolled_plan'] != null ? EnrolledPlan.fromJson(json['enrolled_plan']) : null;
+    user = json['user'] != null ? User.fromJson(json['user']) : null;
   }
   num? id;
   num? planSubscribeId;
   num? businessCategoryId;
   String? companyName;
+  dynamic willExpire;
   String? address;
   String? phoneNumber;
   String? pictureUrl;
   String? language;
-  dynamic subscriptionDate;
+  String? subscriptionDate;
   num? remainingShopBalance;
   num? shopOpeningBalance;
   String? createdAt;
   String? updatedAt;
   Category? category;
   EnrolledPlan? enrolledPlan;
+  User? user;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
@@ -55,6 +62,7 @@ class BusinessInformationModel {
     map['plan_subscribe_id'] = planSubscribeId;
     map['business_category_id'] = businessCategoryId;
     map['companyName'] = companyName;
+    map['will_expire'] = willExpire;
     map['address'] = address;
     map['phoneNumber'] = phoneNumber;
     map['pictureUrl'] = pictureUrl;
@@ -70,9 +78,107 @@ class BusinessInformationModel {
     if (enrolledPlan != null) {
       map['enrolled_plan'] = enrolledPlan?.toJson();
     }
+    if (user != null) {
+      map['user'] = user?.toJson();
+    }
     return map;
   }
+}
 
+class User {
+  User({
+    this.id,
+    this.name,
+    this.role,
+    this.visibility,
+    this.lang,
+  });
+
+  User.fromJson(dynamic json) {
+    id = json['id'];
+    name = json['name'];
+    role = json['role'];
+    visibility = json['visibility'] != null ? Visibility.fromJson(json['visibility']) : null;
+    lang = json['lang'];
+  }
+  num? id;
+  String? name;
+  String? role;
+  Visibility? visibility;
+  dynamic lang;
+
+  Map<String, dynamic> toJson() {
+    final map = <String, dynamic>{};
+    map['id'] = id;
+    map['name'] = name;
+    map['role'] = role;
+    if (visibility != null) {
+      map['visibility'] = visibility?.toJson();
+    }
+    map['lang'] = lang;
+    return map;
+  }
+}
+
+class Visibility {
+  Visibility({
+    this.addExpensePermission,
+    this.dueListPermission,
+    this.lossProfitPermission,
+    this.partiesPermission,
+    this.productPermission,
+    this.profileEditPermission,
+    this.purchaseListPermission,
+    this.purchasePermission,
+    this.reportsPermission,
+    this.salePermission,
+    this.salesListPermission,
+    this.stockPermission,
+  });
+
+  Visibility.fromJson(dynamic json) {
+    addExpensePermission = json['addExpensePermission'];
+    dueListPermission = json['dueListPermission'];
+    lossProfitPermission = json['lossProfitPermission'];
+    partiesPermission = json['partiesPermission'];
+    productPermission = json['productPermission'];
+    profileEditPermission = json['profileEditPermission'];
+    purchaseListPermission = json['purchaseListPermission'];
+    purchasePermission = json['purchasePermission'];
+    reportsPermission = json['reportsPermission'];
+    salePermission = json['salePermission'];
+    salesListPermission = json['salesListPermission'];
+    stockPermission = json['stockPermission'];
+  }
+  bool? addExpensePermission;
+  bool? dueListPermission;
+  bool? lossProfitPermission;
+  bool? partiesPermission;
+  bool? productPermission;
+  bool? profileEditPermission;
+  bool? purchaseListPermission;
+  bool? purchasePermission;
+  bool? reportsPermission;
+  bool? salePermission;
+  bool? salesListPermission;
+  bool? stockPermission;
+
+  Map<String, dynamic> toJson() {
+    final map = <String, dynamic>{};
+    map['addExpensePermission'] = addExpensePermission;
+    map['dueListPermission'] = dueListPermission;
+    map['lossProfitPermission'] = lossProfitPermission;
+    map['partiesPermission'] = partiesPermission;
+    map['productPermission'] = productPermission;
+    map['profileEditPermission'] = profileEditPermission;
+    map['purchaseListPermission'] = purchaseListPermission;
+    map['purchasePermission'] = purchasePermission;
+    map['reportsPermission'] = reportsPermission;
+    map['salePermission'] = salePermission;
+    map['salesListPermission'] = salesListPermission;
+    map['stockPermission'] = stockPermission;
+    return map;
+  }
 }
 
 class EnrolledPlan {
@@ -82,7 +188,8 @@ class EnrolledPlan {
     this.businessId,
     this.price,
     this.duration,
-    this.plan,});
+    this.plan,
+  });
 
   EnrolledPlan.fromJson(dynamic json) {
     id = json['id'];
@@ -111,13 +218,13 @@ class EnrolledPlan {
     }
     return map;
   }
-
 }
 
 class Plan {
   Plan({
     this.id,
-    this.subscriptionName,});
+    this.subscriptionName,
+  });
 
   Plan.fromJson(dynamic json) {
     id = json['id'];
@@ -132,13 +239,13 @@ class Plan {
     map['subscriptionName'] = subscriptionName;
     return map;
   }
-
 }
 
 class Category {
   Category({
     this.id,
-    this.name,});
+    this.name,
+  });
 
   Category.fromJson(dynamic json) {
     id = json['id'];
@@ -153,5 +260,4 @@ class Category {
     map['name'] = name;
     return map;
   }
-
 }

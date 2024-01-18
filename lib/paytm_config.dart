@@ -1,6 +1,4 @@
 import 'dart:convert';
-
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:http/http.dart' as http;
@@ -25,7 +23,7 @@ class PaytmConfig {
       "orderId": orderId,
       "amount": amount.toString(),
       "callbackUrl": callbackUrl,
-      "custId": FirebaseAuth.instance.currentUser?.uid ?? "", // Pass users Customer ID here
+      "custId":  "", // Pass users Customer ID here
     });
   }
 

@@ -18,7 +18,7 @@ class SalesInvoiceDetails extends StatefulWidget {
   const SalesInvoiceDetails({Key? key, required this.saleTransaction, required this.businessInfo, this.fromSale}) : super(key: key);
 
   final SalesTransaction saleTransaction;
-  final BusinessInformationModel businessInfo;
+  final BusinessInformation businessInfo;
   final bool? fromSale;
 
   @override
@@ -57,7 +57,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                             ),
                     ),
                     title: Text(
-                      '${widget.saleTransaction.user?.name}',
+                      '${widget.businessInfo.companyName}',
                       style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold, fontSize: 18.0),
                     ),
                     subtitle: Column(
@@ -101,7 +101,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                   Row(
                     children: [
                       Text(
-                        widget.saleTransaction.party?.name ?? '',
+                        'Name: ${widget.saleTransaction.party?.name ?? ''}',
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                       const Spacer(),
@@ -115,7 +115,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                   Row(
                     children: [
                       Text(
-                        widget.saleTransaction.party?.phone ?? '',
+                        'Phone: ${widget.saleTransaction.party?.phone ?? ''}',
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                       const Spacer(),
@@ -124,6 +124,11 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                     ],
+                  ),
+                  const SizedBox(height: 5.0),
+                  Text(
+                    'Sales By: ${widget.saleTransaction.user?.name ?? ''}',
+                    style: kTextStyle.copyWith(color: kGreyTextColor),
                   ),
                   const SizedBox(height: 10.0),
                   Divider(
@@ -237,7 +242,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                       SizedBox(
                         width: 120,
                         child: Text(
-                          '$currency 0.00',
+                          '$currency ${widget.saleTransaction.vatAmount}',
                           maxLines: 2,
                           style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
                           textAlign: TextAlign.end,
@@ -436,7 +441,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                                           child: Center(
                                             child: Text(
                                               lang.S.of(context).cancel,
-                                              style: TextStyle(color: mainConstant.kMainColor),
+                                              style: const TextStyle(color: mainConstant.kMainColor),
                                             ),
                                           ),
                                         ),

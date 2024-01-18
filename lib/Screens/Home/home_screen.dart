@@ -1,17 +1,15 @@
-import 'dart:convert';
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Const/api_config.dart';
 import 'package:mobile_pos/Screens/Home/components/grid_items.dart';
 import 'package:mobile_pos/Screens/Profile%20Screen/profile_details.dart';
 import 'package:mobile_pos/constant.dart';
-import 'package:mobile_pos/model/subscription_model.dart';
 import 'package:nb_utils/nb_utils.dart';
+import '../../model/business_info_model.dart' as business;
 import 'Provider/banner_provider.dart';
 import '../../Provider/profile_provider.dart';
-import '../../model/paypal_info_model.dart';
 import '../Shimmers/home_screen_appbar_shimmer.dart';
 import '../subscription/package_screen.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
@@ -39,150 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   String customerPackage = '';
-  List<Map<String, dynamic>> sliderList = [
-    {
-      "icon": 'images/banner1.png',
-    },
-    {
-      "icon": 'images/banner2.png',
-    }
-  ];
   PageController pageController = PageController(initialPage: 0);
-
-  void subscriptionRemainder() async {
-    final prefs = await SharedPreferences.getInstance();
-
-    DatabaseReference ref = FirebaseDatabase.instance.ref('$constUserId/Subscription');
-
-    final model = await ref.get();
-    var data = jsonDecode(jsonEncode(model.value));
-    final dataModel = SubscriptionModel.fromJson(data);
-    setState(() {
-      customerPackage = dataModel.subscriptionName;
-    });
-
-    final remainTime = DateTime.parse(dataModel.subscriptionDate).difference(DateTime.now());
-
-    if (dataModel.subscriptionName != 'Lifetime') {
-      if (remainTime.inHours.abs().isBetween((dataModel.duration * 24) - 24, dataModel.duration * 24)) {
-        await prefs.setBool('isFiveDayRemainderShown', false);
-        setState(() {
-          isExpiringInOneDays = true;
-          isExpiringInFiveDays = false;
-        });
-      } else if (remainTime.inHours.abs().isBetween((dataModel.duration * 24) - 120, dataModel.duration * 24)) {
-        setState(() {
-          isExpiringInFiveDays = true;
-          isExpiringInOneDays = false;
-        });
-      }
-
-      final bool? isFiveDayRemainderShown = prefs.getBool('isFiveDayRemainderShown');
-
-      if (isExpiringInFiveDays && isFiveDayRemainderShown == false) {
-        // ignore: use_build_context_synchronously
-        showDialog(
-          context: context,
-          builder: (BuildContext context) {
-            return Dialog(
-              child: SizedBox(
-                height: 200,
-                width: 200,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      lang.S.of(context).yourPackageExpiredInDays,
-                      style: const TextStyle(fontSize: 16),
-                    ),
-                    const SizedBox(height: 20),
-                    TextButton(
-                      onPressed: () async {
-                        await prefs.setBool('isFiveDayRemainderShown', true);
-                        // ignore: use_build_context_synchronously
-                        Navigator.pop(context);
-                      },
-                      child: Text(
-                        lang.S.of(context).cancel,
-                        style: TextStyle(color: Colors.red),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            );
-          },
-        );
-      }
-      if (isExpiringInOneDays) {
-        // ignore: use_build_context_synchronously
-        showDialog(
-          context: context,
-          builder: (BuildContext context) {
-            return Dialog(
-              child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: SizedBox(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        lang.S.of(context).yourPackageExpiredToday,
-                        style: TextStyle(fontSize: 16),
-                        textAlign: TextAlign.center,
-                      ),
-                      const SizedBox(height: 20),
-                      Column(
-                        children: [
-                          TextButton(
-                            onPressed: () {
-                              const PackageScreen().launch(context);
-                            },
-                            child: Text(lang.S.of(context).purchase),
-                          ),
-                          TextButton(
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
-                            child: Text(
-                              lang.S.of(context).cancel,
-                              style: const TextStyle(color: Colors.red),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            );
-          },
-        );
-      }
-    }
-  }
-
-  Future<void> getPaypalInfo() async {
-    DatabaseReference paypalRef = FirebaseDatabase.instance.ref('Admin Panel/Paypal Info');
-    final paypalData = await paypalRef.get();
-    PaypalInfoModel paypalInfoModel = PaypalInfoModel.fromJson(jsonDecode(jsonEncode(paypalData.value)));
-
-    paypalClientId = paypalInfoModel.paypalClientId;
-    paypalClientSecret = paypalInfoModel.paypalClientSecret;
-  }
-
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    // subscriptionRemainder();
-    // getPaypalInfo();
-    // getAllSubscriptionPlan();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -209,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              isSubUser ? null : const ProfileDetails().launch(context);
+                              const ProfileDetails().launch(context);
                             },
                             child: Container(
                               height: 50,
@@ -233,7 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                isSubUser ? '${details.companyName ?? ''} [$subUserTitle]' : details.companyName ?? '',
+                                details.user?.role == 'staff'? '${details.companyName ?? ''} [${details.user?.name??''}]' : details.companyName ?? '',
                                 style: GoogleFonts.poppins(
                                   fontSize: 20.0,
                                   fontWeight: FontWeight.w600,
@@ -311,6 +166,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       (index) => HomeGridCards(
                         gridItems: freeIcons[index],
                         color: color[index],
+                        visibility: businessInfo.value?.user?.visibility,
                       ),
                     ),
                   ),
@@ -514,41 +370,47 @@ class _HomeScreenState extends State<HomeScreen> {
 }
 
 class HomeGridCards extends StatefulWidget {
-  const HomeGridCards({Key? key, required this.gridItems, required this.color}) : super(key: key);
+  const HomeGridCards({
+    Key? key,
+    required this.gridItems,
+    required this.color,
+    this.visibility,
+  }) : super(key: key);
   final GridItems gridItems;
   final Color color;
+  final business.Visibility? visibility;
 
   @override
   State<HomeGridCards> createState() => _HomeGridCardsState();
 }
 
 class _HomeGridCardsState extends State<HomeGridCards> {
-  // bool checkPermission({required String item}) {
-  //   if (item == 'Sales' && finalUserRoleModel.salePermission) {
-  //     return true;
-  //   } else if (item == 'Parties' && finalUserRoleModel.partiesPermission) {
-  //     return true;
-  //   } else if (item == 'Purchase' && finalUserRoleModel.purchasePermission) {
-  //     return true;
-  //   } else if (item == 'Products' && finalUserRoleModel.productPermission) {
-  //     return true;
-  //   } else if (item == 'Due List' && finalUserRoleModel.dueListPermission) {
-  //     return true;
-  //   } else if (item == 'Stock' && finalUserRoleModel.stockPermission) {
-  //     return true;
-  //   } else if (item == 'Reports' && finalUserRoleModel.reportsPermission) {
-  //     return true;
-  //   } else if (item == 'Sales List' && finalUserRoleModel.salesListPermission) {
-  //     return true;
-  //   } else if (item == 'Purchase List' && finalUserRoleModel.purchaseListPermission) {
-  //     return true;
-  //   } else if (item == 'Loss/Profit' && finalUserRoleModel.lossProfitPermission) {
-  //     return true;
-  //   } else if (item == 'Expense' && finalUserRoleModel.addExpensePermission) {
-  //     return true;
-  //   }
-  //   return false;
-  // }
+  bool checkPermission({required String item}) {
+    if (item == 'Sales' && (widget.visibility?.salePermission ?? true)) {
+      return true;
+    } else if (item == 'Parties' && (widget.visibility?.partiesPermission ?? true)) {
+      return true;
+    } else if (item == 'Purchase' && (widget.visibility?.purchasePermission ?? true)) {
+      return true;
+    } else if (item == 'Products' && (widget.visibility?.productPermission ?? true)) {
+      return true;
+    } else if (item == 'Due List' && (widget.visibility?.dueListPermission ?? true)) {
+      return true;
+    } else if (item == 'Stock' && (widget.visibility?.stockPermission ?? true)) {
+      return true;
+    } else if (item == 'Reports' && (widget.visibility?.reportsPermission ?? true)) {
+      return true;
+    } else if (item == 'Sales List' && (widget.visibility?.salesListPermission ?? true)) {
+      return true;
+    } else if (item == 'Purchase List' && (widget.visibility?.purchaseListPermission ?? true)) {
+      return true;
+    } else if (item == 'Loss/Profit' && (widget.visibility?.lossProfitPermission ?? true)) {
+      return true;
+    } else if (item == 'Expense' && (widget.visibility?.addExpensePermission ?? true)) {
+      return true;
+    }
+    return false;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -566,9 +428,11 @@ class _HomeGridCardsState extends State<HomeGridCards> {
                 children: [
                   TextButton(
                     onPressed: () async {
-                      // setState(() {});
-
-                      Navigator.of(context).pushNamed('/${widget.gridItems.route}');
+                      if (checkPermission(item: widget.gridItems.route)) {
+                        Navigator.of(context).pushNamed('/${widget.gridItems.route}');
+                      } else {
+                        EasyLoading.showError('Permission not granted!');
+                      }
                     },
                     child: Container(
                       height: 70,

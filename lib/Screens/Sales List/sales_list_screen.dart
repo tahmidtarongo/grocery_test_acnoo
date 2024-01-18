@@ -12,7 +12,7 @@ import 'package:nb_utils/nb_utils.dart';
 
 import '../../../Provider/profile_provider.dart';
 import '../../../constant.dart';
-import '../../GlobalComponents/generate_pdf.dart';
+import '../../PDF Invoice/generate_pdf.dart';
 import '../../currency.dart';
 import '../Home/home.dart';
 import '../invoice_details/sales_invoice_details_screen.dart';

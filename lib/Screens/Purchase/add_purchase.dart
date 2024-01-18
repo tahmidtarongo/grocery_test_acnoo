@@ -17,6 +17,7 @@ import '../Customers/Model/parties_model.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 import '../Purchase List/purchase_list_screen.dart';
+import '../invoice_details/purchase_invoice_details.dart';
 import 'Model/purchase_transaction_model.dart' as purchase;
 import 'Repo/purchase_repo.dart';
 
@@ -610,100 +611,18 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                                   paidAmount: paidAmount,
                                 );
 
+                                print(purchaseData?.invoiceNumber);
+
                                 if (purchaseData != null) {
                                   providerData.clearCart();
-                                  // consumerRef.refresh(partiesProvider);
-                                  // consumerRef.refresh(productProvider);
-                                  // consumerRef.refresh(purchaseTransactionProvider);
-                                  // consumerRef.refresh(businessInfoProvider);
 
+                                  PurchaseInvoiceDetails(
+                                    businessInfo: personalData.value!,
+                                    transitionModel: purchaseData,
+                                    isFromPurchase: true,
+                                  ).launch(context);
 
-
-                                  const PurchaseListScreen().launch(context);
-
-                                  ///________Print_______________________________________________________
-                                  // if (isPrintEnable && (Theme.of(context).platform == TargetPlatform.android)) {
-                                  //   await printerData.getBluetooth();
-                                  //   PrintPurchaseTransactionModel model =
-                                  //       PrintPurchaseTransactionModel(purchaseTransitionModel: purchaseData, personalInformationModel: businessInfo);
-                                  //   if (connected) {
-                                  //     await printerData.printPurchaseThermalInvoice(printTransactionModel: model, productList: purchaseData.details);
-                                  //
-                                  //     const PurchaseListScreen().launch(context);
-                                  //   } else {
-                                  //     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                                  //       content: Text("Please Connect The Printer First"),
-                                  //     ));
-                                  //
-                                  //     showDialog(
-                                  //         context: context,
-                                  //         builder: (_) {
-                                  //           return WillPopScope(
-                                  //             onWillPop: () async => false,
-                                  //             child: Dialog(
-                                  //               child: SizedBox(
-                                  //                 child: Column(
-                                  //                   mainAxisSize: MainAxisSize.min,
-                                  //                   children: [
-                                  //                     ListView.builder(
-                                  //                       shrinkWrap: true,
-                                  //                       itemCount: printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
-                                  //                       itemBuilder: (context, index) {
-                                  //                         return ListTile(
-                                  //                           onTap: () async {
-                                  //                             String select = printerData.availableBluetoothDevices[index];
-                                  //                             List list = select.split("#");
-                                  //                             // String name = list[0];
-                                  //                             String mac = list[1];
-                                  //                             bool isConnect = await printerData.setConnect(mac);
-                                  //                             if (isConnect) {
-                                  //                               await printerData.printPurchaseThermalInvoice(printTransactionModel: model, productList: purchaseData?.details ?? []);
-                                  //
-                                  //                               EasyLoading.showSuccess('Added Successfully');
-                                  //                               Future.delayed(const Duration(milliseconds: 500), () {
-                                  //                                 const PurchaseListScreen().launch(context);
-                                  //                               });
-                                  //                             }
-                                  //                           },
-                                  //                           title: Text('${printerData.availableBluetoothDevices[index]}'),
-                                  //                           subtitle: const Text("Click to connect"),
-                                  //                         );
-                                  //                       },
-                                  //                     ),
-                                  //                     const SizedBox(height: 10),
-                                  //                     const Text('Connect Your printer'),
-                                  //                     const SizedBox(height: 10),
-                                  //                     Container(
-                                  //                       height: 1,
-                                  //                       width: double.infinity,
-                                  //                       color: Colors.grey,
-                                  //                     ),
-                                  //                     const SizedBox(height: 15),
-                                  //                     GestureDetector(
-                                  //                       onTap: () {
-                                  //                         Future.delayed(Duration(seconds: 1,),(){
-                                  //                           const PurchaseListScreen().launch(context,isNewTask: true);
-                                  //                         });
-                                  //                       },
-                                  //                       child: const Center(
-                                  //                         child: Text(
-                                  //                           'Cancel',
-                                  //                           style: TextStyle(color: kMainColor),
-                                  //                         ),
-                                  //                       ),
-                                  //                     ),
-                                  //                     const SizedBox(height: 15),
-                                  //                   ],
-                                  //                 ),
-                                  //               ),
-                                  //             ),
-                                  //           );
-                                  //         });
-                                  //     EasyLoading.showSuccess('Added Successfully');
-                                  //   }
-                                  // } else {
-                                  //   const PurchaseListScreen().launch(context);
-                                  // }
+                                  // const PurchaseListScreen().launch(context);
                                 }
                               } catch (e) {
                                 EasyLoading.dismiss();

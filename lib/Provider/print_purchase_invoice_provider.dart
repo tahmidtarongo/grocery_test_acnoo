@@ -69,6 +69,7 @@ class PrinterPurchase extends ChangeNotifier {
     bytes += generator.text('Tel: ${printTransactionModel.personalInformationModel.phoneNumber ?? ''}', styles: const PosStyles(align: PosAlign.center), linesAfter: 1);
     bytes += generator.text('Name: ${printTransactionModel.purchaseTransitionModel?.party?.name ?? 'Guest'}', styles: const PosStyles(align: PosAlign.left));
     bytes += generator.text('mobile: ${printTransactionModel.purchaseTransitionModel?.party?.phone ?? 'Not Provided'}', styles: const PosStyles(align: PosAlign.left));
+    // bytes += generator.text('Purchase By: ${printTransactionModel.purchaseTransitionModel?.user?.name ?? 'Not Provided'}', styles: const PosStyles(align: PosAlign.left));
     bytes += generator.text('Invoice Number: ${printTransactionModel.purchaseTransitionModel?.invoiceNumber ?? 'Not Provided'}',
         styles: const PosStyles(align: PosAlign.left), linesAfter: 1);
     bytes += generator.hr();

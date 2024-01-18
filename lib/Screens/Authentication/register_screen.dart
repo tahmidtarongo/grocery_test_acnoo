@@ -4,13 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
-import 'package:mobile_pos/Screens/Authentication/phone.dart';
+import 'package:mobile_pos/Screens/Authentication/Phone%20Auth/phone_auth_screen.dart';
 import 'package:mobile_pos/Screens/Authentication/profile_setup_screen.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../Repository/API/register_repo.dart';
 import '../../constant.dart';
-import '../../repository/signup_repo.dart';
 import 'login_form.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 
@@ -53,7 +52,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
     return SafeArea(
       child: Scaffold(
         body: Consumer(builder: (context, ref, child) {
-          final auth = ref.watch(signUpProvider);
           return Center(
             child: SingleChildScrollView(
               child: Column(

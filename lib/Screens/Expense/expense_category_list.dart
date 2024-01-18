@@ -5,7 +5,7 @@ import 'package:mobile_pos/Screens/Expense/add_expense_category.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../GlobalComponents/button_global.dart';
-import '../../Provider/expense_category_proivder.dart';
+import 'Providers/expense_category_proivder.dart';
 import '../../constant.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 
@@ -23,7 +23,7 @@ class _ExpenseCategoryListState extends State<ExpenseCategoryList> {
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, ref, _) {
-      final data = ref.watch(expenseCategoryProvider);
+      final data = ref.watch(expanseCategoryProvider);
       return Scaffold(
         appBar: AppBar(
           leading: IconButton(
@@ -107,7 +107,7 @@ class _ExpenseCategoryListState extends State<ExpenseCategoryList> {
                           Expanded(
                             flex: 3,
                             child: Text(
-                              data[index].categoryName,
+                              data[index].categoryName ?? '',
                               style: GoogleFonts.poppins(
                                 fontSize: 18.0,
                                 color: Colors.black,
@@ -123,7 +123,7 @@ class _ExpenseCategoryListState extends State<ExpenseCategoryList> {
                                 // const AddExpense().launch(context);
                                 Navigator.pop(
                                   context,
-                                  data[index].categoryName,
+                                  data[index],
                                 );
                               },
                               buttonTextColor: Colors.black,

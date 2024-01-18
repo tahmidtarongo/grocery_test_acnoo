@@ -1,6 +1,4 @@
 import 'dart:convert';
-
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_paypal/flutter_paypal.dart';
@@ -616,8 +614,6 @@ class _PaymentPageState extends State<PaymentPage> {
       final prefs = await SharedPreferences.getInstance();
 
       await prefs.setBool('isFiveDayRemainderShown', true);
-
-      final DatabaseReference subscriptionRef = FirebaseDatabase.instance.ref().child(cns.constUserId).child('Subscription');
 
       // SubscriptionModel subscriptionModel = SubscriptionModel(
       //   subscriptionName: widget.selectedPlan.subscriptionName,

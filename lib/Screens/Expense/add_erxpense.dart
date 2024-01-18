@@ -1,21 +1,19 @@
 // ignore_for_file: unused_result
 
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
+import 'package:mobile_pos/Screens/Expense/Model/expanse_category.dart';
 import 'package:mobile_pos/Screens/Expense/expense_category_list.dart';
-import 'package:mobile_pos/Screens/Expense/expense_list.dart';
 import 'package:nb_utils/nb_utils.dart';
-
-import '../../Provider/all_expanse_provider.dart';
 import '../../constant.dart';
-import '../../model/expense_model.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
+import 'Repo/expanse_repo.dart';
 
 // ignore: must_be_immutable
 class AddExpense extends StatefulWidget {
@@ -29,8 +27,7 @@ class AddExpense extends StatefulWidget {
 }
 
 class _AddExpenseState extends State<AddExpense> {
-  final CurrentUserData currentUserData = CurrentUserData();
-  String dropdownValue = 'Select Category';
+  ExpenseCategory? selectedCategory;
   final dateController = TextEditingController();
   TextEditingController expanseForNameController = TextEditingController();
   TextEditingController expanseAmountController = TextEditingController();
@@ -148,15 +145,13 @@ class _AddExpenseState extends State<AddExpense> {
                         ),
                         child: GestureDetector(
                           onTap: () async {
-                            dropdownValue = await const ExpenseCategoryList().launch(context);
+                            selectedCategory = await const ExpenseCategoryList().launch(context);
                             setState(() {});
                           },
                           child: Row(
                             children: [
-                              const SizedBox(
-                                width: 10.0,
-                              ),
-                              dropdownValue == 'Select Category' ? Text(lang.S.of(context).selectCategory) : Text(dropdownValue),
+                              const SizedBox(width: 10.0),
+                              Text(selectedCategory?.categoryName ?? 'Select a category'),
                               const Spacer(),
                               const Icon(Icons.keyboard_arrow_down),
                               const SizedBox(
@@ -211,11 +206,10 @@ class _AddExpenseState extends State<AddExpense> {
                       TextFormField(
                         showCursor: true,
                         controller: expanseAmountController,
+                        inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
                         validator: (value) {
                           if (value.isEmptyOrNull) {
                             return 'please Inter Amount';
-                          } else if (double.tryParse(value!) == null) {
-                            return 'Enter a valid Amount';
                           }
                           return null;
                         },
@@ -280,41 +274,25 @@ class _AddExpenseState extends State<AddExpense> {
                       ButtonGlobal(
                         buttontext: lang.S.of(context).continueButton,
                         buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
-                        onPressed: () {
+                        onPressed: () async {
                           if (validateAndSave()) {
-                            ExpenseModel expense = ExpenseModel(
-                              expenseDate: selectedDate.toString(),
-                              category: dropdownValue == 'Select Category' ? '' : dropdownValue,
-                              account: '',
-                              amount: expanseAmountController.text,
-                              expanseFor: expanseForNameController.text,
-                              paymentType: selectedPaymentType,
-                              referenceNo: expanseRefController.text,
-                              note: expanseNoteController.text,
-                            );
-                            try {
-                              EasyLoading.show(status: 'Loading...', dismissOnTap: false);
-                              final DatabaseReference productInformationRef = FirebaseDatabase.instance.ref().child(constUserId).child('Expense');
-                              productInformationRef.keepSynced(true);
-                              productInformationRef.push().set(expense.toJson());
-                              EasyLoading.showSuccess('Added Successfully', duration: const Duration(milliseconds: 500));
+                            if (selectedCategory != null) {
+                              EasyLoading.show();
+                              ExpenseRepo repo = ExpenseRepo();
 
-                              ///____provider_refresh____________________________________________
-                              ref.refresh(expenseProvider);
-
-                              Future.delayed(const Duration(milliseconds: 10), () {
-                                int count = 0;
-                                Navigator.popUntil(context, (route) {
-                                  return count++ == 2;
-                                });
-                                // Navigator.pop(context,true);
-                                const ExpenseList().launch(
-                                  context,
-                                );
-                              });
-                            } catch (e) {
-                              EasyLoading.dismiss();
-                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
+                              await repo.createExpense(
+                                ref: ref,
+                                context: context,
+                                amount: num.tryParse(expanseAmountController.text) ?? 0,
+                                expenseCategoryId: selectedCategory?.id ?? 0,
+                                expanseFor: expanseForNameController.text,
+                                paymentType: selectedPaymentType,
+                                referenceNo: expanseRefController.text,
+                                expenseDate: selectedDate.toString(),
+                                note: expanseNoteController.text,
+                              );
+                            } else {
+                              EasyLoading.showError('Please select a expense category');
                             }
                           }
                         },

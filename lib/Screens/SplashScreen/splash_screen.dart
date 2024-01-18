@@ -1,18 +1,15 @@
 // ignore_for_file: use_build_context_synchronously
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:internet_connection_checker/internet_connection_checker.dart';
-import 'package:mobile_pos/Repository/constant_functions.dart';
 import 'package:mobile_pos/Screens/SplashScreen/on_board.dart';
 import 'package:mobile_pos/constant.dart';
+import 'package:mobile_pos/model/business_info_model.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:provider/provider.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
-import '../../GlobalComponents/license_verifier.dart';
+import '../../Repository/API/business_info_repo.dart';
 import '../../currency.dart';
-import '../../repository/subscription_repo.dart';
 import '../Home/home.dart';
 import '../language/language_provider.dart';
 
@@ -43,14 +40,6 @@ class _SplashScreenState extends State<SplashScreen> {
       Permission.bluetoothConnect,
     ].request();
   }
-
-  final CurrentUserData currentUserData = CurrentUserData();
-
-  // Future<void> getSubUserData() async {
-  //   final prefs = await SharedPreferences.getInstance();
-  //   isSubUser = prefs.getBool('isSubUser') ?? false;
-  //   isSubUser ? currentUserData.getUserData() : null;
-  // }
 
   @override
   void initState() {
@@ -209,9 +198,15 @@ class _SplashScreenState extends State<SplashScreen> {
 
   Future<void> nextPage() async {
     final prefs = await SharedPreferences.getInstance();
-    await Future.delayed(const Duration(seconds: 2));
+    await Future.delayed(const Duration(seconds: 1));
     if (prefs.getString('token') != null) {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => const Home()));
+      BusinessInformation? data;
+      data = await BusinessRepository().checkBusinessData();
+      if (data == null) {
+        Navigator.push(context, MaterialPageRoute(builder: (context) => const OnBoard()));
+      } else {
+        Navigator.push(context, MaterialPageRoute(builder: (context) => const Home()));
+      }
     } else {
       Navigator.push(context, MaterialPageRoute(builder: (context) => const OnBoard()));
     }
