@@ -13,15 +13,17 @@ import 'package:nb_utils/nb_utils.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../GlobalComponents/button_global.dart';
+import '../../PDF Invoice/generate_pdf.dart';
 import '../../Provider/print_sales_invoice_provider.dart';
 import '../../Provider/profile_provider.dart';
-import '../../Repository/API/create_party_repo.dart';
 import '../../currency.dart';
 import '../../model/print_transaction_model.dart';
 import '../invoice_details/purchase_invoice_details.dart';
 import '../invoice_details/sales_invoice_details_screen.dart';
 import 'Model/parties_model.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
+
+import 'Repo/parties_repo.dart';
 
 // ignore: must_be_immutable
 class CustomerDetails extends StatefulWidget {
@@ -345,66 +347,96 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                                               Row(
                                                 children: [
                                                   IconButton(
-                                                    onPressed: () async {
-                                                      await printerData.getBluetooth();
-                                                      PrintTransactionModel model = PrintTransactionModel(transitionModel: reTransaction[index], personalInformationModel: data);
-                                                      connected
-                                                          ? printerData.printSalesTicket(
-                                                              printTransactionModel: model,
-                                                              productList: model.transitionModel!.details,
-                                                            )
-                                                          // ignore: use_build_context_synchronously
-                                                          : showDialog(
-                                                              context: context,
-                                                              builder: (_) {
-                                                                return Dialog(
-                                                                  child: SizedBox(
-                                                                    height: 200,
-                                                                    child: ListView.builder(
-                                                                      itemCount:
-                                                                          printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
-                                                                      itemBuilder: (context, index) {
-                                                                        return ListTile(
-                                                                          onTap: () async {
-                                                                            String select = printerData.availableBluetoothDevices[index];
-                                                                            List list = select.split("#");
-                                                                            // String name = list[0];
-                                                                            String mac = list[1];
-                                                                            bool isConnect = await printerData.setConnect(mac);
-                                                                            // ignore: use_build_context_synchronously
-                                                                            isConnect
-                                                                                // ignore: use_build_context_synchronously
-                                                                                ? finish(context)
-                                                                                : toast('Try Again');
-                                                                          },
-                                                                          title: Text('${printerData.availableBluetoothDevices[index]}'),
-                                                                          subtitle: Text(lang.S.of(context).clickToConnect),
-                                                                        );
-                                                                      },
+                                                      onPressed: () async {
+                                                        await printerData.getBluetooth();
+                                                        PrintTransactionModel model = PrintTransactionModel(transitionModel: transaction[index], personalInformationModel: data);
+                                                        connected
+                                                            ? printerData.printSalesTicket(
+                                                                printTransactionModel: model,
+                                                                productList: model.transitionModel!.details,
+                                                              )
+                                                            // ignore: use_build_context_synchronously
+                                                            : showDialog(
+                                                                context: context,
+                                                                builder: (_) {
+                                                                  return WillPopScope(
+                                                                    onWillPop: () async => false,
+                                                                    child: Dialog(
+                                                                      child: SizedBox(
+                                                                        child: Column(
+                                                                          mainAxisSize: MainAxisSize.min,
+                                                                          children: [
+                                                                            ListView.builder(
+                                                                              shrinkWrap: true,
+                                                                              itemCount: printerData.availableBluetoothDevices.isNotEmpty
+                                                                                  ? printerData.availableBluetoothDevices.length
+                                                                                  : 0,
+                                                                              itemBuilder: (context, index) {
+                                                                                return ListTile(
+                                                                                  onTap: () async {
+                                                                                    String select = printerData.availableBluetoothDevices[index];
+                                                                                    List list = select.split("#");
+                                                                                    // String name = list[0];
+                                                                                    String mac = list[1];
+                                                                                    bool isConnect = await printerData.setConnect(mac);
+                                                                                    // ignore: use_build_context_synchronously
+                                                                                    isConnect
+                                                                                        // ignore: use_build_context_synchronously
+                                                                                        ? finish(context)
+                                                                                        : toast('Try Again');
+                                                                                  },
+                                                                                  title: Text('${printerData.availableBluetoothDevices[index]}'),
+                                                                                  subtitle: const Text("Click to connect"),
+                                                                                );
+                                                                              },
+                                                                            ),
+                                                                            const SizedBox(height: 10),
+                                                                            const Text('Connect Your printer'),
+                                                                            const SizedBox(height: 10),
+                                                                            Container(height: 1, width: double.infinity, color: Colors.grey),
+                                                                            const SizedBox(height: 15),
+                                                                            GestureDetector(
+                                                                              onTap: () {
+                                                                                Navigator.pop(context);
+                                                                              },
+                                                                              child: const Center(
+                                                                                child: Text(
+                                                                                  'Cancel',
+                                                                                  style: TextStyle(color: kMainColor),
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                            const SizedBox(height: 15),
+                                                                          ],
+                                                                        ),
+                                                                      ),
                                                                     ),
-                                                                  ),
-                                                                );
-                                                              },
-                                                            );
-                                                    },
-                                                    icon: const Icon(
-                                                      FeatherIcons.printer,
-                                                      color: Colors.grey,
-                                                    ),
-                                                  ),
-                                                  IconButton(
-                                                    onPressed: () {},
-                                                    icon: const Icon(
-                                                      FeatherIcons.share,
-                                                      color: Colors.grey,
-                                                    ),
-                                                  ),
-                                                  IconButton(
-                                                      onPressed: () {},
+                                                                  );
+                                                                });
+                                                      },
                                                       icon: const Icon(
-                                                        FeatherIcons.moreVertical,
+                                                        FeatherIcons.printer,
                                                         color: Colors.grey,
                                                       )),
+                                                  IconButton(
+                                                      onPressed: () => GeneratePdf().generateSaleDocument(transaction[index], data, context),
+                                                      icon: const Icon(
+                                                        Icons.picture_as_pdf,
+                                                        color: Colors.grey,
+                                                      )),
+                                                  // IconButton(
+                                                  //   onPressed: () {},
+                                                  //   icon: const Icon(
+                                                  //     FeatherIcons.share,
+                                                  //     color: Colors.grey,
+                                                  //   ),
+                                                  // ),
+                                                  // IconButton(
+                                                  //     onPressed: () {},
+                                                  //     icon: const Icon(
+                                                  //       FeatherIcons.moreVertical,
+                                                  //       color: Colors.grey,
+                                                  //     )),
                                                 ],
                                               )
                                             ],
@@ -504,66 +536,96 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                                                 children: [
                                                   IconButton(
                                                       onPressed: () async {
-                                                        await printerData.getBluetooth();
-                                                        PrintPurchaseTransactionModel model = PrintPurchaseTransactionModel(
-                                                          personalInformationModel: data,
-                                                          purchaseTransitionModel: reTransaction[index],
-                                                        );
-                                                        connected
-                                                            ? printerDataPurchase.printPurchaseThermalInvoice(
-                                                                printTransactionModel: model,
-                                                                productList: model.purchaseTransitionModel!.details ?? [],
-                                                              )
-                                                            // ignore: use_build_context_synchronously
-                                                            : showDialog(
-                                                                context: context,
-                                                                builder: (_) {
-                                                                  return Dialog(
+                                                        ///________Print_______________________________________________________
+                                                        await printerDataPurchase.getBluetooth();
+                                                        PrintPurchaseTransactionModel model =
+                                                            PrintPurchaseTransactionModel(purchaseTransitionModel: reTransaction[index], personalInformationModel: data);
+                                                        if (connected) {
+                                                          await printerDataPurchase.printPurchaseThermalInvoice(
+                                                            printTransactionModel: model,
+                                                            productList: model.purchaseTransitionModel!.details,
+                                                          );
+                                                        } else {
+                                                          // ignore: use_build_context_synchronously
+                                                          showDialog(
+                                                              context: context,
+                                                              builder: (_) {
+                                                                return WillPopScope(
+                                                                  onWillPop: () async => false,
+                                                                  child: Dialog(
                                                                     child: SizedBox(
-                                                                      height: 200,
-                                                                      child: ListView.builder(
-                                                                        itemCount:
-                                                                            printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
-                                                                        itemBuilder: (context, index) {
-                                                                          return ListTile(
-                                                                            onTap: () async {
-                                                                              String select = printerData.availableBluetoothDevices[index];
-                                                                              List list = select.split("#");
-                                                                              // String name = list[0];
-                                                                              String mac = list[1];
-                                                                              bool isConnect = await printerData.setConnect(mac);
-                                                                              // ignore: use_build_context_synchronously
-                                                                              isConnect
-                                                                                  // ignore: use_build_context_synchronously
-                                                                                  ? finish(context)
-                                                                                  // ignore: use_build_context_synchronously
-                                                                                  : toast(lang.S.of(context).tryAgain);
+                                                                      child: Column(
+                                                                        mainAxisSize: MainAxisSize.min,
+                                                                        children: [
+                                                                          ListView.builder(
+                                                                            shrinkWrap: true,
+                                                                            itemCount:
+                                                                                printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
+                                                                            itemBuilder: (context, index) {
+                                                                              return ListTile(
+                                                                                onTap: () async {
+                                                                                  String select = printerData.availableBluetoothDevices[index];
+                                                                                  List list = select.split("#");
+                                                                                  // String name = list[0];
+                                                                                  String mac = list[1];
+                                                                                  bool isConnect = await printerData.setConnect(mac);
+                                                                                  isConnect
+                                                                                      // ignore: use_build_context_synchronously
+                                                                                      ? finish(context)
+                                                                                      : toast('Try Again');
+                                                                                },
+                                                                                title: Text('${printerData.availableBluetoothDevices[index]}'),
+                                                                                subtitle: const Text("Click to connect"),
+                                                                              );
                                                                             },
-                                                                            title: Text('${printerData.availableBluetoothDevices[index]}'),
-                                                                            subtitle: Text(lang.S.of(context).connect),
-                                                                          );
-                                                                        },
+                                                                          ),
+                                                                          const SizedBox(height: 10),
+                                                                          const Text('Connect Your printer'),
+                                                                          const SizedBox(height: 10),
+                                                                          Container(height: 1, width: double.infinity, color: Colors.grey),
+                                                                          const SizedBox(height: 15),
+                                                                          GestureDetector(
+                                                                            onTap: () {
+                                                                              Navigator.pop(context);
+                                                                            },
+                                                                            child: const Center(
+                                                                              child: Text(
+                                                                                'Cancel',
+                                                                                style: TextStyle(color: kMainColor),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                          const SizedBox(height: 15),
+                                                                        ],
                                                                       ),
                                                                     ),
-                                                                  );
-                                                                });
+                                                                  ),
+                                                                );
+                                                              });
+                                                        }
                                                       },
                                                       icon: const Icon(
                                                         FeatherIcons.printer,
                                                         color: Colors.grey,
                                                       )),
                                                   IconButton(
-                                                      onPressed: () {},
+                                                      onPressed: () => GeneratePdf().generatePurchaseDocument(reTransaction[index], data, context),
                                                       icon: const Icon(
-                                                        FeatherIcons.share,
+                                                        Icons.picture_as_pdf,
                                                         color: Colors.grey,
                                                       )),
-                                                  IconButton(
-                                                      onPressed: () {},
-                                                      icon: const Icon(
-                                                        FeatherIcons.moreVertical,
-                                                        color: Colors.grey,
-                                                      )),
+                                                  // IconButton(
+                                                  //     onPressed: () {},
+                                                  //     icon: const Icon(
+                                                  //       FeatherIcons.share,
+                                                  //       color: Colors.grey,
+                                                  //     )),
+                                                  // IconButton(
+                                                  //     onPressed: () {},
+                                                  //     icon: const Icon(
+                                                  //       FeatherIcons.moreVertical,
+                                                  //       color: Colors.grey,
+                                                  //     )),
                                                 ],
                                               );
                                             }, error: (e, stack) {

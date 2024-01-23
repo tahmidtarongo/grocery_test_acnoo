@@ -230,7 +230,7 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                                                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                           children: [
                                                             Text(
-                                                              (transaction[index].party?.name?.isEmptyOrNull ?? false)
+                                                              (transaction[index].party?.name!=null)
                                                                   ? transaction[index].party?.name ?? ''
                                                                   : transaction[index].party?.phone ?? '',
                                                               style: const TextStyle(fontSize: 16),

@@ -7,7 +7,7 @@ import 'package:mobile_pos/Provider/product_provider.dart';
 import '../../../Const/api_config.dart';
 import 'package:http/http.dart' as http;
 
-import '../../../Provider/customer_provider.dart';
+import '../../Customers/Provider/customer_provider.dart';
 import '../../../Provider/profile_provider.dart';
 import '../../../Provider/transactions_provider.dart';
 import '../../../Repository/constant_functions.dart';

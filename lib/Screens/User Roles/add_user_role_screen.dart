@@ -84,6 +84,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                             SizedBox(
                               width: context.width() / 2 - 20,
                               child: CheckboxListTile(
+                                contentPadding: const EdgeInsets.all(5),
                                 value: allPermissions,
                                 onChanged: (value) {
                                   if (value == true) {
@@ -132,6 +133,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                             ///_______Edit_Profile_________________________
                             Expanded(
                               child: CheckboxListTile(
+                                contentPadding: const EdgeInsets.all(5),
                                 value: profileEditPermission,
                                 onChanged: (value) {
                                   setState(() {
@@ -145,6 +147,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                             ///______sales____________________________
                             Expanded(
                               child: CheckboxListTile(
+                                contentPadding: const EdgeInsets.all(5),
                                 value: salePermission,
                                 onChanged: (value) {
                                   setState(() {
@@ -162,6 +165,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                           children: [
                             Expanded(
                               child: CheckboxListTile(
+                                contentPadding: const EdgeInsets.all(5),
                                 value: partiesPermission,
                                 onChanged: (value) {
                                   setState(() {
@@ -173,6 +177,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                             ),
                             Expanded(
                               child: CheckboxListTile(
+                                contentPadding: const EdgeInsets.all(5),
                                 value: purchasePermission,
                                 onChanged: (value) {
                                   setState(() {
@@ -190,6 +195,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                           children: [
                             Expanded(
                               child: CheckboxListTile(
+                                contentPadding: const EdgeInsets.all(5),
                                 value: productPermission,
                                 onChanged: (value) {
                                   setState(() {
@@ -201,6 +207,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                             ),
                             Expanded(
                               child: CheckboxListTile(
+                                contentPadding: const EdgeInsets.all(5),
                                 value: dueListPermission,
                                 onChanged: (value) {
                                   setState(() {
@@ -218,6 +225,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                           children: [
                             Expanded(
                               child: CheckboxListTile(
+                                contentPadding: const EdgeInsets.all(5),
                                 value: stockPermission,
                                 onChanged: (value) {
                                   setState(() {
@@ -229,6 +237,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                             ),
                             Expanded(
                               child: CheckboxListTile(
+                                contentPadding: const EdgeInsets.all(5),
                                 value: reportsPermission,
                                 onChanged: (value) {
                                   setState(() {
@@ -246,6 +255,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                           children: [
                             Expanded(
                               child: CheckboxListTile(
+                                contentPadding: const EdgeInsets.all(5),
                                 value: salesListPermission,
                                 onChanged: (value) {
                                   setState(() {
@@ -257,6 +267,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                             ),
                             Expanded(
                               child: CheckboxListTile(
+                                contentPadding: const EdgeInsets.all(5),
                                 value: purchaseListPermission,
                                 onChanged: (value) {
                                   setState(() {
@@ -274,6 +285,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                           children: [
                             Expanded(
                               child: CheckboxListTile(
+                                contentPadding: const EdgeInsets.all(5),
                                 value: lossProfitPermission,
                                 onChanged: (value) {
                                   setState(() {
@@ -285,6 +297,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                             ),
                             Expanded(
                               child: CheckboxListTile(
+                                contentPadding: const EdgeInsets.all(5),
                                 value: addExpensePermission,
                                 onChanged: (value) {
                                   setState(() {

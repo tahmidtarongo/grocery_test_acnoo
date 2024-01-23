@@ -11,8 +11,7 @@ import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
-
-import '../../Repository/API/create_party_repo.dart';
+import 'Repo/parties_repo.dart';
 
 class AddParty extends StatefulWidget {
   const AddParty({Key? key}) : super(key: key);
@@ -73,6 +72,7 @@ class _AddPartyState extends State<AddParty> {
                             }
                             return null;
                           },
+                          keyboardType: TextInputType.phone,
                           decoration: InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             labelText: lang.S.of(context).phone,
@@ -94,6 +94,7 @@ class _AddPartyState extends State<AddParty> {
                             // You can add more validation logic as needed
                             return null;
                           },
+                          keyboardType: TextInputType.name,
                           decoration: InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             labelText: lang.S.of(context).name,

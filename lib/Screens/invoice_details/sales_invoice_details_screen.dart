@@ -135,35 +135,128 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                     thickness: 1.0,
                     color: kGreyTextColor.withOpacity(0.1),
                   ),
+                  // SizedBox(
+                  //   width: context.width(),
+                  //   child: Row(
+                  //     children: [
+                  //       Text(
+                  //         lang.S.of(context).product,
+                  //         maxLines: 2,
+                  //         style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+                  //       ),
+                  //       const Spacer(),
+                  //       Text(
+                  //         lang.S.of(context).unitPirce,
+                  //         maxLines: 2,
+                  //         style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+                  //       ),
+                  //       const Spacer(),
+                  //       Text(
+                  //         lang.S.of(context).quantity,
+                  //         maxLines: 1,
+                  //         style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+                  //       ),
+                  //       const Spacer(),
+                  //       Text(
+                  //         lang.S.of(context).totalPrice,
+                  //         maxLines: 2,
+                  //         style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+                  //       ),
+                  //     ],
+                  //   ),
+                  // ),
+                  // const SizedBox(height: 10.0),
+                  // ListView.builder(
+                  //     shrinkWrap: true,
+                  //     physics: const NeverScrollableScrollPhysics(),
+                  //     itemCount: widget.saleTransaction.details!.length,
+                  //     itemBuilder: (_, i) {
+                  //       return Padding(
+                  //         padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                  //         child: SizedBox(
+                  //           width: context.width(),
+                  //           child: Row(
+                  //             children: [
+                  //               Text(
+                  //                 widget.saleTransaction.details![i].product?.productName.toString() ?? '',
+                  //                 maxLines: 2,
+                  //                 style: kTextStyle.copyWith(color: kGreyTextColor),
+                  //               ),
+                  //               SizedBox(width: MediaQuery.of(context).size.width / 12),
+                  //               Text(
+                  //                 '$currency ${widget.saleTransaction.details![i].price}',
+                  //                 maxLines: 2,
+                  //                 style: kTextStyle.copyWith(color: kGreyTextColor),
+                  //               ),
+                  //               const Spacer(),
+                  //               Text(
+                  //                 widget.saleTransaction.details![i].quantities.toString(),
+                  //                 maxLines: 1,
+                  //                 style: kTextStyle.copyWith(color: kGreyTextColor),
+                  //               ),
+                  //               const Spacer(),
+                  //               Text(
+                  //                 '$currency ${(widget.saleTransaction.details![i].price ?? 0) * (widget.saleTransaction.details![i].quantities ?? 0)}',
+                  //                 maxLines: 2,
+                  //                 style: kTextStyle.copyWith(color: kTitleColor),
+                  //               ),
+                  //             ],
+                  //           ),
+                  //         ),
+                  //       );
+                  //     }),
+                  // Divider(
+                  //   thickness: 1.0,
+                  //   color: kGreyTextColor.withOpacity(0.1),
+                  // ),
+
+                  ///_________________________________________
                   SizedBox(
                     width: context.width(),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Text(
-                          lang.S.of(context).product,
-                          maxLines: 2,
-                          style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+                        SizedBox(
+                          width: context.width() / 2.4,
+                          child: Text(
+                            lang.S.of(context).product,
+                            maxLines: 2,
+                            style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+                          ),
                         ),
-                        const Spacer(),
-                        Text(
-                          lang.S.of(context).unitPirce,
-                          maxLines: 2,
-                          style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+                        SizedBox(
+                          width: (context.width() - (context.width() / 2.4 + 20)) / 3,
+                          child: Text(
+                            lang.S.of(context).quantity,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+                          ),
                         ),
-                        const Spacer(),
-                        Text(
-                          lang.S.of(context).quantity,
-                          maxLines: 1,
-                          style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+                        SizedBox(
+                          width: (context.width() - (context.width() / 2.4 + 20)) / 3,
+                          child: Text(
+                            lang.S.of(context).unitPirce,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+                          ),
                         ),
-                        const Spacer(),
-                        Text(
-                          lang.S.of(context).totalPrice,
-                          maxLines: 2,
-                          style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+                        SizedBox(
+                          width: (context.width() - (context.width() / 2.4 + 20)) / 3,
+                          child: Text(
+                            lang.S.of(context).totalPrice,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+                          ),
                         ),
                       ],
                     ),
+                  ),
+                  Divider(
+                    thickness: 1.0,
+                    color: kGreyTextColor.withOpacity(0.1),
                   ),
                   const SizedBox(height: 10.0),
                   ListView.builder(
@@ -176,29 +269,46 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                           child: SizedBox(
                             width: context.width(),
                             child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(
-                                  widget.saleTransaction.details![i].product?.productName.toString() ?? '',
-                                  maxLines: 2,
-                                  style: kTextStyle.copyWith(color: kGreyTextColor),
+                                SizedBox(
+                                  width: context.width() / 2.4,
+                                  child: Text(
+                                    widget.saleTransaction.details![i].product?.productName.toString() ?? '',
+                                    maxLines: 2,
+                                    style: kTextStyle.copyWith(color: kGreyTextColor),
+                                  ),
                                 ),
-                                SizedBox(width: MediaQuery.of(context).size.width / 12),
-                                Text(
-                                  '$currency ${widget.saleTransaction.details![i].price}',
-                                  maxLines: 2,
-                                  style: kTextStyle.copyWith(color: kGreyTextColor),
+                                // const Spacer(),
+                                SizedBox(
+                                  width: (context.width() - (context.width() / 2.4 + 20)) / 3,
+                                  child: Text(
+                                    '$currency ${widget.saleTransaction.details![i].price}',
+                                    maxLines: 1,
+                                    textAlign: TextAlign.center,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: kTextStyle.copyWith(color: kGreyTextColor),
+                                  ),
                                 ),
-                                const Spacer(),
-                                Text(
-                                  widget.saleTransaction.details![i].quantities.toString(),
-                                  maxLines: 1,
-                                  style: kTextStyle.copyWith(color: kGreyTextColor),
+                                SizedBox(
+                                  width: (context.width() - (context.width() / 2.4 + 20)) / 3,
+                                  child: Text(
+                                    widget.saleTransaction.details![i].quantities.toString(),
+                                    maxLines: 1,
+                                    textAlign: TextAlign.center,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: kTextStyle.copyWith(color: kGreyTextColor),
+                                  ),
                                 ),
-                                const Spacer(),
-                                Text(
-                                  '$currency ${(widget.saleTransaction.details![i].price ?? 0) * (widget.saleTransaction.details![i].quantities ?? 0)}',
-                                  maxLines: 2,
-                                  style: kTextStyle.copyWith(color: kTitleColor),
+                                SizedBox(
+                                  width: (context.width() - (context.width() / 2.4 + 20)) / 3,
+                                  child: Text(
+                                    '$currency ${(widget.saleTransaction.details![i].price ?? 0) * (widget.saleTransaction.details![i].quantities ?? 0)}',
+                                    maxLines: 1,
+                                    textAlign: TextAlign.center,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: kTextStyle.copyWith(color: kTitleColor),
+                                  ),
                                 ),
                               ],
                             ),
@@ -209,6 +319,8 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                     thickness: 1.0,
                     color: kGreyTextColor.withOpacity(0.1),
                   ),
+
+                  ///__________________________________________
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [

@@ -54,7 +54,7 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
   Widget build(BuildContext context) {
     count++;
     return Consumer(builder: (context, consumerRef, __) {
-      final printerData = consumerRef.watch(printerDueProviderNotifier);
+      // final printerData = consumerRef.watch(printerDueProviderNotifier);
       final personalData = consumerRef.watch(businessInfoProvider);
       final dueInvoiceData = consumerRef.watch(dueInvoiceListProvider(widget.customerModel.id?.round() ?? 0));
       return personalData.when(data: (data) {
@@ -399,6 +399,7 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                         child: GestureDetector(
                           onTap: () async {
                             if (paidAmount > 0 && dueAmount > 0) {
+                              EasyLoading.show();
                               DueRepo repo = DueRepo();
                               DueCollection? dueData;
                               dueData = await repo.dueCollect(
@@ -410,7 +411,13 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                                 paymentType: paymentType,
                                 payDueAmount: paidAmount,
                               );
+
                               if (dueData != null) {
+                                print(dueData.invoiceNumber);
+                                print(dueData.party?.name);
+                                print(dueData.party?.phone);
+                                print(dueData.party?.phone);
+                                print(dueData.paymentDate);
                                 DueInvoiceDetails(
                                   dueCollection: dueData,
                                   personalInformationModel: data,

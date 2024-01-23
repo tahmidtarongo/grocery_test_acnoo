@@ -1,15 +1,36 @@
 import 'dart:convert';
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
 import 'package:mobile_pos/Const/api_config.dart';
-import 'package:mobile_pos/Provider/customer_provider.dart';
 
-import '../constant_functions.dart';
+import '../Provider/customer_provider.dart';
+import '../Model/parties_model.dart';
+import '../../../Repository/constant_functions.dart';
 
 class PartyRepository {
+  Future<List<Party>> fetchAllParties() async {
+    final uri = Uri.parse('${APIConfig.url}/parties');
+
+    final response = await http.get(uri, headers: {
+      'Accept': 'application/json',
+      'Authorization': await getAuthToken(),
+    });
+    print(response.statusCode);
+    print(response.body);
+
+    if (response.statusCode == 200) {
+      final parsedData = jsonDecode(response.body) as Map<String, dynamic>;
+
+      final partyList = parsedData['data'] as List<dynamic>;
+      return partyList.map((category) => Party.fromJson(category)).toList();
+      // Parse into Party objects
+    } else {
+      throw Exception('Failed to fetch parties');
+    }
+  }
+
   Future<void> addParty({
     required WidgetRef ref,
     required BuildContext context,

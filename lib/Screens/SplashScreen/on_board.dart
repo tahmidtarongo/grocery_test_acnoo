@@ -55,8 +55,9 @@ class _OnBoardState extends State<OnBoard> {
             padding: const EdgeInsets.only(right: 20),
             child: TextButton(
               onPressed: () {
-                const PhoneAuth().launch(context);
-                // const SignInScreen().launch(context);
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const PhoneAuth(),));
+                // const PhoneAuth().launch(context);
+                // const Si`gnInScreen().launch(context);
                 // Navigator.pushNamed(context, '/signIn');
               },
               child: Text(
@@ -141,7 +142,7 @@ class _OnBoardState extends State<OnBoard> {
               onPressed: () {
                 setState(
                   () {
-                    currentIndexPage < 2 ? pageController.nextPage(duration: const Duration(microseconds: 1000), curve: Curves.bounceInOut) : const PhoneAuth().launch(context);
+                    currentIndexPage < 2 ? pageController.nextPage(duration: const Duration(microseconds: 1000), curve: Curves.bounceInOut) : Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const PhoneAuth(),));
                     // : const SignInScreen().launch(context);
                   },
                 );

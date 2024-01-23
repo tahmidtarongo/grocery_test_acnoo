@@ -7,7 +7,7 @@ import 'package:mobile_pos/Screens/Purchase/add_purchase.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../Provider/add_to_cart_purchase.dart';
-import '../../Provider/customer_provider.dart';
+import '../Customers/Provider/customer_provider.dart';
 import '../../constant.dart';
 import '../../currency.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;

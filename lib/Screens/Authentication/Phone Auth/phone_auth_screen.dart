@@ -146,8 +146,8 @@ class _PhoneAuthState extends State<PhoneAuth> {
                         EasyLoading.show();
                         PhoneAuthRepo repo = PhoneAuthRepo();
 
-                        if (await repo.sentOTP(phoneNumber: phoneNumberController.text, context: context)) {
-                          OTPVerify(phoneNumber: phoneNumberController.text).launch(context);
+                        if (await repo.sentOTP(phoneNumber: countryController.text + phoneNumberController.text, context: context)) {
+                          OTPVerify(phoneNumber: countryController.text + phoneNumberController.text).launch(context);
                         }
                       }
                     },

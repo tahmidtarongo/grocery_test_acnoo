@@ -200,7 +200,7 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                                 selectedPlan = data[index];
                               });
                             },
-                            child: data[index].offerPrice != null
+                            child: (data[index].offerPrice != null&& (data[index].offerPrice??0)>0)
                                 ? Padding(
                                     padding: const EdgeInsets.only(right: 10),
                                     child: SizedBox(
@@ -264,7 +264,7 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                                               ),
                                               child: Center(
                                                 child: Text(
-                                                  'Save ${(100 - ((data[index].offerPrice * 100) / data[index].subscriptionPrice)).toInt().toString()}%',
+                                                  'Save ${(100 - (((data[index].offerPrice??0) * 100) / (data[index].subscriptionPrice??0))).toInt().toString()}%',
                                                   style: const TextStyle(color: Colors.white),
                                                 ),
                                               ),

@@ -13,7 +13,6 @@ class AddCategory extends StatefulWidget {
   const AddCategory({Key? key}) : super(key: key);
 
   @override
-  // ignore: library_private_types_in_public_api
   _AddCategoryState createState() => _AddCategoryState();
 }
 
@@ -59,9 +58,12 @@ class _AddCategoryState extends State<AddCategory> {
               children: [
                 Visibility(
                   visible: showProgress,
-                  child: const CircularProgressIndicator(
-                    color: kMainColor,
-                    strokeWidth: 5.0,
+                  child: const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: CircularProgressIndicator(
+                      color: kMainColor,
+                      strokeWidth: 5.0,
+                    ),
                   ),
                 ),
                 TextFormField(
@@ -79,7 +81,10 @@ class _AddCategoryState extends State<AddCategory> {
                   children: [
                     Expanded(
                       child: CheckboxListTile(
-                        title: const Text("Size"),
+                        title: const Text(
+                          "Size",
+                          overflow: TextOverflow.ellipsis,
+                        ),
                         value: sizeCheckbox,
                         checkboxShape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(50))),
                         onChanged: (newValue) {
@@ -92,7 +97,10 @@ class _AddCategoryState extends State<AddCategory> {
                     ),
                     Expanded(
                       child: CheckboxListTile(
-                        title: const Text("Color"),
+                        title: const Text(
+                          "Color",
+                          overflow: TextOverflow.ellipsis,
+                        ),
                         value: colorCheckbox,
                         checkboxShape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(50))),
                         onChanged: (newValue) {
@@ -109,7 +117,10 @@ class _AddCategoryState extends State<AddCategory> {
                   children: [
                     Expanded(
                       child: CheckboxListTile(
-                        title: const Text("Weight"),
+                        title: const Text(
+                          "Weight",
+                          overflow: TextOverflow.ellipsis,
+                        ),
                         checkboxShape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(50))),
                         value: weightCheckbox,
                         onChanged: (newValue) {
@@ -122,7 +133,10 @@ class _AddCategoryState extends State<AddCategory> {
                     ),
                     Expanded(
                       child: CheckboxListTile(
-                        title: const Text("Capacity"),
+                        title: const Text(
+                          "Capacity",
+                          overflow: TextOverflow.ellipsis,
+                        ),
                         checkboxShape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(50))),
                         value: capacityCheckbox,
                         onChanged: (newValue) {
@@ -136,7 +150,10 @@ class _AddCategoryState extends State<AddCategory> {
                   ],
                 ),
                 CheckboxListTile(
-                  title: const Text("Type"),
+                  title: const Text(
+                    "Type",
+                    overflow: TextOverflow.ellipsis,
+                  ),
                   checkboxShape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(50))),
                   value: typeCheckbox,
                   onChanged: (newValue) {
@@ -167,37 +184,6 @@ class _AddCategoryState extends State<AddCategory> {
                     setState(() {
                       showProgress = false;
                     });
-                    bool isAlreadyAdded = false;
-                    // allCategory.value?.forEach((element) {
-                    //   if (element.categoryName.toLowerCase().removeAllWhiteSpace().contains(
-                    //         categoryName.toLowerCase().removeAllWhiteSpace(),
-                    //       )) {
-                    //     isAlreadyAdded = true;
-                    //   }
-                    // });
-
-                    // ignore: no_leading_underscores_for_local_identifiers
-                    // final DatabaseReference _categoryInformationRef = FirebaseDatabase.instance.ref().child(constUserId).child('Categories');
-                    // _categoryInformationRef.keepSynced(true);
-                    //
-                    // CategoryModel categoryModel = CategoryModel(
-                    //   categoryName: categoryName,
-                    //
-                    //   size: sizeCheckbox,
-                    //   color: colorCheckbox,
-                    //   capacity: capacityCheckbox,
-                    //   type: typeCheckbox,
-                    //   weight: weightCheckbox,
-                    // );
-                    // isAlreadyAdded ? EasyLoading.showError('Already Added') : _categoryInformationRef.push().set(categoryModel.toJson());
-                    // setState(() {
-                    //   showProgress = false;
-                    //   isAlreadyAdded ? null : ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Data Saved Successfully")));
-                    // });
-                    ref.refresh(categoryProvider);
-
-                    // ignore: use_build_context_synchronously
-                    isAlreadyAdded ? null : Navigator.pop(context);
                   },
                   buttonTextColor: Colors.white,
                 ),
