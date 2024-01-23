@@ -203,12 +203,12 @@ class _SplashScreenState extends State<SplashScreen> {
       BusinessInformation? data;
       data = await BusinessRepository().checkBusinessData();
       if (data == null) {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => const OnBoard()));
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const OnBoard()));
       } else {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => const Home()));
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Home()));
       }
     } else {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => const OnBoard()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const OnBoard()));
     }
   }
 

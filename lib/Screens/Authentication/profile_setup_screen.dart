@@ -26,10 +26,10 @@ class _ProfileSetupState extends State<ProfileSetup> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    _loadLanguages();
+    // _loadLanguages();
   }
 
-  Language? selectedLanguage;
+  // Language? selectedLanguage;
   BusinessCategory? selectedBusinessCategory;
   List<Language> language = [];
 
@@ -37,19 +37,19 @@ class _ProfileSetupState extends State<ProfileSetup> {
   XFile? pickedImage;
   TextEditingController addressController = TextEditingController();
   TextEditingController openingBalanceController = TextEditingController();
-  TextEditingController phoneController = TextEditingController();
+  // TextEditingController phoneController = TextEditingController();
   TextEditingController nameController = TextEditingController();
 
-  void _loadLanguages() async {
-    for (var element in languageData) {
-      final data = Language.fromJson(element);
-
-      language.add(data);
-      if (data.code == "en") {
-        selectedLanguage = data;
-      }
-    }
-  }
+  // void _loadLanguages() async {
+  //   for (var element in languageData) {
+  //     final data = Language.fromJson(element);
+  //
+  //     language.add(data);
+  //     if (data.code == "en") {
+  //       selectedLanguage = data;
+  //     }
+  //   }
+  // }
 
   DropdownButton<BusinessCategory> getCategory({required List<BusinessCategory> list}) {
     List<DropdownMenuItem<BusinessCategory>> dropDownItems = [];
@@ -73,32 +73,32 @@ class _ProfileSetupState extends State<ProfileSetup> {
     );
   }
 
-  DropdownButton<Language> getLanguage() {
-    List<DropdownMenuItem<Language>> dropDownLangItems = [];
-    for (Language lang in language) {
-      var item = DropdownMenuItem(
-        value: lang,
-        child: Text(lang.name),
-      );
-      dropDownLangItems.add(item);
-    }
-    return DropdownButton(
-      items: dropDownLangItems,
-      value: selectedLanguage,
-      onChanged: (value) {
-        setState(() {
-          selectedLanguage = value!;
-        });
-      },
-    );
-  }
+  // DropdownButton<Language> getLanguage() {
+  //   List<DropdownMenuItem<Language>> dropDownLangItems = [];
+  //   for (Language lang in language) {
+  //     var item = DropdownMenuItem(
+  //       value: lang,
+  //       child: Text(lang.name),
+  //     );
+  //     dropDownLangItems.add(item);
+  //   }
+  //   return DropdownButton(
+  //     items: dropDownLangItems,
+  //     value: selectedLanguage,
+  //     onChanged: (value) {
+  //       setState(() {
+  //         selectedLanguage = value!;
+  //       });
+  //     },
+  //   );
+  // }
 
   final GlobalKey<FormState> _formKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-      onWillPop: ()async =>false,
+      onWillPop: () async => false,
       child: Consumer(builder: (context, ref, __) {
         final businessCategoryList = ref.watch(businessCategoryProvider);
 
@@ -132,9 +132,9 @@ class _ProfileSetupState extends State<ProfileSetup> {
                         address: addressController.text.isEmptyOrNull ? null : addressController.text,
                         categoryId: selectedBusinessCategory!.id.toString(),
                         image: pickedImage == null ? null : File(pickedImage!.path),
-                        languageCode: selectedLanguage!.code,
+                        // languageCode: selectedLanguage!.code,
                         openingBalance: openingBalanceController.text.isEmptyOrNull ? null : openingBalanceController.text,
-                        phone: phoneController.text,
+                        // phone: phoneController.text,
                       );
                     } catch (e) {
                       EasyLoading.dismiss();
@@ -326,28 +326,28 @@ class _ProfileSetupState extends State<ProfileSetup> {
                       ),
 
                       ///__________Phone_________________________
-                      Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: SizedBox(
-                          height: 60.0,
-                          child: AppTextField(
-                            controller: phoneController,
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                return 'Please enter a valid phone number';
-                              }
-                              // You can add more validation logic as needed
-                              return null;
-                            },
-                            textFieldType: TextFieldType.PHONE,
-                            decoration: InputDecoration(
-                              labelText: lang.S.of(context).phone,
-                              hintText: lang.S.of(context).enterYourPhoneNumber,
-                              border: const OutlineInputBorder(),
-                            ),
-                          ),
-                        ),
-                      ),
+                      // Padding(
+                      //   padding: const EdgeInsets.all(10.0),
+                      //   child: SizedBox(
+                      //     height: 60.0,
+                      //     child: AppTextField(
+                      //       controller: phoneController,
+                      //       validator: (value) {
+                      //         if (value == null || value.isEmpty) {
+                      //           return 'Please enter a valid phone number';
+                      //         }
+                      //         // You can add more validation logic as needed
+                      //         return null;
+                      //       },
+                      //       textFieldType: TextFieldType.PHONE,
+                      //       decoration: InputDecoration(
+                      //         labelText: lang.S.of(context).phone,
+                      //         hintText: lang.S.of(context).enterYourPhoneNumber,
+                      //         border: const OutlineInputBorder(),
+                      //       ),
+                      //     ),
+                      //   ),
+                      // ),
 
                       ///_________Address___________________________
                       Padding(
@@ -384,27 +384,27 @@ class _ProfileSetupState extends State<ProfileSetup> {
                       ),
 
                       ///_________Language___________________________
-                      Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: SizedBox(
-                          height: 60.0,
-                          child: FormField(
-                            builder: (FormFieldState<dynamic> field) {
-                              return InputDecorator(
-                                decoration: InputDecoration(
-                                    floatingLabelBehavior: FloatingLabelBehavior.always,
-                                    labelText: lang.S.of(context).language,
-                                    labelStyle: GoogleFonts.poppins(
-                                      color: Colors.black,
-                                      fontSize: 20.0,
-                                    ),
-                                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.0))),
-                                child: DropdownButtonHideUnderline(child: getLanguage()),
-                              );
-                            },
-                          ),
-                        ),
-                      ),
+                      // Padding(
+                      //   padding: const EdgeInsets.all(10.0),
+                      //   child: SizedBox(
+                      //     height: 60.0,
+                      //     child: FormField(
+                      //       builder: (FormFieldState<dynamic> field) {
+                      //         return InputDecorator(
+                      //           decoration: InputDecoration(
+                      //               floatingLabelBehavior: FloatingLabelBehavior.always,
+                      //               labelText: lang.S.of(context).language,
+                      //               labelStyle: GoogleFonts.poppins(
+                      //                 color: Colors.black,
+                      //                 fontSize: 20.0,
+                      //               ),
+                      //               border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.0))),
+                      //           child: DropdownButtonHideUnderline(child: getLanguage()),
+                      //         );
+                      //       },
+                      //     ),
+                      //   ),
+                      // ),
                     ],
                   ),
                 ),

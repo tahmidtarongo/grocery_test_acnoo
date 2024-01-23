@@ -112,7 +112,7 @@ class SalesPrinter extends ChangeNotifier {
     ]);
     bytes += generator.row([
       PosColumn(
-          text: 'VAT/GST',
+          text: 'VAT',
           width: 8,
           styles: const PosStyles(
             align: PosAlign.left,

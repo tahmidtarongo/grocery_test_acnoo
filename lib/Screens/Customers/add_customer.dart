@@ -4,15 +4,16 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
-
-import '../../Repository/API/create_party_repo.dart';
+import 'Repo/parties_repo.dart';
 
 class AddParty extends StatefulWidget {
   const AddParty({Key? key}) : super(key: key);
@@ -28,13 +29,16 @@ class _AddPartyState extends State<AddParty> {
   final ImagePicker _picker = ImagePicker();
   bool showProgress = false;
   XFile? pickedImage;
-  TextEditingController phoneController = TextEditingController();
+  String? phoneNumber;
+
+  // TextEditingController phoneController = TextEditingController();
   TextEditingController nameController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController dueController = TextEditingController();
   TextEditingController addressController = TextEditingController();
 
   final GlobalKey<FormState> _formKay = GlobalKey();
+  FocusNode focusNode = FocusNode();
 
   @override
   Widget build(BuildContext context) {
@@ -64,23 +68,41 @@ class _AddPartyState extends State<AddParty> {
                     children: [
                       ///_________Phone_______________________
                       Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: TextFormField(
-                          controller: phoneController,
-                          validator: (value) {
-                            if (value == null || value.isEmpty) {
-                              return 'Please enter a valid phone number';
-                            }
-                            return null;
-                          },
-                          decoration: InputDecoration(
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: lang.S.of(context).phone,
-                            hintText: lang.S.of(context).enterYourPhoneNumber,
-                            border: const OutlineInputBorder(),
+                        padding: const EdgeInsets.only(top: 10.0, left: 10, right: 10),
+                        child: IntlPhoneField(
+                          // controller: phoneController,
+                          decoration: const InputDecoration(
+                            labelText: 'Phone Number',
+                            border: OutlineInputBorder(
+                              borderSide: BorderSide(),
+                            ),
                           ),
+                          initialCountryCode: 'BD',
+                          onChanged: (phone) {
+                            phoneNumber = phone.completeNumber;
+                          },
                         ),
                       ),
+
+                      // Padding(
+                      //   padding: const EdgeInsets.all(10.0),
+                      //   child: TextFormField(
+                      //     controller: phoneController,
+                      //     validator: (value) {
+                      //       if (value == null || value.isEmpty) {
+                      //         return 'Please enter a valid phone number';
+                      //       }
+                      //       return null;
+                      //     },
+                      //     keyboardType: TextInputType.phone,
+                      //     decoration: InputDecoration(
+                      //       floatingLabelBehavior: FloatingLabelBehavior.always,
+                      //       labelText: lang.S.of(context).phone,
+                      //       hintText: lang.S.of(context).enterYourPhoneNumber,
+                      //       border: const OutlineInputBorder(),
+                      //     ),
+                      //   ),
+                      // ),
 
                       ///_________Name_______________________
                       Padding(
@@ -94,6 +116,7 @@ class _AddPartyState extends State<AddParty> {
                             // You can add more validation logic as needed
                             return null;
                           },
+                          keyboardType: TextInputType.name,
                           decoration: InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             labelText: lang.S.of(context).name,
@@ -404,19 +427,22 @@ class _AddPartyState extends State<AddParty> {
                     buttontext: lang.S.of(context).save,
                     buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
                     onPressed: () async {
-                      if (_formKay.currentState!.validate()) {
+                      // if (_formKay.currentState!.validate()) {
+                      if (!nameController.text.isEmptyOrNull && !phoneNumber.isEmptyOrNull) {
                         final partyRepo = PartyRepository();
                         await partyRepo.addParty(
                           ref: ref,
                           context: context,
                           name: nameController.text,
-                          phone: phoneController.text,
+                          phone: phoneNumber ?? '',
                           type: groupValue,
                           image: pickedImage != null ? File(pickedImage!.path) : null,
                           address: addressController.text.isEmptyOrNull ? null : addressController.text,
                           email: emailController.text.isEmptyOrNull ? null : emailController.text,
                           due: dueController.text.isEmptyOrNull ? null : dueController.text,
                         );
+                      } else {
+                        EasyLoading.showError('Please Enter valid phone and name first');
                       }
                     },
                     buttonTextColor: Colors.white),

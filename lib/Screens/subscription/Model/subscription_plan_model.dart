@@ -22,7 +22,7 @@ class SubscriptionPlanModel {
   num? id;
   String? subscriptionName;
   num? duration;
-  dynamic offerPrice;
+  num? offerPrice;
   num? subscriptionPrice;
   num? status;
   String? createdAt;

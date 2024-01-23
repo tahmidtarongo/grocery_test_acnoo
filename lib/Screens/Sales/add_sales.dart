@@ -11,6 +11,7 @@ import 'package:mobile_pos/Provider/profile_provider.dart';
 import 'package:mobile_pos/Screens/Sales/Repo/sales_repo.dart';
 import 'package:mobile_pos/Screens/Sales/sales_products_list_screen.dart';
 import 'package:nb_utils/nb_utils.dart';
+import '../../Repository/API/future_invoice.dart';
 import '../../constant.dart';
 import '../../currency.dart';
 import '../../model/business_info_model.dart';
@@ -100,16 +101,36 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                 children: [
                   Row(
                     children: [
-                      Expanded(
-                        child: AppTextField(
-                          textFieldType: TextFieldType.NAME,
-                          readOnly: true,
-                          decoration: InputDecoration(
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: lang.S.of(context).inv,
-                            border: const OutlineInputBorder(),
-                          ),
-                        ),
+                      FutureBuilder(
+                        future: FutureInvoice().getFutureInvoice(tag: 'sales'),
+                        builder: (context, snapshot) {
+                          if (snapshot.hasData) {
+                            return Expanded(
+                              child: AppTextField(
+                                textFieldType: TextFieldType.NAME,
+                                initialValue: snapshot.data.toString(),
+                                readOnly: true,
+                                decoration: InputDecoration(
+                                  floatingLabelBehavior: FloatingLabelBehavior.always,
+                                  labelText: lang.S.of(context).inv,
+                                  border: const OutlineInputBorder(),
+                                ),
+                              ),
+                            );
+                          } else {
+                            // return const CircularProgressIndicator();
+                            return Expanded(
+                              child: TextFormField(
+                                readOnly: true,
+                                decoration: InputDecoration(
+                                  floatingLabelBehavior: FloatingLabelBehavior.always,
+                                  labelText: lang.S.of(context).inv,
+                                  border: const OutlineInputBorder(),
+                                ),
+                              ),
+                            );
+                          }
+                        },
                       ),
                       const SizedBox(width: 20),
                       Expanded(
@@ -349,7 +370,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               const Text(
-                                'VAT/GST',
+                                'VAT',
                                 style: TextStyle(fontSize: 16),
                               ),
                               Row(

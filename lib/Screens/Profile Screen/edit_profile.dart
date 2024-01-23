@@ -113,7 +113,6 @@ class _EditProfileState extends State<EditProfile> {
               id: widget.profile.id.toString(),
               name: nameController.text,
               categoryId: selectedBusinessCategory!.id.toString(),
-              phone: phoneController.text,
               address: addressController.text,
               image: pickedImage != null ? File(pickedImage!.path) : null,
             );
@@ -339,6 +338,7 @@ class _EditProfileState extends State<EditProfile> {
                           child: SizedBox(
                             height: 60.0,
                             child: AppTextField(
+                              readOnly: true,
                               controller: phoneController,
                               validator: (value) {
                                 if (value == null || value.isEmpty) {

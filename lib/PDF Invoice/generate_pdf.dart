@@ -770,7 +770,7 @@ class GeneratePdf {
                         ),
                         pw.SizedBox(height: 5.0),
                         pw.Text(
-                          "VAT/GST: ${transactions.vatAmount ?? 0.00}",
+                          "VAT: ${transactions.vatAmount ?? 0.00}",
                           style: pw.TextStyle(
                             color: PdfColors.black,
                             fontWeight: pw.FontWeight.bold,

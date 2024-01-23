@@ -8,14 +8,15 @@ import 'dart:io';
 import 'package:mobile_pos/Const/api_config.dart';
 import 'package:mobile_pos/Repository/constant_functions.dart';
 
+import '../../Screens/Home/home.dart';
 import '../../Screens/subscription/purchase_premium_plan_screen.dart';
 
 class BusinessSetupRepo {
   Future<void> businessSetup({
     required String name,
-    required String phone,
+    // required String phone,
     required String categoryId,
-    required String languageCode,
+    // required String languageCode,
     String? address,
     String? openingBalance,
     File? image,
@@ -29,9 +30,9 @@ class BusinessSetupRepo {
     request.headers['Authorization'] = await getAuthToken();
     request.headers['Accept'] = 'application/json';
     request.fields['companyName'] = name;
-    request.fields['phoneNumber'] = phone;
+    // request.fields['phoneNumber'] = phone;
     request.fields['business_category_id'] = categoryId;
-    request.fields['language'] = languageCode;
+    // request.fields['language'] = languageCode;
     if (address != null) request.fields['address'] = address;
     if (openingBalance != null) request.fields['shopOpeningBalance'] = openingBalance;
     if (image != null) {
@@ -47,7 +48,7 @@ class BusinessSetupRepo {
 
     if (response.statusCode == 200) {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Profile setup successful!')));
-      Navigator.push(context, MaterialPageRoute(builder: (context) => const PurchasePremiumPlanScreen(isCameBack: false)));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const Home()));
     } else {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Profile setup failed\n${parsedData['message']}')));
       print('Profile setup failed: ${response.statusCode}');

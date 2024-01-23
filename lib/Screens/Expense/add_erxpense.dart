@@ -38,7 +38,7 @@ class _AddExpenseState extends State<AddExpense> {
     'Bank',
     'Card',
     'Mobile Payment',
-    'Snacks',
+    'Due',
   ];
 
   String selectedPaymentType = 'Cash';

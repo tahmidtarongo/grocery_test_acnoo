@@ -1,15 +1,35 @@
 import 'dart:convert';
 import 'dart:io';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
 import 'package:mobile_pos/Const/api_config.dart';
-import 'package:mobile_pos/Provider/customer_provider.dart';
 
-import '../constant_functions.dart';
+import '../Provider/customer_provider.dart';
+import '../Model/parties_model.dart';
+import '../../../Repository/constant_functions.dart';
 
 class PartyRepository {
+  Future<List<Party>> fetchAllParties() async {
+    final uri = Uri.parse('${APIConfig.url}/parties');
+
+    final response = await http.get(uri, headers: {
+      'Accept': 'application/json',
+      'Authorization': await getAuthToken(),
+    });
+
+    if (response.statusCode == 200) {
+      final parsedData = jsonDecode(response.body) as Map<String, dynamic>;
+
+      final partyList = parsedData['data'] as List<dynamic>;
+      return partyList.map((category) => Party.fromJson(category)).toList();
+      // Parse into Party objects
+    } else {
+      throw Exception('Failed to fetch parties');
+    }
+  }
+
   Future<void> addParty({
     required WidgetRef ref,
     required BuildContext context,
@@ -40,7 +60,6 @@ class PartyRepository {
     final response = await request.send();
     final responseData = await response.stream.bytesToString();
     final parsedData = jsonDecode(responseData);
-    print(responseData);
 
     if (response.statusCode == 200) {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Added successful!')));
@@ -126,6 +145,21 @@ class PartyRepository {
       }
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Error: $e')));
+    }
+  }
+
+  Future<void> sendCustomerUdeSms({required num id, required BuildContext context}) async {
+    final uri = Uri.parse('${APIConfig.url}/parties/$id');
+
+    final response = await http.get(uri, headers: {
+      'Accept': 'application/json',
+      'Authorization': await getAuthToken(),
+    });
+    EasyLoading.dismiss();
+    if (response.statusCode == 200) {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(jsonDecode(response.body)['message'])));
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Error: ${jsonDecode((response.body))['message']}')));
     }
   }
 }

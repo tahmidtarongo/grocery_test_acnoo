@@ -130,41 +130,139 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                     style: kTextStyle.copyWith(color: kGreyTextColor),
                   ),
                   const SizedBox(height: 10.0),
-                  Divider(
-                    thickness: 1.0,
-                    color: kGreyTextColor.withOpacity(0.1),
-                  ),
+
+                  ///________________________________________________
+                  // Divider(
+                  //   thickness: 1.0,
+                  //   color: kGreyTextColor.withOpacity(0.1),
+                  // ),
+                  // SizedBox(
+                  //   width: context.width(),
+                  //   child: Row(
+                  //     children: [
+                  //       Text(
+                  //         lang.S.of(context).product,
+                  //         maxLines: 2,
+                  //         style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+                  //       ),
+                  //       const Spacer(),
+                  //       Text(
+                  //         lang.S.of(context).unitPirce,
+                  //         maxLines: 2,
+                  //         style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+                  //       ),
+                  //       const Spacer(),
+                  //       Text(
+                  //         lang.S.of(context).quantity,
+                  //         maxLines: 1,
+                  //         style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+                  //       ),
+                  //       const Spacer(),
+                  //       Text(
+                  //         lang.S.of(context).totalPrice,
+                  //         maxLines: 2,
+                  //         style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+                  //       ),
+                  //     ],
+                  //   ),
+                  // ),
+                  // const SizedBox(height: 10.0),
+                  // ListView.builder(
+                  //     shrinkWrap: true,
+                  //     physics: const NeverScrollableScrollPhysics(),
+                  //     itemCount: widget.transitionModel.details!.length,
+                  //     itemBuilder: (_, i) {
+                  //       return Padding(
+                  //         padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+                  //         child: SizedBox(
+                  //           width: context.width(),
+                  //           child: Row(
+                  //             children: [
+                  //               Text(
+                  //                 widget.transitionModel.details![i].product?.productName.toString() ?? '',
+                  //                 maxLines: 2,
+                  //                 style: kTextStyle.copyWith(color: kGreyTextColor),
+                  //               ),
+                  //               SizedBox(width: MediaQuery.of(context).size.width / 12),
+                  //               Text(
+                  //                 '$currency ${widget.transitionModel.details![i].productPurchasePrice}',
+                  //                 maxLines: 2,
+                  //                 style: kTextStyle.copyWith(color: kGreyTextColor),
+                  //               ),
+                  //               const Spacer(),
+                  //               Text(
+                  //                 widget.transitionModel.details![i].quantities.toString(),
+                  //                 maxLines: 1,
+                  //                 style: kTextStyle.copyWith(color: kGreyTextColor),
+                  //               ),
+                  //               const Spacer(),
+                  //               Text(
+                  //                 '$currency ${(widget.transitionModel.details![i].productPurchasePrice ?? 0) * (widget.transitionModel.details![i].quantities ?? 0)}',
+                  //                 maxLines: 2,
+                  //                 style: kTextStyle.copyWith(color: kTitleColor),
+                  //               ),
+                  //             ],
+                  //           ),
+                  //         ),
+                  //       );
+                  //     }),
+                  // Divider(
+                  //   thickness: 1.0,
+                  //   color: kGreyTextColor.withOpacity(0.1),
+                  // ),
+                  ///____________________________________________________
                   SizedBox(
                     width: context.width(),
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          lang.S.of(context).product,
-                          maxLines: 2,
-                          style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+                        SizedBox(
+                          width: context.width() / 2.4,
+                          child: Text(
+                            lang.S.of(context).product,
+                            maxLines: 1,
+                            style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+                          ),
                         ),
-                        const Spacer(),
-                        Text(
-                          lang.S.of(context).unitPirce,
-                          maxLines: 2,
-                          style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+
+                        SizedBox(
+                          width: (context.width() - (context.width() / 2.4 + 20)) / 3,
+                          child: Text(
+                            lang.S.of(context).unitPirce,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                            textAlign:TextAlign.center,
+                            style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+                          ),
                         ),
-                        const Spacer(),
-                        Text(
-                          lang.S.of(context).quantity,
-                          maxLines: 1,
-                          style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+                        SizedBox(
+                          width: (context.width() - (context.width() / 2.4 + 20)) / 3,
+                          child: Text(
+                            lang.S.of(context).quantity,
+                            maxLines: 1,
+                            textAlign:TextAlign.center,
+                            overflow: TextOverflow.ellipsis,
+                            style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+                          ),
                         ),
-                        const Spacer(),
-                        Text(
-                          lang.S.of(context).totalPrice,
-                          maxLines: 2,
-                          style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+                        SizedBox(
+                          width: (context.width() - (context.width() / 2.4 + 20)) / 3,
+                          child: Text(
+                            lang.S.of(context).totalPrice,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            textAlign:TextAlign.center,
+                            style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+                          ),
                         ),
                       ],
                     ),
                   ),
-                  const SizedBox(height: 10.0),
+                  Divider(
+                    thickness: 1.0,
+                    color: kGreyTextColor.withOpacity(0.1),
+                  ),
+                  // const SizedBox(height: 10.0),
                   ListView.builder(
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
@@ -175,29 +273,42 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                           child: SizedBox(
                             width: context.width(),
                             child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(
-                                  widget.transitionModel.details![i].product?.productName.toString() ?? '',
-                                  maxLines: 2,
-                                  style: kTextStyle.copyWith(color: kGreyTextColor),
+                                SizedBox(
+                                  width: context.width() / 2.4,
+                                  child: Text(
+                                    widget.transitionModel.details![i].product?.productName.toString() ?? '',
+                                    maxLines: 2,
+                                    style: kTextStyle.copyWith(color: kGreyTextColor),
+                                  ),
                                 ),
-                                SizedBox(width: MediaQuery.of(context).size.width / 12),
-                                Text(
-                                  '$currency ${widget.transitionModel.details![i].productPurchasePrice}',
-                                  maxLines: 2,
-                                  style: kTextStyle.copyWith(color: kGreyTextColor),
+                                SizedBox(
+                                  width: (context.width() - (context.width() / 2.4 + 20)) / 3,
+                                  child: Text(
+                                    '$currency ${widget.transitionModel.details![i].productPurchasePrice}',
+                                    maxLines: 1,
+                                    textAlign:TextAlign.center,
+                                    style: kTextStyle.copyWith(color: kGreyTextColor),
+                                  ),
                                 ),
-                                const Spacer(),
-                                Text(
-                                  widget.transitionModel.details![i].quantities.toString(),
-                                  maxLines: 1,
-                                  style: kTextStyle.copyWith(color: kGreyTextColor),
+                                SizedBox(
+                                  width: (context.width() - (context.width() / 2.4 + 20)) / 3,
+                                  child: Text(
+                                    widget.transitionModel.details![i].quantities.toString(),
+                                    maxLines: 1,
+                                    textAlign:TextAlign.center,
+                                    style: kTextStyle.copyWith(color: kGreyTextColor),
+                                  ),
                                 ),
-                                const Spacer(),
-                                Text(
-                                  '$currency ${(widget.transitionModel.details![i].productPurchasePrice ?? 0) * (widget.transitionModel.details![i].quantities ?? 0)}',
-                                  maxLines: 2,
-                                  style: kTextStyle.copyWith(color: kTitleColor),
+                                SizedBox(
+                                  width: (context.width() - (context.width() / 2.4 + 20)) / 3,
+                                  child: Text(
+                                    '$currency ${(widget.transitionModel.details![i].productPurchasePrice ?? 0) * (widget.transitionModel.details![i].quantities ?? 0)}',
+                                    maxLines: 1,
+                                    textAlign:TextAlign.center,
+                                    style: kTextStyle.copyWith(color: kTitleColor),
+                                  ),
                                 ),
                               ],
                             ),
@@ -208,6 +319,7 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                     thickness: 1.0,
                     color: kGreyTextColor.withOpacity(0.1),
                   ),
+                  ///___________________________________________________
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [

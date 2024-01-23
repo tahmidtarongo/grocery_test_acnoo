@@ -340,7 +340,7 @@ class _PaymentPageState extends State<PaymentPage> {
         _handleTapPayment(totalAmount, currency);
         break;
       case 'Paytm':
-        PaytmConfig().generateTxnToken(widget.selectedPlan.offerPrice.toDouble(), DateTime.now().millisecondsSinceEpoch.toString());
+        PaytmConfig().generateTxnToken((widget.selectedPlan.offerPrice??0).toDouble(), DateTime.now().millisecondsSinceEpoch.toString());
         break;
       default:
         _handlePaypalPayment(totalAmount, currency);

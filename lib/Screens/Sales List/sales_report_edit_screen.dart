@@ -428,7 +428,7 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               const Text(
-                                'VAT/GST',
+                                'VAT',
                                 style: TextStyle(fontSize: 16),
                               ),
                               Row(

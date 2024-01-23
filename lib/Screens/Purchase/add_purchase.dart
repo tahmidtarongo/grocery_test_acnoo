@@ -11,6 +11,7 @@ import 'package:nb_utils/nb_utils.dart';
 import '../../Provider/add_to_cart_purchase.dart';
 import '../../Provider/print_purchase_invoice_provider.dart';
 import '../../Provider/profile_provider.dart';
+import '../../Repository/API/future_invoice.dart';
 import '../../constant.dart';
 import '../../currency.dart';
 import '../Customers/Model/parties_model.dart';
@@ -90,18 +91,49 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                 children: [
                   Row(
                     children: [
-                      Expanded(
-                        child: AppTextField(
-                          textFieldType: TextFieldType.NAME,
-                          readOnly: true,
-                          initialValue: '',
-                          decoration: InputDecoration(
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: lang.S.of(context).inv,
-                            border: const OutlineInputBorder(),
-                          ),
-                        ),
+                      FutureBuilder(
+                        future: FutureInvoice().getFutureInvoice(tag: 'purchases'),
+                        builder: (context, snapshot) {
+                          if (snapshot.hasData) {
+                            return Expanded(
+                              child: AppTextField(
+                                textFieldType: TextFieldType.NAME,
+                                initialValue: snapshot.data.toString(),
+                                readOnly: true,
+                                decoration: InputDecoration(
+                                  floatingLabelBehavior: FloatingLabelBehavior.always,
+                                  labelText: lang.S.of(context).inv,
+                                  border: const OutlineInputBorder(),
+                                ),
+                              ),
+                            );
+                          } else {
+                            // return const CircularProgressIndicator();
+                            return Expanded(
+                              child: TextFormField(
+                                readOnly: true,
+                                decoration: InputDecoration(
+                                  floatingLabelBehavior: FloatingLabelBehavior.always,
+                                  labelText: lang.S.of(context).inv,
+                                  border: const OutlineInputBorder(),
+                                ),
+                              ),
+                            );
+                          }
+                        },
                       ),
+                      // Expanded(
+                      //   child: AppTextField(
+                      //     textFieldType: TextFieldType.NAME,
+                      //     readOnly: true,
+                      //     initialValue: '',
+                      //     decoration: InputDecoration(
+                      //       floatingLabelBehavior: FloatingLabelBehavior.always,
+                      //       labelText: lang.S.of(context).inv,
+                      //       border: const OutlineInputBorder(),
+                      //     ),
+                      //   ),
+                      // ),
                       const SizedBox(width: 20),
                       Expanded(
                         child: TextFormField(
@@ -610,8 +642,6 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                                   discountAmount: discountAmount,
                                   paidAmount: paidAmount,
                                 );
-
-                                print(purchaseData?.invoiceNumber);
 
                                 if (purchaseData != null) {
                                   providerData.clearCart();

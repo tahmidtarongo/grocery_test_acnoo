@@ -12,9 +12,10 @@ import 'package:mobile_pos/Screens/Customers/Model/parties_model.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:nb_utils/nb_utils.dart';
 
-import '../../Provider/customer_provider.dart';
-import '../../Repository/API/create_party_repo.dart';
+import 'Provider/customer_provider.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
+
+import 'Repo/parties_repo.dart';
 
 // ignore: must_be_immutable
 class EditCustomer extends StatefulWidget {
@@ -86,6 +87,7 @@ class _EditCustomerState extends State<EditCustomer> {
                           padding: const EdgeInsets.all(10.0),
                           child: TextFormField(
                             controller: phoneController,
+
                             validator: (value) {
                               if (value == null || value.isEmpty) {
                                 return 'Please enter a valid phone number';
