@@ -57,7 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
             "Όλες οι επιχειρηματικές λύσεις"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "Το Sales Pro είναι μια ολοκληρωμένη επιχειρηματική λύση με αποθήκη, λογαριασμό, πωλήσεις, δαπάνες και απώλειες/κέρδη."),
+            "Το DoSofto είναι μια ολοκληρωμένη επιχειρηματική λύση με αποθήκη, λογαριασμό, πωλήσεις, δαπάνες και απώλειες/κέρδη."),
         "alreadyAdded":
             MessageLookupByLibrary.simpleMessage("Ήδη έχει προστεθεί"),
         "amount": MessageLookupByLibrary.simpleMessage("Ποσό"),
@@ -93,7 +93,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature": MessageLookupByLibrary.simpleMessage(
             "Επιλέξτε τα χαρακτηριστικά σας"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Τα χαρακτηριστικά είναι το σημαντικό μέρος που κάνει το Sales Pro διαφορετικό από τις παραδοσιακές λύσεις."),
+            "Τα χαρακτηριστικά είναι το σημαντικό μέρος που κάνει το DoSofto διαφορετικό από τις παραδοσιακές λύσεις."),
         "clarence": MessageLookupByLibrary.simpleMessage("Κλαρενς"),
         "clickToConnect": MessageLookupByLibrary.simpleMessage(
             "Κάντε κλικ για να συνδεθείτε"),
@@ -142,7 +142,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Εύκολη χρήση του κινητού σημείου πώλησης"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Η εφαρμογή Sales Pro είναι δωρεάν και εύκολη στη χρήση. Πράγματι, είναι ένα από τα καλύτερα συστήματα POS σε όλο τον κόσμο."),
+            "Η εφαρμογή DoSofto είναι δωρεάν και εύκολη στη χρήση. Πράγματι, είναι ένα από τα καλύτερα συστήματα POS σε όλο τον κόσμο."),
         "edit": MessageLookupByLibrary.simpleMessage("Επεξεργασία"),
         "editPhone": MessageLookupByLibrary.simpleMessage(
             "Επεξεργασία αριθμού τηλεφώνου?"),

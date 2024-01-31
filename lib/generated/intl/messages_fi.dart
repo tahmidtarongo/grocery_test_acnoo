@@ -55,7 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
             "Kaikki liiketoimintaratkaisut"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "Sales Pro on täydellinen liiketoimintaratkaisu varaston, tilien, myynnin, kulujen ja voiton/tappion osalta."),
+            "DoSofto on täydellinen liiketoimintaratkaisu varaston, tilien, myynnin, kulujen ja voiton/tappion osalta."),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Jo lisätty"),
         "amount": MessageLookupByLibrary.simpleMessage("Määrä"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
@@ -90,7 +90,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Valitse ominaisuutesi"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Ominaisuudet ovat tärkeä osa, joka erottaa Sales Pron perinteisistä ratkaisuista."),
+            "Ominaisuudet ovat tärkeä osa, joka erottaa DoSofton perinteisistä ratkaisuista."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Yhdistä napsauttamalla"),
@@ -135,7 +135,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Helppo käyttää mobiilia POS-laitetta"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Sales Pro -sovellus on ilmainen ja helppokäyttöinen. Itse asiassa se on yksi parhaista POS-järjestelmistä maailmassa."),
+            "DoSofto -sovellus on ilmainen ja helppokäyttöinen. Itse asiassa se on yksi parhaista POS-järjestelmistä maailmassa."),
         "edit": MessageLookupByLibrary.simpleMessage("Muokata"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Muokkaa puhelinnumeroa?"),

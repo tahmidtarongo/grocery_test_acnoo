@@ -114,59 +114,6 @@ class _PackageScreenState extends State<PackageScreen> {
                         ],
                       ),
                     ),
-                    // Container(
-                    //   height: 80,
-                    //   width: double.infinity,
-                    //   decoration: BoxDecoration(color: kPremiumPlanColor.withOpacity(0.2), borderRadius: const BorderRadius.all(Radius.circular(10))),
-                    //   child: Row(
-                    //     mainAxisSize: MainAxisSize.min,
-                    //     children: [
-                    //       const SizedBox(width: 20),
-                    //       Column(
-                    //         mainAxisAlignment: MainAxisAlignment.center,
-                    //         crossAxisAlignment: CrossAxisAlignment.start,
-                    //         children: [
-                    //           Text(
-                    //             lang.S.of(context).premiumPlan,
-                    //             style: const TextStyle(fontSize: 18),
-                    //           ),
-                    //           const SizedBox(height: 8),
-                    //           Row(
-                    //             children: [
-                    //               Text(
-                    //                 lang.S.of(context).youRUsing,
-                    //                 style: const TextStyle(fontSize: 14),
-                    //               ),
-                    //               Text(
-                    //                 '${info.enrolledPlan?.plan?.subscriptionName} Package',
-                    //                 style: const TextStyle(fontSize: 14, color: kMainColor, fontWeight: FontWeight.bold),
-                    //               ),
-                    //             ],
-                    //           ),
-                    //         ],
-                    //       ),
-                    //       const Spacer(),
-                    //       Container(
-                    //         height: 63,
-                    //         width: 63,
-                    //         decoration: const BoxDecoration(
-                    //           color: kMainColor,
-                    //           borderRadius: BorderRadius.all(
-                    //             Radius.circular(50),
-                    //           ),
-                    //         ),
-                    //         child: Center(
-                    //             child: Text(
-                    //           '${(DateTime.parse(info.subscriptionDate).difference(DateTime.now()).inDays.abs() - (info.enrolledPlan?.duration ?? 0)).abs()} \nDays Left',
-                    //           textAlign: TextAlign.center,
-                    //           style: const TextStyle(fontSize: 12, color: Colors.white),
-                    //         )),
-                    //       ),
-                    //       // .visible(info.duration != -202),
-                    //       const SizedBox(width: 20),
-                    //     ],
-                    //   ),
-                    // ),
                     const SizedBox(height: 20),
                     Text(
                       lang.S.of(context).packFeatures,
@@ -209,13 +156,8 @@ class _PackageScreenState extends State<PackageScreen> {
                           );
                         }),
                     const SizedBox(height: 20),
-                    // const Text(
-                    //   'For Unlimited Usages',
-                    //   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                    // ).visible(initialSelectedPackage != 'Lifetime'),
-                    // const SizedBox(height: 20).visible(initialSelectedPackage != 'Lifetime'),
                     Visibility(
-                      visible: info.user?.role !='staff',
+                      visible: info.user?.role != 'staff',
                       child: GestureDetector(
                         onTap: () {
                           const PurchasePremiumPlanScreen(

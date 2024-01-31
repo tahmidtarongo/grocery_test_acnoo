@@ -55,7 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Všetky obchodné riešenia"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "Sales Pro je kompletné obchodné riešenie zahŕňajúce sklad, účty, predaj, výdavky a zisk/stratu."),
+            "DoSofto je kompletné obchodné riešenie zahŕňajúce sklad, účty, predaj, výdavky a zisk/stratu."),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Už pridané"),
         "amount": MessageLookupByLibrary.simpleMessage("Suma"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
@@ -90,7 +90,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Vyberte si funkcie"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Funkcie sú dôležitou súčasťou, ktorá robí Sales Pro odlišným od tradičných riešení."),
+            "Funkcie sú dôležitou súčasťou, ktorá robí DoSofto odlišným od tradičných riešení."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Kliknite pre pripojenie"),
@@ -138,7 +138,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Jednoduchý mobilný pokladničný systém"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Aplikácia Sales Pro je bezplatná a jednoduchá na použitie. Je to jeden z najlepších POS systémov na svete."),
+            "Aplikácia DoSofto je bezplatná a jednoduchá na použitie. Je to jeden z najlepších POS systémov na svete."),
         "edit": MessageLookupByLibrary.simpleMessage("Upraviť"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Upraviť telefónne číslo?"),

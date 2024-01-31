@@ -54,7 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Všetky obchodné riešenia"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "Sales Pro je kompletné podnikateľské riešenie so skladom, účtami, predajmi, výdavkami a ziskom/stratou."),
+            "DoSofto je kompletné podnikateľské riešenie so skladom, účtami, predajmi, výdavkami a ziskom/stratou."),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Redan tillagt"),
         "amount": MessageLookupByLibrary.simpleMessage("Belopp"),
         "apply": MessageLookupByLibrary.simpleMessage("Aplikovať"),
@@ -80,7 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Vyberte si svoje funkcie"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Funkcie sú dôležitou časťou, ktorá robí z aplikácie Sales Pro niečo iné ako tradičné riešenia."),
+            "Funkcie sú dôležitou časťou, ktorá robí z aplikácie DoSofto niečo iné ako tradičné riešenia."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Klicka för att ansluta"),
@@ -126,7 +126,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Jednoduché používanie mobilného POS"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Aplikácia Sales Pro je bezplatná a jednoduchá na používanie. V skutočnosti ide o jednu z najlepších pokladničných systémov na svete."),
+            "Aplikácia DoSofto je bezplatná a jednoduchá na používanie. V skutočnosti ide o jednu z najlepších pokladničných systémov na svete."),
         "edit": MessageLookupByLibrary.simpleMessage("Redigera"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Redigera telefonnummer?"),

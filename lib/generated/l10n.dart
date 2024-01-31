@@ -870,10 +870,10 @@ class S {
     );
   }
 
-  /// `Sales Pro app is free, easy to use. In fact, it's one of the best  POS systems around the world.`
+  /// `DoSofto app is free, easy to use. In fact, it's one of the best  POS systems around the world.`
   String get easytheusedesciption {
     return Intl.message(
-      'Sales Pro app is free, easy to use. In fact, it\'s one of the best  POS systems around the world.',
+      'DoSofto app is free, easy to use. In fact, it\'s one of the best  POS systems around the world.',
       name: 'easytheusedesciption',
       desc: '',
       args: [],
@@ -890,10 +890,10 @@ class S {
     );
   }
 
-  /// `Features are the important part which makes Sales Pro different from traditional solutions.`
+  /// `Features are the important part which makes DoSofto different from traditional solutions.`
   String get choseyourfeatureDesciption {
     return Intl.message(
-      'Features are the important part which makes Sales Pro different from traditional solutions.',
+      'Features are the important part which makes DoSofto different from traditional solutions.',
       name: 'choseyourfeatureDesciption',
       desc: '',
       args: [],
@@ -910,10 +910,10 @@ class S {
     );
   }
 
-  /// `Sales Pro is a complete business solution with stock, account, sales, expense & loss/profit.`
+  /// `DoSofto is a complete business solution with stock, account, sales, expense & loss/profit.`
   String get allBusinessolutionDescrip {
     return Intl.message(
-      'Sales Pro is a complete business solution with stock, account, sales, expense & loss/profit.',
+      'DoSofto is a complete business solution with stock, account, sales, expense & loss/profit.',
       name: 'allBusinessolutionDescrip',
       desc: '',
       args: [],

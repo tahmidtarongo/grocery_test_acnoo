@@ -51,7 +51,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Sva poslovna rješenja"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "Sales Pro je potpuno poslovno rješenje s inventarom, računima, prodajom, troškovima i dobitkom/gubitkom."),
+            "DoSofto je potpuno poslovno rješenje s inventarom, računima, prodajom, troškovima i dobitkom/gubitkom."),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Već dodano"),
         "amount": MessageLookupByLibrary.simpleMessage("Iznos"),
         "apply": MessageLookupByLibrary.simpleMessage("Primijeni"),
@@ -84,7 +84,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Izaberite svoje značajke"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Značajke su važan dio koji čini Sales Pro drugačijim od tradicionalnih rješenja."),
+            "Značajke su važan dio koji čini DoSofto drugačijim od tradicionalnih rješenja."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Kliknite za povezivanje"),
@@ -128,7 +128,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Lako korištenje mobilne POS blagajne"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Sales Pro aplikacija je besplatna i jednostavna za korištenje. Zapravo, jedan je od najboljih POS sustava diljem svijeta."),
+            "DoSofto aplikacija je besplatna i jednostavna za korištenje. Zapravo, jedan je od najboljih POS sustava diljem svijeta."),
         "edit": MessageLookupByLibrary.simpleMessage("Uredi"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Uredi broj telefona?"),

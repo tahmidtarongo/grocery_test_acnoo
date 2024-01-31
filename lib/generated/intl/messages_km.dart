@@ -53,7 +53,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
             "ដែល​ជា​ការ​ដោះ​ស្រាយ​អាជីវកម្ម​ទាំងអស់"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "កម្មវិធី Sales Pro គឺជា​កម្មវិធី​ពិសេស​អាជីវកម្ម​ពេញលេញ​ដែលមាន​ស្តុក​សារ​គ្រឿង​សម្រាប់​ការ​ធ្វើ​កិច្ច​ការ​ គណនេយ្យ​ការ​លក់​ ចំណាយ & ចំណេញ/ការ​បញ្ចូល។"),
+            "កម្មវិធី DoSofto គឺជា​កម្មវិធី​ពិសេស​អាជីវកម្ម​ពេញលេញ​ដែលមាន​ស្តុក​សារ​គ្រឿង​សម្រាប់​ការ​ធ្វើ​កិច្ច​ការ​ គណនេយ្យ​ការ​លក់​ ចំណាយ & ចំណេញ/ការ​បញ្ចូល។"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("បានបន្ថែមរួចហើយ"),
         "amount": MessageLookupByLibrary.simpleMessage("ចំនួនទឹកប្រាក់"),
         "apply": MessageLookupByLibrary.simpleMessage("អនុវត្ត"),
@@ -84,7 +84,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("ជ្រើសរើសលក្ខណៈពិសេសរបស់អ្នក"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "លក្ខណៈពិសេសជា​ផ្នែក​សំខាន់​ដែលធ្វើ​ឲ្យ​កម្មវិធី Sales Pro ខូចចិត្តនៃ​ការដំណោះស្រាយ​ប្រចាំ​នៅពី​ដំណាក់​កាល​ចាស់ៗ។"),
+            "លក្ខណៈពិសេសជា​ផ្នែក​សំខាន់​ដែលធ្វើ​ឲ្យ​កម្មវិធី DoSofto ខូចចិត្តនៃ​ការដំណោះស្រាយ​ប្រចាំ​នៅពី​ដំណាក់​កាល​ចាស់ៗ។"),
         "clarence": MessageLookupByLibrary.simpleMessage("ឃ្លានិង"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("ចុចដើម្បីភ្ជាប់"),
@@ -128,7 +128,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "សម្រាប់ប្រើកម្មវិធីលក់តាមរយៈទូរស័ព្ទសំរាប់ហាងតាមរយៈមុខងារណាមួយ"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "កម្មវិធី Sales Pro គឺជាកម្មវិធីឥតគិតថ្លៃ ដែលអាចប្រើបានងាយៗ។ ក្នុងបរិយាប័ត្រនេះ, វាជាជម្រើសល្អបំផុតរបស់ប្រព័ន្ធបញ្ជាទិញទំនិញនៅក្នុងពិភពពិភពលោក។"),
+            "កម្មវិធី DoSofto គឺជាកម្មវិធីឥតគិតថ្លៃ ដែលអាចប្រើបានងាយៗ។ ក្នុងបរិយាប័ត្រនេះ, វាជាជម្រើសល្អបំផុតរបស់ប្រព័ន្ធបញ្ជាទិញទំនិញនៅក្នុងពិភពពិភពលោក។"),
         "edit": MessageLookupByLibrary.simpleMessage("កែសម្រួល"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("កែសម្រួលលេខទូរស័ព្ទ?"),

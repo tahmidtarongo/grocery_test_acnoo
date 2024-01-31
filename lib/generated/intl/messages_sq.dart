@@ -55,7 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
             "Të Gjitha Zgjidhjet Biznesore"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "Sales Pro është një zgjidhje e plotë për biznesin me stoqe, llogari, shitje, shpenzime dhe humbje/profit."),
+            "DoSofto është një zgjidhje e plotë për biznesin me stoqe, llogari, shitje, shpenzime dhe humbje/profit."),
         "alreadyAdded":
             MessageLookupByLibrary.simpleMessage("Tashmë është shtuar"),
         "amount": MessageLookupByLibrary.simpleMessage("Shuma"),
@@ -91,7 +91,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Zgjidhni Veçoritë Tuaja"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Veçoritë janë pjesa e rëndësishme që bën Sales Pro të ndryshme nga zgjidhjet tradicionale."),
+            "Veçoritë janë pjesa e rëndësishme që bën DoSofto të ndryshme nga zgjidhjet tradicionale."),
         "clarence": MessageLookupByLibrary.simpleMessage("Klerensi"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Klikoni për të lidhur"),
@@ -137,7 +137,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "POS-i mobil i lehtë për përdorim"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Aplikacioni Sales Pro është falas, i lehtë për t\'u përdorur. Faktikisht, është një nga sistemrat më të mira të POS në të gjithë botën."),
+            "Aplikacioni DoSofto është falas, i lehtë për t\'u përdorur. Faktikisht, është një nga sistemrat më të mira të POS në të gjithë botën."),
         "edit": MessageLookupByLibrary.simpleMessage("Redakto"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Ndrysho Numrin e Telefonit?"),

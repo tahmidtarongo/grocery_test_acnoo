@@ -57,7 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Suluhisho Zote za Biashara"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "Sales Pro ni suluhisho kamili la biashara lenye hisa, akaunti, mauzo, matumizi na hasara/faida."),
+            "DoSofto ni suluhisho kamili la biashara lenye hisa, akaunti, mauzo, matumizi na hasara/faida."),
         "alreadyAdded":
             MessageLookupByLibrary.simpleMessage("Tayari Imeongezwa"),
         "amount": MessageLookupByLibrary.simpleMessage("Kiasi"),
@@ -92,7 +92,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Chagua Huduma Zako"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Huduma ni sehemu muhimu inayofanya Sales Pro kuwa tofauti na suluhisho za jadi."),
+            "Huduma ni sehemu muhimu inayofanya DoSofto kuwa tofauti na suluhisho za jadi."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Bonyeza ili kuunganisha"),
@@ -139,7 +139,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos":
             MessageLookupByLibrary.simpleMessage("Rahisi kutumia POS ya simu"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Programu ya Sales Pro ni bure, rahisi kutumia. Kwa kweli, ni moja ya mfumo bora wa POS duniani."),
+            "Programu ya DoSofto ni bure, rahisi kutumia. Kwa kweli, ni moja ya mfumo bora wa POS duniani."),
         "edit": MessageLookupByLibrary.simpleMessage("Hariri"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Hariri Namba ya Simu?"),

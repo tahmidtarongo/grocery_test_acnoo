@@ -55,7 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
             "Todas las soluciones comerciales"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "Sales Pro es una solución comercial completa con inventario, cuentas, ventas, gastos y pérdidas/ganancias."),
+            "DoSofto es una solución comercial completa con inventario, cuentas, ventas, gastos y pérdidas/ganancias."),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Ya agregado"),
         "amount": MessageLookupByLibrary.simpleMessage("Cantidad"),
         "apply": MessageLookupByLibrary.simpleMessage("Aplicar"),
@@ -90,7 +90,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Elige Tus Funciones"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Las funciones son la parte importante que hace que Sales Pro sea diferente de las soluciones tradicionales."),
+            "Las funciones son la parte importante que hace que DoSofto sea diferente de las soluciones tradicionales."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Haga clic para conectar"),
@@ -137,7 +137,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Fácil de usar el punto de venta móvil"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "La aplicación Sales Pro es gratuita y fácil de usar. De hecho, es uno de los mejores sistemas POS del mundo."),
+            "La aplicación DoSofto es gratuita y fácil de usar. De hecho, es uno de los mejores sistemas POS del mundo."),
         "edit": MessageLookupByLibrary.simpleMessage("Editar"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("¿Editar número de teléfono?"),

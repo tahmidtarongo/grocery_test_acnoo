@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Screens/Currency/Provider/currency_provider.dart';
-import 'package:mobile_pos/model/currency_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../constant.dart';
 import '../../currency.dart';
+import 'Model/currency_model.dart';
 
 class CurrencyScreen extends StatefulWidget {
   const CurrencyScreen({Key? key}) : super(key: key);
@@ -35,51 +35,52 @@ class _CurrencyScreenState extends State<CurrencyScreen> {
           iconTheme: const IconThemeData(color: Colors.black),
           elevation: 0.0,
         ),
-        body: currencyData.when(data: (data) {
-          return  SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: ListView.builder(
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: data.length,
-                shrinkWrap: true,
-                itemBuilder: (BuildContext context, int index) {
-                  return Card(
-                    child: ListTile(
-                      selected: selectedCurrency.name == data[index].name,
-                      selectedColor: Colors.white,
-                      selectedTileColor: kMainColor.withOpacity(.7),
-
-
-                      onTap: () {
-                        setState(() {
-                          selectedCurrency = data[index];
-                        });
-                      },
-                      title: Text('${data[index].name} - ${data[index].symbol}'),
-                      trailing: const Icon(
-                        (Icons.arrow_forward_ios),
+        body: currencyData.when(
+          data: (data) {
+            return SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: ListView.builder(
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: data.length,
+                  shrinkWrap: true,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Card(
+                      child: ListTile(
+                        selected: selectedCurrency.name == data[index].name,
+                        selectedColor: Colors.white,
+                        selectedTileColor: kMainColor.withOpacity(.7),
+                        onTap: () {
+                          setState(() {
+                            selectedCurrency = data[index];
+                          });
+                        },
+                        title: Text('${data[index].name} - ${data[index].symbol}'),
+                        trailing: const Icon(
+                          (Icons.arrow_forward_ios),
+                        ),
                       ),
-                    ),
-                  );
-                },
+                    );
+                  },
+                ),
               ),
-            ),
-          );
-        }, error: (error, stackTrace) {
-          return null;
-        }, loading: () => const Center(child: CircularProgressIndicator()),),
-
+            );
+          },
+          error: (error, stackTrace) {
+            return null;
+          },
+          loading: () => const Center(child: CircularProgressIndicator()),
+        ),
         bottomNavigationBar: Padding(
           padding: const EdgeInsets.all(10.0),
           child: GestureDetector(
             onTap: () async {
               final prefs = await SharedPreferences.getInstance();
-              await prefs.setString('currency', selectedCurrency.symbol);
-              await prefs.setString('currencyName', selectedCurrency.name);
+              await prefs.setString('currency', selectedCurrency.symbol ?? '৳');
+              await prefs.setString('currencyName', selectedCurrency.name ?? 'Bangladeshi Taka');
               setState(() {
-                currency = selectedCurrency.symbol;
-                currencyName = selectedCurrency.name;
+                currency = selectedCurrency.symbol ?? '৳';
+                currencyName = selectedCurrency.name ?? 'Bangladeshi Taka';
                 Navigator.pop(context);
               });
             },

@@ -47,7 +47,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("כל פתרונות העסק"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "Sales Pro היא פתרון עסקי מוחלט עם מלאי, חשבונות, מכירות, הוצאות והפסד/רווח."),
+            "DoSofto היא פתרון עסקי מוחלט עם מלאי, חשבונות, מכירות, הוצאות והפסד/רווח."),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("כבר נוסף"),
         "amount": MessageLookupByLibrary.simpleMessage("כמות"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
@@ -77,7 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("בחר את התכונות שלך"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "התכונות הן החלק החשוב שהופך את Sales Pro לשונה מהפתרונות המסורתיים."),
+            "התכונות הן החלק החשוב שהופך את DoSofto לשונה מהפתרונות המסורתיים."),
         "clarence": MessageLookupByLibrary.simpleMessage("קלרנס"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("לחץ כדי להתחבר"),
@@ -117,7 +117,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos":
             MessageLookupByLibrary.simpleMessage("שימוש קל במכשיר POS נייד"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "אפליקציית Sales Pro חינמית וקלה לשימוש. למעשה, זו אחת מהמערכות POS הטובות ביותר בעולם."),
+            "אפליקציית DoSofto חינמית וקלה לשימוש. למעשה, זו אחת מהמערכות POS הטובות ביותר בעולם."),
         "edit": MessageLookupByLibrary.simpleMessage("לַעֲרוֹך"),
         "editPhone": MessageLookupByLibrary.simpleMessage("לערוך מספר טלפון?"),
         "editPurchaseInvoice":

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:mobile_pos/Screens/User%20Roles/Model/user_role_model.dart' as user;
@@ -20,7 +22,7 @@ class _AddUserRoleState extends State<AddUserRole> {
   GlobalKey<FormState> globalKey = GlobalKey<FormState>();
   bool validateAndSave() {
     final form = globalKey.currentState;
-    if (form!.validate()) {
+    if (form!.validate() && (phoneNumber != null && phoneNumber != '')) {
       form.save();
       return true;
     }
@@ -41,10 +43,12 @@ class _AddUserRoleState extends State<AddUserRole> {
   bool salesListPermission = false;
   bool purchaseListPermission = false;
   TextEditingController emailController = TextEditingController();
-  TextEditingController phoneController = TextEditingController();
+  // TextEditingController phoneController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   TextEditingController confirmPasswordController = TextEditingController();
   TextEditingController titleController = TextEditingController();
+  String? phoneNumber;
+  String? phoneCode;
 
   @override
   Widget build(BuildContext context) {
@@ -321,39 +325,63 @@ class _AddUserRoleState extends State<AddUserRole> {
                     key: globalKey,
                     child: Column(
                       children: [
-                        ///___________________________________________________________________
-                        AppTextField(
-                          validator: (value) {
-                            if (value == null || value.isEmpty) {
-                              return 'Phone can\'n be empty';
-                            }
-                            return null;
-                          },
-                          keyboardType: TextInputType.phone,
-                          showCursor: true,
-                          controller: phoneController,
-                          // cursorColor: kTitleColor,
-                          decoration: kInputDecoration.copyWith(
-                            labelText: 'Phone',
-                            // labelStyle: kTextStyle.copyWith(color: kTitleColor),
-                            hintText: 'Enter your phone number',
-                            // hintStyle: kTextStyle.copyWith(color: kLitGreyColor),
-                            contentPadding: const EdgeInsets.all(10.0),
-                            enabledBorder: const OutlineInputBorder(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(4.0),
-                              ),
-                              borderSide: BorderSide(color: kBorderColorTextField, width: 1),
-                            ),
-                            errorBorder: const OutlineInputBorder(borderSide: BorderSide(color: Colors.red)),
-                            focusedBorder: const OutlineInputBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                              borderSide: BorderSide(color: kBorderColorTextField, width: 2),
-                            ),
+                        ///________Phone_Number___________________________________________________________
+                        // AppTextField(
+                        //   validator: (value) {
+                        //     if (value == null || value.isEmpty) {
+                        //       return 'Phone can\'n be empty';
+                        //     }
+                        //     return null;
+                        //   },
+                        //   keyboardType: TextInputType.phone,
+                        //   showCursor: true,
+                        //   controller: phoneController,
+                        //   // cursorColor: kTitleColor,
+                        //   decoration: kInputDecoration.copyWith(
+                        //     labelText: 'Phone',
+                        //     // labelStyle: kTextStyle.copyWith(color: kTitleColor),
+                        //     hintText: 'Enter your phone number',
+                        //     // hintStyle: kTextStyle.copyWith(color: kLitGreyColor),
+                        //     contentPadding: const EdgeInsets.all(10.0),
+                        //     enabledBorder: const OutlineInputBorder(
+                        //       borderRadius: BorderRadius.all(
+                        //         Radius.circular(4.0),
+                        //       ),
+                        //       borderSide: BorderSide(color: kBorderColorTextField, width: 1),
+                        //     ),
+                        //     errorBorder: const OutlineInputBorder(borderSide: BorderSide(color: Colors.red)),
+                        //     focusedBorder: const OutlineInputBorder(
+                        //       borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                        //       borderSide: BorderSide(color: kBorderColorTextField, width: 2),
+                        //     ),
+                        //   ),
+                        //   textFieldType: TextFieldType.EMAIL,
+                        // ),
+                        // const SizedBox(height: 20.0),
+                        IntlPhoneField(
+                          decoration: const InputDecoration(
+                            labelText: 'Phone Number',
+                            border: OutlineInputBorder(borderSide: BorderSide(), borderRadius: BorderRadius.all(Radius.circular(5))),
                           ),
-                          textFieldType: TextFieldType.EMAIL,
+                          initialCountryCode: 'BD',
+                          // validator: (p0) {
+                          //   if(phoneNumber!=null){
+                          //     print(phoneNumber);
+                          //     return '';
+                          //   }
+                          //   return null;
+                          //   // if(!p0!.isValidNumber()){
+                          //   //   return 'Enter';
+                          //   // }
+                          // },
+                          onChanged: (phone) {
+                            phoneNumber = phone.number;
+                            phoneCode = phone.countryCode;
+                          },
+                          inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
                         ),
-                        const SizedBox(height: 20.0),
+
+                        const SizedBox(height: 10),
 
                         ///__________email_________________________________________________________
                         // AppTextField(
@@ -465,7 +493,7 @@ class _AddUserRoleState extends State<AddUserRole> {
 
                         ///__________Title_________________________________________________________
 
-                        AppTextField(
+                        TextFormField(
                           validator: (value) {
                             if (value == null || value.isEmpty) {
                               return 'User title can\'n be empty';
@@ -477,7 +505,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                           decoration: kInputDecoration.copyWith(
                             labelText: 'User Title',
                             hintText: 'Enter User Title',
-                            contentPadding: const EdgeInsets.all(10.0),
+                            // contentPadding: const EdgeInsets.all(10.0),
                             errorBorder: const OutlineInputBorder(borderSide: BorderSide(color: Colors.red)),
                             enabledBorder: const OutlineInputBorder(
                               borderRadius: BorderRadius.all(
@@ -490,7 +518,6 @@ class _AddUserRoleState extends State<AddUserRole> {
                               borderSide: BorderSide(color: kBorderColorTextField, width: 2),
                             ),
                           ),
-                          textFieldType: TextFieldType.EMAIL,
                         ),
                         const SizedBox(height: 20.0),
                       ],
@@ -541,9 +568,11 @@ class _AddUserRoleState extends State<AddUserRole> {
                       ref: ref,
                       context: context,
                       name: titleController.text,
-                      phone: phoneController.text,
+                      phone: phoneCode! + phoneNumber!,
                       permission: permission,
                     );
+                  } else {
+                    EasyLoading.showError('Enter a Valid Phone Number');
                   }
                 } else {
                   EasyLoading.showError('You Have To Give Permission');

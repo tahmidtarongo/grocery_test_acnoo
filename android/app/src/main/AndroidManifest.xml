@@ -21,7 +21,7 @@
     </queries>
 
    <application
-        android:label="Dokan"
+        android:label="DoSofto"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

@@ -58,7 +58,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
             "Toutes les solutions commerciales"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "Sales Pro est une solution commerciale complète avec stock, comptabilité, ventes, dépenses et pertes/bénéfices."),
+            "DoSofto est une solution commerciale complète avec stock, comptabilité, ventes, dépenses et pertes/bénéfices."),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Déjà ajouté"),
         "amount": MessageLookupByLibrary.simpleMessage("Montant"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
@@ -95,7 +95,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature": MessageLookupByLibrary.simpleMessage(
             "Choisissez vos fonctionnalités"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Les fonctionnalités sont la partie importante qui distingue Sales Pro des solutions traditionnelles."),
+            "Les fonctionnalités sont la partie importante qui distingue DoSofto des solutions traditionnelles."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Cliquez pour vous connecter"),
@@ -142,7 +142,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Facilité d\'utilisation du terminal de paiement mobile"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "L\'application Sales Pro est gratuite et facile à utiliser. En fait, c\'est l\'un des meilleurs systèmes de TPV au monde."),
+            "L\'application DoSofto est gratuite et facile à utiliser. En fait, c\'est l\'un des meilleurs systèmes de TPV au monde."),
         "edit": MessageLookupByLibrary.simpleMessage("Modifier"),
         "editPhone": MessageLookupByLibrary.simpleMessage(
             "Modifier le numéro de téléphone ?"),

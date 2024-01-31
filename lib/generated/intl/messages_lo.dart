@@ -55,7 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("ລົງທະບຽນທັງຫມົດ"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "Sales Pro ນຳເປັນລົງທະບຽນທັງຫມົດສຳລັບການຮັບສາຍທັງຫມົດນຳເປັນລົງທະບຽນສຳລັບການຊື້, ລາຍຮັບ, ການຂາຍ, ລາຍຈ່າຍ, ແລະການສູນສຳລັບການຂາຍທັງຫມົດ."),
+            "DoSofto ນຳເປັນລົງທະບຽນທັງຫມົດສຳລັບການຮັບສາຍທັງຫມົດນຳເປັນລົງທະບຽນສຳລັບການຊື້, ລາຍຮັບ, ການຂາຍ, ລາຍຈ່າຍ, ແລະການສູນສຳລັບການຂາຍທັງຫມົດ."),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("ເພີ່ມແລ້ວ"),
         "amount": MessageLookupByLibrary.simpleMessage("ຈໍາ​ນວນ"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
@@ -130,7 +130,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos":
             MessageLookupByLibrary.simpleMessage("ໃຊ້ໄດ້ໃນອາຍຸ POS ທີ່ໄວ້"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "ການເຂົ້າສະໜັບສະໜູນ Sales Pro ສະຫຼຸບ, ເປັນໃນການໃຊ້ແອັບເວີຊັນ POS ທີ່ຍັງບໍ່ຕ້ອງໄດ້ຈາກຮູບແບບຕົວເລືອກ."),
+            "ການເຂົ້າສະໜັບສະໜູນ DoSofto ສະຫຼຸບ, ເປັນໃນການໃຊ້ແອັບເວີຊັນ POS ທີ່ຍັງບໍ່ຕ້ອງໄດ້ຈາກຮູບແບບຕົວເລືອກ."),
         "edit": MessageLookupByLibrary.simpleMessage("ແກ້ໄຂ"),
         "editPhone": MessageLookupByLibrary.simpleMessage("ແກ້ໄຂເບີໂທລະສັບບໍ?"),
         "editPurchaseInvoice":

@@ -55,7 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
             "Todas as Soluções Empresariais"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "O Sales Pro é uma solução empresarial completa com estoque, contabilidade, vendas, despesas e lucro/prejuízo."),
+            "O DoSofto é uma solução empresarial completa com estoque, contabilidade, vendas, despesas e lucro/prejuízo."),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Já adicionado"),
         "amount": MessageLookupByLibrary.simpleMessage("Quantia"),
         "apply": MessageLookupByLibrary.simpleMessage("Aplicar"),
@@ -89,7 +89,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature": MessageLookupByLibrary.simpleMessage(
             "Escolha Suas Funcionalidades"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "As funcionalidades são a parte importante que diferencia o Sales Pro das soluções tradicionais."),
+            "As funcionalidades são a parte importante que diferencia o DoSofto das soluções tradicionais."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Clique para conectar"),
@@ -135,7 +135,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Fácil de usar o ponto de venda móvel"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "O aplicativo Sales Pro é gratuito e fácil de usar. Na verdade, é um dos melhores sistemas de PDV do mundo."),
+            "O aplicativo DoSofto é gratuito e fácil de usar. Na verdade, é um dos melhores sistemas de PDV do mundo."),
         "edit": MessageLookupByLibrary.simpleMessage("Editar"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Editar número de telefone?"),

@@ -57,7 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Alle bedrijfsoplossingen"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "Sales Pro is een complete bedrijfsoplossing met voorraad, boekhouding, verkoop, kosten en verlies/winst."),
+            "DoSofto is een complete bedrijfsoplossing met voorraad, boekhouding, verkoop, kosten en verlies/winst."),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Al toegevoegd"),
         "amount": MessageLookupByLibrary.simpleMessage("Hoeveelheid"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
@@ -93,7 +93,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Kies uw functies"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Functies zijn het belangrijkste onderdeel dat Sales Pro onderscheidt van traditionele oplossingen."),
+            "Functies zijn het belangrijkste onderdeel dat DoSofto onderscheidt van traditionele oplossingen."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Klik om te verbinden"),
@@ -140,7 +140,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Gemakkelijk te gebruiken mobiele POS"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "De Sales Pro-app is gratis, gemakkelijk te gebruiken. Sterker nog, het is een van de beste POS-systemen ter wereld."),
+            "De DoSofto-app is gratis, gemakkelijk te gebruiken. Sterker nog, het is een van de beste POS-systemen ter wereld."),
         "edit": MessageLookupByLibrary.simpleMessage("Bewerking"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Telefoonnummer bewerken?"),

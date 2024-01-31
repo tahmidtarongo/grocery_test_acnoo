@@ -2,16 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:mobile_pos/payment_methods.dart';
+import 'package:mobile_pos/Provider/profile_provider.dart';
 import 'package:nb_utils/nb_utils.dart';
 
+import '../Currency/Model/currency_model.dart';
+import '../Currency/Provider/currency_provider.dart';
+import 'Model/payment_credential_model.dart';
 import 'Provider/subacription_plan_provider.dart';
 import '../../constant.dart';
-import '../../currency.dart';
 import '../Home/home.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 import 'Model/subscription_plan_model.dart';
+import 'Repo/subscriptionPlanRepo.dart';
 
 class PurchasePremiumPlanScreen extends StatefulWidget {
   const PurchasePremiumPlanScreen({Key? key, required this.isCameBack}) : super(key: key);
@@ -23,9 +26,7 @@ class PurchasePremiumPlanScreen extends StatefulWidget {
 }
 
 class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
-  String selectedPayButton = 'Paypal';
-  int selectedPackageValue = 0;
-  SubscriptionPlanModel selectedPlan = SubscriptionPlanModel();
+  SubscriptionPlanModel? selectedPlan;
 
   List<String> imageList = [
     'images/sp1.png',
@@ -68,10 +69,21 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
     super.initState();
   }
 
+  CurrencyModel? getDefoultCurrency({required List<CurrencyModel> currencies}) {
+    for (var element in currencies) {
+      if (element.isDefault ?? false) {
+        return element;
+      }
+    }
+    return null;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, ref, __) {
       final subscriptionPlanData = ref.watch(subscriptionPlanProvider);
+      final businessInfo = ref.watch(businessInfoProvider);
+      final currencyData = ref.watch(currencyProvider);
       return Scaffold(
         body: SingleChildScrollView(
           child: SafeArea(
@@ -175,13 +187,10 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                           ),
                         );
                       }),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 5),
                   Text(
                     lang.S.of(context).buyPremium,
                     style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
-                  const SizedBox(
-                    height: 20,
                   ),
 
                   ///______________________________________________________________________
@@ -200,7 +209,7 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                                 selectedPlan = data[index];
                               });
                             },
-                            child: (data[index].offerPrice != null&& (data[index].offerPrice??0)>0)
+                            child: (data[index].offerPrice != null && (data[index].offerPrice ?? 0) > 0)
                                 ? Padding(
                                     padding: const EdgeInsets.only(right: 10),
                                     child: SizedBox(
@@ -212,19 +221,19 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                                             height: (context.width() / 2.5),
                                             width: (context.width() / 3) - 20,
                                             decoration: BoxDecoration(
-                                              color: data[index].subscriptionName == selectedPlan.subscriptionName ? kPremiumPlanColor2.withOpacity(0.1) : Colors.white,
+                                              color: data[index].id == selectedPlan?.id ? kPremiumPlanColor2.withOpacity(0.1) : Colors.white,
                                               borderRadius: const BorderRadius.all(
                                                 Radius.circular(10),
                                               ),
                                               border: Border.all(
                                                 width: 1,
-                                                color: data[index].subscriptionName == selectedPlan.subscriptionName ? kPremiumPlanColor2 : kPremiumPlanColor,
+                                                color: data[index].id == selectedPlan?.id ? kPremiumPlanColor2 : kPremiumPlanColor,
                                               ),
                                             ),
                                             child: Column(
                                               mainAxisAlignment: MainAxisAlignment.center,
                                               children: [
-                                                const SizedBox(height: 15),
+                                                const SizedBox(height: 12),
                                                 const Text(
                                                   'Mobile App +\nDesktop',
                                                   textAlign: TextAlign.center,
@@ -232,18 +241,18 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                                                     fontSize: 16,
                                                   ),
                                                 ),
-                                                const SizedBox(height: 15),
+                                                const SizedBox(height: 10),
                                                 Text(
                                                   data[index].subscriptionName ?? '',
-                                                  style: const TextStyle(fontSize: 16),
+                                                  style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                                                 ),
-                                                const SizedBox(height: 5),
+                                                // const SizedBox(height: 0),
                                                 Text(
-                                                  '$currency${data[index].offerPrice}',
+                                                  '${getDefoultCurrency(currencies: currencyData.value ?? [])?.symbol ?? ''}${data[index].offerPrice}',
                                                   style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: kPremiumPlanColor2),
                                                 ),
                                                 Text(
-                                                  '$currency${data[index].subscriptionPrice}',
+                                                  '${getDefoultCurrency(currencies: currencyData.value ?? [])?.symbol ?? ''}${data[index].subscriptionPrice}',
                                                   style: const TextStyle(decoration: TextDecoration.lineThrough, fontSize: 14, color: Colors.grey),
                                                 ),
                                               ],
@@ -264,7 +273,7 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                                               ),
                                               child: Center(
                                                 child: Text(
-                                                  'Save ${(100 - (((data[index].offerPrice??0) * 100) / (data[index].subscriptionPrice??0))).toInt().toString()}%',
+                                                  'Save ${(100 - (((data[index].offerPrice ?? 0) * 100) / (data[index].subscriptionPrice ?? 0))).toInt().toString()}%',
                                                   style: const TextStyle(color: Colors.white),
                                                 ),
                                               ),
@@ -280,11 +289,11 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                                       height: (context.width() / 3) - 20,
                                       width: (context.width() / 3) - 20,
                                       decoration: BoxDecoration(
-                                        color: data[index].subscriptionName == selectedPlan.subscriptionName ? kPremiumPlanColor2.withOpacity(0.1) : Colors.white,
+                                        color: data[index].id == selectedPlan?.id ? kPremiumPlanColor2.withOpacity(0.1) : Colors.white,
                                         borderRadius: const BorderRadius.all(
                                           Radius.circular(10),
                                         ),
-                                        border: Border.all(width: 1, color: data[index].subscriptionName == selectedPlan.subscriptionName ? kPremiumPlanColor2 : kPremiumPlanColor),
+                                        border: Border.all(width: 1, color: data[index].id == selectedPlan?.id ? kPremiumPlanColor2 : kPremiumPlanColor),
                                       ),
                                       child: Column(
                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -295,7 +304,7 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                                           ),
                                           const SizedBox(height: 20),
                                           Text(
-                                            '$currency${data[index].subscriptionPrice.toString()}',
+                                            '${getDefoultCurrency(currencies: currencyData.value ?? [])?.symbol ?? ''}${data[index].subscriptionPrice.toString()}',
                                             style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: kPremiumPlanColor),
                                           )
                                         ],
@@ -312,69 +321,33 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                     return const Center(child: CircularProgressIndicator());
                   }),
                   const SizedBox(height: 20),
-                  GestureDetector(
-                    onTap: () {
-                      // UsePaypal(
-                      //     sandboxMode: sandbox,
-                      //     clientId: paypalClientId,
-                      //     secretKey: paypalClientSecret,
-                      //     returnURL: "https://samplesite.com/return",
-                      //     cancelURL: "https://samplesite.com/cancel",
-                      //     transactions: [
-                      //       {
-                      //         "amount": {
-                      //           // "total": Subscription.subscriptionAmounts[Subscription.selectedItem]!['Amount'].toString(),
-                      //           "total": selectedPlan.subscriptionPrice.toString(),
-                      //           "currency": Subscription.currency.toString(),
-                      //           "details": {
-                      //             // "subtotal": Subscription.subscriptionAmounts[Subscription.selectedItem]!['Amount'].toString(),
-                      //             "subtotal": selectedPlan.subscriptionPrice.toString(),
-                      //             "shipping": '0',
-                      //             "shipping_discount": 0
-                      //           }
-                      //         },
-                      //         "description": "The payment transaction description.",
-                      //         "item_list": {
-                      //           "items": [
-                      //             {
-                      //               "name": "${selectedPlan.subscriptionName} Package",
-                      //               "quantity": 1,
-                      //               // "price": Subscription.subscriptionAmounts[Subscription.selectedItem]!['Amount'].toString(),
-                      //               "price": selectedPlan.subscriptionPrice.toString(),
-                      //               "currency": Subscription.currency.toString(),
-                      //             }
-                      //           ],
-                      //         }
-                      //       }
-                      //     ],
-                      //     note: "Payment From MaanPos app",
-                      //     onSuccess: (Map params) async {
-                      //
-                      //     },
-                      //     onError: (error) {
-                      //       EasyLoading.showError('Error');
-                      //     },
-                      //     onCancel: (params) {
-                      //       EasyLoading.showError('Cancel');
-                      //     }).launch(context);
-                      PaymentPage(
-                              selectedPlan: selectedPlan,
-                              onError: () {
-                                EasyLoading.showError("Payment error");
-                              },
-                              totalAmount: selectedPlan.subscriptionPrice.toString())
-                          .launch(context);
-                    },
-                    child: Container(
-                      height: 60,
-                      decoration: const BoxDecoration(
-                        color: kMainColor,
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
-                      ),
-                      child: Center(
-                        child: Text(
-                          lang.S.of(context).paypalPay,
-                          style: const TextStyle(fontSize: 18, color: Colors.white),
+                  Visibility(
+                    visible: (selectedPlan != null && (selectedPlan?.offerPrice != null ? selectedPlan!.offerPrice! > 0 : (selectedPlan?.subscriptionPrice ?? 0) > 0)),
+                    child: GestureDetector(
+                      onTap: () async {
+                        if (selectedPlan != null) {
+                          SubscriptionPlanRepo repo = SubscriptionPlanRepo();
+                          PaymentCredentialModel paymentCredential = await repo.getPaymentCredential();
+                          String? paymentMethod = await repo.paymentWithShurjoPay(
+                              context: context, plan: selectedPlan!, businessInformation: businessInfo.value!, paymentCredential: paymentCredential);
+                          if (paymentMethod != null) {
+                            EasyLoading.show(status: 'Loading...');
+                            await repo.subscribePlan(ref: ref, context: context, planId: selectedPlan!.id!.round(), paymentMethod: paymentMethod);
+                            EasyLoading.showSuccess('Successfully Update plan');
+                          }
+                        }
+                      },
+                      child: Container(
+                        height: 60,
+                        decoration: const BoxDecoration(
+                          color: kMainColor,
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                        ),
+                        child: const Center(
+                          child: Text(
+                            'Pay for Subscribe',
+                            style: TextStyle(fontSize: 18, color: Colors.white),
+                          ),
                         ),
                       ),
                     ),

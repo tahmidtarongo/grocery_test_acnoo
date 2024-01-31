@@ -4,7 +4,7 @@ import '../../../Const/api_config.dart';
 import 'package:http/http.dart' as http;
 
 import '../../../Repository/constant_functions.dart';
-import '../../../model/currency_model.dart';
+import '../Model/currency_model.dart';
 
 class Currency {
   Future<List<CurrencyModel>> fetchAllCurrency() async {

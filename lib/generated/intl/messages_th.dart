@@ -49,9 +49,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUserRole": MessageLookupByLibrary.simpleMessage("เพิ่มบทบาทผู้ใช้"),
         "address": MessageLookupByLibrary.simpleMessage("ที่อยู่"),
         "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
-            "สิ่งที่ Sales Pro มีให้ทั้งหมด"),
+            "สิ่งที่ DoSofto มีให้ทั้งหมด"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "Sales Pro เป็นสิ่งที่สมบูรณ์แบบสำหรับธุรกิจด้วยคลังสินค้า บัญชี การขาย ค่าใช้จ่ายและขาดทุน / กำไร"),
+            "DoSofto เป็นสิ่งที่สมบูรณ์แบบสำหรับธุรกิจด้วยคลังสินค้า บัญชี การขาย ค่าใช้จ่ายและขาดทุน / กำไร"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("เพิ่มแล้ว"),
         "amount": MessageLookupByLibrary.simpleMessage("จำนวน"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
@@ -82,7 +82,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("เลือกคุณสมบัติของคุณ"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "คุณสมบัติเป็นส่วนสำคัญที่ทำให้ Sales Pro แตกต่างจากแบบแผนดั้งเดิม"),
+            "คุณสมบัติเป็นส่วนสำคัญที่ทำให้ DoSofto แตกต่างจากแบบแผนดั้งเดิม"),
         "clarence": MessageLookupByLibrary.simpleMessage("คลาร์เรนซ์"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("คลิกเพื่อเชื่อมต่อ"),
@@ -126,7 +126,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos":
             MessageLookupByLibrary.simpleMessage("ใช้งาน POS บนมือถือได้ง่าย"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "แอป Sales Pro ฟรีและใช้งานง่าย ในความเป็นจริง เป็นหนึ่งในระบบ POS ที่ดีที่สุดทั่วโลก"),
+            "แอป DoSofto ฟรีและใช้งานง่าย ในความเป็นจริง เป็นหนึ่งในระบบ POS ที่ดีที่สุดทั่วโลก"),
         "edit": MessageLookupByLibrary.simpleMessage("แก้ไข"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("แก้ไขหมายเลขโทรศัพท์?"),
