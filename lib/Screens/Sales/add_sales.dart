@@ -1,5 +1,6 @@
 // ignore_for_file: unused_result, use_build_context_synchronously
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -14,7 +15,7 @@ import 'package:nb_utils/nb_utils.dart';
 import '../../Repository/API/future_invoice.dart';
 import '../../constant.dart';
 import '../../currency.dart';
-import '../../model/business_info_model.dart';
+import '../../model/business_info_model.dart' as b;
 import '../../model/sale_transaction_model.dart';
 import '../Customers/Model/parties_model.dart';
 import '../Home/home.dart';
@@ -71,8 +72,9 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
 
   DateTime selectedDate = DateTime.now();
 
-  late BusinessInformation personalInformationModel;
+  late b.BusinessInformation personalInformationModel;
   TextEditingController dateController = TextEditingController(text: DateTime.now().toString().substring(0, 10));
+  TextEditingController phoneContoller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -187,6 +189,22 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                           floatingLabelBehavior: FloatingLabelBehavior.always,
                           labelText: lang.S.of(context).customerName,
                           border: const OutlineInputBorder(),
+                        ),
+                      ),
+                      Visibility(
+                        visible: widget.customerModel == null,
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 20.0),
+                          child: AppTextField(
+                            controller: phoneContoller,
+                            textFieldType: TextFieldType.PHONE,
+                            decoration: const InputDecoration(
+                              floatingLabelBehavior: FloatingLabelBehavior.always,
+                              labelText: 'Customer Phone Number',
+                              hintText: 'Enter customer phone number',
+                              border: OutlineInputBorder(),
+                            ),
+                          ),
                         ),
                       ),
                     ],
@@ -696,6 +714,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                   products: selectedProductList,
                                   paymentType: paymentType ?? 'Cash',
                                   partyId: widget.customerModel?.id,
+                                  customerPhone: widget.customerModel == null ? phoneContoller.text : null,
                                   vatAmount: vatAmount,
                                   vatPercent: vatPercentageEditingController.text.toInt(),
                                   isPaid: dueAmount <= 0 ? true : false,

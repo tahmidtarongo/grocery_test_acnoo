@@ -144,7 +144,7 @@ class GeneratePdf {
                       pw.SizedBox(
                         width: 100.0,
                         child: pw.Text(
-                          transactions.user?.name??'',
+                          transactions.user?.name ?? '',
                           style: pw.Theme.of(context).defaultTextStyle.copyWith(color: PdfColors.black),
                         ),
                       ),
@@ -543,7 +543,7 @@ class GeneratePdf {
                       pw.SizedBox(
                         width: 100.0,
                         child: pw.Text(
-                          transactions.party?.name??'',
+                          transactions.party?.name ?? '',
                           style: pw.Theme.of(context).defaultTextStyle.copyWith(color: PdfColors.black),
                         ),
                       ),
@@ -566,7 +566,7 @@ class GeneratePdf {
                       pw.SizedBox(
                         width: 100.0,
                         child: pw.Text(
-                          transactions.party?.phone??'',
+                          transactions.party?.phone ?? (transactions.meta?.customerPhone ?? 'Guest'),
                           style: pw.Theme.of(context).defaultTextStyle.copyWith(color: PdfColors.black),
                         ),
                       ),
@@ -591,7 +591,7 @@ class GeneratePdf {
                       pw.SizedBox(
                         width: 100.0,
                         child: pw.Text(
-                          transactions.user?.name??'',
+                          transactions.user?.name ?? '',
                           style: pw.Theme.of(context).defaultTextStyle.copyWith(color: PdfColors.black),
                         ),
                       ),
@@ -637,7 +637,7 @@ class GeneratePdf {
                       pw.SizedBox(
                         width: 100.0,
                         child: pw.Text(
-                          DateTimeFormat.format(DateTime.parse(transactions.saleDate??''), format: 'D, M j'),
+                          DateTimeFormat.format(DateTime.parse(transactions.saleDate ?? ''), format: 'D, M j'),
                           style: pw.Theme.of(context).defaultTextStyle.copyWith(color: PdfColors.black),
                         ),
                       ),
@@ -746,10 +746,10 @@ class GeneratePdf {
                       for (int i = 0; i < transactions.details!.length; i++)
                         <String>[
                           ('${i + 1}'),
-                          (transactions.details!.elementAt(i).product?.productName.toString()??''),
+                          (transactions.details!.elementAt(i).product?.productName.toString() ?? ''),
                           (transactions.details!.elementAt(i).quantities.toString()),
                           (transactions.details!.elementAt(i).price.toString()),
-                          (((transactions.details!.elementAt(i).price??0) * (transactions.details!.elementAt(i).quantities??0)).toStringAsFixed(2))
+                          (((transactions.details!.elementAt(i).price ?? 0) * (transactions.details!.elementAt(i).quantities ?? 0)).toStringAsFixed(2))
                         ],
                     ]),
                 pw.Paragraph(text: ""),
@@ -972,7 +972,7 @@ class GeneratePdf {
                       pw.SizedBox(
                         width: 100.0,
                         child: pw.Text(
-                          transactions.party?.name??'',
+                          transactions.party?.name ?? '',
                           style: pw.Theme.of(context).defaultTextStyle.copyWith(color: PdfColors.black),
                         ),
                       ),
@@ -995,7 +995,7 @@ class GeneratePdf {
                       pw.SizedBox(
                         width: 100.0,
                         child: pw.Text(
-                          transactions.party?.phone??'',
+                          transactions.party?.phone ?? '',
                           style: pw.Theme.of(context).defaultTextStyle.copyWith(color: PdfColors.black),
                         ),
                       ),
@@ -1020,7 +1020,7 @@ class GeneratePdf {
                       pw.SizedBox(
                         width: 100.0,
                         child: pw.Text(
-                          transactions.user?.name??'',
+                          transactions.user?.name ?? '',
                           style: pw.Theme.of(context).defaultTextStyle.copyWith(color: PdfColors.black),
                         ),
                       ),
@@ -1066,7 +1066,7 @@ class GeneratePdf {
                       pw.SizedBox(
                         width: 100.0,
                         child: pw.Text(
-                          DateTimeFormat.format(DateTime.parse(transactions.paymentDate??''), format: 'D, M j'),
+                          DateTimeFormat.format(DateTime.parse(transactions.paymentDate ?? ''), format: 'D, M j'),
                           style: pw.Theme.of(context).defaultTextStyle.copyWith(color: PdfColors.black),
                         ),
                       ),

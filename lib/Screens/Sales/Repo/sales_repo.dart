@@ -33,12 +33,11 @@ class SaleRepo {
     }
   }
 
-
-
   Future<SalesTransaction?> createSale({
     required WidgetRef ref,
     required BuildContext context,
     required num? partyId,
+    required String? customerPhone,
     required String purchaseDate,
     required num discountAmount,
     required num totalAmount,
@@ -53,6 +52,7 @@ class SaleRepo {
     final uri = Uri.parse('${APIConfig.url}/sales');
     final requestBody = jsonEncode({
       'party_id': partyId,
+      'customer_phone': customerPhone,
       'saleDate': purchaseDate,
       'discountAmount': discountAmount,
       'totalAmount': totalAmount,
@@ -95,6 +95,7 @@ class SaleRepo {
       return null;
     }
   }
+
   Future<void> updateSale({
     required WidgetRef ref,
     required BuildContext context,

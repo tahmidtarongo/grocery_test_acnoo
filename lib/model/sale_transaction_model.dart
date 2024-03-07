@@ -22,6 +22,7 @@ class SalesTransaction {
     this.user,
     this.party,
     this.details,
+    this.meta,
   });
 
   SalesTransaction.fromJson(dynamic json) {
@@ -43,7 +44,8 @@ class SalesTransaction {
     updatedAt = json['updated_at'];
     detailsSumLossProfit = json['lossProfit'];
     user = json['user'] != null ? User.fromJson(json['user']) : null;
-    party = json['party'] != null ? SalesParty.fromJson(json['party']) : SalesParty(name: 'Guest',phone: 'Guest',type: 'Guest');
+    meta = json['meta'] != null ? Meta.fromJson(json['meta']) : null;
+    party = json['party'] != null ? SalesParty.fromJson(json['party']) : SalesParty(name: 'Guest', type: 'Guest');
     if (json['details'] != null) {
       details = [];
       json['details'].forEach((v) {
@@ -70,6 +72,7 @@ class SalesTransaction {
   num? detailsSumLossProfit;
   User? user;
   SalesParty? party;
+  Meta? meta;
   List<SalesDetails>? details;
 
   Map<String, dynamic> toJson() {
@@ -257,6 +260,23 @@ class User {
     final map = <String, dynamic>{};
     map['id'] = id;
     map['name'] = name;
+    return map;
+  }
+}
+
+class Meta {
+  Meta({
+    this.customerPhone,
+  });
+
+  Meta.fromJson(dynamic json) {
+    customerPhone = json['customer_phone'];
+  }
+  String? customerPhone;
+
+  Map<String, dynamic> toJson() {
+    final map = <String, dynamic>{};
+    map['customer_phone'] = customerPhone;
     return map;
   }
 }

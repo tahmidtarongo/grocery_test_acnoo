@@ -12,7 +12,6 @@ import '../../../constant.dart';
 import '../../../currency.dart';
 import '../../../model/print_transaction_model.dart';
 import '../../Due Calculation/Providers/due_provider.dart';
-import '../../Home/home.dart';
 import '../../invoice_details/due_invoice_details.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 
@@ -143,7 +142,7 @@ class _DueReportScreenState extends State<DueReportScreen> {
                 for (var element in transaction) {
                   if ((fromDate.isBefore(DateTime.parse(element.paymentDate ?? '')) || DateTime.parse(element.paymentDate ?? '').isAtSameMomentAs(fromDate)) &&
                       (toDate.isAfter(DateTime.parse(element.paymentDate ?? '')) || DateTime.parse(element.paymentDate ?? '').isAtSameMomentAs(toDate))) {
-                    element.party?.type != 'Supplier' ? totalReceiveDue = totalReceiveDue + element.payDueAmount! : totalPaidDue = totalPaidDue + element.payDueAmount!;
+                    element.party?.type != 'Supplier' ? totalReceiveDue += element.payDueAmount ?? 0 : totalPaidDue += element.payDueAmount ?? 0;
                   }
                 }
                 return transaction.isNotEmpty

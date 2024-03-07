@@ -115,7 +115,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                   Row(
                     children: [
                       Text(
-                        'Phone: ${widget.saleTransaction.party?.phone ?? ''}',
+                        'Phone: ${widget.saleTransaction.party?.phone ?? (widget.saleTransaction.meta?.customerPhone ?? 'Guest')}',
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                       const Spacer(),
