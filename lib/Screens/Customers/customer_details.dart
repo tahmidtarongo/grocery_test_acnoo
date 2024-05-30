@@ -11,6 +11,7 @@ import 'package:mobile_pos/Provider/transactions_provider.dart';
 import 'package:mobile_pos/Screens/Customers/edit_customer.dart';
 import 'package:mobile_pos/Screens/Customers/sms_sent_confirmation.dart';
 import 'package:mobile_pos/constant.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -23,8 +24,6 @@ import '../../model/print_transaction_model.dart';
 import '../invoice_details/purchase_invoice_details.dart';
 import '../invoice_details/sales_invoice_details_screen.dart';
 import 'Model/parties_model.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
-
 import 'Repo/parties_repo.dart';
 
 // ignore: must_be_immutable

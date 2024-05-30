@@ -1,14 +1,15 @@
+
+//ignore_for_file: file_names, unused_element, unused_local_variable
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:http/http.dart' as http;
 import 'package:mobile_pos/Screens/User%20Roles/Model/user_role_model.dart';
 import 'package:mobile_pos/Screens/User%20Roles/Provider/user_role_provider.dart';
 
 import '../../../Const/api_config.dart';
-import 'package:http/http.dart' as http;
-
 import '../../../Repository/constant_functions.dart';
 
 class UserRoleRepo {
@@ -62,7 +63,7 @@ class UserRoleRepo {
 
     if (response.statusCode == 200) {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Added successful!')));
-      ref.refresh(userRoleProvider);
+      var data1 = ref.refresh(userRoleProvider);
 
       Navigator.pop(context);
     } else {
@@ -92,7 +93,7 @@ class UserRoleRepo {
       if (response.statusCode == 200) {
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('User deleted successfully')));
 
-        ref.refresh(userRoleProvider);
+        var data1 = ref.refresh(userRoleProvider);
 
         Navigator.pop(context); // Assuming you want to close the screen after deletion
         Navigator.pop(context); // Assuming you want to close the screen after deletion
@@ -136,7 +137,7 @@ class UserRoleRepo {
 
     if (response.statusCode == 200) {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Updated Successfully!')));
-      ref.refresh(userRoleProvider);
+      var data1 = ref.refresh(userRoleProvider);
 
       Navigator.pop(context);
     } else {

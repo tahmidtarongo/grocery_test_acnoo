@@ -3,6 +3,7 @@ import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../../PDF Invoice/generate_pdf.dart';
@@ -13,7 +14,6 @@ import '../../../currency.dart';
 import '../../../model/print_transaction_model.dart';
 import '../../Due Calculation/Providers/due_provider.dart';
 import '../../invoice_details/due_invoice_details.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class DueReportScreen extends StatefulWidget {
   const DueReportScreen({Key? key}) : super(key: key);

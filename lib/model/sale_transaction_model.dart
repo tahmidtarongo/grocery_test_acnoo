@@ -1,4 +1,4 @@
-import 'package:mobile_pos/Screens/Purchase/Model/purchase_transaction_model.dart';
+
 
 class SalesTransaction {
   SalesTransaction({

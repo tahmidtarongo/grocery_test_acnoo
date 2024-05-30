@@ -7,6 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:mobile_pos/Provider/print_sales_invoice_provider.dart';
 import 'package:mobile_pos/Provider/transactions_provider.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:mobile_pos/model/print_transaction_model.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:path_provider/path_provider.dart';
@@ -15,9 +16,7 @@ import '../../../PDF Invoice/generate_pdf.dart';
 import '../../../Provider/profile_provider.dart';
 import '../../../constant.dart';
 import '../../../currency.dart';
-import '../../Home/home.dart';
 import '../../invoice_details/sales_invoice_details_screen.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class SalesReportScreen extends StatefulWidget {
   const SalesReportScreen({Key? key}) : super(key: key);

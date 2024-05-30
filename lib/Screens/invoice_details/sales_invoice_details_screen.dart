@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../Const/api_config.dart';
 import '../../Provider/print_sales_invoice_provider.dart';
-import '../../currency.dart';
-import '../../invoice_constant.dart';
 // ignore: library_prefixes
 import '../../constant.dart' as mainConstant;
-import 'package:mobile_pos/generated/l10n.dart' as lang;
+import '../../currency.dart';
+import '../../invoice_constant.dart';
 import '../../model/business_info_model.dart';
 import '../../model/print_transaction_model.dart';
 import '../../model/sale_transaction_model.dart';

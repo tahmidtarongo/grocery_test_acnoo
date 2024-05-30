@@ -4,8 +4,8 @@ import 'package:mobile_pos/Screens/Report/Screens/due_report_screen.dart';
 import 'package:mobile_pos/Screens/Report/Screens/purchase_report.dart';
 import 'package:mobile_pos/Screens/Report/Screens/sales_report_screen.dart';
 import 'package:mobile_pos/constant.dart';
-import 'package:nb_utils/nb_utils.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
+import 'package:nb_utils/nb_utils.dart';
 
 class Reports extends StatefulWidget {
   const Reports({Key? key}) : super(key: key);

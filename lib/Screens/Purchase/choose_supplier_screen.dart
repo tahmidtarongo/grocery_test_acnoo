@@ -4,13 +4,13 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Const/api_config.dart';
 import 'package:mobile_pos/Screens/Customers/add_customer.dart';
 import 'package:mobile_pos/Screens/Purchase/add_purchase.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../Provider/add_to_cart_purchase.dart';
-import '../Customers/Provider/customer_provider.dart';
 import '../../constant.dart';
 import '../../currency.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
+import '../Customers/Provider/customer_provider.dart';
 
 class PurchaseContacts extends StatefulWidget {
   const PurchaseContacts({Key? key}) : super(key: key);

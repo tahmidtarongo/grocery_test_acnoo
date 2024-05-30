@@ -3,10 +3,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/Screens/Authentication/register_screen.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
+
 import '../../constant.dart';
 import 'forgot_password.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class LoginForm extends StatefulWidget {
   const LoginForm({Key? key, required this.isEmailLogin}) : super(key: key);

@@ -1,6 +1,7 @@
 // ignore_for_file: unused_result
 
 import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -9,16 +10,16 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:mobile_pos/Const/api_config.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
+import 'package:mobile_pos/Screens/Products/Model/brands_model.dart' as brand;
+import 'package:mobile_pos/Screens/Products/Model/product_model.dart';
+import 'package:mobile_pos/Screens/Products/Model/unit_model.dart' as unit;
 import 'package:mobile_pos/Screens/Products/Repo/product_repo.dart';
 import 'package:mobile_pos/Screens/Products/unit_list.dart';
-import 'package:mobile_pos/Screens/Products/Model/product_model.dart';
-import 'package:nb_utils/nb_utils.dart';
-import 'Model/category_model.dart';
-import '../../constant.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
-import 'package:mobile_pos/Screens/Products/Model/brands_model.dart' as brand;
-import 'package:mobile_pos/Screens/Products/Model/unit_model.dart' as unit;
+import 'package:nb_utils/nb_utils.dart';
 
+import '../../constant.dart';
+import 'Model/category_model.dart';
 import 'brands_list.dart';
 import 'category_list_screen.dart';
 

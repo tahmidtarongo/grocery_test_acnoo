@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Screens/Products/Model/product_model.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
+
 import '../../Provider/product_provider.dart';
 import '../../constant.dart';
 import '../../currency.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class StockList extends StatefulWidget {
   const StockList({Key? key}) : super(key: key);

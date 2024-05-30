@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Screens/Profile%20Screen/edit_profile.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../Const/api_config.dart';
 import '../../Provider/profile_provider.dart';
 import '../../constant.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class ProfileDetails extends StatefulWidget {
   const ProfileDetails({Key? key}) : super(key: key);

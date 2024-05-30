@@ -1,6 +1,7 @@
 // ignore_for_file: unused_result, use_build_context_synchronously
 
 import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
@@ -10,17 +11,18 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
-import 'package:mobile_pos/Screens/Products/Repo/product_repo.dart';
-import 'package:mobile_pos/Screens/Products/category_list_screen.dart';
-import 'package:mobile_pos/Screens/Products/brands_list.dart';
-import 'package:mobile_pos/Screens/Products/unit_list.dart';
-import 'package:nb_utils/nb_utils.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
-import 'Model/category_model.dart';
-import '../../constant.dart';
-import '../Home/home.dart';
 import 'package:mobile_pos/Screens/Products/Model/brands_model.dart' as brand;
 import 'package:mobile_pos/Screens/Products/Model/unit_model.dart' as unit;
+import 'package:mobile_pos/Screens/Products/Repo/product_repo.dart';
+import 'package:mobile_pos/Screens/Products/brands_list.dart';
+import 'package:mobile_pos/Screens/Products/category_list_screen.dart';
+import 'package:mobile_pos/Screens/Products/unit_list.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
+import 'package:nb_utils/nb_utils.dart';
+
+import '../../constant.dart';
+import '../Home/home.dart';
+import 'Model/category_model.dart';
 
 // ignore: must_be_immutable
 class AddProduct extends StatefulWidget {

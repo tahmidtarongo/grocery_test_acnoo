@@ -8,13 +8,13 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Provider/product_provider.dart';
 import 'package:mobile_pos/Screens/Customers/Model/parties_model.dart';
 import 'package:mobile_pos/constant.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../Const/api_config.dart';
 import '../../Provider/add_to_cart.dart';
 import '../../currency.dart';
 import '../../model/add_to_cart_model.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 // ignore: must_be_immutable
 class SaleProductsList extends StatefulWidget {

@@ -55,12 +55,12 @@ class _SmsConfirmationPopupState extends State<SmsConfirmationPopup> with Single
             children: [
               Text(
                 'Confirm SMS to ${widget.customerName}',
-                style: Theme.of(context).textTheme.headline6,
+                style: Theme.of(context).textTheme.bodyMedium,
               ),
               const SizedBox(height: 8.0),
               Text(
                 'An SMS will be sent to the following number: ${widget.phoneNumber}',
-                style: Theme.of(context).textTheme.bodyText1,
+                style: Theme.of(context).textTheme.bodySmall,
               ),
               const SizedBox(
                 height: 20,

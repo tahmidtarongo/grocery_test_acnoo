@@ -6,7 +6,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Const/api_config.dart';
 import 'package:mobile_pos/Screens/Profile%20Screen/profile_details.dart';
 import 'package:mobile_pos/Screens/User%20Roles/user_role_screen.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
+
 import '../../Provider/profile_provider.dart';
 import '../../constant.dart';
 import '../../currency.dart';
@@ -16,7 +18,6 @@ import '../Currency/currency_screen.dart';
 import '../Shimmers/home_screen_appbar_shimmer.dart';
 import '../language/language.dart';
 import '../subscription/package_screen.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class SettingScreen extends StatefulWidget {
   const SettingScreen({Key? key}) : super(key: key);

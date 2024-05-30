@@ -1,12 +1,14 @@
+//ignore_for_file: file_names, unused_element, unused_local_variable
 import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:http/http.dart' as http;
 import 'package:mobile_pos/Screens/Products/Providers/category,brans,units_provide.dart';
 
 import '../../../Const/api_config.dart';
 import '../../../Repository/constant_functions.dart';
 import '../Model/category_model.dart';
-import 'package:http/http.dart' as http;
 
 class CategoryRepo {
   Future<List<CategoryModel>> fetchAllCategory() async {
@@ -63,7 +65,7 @@ class CategoryRepo {
 
       if (responseData.statusCode == 200) {
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Added successful!')));
-        ref.refresh(categoryProvider);
+        var data1 = ref.refresh(categoryProvider);
         Navigator.pop(context);
       } else {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Category creation failed: ${parsedData['message']}')));

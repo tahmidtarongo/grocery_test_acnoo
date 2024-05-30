@@ -1,15 +1,16 @@
+//ignore_for_file: file_names, unused_element, unused_local_variable
 import 'dart:convert';
 import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:http/http.dart' as http;
 import 'package:mobile_pos/Provider/product_provider.dart';
 
 import '../../../Const/api_config.dart';
-import '../Model/product_model.dart';
-import 'package:http/http.dart' as http;
-
 import '../../../Repository/constant_functions.dart';
+import '../Model/product_model.dart';
 
 class ProductRepo {
   Future<List<ProductModel>> fetchAllProducts() async {
@@ -88,7 +89,7 @@ class ProductRepo {
 
     if (response.statusCode == 200) {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Added successful!')));
-      ref.refresh(productProvider);
+      var data1 = ref.refresh(productProvider);
 
       Navigator.pop(context);
     } else {
@@ -118,7 +119,7 @@ class ProductRepo {
       if (response.statusCode == 200) {
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Product deleted successfully')));
 
-        ref.refresh(productProvider);
+        var data1 = ref.refresh(productProvider);
 
         Navigator.pop(context); // Assuming you want to close the screen after deletion
         Navigator.pop(context); // Assuming you want to close the screen after deletion
@@ -192,7 +193,7 @@ class ProductRepo {
 
     if (response.statusCode == 200) {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Updated Successfully!')));
-      ref.refresh(productProvider);
+      var data1 = ref.refresh(productProvider);
 
       Navigator.pop(context);
     } else {

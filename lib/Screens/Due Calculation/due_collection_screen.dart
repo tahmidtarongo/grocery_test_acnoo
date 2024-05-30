@@ -7,14 +7,13 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Screens/Due%20Calculation/Model/due_collection_model.dart';
 import 'package:mobile_pos/Screens/Due%20Calculation/Repo/due_repo.dart';
 import 'package:mobile_pos/Screens/invoice_details/due_invoice_details.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
-import '../../Provider/printer_due_provider.dart';
+
 import '../../Provider/profile_provider.dart';
 import '../../constant.dart';
 import '../../currency.dart';
 import '../Customers/Model/parties_model.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
-
 import 'Model/due_collection_invoice_model.dart';
 import 'Providers/due_provider.dart';
 

@@ -4,14 +4,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
-import 'package:mobile_pos/Screens/Expense/Model/expense_modle.dart';
 import 'package:mobile_pos/Screens/Expense/Providers/all_expanse_provider.dart';
 import 'package:mobile_pos/Screens/Expense/add_erxpense.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../constant.dart';
 import '../../currency.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class ExpenseList extends StatefulWidget {
   const ExpenseList({Key? key}) : super(key: key);
@@ -159,9 +158,9 @@ class _ExpenseListState extends State<ExpenseList> {
                   if (mainData.isNotEmpty) {
                     totalExpense = 0;
                     for (var element in mainData) {
-                      if ((fromDate.isBefore(DateTime.parse(element.expenseDate?.substring(0, 10) ?? '' ?? '')) || DateTime.parse(element.expenseDate?.substring(0, 10) ?? '' ?? '').isAtSameMomentAs(fromDate)) &&
-                          (toDate.isAfter(DateTime.parse(element.expenseDate?.substring(0, 10) ?? '' ?? '')) ||
-                              DateTime.parse(element.expenseDate?.substring(0, 10) ?? '' ?? '').isAtSameMomentAs(DateTime.parse(toDate.toString().substring(0, 10))))) {
+                      if ((fromDate.isBefore(DateTime.parse(element.expenseDate?.substring(0, 10) ?? '')) || DateTime.parse(element.expenseDate?.substring(0, 10) ?? '').isAtSameMomentAs(fromDate)) &&
+                          (toDate.isAfter(DateTime.parse(element.expenseDate?.substring(0, 10) ?? '')) ||
+                              DateTime.parse(element.expenseDate?.substring(0, 10) ?? '').isAtSameMomentAs(DateTime.parse(toDate.toString().substring(0, 10))))) {
                         totalExpense += element.amount ?? 0;
                       }
                     }

@@ -1,15 +1,14 @@
+//ignore_for_file: file_names, unused_element, unused_local_variable
 import 'dart:convert';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:mobile_pos/Screens/Expense/Providers/expense_category_proivder.dart';
+import 'package:http/http.dart'as http;
 import 'package:mobile_pos/Screens/Expense/Model/expanse_category.dart';
+import 'package:mobile_pos/Screens/Expense/Providers/expense_category_proivder.dart';
 
 import '../../../Const/api_config.dart';
-import 'package:http/http.dart'as http;
-
 import '../../../Repository/constant_functions.dart';
 
 class ExpanseCategoryRepo{
@@ -57,7 +56,7 @@ class ExpanseCategoryRepo{
 
       if (responseData.statusCode == 200) {
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Added successful!')));
-        ref.refresh(expanseCategoryProvider);
+        var data1 = ref.refresh(expanseCategoryProvider);
         Navigator.pop(context);
       } else {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Category creation failed: ${parsedData['message']}')));

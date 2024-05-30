@@ -17,10 +17,12 @@ import 'package:mobile_pos/Screens/Report/reports.dart';
 import 'package:mobile_pos/Screens/Sales/add_discount.dart';
 import 'package:mobile_pos/Screens/Sales/add_promo_code.dart';
 import 'package:mobile_pos/Screens/Sales/sales_contact.dart';
-import 'package:mobile_pos/Screens/stock_list/stock_list.dart';
 import 'package:mobile_pos/Screens/SplashScreen/on_board.dart';
 import 'package:mobile_pos/Screens/SplashScreen/splash_screen.dart';
+import 'package:mobile_pos/Screens/stock_list/stock_list.dart';
+import 'package:provider/provider.dart' as pro;
 import 'package:shurjopay/utilities/functions.dart';
+
 import 'Screens/Due Calculation/due_calculation_contact_screen.dart';
 import 'Screens/Loss_Profit/loss_profit_screen.dart';
 import 'Screens/Products/update_product.dart';
@@ -29,7 +31,6 @@ import 'Screens/Purchase/choose_supplier_screen.dart';
 import 'Screens/Sales List/sales_list_screen.dart';
 import 'Screens/language/language_provider.dart';
 import 'generated/l10n.dart';
-import 'package:provider/provider.dart' as pro;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

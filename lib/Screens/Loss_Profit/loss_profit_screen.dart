@@ -6,6 +6,7 @@ import 'package:intl/intl.dart';
 import 'package:mobile_pos/Provider/print_sales_invoice_provider.dart';
 import 'package:mobile_pos/Provider/transactions_provider.dart';
 import 'package:mobile_pos/Screens/Loss_Profit/single_loss_profit_screen.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:mobile_pos/model/print_transaction_model.dart';
 import 'package:nb_utils/nb_utils.dart';
 
@@ -13,7 +14,6 @@ import '../../../Provider/profile_provider.dart';
 import '../../../constant.dart';
 import '../../currency.dart';
 import '../Home/home.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class LossProfitScreen extends StatefulWidget {
   const LossProfitScreen({Key? key}) : super(key: key);

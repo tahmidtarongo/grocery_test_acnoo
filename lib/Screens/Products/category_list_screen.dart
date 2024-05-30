@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Screens/Products/Model/category_model.dart';
-
 import 'package:mobile_pos/constant.dart';
 import 'package:nb_utils/nb_utils.dart';
 
-import 'Providers/category,brans,units_provide.dart';
 import '../../GlobalComponents/button_global.dart';
+import 'Providers/category,brans,units_provide.dart';
 import 'add_category_screen.dart';
 
 // ignore: must_be_immutable

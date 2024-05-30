@@ -7,6 +7,7 @@ import 'package:mobile_pos/PDF%20Invoice/generate_pdf.dart';
 import 'package:mobile_pos/Provider/print_purchase_invoice_provider.dart';
 import 'package:mobile_pos/Provider/transactions_provider.dart';
 import 'package:mobile_pos/Screens/Purchase%20List/purchase_list_edit_screen.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../../Provider/profile_provider.dart';
@@ -16,7 +17,6 @@ import '../../Provider/add_to_cart_purchase.dart';
 import '../../currency.dart';
 import '../Home/home.dart';
 import '../invoice_details/purchase_invoice_details.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class PurchaseListScreen extends StatefulWidget {
   const PurchaseListScreen({Key? key}) : super(key: key);

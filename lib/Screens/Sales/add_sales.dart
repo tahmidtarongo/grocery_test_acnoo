@@ -1,6 +1,5 @@
 // ignore_for_file: unused_result, use_build_context_synchronously
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -11,7 +10,9 @@ import 'package:mobile_pos/Provider/add_to_cart.dart';
 import 'package:mobile_pos/Provider/profile_provider.dart';
 import 'package:mobile_pos/Screens/Sales/Repo/sales_repo.dart';
 import 'package:mobile_pos/Screens/Sales/sales_products_list_screen.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
+
 import '../../Repository/API/future_invoice.dart';
 import '../../constant.dart';
 import '../../currency.dart';
@@ -19,8 +20,6 @@ import '../../model/business_info_model.dart' as b;
 import '../../model/sale_transaction_model.dart';
 import '../Customers/Model/parties_model.dart';
 import '../Home/home.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
-
 import '../invoice_details/sales_invoice_details_screen.dart';
 
 // ignore: must_be_immutable

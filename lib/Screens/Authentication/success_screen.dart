@@ -5,10 +5,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/Provider/profile_provider.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
+
 import '../../constant.dart';
 import '../Home/home.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class SuccessScreen extends StatelessWidget {
   const SuccessScreen({Key? key, required this.email}) : super(key: key);

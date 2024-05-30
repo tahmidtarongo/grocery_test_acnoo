@@ -1,11 +1,12 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, unused_element, unused_local_variable
 
 import 'dart:convert';
 import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:http/http.dart' as http;
 import 'package:mobile_pos/Provider/profile_provider.dart';
 import 'package:mobile_pos/model/business_info_model.dart';
 import 'package:shurjopay/models/config.dart';
@@ -18,7 +19,6 @@ import '../../../Const/api_config.dart';
 import '../../../Repository/constant_functions.dart';
 import '../Model/payment_credential_model.dart';
 import '../Model/subscription_plan_model.dart';
-import 'package:http/http.dart' as http;
 
 class SubscriptionPlanRepo {
   final _chars = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890';
@@ -85,7 +85,7 @@ class SubscriptionPlanRepo {
 
       if (responseData.statusCode == 200) {
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Subscribe successful!')));
-        ref.refresh(businessInfoProvider);
+        var data = ref.refresh(businessInfoProvider);
 
         Navigator.pop(context);
       } else {

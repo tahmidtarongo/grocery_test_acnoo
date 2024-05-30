@@ -7,6 +7,7 @@ import 'package:mobile_pos/Provider/add_to_cart.dart';
 import 'package:mobile_pos/Provider/print_sales_invoice_provider.dart';
 import 'package:mobile_pos/Provider/transactions_provider.dart';
 import 'package:mobile_pos/Screens/Sales%20List/sales_report_edit_screen.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:mobile_pos/model/print_transaction_model.dart';
 import 'package:nb_utils/nb_utils.dart';
 
@@ -16,7 +17,6 @@ import '../../PDF Invoice/generate_pdf.dart';
 import '../../currency.dart';
 import '../Home/home.dart';
 import '../invoice_details/sales_invoice_details_screen.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class SalesListScreen extends StatefulWidget {
   const SalesListScreen({Key? key}) : super(key: key);

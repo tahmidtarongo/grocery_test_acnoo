@@ -1,8 +1,10 @@
 import 'dart:convert';
+
+import 'package:http/http.dart' as http;
+
 import '../../../Const/api_config.dart';
 import '../../../Repository/constant_functions.dart';
 import '../Model/banner_model.dart';
-import 'package:http/http.dart' as http;
 
 class BannerRepo {
   Future<List<Banner>> fetchAllIBanners() async {

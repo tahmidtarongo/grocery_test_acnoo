@@ -1,14 +1,15 @@
+//ignore_for_file: file_names, unused_element, unused_local_variable
 import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:mobile_pos/Screens/Expense/Providers/all_expanse_provider.dart';
+import 'package:http/http.dart' as http;
 import 'package:mobile_pos/Provider/profile_provider.dart';
+import 'package:mobile_pos/Screens/Expense/Providers/all_expanse_provider.dart';
 
 import '../../../Const/api_config.dart';
 import '../../../Repository/constant_functions.dart';
-import 'package:http/http.dart' as http;
-
 import '../Model/expense_modle.dart';
 
 class ExpenseRepo {
@@ -65,13 +66,13 @@ class ExpenseRepo {
       EasyLoading.dismiss();
 
       if (responseData.statusCode == 200) {
-        ref.refresh(expenseProvider);
-        ref.refresh(businessInfoProvider);
+        var data1 = ref.refresh(expenseProvider);
+        var data2 = ref.refresh(businessInfoProvider);
         Navigator.pop(context);
         // return PurchaseTransaction.fromJson(parsedData);
       } else {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Expense creation failed: ${parsedData['message']}')));
-        return null;
+        return;
       }
     } catch (error) {
       // Handle unexpected errors gracefully

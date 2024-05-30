@@ -9,16 +9,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Provider/product_provider.dart';
 import 'package:mobile_pos/Screens/Customers/Model/parties_model.dart';
-import 'package:mobile_pos/constant.dart';
 import 'package:mobile_pos/Screens/Products/Model/product_model.dart';
+import 'package:mobile_pos/constant.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../Const/api_config.dart';
 import '../../Provider/add_to_cart.dart';
 import '../../Provider/add_to_cart_purchase.dart';
-import '../../model/sale_transaction_model.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
-
 import '../Purchase/Model/purchase_transaction_model.dart' as parchase;
 
 // ignore: must_be_immutable

@@ -1,10 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-
-import '../../Const/api_config.dart';
 import 'package:http/http.dart' as http;
 
+import '../../Const/api_config.dart';
 import '../constant_functions.dart';
 
 class RegisterRepo {

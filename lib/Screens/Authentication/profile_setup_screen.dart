@@ -1,18 +1,19 @@
 import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../Const/lalnguage_data.dart';
+
 import '../../Provider/shop_category_provider.dart';
 import '../../Repository/API/business_setup_repo.dart';
 import '../../constant.dart';
 import '../../model/business_category_model.dart';
 import '../../model/lalnguage_model.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class ProfileSetup extends StatefulWidget {
   const ProfileSetup({Key? key}) : super(key: key);

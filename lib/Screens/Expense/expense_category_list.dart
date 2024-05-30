@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Screens/Expense/add_expense_category.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../GlobalComponents/button_global.dart';
-import 'Providers/expense_category_proivder.dart';
 import '../../constant.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
+import 'Providers/expense_category_proivder.dart';
 
 class ExpenseCategoryList extends StatefulWidget {
   const ExpenseCategoryList({Key? key, this.mainContext}) : super(key: key);

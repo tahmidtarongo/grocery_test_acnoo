@@ -1,12 +1,13 @@
+//ignore_for_file: unused_local_variable
 import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:http/http.dart' as http;
 
 import '../../../Const/api_config.dart';
 import '../../../Repository/constant_functions.dart';
 import '../Model/brands_model.dart';
-import 'package:http/http.dart' as http;
-
 import '../Providers/category,brans,units_provide.dart';
 
 class BrandsRepo {
@@ -49,7 +50,7 @@ class BrandsRepo {
 
       if (responseData.statusCode == 200) {
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Added successful!')));
-        ref.refresh(brandsProvider);
+        var data1 =  ref.refresh(brandsProvider);
         Navigator.pop(context);
       } else {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Brand creation failed: ${parsedData['message']}')));

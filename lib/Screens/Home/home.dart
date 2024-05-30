@@ -5,6 +5,7 @@ import 'package:mobile_pos/Screens/Home/home_screen.dart';
 import 'package:mobile_pos/Screens/Report/reports.dart';
 import 'package:mobile_pos/Screens/Settings/settings_screen.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
+
 import '../../constant.dart';
 import '../Sales/sales_contact.dart';
 

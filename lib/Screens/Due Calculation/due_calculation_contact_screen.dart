@@ -3,13 +3,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Screens/Customers/Model/parties_model.dart';
 import 'package:mobile_pos/Screens/Due%20Calculation/due_collection_screen.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../Const/api_config.dart';
-import '../Customers/Provider/customer_provider.dart';
 import '../../constant.dart';
 import '../../currency.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
+import '../Customers/Provider/customer_provider.dart';
 
 class DueCalculationContactScreen extends StatefulWidget {
   const DueCalculationContactScreen({Key? key}) : super(key: key);

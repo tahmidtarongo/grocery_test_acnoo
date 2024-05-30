@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:nb_utils/nb_utils.dart';
+
 import '../constant.dart';
 import '../model/print_transaction_model.dart';
 import '../model/sale_transaction_model.dart';

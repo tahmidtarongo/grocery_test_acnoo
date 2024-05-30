@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Screens/User%20Roles/user_role_details.dart';
-import 'package:nb_utils/nb_utils.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
-import 'Provider/user_role_provider.dart';
+import 'package:nb_utils/nb_utils.dart';
+
 import '../../constant.dart';
+import 'Provider/user_role_provider.dart';
 import 'add_user_role_screen.dart';
 
 class UserRoleScreen extends StatefulWidget {

@@ -3,15 +3,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Const/api_config.dart';
 import 'package:mobile_pos/Provider/add_to_cart.dart';
-import 'package:mobile_pos/Screens/Customers/Model/parties_model.dart';
 import 'package:mobile_pos/Screens/Customers/add_customer.dart';
 import 'package:mobile_pos/Screens/Sales/add_sales.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
-import '../Customers/Provider/customer_provider.dart';
 import '../../constant.dart';
 import '../../currency.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
+import '../Customers/Provider/customer_provider.dart';
 
 class SalesContact extends StatefulWidget {
   const SalesContact({Key? key}) : super(key: key);

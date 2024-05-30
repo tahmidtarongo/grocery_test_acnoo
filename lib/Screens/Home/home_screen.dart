@@ -5,14 +5,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Const/api_config.dart';
 import 'package:mobile_pos/Screens/Home/components/grid_items.dart';
 import 'package:mobile_pos/Screens/Profile%20Screen/profile_details.dart';
-import 'package:mobile_pos/constant.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
-import '../../model/business_info_model.dart' as business;
-import 'Provider/banner_provider.dart';
+
 import '../../Provider/profile_provider.dart';
+import '../../model/business_info_model.dart' as business;
 import '../Shimmers/home_screen_appbar_shimmer.dart';
 import '../subscription/package_screen.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
+import 'Provider/banner_provider.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);

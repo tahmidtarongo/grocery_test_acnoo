@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 import '../../constant.dart';
 import '../../currency.dart';
 import '../../model/sale_transaction_model.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class SingleLossProfitScreen extends StatefulWidget {
   const SingleLossProfitScreen({

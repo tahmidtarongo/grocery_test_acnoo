@@ -1,13 +1,16 @@
-// ignore_for_file: unused_result
+// ignore_for_file: unused_result, unused_local_variable
 
 import 'dart:core';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Screens/Purchase/purchase_products.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
+
 import '../../Provider/add_to_cart_purchase.dart';
 import '../../Provider/print_purchase_invoice_provider.dart';
 import '../../Provider/profile_provider.dart';
@@ -15,9 +18,6 @@ import '../../Repository/API/future_invoice.dart';
 import '../../constant.dart';
 import '../../currency.dart';
 import '../Customers/Model/parties_model.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
-
-import '../Purchase List/purchase_list_screen.dart';
 import '../invoice_details/purchase_invoice_details.dart';
 import 'Model/purchase_transaction_model.dart' as purchase;
 import 'Repo/purchase_repo.dart';

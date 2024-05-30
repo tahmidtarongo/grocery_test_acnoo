@@ -6,8 +6,9 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:mobile_pos/Screens/Authentication/Phone%20Auth/phone_OTP_screen.dart';
 import 'package:mobile_pos/constant.dart';
-import 'package:nb_utils/nb_utils.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
+import 'package:nb_utils/nb_utils.dart';
+
 import 'Repo/phone_auth_repo.dart';
 
 class PhoneAuth extends StatefulWidget {

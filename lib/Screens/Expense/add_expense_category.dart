@@ -5,11 +5,10 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
-import 'package:mobile_pos/Screens/Expense/Providers/expense_category_proivder.dart';
 import 'package:mobile_pos/Screens/Expense/Repo/expanse_category_repo.dart';
 import 'package:mobile_pos/constant.dart';
-import 'package:nb_utils/nb_utils.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
+import 'package:nb_utils/nb_utils.dart';
 
 class AddExpenseCategory extends StatefulWidget {
   const AddExpenseCategory({Key? key}) : super(key: key);
@@ -28,7 +27,7 @@ class _AddExpenseCategoryState extends State<AddExpenseCategory> {
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, ref, __) {
-      final allCategory = ref.watch(expanseCategoryProvider);
+      //final allCategory = ref.watch(expanseCategoryProvider);
       return Scaffold(
         appBar: AppBar(
           leading: IconButton(

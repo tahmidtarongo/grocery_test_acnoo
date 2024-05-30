@@ -9,13 +9,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Provider/product_provider.dart';
 import 'package:mobile_pos/constant.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../Provider/add_to_cart.dart';
 import '../../Screens/Sales/sales_products_list_screen.dart';
 import '../../model/add_to_cart_model.dart';
 import '../../model/sale_transaction_model.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 // ignore: must_be_immutable
 class EditSaleInvoiceSaleProducts extends StatefulWidget {

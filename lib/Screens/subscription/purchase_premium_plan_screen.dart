@@ -3,17 +3,16 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mobile_pos/Provider/profile_provider.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
+import '../../constant.dart';
 import '../Currency/Model/currency_model.dart';
 import '../Currency/Provider/currency_provider.dart';
-import 'Model/payment_credential_model.dart';
-import 'Provider/subacription_plan_provider.dart';
-import '../../constant.dart';
 import '../Home/home.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
-
+import 'Model/payment_credential_model.dart';
 import 'Model/subscription_plan_model.dart';
+import 'Provider/subacription_plan_provider.dart';
 import 'Repo/subscriptionPlanRepo.dart';
 
 class PurchasePremiumPlanScreen extends StatefulWidget {

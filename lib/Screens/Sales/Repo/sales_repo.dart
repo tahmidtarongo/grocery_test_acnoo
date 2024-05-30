@@ -1,17 +1,18 @@
+// ignore_for_file: file_names, unused_element, unused_local_variable
 import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:http/http.dart' as http;
 import 'package:mobile_pos/Provider/product_provider.dart';
 
 import '../../../Const/api_config.dart';
-import 'package:http/http.dart' as http;
-
-import '../../Customers/Provider/customer_provider.dart';
 import '../../../Provider/profile_provider.dart';
 import '../../../Provider/transactions_provider.dart';
 import '../../../Repository/constant_functions.dart';
 import '../../../model/sale_transaction_model.dart';
+import '../../Customers/Provider/customer_provider.dart';
 
 class SaleRepo {
   Future<List<SalesTransaction>> fetchSalesList() async {
@@ -77,21 +78,26 @@ class SaleRepo {
 
       if (responseData.statusCode == 200) {
         EasyLoading.showSuccess('Added successful!');
-        ref.refresh(productProvider);
-        ref.refresh(partiesProvider);
-        ref.refresh(salesTransactionProvider);
-        ref.refresh(businessInfoProvider);
+        var data1 = ref.refresh(productProvider);
+        var data2 = ref.refresh(partiesProvider);
+        var data3 = ref.refresh(salesTransactionProvider);
+        var data4 = ref.refresh(businessInfoProvider);
         // Navigator.pop(context);
         return SalesTransaction.fromJson(parsedData['data']);
       } else {
-        EasyLoading.dismiss();
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Sales creation failed: ${parsedData['message']}')));
+        EasyLoading.dismiss().then(
+          (value) {
+            ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Sales creation failed: ${parsedData['message']}')));
+          },
+        );
         return null;
       }
     } catch (error) {
-      EasyLoading.dismiss();
-      // Handle unexpected errors gracefully
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('An error occurred: $error')));
+      EasyLoading.dismiss().then(
+        (value) {
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('An error occurred: $error')));
+        },
+      );
       return null;
     }
   }
@@ -140,23 +146,31 @@ class SaleRepo {
       print(parsedData);
 
       if (responseData.statusCode == 200) {
-        EasyLoading.showSuccess('Added successful!');
-        ref.refresh(productProvider);
-        ref.refresh(partiesProvider);
-        ref.refresh(salesTransactionProvider);
-        ref.refresh(businessInfoProvider);
-        Navigator.pop(context);
+        EasyLoading.showSuccess('Added successful!').then(
+            (value) {
+              var data1 = ref.refresh(productProvider);
+              var data2 = ref.refresh(partiesProvider);
+              var data3 = ref.refresh(salesTransactionProvider);
+              var data4 = ref.refresh(businessInfoProvider);
+              Navigator.pop(context);
+            }
+        );
         // return PurchaseTransaction.fromJson(parsedData);
       } else {
-        EasyLoading.dismiss();
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Sales creation failed: ${parsedData['message']}')));
-        return null;
+        EasyLoading.dismiss().then(
+            (value) {
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Sales creation failed: ${parsedData['message']}')));
+            }
+        );
+        return;
       }
     } catch (error) {
-      EasyLoading.dismiss();
-      // Handle unexpected errors gracefully
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('An error occurred: $error')));
-      return null;
+      EasyLoading.dismiss().then(
+          (value) {
+            ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('An error occurred: $error')));
+          }
+      );
+      return;
     }
   }
   //

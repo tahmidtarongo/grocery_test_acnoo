@@ -1,6 +1,7 @@
 // ignore: import_of_legacy_library_into_null_safe
 // ignore_for_file: unused_result
 import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -10,11 +11,10 @@ import 'package:mobile_pos/Const/api_config.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/Screens/Customers/Model/parties_model.dart';
 import 'package:mobile_pos/constant.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
 import 'Provider/customer_provider.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
-
 import 'Repo/parties_repo.dart';
 
 // ignore: must_be_immutable

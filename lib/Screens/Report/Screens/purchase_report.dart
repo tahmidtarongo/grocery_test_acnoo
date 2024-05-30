@@ -1,3 +1,4 @@
+//ignore_for_file: file_names, unused_element, unused_local_variable
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -5,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:mobile_pos/Provider/print_purchase_invoice_provider.dart';
 import 'package:mobile_pos/Provider/transactions_provider.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../../PDF Invoice/generate_pdf.dart';
@@ -12,9 +14,7 @@ import '../../../Provider/profile_provider.dart';
 import '../../../constant.dart';
 import '../../../currency.dart';
 import '../../../model/print_transaction_model.dart';
-import '../../Home/home.dart';
 import '../../invoice_details/purchase_invoice_details.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class PurchaseReportScreen extends StatefulWidget {
   const PurchaseReportScreen({Key? key}) : super(key: key);

@@ -9,14 +9,14 @@ import 'package:intl/intl.dart';
 import 'package:mobile_pos/Provider/add_to_cart.dart';
 import 'package:mobile_pos/Provider/profile_provider.dart';
 import 'package:mobile_pos/Screens/Sales%20List/sales_Edit_invoice_add_products.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:mobile_pos/model/sale_transaction_model.dart';
 import 'package:nb_utils/nb_utils.dart';
+
 import '../../Provider/product_provider.dart';
 import '../../constant.dart';
 import '../../currency.dart';
 import '../../model/add_to_cart_model.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
-
 import '../Sales/Repo/sales_repo.dart';
 
 // ignore: must_be_immutable

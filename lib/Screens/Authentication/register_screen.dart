@@ -6,12 +6,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/Screens/Authentication/Phone%20Auth/phone_auth_screen.dart';
 import 'package:mobile_pos/Screens/Authentication/profile_setup_screen.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../Repository/API/register_repo.dart';
 import '../../constant.dart';
 import 'login_form.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);

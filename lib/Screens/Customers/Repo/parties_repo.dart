@@ -1,14 +1,16 @@
+//ignore_for_file: avoid_print,unused_local_variable
 import 'dart:convert';
 import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
 import 'package:mobile_pos/Const/api_config.dart';
 
-import '../Provider/customer_provider.dart';
-import '../Model/parties_model.dart';
 import '../../../Repository/constant_functions.dart';
+import '../Model/parties_model.dart';
+import '../Provider/customer_provider.dart';
 
 class PartyRepository {
   Future<List<Party>> fetchAllParties() async {
@@ -63,7 +65,7 @@ class PartyRepository {
 
     if (response.statusCode == 200) {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Added successful!')));
-      ref.refresh(partiesProvider);
+      var data1 = ref.refresh(partiesProvider);
 
       Navigator.pop(context);
     } else {
@@ -107,7 +109,7 @@ class PartyRepository {
 
     if (response.statusCode == 200) {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Updated Successfully!')));
-      ref.refresh(partiesProvider);
+      var data1 = ref.refresh(partiesProvider);
 
       Navigator.pop(context);
       Navigator.pop(context);
@@ -135,7 +137,7 @@ class PartyRepository {
       if (response.statusCode == 200) {
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Party deleted successfully')));
 
-        ref.refresh(partiesProvider);
+        var data1 = ref.refresh(partiesProvider);
 
         Navigator.pop(context); // Assuming you want to close the screen after deletion
         // Navigator.pop(context); // Assuming you want to close the screen after deletion

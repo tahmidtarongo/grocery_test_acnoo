@@ -1,14 +1,16 @@
+// ignore_for_file: unused_local_variable
 import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:http/http.dart' as http;
 
 import '../../../Const/api_config.dart';
-import 'package:http/http.dart' as http;
-import '../../Customers/Provider/customer_provider.dart';
 import '../../../Provider/profile_provider.dart';
 import '../../../Provider/transactions_provider.dart';
 import '../../../Repository/constant_functions.dart';
+import '../../Customers/Provider/customer_provider.dart';
 import '../Model/due_collection_invoice_model.dart';
 import '../Model/due_collection_model.dart';
 import '../Providers/due_provider.dart';
@@ -21,7 +23,6 @@ class DueRepo {
       'Accept': 'application/json',
       'Authorization': await getAuthToken(),
     });
-    print(response.statusCode);
 
     if (response.statusCode == 200) {
       final parsedData = jsonDecode(response.body) as Map<String, dynamic>;
@@ -40,7 +41,6 @@ class DueRepo {
       'Accept': 'application/json',
       'Authorization': await getAuthToken(),
     });
-    print(response.statusCode);
 
     if (response.statusCode == 200) {
       final parsedData = jsonDecode(response.body);
@@ -76,30 +76,30 @@ class DueRepo {
       );
 
       final parsedData = jsonDecode(responseData.body);
-      print(parsedData);
 
       if (responseData.statusCode == 200) {
         EasyLoading.showSuccess('Collected successful!');
 
-        ref.refresh(partiesProvider);
-        ref.refresh(purchaseTransactionProvider);
-        ref.refresh(salesTransactionProvider);
-        ref.refresh(businessInfoProvider);
-        ref.refresh(dueInvoiceListProvider(partyId.round()));
-        ref.refresh(dueCollectionListProvider);
+       var refreshParty =  ref.refresh(partiesProvider);
+       var purchaseTransactionRefresh = ref.refresh(purchaseTransactionProvider);
+        var salesTransactionRefresh = ref.refresh(salesTransactionProvider);
+        var businessInfoRefresh = ref.refresh(businessInfoProvider);
+        var dueInvoiceListRefresh = ref.refresh(dueInvoiceListProvider(partyId.round()));
+        var dueCollectionListRefresh = ref.refresh(dueCollectionListProvider);
 
         return DueCollection.fromJson(parsedData['data']);
         // Navigator.pop(context);
         // return PurchaseTransaction.fromJson(parsedData);
       } else {
-        EasyLoading.dismiss();
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Purchase creation failed: ${parsedData['message']}')));
+        EasyLoading.dismiss().then(
+          (value) => ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Purchase creation failed: ${parsedData['message']}'))),
+        );
         return null;
       }
     } catch (error) {
-      EasyLoading.dismiss();
-      // Handle unexpected errors gracefully
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('An error occurred: $error')));
+      EasyLoading.dismiss().then(
+        (value) => ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('An error occurred: $error'))),
+      );
       return null;
     }
   }

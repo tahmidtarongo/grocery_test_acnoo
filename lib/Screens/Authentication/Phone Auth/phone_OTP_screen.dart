@@ -1,14 +1,15 @@
 // ignore_for_file: file_names
 
 import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:iconly/iconly.dart';
 import 'package:mobile_pos/Screens/Authentication/Phone%20Auth/Repo/phone_auth_repo.dart';
 import 'package:mobile_pos/constant.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 import 'package:pinput/pinput.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class OTPVerify extends StatefulWidget {
   const OTPVerify({Key? key, required this.phoneNumber}) : super(key: key);
