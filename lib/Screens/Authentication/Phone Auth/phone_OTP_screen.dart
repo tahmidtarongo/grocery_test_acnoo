@@ -5,8 +5,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:iconly/iconly.dart';
+import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/Screens/Authentication/Phone%20Auth/Repo/phone_auth_repo.dart';
 import 'package:mobile_pos/constant.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 import 'package:pinput/pinput.dart';
@@ -70,6 +72,7 @@ class _OTPVerifyState extends State<OTPVerify> {
       },
       child: Scaffold(
         extendBodyBehindAppBar: true,
+        backgroundColor: kWhite,
         body: Container(
           margin: const EdgeInsets.only(left: 25, right: 25),
           alignment: Alignment.center,
@@ -77,7 +80,7 @@ class _OTPVerifyState extends State<OTPVerify> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset('images/logoandname.png'),
+                const NameWithLogo(),
                 const SizedBox(height: 25),
                 Text(
                   lang.S.of(context).phoneVerification,
@@ -153,8 +156,8 @@ class _OTPVerifyState extends State<OTPVerify> {
                           await repo.submitOTP(phoneNumber: widget.phoneNumber, otp: code, context: context);
                         }
                       },
-                      child: const Text(
-                        "Verify Phone Number",
+                      child:  const Text(
+                        'Verify',
                         style: TextStyle(color: Colors.white),
                       )),
                 ),
@@ -162,6 +165,7 @@ class _OTPVerifyState extends State<OTPVerify> {
                   height: 20,
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     _start == 0
                         ? GestureDetector(

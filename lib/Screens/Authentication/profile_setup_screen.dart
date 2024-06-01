@@ -105,6 +105,7 @@ class _ProfileSetupState extends State<ProfileSetup> {
 
         return businessCategoryList.when(data: (categoryList) {
           return Scaffold(
+            backgroundColor: kWhite,
             appBar: AppBar(
               iconTheme: const IconThemeData(color: Colors.black),
               title: Text(
@@ -155,19 +156,19 @@ class _ProfileSetupState extends State<ProfileSetup> {
                   key: _formKey,
                   child: Column(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Text(
-                          lang.S.of(context).setUpDesc,
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.poppins(
-                            color: kGreyTextColor,
-                            fontSize: 15.0,
-                          ),
-                        ),
-                      ),
+                      // Padding(
+                      //   padding: const EdgeInsets.all(10.0),
+                      //   child: Text(
+                      //     lang.S.of(context).setUpDesc,
+                      //     maxLines: 2,
+                      //     overflow: TextOverflow.ellipsis,
+                      //     textAlign: TextAlign.center,
+                      //     style: GoogleFonts.poppins(
+                      //       color: kGreyTextColor,
+                      //       fontSize: 15.0,
+                      //     ),
+                      //   ),
+                      // ),
                       GestureDetector(
                         onTap: () {
                           showDialog(
@@ -249,11 +250,12 @@ class _ProfileSetupState extends State<ProfileSetup> {
                               height: 120,
                               width: 120,
                               decoration: BoxDecoration(
-                                border: Border.all(color: Colors.black54, width: 1),
-                                borderRadius: const BorderRadius.all(Radius.circular(120)),
+                                shape: BoxShape.circle,
+                                // border: Border.all(color: Colors.black54, width: 1),
+                                // borderRadius: const BorderRadius.all(Radius.circular(120)),
                                 image: pickedImage == null
                                     ? const DecorationImage(
-                                        image: AssetImage('images/no_shop_image.png'),
+                                        image: AssetImage('images/noImage.png'),
                                         fit: BoxFit.cover,
                                       )
                                     : DecorationImage(
@@ -270,7 +272,8 @@ class _ProfileSetupState extends State<ProfileSetup> {
                                 width: 35,
                                 decoration: BoxDecoration(
                                   border: Border.all(color: Colors.white, width: 2),
-                                  borderRadius: const BorderRadius.all(Radius.circular(120)),
+                                  // borderRadius: const BorderRadius.all(Radius.circular(120)),
+                                  shape: BoxShape.circle,
                                   color: kMainColor,
                                 ),
                                 child: const Icon(
@@ -291,7 +294,7 @@ class _ProfileSetupState extends State<ProfileSetup> {
                           child: FormField(
                             builder: (FormFieldState<dynamic> field) {
                               return InputDecorator(
-                                decoration: InputDecoration(
+                                decoration: kInputDecoration.copyWith(
                                     floatingLabelBehavior: FloatingLabelBehavior.always,
                                     labelText: lang.S.of(context).businessCat,
                                     labelStyle: GoogleFonts.poppins(
@@ -319,9 +322,10 @@ class _ProfileSetupState extends State<ProfileSetup> {
                             }
                             return null;
                           },
-                          decoration: InputDecoration(
+                          decoration: kInputDecoration.copyWith(
                             labelText: lang.S.of(context).businessName,
                             border: const OutlineInputBorder(),
+                            hintText: 'Enter Business/Store Name'
                           ),
                         ),
                       ),
@@ -357,7 +361,7 @@ class _ProfileSetupState extends State<ProfileSetup> {
                           // ignore: deprecated_member_use
                           textFieldType: TextFieldType.ADDRESS,
                           controller: addressController,
-                          decoration: InputDecoration(
+                          decoration: kInputDecoration.copyWith(
                             focusedBorder: const OutlineInputBorder(
                               borderSide: BorderSide(color: kGreyTextColor),
                             ),
@@ -377,7 +381,8 @@ class _ProfileSetupState extends State<ProfileSetup> {
                           },
                           controller: openingBalanceController, // Optional
                           textFieldType: TextFieldType.PHONE,
-                          decoration: InputDecoration(
+                          decoration: kInputDecoration.copyWith(
+                            hintText: 'Enter opening balance',
                             labelText: lang.S.of(context).openingBalance,
                             border: const OutlineInputBorder(),
                           ),

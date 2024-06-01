@@ -1,5 +1,6 @@
 // ignore_for_file: use_build_context_synchronously
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Screens/SplashScreen/on_board.dart';
 import 'package:mobile_pos/constant.dart';
@@ -8,7 +9,7 @@ import 'package:mobile_pos/model/business_info_model.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:provider/provider.dart';
-
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../Repository/API/business_info_repo.dart';
 import '../../currency.dart';
 import '../Home/home.dart';
@@ -487,12 +488,8 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(
-              height: context.height() / 3,
-            ),
-            const Image(
-              image: AssetImage('images/logoPos.png'),
-            ),
+            const Spacer(),
+            SvgPicture.asset(splashLogo,height: 230,width: 230,),
             const Spacer(),
             Column(
               children: [

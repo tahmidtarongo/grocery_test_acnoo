@@ -3,7 +3,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
+import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/Screens/Authentication/Phone%20Auth/phone_OTP_screen.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
@@ -39,6 +41,7 @@ class _PhoneAuthState extends State<PhoneAuth> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kWhite,
       body: Container(
         margin: const EdgeInsets.only(left: 25, right: 25),
         alignment: Alignment.center,
@@ -46,7 +49,7 @@ class _PhoneAuthState extends State<PhoneAuth> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Image.asset('images/logoandname.png'),
+              const NameWithLogo(),
               const SizedBox(height: 25),
               Text(
                 lang.S.of(context).phoneVerification,

@@ -4,6 +4,7 @@ import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/Screens/Authentication/Phone%20Auth/phone_auth_screen.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../constant.dart';
 
@@ -23,17 +24,17 @@ class _OnBoardState extends State<OnBoard> {
   List<Map<String, dynamic>> getSlider({required BuildContext context}) {
     List<Map<String, dynamic>> sliderList = [
       {
-        "icon": 'images/onboard1.png',
+        "icon": onboard1,
         "title": lang.S.of(context).easyToUseThePos,
         "description": lang.S.of(context).easytheusedesciption,
       },
       {
-        "icon": 'images/onboard2.png',
+        "icon": onboard2,
         "title": lang.S.of(context).choseYourFeature,
         "description": lang.S.of(context).choseyourfeatureDesciption,
       },
       {
-        "icon": 'images/onboard3.png',
+        "icon": onboard3,
         "title": lang.S.of(context).allBusinessSolutions,
         "description": lang.S.of(context).allBusinessolutionDescrip,
       },
@@ -47,24 +48,22 @@ class _OnBoardState extends State<OnBoard> {
   Widget build(BuildContext context) {
     sliderList = getSlider(context: context);
     return Scaffold(
+      backgroundColor: kWhite,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           const SizedBox(height: 30),
           Padding(
-            padding: const EdgeInsets.only(right: 20),
+            padding: const EdgeInsets.all(8),
             child: TextButton(
               onPressed: () {
                 Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const PhoneAuth(),));
-                // const PhoneAuth().launch(context);
-                // const Si`gnInScreen().launch(context);
-                // Navigator.pushNamed(context, '/signIn');
               },
               child: Text(
                 lang.S.of(context).skip,
                 style: GoogleFonts.jost(
                   fontSize: 20.0,
-                  color: kMainColor,
+                  color: kGreyTextColor,
                 ),
               ),
             ),
@@ -123,22 +122,34 @@ class _OnBoardState extends State<OnBoard> {
               ],
             ),
           ),
-          DotIndicator(
-            currentDotSize: 25,
-            dotSize: 6,
-            pageController: pageController,
-            pages: sliderList,
-            indicatorColor: kMainColor,
-            unselectedIndicatorColor: Colors.grey,
+          Center(
+            child: SmoothPageIndicator(
+                controller: pageController,
+                count: sliderList.length,
+                effect: ExpandingDotsEffect(
+                  dotColor: kMainColor.withOpacity(0.2),
+                  activeDotColor: kMainColor,
+                  dotHeight: 8,
+                  dotWidth: 8
+                ),
+            ),
           ),
+          // DotIndicator(
+          //   currentDotSize: 25,
+          //   dotSize: 6,
+          //   pageController: pageController,
+          //   pages: sliderList,
+          //   indicatorColor: kMainColor,
+          //   unselectedIndicatorColor: Colors.grey,
+          // ),
           const Spacer(),
           Padding(
             padding: const EdgeInsets.only(right: 10.0, left: 10),
             child: ButtonGlobal(
-              iconWidget: null,
+              iconWidget: Icons.arrow_forward,
               buttontext: lang.S.of(context).next,
               iconColor: Colors.white,
-              buttonDecoration: kButtonDecoration.copyWith(color: kMainColor, borderRadius: const BorderRadius.all(Radius.circular(30))),
+              // buttonDecoration: kButtonDecoration.copyWith(color: kMainColor, borderRadius: const BorderRadius.all(Radius.circular(30))),
               onPressed: () {
                 setState(
                   () {
