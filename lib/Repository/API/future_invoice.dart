@@ -14,8 +14,6 @@ class FutureInvoice {
         },
       );
 
-      print('new-invoice ${response.body}');
-
       if (response.statusCode == 200) {
         return response.body;
       } else {

@@ -15,10 +15,8 @@ class BusinessRepository {
       'Accept': 'application/json',
       'Authorization': 'Bearer $token', // Assuming Bearer token format
     });
-    print('suekyfgsefgwgefsgyefsgfsygfesg: ${response.statusCode}');
     if (response.statusCode == 200) {
       final parsedData = jsonDecode(response.body);
-      print(parsedData['data']);
       return BusinessInformation.fromJson(parsedData['data']); // Extract the "data" object from the response
     } else {
       // await LogOutRepo().signOut();
