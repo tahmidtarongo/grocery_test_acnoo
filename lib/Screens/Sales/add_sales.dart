@@ -83,6 +83,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
       return personalData.when(data: (data) {
         personalInformationModel = data;
         return Scaffold(
+          backgroundColor: kWhite,
           appBar: AppBar(
             backgroundColor: Colors.white,
             title: Text(
@@ -93,7 +94,8 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
             ),
             centerTitle: true,
             iconTheme: const IconThemeData(color: Colors.black),
-            elevation: 0.0,
+            elevation: 2.0,
+            surfaceTintColor: kWhite,
           ),
           body: SingleChildScrollView(
             child: Padding(
@@ -123,7 +125,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                             return Expanded(
                               child: TextFormField(
                                 readOnly: true,
-                                decoration: InputDecoration(
+                                decoration: kInputDecoration.copyWith(
                                   floatingLabelBehavior: FloatingLabelBehavior.always,
                                   labelText: lang.S.of(context).inv,
                                   border: const OutlineInputBorder(),
@@ -138,10 +140,9 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                         child: TextFormField(
                           readOnly: true,
                           controller: dateController,
-                          decoration: InputDecoration(
+                          decoration: kInputDecoration.copyWith(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             labelText: lang.S.of(context).date,
-                            border: const OutlineInputBorder(),
                             suffixIcon: IconButton(
                               onPressed: () async {
                                 final DateTime? picked = await showDatePicker(
@@ -197,11 +198,10 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                           child: AppTextField(
                             controller: phoneContoller,
                             textFieldType: TextFieldType.PHONE,
-                            decoration: const InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: 'Customer Phone Number',
                               hintText: 'Enter customer phone number',
-                              border: OutlineInputBorder(),
                             ),
                           ),
                         ),

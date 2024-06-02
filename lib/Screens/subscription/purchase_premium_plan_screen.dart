@@ -84,6 +84,7 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
       final businessInfo = ref.watch(businessInfoProvider);
       final currencyData = ref.watch(currencyProvider);
       return Scaffold(
+        backgroundColor: kWhite,
         body: SingleChildScrollView(
           child: SafeArea(
             child: Padding(
@@ -96,7 +97,7 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                     children: [
                       Text(
                         lang.S.of(context).purchasePremium,
-                        style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                        style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                       ),
                       GestureDetector(
                         onTap: () {
@@ -113,7 +114,7 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                       physics: const NeverScrollableScrollPhysics(),
                       itemBuilder: (_, i) {
                         return Padding(
-                          padding: const EdgeInsets.only(bottom: 10),
+                          padding: const EdgeInsets.only(bottom: 15),
                           child: GestureDetector(
                             onTap: () {
                               showDialog(
@@ -163,33 +164,47 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                                 },
                               );
                             },
-                            child: Card(
-                              elevation: 1,
-                              child: Padding(
-                                padding: const EdgeInsets.all(5.0),
-                                child: ListTile(
-                                  leading: SizedBox(
-                                    height: 40,
-                                    width: 40,
-                                    child: Image(
-                                      image: AssetImage(imageList[i]),
-                                    ),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(6),
+                                color: kWhite,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: const Color(0xff0C1A4B).withOpacity(0.24),
+                                    blurRadius: 1
                                   ),
-                                  title: Text(
-                                    titleListData[i],
-                                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                                  BoxShadow(
+                                    color: const Color(0xff473232).withOpacity(0.05),
+                                    offset: const Offset(0, 3),
+                                    blurRadius: 8,
+                                    spreadRadius: -1
+                                  )
+                                ]
+                              ),
+                              child: ListTile(
+                                visualDensity: VisualDensity(horizontal: -4),
+                                contentPadding: EdgeInsets.only(left: 8,right: 10),
+                                leading: SizedBox(
+                                  height: 40,
+                                  width: 40,
+                                  child: Image(
+                                    image: AssetImage(imageList[i]),
                                   ),
-                                  trailing: const Icon(FeatherIcons.alertCircle),
                                 ),
+                                title: Text(
+                                  titleListData[i],
+                                  style: const TextStyle( fontSize: 16),
+                                ),
+                                trailing: const Icon(FeatherIcons.alertCircle,color: kGreyTextColor,size: 20,),
                               ),
                             ),
                           ),
                         );
                       }),
-                  const SizedBox(height: 5),
+                  const SizedBox(height: 10),
                   Text(
                     lang.S.of(context).buyPremium,
-                    style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
 
                   ///______________________________________________________________________
@@ -337,7 +352,7 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                         }
                       },
                       child: Container(
-                        height: 60,
+                        height: 50,
                         decoration: const BoxDecoration(
                           color: kMainColor,
                           borderRadius: BorderRadius.all(Radius.circular(10)),

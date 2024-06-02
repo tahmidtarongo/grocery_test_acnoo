@@ -44,8 +44,8 @@ const kButtonDecoration = BoxDecoration(
 
 const kInputDecoration = InputDecoration(
   hintStyle: TextStyle(color: kGreyTextColor),
-  filled: true,
-  fillColor: Colors.white70,
+  // filled: true,
+  // fillColor: Colors.white,
   floatingLabelBehavior: FloatingLabelBehavior.always,
   enabledBorder: OutlineInputBorder(
     borderRadius: BorderRadius.all(Radius.circular(8.0)),

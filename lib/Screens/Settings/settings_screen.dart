@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Const/api_config.dart';
 import 'package:mobile_pos/Screens/Profile%20Screen/profile_details.dart';
@@ -73,13 +74,14 @@ class _SettingScreenState extends State<SettingScreen> {
     return SafeArea(
       child: Consumer(builder: (context, ref, _) {
         AsyncValue<BusinessInformation> businessInfo = ref.watch(businessInfoProvider);
-
         return Scaffold(
+          backgroundColor: kWhite,
           body: SingleChildScrollView(
             child: Column(
               children: [
                 Card(
                   elevation: 0.0,
+                  color: kWhite,
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: businessInfo.when(data: (details) {
@@ -134,27 +136,32 @@ class _SettingScreenState extends State<SettingScreen> {
                     }),
                   ),
                 ),
-                const SizedBox(
-                  height: 20.0,
-                ),
                 ListTile(
+                  // visualDensity: const VisualDensity(horizontal: -4,vertical: -4),
+                  // contentPadding: const EdgeInsets.symmetric(horizontal: 16),
                   title: Text(
                     lang.S.of(context).profile,
                     style: GoogleFonts.poppins(
                       color: Colors.black,
-                      fontSize: 18.0,
+                      fontSize: 16.0,
                     ),
                   ),
                   onTap: () {
                     const ProfileDetails().launch(context);
                   },
-                  leading: const Icon(
-                    Icons.person_outline_rounded,
-                    color: kMainColor,
-                  ),
+                  leading: SvgPicture.asset('assets/profile.svg',height: 36,width: 36,),
                   trailing: const Icon(
                     Icons.arrow_forward_ios,
                     color: kGreyTextColor,
+                    size: 20,
+                  ),
+                ),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: Divider(
+                    thickness: 1.0,
+                    height: 1,
+                    color: kBorderColorTextField,
                   ),
                 ),
                 ListTile(
@@ -162,22 +169,34 @@ class _SettingScreenState extends State<SettingScreen> {
                     lang.S.of(context).printing,
                     style: GoogleFonts.poppins(
                       color: Colors.black,
-                      fontSize: 18.0,
+                      fontSize: 16.0,
                     ),
                   ),
-                  leading: const Icon(
-                    Icons.print,
-                    color: kMainColor,
+                  leading: SvgPicture.asset('assets/print.svg',height: 36,width: 36,),
+                  trailing: Transform.scale(
+                    scale: 0.7,
+                    child: SizedBox(
+                      height: 22,
+                      width: 40,
+                      child: Switch.adaptive(
+                        value: isPrintEnable,
+                        onChanged: (bool value) async {
+                          final prefs = await SharedPreferences.getInstance();
+                          await prefs.setBool('isPrintEnable', value);
+                          setState(() {
+                            isPrintEnable = value;
+                          });
+                        },
+                      ),
+                    ),
                   ),
-                  trailing: Switch.adaptive(
-                    value: isPrintEnable,
-                    onChanged: (bool value) async {
-                      final prefs = await SharedPreferences.getInstance();
-                      await prefs.setBool('isPrintEnable', value);
-                      setState(() {
-                        isPrintEnable = value;
-                      });
-                    },
+                ),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: Divider(
+                    thickness: 1.0,
+                    height: 1,
+                    color: kBorderColorTextField,
                   ),
                 ),
 
@@ -187,19 +206,25 @@ class _SettingScreenState extends State<SettingScreen> {
                     lang.S.of(context).subscription,
                     style: GoogleFonts.poppins(
                       color: Colors.black,
-                      fontSize: 18.0,
+                      fontSize: 16.0,
                     ),
                   ),
                   onTap: () {
                     const PackageScreen().launch(context);
                   },
-                  leading: const Icon(
-                    Icons.account_balance_wallet_outlined,
-                    color: kMainColor,
-                  ),
+                  leading: SvgPicture.asset('assets/subscription.svg',height: 36,width: 36,),
                   trailing: const Icon(
                     Icons.arrow_forward_ios,
                     color: kGreyTextColor,
+                    size: 18,
+                  ),
+                ),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: Divider(
+                    thickness: 1.0,
+                    height: 1,
+                    color: kBorderColorTextField,
                   ),
                 ),
 
@@ -209,40 +234,42 @@ class _SettingScreenState extends State<SettingScreen> {
                     lang.S.of(context).userRole,
                     style: GoogleFonts.poppins(
                       color: Colors.black,
-                      fontSize: 18.0,
+                      fontSize: 16.0,
                     ),
                   ),
                   onTap: () {
                     const UserRoleScreen().launch(context);
                   },
-                  leading: const Icon(
-                    Icons.supervised_user_circle_sharp,
-                    color: kMainColor,
-                  ),
+                  leading: SvgPicture.asset('assets/userRole.svg',height: 36,width: 36,),
                   trailing: const Icon(
                     Icons.arrow_forward_ios,
                     color: kGreyTextColor,
+                    size: 18,
                   ),
                 ).visible(businessInfo.value?.user?.role != 'staff'),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: Divider(
+                    thickness: 1.0,
+                    height: 1,
+                    color: kBorderColorTextField,
+                  ),
+                ),
 
                 ///____________Currency________________________________________________
                 ListTile(
                   onTap: () async {
                     await const CurrencyScreen().launch(context);
-
                     setState(() {});
                   },
                   title: Text(
                     lang.S.of(context).currency,
                     style: GoogleFonts.poppins(
                       color: Colors.black,
-                      fontSize: 18.0,
+                      fontSize: 16.0,
                     ),
                   ),
-                  leading: const Icon(
-                    Icons.currency_exchange,
-                    color: kMainColor,
-                  ),
+                  leading: SvgPicture.asset('assets/currency.svg',height: 36,width: 36,),
                   trailing: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -250,14 +277,22 @@ class _SettingScreenState extends State<SettingScreen> {
                         '($currency)',
                         style: GoogleFonts.poppins(
                           color: Colors.black,
-                          fontSize: 18.0,
+                          fontSize: 16.0,
                         ),
                       ),
                       const SizedBox(
                         width: 4.0,
                       ),
-                      const Icon(Icons.arrow_forward_ios),
+                      const Icon(Icons.arrow_forward_ios,color: kGreyTextColor,size: 18,),
                     ],
+                  ),
+                ),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: Divider(
+                    thickness: 1.0,
+                    height: 1,
+                    color: kBorderColorTextField,
                   ),
                 ),
 
@@ -267,7 +302,7 @@ class _SettingScreenState extends State<SettingScreen> {
                     lang.S.of(context).selectLang,
                     style: GoogleFonts.poppins(
                       color: Colors.black,
-                      fontSize: 18.0,
+                      fontSize: 16.0,
                     ),
                   ),
                   onTap: () => Navigator.push(
@@ -276,10 +311,19 @@ class _SettingScreenState extends State<SettingScreen> {
                       builder: (context) => const SelectLanguage(),
                     ),
                   ),
-                  leading: Image.asset('images/en.png'),
+                  leading: SvgPicture.asset('assets/language.svg',height: 36,width: 36,),
                   trailing: const Icon(
                     Icons.arrow_forward_ios,
                     color: kGreyTextColor,
+                    size: 18,
+                  ),
+                ),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: Divider(
+                    thickness: 1.0,
+                    height: 1,
+                    color: kBorderColorTextField,
                   ),
                 ),
 
@@ -289,7 +333,7 @@ class _SettingScreenState extends State<SettingScreen> {
                     lang.S.of(context).logOut,
                     style: GoogleFonts.poppins(
                       color: Colors.black,
-                      fontSize: 18.0,
+                      fontSize: 16.0,
                     ),
                   ),
                   onTap: () async {
@@ -298,13 +342,19 @@ class _SettingScreenState extends State<SettingScreen> {
                     LogOutRepo repo = LogOutRepo();
                     await repo.signOutApi(context: context, ref: ref);
                   },
-                  leading: const Icon(
-                    Icons.logout,
-                    color: kMainColor,
-                  ),
+                  leading: SvgPicture.asset('assets/logout.svg',height: 36,width: 36,),
                   trailing: const Icon(
                     Icons.arrow_forward_ios,
                     color: kGreyTextColor,
+                    size: 18,
+                  ),
+                ),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: Divider(
+                    thickness: 1.0,
+                    height: 1,
+                    color: kBorderColorTextField,
                   ),
                 ),
                 Row(
@@ -312,7 +362,7 @@ class _SettingScreenState extends State<SettingScreen> {
                     Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: Text(
-                        'DoSofto V-$appVersion',
+                        'POSPro V-$appVersion',
                         style: GoogleFonts.poppins(
                           color: kGreyTextColor,
                           fontSize: 16.0,

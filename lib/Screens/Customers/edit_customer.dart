@@ -226,6 +226,7 @@ class _EditCustomerState extends State<EditCustomer> {
                     dividerColor: Colors.white,
                     children: [
                       ExpansionPanel(
+                        backgroundColor: kWhite,
                         headerBuilder: (BuildContext context, bool isExpanded) {
                           return Column(
                             mainAxisSize: MainAxisSize.min,

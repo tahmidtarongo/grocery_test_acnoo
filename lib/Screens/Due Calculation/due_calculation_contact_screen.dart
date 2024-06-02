@@ -23,6 +23,7 @@ class _DueCalculationContactScreenState extends State<DueCalculationContactScree
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kWhite,
       resizeToAvoidBottomInset: true,
       appBar: AppBar(
         backgroundColor: Colors.white,

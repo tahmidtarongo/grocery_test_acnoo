@@ -5,7 +5,6 @@ import 'package:mobile_pos/Screens/Home/home_screen.dart';
 import 'package:mobile_pos/Screens/Report/reports.dart';
 import 'package:mobile_pos/Screens/Settings/settings_screen.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
-
 import '../../constant.dart';
 import '../Sales/sales_contact.dart';
 
@@ -74,9 +73,6 @@ class _HomeState extends State<Home> {
         );
         return shouldPop ?? false; // Allow default back button behavior if dialog is dismissed
       },
-      // onWillPop: () async {
-      //   return await const Home().launch(context, isNewTask: true);
-      // },
       child: Scaffold(
         body: Center(
           child: _widgetOptions.elementAt(_selectedIndex),
@@ -85,7 +81,6 @@ class _HomeState extends State<Home> {
           type: BottomNavigationBarType.fixed,
           elevation: 6.0,
           selectedItemColor: kMainColor,
-          // ignore: prefer_const_literals_to_create_immutables
           items: [
             BottomNavigationBarItem(
               icon: const Icon(FeatherIcons.home),

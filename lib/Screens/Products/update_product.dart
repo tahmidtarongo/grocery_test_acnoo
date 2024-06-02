@@ -1,7 +1,5 @@
 // ignore_for_file: unused_result
-
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -17,7 +15,6 @@ import 'package:mobile_pos/Screens/Products/Repo/product_repo.dart';
 import 'package:mobile_pos/Screens/Products/unit_list.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
-
 import '../../constant.dart';
 import 'Model/category_model.dart';
 import 'brands_list.dart';
@@ -88,7 +85,9 @@ class _UpdateProductState extends State<UpdateProduct> {
   Widget build(BuildContext context) {
     return Consumer(builder: (context, ref, __) {
       return Scaffold(
+        backgroundColor: kWhite,
         appBar: AppBar(
+          surfaceTintColor: kWhite,
           backgroundColor: Colors.white,
           elevation: 0,
           iconTheme: const IconThemeData(color: Colors.black),
@@ -201,7 +200,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                         // You can add more validation logic as needed
                         return null;
                       },
-                      decoration: InputDecoration(
+                      decoration: kInputDecoration.copyWith(
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         labelText: lang.S.of(context).productName,
                         hintText: 'Enter product Name',
@@ -229,12 +228,12 @@ class _UpdateProductState extends State<UpdateProduct> {
                           selectedCategory = data.categoryName;
                         });
                       },
-                      decoration: const InputDecoration(
-                        suffixIcon: Icon(Icons.keyboard_arrow_down),
+                      decoration:  kInputDecoration.copyWith(
+                        suffixIcon: const Icon(Icons.keyboard_arrow_down),
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         labelText: 'Product Category',
                         hintText: 'Select Product Category',
-                        border: OutlineInputBorder(),
+                        border: const OutlineInputBorder(),
                       ),
                     ),
                   ),
@@ -271,7 +270,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                           child: TextFormField(
                             validator: (value) => null,
                             controller: sizeController,
-                            decoration: InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).size,
                               hintText: 'Enter Size',
@@ -285,7 +284,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                           padding: const EdgeInsets.all(10.0),
                           child: TextFormField(
                             controller: colorController,
-                            decoration: InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).color,
                               hintText: 'Enter color',
@@ -305,7 +304,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                           padding: const EdgeInsets.all(10.0),
                           child: TextFormField(
                             controller: weightController,
-                            decoration: InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).weight,
                               hintText: 'Enter weight',
@@ -319,7 +318,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                           padding: const EdgeInsets.all(10.0),
                           child: TextFormField(
                             controller: capacityController,
-                            decoration: InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).capacity,
                               hintText: 'Enter Capacity',
@@ -336,7 +335,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                     padding: const EdgeInsets.all(10.0),
                     child: TextFormField(
                       controller: typeController,
-                      decoration: InputDecoration(
+                      decoration: kInputDecoration.copyWith(
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         labelText: lang.S.of(context).type,
                         hintText: 'Enter Type',
@@ -360,7 +359,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                           brandController.text = selectedBrand?.brandName ?? '';
                         });
                       },
-                      decoration: const InputDecoration(
+                      decoration:  kInputDecoration.copyWith(
                         suffixIcon: Icon(Icons.keyboard_arrow_down),
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         labelText: 'Product Brand',
@@ -381,7 +380,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                             readOnly: true,
                             controller: productCodeController,
                             textFieldType: TextFieldType.NAME,
-                            decoration: InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).productCode,
                               hintText: widget.productModel!.productCode,
@@ -428,7 +427,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                             },
                             inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
                             keyboardType: TextInputType.number,
-                            decoration: InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).stock,
                               hintText: 'Enter stock',
@@ -452,7 +451,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                                 productUnitController.text = selectedUnit?.unitName ?? '';
                               });
                             },
-                            decoration: const InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               suffixIcon: Icon(Icons.keyboard_arrow_down),
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: 'Product Unit',
@@ -482,7 +481,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                             },
                             inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
                             keyboardType: TextInputType.number,
-                            decoration: InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).purchasePrice,
                               hintText: 'Enter Purchase price',
@@ -505,7 +504,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                             },
                             inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
                             keyboardType: TextInputType.number,
-                            decoration: InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).mrp,
                               hintText: 'Enter Salting price',
@@ -527,7 +526,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                             controller: wholeSalePriceController,
                             inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
                             keyboardType: TextInputType.number,
-                            decoration: InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).wholeSalePrice,
                               hintText: 'Enter wholesale price',
@@ -543,7 +542,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                             controller: dealerPriceController,
                             inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
                             keyboardType: TextInputType.number,
-                            decoration: InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).dealerPrice,
                               hintText: 'Enter dealer price',
@@ -563,7 +562,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                           controller: discountPriceController,
                           inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
                           keyboardType: TextInputType.number,
-                          decoration: InputDecoration(
+                          decoration: kInputDecoration.copyWith(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             labelText: lang.S.of(context).discount,
                             hintText: 'Enter discount',
@@ -576,7 +575,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                           padding: const EdgeInsets.all(10.0),
                           child: TextFormField(
                             controller: manufacturerController,
-                            decoration: InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).manufacturer,
                               hintText: 'Enter manufacturer name',

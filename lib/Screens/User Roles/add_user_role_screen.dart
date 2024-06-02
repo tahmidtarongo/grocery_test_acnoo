@@ -57,6 +57,7 @@ class _AddUserRoleState extends State<AddUserRole> {
       return Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
+          surfaceTintColor: kWhite,
           backgroundColor: Colors.white,
           title: Text(
             'Add User Role',
@@ -80,241 +81,244 @@ class _AddUserRoleState extends State<AddUserRole> {
                       border: Border.all(width: 0.5, color: kGreyTextColor),
                       borderRadius: const BorderRadius.all(Radius.circular(10)),
                     ),
-                    child: Column(
-                      children: [
-                        ///_______all_&_sale____________________________________________
-                        Row(
-                          children: [
-                            ///_______all__________________________
-                            SizedBox(
-                              width: context.width() / 2 - 20,
-                              child: CheckboxListTile(
-                                contentPadding: const EdgeInsets.all(5),
-                                value: allPermissions,
-                                onChanged: (value) {
-                                  if (value == true) {
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 10),
+                      child: Column(
+                        children: [
+                          ///_______all_&_sale____________________________________________
+                          Row(
+                            children: [
+                              ///_______all__________________________
+                              SizedBox(
+                                width: context.width() / 2 - 20,
+                                child: CheckboxListTile(
+                                  contentPadding: const EdgeInsets.all(5),
+                                  value: allPermissions,
+                                  onChanged: (value) {
+                                    if (value == true) {
+                                      setState(() {
+                                        allPermissions = value!;
+                                        salePermission = true;
+                                        partiesPermission = true;
+                                        purchasePermission = true;
+                                        productPermission = true;
+                                        profileEditPermission = true;
+                                        addExpensePermission = true;
+                                        lossProfitPermission = true;
+                                        dueListPermission = true;
+                                        stockPermission = true;
+                                        reportsPermission = true;
+                                        salesListPermission = true;
+                                        purchaseListPermission = true;
+                                      });
+                                    } else {
+                                      setState(() {
+                                        allPermissions = value!;
+                                        salePermission = false;
+                                        partiesPermission = false;
+                                        purchasePermission = false;
+                                        productPermission = false;
+                                        profileEditPermission = false;
+                                        addExpensePermission = false;
+                                        lossProfitPermission = false;
+                                        dueListPermission = false;
+                                        stockPermission = false;
+                                        reportsPermission = false;
+                                        salesListPermission = false;
+                                        purchaseListPermission = false;
+                                      });
+                                    }
+                                  },
+                                  title: const Text('All'),
+                                ),
+                              ),
+                            ],
+                          ),
+
+                          ///_______Edit Profile_&_sale____________________________________________
+                          Row(
+                            children: [
+                              ///_______Edit_Profile_________________________
+                              Expanded(
+                                child: CheckboxListTile(
+                                  contentPadding: const EdgeInsets.all(5),
+                                  value: profileEditPermission,
+                                  onChanged: (value) {
                                     setState(() {
-                                      allPermissions = value!;
-                                      salePermission = true;
-                                      partiesPermission = true;
-                                      purchasePermission = true;
-                                      productPermission = true;
-                                      profileEditPermission = true;
-                                      addExpensePermission = true;
-                                      lossProfitPermission = true;
-                                      dueListPermission = true;
-                                      stockPermission = true;
-                                      reportsPermission = true;
-                                      salesListPermission = true;
-                                      purchaseListPermission = true;
+                                      profileEditPermission = value!;
                                     });
-                                  } else {
+                                  },
+                                  title: const Text('Profile Edit'),
+                                ),
+                              ),
+
+                              ///______sales____________________________
+                              Expanded(
+                                child: CheckboxListTile(
+                                  contentPadding: const EdgeInsets.all(5),
+                                  value: salePermission,
+                                  onChanged: (value) {
                                     setState(() {
-                                      allPermissions = value!;
-                                      salePermission = false;
-                                      partiesPermission = false;
-                                      purchasePermission = false;
-                                      productPermission = false;
-                                      profileEditPermission = false;
-                                      addExpensePermission = false;
-                                      lossProfitPermission = false;
-                                      dueListPermission = false;
-                                      stockPermission = false;
-                                      reportsPermission = false;
-                                      salesListPermission = false;
-                                      purchaseListPermission = false;
+                                      salePermission = value!;
                                     });
-                                  }
-                                },
-                                title: const Text('All'),
+                                  },
+                                  title: const Text('Sales'),
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
+                            ],
+                          ),
 
-                        ///_______Edit Profile_&_sale____________________________________________
-                        Row(
-                          children: [
-                            ///_______Edit_Profile_________________________
-                            Expanded(
-                              child: CheckboxListTile(
-                                contentPadding: const EdgeInsets.all(5),
-                                value: profileEditPermission,
-                                onChanged: (value) {
-                                  setState(() {
-                                    profileEditPermission = value!;
-                                  });
-                                },
-                                title: const Text('Profile Edit'),
+                          ///_____parties_&_Purchase_________________________________________
+                          Row(
+                            children: [
+                              Expanded(
+                                child: CheckboxListTile(
+                                  contentPadding: const EdgeInsets.all(5),
+                                  value: partiesPermission,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      partiesPermission = value!;
+                                    });
+                                  },
+                                  title: const Text('Parties'),
+                                ),
                               ),
-                            ),
+                              Expanded(
+                                child: CheckboxListTile(
+                                  contentPadding: const EdgeInsets.all(5),
+                                  value: purchasePermission,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      purchasePermission = value!;
+                                    });
+                                  },
+                                  title: const Text('Purchase'),
+                                ),
+                              ),
+                            ],
+                          ),
 
-                            ///______sales____________________________
-                            Expanded(
-                              child: CheckboxListTile(
-                                contentPadding: const EdgeInsets.all(5),
-                                value: salePermission,
-                                onChanged: (value) {
-                                  setState(() {
-                                    salePermission = value!;
-                                  });
-                                },
-                                title: const Text('Sales'),
+                          ///_____Product_&_DueList_________________________________________
+                          Row(
+                            children: [
+                              Expanded(
+                                child: CheckboxListTile(
+                                  contentPadding: const EdgeInsets.all(5),
+                                  value: productPermission,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      productPermission = value!;
+                                    });
+                                  },
+                                  title: const Text('Products'),
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
+                              Expanded(
+                                child: CheckboxListTile(
+                                  contentPadding: const EdgeInsets.all(5),
+                                  value: dueListPermission,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      dueListPermission = value!;
+                                    });
+                                  },
+                                  title: const Text('Due List'),
+                                ),
+                              ),
+                            ],
+                          ),
 
-                        ///_____parties_&_Purchase_________________________________________
-                        Row(
-                          children: [
-                            Expanded(
-                              child: CheckboxListTile(
-                                contentPadding: const EdgeInsets.all(5),
-                                value: partiesPermission,
-                                onChanged: (value) {
-                                  setState(() {
-                                    partiesPermission = value!;
-                                  });
-                                },
-                                title: const Text('Parties'),
+                          ///_____Stock_&_Reports_________________________________________
+                          Row(
+                            children: [
+                              Expanded(
+                                child: CheckboxListTile(
+                                  contentPadding: const EdgeInsets.all(5),
+                                  value: stockPermission,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      stockPermission = value!;
+                                    });
+                                  },
+                                  title: const Text('Stock'),
+                                ),
                               ),
-                            ),
-                            Expanded(
-                              child: CheckboxListTile(
-                                contentPadding: const EdgeInsets.all(5),
-                                value: purchasePermission,
-                                onChanged: (value) {
-                                  setState(() {
-                                    purchasePermission = value!;
-                                  });
-                                },
-                                title: const Text('Purchase'),
+                              Expanded(
+                                child: CheckboxListTile(
+                                  contentPadding: const EdgeInsets.all(5),
+                                  value: reportsPermission,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      reportsPermission = value!;
+                                    });
+                                  },
+                                  title: const Text('Reports'),
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
+                            ],
+                          ),
 
-                        ///_____Product_&_DueList_________________________________________
-                        Row(
-                          children: [
-                            Expanded(
-                              child: CheckboxListTile(
-                                contentPadding: const EdgeInsets.all(5),
-                                value: productPermission,
-                                onChanged: (value) {
-                                  setState(() {
-                                    productPermission = value!;
-                                  });
-                                },
-                                title: const Text('Products'),
+                          ///_____SalesList_&_Purchase List_________________________________________
+                          Row(
+                            children: [
+                              Expanded(
+                                child: CheckboxListTile(
+                                  contentPadding: const EdgeInsets.all(5),
+                                  value: salesListPermission,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      salesListPermission = value!;
+                                    });
+                                  },
+                                  title: const Text('Sales List'),
+                                ),
                               ),
-                            ),
-                            Expanded(
-                              child: CheckboxListTile(
-                                contentPadding: const EdgeInsets.all(5),
-                                value: dueListPermission,
-                                onChanged: (value) {
-                                  setState(() {
-                                    dueListPermission = value!;
-                                  });
-                                },
-                                title: const Text('Due List'),
+                              Expanded(
+                                child: CheckboxListTile(
+                                  contentPadding: const EdgeInsets.all(5),
+                                  value: purchaseListPermission,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      purchaseListPermission = value!;
+                                    });
+                                  },
+                                  title: const Text('Purchase List'),
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
+                            ],
+                          ),
 
-                        ///_____Stock_&_Reports_________________________________________
-                        Row(
-                          children: [
-                            Expanded(
-                              child: CheckboxListTile(
-                                contentPadding: const EdgeInsets.all(5),
-                                value: stockPermission,
-                                onChanged: (value) {
-                                  setState(() {
-                                    stockPermission = value!;
-                                  });
-                                },
-                                title: const Text('Stock'),
+                          ///_____LossProfit_&_Expense_________________________________________
+                          Row(
+                            children: [
+                              Expanded(
+                                child: CheckboxListTile(
+                                  contentPadding: const EdgeInsets.all(5),
+                                  value: lossProfitPermission,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      lossProfitPermission = value!;
+                                    });
+                                  },
+                                  title: const Text('Loss Profit'),
+                                ),
                               ),
-                            ),
-                            Expanded(
-                              child: CheckboxListTile(
-                                contentPadding: const EdgeInsets.all(5),
-                                value: reportsPermission,
-                                onChanged: (value) {
-                                  setState(() {
-                                    reportsPermission = value!;
-                                  });
-                                },
-                                title: const Text('Reports'),
+                              Expanded(
+                                child: CheckboxListTile(
+                                  contentPadding: const EdgeInsets.all(5),
+                                  value: addExpensePermission,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      addExpensePermission = value!;
+                                    });
+                                  },
+                                  title: const Text('Expense'),
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
-
-                        ///_____SalesList_&_Purchase List_________________________________________
-                        Row(
-                          children: [
-                            Expanded(
-                              child: CheckboxListTile(
-                                contentPadding: const EdgeInsets.all(5),
-                                value: salesListPermission,
-                                onChanged: (value) {
-                                  setState(() {
-                                    salesListPermission = value!;
-                                  });
-                                },
-                                title: const Text('Sales List'),
-                              ),
-                            ),
-                            Expanded(
-                              child: CheckboxListTile(
-                                contentPadding: const EdgeInsets.all(5),
-                                value: purchaseListPermission,
-                                onChanged: (value) {
-                                  setState(() {
-                                    purchaseListPermission = value!;
-                                  });
-                                },
-                                title: const Text('Purchase List'),
-                              ),
-                            ),
-                          ],
-                        ),
-
-                        ///_____LossProfit_&_Expense_________________________________________
-                        Row(
-                          children: [
-                            Expanded(
-                              child: CheckboxListTile(
-                                contentPadding: const EdgeInsets.all(5),
-                                value: lossProfitPermission,
-                                onChanged: (value) {
-                                  setState(() {
-                                    lossProfitPermission = value!;
-                                  });
-                                },
-                                title: const Text('Loss Profit'),
-                              ),
-                            ),
-                            Expanded(
-                              child: CheckboxListTile(
-                                contentPadding: const EdgeInsets.all(5),
-                                value: addExpensePermission,
-                                onChanged: (value) {
-                                  setState(() {
-                                    addExpensePermission = value!;
-                                  });
-                                },
-                                title: const Text('Expense'),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -360,9 +364,10 @@ class _AddUserRoleState extends State<AddUserRole> {
                         // ),
                         // const SizedBox(height: 20.0),
                         IntlPhoneField(
-                          decoration: const InputDecoration(
+                          decoration: kInputDecoration.copyWith(
                             labelText: 'Phone Number',
-                            border: OutlineInputBorder(borderSide: BorderSide(), borderRadius: BorderRadius.all(Radius.circular(5))),
+                            hintText: 'Enter Phone Number'
+                            // border: OutlineInputBorder(borderSide: BorderSide(), borderRadius: BorderRadius.all(Radius.circular(5))),
                           ),
                           initialCountryCode: 'BD',
                           // validator: (p0) {

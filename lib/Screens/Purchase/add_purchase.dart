@@ -72,6 +72,7 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
       final personalData = consumerRef.watch(businessInfoProvider);
       return personalData.when(data: (businessInfo) {
         return Scaffold(
+          backgroundColor: kWhite,
           appBar: AppBar(
             backgroundColor: Colors.white,
             title: Text(

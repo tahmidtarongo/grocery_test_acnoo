@@ -6,7 +6,6 @@ import 'package:mobile_pos/Screens/Customers/add_customer.dart';
 import 'package:mobile_pos/Screens/Purchase/add_purchase.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
-
 import '../../Provider/add_to_cart_purchase.dart';
 import '../../constant.dart';
 import '../../currency.dart';
@@ -29,6 +28,7 @@ class _PurchaseContactsState extends State<PurchaseContacts> {
       final providerData = ref.watch(partiesProvider);
       final cart = ref.watch(cartNotifierPurchase);
       return Scaffold(
+        backgroundColor: kWhite,
         resizeToAvoidBottomInset: true,
         appBar: AppBar(
           backgroundColor: Colors.white,
@@ -179,7 +179,11 @@ class _PurchaseContactsState extends State<PurchaseContacts> {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-            child: const Icon(Icons.add),
+          backgroundColor: kMainColor,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(100),
+            ),
+            child: const Icon(Icons.add,color: kWhite,),
             onPressed: () {
               const AddParty().launch(context);
             }),

@@ -97,6 +97,7 @@ class _SelectLanguageState extends State<SelectLanguage> {
           buttonTextColor: Colors.white),
       backgroundColor: Colors.white,
       appBar: AppBar(
+        surfaceTintColor: kWhite,
         elevation: 0,
         backgroundColor: Colors.white,
         leading: GestureDetector(

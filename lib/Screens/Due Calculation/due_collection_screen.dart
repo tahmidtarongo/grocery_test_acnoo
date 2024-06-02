@@ -60,6 +60,7 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
         List<SalesDuesInvoice> items = [];
         num openingDueAmount = 0;
         return Scaffold(
+          backgroundColor: kWhite,
           appBar: AppBar(
             backgroundColor: Colors.white,
             title: Text(

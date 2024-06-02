@@ -64,6 +64,7 @@ class _SaleProductsListState extends State<SaleProductsList> {
       final productList = ref.watch(productProvider);
 
       return Scaffold(
+        backgroundColor: kWhite,
         appBar: AppBar(
           title: Text(
             lang.S.of(context).addItems,
@@ -161,7 +162,7 @@ class _SaleProductsListState extends State<SaleProductsList> {
                 //     ),
                 //   ),
                 // ),
-                const SizedBox(height: 20.0),
+                // const SizedBox(height: 20.0),
                 Row(
                   children: [
                     Expanded(

@@ -48,6 +48,7 @@ class _DueReportScreenState extends State<DueReportScreen> {
     totalReceiveDue = 0;
     totalPaidDue = 0;
     return Scaffold(
+      backgroundColor: kWhite,
       appBar: AppBar(
         title: Text(
           lang.S.of(context).dueReport,

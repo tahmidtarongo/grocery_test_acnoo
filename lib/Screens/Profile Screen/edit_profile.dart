@@ -90,6 +90,7 @@ class _EditProfileState extends State<EditProfile> {
   Widget build(BuildContext context) {
     counter++;
     return Scaffold(
+      backgroundColor: kWhite,
       appBar: AppBar(
         iconTheme: const IconThemeData(color: Colors.black),
         title: Text(
@@ -299,7 +300,7 @@ class _EditProfileState extends State<EditProfile> {
                       child: FormField(
                         builder: (FormFieldState<dynamic> field) {
                           return InputDecorator(
-                            decoration: InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                                 floatingLabelBehavior: FloatingLabelBehavior.always,
                                 labelText: lang.S.of(context).businessCat,
                                 labelStyle: GoogleFonts.poppins(
@@ -328,7 +329,7 @@ class _EditProfileState extends State<EditProfile> {
                               return null;
                             },
                             textFieldType: TextFieldType.NAME,
-                            decoration: InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               labelText: lang.S.of(context).businessName,
                               border: const OutlineInputBorder(),
                             ),
@@ -349,7 +350,7 @@ class _EditProfileState extends State<EditProfile> {
                                 return null;
                               },
                               textFieldType: TextFieldType.PHONE,
-                              decoration: InputDecoration(
+                              decoration: kInputDecoration.copyWith(
                                 labelText: lang.S.of(context).phone,
                                 border: const OutlineInputBorder(),
                               ),
@@ -364,7 +365,7 @@ class _EditProfileState extends State<EditProfile> {
                               return null;
                             },
                             textFieldType: TextFieldType.NAME,
-                            decoration: InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               labelText: lang.S.of(context).address,
                               border: const OutlineInputBorder(),
                             ),

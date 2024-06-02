@@ -25,6 +25,7 @@ class _CustomerListState extends State<CustomerList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kWhite,
       resizeToAvoidBottomInset: true,
       appBar: AppBar(
         backgroundColor: Colors.white,

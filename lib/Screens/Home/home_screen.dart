@@ -14,7 +14,6 @@ import 'package:nb_utils/nb_utils.dart';
 import '../../Provider/profile_provider.dart';
 import '../../constant.dart';
 import '../../model/business_info_model.dart' as business;
-import '../Shimmers/home_screen_appbar_shimmer.dart';
 import '../subscription/package_screen.dart';
 import 'Provider/banner_provider.dart';
 
@@ -104,7 +103,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   titleSpacing: 5,
                   surfaceTintColor: kWhite,
                   leading: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(10),
                     child: GestureDetector(
                       onTap: () {
                         const ProfileDetails().launch(context);
@@ -146,7 +145,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   actions: const [
                     Padding(
-                      padding: EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(15.0),
                       child: Badge(
 
                           child: Icon(FeatherIcons.bell,color: kTitleColor,)),

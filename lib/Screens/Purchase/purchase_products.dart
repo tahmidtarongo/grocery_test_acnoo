@@ -65,8 +65,8 @@ class _PurchaseProductsState extends State<PurchaseProducts> {
     return Consumer(builder: (context, ref, __) {
       final providerData = ref.watch(cartNotifierPurchase);
       final productList = ref.watch(productProvider);
-
       return Scaffold(
+        backgroundColor: kWhite,
         appBar: AppBar(
           title: Text(
             lang.S.of(context).productList,

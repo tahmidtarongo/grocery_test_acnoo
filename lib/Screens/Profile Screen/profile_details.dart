@@ -30,6 +30,7 @@ class _ProfileDetailsState extends State<ProfileDetails> {
         TextEditingController nameController = TextEditingController(text: details.companyName);
         TextEditingController categoryController = TextEditingController(text: details.category?.name);
         return Scaffold(
+          backgroundColor: kWhite,
           appBar: AppBar(
             title: Text(
               lang.S.of(context).profile,
@@ -132,7 +133,7 @@ class _ProfileDetailsState extends State<ProfileDetails> {
                       readOnly: true,
                       cursorColor: kGreyTextColor,
                       controller: nameController,
-                      decoration: InputDecoration(
+                      decoration: kInputDecoration.copyWith(
                         labelText: lang.S.of(context).name,
                         border: const OutlineInputBorder().copyWith(borderSide: const BorderSide(color: kGreyTextColor)),
                         hoverColor: kGreyTextColor,
@@ -149,7 +150,7 @@ class _ProfileDetailsState extends State<ProfileDetails> {
                       readOnly: true,
                       cursorColor: kGreyTextColor,
                       controller: categoryController,
-                      decoration: InputDecoration(
+                      decoration: kInputDecoration.copyWith(
                         labelText: lang.S.of(context).businessCat,
                         border: const OutlineInputBorder().copyWith(borderSide: const BorderSide(color: kGreyTextColor)),
                         hoverColor: kGreyTextColor,
@@ -166,7 +167,7 @@ class _ProfileDetailsState extends State<ProfileDetails> {
                       readOnly: true,
                       cursorColor: kGreyTextColor,
                       controller: phoneController,
-                      decoration: InputDecoration(
+                      decoration: kInputDecoration.copyWith(
                         labelText: lang.S.of(context).phone,
                         border: const OutlineInputBorder().copyWith(borderSide: const BorderSide(color: kGreyTextColor)),
                         hoverColor: kGreyTextColor,
@@ -183,7 +184,7 @@ class _ProfileDetailsState extends State<ProfileDetails> {
                       readOnly: true,
                       cursorColor: kGreyTextColor,
                       controller: addressController,
-                      decoration: InputDecoration(
+                      decoration: kInputDecoration.copyWith(
                         labelText: lang.S.of(context).address,
                         border: const OutlineInputBorder().copyWith(borderSide: const BorderSide(color: kGreyTextColor)),
                         hoverColor: kGreyTextColor,
@@ -200,7 +201,7 @@ class _ProfileDetailsState extends State<ProfileDetails> {
                       readOnly: true,
                       cursorColor: kGreyTextColor,
                       controller: openingBalanceController,
-                      decoration: InputDecoration(
+                      decoration: kInputDecoration.copyWith(
                         labelText: 'Shop Opening Balance',
                         border: const OutlineInputBorder().copyWith(borderSide: const BorderSide(color: kGreyTextColor)),
                         hoverColor: kGreyTextColor,
@@ -217,7 +218,7 @@ class _ProfileDetailsState extends State<ProfileDetails> {
                       readOnly: true,
                       cursorColor: kGreyTextColor,
                       controller: remainingBalanceController,
-                      decoration: InputDecoration(
+                      decoration: kInputDecoration.copyWith(
                         labelText: 'Shop Remaining Balance',
                         border: const OutlineInputBorder().copyWith(borderSide: const BorderSide(color: kGreyTextColor)),
                         hoverColor: kGreyTextColor,

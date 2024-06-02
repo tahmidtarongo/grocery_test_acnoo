@@ -55,6 +55,7 @@ class _SalesReportScreenState extends State<SalesReportScreen> {
   Widget build(BuildContext context) {
     totalSale = 0;
     return Scaffold(
+      backgroundColor: kWhite,
       appBar: AppBar(
         title: Text(
           lang.S.of(context).salesReport,

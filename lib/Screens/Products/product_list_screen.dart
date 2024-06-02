@@ -25,8 +25,10 @@ class _ProductListState extends State<ProductList> {
       builder: (context, ref, __) {
         final providerData = ref.watch(productProvider);
         return Scaffold(
+          backgroundColor: kWhite,
           appBar: AppBar(
             backgroundColor: Colors.white,
+            surfaceTintColor: kWhite,
             elevation: 0,
             iconTheme: const IconThemeData(color: Colors.black),
             title: Text(

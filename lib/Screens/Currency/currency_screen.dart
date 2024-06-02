@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Screens/Currency/Provider/currency_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import '../../constant.dart';
 import '../../currency.dart';
 import 'Model/currency_model.dart';
@@ -23,6 +22,7 @@ class _CurrencyScreenState extends State<CurrencyScreen> {
     return Consumer(builder: (context, ref, __) {
       final currencyData = ref.watch(currencyProvider);
       return Scaffold(
+        backgroundColor: kWhite,
         resizeToAvoidBottomInset: true,
         appBar: AppBar(
           backgroundColor: Colors.white,
@@ -46,19 +46,38 @@ class _CurrencyScreenState extends State<CurrencyScreen> {
                   itemCount: data.length,
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, int index) {
-                    return Card(
-                      child: ListTile(
-                        selected: selectedCurrency.name == data[index].name,
-                        selectedColor: Colors.white,
-                        selectedTileColor: kMainColor.withOpacity(.7),
-                        onTap: () {
-                          setState(() {
-                            selectedCurrency = data[index];
-                          });
-                        },
-                        title: Text('${data[index].name} - ${data[index].symbol}'),
-                        trailing: const Icon(
-                          (Icons.arrow_forward_ios),
+                    return Padding(
+                      padding: const EdgeInsets.only(bottom: 15),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(6),
+                          color: selectedCurrency.name == data[index].name?kMainColor:kWhite,
+                          boxShadow: [
+                            BoxShadow(
+                                color: const Color(0xff0C1A4B).withOpacity(0.24),
+                                blurRadius: 1
+                            ),
+                            BoxShadow(
+                                color: const Color(0xff473232).withOpacity(0.05),
+                                offset: const Offset(0, 3),
+                                spreadRadius: -1,
+                                blurRadius: 8
+                            )
+                          ],
+                        ),
+                        child: ListTile(
+                          selected: selectedCurrency.name == data[index].name,
+                          selectedColor: Colors.white,
+                          // selectedTileColor: kMainColor.withOpacity(.7),
+                          onTap: () {
+                            setState(() {
+                              selectedCurrency = data[index];
+                            });
+                          },
+                          title: Text('${data[index].name} - ${data[index].symbol}'),
+                          trailing: const Icon(
+                            (Icons.arrow_forward_ios),
+                          ),
                         ),
                       ),
                     );

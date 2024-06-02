@@ -97,7 +97,9 @@ class _AddProductState extends State<AddProduct> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kWhite,
       appBar: AppBar(
+        surfaceTintColor: kWhite,
         backgroundColor: Colors.white,
         iconTheme: const IconThemeData(color: Colors.black),
         title: Text(
@@ -129,7 +131,7 @@ class _AddProductState extends State<AddProduct> {
                         // You can add more validation logic as needed
                         return null;
                       },
-                      decoration: InputDecoration(
+                      decoration: kInputDecoration.copyWith(
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         labelText: lang.S.of(context).productName,
                         hintText: 'Enter product Name',
@@ -157,7 +159,7 @@ class _AddProductState extends State<AddProduct> {
                           selectedCategory = data.categoryName;
                         });
                       },
-                      decoration: const InputDecoration(
+                      decoration: kInputDecoration.copyWith(
                         suffixIcon: Icon(Icons.keyboard_arrow_down),
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         labelText: 'Product Category',
@@ -176,7 +178,7 @@ class _AddProductState extends State<AddProduct> {
                           child: TextFormField(
                             validator: (value) => null,
                             controller: sizeController,
-                            decoration: InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).size,
                               hintText: 'Enter Size',
@@ -190,7 +192,7 @@ class _AddProductState extends State<AddProduct> {
                           padding: const EdgeInsets.all(10.0),
                           child: TextFormField(
                             controller: colorController,
-                            decoration: InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).color,
                               hintText: 'Enter color',
@@ -210,7 +212,7 @@ class _AddProductState extends State<AddProduct> {
                           padding: const EdgeInsets.all(10.0),
                           child: TextFormField(
                             controller: weightController,
-                            decoration: InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).weight,
                               hintText: 'Enter weight',
@@ -224,7 +226,7 @@ class _AddProductState extends State<AddProduct> {
                           padding: const EdgeInsets.all(10.0),
                           child: TextFormField(
                             controller: capacityController,
-                            decoration: InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).capacity,
                               hintText: 'Enter Capacity',
@@ -241,7 +243,7 @@ class _AddProductState extends State<AddProduct> {
                     padding: const EdgeInsets.all(10.0),
                     child: TextFormField(
                       controller: typeController,
-                      decoration: InputDecoration(
+                      decoration: kInputDecoration.copyWith(
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         labelText: lang.S.of(context).type,
                         hintText: 'Enter Type',
@@ -265,7 +267,7 @@ class _AddProductState extends State<AddProduct> {
                           brandController.text = selectedBrand?.brandName ?? '';
                         });
                       },
-                      decoration: const InputDecoration(
+                      decoration: kInputDecoration.copyWith(
                         suffixIcon: Icon(Icons.keyboard_arrow_down),
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         labelText: 'Product Brand',
@@ -307,7 +309,7 @@ class _AddProductState extends State<AddProduct> {
                                 });
                               }
                             },
-                            decoration: InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).productCode,
                               hintText: promoCodeHint,
@@ -356,7 +358,7 @@ class _AddProductState extends State<AddProduct> {
                             },
                             inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
                             keyboardType: TextInputType.number,
-                            decoration: InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).stock,
                               hintText: 'Enter stock',
@@ -380,7 +382,7 @@ class _AddProductState extends State<AddProduct> {
                                 productUnitController.text = selectedUnit?.unitName ?? '';
                               });
                             },
-                            decoration: const InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               suffixIcon: Icon(Icons.keyboard_arrow_down),
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: 'Product Unit',
@@ -410,7 +412,7 @@ class _AddProductState extends State<AddProduct> {
                             },
                             inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
                             keyboardType: TextInputType.number,
-                            decoration: InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).purchasePrice,
                               hintText: 'Enter Purchase price',
@@ -433,7 +435,7 @@ class _AddProductState extends State<AddProduct> {
                             },
                             inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
                             keyboardType: TextInputType.number,
-                            decoration: InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).mrp,
                               hintText: 'Enter Salting price',
@@ -455,7 +457,7 @@ class _AddProductState extends State<AddProduct> {
                             controller: wholeSalePriceController,
                             inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
                             keyboardType: TextInputType.number,
-                            decoration: InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).wholeSalePrice,
                               hintText: 'Enter wholesale price',
@@ -471,7 +473,7 @@ class _AddProductState extends State<AddProduct> {
                             controller: dealerPriceController,
                             inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
                             keyboardType: TextInputType.number,
-                            decoration: InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).dealerPrice,
                               hintText: 'Enter dealer price',
@@ -491,7 +493,7 @@ class _AddProductState extends State<AddProduct> {
                           controller: discountPriceController,
                           inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
                           keyboardType: TextInputType.number,
-                          decoration: InputDecoration(
+                          decoration: kInputDecoration.copyWith(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             labelText: lang.S.of(context).discount,
                             hintText: 'Enter discount',
@@ -504,7 +506,7 @@ class _AddProductState extends State<AddProduct> {
                           padding: const EdgeInsets.all(10.0),
                           child: TextFormField(
                             controller: manufacturerController,
-                            decoration: InputDecoration(
+                            decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).manufacturer,
                               hintText: 'Enter manufacturer name',

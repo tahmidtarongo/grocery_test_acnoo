@@ -47,6 +47,7 @@ class _PurchaseReportState extends State<PurchaseReportScreen> {
   Widget build(BuildContext context) {
     totalPurchase = 0;
     return Scaffold(
+      backgroundColor: kWhite,
       appBar: AppBar(
         title: Text(
           lang.S.of(context).purchaseReport,

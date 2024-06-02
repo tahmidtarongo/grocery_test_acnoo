@@ -22,6 +22,7 @@ class _UserRoleScreenState extends State<UserRoleScreen> {
     return Consumer(builder: (context, ref, __) {
       final userRoleData = ref.watch(userRoleProvider);
       return Scaffold(
+        backgroundColor: kWhite,
         resizeToAvoidBottomInset: true,
         appBar: AppBar(
           backgroundColor: Colors.white,
@@ -37,7 +38,7 @@ class _UserRoleScreenState extends State<UserRoleScreen> {
         ),
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(16.0),
             child: userRoleData.when(data: (users) {
               if (users.isNotEmpty) {
                 return ListView.builder(
@@ -45,17 +46,36 @@ class _UserRoleScreenState extends State<UserRoleScreen> {
                   itemCount: users.length,
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, int index) {
-                    return Card(
-                      child: ListTile(
-                        onTap: () {
-                          UserRoleDetails(
-                            userRoleModel: users[index],
-                          ).launch(context);
-                        },
-                        title: Text(users[index].phone ?? ''),
-                        subtitle: Text(users[index].name ?? ''),
-                        trailing: const Icon(
-                          (Icons.arrow_forward_ios),
+                    return Padding(
+                      padding: const EdgeInsets.only(bottom: 15),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(6),
+                          color: kWhite,
+                          boxShadow: [
+                            BoxShadow(
+                                color: const Color(0xff0C1A4B).withOpacity(0.24),
+                                blurRadius: 1
+                            ),
+                            BoxShadow(
+                                color: const Color(0xff473232).withOpacity(0.05),
+                                offset: const Offset(0, 3),
+                                spreadRadius: -1,
+                                blurRadius: 8
+                            )
+                          ],
+                        ),
+                        child: ListTile(
+                          visualDensity: VisualDensity(vertical: -4,horizontal: -4),
+                          contentPadding: EdgeInsets.symmetric(horizontal: 10),
+                          onTap: () {
+                            UserRoleDetails(
+                              userRoleModel: users[index],
+                            ).launch(context);
+                          },
+                          title: Text(users[index].phone ?? ''),
+                          subtitle: Text(users[index].name ?? ''),
+                          trailing:  const Icon(Icons.arrow_forward_ios,color: kGreyTextColor,size: 20,),
                         ),
                       ),
                     );

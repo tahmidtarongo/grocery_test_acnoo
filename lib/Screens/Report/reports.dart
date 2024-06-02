@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Screens/Report/Screens/due_report_screen.dart';
+import 'package:mobile_pos/Screens/Report/Screens/expense_report.dart';
+import 'package:mobile_pos/Screens/Report/Screens/income_report.dart';
 import 'package:mobile_pos/Screens/Report/Screens/purchase_report.dart';
 import 'package:mobile_pos/Screens/Report/Screens/sales_report_screen.dart';
 import 'package:mobile_pos/constant.dart';
@@ -19,6 +22,7 @@ class _ReportsState extends State<Reports> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kWhite,
       appBar: AppBar(
         title: Text(
           lang.S.of(context).reports,
@@ -32,27 +36,46 @@ class _ReportsState extends State<Reports> {
         backgroundColor: Colors.white,
         elevation: 0.0,
       ),
-      body: Column(
-        children: [
-          ReportCard(
-              pressed: () {
-                const PurchaseReportScreen().launch(context);
-              },
-              iconPath: 'images/purchase.png',
-              title: lang.S.of(context).purchaseReport),
-          ReportCard(
-              pressed: () {
-                const SalesReportScreen().launch(context);
-              },
-              iconPath: 'images/sales.png',
-              title: lang.S.of(context).salesReport),
-          ReportCard(
-              pressed: () {
-                const DueReportScreen().launch(context);
-              },
-              iconPath: 'images/duelist.png',
-              title: lang.S.of(context).dueReport),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            ReportCard(
+                pressed: () {
+                  const SalesReportScreen().launch(context);
+                },
+                iconPath: 'assets/salesReport.svg',
+                title: lang.S.of(context).salesReport),
+            const SizedBox(height: 16,),
+            ReportCard(
+                pressed: () {
+                  const PurchaseReportScreen().launch(context);
+                },
+                iconPath: 'assets/purchaseReport.svg',
+                title: lang.S.of(context).purchaseReport),
+            const SizedBox(height: 16,),
+            ReportCard(
+                pressed: () {
+                  const DueReportScreen().launch(context);
+                },
+                iconPath: 'assets/dueList.svg',
+                title: lang.S.of(context).dueReport),
+            const SizedBox(height: 16,),
+            ReportCard(
+                pressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const IncomeReport()));
+                },
+                iconPath: 'assets/incomeReport.svg',
+                title: 'Income Report'),
+            const SizedBox(height: 16,),
+            ReportCard(
+                pressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const ExpenseReport()));
+                },
+                iconPath: 'assets/expenseReport.svg',
+                title: 'Expense Report'),
+          ],
+        ),
       ),
     );
   }
@@ -75,18 +98,29 @@ class ReportCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: pressed,
-      child: Card(
-        elevation: 0.0,
-        color: Colors.white,
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(6),
+          color: kWhite,
+          boxShadow: [
+            BoxShadow(
+              color: Color(0xff473232).withOpacity(0.05),
+              blurRadius: 8,
+              spreadRadius: -1,
+              offset: Offset(0, 3)
+            ),
+            BoxShadow(
+              color: Color(0xff0C1A4B).withOpacity(0.24),
+              blurRadius: 1
+            )
+          ]
+        ),
+        
         child: Row(
           children: [
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Image(
-                height: 40,
-                width: 40,
-                image: AssetImage(iconPath),
-              ),
+              child: SvgPicture.asset(iconPath,height: 38,width: 38,),
             ),
             Padding(
               padding: const EdgeInsets.all(10.0),
@@ -103,6 +137,7 @@ class ReportCard extends StatelessWidget {
               child: Icon(
                 Icons.arrow_forward_ios,
                 color: kMainColor,
+                size: 18,
               ),
             ),
           ],

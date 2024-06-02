@@ -10,17 +10,15 @@ class GridItems {
 List<GridItems> getFreeIcons({required BuildContext context}) {
   List<GridItems> freeIcons = [
     GridItems(title: lang.S.of(context).sale, icon: 'assets/sales.svg', route: 'Sales'),
-
     GridItems(title: lang.S.of(context).parties, icon: 'assets/parties.svg', route: 'Parties'),
     GridItems(title: lang.S.of(context).purchase, icon: 'assets/purchase.svg', route: 'Purchase'),
     GridItems(title: lang.S.of(context).product, icon: 'assets/products.svg', route: 'Products'),
     GridItems(title: lang.S.of(context).dueList, icon: 'assets/duelist.svg', route: 'Due List'),
     GridItems(title: lang.S.of(context).stockList, icon: 'assets/stock.svg', route: 'Stock'),
-
     GridItems(title: lang.S.of(context).reports, icon: 'assets/reports.svg', route: 'Reports'),
     GridItems(
       title: lang.S.of(context).saleList,
-      icon: 'assets/salesList.svg',
+      icon: 'assets/saleslist.svg',
       route: 'Sales List',
     ),
     GridItems(

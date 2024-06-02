@@ -48,6 +48,7 @@ class _AddPartyState extends State<AddParty> {
       return Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
+          surfaceTintColor: kWhite,
           backgroundColor: Colors.white,
           title: Text(
             lang.S.of(context).addContact,
@@ -237,6 +238,7 @@ class _AddPartyState extends State<AddParty> {
                   dividerColor: Colors.white,
                   children: [
                     ExpansionPanel(
+                      backgroundColor: kWhite,
                       headerBuilder: (BuildContext context, bool isExpanded) {
                         return Column(
                           mainAxisSize: MainAxisSize.min,
@@ -266,6 +268,7 @@ class _AddPartyState extends State<AddParty> {
                                   context: context,
                                   builder: (BuildContext context) {
                                     return Dialog(
+                                      backgroundColor: kWhite,
                                       shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(12.0),
                                       ),

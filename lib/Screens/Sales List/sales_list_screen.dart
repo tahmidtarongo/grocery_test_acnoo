@@ -34,6 +34,7 @@ class _SalesListScreenState extends State<SalesListScreen> {
         return await const Home().launch(context, isNewTask: true);
       },
       child: Scaffold(
+        backgroundColor: kWhite,
         appBar: AppBar(
           title: Text(
             lang.S.of(context).saleList,

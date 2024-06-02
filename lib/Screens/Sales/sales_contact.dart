@@ -30,6 +30,7 @@ class _SalesContactState extends State<SalesContact> {
       final providerData = ref.watch(partiesProvider);
       final cart = ref.watch(cartNotifier);
       return Scaffold(
+        backgroundColor: kWhite,
         resizeToAvoidBottomInset: true,
         appBar: AppBar(
           backgroundColor: Colors.white,
@@ -289,7 +290,11 @@ class _SalesContactState extends State<SalesContact> {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-            child: const Icon(Icons.add),
+          backgroundColor: kMainColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(100)
+          ),
+            child: const Icon(Icons.add,color: kWhite,),
             onPressed: () {
               const AddParty().launch(context);
             }),
