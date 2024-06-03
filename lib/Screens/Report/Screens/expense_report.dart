@@ -13,6 +13,7 @@ class _ExpenseReportState extends State<ExpenseReport> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: kWhite,
       backgroundColor: kWhite,
       appBar: AppBar(
         backgroundColor: kWhite,
