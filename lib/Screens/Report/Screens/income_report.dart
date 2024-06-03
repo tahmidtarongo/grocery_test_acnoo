@@ -14,6 +14,21 @@ class _IncomeReportState extends State<IncomeReport> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kWhite,
+      bottomNavigationBar: Container(
+        height: 50,
+        width: double.infinity,
+        padding: EdgeInsets.symmetric(horizontal: 16),
+        decoration: const BoxDecoration(
+          color: Color(0xffFEF0F1)
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text('Total:',style: gTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor),),
+            Text('$currency 380',style: gTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor),),
+          ],
+        ),
+      ),
       appBar: AppBar(
         backgroundColor: kWhite,
         title: const Text('Income Report'),

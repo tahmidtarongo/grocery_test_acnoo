@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Const/api_config.dart';
+import 'package:mobile_pos/Screens/DashBoard/dashboard.dart';
 import 'package:mobile_pos/Screens/Profile%20Screen/profile_details.dart';
 import 'package:mobile_pos/Screens/User%20Roles/user_role_screen.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
@@ -137,8 +138,6 @@ class _SettingScreenState extends State<SettingScreen> {
                   ),
                 ),
                 ListTile(
-                  // visualDensity: const VisualDensity(horizontal: -4,vertical: -4),
-                  // contentPadding: const EdgeInsets.symmetric(horizontal: 16),
                   title: Text(
                     lang.S.of(context).profile,
                     style: GoogleFonts.poppins(
@@ -213,6 +212,34 @@ class _SettingScreenState extends State<SettingScreen> {
                     const PackageScreen().launch(context);
                   },
                   leading: SvgPicture.asset('assets/subscription.svg',height: 36,width: 36,),
+                  trailing: const Icon(
+                    Icons.arrow_forward_ios,
+                    color: kGreyTextColor,
+                    size: 18,
+                  ),
+                ),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: Divider(
+                    thickness: 1.0,
+                    height: 1,
+                    color: kBorderColorTextField,
+                  ),
+                ),
+
+                ///_________DashBoard_____________________________________________________
+                ListTile(
+                  title: Text(
+                    'Dashboard',
+                    style: GoogleFonts.poppins(
+                      color: Colors.black,
+                      fontSize: 16.0,
+                    ),
+                  ),
+                  onTap: () {
+                    const DashboardScreen().launch(context);
+                  },
+                  leading: SvgPicture.asset('assets/dashboard.svg',height: 36,width: 36,),
                   trailing: const Icon(
                     Icons.arrow_forward_ios,
                     color: kGreyTextColor,

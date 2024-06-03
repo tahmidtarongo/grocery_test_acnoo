@@ -10,6 +10,7 @@ import 'package:nb_utils/nb_utils.dart';
 
 import '../../Provider/add_to_cart.dart';
 import '../../currency.dart';
+import '../Home/home_screen.dart';
 
 class PaymentCompleted extends StatefulWidget {
   const PaymentCompleted({Key? key}) : super(key: key);

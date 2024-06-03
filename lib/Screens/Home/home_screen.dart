@@ -6,6 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Const/api_config.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
+import 'package:mobile_pos/Screens/DashBoard/dashboard.dart';
 import 'package:mobile_pos/Screens/Home/components/grid_items.dart';
 import 'package:mobile_pos/Screens/Profile%20Screen/profile_details.dart';
 import 'package:mobile_pos/currency.dart';
@@ -63,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     const Spacer(),
                     IconButton(
                         padding: EdgeInsets.zero,
-                        visualDensity: VisualDensity(horizontal: -4,vertical: -4),
+                        visualDensity: const VisualDensity(horizontal: -4,vertical: -4),
                         onPressed: (){
                           Navigator.pop(context);
                         },
@@ -77,8 +78,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 Text('Your Free Package is almost done, buy your next plan Thanks.',style: gTextStyle.copyWith(color: kGreyTextColor),textAlign: TextAlign.center,),
                 const SizedBox(height: 20,),
                 UpdateButton(text: 'Upgrade Now', onpressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const PackageScreen()));
                 }),
-                SizedBox(height: 5,),
+                const SizedBox(height: 5,),
               ],
             ),
           );
@@ -269,7 +271,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                 children: [
                                   Text('Today’s Summary',style: gTextStyle.copyWith(fontWeight: FontWeight.bold,color: kWhite,fontSize: 18),),
                                   const Spacer(),
-                                  const Text('Sell All >',style: TextStyle(color: kWhite,fontWeight: FontWeight.w500),),
+                                  GestureDetector(
+                                      onTap: (){
+                                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const DashboardScreen()));
+                                      },
+                                      child: const Text('Sell All >',style: TextStyle(color: kWhite,fontWeight: FontWeight.w500),)),
                                 ],
                               ),
                               const SizedBox(height: 10,),

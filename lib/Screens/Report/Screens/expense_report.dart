@@ -19,11 +19,26 @@ class _ExpenseReportState extends State<ExpenseReport> {
         title: const Text('Expense Report'),
         surfaceTintColor: kWhite,
       ),
+      bottomNavigationBar: Container(
+        height: 50,
+        width: double.infinity,
+        padding: EdgeInsets.symmetric(horizontal: 16),
+        decoration: const BoxDecoration(
+            color: Color(0xffFEF0F1)
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text('Total:',style: gTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor),),
+            Text('$currency 500',style: gTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor),),
+          ],
+        ),
+      ),
       body: Column(
         children: [
           Container(
-            padding: EdgeInsets.all(16),
-            decoration: BoxDecoration(
+            padding: const EdgeInsets.all(16),
+            decoration: const BoxDecoration(
               color: Color(0xffFEF0F1),
             ),
             child: Row(

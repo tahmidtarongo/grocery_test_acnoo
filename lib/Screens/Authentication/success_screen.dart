@@ -10,6 +10,7 @@ import 'package:nb_utils/nb_utils.dart';
 
 import '../../constant.dart';
 import '../Home/home.dart';
+import '../Home/home_screen.dart';
 
 class SuccessScreen extends StatelessWidget {
   const SuccessScreen({Key? key, required this.email}) : super(key: key);

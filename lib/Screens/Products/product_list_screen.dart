@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Const/api_config.dart';
 import 'package:mobile_pos/Provider/product_provider.dart';
+import 'package:mobile_pos/Screens/Products/product_details.dart';
 import 'package:mobile_pos/Screens/Products/update_product.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
@@ -49,7 +50,7 @@ class _ProductListState extends State<ProductList> {
                       itemBuilder: (_, i) {
                         return ListTile(
                           onTap: () {
-                            UpdateProduct(productModel: products[i]).launch(context);
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>const ProductDetails()));
                           },
                           leading: Container(
                             height: 50,

@@ -14,6 +14,7 @@ import '../../../Provider/profile_provider.dart';
 import '../../../constant.dart';
 import '../../currency.dart';
 import '../Home/home.dart';
+import '../Home/home_screen.dart';
 
 class LossProfitScreen extends StatefulWidget {
   const LossProfitScreen({Key? key}) : super(key: key);

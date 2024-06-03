@@ -10,10 +10,12 @@ import 'package:mobile_pos/Provider/print_purchase_invoice_provider.dart';
 import 'package:mobile_pos/Provider/transactions_provider.dart';
 import 'package:mobile_pos/Screens/Customers/edit_customer.dart';
 import 'package:mobile_pos/Screens/Customers/sms_sent_confirmation.dart';
+import 'package:mobile_pos/Screens/Customers/transaction_screen.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../../GlobalComponents/button_global.dart';
 import '../../PDF Invoice/generate_pdf.dart';
 import '../../Provider/print_sales_invoice_provider.dart';
 import '../../Provider/profile_provider.dart';
@@ -302,6 +304,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                     widget.party.type != 'Supplier'
                         ? providerData.when(data: (transaction) {
                             return ListView.builder(
+                              padding: EdgeInsets.zero,
                               shrinkWrap: true,
                               physics: const NeverScrollableScrollPhysics(),
                               itemCount: transaction.length,
@@ -338,7 +341,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                 children: [
                                                   Container(
-                                                    padding: const EdgeInsets.all(8),
+                                                    // padding: const EdgeInsets.all(8),
                                                     decoration: BoxDecoration(
                                                         color: transaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d).withOpacity(0.1) : const Color(0xFFED1A3B).withOpacity(0.1),
                                                         borderRadius: const BorderRadius.all(Radius.circular(10))),
@@ -389,6 +392,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                                                                                 mainAxisSize: MainAxisSize.min,
                                                                                 children: [
                                                                                   ListView.builder(
+                                                                                    padding: EdgeInsets.zero,
                                                                                     shrinkWrap: true,
                                                                                     itemCount: printerData.availableBluetoothDevices.isNotEmpty
                                                                                         ? printerData.availableBluetoothDevices.length
@@ -505,7 +509,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                                     child: Column(
                                       children: [
                                         Container(
-                                          padding: const EdgeInsets.all(20),
+                                          // padding: const EdgeInsets.all(20),
                                           width: context.width(),
                                           child: Column(
                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -681,13 +685,15 @@ class _CustomerDetailsState extends State<CustomerDetails> {
             ),
           ),
         ),
-        // bottomNavigationBar: ButtonGlobal(
-        //   iconWidget: null,
-        //   buttontext: lang.S.of(context).viewAll,
-        //   iconColor: Colors.white,
-        //   buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
-        //   onPressed: () {},
-        // ),
+        bottomNavigationBar: ButtonGlobal(
+          iconWidget: null,
+          buttontext: lang.S.of(context).viewAll,
+          iconColor: Colors.white,
+          buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>const CustomerAllTransactionScreen()));
+          },
+        ),
       );
     });
   }
