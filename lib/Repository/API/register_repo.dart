@@ -24,7 +24,7 @@ class RegisterRepo {
       final responseData = jsonDecode(response.body);
       if (response.statusCode == 200) {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(responseData['message'])));
-        await saveUserData(userData: responseData['data']);
+        // await saveUserData(userData: responseData['data']);
 
         return true;
       } else {

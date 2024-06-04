@@ -7,6 +7,7 @@ import 'package:nb_utils/nb_utils.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../constant.dart';
+import '../Authentication/Sign In/sign_in_screen.dart';
 
 class OnBoard extends StatefulWidget {
   const OnBoard({Key? key}) : super(key: key);
@@ -57,7 +58,11 @@ class _OnBoardState extends State<OnBoard> {
             padding: const EdgeInsets.all(8),
             child: TextButton(
               onPressed: () {
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const PhoneAuth(),));
+                Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SignIn(),
+                    ));
               },
               child: Text(
                 lang.S.of(context).skip,
@@ -124,14 +129,9 @@ class _OnBoardState extends State<OnBoard> {
           ),
           Center(
             child: SmoothPageIndicator(
-                controller: pageController,
-                count: sliderList.length,
-                effect: ExpandingDotsEffect(
-                  dotColor: kMainColor.withOpacity(0.2),
-                  activeDotColor: kMainColor,
-                  dotHeight: 8,
-                  dotWidth: 8
-                ),
+              controller: pageController,
+              count: sliderList.length,
+              effect: ExpandingDotsEffect(dotColor: kMainColor.withOpacity(0.2), activeDotColor: kMainColor, dotHeight: 8, dotWidth: 8),
             ),
           ),
           // DotIndicator(
@@ -153,7 +153,13 @@ class _OnBoardState extends State<OnBoard> {
               onPressed: () {
                 setState(
                   () {
-                    currentIndexPage < 2 ? pageController.nextPage(duration: const Duration(microseconds: 1000), curve: Curves.bounceInOut) : Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const PhoneAuth(),));
+                    currentIndexPage < 2
+                        ? pageController.nextPage(duration: const Duration(microseconds: 1000), curve: Curves.bounceInOut)
+                        : Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const SignIn(),
+                            ));
                     // : const SignInScreen().launch(context);
                   },
                 );

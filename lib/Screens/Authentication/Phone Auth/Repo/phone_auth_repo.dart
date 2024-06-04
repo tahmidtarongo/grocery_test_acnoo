@@ -65,7 +65,7 @@ class PhoneAuthRepo {
       EasyLoading.dismiss();
       if (response.statusCode == 200) {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(data['message'])));
-        await saveUserData(userData: data);
+        // await saveUserData(userData: data);
         bool isSetup = data['is_setup'] ?? false;
         if (isSetup) {
           Navigator.push(context, MaterialPageRoute(builder: (context) => SuccessScreen(email: 'phone')));
