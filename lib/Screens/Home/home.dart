@@ -1,6 +1,7 @@
 import 'package:circle_nav_bar/circle_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:iconly/iconly.dart';
 import 'package:mobile_pos/Screens/Home/home_screen.dart';
 import 'package:mobile_pos/Screens/Report/reports.dart';
@@ -127,38 +128,38 @@ class _HomeState extends State<Home> {
         ),
 
         bottomNavigationBar: CircleNavBar(
-          activeIcons:  const [
-            Icon(IconlyBold.home, color: kMainColor),
-            Icon(FeatherIcons.shoppingCart, color: kMainColor),
-            Icon(FeatherIcons.fileText, color: kMainColor),
-            Icon(FeatherIcons.settings, color: kMainColor),
+          activeIcons:   [
+            SvgPicture.asset('assets/cHome.svg',fit: BoxFit.scaleDown,height: 28,width: 28,),
+            SvgPicture.asset('assets/cCart.svg',height: 28,width: 28,fit: BoxFit.scaleDown,),
+            SvgPicture.asset('assets/cFile.svg',height: 28,width: 28,fit: BoxFit.scaleDown,),
+            SvgPicture.asset('assets/cSetting.svg',height: 28,width: 28,fit: BoxFit.scaleDown,),
           ],
-          inactiveIcons: const [
+          inactiveIcons:  [
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(IconlyLight.home, color: kGreyTextColor),
-                Text("Home",style: TextStyle(color: kGreyTextColor),),
+                SvgPicture.asset('assets/home.svg',height: 24,width: 24,color: kGreyTextColor,),
+                const Text("Home",style: TextStyle(color: kGreyTextColor),),
               ],
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(FeatherIcons.shoppingCart, color: kGreyTextColor),
-                Text("Sales",style: TextStyle(color: kGreyTextColor),),
+                SvgPicture.asset('assets/cart.svg',height: 24,width: 24,color: kGreyTextColor,),
+                const Text("Sales",style: TextStyle(color: kGreyTextColor),),
               ],
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(FeatherIcons.fileText, color: kGreyTextColor),
+                SvgPicture.asset('assets/file.svg',height: 24,width: 24,color: kGreyTextColor,),
                 Text("Reports",style: TextStyle(color: kGreyTextColor),),
               ],
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(FeatherIcons.settings, color: kGreyTextColor),
+                SvgPicture.asset('assets/setting.svg',height: 24,width: 24,color: kGreyTextColor,),
                 Text("Setting",style: TextStyle(color: kGreyTextColor),),
               ],
             ),

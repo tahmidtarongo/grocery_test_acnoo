@@ -24,6 +24,7 @@ class SuccessScreen extends StatelessWidget {
       final userRoleData = ref.watch(businessInfoProvider);
       return userRoleData.when(data: (data) {
         return Scaffold(
+          backgroundColor: kWhite,
           resizeToAvoidBottomInset: true,
           body: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -33,7 +34,7 @@ class SuccessScreen extends StatelessWidget {
               Text(
                 lang.S.of(context).congratulation,
                 style: GoogleFonts.poppins(
-                  fontSize: 25.0,
+                  fontSize: 24.0,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
                 ),
@@ -47,22 +48,34 @@ class SuccessScreen extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: GoogleFonts.poppins(
                     color: kGreyTextColor,
-                    fontSize: 20.0,
+                    fontSize: 16.0,
                   ),
                 ),
               ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ButtonGlobalWithoutIcon(
+                  buttontext: lang.S.of(context).continueButton,
+                          buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
+                          onPressed: () {
+                          const Home().launch(context);
+                          // Navigator.pushNamed(context, '/home');
+                          },
+                          buttonTextColor: Colors.white,
+                          ),
+                )
             ],
-          ),
-          bottomNavigationBar: ButtonGlobalWithoutIcon(
-            buttontext: lang.S.of(context).continueButton,
-            buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
-            onPressed: () {
-              const Home().launch(context);
-              // Navigator.pushNamed(context, '/home');
-            },
-            buttonTextColor: Colors.white,
-          ),
-        );
+          // ),
+          // bottomNavigationBar: ButtonGlobalWithoutIcon(
+          //   buttontext: lang.S.of(context).continueButton,
+          //   buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
+          //   onPressed: () {
+          //     const Home().launch(context);
+          //     // Navigator.pushNamed(context, '/home');
+          //   },
+          //   buttonTextColor: Colors.white,
+          // ),
+        ));
       }, error: (e, stack) {
         return Text(e.toString());
       }, loading: () {
