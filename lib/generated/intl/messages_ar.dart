@@ -54,7 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("جميع حلول الأعمال"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "POSproo هو حلاً شاملاً للأعمال مع الأسهم والحسابات والمبيعات والمصروفات والخسائر / الأرباح."),
+            "POSpro هو حلاً شاملاً للأعمال مع الأسهم والحسابات والمبيعات والمصروفات والخسائر / الأرباح."),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("اسم التصنيف"),
         "amount": MessageLookupByLibrary.simpleMessage("كمية"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
@@ -86,7 +86,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "chooseSupplier": MessageLookupByLibrary.simpleMessage("اختر موردًا"),
         "choseYourFeature": MessageLookupByLibrary.simpleMessage("اختر ميزاتك"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "الميزات هي الجزء الهام الذي يجعل POSproo مختلفًا عن الحلول التقليدية."),
+            "الميزات هي الجزء الهام الذي يجعلPosPro مختلفًا عن الحلول التقليدية."),
         "clarence": MessageLookupByLibrary.simpleMessage("كلارنس"),
         "clickToConnect": MessageLookupByLibrary.simpleMessage("انقر للاتصال"),
         "close": MessageLookupByLibrary.simpleMessage("يغلق"),
@@ -128,7 +128,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "سهولة استخدام نقاط البيع المحمولة"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "تطبيق POSproo مجاني وسهل الاستخدام. في الواقع، إنه واحد من أفضل أنظمة نقاط البيع حول العالم."),
+            "تطبيق POSpro مجاني وسهل الاستخدام. في الواقع، إنه واحد من أفضل أنظمة نقاط البيع حول العالم."),
         "edit": MessageLookupByLibrary.simpleMessage("يحرر"),
         "editPhone": MessageLookupByLibrary.simpleMessage("تحرير رقم الهاتف؟"),
         "editPurchaseInvoice":

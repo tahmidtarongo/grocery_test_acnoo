@@ -57,7 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Alle Geschäftslösungen"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "POSproo ist eine komplette Geschäftslösung mit Lagerbestand, Konten, Verkäufen, Ausgaben und Gewinn/Verlust."),
+            "POSpro ist eine komplette Geschäftslösung mit Lagerbestand, Konten, Verkäufen, Ausgaben und Gewinn/Verlust."),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Già aggiunto"),
         "amount": MessageLookupByLibrary.simpleMessage("Quantità"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
@@ -94,7 +94,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Wählen Sie Ihre Funktionen"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Funktionen sind der wichtige Teil, der POSproo von traditionellen Lösungen unterscheidet."),
+            "Funktionen sind der wichtige Teil, der POSpro von traditionellen Lösungen unterscheidet."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Clicca per connetterti"),
@@ -144,7 +144,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Einfache Nutzung des mobilen POS"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Die POSproo App ist kostenlos und einfach zu bedienen. Tatsächlich gehört sie zu den besten POS-Systemen weltweit."),
+            "Die POSpro App ist kostenlos und einfach zu bedienen. Tatsächlich gehört sie zu den besten POS-Systemen weltweit."),
         "edit": MessageLookupByLibrary.simpleMessage("Modificare"),
         "editPhone": MessageLookupByLibrary.simpleMessage(
             "Modifica numero di telefono?"),

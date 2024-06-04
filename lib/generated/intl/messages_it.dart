@@ -57,7 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
             "Tutte le soluzioni aziendali"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "POSproo è una soluzione aziendale completa con gestione di magazzino, contabilità, vendite, spese e perdite/profitti."),
+            "PosPro è una soluzione aziendale completa con gestione di magazzino, contabilità, vendite, spese e perdite/profitti."),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Già aggiunto"),
         "amount": MessageLookupByLibrary.simpleMessage("Quantità"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
@@ -94,7 +94,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Scegli le tue funzionalità"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Le funzionalità sono la parte importante che rende POSproo diverso dalle soluzioni tradizionali."),
+            "Le funzionalità sono la parte importante che rende PosPro diverso dalle soluzioni tradizionali."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Clicca per connetterti"),
@@ -142,7 +142,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Facile da usare il POS mobile"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "L\'app POSproo è gratuita e facile da usare. In effetti, è uno dei migliori sistemi POS al mondo."),
+            "L\'app PosPro è gratuita e facile da usare. In effetti, è uno dei migliori sistemi POS al mondo."),
         "edit": MessageLookupByLibrary.simpleMessage("Modificare"),
         "editPhone": MessageLookupByLibrary.simpleMessage(
             "Modifica numero di telefono?"),

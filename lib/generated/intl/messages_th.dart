@@ -48,10 +48,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("เพิ่มหน่วย"),
         "addUserRole": MessageLookupByLibrary.simpleMessage("เพิ่มบทบาทผู้ใช้"),
         "address": MessageLookupByLibrary.simpleMessage("ที่อยู่"),
-        "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
-            "สิ่งที่ POSproo มีให้ทั้งหมด"),
+        "allBusinessSolutions":
+            MessageLookupByLibrary.simpleMessage("สิ่งที่ PosPro มีให้ทั้งหมด"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "POSproo เป็นสิ่งที่สมบูรณ์แบบสำหรับธุรกิจด้วยคลังสินค้า บัญชี การขาย ค่าใช้จ่ายและขาดทุน / กำไร"),
+            "PosPro เป็นสิ่งที่สมบูรณ์แบบสำหรับธุรกิจด้วยคลังสินค้า บัญชี การขาย ค่าใช้จ่ายและขาดทุน / กำไร"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("เพิ่มแล้ว"),
         "amount": MessageLookupByLibrary.simpleMessage("จำนวน"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
@@ -82,7 +82,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("เลือกคุณสมบัติของคุณ"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "คุณสมบัติเป็นส่วนสำคัญที่ทำให้ POSproo แตกต่างจากแบบแผนดั้งเดิม"),
+            "คุณสมบัติเป็นส่วนสำคัญที่ทำให้ PosPro แตกต่างจากแบบแผนดั้งเดิม"),
         "clarence": MessageLookupByLibrary.simpleMessage("คลาร์เรนซ์"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("คลิกเพื่อเชื่อมต่อ"),
@@ -126,7 +126,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos":
             MessageLookupByLibrary.simpleMessage("ใช้งาน POS บนมือถือได้ง่าย"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "แอป POSproo ฟรีและใช้งานง่าย ในความเป็นจริง เป็นหนึ่งในระบบ POS ที่ดีที่สุดทั่วโลก"),
+            "แอป PosPro ฟรีและใช้งานง่าย ในความเป็นจริง เป็นหนึ่งในระบบ POS ที่ดีที่สุดทั่วโลก"),
         "edit": MessageLookupByLibrary.simpleMessage("แก้ไข"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("แก้ไขหมายเลขโทรศัพท์?"),

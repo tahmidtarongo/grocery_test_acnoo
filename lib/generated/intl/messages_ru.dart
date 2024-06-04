@@ -56,7 +56,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Все бизнес-решения"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "POSproo - это полное бизнес-решение с учетом склада, счетов, продаж, расходов и прибыли/убытков."),
+            "PosPro - это полное бизнес-решение с учетом склада, счетов, продаж, расходов и прибыли/убытков."),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Уже добавлено"),
         "amount": MessageLookupByLibrary.simpleMessage("Количество"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
@@ -92,7 +92,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Выберите свои функции"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Функции - это важная часть, которая делает POSproo отличной от традиционных решений."),
+            "Функции - это важная часть, которая делает PosPro отличной от традиционных решений."),
         "clarence": MessageLookupByLibrary.simpleMessage("Кларенс"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Нажмите, чтобы подключиться"),
@@ -139,7 +139,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Легко использовать мобильную POS-систему"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Приложение POSproo бесплатное и легкое в использовании. Фактически, это одна из лучших POS-систем в мире."),
+            "Приложение PosPro бесплатное и легкое в использовании. Фактически, это одна из лучших POS-систем в мире."),
         "edit": MessageLookupByLibrary.simpleMessage("Редактировать"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Изменить номер телефона?"),

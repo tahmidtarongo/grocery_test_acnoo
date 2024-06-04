@@ -53,7 +53,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("All business solutions"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "POSproo is a complete business solution with stock, account, sales, expense & loss/profit."),
+            "PosPro is a complete business solution with stock, account, sales, expense & loss/profit."),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Already Added"),
         "amount": MessageLookupByLibrary.simpleMessage("Amount"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
@@ -86,7 +86,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Chose Your Features"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Features are the important part which makes POSproo different from traditional solutions."),
+            "Features are the important part which makes POSpro different from traditional solutions."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Click to connect"),
@@ -132,7 +132,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos":
             MessageLookupByLibrary.simpleMessage("Easy to use mobile pos"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "POSproo app is free, easy to use. In fact, it\'s one of the best  POS systems around the world."),
+            "POSpro app is free, easy to use. In fact, it\'s one of the best  POS systems around the world."),
         "edit": MessageLookupByLibrary.simpleMessage("Edit"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Edit Phone Number ?"),

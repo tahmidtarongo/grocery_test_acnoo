@@ -88,7 +88,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Xüsusiyyətlərinizi Seçin"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Xüsusiyyətlər əsas hissəsidir və POSproo-u ənənəvi həllərdən fərqləndirir."),
+            "Xüsusiyyətlər əsas hissəsidir və POSpro-u ənənəvi həllərdən fərqləndirir."),
         "clarence": MessageLookupByLibrary.simpleMessage("Klarens"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Qoşulmaq üçün klikləyin"),

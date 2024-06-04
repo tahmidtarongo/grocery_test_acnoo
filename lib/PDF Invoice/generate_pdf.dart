@@ -383,7 +383,7 @@ class GeneratePdf {
     if (Platform.isIOS) {
       EasyLoading.show(status: 'Generating PDF');
       final dir = await getApplicationDocumentsDirectory();
-      final file = File('${dir.path}/${'POSproo-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf');
+      final file = File('${dir.path}/${'PosPro-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf');
 
       final byteData = await doc.save();
       try {
@@ -392,11 +392,11 @@ class GeneratePdf {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => PDFViewerPage(path: '${dir.path}/${'POSproo-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf'),
+            builder: (context) => PDFViewerPage(path: '${dir.path}/${'PosPro-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf'),
           ),
         );
 
-        // OpenFile.open("${dir.path}/${'POSproo-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf");
+        // OpenFile.open("${dir.path}/${'PosPro-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf");
       } on FileSystemException catch (err) {
         EasyLoading.showError(err.message);
         // handle error
@@ -411,7 +411,7 @@ class GeneratePdf {
         EasyLoading.show(status: 'Generating PDF');
         const downloadsFolderPath = '/storage/emulated/0/Download/';
         Directory dir = Directory(downloadsFolderPath);
-        final file = File('${dir.path}/${'POSproo-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf');
+        final file = File('${dir.path}/${'PosPro-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf');
 
         final byteData = await doc.save();
         try {
@@ -420,10 +420,10 @@ class GeneratePdf {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => PDFViewerPage(path: '${dir.path}/${'POSproo-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf'),
+              builder: (context) => PDFViewerPage(path: '${dir.path}/${'PosPro-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf'),
             ),
           );
-          // OpenFile.open("/storage/emulated/0/download/${'POSproo-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf");
+          // OpenFile.open("/storage/emulated/0/download/${'PosPro-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf");
         } on FileSystemException catch (err) {
           EasyLoading.showError(err.message);
           // handle error
@@ -439,15 +439,15 @@ class GeneratePdf {
     //   if (status.isGranted) {
     //     // const downloadsFolderPath = '/storage/emulated/0/Download/';
     //     // Directory dir = Directory(downloadsFolderPath);
-    //     // final file = File('${dir.path}/${'POSproo-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf');
+    //     // final file = File('${dir.path}/${'PosPro-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf');
     //     // await file.writeAsBytes(await doc.save());
     //     // EasyLoading.showSuccess('Successful');
-    //     // OpenFile.open("/storage/emulated/0/${'POSproo-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf");
+    //     // OpenFile.open("/storage/emulated/0/${'PosPro-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf");
     //
-    //     final file = File("/storage/emulated/0/download/${'POSproo-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf");
+    //     final file = File("/storage/emulated/0/download/${'PosPro-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf");
     //     await file.writeAsBytes(await doc.save());
     //     EasyLoading.showSuccess('Successful');
-    //     OpenFile.open("/storage/emulated/0/download/${'POSproo-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf");
+    //     OpenFile.open("/storage/emulated/0/download/${'PosPro-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf");
     //   } else {
     //     EasyLoading.showError('Sorry, Permission not granted');
     //   }
@@ -461,10 +461,10 @@ class GeneratePdf {
     // }
     // var status = await Permission.storage.request();
     // if (status.isGranted) {
-    //   final file = File("/storage/emulated/0/${'POSproo-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf");
+    //   final file = File("/storage/emulated/0/${'PosPro-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf");
     //   await file.writeAsBytes(await doc.save());
     //   EasyLoading.showSuccess('Successful');
-    //   OpenFile.open("/storage/emulated/0/${'POSproo-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf");
+    //   OpenFile.open("/storage/emulated/0/${'PosPro-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf");
     // } else if (status.isDenied) {
     //   EasyLoading.dismiss();
     //   await Permission.storage.request();
@@ -842,7 +842,7 @@ class GeneratePdf {
     if (Platform.isIOS) {
       EasyLoading.show(status: 'Generating PDF');
       final dir = await getApplicationDocumentsDirectory();
-      final file = File('${dir.path}/${'POSproo-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf');
+      final file = File('${dir.path}/${'PosPro-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf');
 
       final byteData = await doc.save();
       try {
@@ -851,10 +851,10 @@ class GeneratePdf {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => PDFViewerPage(path: '${dir.path}/${'POSproo-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf'),
+            builder: (context) => PDFViewerPage(path: '${dir.path}/${'PosPro-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf'),
           ),
         );
-        // OpenFile.open("${dir.path}/${'POSproo-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf");
+        // OpenFile.open("${dir.path}/${'PosPro-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf");
       } on FileSystemException catch (err) {
         EasyLoading.showError(err.message);
         // handle error
@@ -870,7 +870,7 @@ class GeneratePdf {
         EasyLoading.show(status: 'Generating PDF');
         const downloadsFolderPath = '/storage/emulated/0/Download/';
         Directory dir = Directory(downloadsFolderPath);
-        final file = File('${dir.path}/${'POSproo-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf');
+        final file = File('${dir.path}/${'PosPro-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf');
 
         final byteData = await doc.save();
         try {
@@ -879,10 +879,10 @@ class GeneratePdf {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => PDFViewerPage(path: '${dir.path}/${'POSproo-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf'),
+              builder: (context) => PDFViewerPage(path: '${dir.path}/${'PosPro-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf'),
             ),
           );
-          // OpenFile.open("/storage/emulated/0/download/${'POSproo-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf");
+          // OpenFile.open("/storage/emulated/0/download/${'PosPro-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf");
         } on FileSystemException catch (err) {
           EasyLoading.showError(err.message);
           // handle error
@@ -1257,7 +1257,7 @@ class GeneratePdf {
     if (Platform.isIOS) {
       EasyLoading.show(status: 'Generating PDF');
       final dir = await getApplicationDocumentsDirectory();
-      final file = File('${dir.path}/${'POSproo-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf');
+      final file = File('${dir.path}/${'PosPro-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf');
 
       final byteData = await doc.save();
       try {
@@ -1266,10 +1266,10 @@ class GeneratePdf {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => PDFViewerPage(path: '${dir.path}/${'POSproo-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf'),
+            builder: (context) => PDFViewerPage(path: '${dir.path}/${'PosPro-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf'),
           ),
         );
-        // OpenFile.open("${dir.path}/${'POSproo-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf");
+        // OpenFile.open("${dir.path}/${'PosPro-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf");
       } on FileSystemException catch (err) {
         EasyLoading.showError(err.message);
         // handle error
@@ -1284,7 +1284,7 @@ class GeneratePdf {
         EasyLoading.show(status: 'Generating PDF');
         const downloadsFolderPath = '/storage/emulated/0/Download/';
         Directory dir = Directory(downloadsFolderPath);
-        final file = File('${dir.path}/${'POSproo-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf');
+        final file = File('${dir.path}/${'PosPro-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf');
 
         final byteData = await doc.save();
         try {
@@ -1293,10 +1293,10 @@ class GeneratePdf {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => PDFViewerPage(path: '${dir.path}/${'POSproo-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf'),
+              builder: (context) => PDFViewerPage(path: '${dir.path}/${'PosPro-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf'),
             ),
           );
-          // OpenFile.open("/storage/emulated/0/download/${'POSproo-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf");
+          // OpenFile.open("/storage/emulated/0/download/${'PosPro-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf");
         } on FileSystemException catch (err) {
           EasyLoading.showError(err.message);
           // handle error
@@ -1305,10 +1305,10 @@ class GeneratePdf {
     }
     // var status = await Permission.storage.request();
     // if (status.isGranted) {
-    //   final file = File("/storage/emulated/0/download/${'POSproo-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf");
+    //   final file = File("/storage/emulated/0/download/${'PosPro-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf");
     //   await file.writeAsBytes(await doc.save());
     //   EasyLoading.showSuccess('Successful');
-    //   OpenFile.open("/storage/emulated/0/download/${'POSproo-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf");
+    //   OpenFile.open("/storage/emulated/0/download/${'PosPro-${personalInformation.companyName}-${transactions.invoiceNumber}'}.pdf");
     // } else if (status.isDenied) {
     //   EasyLoading.dismiss();
     //   await Permission.storage.request();
