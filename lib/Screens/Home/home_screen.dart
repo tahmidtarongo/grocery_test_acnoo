@@ -95,6 +95,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return SafeArea(
       child: Consumer(builder: (_, ref, __) {
         final businessInfo = ref.watch(businessInfoProvider);
+        final summaryInfo = ref.watch(summaryInfoProvider);
         final banner = ref.watch(bannerProvider);
         return businessInfo.when(
             data: (details){
@@ -259,11 +260,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         //     return const HomeScreenAppBarShimmer();
                         //   }),
                         // ),
-                        Container(
+                        summaryInfo.when(data: (summary){return Container(
                           padding: const EdgeInsets.all(10),
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            color: kMainColor
+                              borderRadius: BorderRadius.circular(8),
+                              color: kMainColor
                           ),
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
@@ -286,10 +287,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       Text('Sales',style: gTextStyle.copyWith(color: kWhite),),
-                                      Text('$currency 45,000.00',style: gTextStyle.copyWith(color: kWhite,fontWeight: FontWeight.bold),),
+                                      Text('$currency ${summary.data?.sales ?? 0}',style: gTextStyle.copyWith(color: kWhite,fontWeight: FontWeight.bold),),
                                       SizedBox(height: 10,),
                                       Text('Income',style: gTextStyle.copyWith(color: kWhite),),
-                                      Text('$currency 50,000.00',style: gTextStyle.copyWith(color: kWhite,fontWeight: FontWeight.bold),),
+                                      Text('$currency ${summary.data?.income ?? 0}',style: gTextStyle.copyWith(color: kWhite,fontWeight: FontWeight.bold),),
                                     ],
                                   ),
                                   const Spacer(),
@@ -297,10 +298,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       Text('Purchased',style: gTextStyle.copyWith(color: kWhite),),
-                                      Text('$currency 55,000.00',style: gTextStyle.copyWith(color: kWhite,fontWeight: FontWeight.bold),),
+                                      Text('$currency ${summary.data?.purchase ?? 0}',style: gTextStyle.copyWith(color: kWhite,fontWeight: FontWeight.bold),),
                                       const SizedBox(height: 10,),
                                       Text('Expense',style: gTextStyle.copyWith(color: kWhite),),
-                                      Text('$currency 1,000.00',style: gTextStyle.copyWith(color: kWhite,fontWeight: FontWeight.bold),),
+                                      Text('$currency ${summary.data?.expense ?? 0}',style: gTextStyle.copyWith(color: kWhite,fontWeight: FontWeight.bold),),
                                     ],
                                   ),
                                   const SizedBox(width: 30,),
@@ -308,7 +309,110 @@ class _HomeScreenState extends State<HomeScreen> {
                               )
                             ],
                           ),
-                        ),
+                        );}, error: (e,stack){
+                          return Container(
+                            padding: const EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                                color: kMainColor
+                            ),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Row(
+                                  children: [
+                                    Text('Today’s Summary',style: gTextStyle.copyWith(fontWeight: FontWeight.bold,color: kWhite,fontSize: 18),),
+                                    const Spacer(),
+                                    GestureDetector(
+                                        onTap: (){
+                                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const DashboardScreen()));
+                                        },
+                                        child: const Text('Sell All >',style: TextStyle(color: kWhite,fontWeight: FontWeight.w500),)),
+                                  ],
+                                ),
+                                const SizedBox(height: 10,),
+                                Row(
+                                  children: [
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text('Sales',style: gTextStyle.copyWith(color: kWhite),),
+                                        Text('Not Found',style: gTextStyle.copyWith(color: kWhite,fontWeight: FontWeight.bold),),
+                                        SizedBox(height: 10,),
+                                        Text('Income',style: gTextStyle.copyWith(color: kWhite),),
+                                        Text('Not Found',style: gTextStyle.copyWith(color: kWhite,fontWeight: FontWeight.bold),),
+                                      ],
+                                    ),
+                                    const Spacer(),
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text('Purchased',style: gTextStyle.copyWith(color: kWhite),),
+                                        Text('Not Found',style: gTextStyle.copyWith(color: kWhite,fontWeight: FontWeight.bold),),
+                                        const SizedBox(height: 10,),
+                                        Text('Expense',style: gTextStyle.copyWith(color: kWhite),),
+                                        Text('Not Found',style: gTextStyle.copyWith(color: kWhite,fontWeight: FontWeight.bold),),
+                                      ],
+                                    ),
+                                    const SizedBox(width: 30,),
+                                  ],
+                                )
+                              ],
+                            ),
+                          );
+                        }, loading: (){
+                          return Container(
+                            padding: const EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                                color: kMainColor
+                            ),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Row(
+                                  children: [
+                                    Text('Today’s Summary',style: gTextStyle.copyWith(fontWeight: FontWeight.bold,color: kWhite,fontSize: 18),),
+                                    const Spacer(),
+                                    GestureDetector(
+                                        onTap: (){
+                                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const DashboardScreen()));
+                                        },
+                                        child: const Text('Sell All >',style: TextStyle(color: kWhite,fontWeight: FontWeight.w500),)),
+                                  ],
+                                ),
+                                const SizedBox(height: 10,),
+                                Row(
+                                  children: [
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text('Sales',style: gTextStyle.copyWith(color: kWhite),),
+                                        Text('Loading',style: gTextStyle.copyWith(color: kWhite,fontWeight: FontWeight.bold),),
+                                        SizedBox(height: 10,),
+                                        Text('Income',style: gTextStyle.copyWith(color: kWhite),),
+                                        Text('Loading',style: gTextStyle.copyWith(color: kWhite,fontWeight: FontWeight.bold),),
+                                      ],
+                                    ),
+                                    const Spacer(),
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text('Purchased',style: gTextStyle.copyWith(color: kWhite),),
+                                        Text('Loading',style: gTextStyle.copyWith(color: kWhite,fontWeight: FontWeight.bold),),
+                                        const SizedBox(height: 10,),
+                                        Text('Expense',style: gTextStyle.copyWith(color: kWhite),),
+                                        Text('Loading',style: gTextStyle.copyWith(color: kWhite,fontWeight: FontWeight.bold),),
+                                      ],
+                                    ),
+                                    const SizedBox(width: 30,),
+                                  ],
+                                )
+                              ],
+                            ),
+                          );
+                        }),
+
                         const SizedBox(height: 20,),
                         GestureDetector(
                           onTap: (){
