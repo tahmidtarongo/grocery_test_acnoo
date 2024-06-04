@@ -56,7 +56,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Alle besigheidsoplossings"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "DoSofto is \'n volledige besigheidsoplossing met voorraad, rekening, verkope, uitgawes en verlies/wins."),
+            "POSproo is \'n volledige besigheidsoplossing met voorraad, rekening, verkope, uitgawes en verlies/wins."),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Reeds Toegevoeg"),
         "amount": MessageLookupByLibrary.simpleMessage("Bedrag"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
@@ -89,7 +89,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Kies Jou Funksies"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Funksies is die belangrike deel wat DoSofto van tradisionele oplossings onderskei."),
+            "Funksies is die belangrike deel wat POSproo van tradisionele oplossings onderskei."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Klik om te verbind"),
@@ -136,7 +136,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Maklik om die mobiele pos te gebruik"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "DoSofto-app is gratis, maklik om te gebruik. Werklik, dit is een van die beste POS-stelsels regoor die wêreld."),
+            "POSproo-app is gratis, maklik om te gebruik. Werklik, dit is een van die beste POS-stelsels regoor die wêreld."),
         "edit": MessageLookupByLibrary.simpleMessage("Wysig"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Wysig Telefoonnommer?"),

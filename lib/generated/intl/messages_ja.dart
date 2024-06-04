@@ -45,7 +45,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("すべてのビジネスソリューション"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "DoSoftoは在庫、アカウント、売上、経費、損益を備えた完全なビジネスソリューションです。"),
+            "POSprooは在庫、アカウント、売上、経費、損益を備えた完全なビジネスソリューションです。"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("追加済み"),
         "amount": MessageLookupByLibrary.simpleMessage("額"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
@@ -72,7 +72,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "chooseSupplier": MessageLookupByLibrary.simpleMessage("サプライヤーを選ぶ"),
         "choseYourFeature": MessageLookupByLibrary.simpleMessage("機能を選択"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "機能はDoSoftoを伝統的なソリューションとは異なるものにする重要な要素です。"),
+            "機能はPOSprooを伝統的なソリューションとは異なるものにする重要な要素です。"),
         "clarence": MessageLookupByLibrary.simpleMessage("クラレンス"),
         "clickToConnect": MessageLookupByLibrary.simpleMessage("クリックして接続"),
         "close": MessageLookupByLibrary.simpleMessage("近い"),
@@ -108,7 +108,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos":
             MessageLookupByLibrary.simpleMessage("簡単に使用できるモバイルPOS"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "DoSoftoアプリは無料で、使いやすいです。実際、世界中で最も優れたPOSシステムの1つです。"),
+            "POSprooアプリは無料で、使いやすいです。実際、世界中で最も優れたPOSシステムの1つです。"),
         "edit": MessageLookupByLibrary.simpleMessage("編集"),
         "editPhone": MessageLookupByLibrary.simpleMessage("電話番号を編集しますか?"),
         "editPurchaseInvoice": MessageLookupByLibrary.simpleMessage("購入請求書の編集"),

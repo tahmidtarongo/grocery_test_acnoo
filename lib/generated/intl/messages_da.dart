@@ -55,7 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Alle forretningsløsninger"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "DoSofto er en komplet forretningsløsning med lager, regnskab, salg, udgifter og tab/fortjeneste."),
+            "POSproo er en komplet forretningsløsning med lager, regnskab, salg, udgifter og tab/fortjeneste."),
         "alreadyAdded":
             MessageLookupByLibrary.simpleMessage("Allerede tilføjet"),
         "amount": MessageLookupByLibrary.simpleMessage("Beløb"),
@@ -88,7 +88,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Vælg dine funktioner"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Funktioner er en vigtig del, der adskiller DoSofto fra traditionelle løsninger."),
+            "Funktioner er en vigtig del, der adskiller POSproo fra traditionelle løsninger."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Klik for at forbinde"),
@@ -135,7 +135,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos":
             MessageLookupByLibrary.simpleMessage("Let at bruge mobil POS"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "DoSofto-appen er gratis og nem at bruge. Faktisk er det en af de bedste POS-systemer rundt om i verden."),
+            "POSproo-appen er gratis og nem at bruge. Faktisk er det en af de bedste POS-systemer rundt om i verden."),
         "edit": MessageLookupByLibrary.simpleMessage("Rediger"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Rediger telefonnummer?"),

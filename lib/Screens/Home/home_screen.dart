@@ -102,6 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 backgroundColor: kBackgroundColor,
                 appBar: AppBar(
                   backgroundColor: kWhite,
+                  // leadingWidth: 60,
                   titleSpacing: 5,
                   surfaceTintColor: kWhite,
                   leading: Padding(

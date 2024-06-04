@@ -61,7 +61,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Minden üzleti megoldás"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "A DoSofto egy teljes üzleti megoldás raktárkészlettel, számlával, értékesítéssel, költséggel és veszteség/nyereség számítással."),
+            "A POSproo egy teljes üzleti megoldás raktárkészlettel, számlával, értékesítéssel, költséggel és veszteség/nyereség számítással."),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Már hozzáadva"),
         "amount": MessageLookupByLibrary.simpleMessage("Összeg"),
         "apply": MessageLookupByLibrary.simpleMessage("Alkalmaz"),
@@ -94,7 +94,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Válassza ki a funkciókat"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "A funkciók fontos részét képezik annak, hogy a DoSofto más legyen, mint a hagyományos megoldások."),
+            "A funkciók fontos részét képezik annak, hogy a POSproo más legyen, mint a hagyományos megoldások."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Kattintson a csatlakozáshoz"),
@@ -140,7 +140,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Könnyen használható mobil POS"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "A DoSofto alkalmazás ingyenes, könnyen használható. Valójában ez az egyik legjobb értékesítési pontrendszer a világon."),
+            "A POSproo alkalmazás ingyenes, könnyen használható. Valójában ez az egyik legjobb értékesítési pontrendszer a világon."),
         "edit": MessageLookupByLibrary.simpleMessage("Szerkesztés"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Telefonszám szerkesztése?"),

@@ -56,7 +56,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
             "Semua penyelesaian perniagaan"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "DoSofto adalah penyelesaian perniagaan lengkap dengan stok, akaun, jualan, perbelanjaan & rugi/laba."),
+            "POSproo adalah penyelesaian perniagaan lengkap dengan stok, akaun, jualan, perbelanjaan & rugi/laba."),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Sudah Ditambah"),
         "amount": MessageLookupByLibrary.simpleMessage("Jumlah"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
@@ -91,7 +91,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Pilih Ciri Anda"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Ciri-ciri adalah bahagian penting yang menjadikan DoSofto berbeza daripada penyelesaian tradisional."),
+            "Ciri-ciri adalah bahagian penting yang menjadikan POSproo berbeza daripada penyelesaian tradisional."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Klik untuk menyambung"),
@@ -139,7 +139,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Mudah digunakan dengan pos mudah alih"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Aplikasi DoSofto adalah percuma dan mudah digunakan. Sebenarnya, ia adalah salah satu sistem POS terbaik di seluruh dunia."),
+            "Aplikasi POSproo adalah percuma dan mudah digunakan. Sebenarnya, ia adalah salah satu sistem POS terbaik di seluruh dunia."),
         "edit": MessageLookupByLibrary.simpleMessage("Sunting"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Edit Nombor Telefon?"),

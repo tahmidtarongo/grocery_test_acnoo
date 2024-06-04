@@ -57,7 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
             "Toate soluțiile pentru afaceri"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "DoSofto este o soluție completă pentru afaceri, cu gestionarea stocului, contabilitate, vânzări, cheltuieli și pierderi/profit."),
+            "POSproo este o soluție completă pentru afaceri, cu gestionarea stocului, contabilitate, vânzări, cheltuieli și pierderi/profit."),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Deja adaugat"),
         "amount": MessageLookupByLibrary.simpleMessage("Cantitate"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
@@ -93,7 +93,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature": MessageLookupByLibrary.simpleMessage(
             "Alegeți-vă funcționalitățile"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Funcționalitățile sunt partea importantă care diferențiază DoSofto de soluțiile tradiționale."),
+            "Funcționalitățile sunt partea importantă care diferențiază POSproo de soluțiile tradiționale."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clickToConnect": MessageLookupByLibrary.simpleMessage(
             "Faceți clic pentru a vă conecta"),
@@ -142,7 +142,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Ușor de utilizat pentru punctul de vânzare mobil"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Aplicația DoSofto este gratuită și ușor de utilizat. De fapt, este unul dintre cele mai bune sisteme POS din lume."),
+            "Aplicația POSproo este gratuită și ușor de utilizat. De fapt, este unul dintre cele mai bune sisteme POS din lume."),
         "edit": MessageLookupByLibrary.simpleMessage("Editați | ×"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Editați numărul de telefon?"),

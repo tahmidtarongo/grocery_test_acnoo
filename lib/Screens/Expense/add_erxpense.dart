@@ -6,6 +6,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:iconly/iconly.dart';
 import 'package:intl/intl.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/Screens/Expense/Model/expanse_category.dart';
@@ -121,9 +122,9 @@ class _AddExpenseState extends State<AddExpense> {
                       FormField(
                         builder: (FormFieldState<dynamic> field) {
                           return InputDecorator(
-                            decoration: InputDecoration(
-                              suffixIcon: const Icon(FeatherIcons.calendar, color: kGreyTextColor),
-                              enabledBorder: const OutlineInputBorder(),
+                            decoration: kInputDecoration.copyWith(
+                              suffixIcon: const Icon(IconlyLight.calendar, color: kGreyTextColor),
+                              // enabledBorder: const OutlineInputBorder(),
                               contentPadding: const EdgeInsets.all(20),
                               labelText: lang.S.of(context).expenseDate,
                               hintText: lang.S.of(context).enterExpenseDate,
@@ -177,9 +178,9 @@ class _AddExpenseState extends State<AddExpense> {
                         onSaved: (value) {
                           expanseForNameController.text = value!;
                         },
-                        decoration: InputDecoration(
+                        decoration: kInputDecoration.copyWith(
                           floatingLabelBehavior: FloatingLabelBehavior.always,
-                          border: const OutlineInputBorder(),
+                          // border: const OutlineInputBorder(),
                           labelText: lang.S.of(context).expenseFor,
                           hintText: lang.S.of(context).enterName,
                         ),
@@ -190,8 +191,8 @@ class _AddExpenseState extends State<AddExpense> {
                       FormField(
                         builder: (FormFieldState<dynamic> field) {
                           return InputDecorator(
-                            decoration: InputDecoration(
-                                enabledBorder: const OutlineInputBorder(),
+                            decoration: kInputDecoration.copyWith(
+                                // enabledBorder: const OutlineInputBorder(),
                                 contentPadding: const EdgeInsets.all(8.0),
                                 floatingLabelBehavior: FloatingLabelBehavior.always,
                                 labelText: lang.S.of(context).paymentTypes),
@@ -217,7 +218,7 @@ class _AddExpenseState extends State<AddExpense> {
                         onSaved: (value) {
                           expanseAmountController.text = value!;
                         },
-                        decoration: InputDecoration(
+                        decoration: kInputDecoration.copyWith(
                           border: const OutlineInputBorder(),
                           errorBorder: const OutlineInputBorder(
                             borderSide: BorderSide(color: Colors.red),
@@ -241,7 +242,7 @@ class _AddExpenseState extends State<AddExpense> {
                         onSaved: (value) {
                           expanseRefController.text = value!;
                         },
-                        decoration: InputDecoration(
+                        decoration: kInputDecoration.copyWith(
                           border: const OutlineInputBorder(),
                           labelText: lang.S.of(context).referenceNo,
                           floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -263,7 +264,7 @@ class _AddExpenseState extends State<AddExpense> {
                         onSaved: (value) {
                           expanseNoteController.text = value!;
                         },
-                        decoration: InputDecoration(
+                        decoration: kInputDecoration.copyWith(
                           border: const OutlineInputBorder(),
                           labelText: lang.S.of(context).note,
                           hintText: 'Enter Note',

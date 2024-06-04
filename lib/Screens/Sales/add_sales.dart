@@ -41,7 +41,6 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
   double returnAmount = 0;
   double dueAmount = 0;
   double subTotal = 0;
-
   String? paymentType = 'Cash';
   String? selectedPaymentType;
   TextEditingController vatPercentageEditingController = TextEditingController();
@@ -126,7 +125,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                             return Expanded(
                               child: TextFormField(
                                 readOnly: true,
-                                decoration: kInputDecoration.copyWith(
+                                decoration: InputDecoration(
                                   floatingLabelBehavior: FloatingLabelBehavior.always,
                                   labelText: lang.S.of(context).inv,
                                   border: const OutlineInputBorder(),
@@ -141,7 +140,8 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                         child: TextFormField(
                           readOnly: true,
                           controller: dateController,
-                          decoration: kInputDecoration.copyWith(
+                          decoration: InputDecoration(
+                            enabledBorder: const OutlineInputBorder(),
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             labelText: lang.S.of(context).date,
                             suffixIcon: IconButton(

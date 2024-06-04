@@ -41,6 +41,7 @@ class _ExpenseListState extends State<ExpenseList> {
       final expenseData = ref.watch(expenseProvider);
 
       return Scaffold(
+        backgroundColor: kWhite,
         appBar: AppBar(
           title: Text(
             lang.S.of(context).expenseReport,

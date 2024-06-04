@@ -35,6 +35,7 @@ class _PurchaseReportState extends State<PurchaseListScreen> {
         return await const Home().launch(context, isNewTask: true);
       },
       child: Scaffold(
+        backgroundColor: kWhite,
         appBar: AppBar(
           title: Text(
             lang.S.of(context).purchaseList,
@@ -60,6 +61,7 @@ class _PurchaseReportState extends State<PurchaseListScreen> {
               // final reTransaction = transaction.reversed.toList();
               return reTransaction.isNotEmpty
                   ? ListView.builder(
+                    padding: EdgeInsets.zero,
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
                       itemCount: reTransaction.length,
@@ -74,7 +76,7 @@ class _PurchaseReportState extends State<PurchaseListScreen> {
                           child: Column(
                             children: [
                               Container(
-                                padding: const EdgeInsets.all(20),
+                                padding: const EdgeInsets.all(16),
                                 width: context.width(),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -130,6 +132,8 @@ class _PurchaseReportState extends State<PurchaseListScreen> {
                                           return Row(
                                             children: [
                                               IconButton(
+                                                  padding: EdgeInsets.zero,
+                                                  visualDensity: const VisualDensity(horizontal: -4,vertical: -4),
                                                   onPressed: () async {
                                                     ///________Print_______________________________________________________
                                                     await printerData.getBluetooth();
@@ -203,13 +207,19 @@ class _PurchaseReportState extends State<PurchaseListScreen> {
                                                     FeatherIcons.printer,
                                                     color: Colors.grey,
                                                   )),
+                                              const SizedBox(width: 10,),
                                               IconButton(
+                                                  padding: EdgeInsets.zero,
+                                                  visualDensity: const VisualDensity(horizontal: -4,vertical: -4),
                                                   onPressed: () => GeneratePdf().generatePurchaseDocument(reTransaction[index], data, context),
                                                   icon: const Icon(
                                                     Icons.picture_as_pdf,
                                                     color: Colors.grey,
                                                   )),
+                                              const SizedBox(width: 10,),
                                               IconButton(
+                                                  padding: EdgeInsets.zero,
+                                                  visualDensity: const VisualDensity(horizontal: -4,vertical: -4),
                                                   onPressed: () {
                                                     cart.clearCart();
                                                     PurchaseListEditScreen(

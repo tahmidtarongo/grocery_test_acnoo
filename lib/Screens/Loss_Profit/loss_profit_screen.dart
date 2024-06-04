@@ -39,6 +39,7 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
         return await const Home().launch(context, isNewTask: true);
       },
       child: Scaffold(
+        backgroundColor: kWhite,
         appBar: AppBar(
           backgroundColor: Colors.white,
           title: Text(

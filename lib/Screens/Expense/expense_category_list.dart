@@ -25,6 +25,7 @@ class _ExpenseCategoryListState extends State<ExpenseCategoryList> {
     return Consumer(builder: (context, ref, _) {
       final data = ref.watch(expanseCategoryProvider);
       return Scaffold(
+        backgroundColor: kWhite,
         appBar: AppBar(
           leading: IconButton(
               onPressed: () {

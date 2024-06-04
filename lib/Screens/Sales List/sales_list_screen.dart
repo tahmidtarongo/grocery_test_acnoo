@@ -129,6 +129,8 @@ class _SalesListScreenState extends State<SalesListScreen> {
                                           return Row(
                                             children: [
                                               IconButton(
+                                                  padding: EdgeInsets.zero,
+                                                  visualDensity: const VisualDensity(horizontal: -4,vertical: -4),
                                                   onPressed: () async {
                                                     await printerData.getBluetooth();
                                                     PrintTransactionModel model = PrintTransactionModel(transitionModel: transaction[index], personalInformationModel: data);
@@ -199,13 +201,19 @@ class _SalesListScreenState extends State<SalesListScreen> {
                                                     FeatherIcons.printer,
                                                     color: Colors.grey,
                                                   )),
+                                              const SizedBox(width: 10,),
                                               IconButton(
+                                                  padding: EdgeInsets.zero,
+                                                  visualDensity: const VisualDensity(horizontal: -4,vertical: -4),
                                                   onPressed: () => GeneratePdf().generateSaleDocument(transaction[index], data, context),
                                                   icon: const Icon(
                                                     Icons.picture_as_pdf,
                                                     color: Colors.grey,
                                                   )),
+                                              const SizedBox(width: 10,),
                                               IconButton(
+                                                  padding: EdgeInsets.zero,
+                                                  visualDensity: const VisualDensity(horizontal: -4,vertical: -4),
                                                   onPressed: () {
                                                     cart.clearCart();
                                                     SalesReportEditScreen(

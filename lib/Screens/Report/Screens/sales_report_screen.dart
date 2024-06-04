@@ -238,6 +238,7 @@ class _SalesReportScreenState extends State<SalesReportScreen> {
                             ),
                           ),
                           ListView.builder(
+                            padding: EdgeInsets.zero,
                             shrinkWrap: true,
                             physics: const NeverScrollableScrollPhysics(),
                             itemCount: transaction.length,
@@ -315,6 +316,8 @@ class _SalesReportScreenState extends State<SalesReportScreen> {
                                                   return Row(
                                                     children: [
                                                       IconButton(
+                                                          padding: EdgeInsets.zero,
+                                                          visualDensity: const VisualDensity(horizontal: -4,vertical: -4),
                                                           onPressed: () async {
                                                             if ((Theme.of(context).platform == TargetPlatform.android)) {
                                                               await printerData.getBluetooth();
@@ -389,7 +392,10 @@ class _SalesReportScreenState extends State<SalesReportScreen> {
                                                             FeatherIcons.printer,
                                                             color: Colors.grey,
                                                           )),
+                                                      const SizedBox(width: 10,),
                                                       IconButton(
+                                                          padding: EdgeInsets.zero,
+                                                          visualDensity: const VisualDensity(horizontal: -4,vertical: -4),
                                                           onPressed: () => GeneratePdf().generateSaleDocument(transaction[index], data, context),
                                                           icon: const Icon(
                                                             Icons.picture_as_pdf,

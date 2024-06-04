@@ -365,6 +365,8 @@ class _DueReportScreenState extends State<DueReportScreen> {
                                                   return Row(
                                                     children: [
                                                       IconButton(
+                                                          padding: EdgeInsets.zero,
+                                                          visualDensity: const VisualDensity(horizontal: -4,vertical: -4),
                                                           onPressed: () async {
                                                             if ((Theme.of(context).platform == TargetPlatform.android)) {
                                                               ///________Print_______________________________________________________
@@ -438,7 +440,10 @@ class _DueReportScreenState extends State<DueReportScreen> {
                                                             FeatherIcons.printer,
                                                             color: Colors.grey,
                                                           )),
+                                                      SizedBox(width: 10,),
                                                       IconButton(
+                                                          padding: EdgeInsets.zero,
+                                                          visualDensity: const VisualDensity(horizontal: -4,vertical: -4),
                                                           onPressed: () => GeneratePdf().generateDueDocument(transaction[index], data, context),
                                                           icon: const Icon(
                                                             Icons.picture_as_pdf,

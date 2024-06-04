@@ -57,7 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Semua Solusi Bisnis"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "DoSofto adalah solusi bisnis lengkap dengan stok, akun, penjualan, pengeluaran, dan kerugian/keuntungan."),
+            "POSproo adalah solusi bisnis lengkap dengan stok, akun, penjualan, pengeluaran, dan kerugian/keuntungan."),
         "alreadyAdded":
             MessageLookupByLibrary.simpleMessage("Sudah ditambahkan"),
         "amount": MessageLookupByLibrary.simpleMessage("Jumlah"),
@@ -91,7 +91,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Pilih Fitur Anda"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Fitur-fitur penting yang membuat DoSofto berbeda dari solusi tradisional."),
+            "Fitur-fitur penting yang membuat POSproo berbeda dari solusi tradisional."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Klik untuk terhubung"),
@@ -137,7 +137,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Mudah digunakan dalam Poin Penjualan Mobile"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Aplikasi DoSofto gratis dan mudah digunakan. Faktanya, ini adalah salah satu sistem POS terbaik di seluruh dunia."),
+            "Aplikasi POSproo gratis dan mudah digunakan. Faktanya, ini adalah salah satu sistem POS terbaik di seluruh dunia."),
         "edit": MessageLookupByLibrary.simpleMessage("Sunting"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Sunting Nomor Telepon?"),

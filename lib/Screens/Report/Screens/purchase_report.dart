@@ -308,6 +308,8 @@ class _PurchaseReportState extends State<PurchaseReportScreen> {
                                                   return Row(
                                                     children: [
                                                       IconButton(
+                                                          padding: EdgeInsets.zero,
+                                                          visualDensity: const VisualDensity(horizontal: -4,vertical: -4),
                                                           onPressed: () async {
                                                             if ((Theme.of(context).platform == TargetPlatform.android)) {
                                                               ///________Print_______________________________________________________
@@ -384,7 +386,10 @@ class _PurchaseReportState extends State<PurchaseReportScreen> {
                                                             FeatherIcons.printer,
                                                             color: Colors.grey,
                                                           )),
+                                                      const SizedBox(width: 10,),
                                                       IconButton(
+                                                          padding: EdgeInsets.zero,
+                                                          visualDensity: const VisualDensity(horizontal: -4,vertical: -4),
                                                           onPressed: () => GeneratePdf().generatePurchaseDocument(transaction[index], data, context),
                                                           icon: const Icon(
                                                             Icons.picture_as_pdf,

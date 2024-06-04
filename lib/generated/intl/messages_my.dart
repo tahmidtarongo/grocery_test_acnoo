@@ -58,7 +58,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("စီးပွားရေးစနစ်အားလုံး"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "DoSofto သည် စတော့၊ ငွေစာရင်း၊ အေရာင်းအားကစား၊ အစာရင်းနှင့် အခြေအနေ/အမြဲအစားများဖြစ်သည်။"),
+            "POSproo သည် စတော့၊ ငွေစာရင်း၊ အေရာင်းအားကစား၊ အစာရင်းနှင့် အခြေအနေ/အမြဲအစားများဖြစ်သည်။"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("ရှိသည့်အတွက်"),
         "amount": MessageLookupByLibrary.simpleMessage("ပမာဏ"),
         "apply": MessageLookupByLibrary.simpleMessage("လျှောက်ထားသည်"),
@@ -91,7 +91,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature": MessageLookupByLibrary.simpleMessage(
             "သင့်ရဲ့အကြောင်းကိုရွေးချယ်ပါ"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "အကြောင်းကိုများသည် တစ်စီးရှင်းတွင် မဟုတ်ပါ။ ယင်းအသုံးများကိုလည်း DoSofto ကို အသုံးပြုသော အကြောင်းကြောင်းကိုဖြစ်သည်။"),
+            "အကြောင်းကိုများသည် တစ်စီးရှင်းတွင် မဟုတ်ပါ။ ယင်းအသုံးများကိုလည်း POSproo ကို အသုံးပြုသော အကြောင်းကြောင်းကိုဖြစ်သည်။"),
         "clarence": MessageLookupByLibrary.simpleMessage("ကလာအန်"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("ချိတ်ဆက်ရန်နှိပ်ပါ"),
@@ -140,7 +140,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "အစီရင်ခံစားလိုသူများအတွက် အက်မြတ် POS ဖြန့်ဝေသည်"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "DoSofto အက်ပလီကေးရှင့် အခမဲ့၊ အသုံးပြုနိုင်သောအကြောင်းကြောင်းကိုအသုံးပြုသည်။ အကြောင်းကို ရယူသည့် POS စနစ်တစ်ခုဖြစ်ပြီးကွောင်းကြောင်းကိုလည်းအတူ အကြောင်းကြောင်းများနှင့် အမြဲတမ်းများကိုပါဝင်သည်။"),
+            "POSproo အက်ပလီကေးရှင့် အခမဲ့၊ အသုံးပြုနိုင်သောအကြောင်းကြောင်းကိုအသုံးပြုသည်။ အကြောင်းကို ရယူသည့် POS စနစ်တစ်ခုဖြစ်ပြီးကွောင်းကြောင်းကိုလည်းအတူ အကြောင်းကြောင်းများနှင့် အမြဲတမ်းများကိုပါဝင်သည်။"),
         "edit": MessageLookupByLibrary.simpleMessage("ပြင်ဆင်ပါ"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("ဖုန်းနံပါတ်အား ပြင်ဆင်ရန်"),
