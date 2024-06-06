@@ -41,7 +41,8 @@ class BusinessSetupRepo {
 
     var response = await request.send();
     final responseData = await response.stream.bytesToString();
-    final parsedData = jsonDecode(responseData);
+    print(responseData);
+    //final parsedData = jsonDecode(responseData);
 
     EasyLoading.dismiss();
 
@@ -49,7 +50,7 @@ class BusinessSetupRepo {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Profile setup successful!')));
       Navigator.push(context, MaterialPageRoute(builder: (context) => const Home()));
     } else {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Profile setup failed\n${parsedData['message']}')));
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Profile setup failed')));
       print('Profile setup failed: ${response.statusCode}');
 
       // Handle error response
