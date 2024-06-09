@@ -7,4 +7,4 @@ import '../model/todays_summary_model.dart';
 BusinessRepository businessRepository = BusinessRepository();
 final businessInfoProvider = FutureProvider<BusinessInformation>((ref) => businessRepository.fetchBusinessData());
 final summaryInfoProvider = FutureProvider<TodaysSummaryModel>((ref) => businessRepository.fetchTodaySummaryData());
-final dashboardInfoProvider = FutureProvider.family<DashboardOverviewModel,String>((ref,type) => businessRepository.dashboardData(type));
+final dashboardInfoProvider = FutureProvider.family.autoDispose<DashboardOverviewModel,String>((ref,type) => businessRepository.dashboardData(type));

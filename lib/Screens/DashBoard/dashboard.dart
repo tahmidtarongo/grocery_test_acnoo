@@ -90,36 +90,36 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           children: [
                             const Icon(Icons.circle,color: Colors.green,size: 18,),
                             const SizedBox(width: 5,),
-                            RichText(text: TextSpan(
-                                text: 'Sales : ',
+                            RichText(text: const TextSpan(
+                                text: 'Sales',
                                 style: TextStyle(color: kTitleColor),
                                 children: [
-                                  TextSpan(
-                                      text: '$currency 500',
-                                      style: gTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor)
-                                  ),
+                                  // TextSpan(
+                                  //     text: '$currency 500',
+                                  //     style: gTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor)
+                                  // ),
                                 ]
                             )),
                             const SizedBox(width: 20,),
                             const Icon(Icons.circle,color: kMainColor,size: 18,),
                             const SizedBox(width: 5,),
-                            RichText(text: TextSpan(
-                                text: 'Purchase : ',
-                                style: const TextStyle(color: kTitleColor),
+                            RichText(text: const TextSpan(
+                                text: 'Purchase',
+                                style: TextStyle(color: kTitleColor),
                                 children: [
-                                  TextSpan(
-                                      text: '$currency 300',
-                                      style: gTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor)
-                                  ),
+                                  // TextSpan(
+                                  //     text: '$currency 300',
+                                  //     style: gTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor)
+                                  // ),
                                 ]
                             )),
                           ],
                         ),
                         const SizedBox(height: 10,),
-                        const SizedBox(
+                        SizedBox(
                             height: 250,
                             width: double.infinity,
-                            child: NumericAxisChart()),
+                            child: NumericAxisChart(model: dashboard,)),
                       ],
                     ),
                   ),

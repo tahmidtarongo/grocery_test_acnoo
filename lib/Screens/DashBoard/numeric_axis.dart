@@ -3,22 +3,35 @@ import 'package:mobile_pos/constant.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
 import 'chart_data.dart';
+import 'package:mobile_pos/model/dashboard_overview_model.dart';
 
 class NumericAxisChart extends StatefulWidget {
-  const NumericAxisChart({Key? key}) : super(key: key);
+  const NumericAxisChart({Key? key, required this.model}) : super(key: key);
+
+  final DashboardOverviewModel model;
 
   @override
   State<NumericAxisChart> createState() => _NumericAxisChartState();
 }
 
 class _NumericAxisChartState extends State<NumericAxisChart> {
-  final List<ChartData> chartData = [
-    ChartData('Jan', 235, 240),
-    ChartData('Feb', 242, 250),
-    ChartData('Mar', 320, 280),
-    ChartData('Apr', 360, 355),
-    ChartData('May', 270, 245),
-  ];
+  final List<ChartData> chartData = [];
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    getData(widget.model);
+    super.initState();
+  }
+
+  getData(DashboardOverviewModel model) {
+    for (int i = 0; i < model.data!.sales!.length; i++) {
+      chartData.add(ChartData(
+          model.data!.sales![i].date!,
+          model.data!.sales![i].amount!.toDouble(),
+          model.data!.purchases![i].amount!.toDouble()));
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
