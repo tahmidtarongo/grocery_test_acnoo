@@ -8,6 +8,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../constant.dart';
 import '../Authentication/Sign In/sign_in_screen.dart';
+import '../payment getway/payment_getway_screen.dart';
 
 class OnBoard extends StatefulWidget {
   const OnBoard({Key? key}) : super(key: key);

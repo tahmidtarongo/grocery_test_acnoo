@@ -166,7 +166,9 @@ class _PackageScreenState extends State<PackageScreen> {
                                 return Padding(
                                   padding: const EdgeInsets.only(bottom: 16),
                                   child: GestureDetector(
-                                    onTap: () {},
+                                    onTap: () {
+
+                                    },
                                     child: Container(
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(6),

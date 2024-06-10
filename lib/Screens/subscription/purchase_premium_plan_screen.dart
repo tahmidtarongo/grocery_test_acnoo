@@ -10,11 +10,9 @@ import '../../constant.dart';
 import '../Currency/Model/currency_model.dart';
 import '../Currency/Provider/currency_provider.dart';
 import '../Home/home.dart';
-import '../Home/home_screen.dart';
-import 'Model/payment_credential_model.dart';
+import '../payment getway/payment_getway_screen.dart';
 import 'Model/subscription_plan_model.dart';
 import 'Provider/subacription_plan_provider.dart';
-import 'Repo/subscriptionPlanRepo.dart';
 
 class PurchasePremiumPlanScreen extends StatefulWidget {
   const PurchasePremiumPlanScreen({Key? key, required this.isCameBack}) : super(key: key);
@@ -166,25 +164,13 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                               );
                             },
                             child: Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(6),
-                                color: kWhite,
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: const Color(0xff0C1A4B).withOpacity(0.24),
-                                    blurRadius: 1
-                                  ),
-                                  BoxShadow(
-                                    color: const Color(0xff473232).withOpacity(0.05),
-                                    offset: const Offset(0, 3),
-                                    blurRadius: 8,
-                                    spreadRadius: -1
-                                  )
-                                ]
-                              ),
+                              decoration: BoxDecoration(borderRadius: BorderRadius.circular(6), color: kWhite, boxShadow: [
+                                BoxShadow(color: const Color(0xff0C1A4B).withOpacity(0.24), blurRadius: 1),
+                                BoxShadow(color: const Color(0xff473232).withOpacity(0.05), offset: const Offset(0, 3), blurRadius: 8, spreadRadius: -1)
+                              ]),
                               child: ListTile(
                                 visualDensity: VisualDensity(horizontal: -4),
-                                contentPadding: EdgeInsets.only(left: 8,right: 10),
+                                contentPadding: EdgeInsets.only(left: 8, right: 10),
                                 leading: SizedBox(
                                   height: 40,
                                   width: 40,
@@ -194,9 +180,13 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                                 ),
                                 title: Text(
                                   titleListData[i],
-                                  style: const TextStyle( fontSize: 16),
+                                  style: const TextStyle(fontSize: 16),
                                 ),
-                                trailing: const Icon(FeatherIcons.alertCircle,color: kGreyTextColor,size: 20,),
+                                trailing: const Icon(
+                                  FeatherIcons.alertCircle,
+                                  color: kGreyTextColor,
+                                  size: 20,
+                                ),
                               ),
                             ),
                           ),
@@ -341,15 +331,31 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                     child: GestureDetector(
                       onTap: () async {
                         if (selectedPlan != null) {
-                          SubscriptionPlanRepo repo = SubscriptionPlanRepo();
-                          PaymentCredentialModel paymentCredential = await repo.getPaymentCredential();
-                          String? paymentMethod = await repo.paymentWithShurjoPay(
-                              context: context, plan: selectedPlan!, businessInformation: businessInfo.value!, paymentCredential: paymentCredential);
-                          if (paymentMethod != null) {
-                            EasyLoading.show(status: 'Loading...');
-                            await repo.subscribePlan(ref: ref, context: context, planId: selectedPlan!.id!.round(), paymentMethod: paymentMethod);
-                            EasyLoading.showSuccess('Successfully Update plan');
+                          bool success = await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => PaymentScreen(
+                                  planId: selectedPlan?.id.toString() ?? '',
+                                  businessId: businessInfo.value?.id.toString() ?? '',
+                                ),
+                              ));
+
+                          if (success) {
+                            EasyLoading.showSuccess('successfully paid');
+
+                            ref.refresh(businessInfoProvider);
+                          } else {
+                            EasyLoading.showError('Field');
                           }
+                          // SubscriptionPlanRepo repo = SubscriptionPlanRepo();
+                          // PaymentCredentialModel paymentCredential = await repo.getPaymentCredential();
+                          // String? paymentMethod = await repo.paymentWithShurjoPay(
+                          //     context: context, plan: selectedPlan!, businessInformation: businessInfo.value!, paymentCredential: paymentCredential);
+                          // if (paymentMethod != null) {
+                          //   EasyLoading.show(status: 'Loading...');
+                          //   await repo.subscribePlan(ref: ref, context: context, planId: selectedPlan!.id!.round(), paymentMethod: paymentMethod);
+                          //   EasyLoading.showSuccess('Successfully Update plan');
+                          // }
                         }
                       },
                       child: Container(
