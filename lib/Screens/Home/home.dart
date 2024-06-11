@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:iconly/iconly.dart';
+import 'package:mobile_pos/Screens/DashBoard/dashboard.dart';
 import 'package:mobile_pos/Screens/Home/home_screen.dart';
 import 'package:mobile_pos/Screens/Report/reports.dart';
 import 'package:mobile_pos/Screens/Settings/settings_screen.dart';
@@ -123,14 +124,14 @@ class _HomeState extends State<Home> {
             tabIndex = v;
           },
           children: const [
-            HomeScreen(), SalesContact(), Reports(), SettingScreen()
+            HomeScreen(), DashboardScreen(), Reports(), SettingScreen()
           ],
         ),
 
         bottomNavigationBar: CircleNavBar(
           activeIcons:   [
             SvgPicture.asset('assets/cHome.svg',fit: BoxFit.scaleDown,height: 28,width: 28,),
-            SvgPicture.asset('assets/cCart.svg',height: 28,width: 28,fit: BoxFit.scaleDown,),
+            SvgPicture.asset('assets/dashbord1.svg',height: 28,width: 28,fit: BoxFit.scaleDown,),
             SvgPicture.asset('assets/cFile.svg',height: 28,width: 28,fit: BoxFit.scaleDown,),
             SvgPicture.asset('assets/cSetting.svg',height: 28,width: 28,fit: BoxFit.scaleDown,),
           ],
@@ -145,8 +146,8 @@ class _HomeState extends State<Home> {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SvgPicture.asset('assets/cart.svg',height: 24,width: 24,color: kGreyTextColor,),
-                const Text("Sales",style: TextStyle(color: kGreyTextColor),),
+                SvgPicture.asset('assets/dashbord.svg',height: 24,width: 24,color: kGreyTextColor,),
+                const Text("Dashboard",style: TextStyle(color: kGreyTextColor),),
               ],
             ),
             Column(

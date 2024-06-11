@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mobile_pos/Screens/DashBoard/global_container.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:mobile_pos/currency.dart';
@@ -147,7 +146,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     children: [
                       Expanded(child: GlobalContainer(title: 'Total Due', image: 'assets/duelist.svg', subtitle: '$currency ${dashboard.data?.totalDue.toString() ?? '0'}')),
                       SizedBox(width: 12,),
-                      Expanded(child: GlobalContainer(title: 'Stock Qty', image: 'assets/stock.svg', subtitle: dashboard.data?.stockQty.toString() ?? '0'))
+                      Expanded(child: GlobalContainer(title: 'Stock Value', image: 'assets/stock.svg', subtitle: dashboard.data?.stockQty.toString() ?? '0'))
                     ],
                   ),
                   SizedBox(height: 20,),

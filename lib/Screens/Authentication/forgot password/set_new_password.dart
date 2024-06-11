@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:flutter_feather_icons/flutter_feather_icons.dart';
+import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/Screens/Authentication/forgot%20password/repo/forgot_pass_repo.dart';
 
 import '../../../constant.dart';
@@ -35,19 +37,13 @@ class _SetNewPasswordState extends State<SetNewPassword> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        automaticallyImplyLeading: false,
+        surfaceTintColor: kWhite,
+        backgroundColor: kWhite,
+        centerTitle: true,
         titleSpacing: 16,
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 16.0),
-          child: Back(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
-        ),
         title: Text(
-          'Change Password',
-          style: textTheme.titleMedium,
+          'Create New Password',
+          style: textTheme.titleMedium?.copyWith(fontSize: 18),
         ),
       ),
       body: SingleChildScrollView(
@@ -56,30 +52,26 @@ class _SetNewPasswordState extends State<SetNewPassword> {
           child: Form(
             key: _formKey,
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
-                  'Change password',
-                  style: textTheme.titleMedium?.copyWith(fontSize: 30.0),
+                  'Set Up New Password',
+                  style: textTheme.titleMedium?.copyWith(fontSize: 24.0),
                 ),
                 const SizedBox(height: 8.0),
                 Text(
-                  'Replace the password with a new one for more security',
-                  style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor),
+                  'Reset your password to recovery and log in your account',
+                  style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor,fontSize: 16),textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 24.0),
-                Text(
-                  'New Password',
-                  style: textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(height: 8.0),
                 TextFormField(
                   controller: _passwordController,
                   keyboardType: TextInputType.text,
                   obscureText: showPassword,
-                  decoration: InputDecoration(
-                    border: const OutlineInputBorder(),
-                    hintText: 'Enter password',
+                  decoration: kInputDecoration.copyWith(
+                    // border: const OutlineInputBorder(),
+                    hintText: '********',
+                    labelText: 'New Password',
                     suffixIcon: IconButton(
                       onPressed: () {
                         setState(() {
@@ -87,7 +79,7 @@ class _SetNewPasswordState extends State<SetNewPassword> {
                         });
                       },
                       icon: Icon(
-                        showPassword ? Icons.visibility_off_outlined : Icons.visibility_outlined,
+                        showPassword ? FeatherIcons.eyeOff : FeatherIcons.eye,
                         color: kGreyTextColor,
                       ),
                     ),
@@ -101,19 +93,15 @@ class _SetNewPasswordState extends State<SetNewPassword> {
                     return null;
                   },
                 ),
-                const SizedBox(height: 24.0),
-                Text(
-                  'Confirm Password',
-                  style: textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(height: 8.0),
+                const SizedBox(height: 20.0),
                 TextFormField(
                   controller: _confirmPasswordController,
                   keyboardType: TextInputType.text,
                   obscureText: showConfirmPassword,
-                  decoration: InputDecoration(
+                  decoration: kInputDecoration.copyWith(
                     border: const OutlineInputBorder(),
-                    hintText: 'Re-type password',
+                    labelText: 'Confirm Password',
+                    hintText: '********',
                     suffixIcon: IconButton(
                       onPressed: () {
                         setState(() {
@@ -121,7 +109,7 @@ class _SetNewPasswordState extends State<SetNewPassword> {
                         });
                       },
                       icon: Icon(
-                        showConfirmPassword ? Icons.visibility_off_outlined : Icons.visibility_outlined,
+                        showConfirmPassword ? FeatherIcons.eyeOff : FeatherIcons.eye,
                         color: kGreyTextColor,
                       ),
                     ),
@@ -136,8 +124,8 @@ class _SetNewPasswordState extends State<SetNewPassword> {
                   },
                 ),
                 const SizedBox(height: 24.0),
-                PrimaryButton(
-                  onPressed: () async {
+                UpdateButton(
+                  onpressed: () async {
                     if (isClicked) {
                       return;
                     }

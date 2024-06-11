@@ -3,10 +3,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Screens/Products/Model/product_model.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
+import 'package:mobile_pos/invoice_constant.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../Provider/product_provider.dart';
-import '../../constant.dart';
 import '../../currency.dart';
 
 class StockList extends StatefulWidget {
@@ -37,7 +37,7 @@ class _StockListState extends State<StockList> {
           }
         }
         return Scaffold(
-          backgroundColor: kWhite,
+          backgroundColor: Colors.white,
           appBar: AppBar(
             title: Text(
               lang.S.of(context).stockList,
@@ -49,29 +49,15 @@ class _StockListState extends State<StockList> {
             elevation: 0.0,
           ),
           body: SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: product.isNotEmpty
-                  ? Column(
-                      children: [
-                        AppTextField(
-                          textFieldType: TextFieldType.NAME,
-                          onChanged: (value) {
-                            setState(() {
-                              productSearch = value;
-                            });
-                          },
-                          decoration: const InputDecoration(
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: 'Search',
-                            hintText: 'Enter product name',
-                            border: OutlineInputBorder(),
-                          ),
-                        ),
-                        const SizedBox(height: 10.0),
-                        Container(
-                          padding: const EdgeInsets.only(top: 10, bottom: 10, right: 5, left: 5),
-                          color: kMainColor.withOpacity(0.2),
+            child: product.isNotEmpty
+                ? Column(
+                    children: [
+                      SizedBox(height: 10,),
+                      Container(
+                        height: 50,
+                        color: const Color(0xffFEF0F1),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
                           child: Row(
                             children: [
                               Expanded(
@@ -113,8 +99,12 @@ class _StockListState extends State<StockList> {
                             ],
                           ),
                         ),
-                        ListView.builder(
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: ListView.builder(
                             itemCount: showableProducts.length,
+                            padding: EdgeInsets.zero,
                             shrinkWrap: true,
                             physics: const NeverScrollableScrollPhysics(),
                             itemBuilder: (context, index) {
@@ -176,65 +166,48 @@ class _StockListState extends State<StockList> {
                                 ],
                               );
                             }),
-                      ],
-                    )
-                  : const Center(child: Text('No Product Found')),
-            ),
+                      ),
+                    ],
+                  )
+                : const Center(child: Text('No Product Found')),
           ),
           bottomNavigationBar: Container(
-            padding: const EdgeInsets.all(10),
-            color: kMainColor.withOpacity(0.2),
-            child: Row(
-              children: [
-                Expanded(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        'Total Qty',
-                        textAlign: TextAlign.start,
-                        style: GoogleFonts.poppins(color: Colors.black, fontSize: 14.0, fontWeight: FontWeight.w500),
-                      ),
-                      Text(
-                        '$totalStock',
-                        textAlign: TextAlign.start,
-                        style: GoogleFonts.poppins(color: Colors.black, fontSize: 14.0, fontWeight: FontWeight.w500),
-                      ),
-                    ],
-                  ),
-                ),
-                Expanded(
-                    child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(
-                      'Total Cost',
-                      style: GoogleFonts.poppins(color: Colors.black, fontSize: 14.0, fontWeight: FontWeight.w500),
+            color: const Color(0xffFEF0F1),
+            height: 50,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Row(
+                // crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Expanded(
+                      flex: 2,
+                      child: Text('Total:',style: kTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor,fontSize: 14),)),
+                  Expanded(
+                    flex: 1,
+                    child: Text(
+                      '$totalStock',
+                      textAlign: TextAlign.start,
+                      style: GoogleFonts.poppins(color: Colors.black, fontSize: 14.0, fontWeight: FontWeight.bold),
                     ),
-                    Text(
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Text(
                       '$currency${totalParPrice.toInt().toString()}',
-                      style: GoogleFonts.poppins(color: Colors.black, fontSize: 14.0, fontWeight: FontWeight.w500),
+                      style: GoogleFonts.poppins(color: Colors.black, fontSize: 14.0, fontWeight: FontWeight.bold),
                     ),
-                  ],
-                )),
-                Expanded(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        'Total Sale',
-                        overflow: TextOverflow.ellipsis,
-                        style: GoogleFonts.poppins(color: Colors.black, fontSize: 14.0, fontWeight: FontWeight.w500),
-                      ),
-                      Text(
-                        '$currency${totalSalePrice.toInt().toString()}',
-                        overflow: TextOverflow.ellipsis,
-                        style: GoogleFonts.poppins(color: Colors.black, fontSize: 14.0, fontWeight: FontWeight.w500),
-                      ),
-                    ],
                   ),
-                ),
-              ],
+                  Expanded(
+                    flex: 1,
+                    child: Text(
+                      '$currency${totalSalePrice.toInt().toString()}',
+                      overflow: TextOverflow.ellipsis,
+                      style: GoogleFonts.poppins(color: Colors.black, fontSize: 14.0, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         );

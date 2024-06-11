@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/Screens/Authentication/forgot%20password/repo/forgot_pass_repo.dart';
 import '../../../constant.dart';
 import '../Sign Up/sign_up_screen.dart';
@@ -32,19 +33,13 @@ class _ForgotPasswordState extends State<ForgotPassword> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        automaticallyImplyLeading: false,
         titleSpacing: 16,
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 16.0),
-          child: Back(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
-        ),
+        backgroundColor: kWhite,
+        surfaceTintColor: kWhite,
+        centerTitle: true,
         title: Text(
           'Forgot Password',
-          style: textTheme.titleMedium,
+          style: textTheme.titleMedium?.copyWith(fontSize: 18),
         ),
       ),
       body: Padding(
@@ -52,28 +47,23 @@ class _ForgotPasswordState extends State<ForgotPassword> {
         child: Form(
           key: _formKey,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
                 'Forgot Password',
-                style: textTheme.titleMedium?.copyWith(fontSize: 30.0),
+                style: textTheme.titleMedium?.copyWith(fontSize: 24.0),
               ),
               const SizedBox(height: 8.0),
               Text(
                 'Reset password by using your email or phone number',
-                style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor),
+                style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor,fontSize: 16),textAlign: TextAlign.center,
               ),
               const SizedBox(height: 24.0),
-              Text(
-                'Email',
-                style: textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(height: 8.0),
               TextFormField(
                 controller: _emailController,
                 keyboardType: TextInputType.emailAddress,
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
+                decoration:  kInputDecoration.copyWith(
+                  labelText: 'Email',
                   hintText: 'Enter email address',
                 ),
                 validator: (value) {
@@ -86,8 +76,8 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 },
               ),
               const SizedBox(height: 24.0),
-              PrimaryButton(
-                onPressed: () async {
+              UpdateButton(
+                onpressed: () async {
                   if (isClicked) {
                     return;
                   }
@@ -118,39 +108,39 @@ class _ForgotPasswordState extends State<ForgotPassword> {
           ),
         ),
       ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 20.0),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            InkWell(
-              highlightColor: kMainColor.withOpacity(0.1),
-              borderRadius: BorderRadius.circular(3.0),
-              onTap: () => Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const SignUpScreen(),
-                ),
-              ),
-              hoverColor: kMainColor.withOpacity(0.1),
-              child: RichText(
-                text: TextSpan(
-                  text: 'Don’t have an account? ',
-                  style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor),
-                  children: [
-                    TextSpan(
-                      text: 'Sign Up',
-                      style: textTheme.bodyMedium?.copyWith(color: kMainColor, fontWeight: FontWeight.bold),
-                    )
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
+      // bottomNavigationBar: Padding(
+      //   padding: const EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 20.0),
+      //   child: Column(
+      //     mainAxisSize: MainAxisSize.min,
+      //     crossAxisAlignment: CrossAxisAlignment.center,
+      //     mainAxisAlignment: MainAxisAlignment.center,
+      //     children: [
+      //       InkWell(
+      //         highlightColor: kMainColor.withOpacity(0.1),
+      //         borderRadius: BorderRadius.circular(3.0),
+      //         onTap: () => Navigator.pushReplacement(
+      //           context,
+      //           MaterialPageRoute(
+      //             builder: (context) => const SignUpScreen(),
+      //           ),
+      //         ),
+      //         hoverColor: kMainColor.withOpacity(0.1),
+      //         child: RichText(
+      //           text: TextSpan(
+      //             text: 'Don’t have an account? ',
+      //             style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor),
+      //             children: [
+      //               TextSpan(
+      //                 text: 'Sign Up',
+      //                 style: textTheme.bodyMedium?.copyWith(color: kMainColor, fontWeight: FontWeight.bold),
+      //               )
+      //             ],
+      //           ),
+      //         ),
+      //       ),
+      //     ],
+      //   ),
+      // ),
     );
   }
 }
