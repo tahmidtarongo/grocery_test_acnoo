@@ -727,14 +727,14 @@ class _HomeGridCardsState extends State<HomeGridCards> {
           }
         },
         child: Container(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8),
             color: kWhite,
             boxShadow: [
               BoxShadow(
-                color: Color(0xff171717).withOpacity(0.07),
-                offset: Offset(0, 3),
+                color: const Color(0xff171717).withOpacity(0.07),
+                offset: const Offset(0, 3),
                 blurRadius: 50,
                 spreadRadius: -4
               )
@@ -743,8 +743,9 @@ class _HomeGridCardsState extends State<HomeGridCards> {
           child: Row(
             children: [
               SvgPicture.asset(widget.gridItems.icon.toString(),height: 40,width: 40,),
-              SizedBox(width: 8,),
-              Text(widget.gridItems.title.toString(),style: gTextStyle.copyWith(fontSize: 16,color: kTitleColor),)
+              const SizedBox(width: 8,),
+              Flexible(
+                  child: Text(widget.gridItems.title.toString(),style: gTextStyle.copyWith(fontSize: 16,color: const Color(0xff4D4D4D)),overflow: TextOverflow.ellipsis,maxLines: 1,))
             ],
           ),
         ),

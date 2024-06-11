@@ -82,13 +82,13 @@ dependencies:
   syncfusion_flutter_charts: ^25.2.6
   circle_nav_bar: ^2.0.1+1
   webview_flutter: ^4.8.0
-  icons_launcher:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.1
   change_app_package_name: ^1.1.0
+  icons_launcher:
 
 
 # For information on the generic Dart part of this file, see the
@@ -105,13 +105,13 @@ flutter_intl:
   enabled: true
 
 icons_launcher:
-  image_path: "images/app_icon_2.png"
+  image_path: "images/appIcon.png"
   platforms:
     android:
       enable: true
       adaptive_background_color: "#FFFFFF"
-      adaptive_foreground_image : "assets/app_icon_2.png"
-      adaptive_round_image: "assets/app_icon_circle_2.png"
+      adaptive_foreground_image : "images/appIcon.png"
+      adaptive_round_image: "images/appIcon.png"
     ios:
       enable: true
-      image_path: "images/app_icon_2.png"
+      image_path: "images/appIcon.png"

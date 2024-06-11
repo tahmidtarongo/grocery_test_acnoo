@@ -566,7 +566,7 @@ packages:
     source: hosted
     version: "1.0.1"
   icons_launcher:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: icons_launcher
       sha256: adaa4d5e30358954fe7817b77cd937700477cfcd06ba39268d49c20efdd7ed01
