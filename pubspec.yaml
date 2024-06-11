@@ -110,8 +110,8 @@ icons_launcher:
     android:
       enable: true
       adaptive_background_color: "#FFFFFF"
-      adaptive_foreground_image : "images/appIcon.png"
-      adaptive_round_image: "images/appIcon.png"
+#      adaptive_foreground_image : "images/appIcon.png"
+#      adaptive_round_image: "images/appIcon.png"
     ios:
       enable: true
       image_path: "images/appIcon.png"

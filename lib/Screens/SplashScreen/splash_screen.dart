@@ -490,7 +490,13 @@ class _SplashScreenState extends State<SplashScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Spacer(),
-            SvgPicture.asset(splashLogo,height: 230,width: 230,),
+            Container(
+              height: 230,
+              width: 230,
+              decoration: const BoxDecoration(
+                image: DecorationImage(image: AssetImage(splashLogo))
+              ),
+            ),
             const Spacer(),
             Column(
               children: [

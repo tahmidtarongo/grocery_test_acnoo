@@ -166,6 +166,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
           ),
         );
       }, error: (e,stack){
+        print(stack);
         return Scaffold(
           body: Center(
             child: Column(

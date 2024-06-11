@@ -27,11 +27,11 @@ String purchaseCode = '528cdb9a-5d37-4292-a2b5-b792d5eca03a';
 
 ///---------------update information---------------
 
-const String splashLogo = 'assets/splash.svg';
+const String splashLogo = 'images/splashLogo.png';
 const String onboard1 = 'images/onbord1.png';
 const String onboard2 = 'images/onbord2.png';
 const String onboard3 = 'images/onbord3.png';
-const String logo = 'assets/logo.svg';
+const String logo = 'images/logo.png';
 const String appsName = 'POSpro';
 
 const kButtonDecoration = BoxDecoration(

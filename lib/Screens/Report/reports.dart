@@ -58,7 +58,7 @@ class _ReportsState extends State<Reports> {
                 pressed: () {
                   const DueReportScreen().launch(context);
                 },
-                iconPath: 'assets/dueList.svg',
+                iconPath: 'assets/duereport.svg',
                 title: lang.S.of(context).dueReport),
             const SizedBox(height: 16,),
             ReportCard(

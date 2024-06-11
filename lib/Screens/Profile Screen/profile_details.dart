@@ -21,12 +21,12 @@ class _ProfileDetailsState extends State<ProfileDetails> {
   Widget build(BuildContext context) {
     return Consumer(builder: (context, ref, __) {
       final businessInfo = ref.watch(businessInfoProvider);
-
       return businessInfo.when(data: (details) {
         TextEditingController addressController = TextEditingController(text: details.address);
         TextEditingController openingBalanceController = TextEditingController(text: details.shopOpeningBalance.toString());
         TextEditingController remainingBalanceController = TextEditingController(text: details.remainingShopBalance.toString());
         TextEditingController phoneController = TextEditingController(text: details.phoneNumber);
+        TextEditingController emailController = TextEditingController(text: details.phoneNumber);
         TextEditingController nameController = TextEditingController(text: details.companyName);
         TextEditingController categoryController = TextEditingController(text: details.category?.name);
         return Scaffold(
@@ -161,21 +161,21 @@ class _ProfileDetailsState extends State<ProfileDetails> {
                   ),
 
                   ///_____________Phone_________________________________
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: AppTextField(
-                      readOnly: true,
-                      cursorColor: kGreyTextColor,
-                      controller: phoneController,
-                      decoration: kInputDecoration.copyWith(
-                        labelText: lang.S.of(context).phone,
-                        border: const OutlineInputBorder().copyWith(borderSide: const BorderSide(color: kGreyTextColor)),
-                        hoverColor: kGreyTextColor,
-                        fillColor: kGreyTextColor,
-                      ),
-                      textFieldType: TextFieldType.NAME,
-                    ),
-                  ),
+                  // Padding(
+                  //   padding: const EdgeInsets.all(10.0),
+                  //   child: AppTextField(
+                  //     readOnly: true,
+                  //     cursorColor: kGreyTextColor,
+                  //     controller: phoneController,
+                  //     decoration: kInputDecoration.copyWith(
+                  //       labelText: lang.S.of(context).phone,
+                  //       border: const OutlineInputBorder().copyWith(borderSide: const BorderSide(color: kGreyTextColor)),
+                  //       hoverColor: kGreyTextColor,
+                  //       fillColor: kGreyTextColor,
+                  //     ),
+                  //     textFieldType: TextFieldType.NAME,
+                  //   ),
+                  // ),
 
                   ///__________Address_________________________
                   Padding(

@@ -335,28 +335,28 @@ class _EditProfileState extends State<EditProfile> {
                             ),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: SizedBox(
-                            height: 60.0,
-                            child: AppTextField(
-                              readOnly: true,
-                              controller: phoneController,
-                              validator: (value) {
-                                if (value == null || value.isEmpty) {
-                                  return 'Please enter a valid phone number';
-                                }
-                                // You can add more validation logic as needed
-                                return null;
-                              },
-                              textFieldType: TextFieldType.PHONE,
-                              decoration: kInputDecoration.copyWith(
-                                labelText: lang.S.of(context).phone,
-                                border: const OutlineInputBorder(),
-                              ),
-                            ),
-                          ),
-                        ),
+                        // Padding(
+                        //   padding: const EdgeInsets.all(10.0),
+                        //   child: SizedBox(
+                        //     height: 60.0,
+                        //     child: AppTextField(
+                        //       readOnly: true,
+                        //       controller: phoneController,
+                        //       validator: (value) {
+                        //         if (value == null || value.isEmpty) {
+                        //           return 'Please enter a valid phone number';
+                        //         }
+                        //         // You can add more validation logic as needed
+                        //         return null;
+                        //       },
+                        //       textFieldType: TextFieldType.PHONE,
+                        //       decoration: kInputDecoration.copyWith(
+                        //         labelText: lang.S.of(context).phone,
+                        //         border: const OutlineInputBorder(),
+                        //       ),
+                        //     ),
+                        //   ),
+                        // ),
                         Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: AppTextField(
