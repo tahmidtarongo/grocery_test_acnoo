@@ -87,9 +87,9 @@ class NameWithLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SvgPicture.asset(logo),
+        SvgPicture.asset(logo,height: 75,width: 66,),
         const SizedBox(height: 5,),
-        const Text(appsName,style: TextStyle(color: kTitleColor,fontWeight: FontWeight.bold,fontSize: 20),),
+        const Text(appsName,style: TextStyle(color: kTitleColor,fontWeight: FontWeight.bold,fontSize: 28),),
       ],
     );
   }

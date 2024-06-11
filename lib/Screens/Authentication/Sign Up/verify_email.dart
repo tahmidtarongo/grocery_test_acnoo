@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/Screens/Authentication/Sign%20Up/repo/sign_up_repo.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:pinput/pinput.dart' as p;
@@ -46,7 +47,7 @@ class _VerifyEmailState extends State<VerifyEmail> {
     ),
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(10),
-      border: Border.all(color: kDarkWhite),
+      border: Border.all(color: kBorderColor),
     ),
   );
 
@@ -57,19 +58,13 @@ class _VerifyEmailState extends State<VerifyEmail> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        automaticallyImplyLeading: false,
+        backgroundColor: kWhite,
+        surfaceTintColor: kWhite,
+        centerTitle: true,
         titleSpacing: 16,
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 16.0),
-          child: Back(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
-        ),
         title: Text(
           'Verity Email',
-          style: textTheme.titleMedium,
+          style: textTheme.titleMedium?.copyWith(fontSize: 20),
         ),
       ),
       body: Padding(
@@ -79,18 +74,19 @@ class _VerifyEmailState extends State<VerifyEmail> {
           children: [
             Text(
               'Verification',
-              style: textTheme.titleMedium?.copyWith(fontSize: 30.0),
+              style: textTheme.titleMedium?.copyWith(fontSize: 24.0),
             ),
             const SizedBox(height: 8.0),
             RichText(
-              text: TextSpan(text: '6-digits pin has been sent to your email address,', style: textTheme.bodyMedium?.copyWith(color: kTitleColor), children: [
+              textAlign: TextAlign.center,
+              text: TextSpan(text: '6-digits pin has been sent to your email address: ', style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor,fontSize: 16), children: [
                 TextSpan(
                   text: widget.email,
-                  style: textTheme.bodyMedium?.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
+                  style: textTheme.bodyMedium?.copyWith(color: kTitleColor, fontWeight: FontWeight.bold,fontSize: 16),
                 )
               ]),
             ),
-            const SizedBox(height: 18.0),
+            const SizedBox(height: 24.0),
             Form(
               key: _pinputKey,
               child: p.Pinput(
@@ -127,8 +123,8 @@ class _VerifyEmailState extends State<VerifyEmail> {
               ),
             ),
             const SizedBox(height: 24.0),
-            PrimaryButton(
-              onPressed: widget.isFormForgotPass
+            UpdateButton(
+              onpressed: widget.isFormForgotPass
                   ? () async {
                       if (isClicked) {
                         return;

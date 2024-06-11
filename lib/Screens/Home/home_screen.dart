@@ -730,7 +730,15 @@ class _HomeGridCardsState extends State<HomeGridCards> {
           padding: EdgeInsets.all(10),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8),
-            color: kWhite
+            color: kWhite,
+            boxShadow: [
+              BoxShadow(
+                color: Color(0xff171717).withOpacity(0.07),
+                offset: Offset(0, 3),
+                blurRadius: 50,
+                spreadRadius: -4
+              )
+            ]
           ),
           child: Row(
             children: [

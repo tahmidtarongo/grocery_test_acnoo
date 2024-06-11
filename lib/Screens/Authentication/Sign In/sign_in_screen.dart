@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:flutter_feather_icons/flutter_feather_icons.dart';
+import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../../constant.dart';
 import '../Sign Up/sign_up_screen.dart';
@@ -65,22 +67,16 @@ class _SignInState extends State<SignIn> {
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: kWhite,
       appBar: AppBar(
+        surfaceTintColor: kWhite,
+        centerTitle: true,
         automaticallyImplyLeading: false,
-        backgroundColor: kMainColor,
+        backgroundColor: kWhite,
         titleSpacing: 16,
-        // leading: Padding(
-        //   padding: const EdgeInsets.only(left: 16.0),
-        //   child: Back(
-        //     onPressed: () {
-        //       Navigator.pop(context);
-        //     },
-        //   ),
-        // ),
         title: Text(
           'Sign in',
-          style: textTheme.titleMedium,
+          style: textTheme.titleSmall?.copyWith(fontSize: 20,color: kTitleColor),
         ),
       ),
       body: SingleChildScrollView(
@@ -89,29 +85,26 @@ class _SignInState extends State<SignIn> {
           child: Form(
             key: key,
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                const SizedBox(height: 24,),
+                const NameWithLogo(),
+                const SizedBox(height: 24,),
                 Text(
                   'Welcome back!',
-                  style: textTheme.titleMedium?.copyWith(fontSize: 30.0),
+                  style: textTheme.titleMedium?.copyWith(fontSize: 24.0,fontWeight: FontWeight.w600),
                 ),
-                const SizedBox(height: 8.0),
                 Text(
                   'Please enter your details.',
-                  style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor),
+                  style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor,fontSize: 16),
                 ),
                 const SizedBox(height: 24.0),
-                Text(
-                  'Email',
-                  style: textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(height: 8.0),
                 TextFormField(
                   controller: emailController,
                   keyboardType: TextInputType.emailAddress,
-                  decoration: const InputDecoration(
-                    border: OutlineInputBorder(),
-                    // labelText: 'email',
+                  decoration: kInputDecoration.copyWith(
+                    floatingLabelBehavior: FloatingLabelBehavior.always,
+                    labelText: 'Email',
                     hintText: 'Enter email address',
                   ),
                   validator: (value) {
@@ -124,18 +117,12 @@ class _SignInState extends State<SignIn> {
                   },
                 ),
                 const SizedBox(height: 20.0),
-                Text(
-                  'Password',
-                  style: textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(height: 8.0),
                 TextFormField(
                   controller: passwordController,
                   keyboardType: TextInputType.text,
                   obscureText: showPassword,
-                  decoration: InputDecoration(
-                    border: const OutlineInputBorder(),
-                    // labelText: 'Password',
+                  decoration: kInputDecoration.copyWith(
+                    labelText: 'Password',
                     hintText: 'Enter password',
                     suffixIcon: IconButton(
                       onPressed: () {
@@ -144,7 +131,7 @@ class _SignInState extends State<SignIn> {
                         });
                       },
                       icon: Icon(
-                        showPassword ? Icons.visibility_off_outlined : Icons.visibility_outlined,
+                        showPassword ? FeatherIcons.eyeOff : FeatherIcons.eye,
                         color: kGreyTextColor,
                       ),
                     ),
@@ -170,7 +157,7 @@ class _SignInState extends State<SignIn> {
                       ),
                       fillColor: MaterialStateProperty.all(_isChecked ? kMainColor : Colors.transparent),
                       visualDensity: const VisualDensity(horizontal: -4),
-                      side: const BorderSide(color: kBackgroundColor),
+                      side: const BorderSide(color: kGreyTextColor),
                       value: _isChecked,
                       onChanged: (newValue) {
                         setState(() {
@@ -200,14 +187,14 @@ class _SignInState extends State<SignIn> {
                       ),
                       child: Text(
                         'Forgot password?',
-                        style: textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold),
+                        style: textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold,fontSize: 14),
                       ),
                     ),
                   ],
                 ),
                 const SizedBox(height: 24.0),
-                PrimaryButton(
-                  onPressed: () async {
+                UpdateButton(
+                  onpressed: () async {
                     if (isClicked) {
                       return;
                     }
@@ -224,42 +211,40 @@ class _SignInState extends State<SignIn> {
                     }
                   },
                   text: 'Login',
+                ),
+                const SizedBox(height: 16,),
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    InkWell(
+                      highlightColor: kMainColor.withOpacity(0.1),
+                      borderRadius: BorderRadius.circular(3.0),
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) {
+                          return const SignUpScreen();
+                        },));
+                      },
+                      hoverColor: kMainColor.withOpacity(0.1),
+                      child: RichText(
+                        text: TextSpan(
+                          text: 'Don’t have an account? ',
+                          style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor),
+                          children: [
+                            TextSpan(
+                              text: 'Sign Up',
+                              style: textTheme.bodyMedium?.copyWith(color: kMainColor, fontWeight: FontWeight.bold),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
                 )
               ],
             ),
           ),
-        ),
-      ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 20.0),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            InkWell(
-              highlightColor: kMainColor.withOpacity(0.1),
-              borderRadius: BorderRadius.circular(3.0),
-              onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const SignUpScreen();
-                },));
-              },
-              hoverColor: kMainColor.withOpacity(0.1),
-              child: RichText(
-                text: TextSpan(
-                  text: 'Don’t have an account? ',
-                  style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor),
-                  children: [
-                    TextSpan(
-                      text: 'Sign Up',
-                      style: textTheme.bodyMedium?.copyWith(color: kMainColor, fontWeight: FontWeight.bold),
-                    )
-                  ],
-                ),
-              ),
-            ),
-          ],
         ),
       ),
     );

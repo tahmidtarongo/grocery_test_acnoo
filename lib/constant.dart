@@ -9,6 +9,7 @@ const kBackgroundColor = Color(0xffF5F3F3);
 const kBorderColorTextField = Color(0xFFC2C2C2);
 const kDarkWhite = Color(0xFFF1F7F7);
 const kWhite = Color(0xFFffffff);
+const kBorderColor=Color(0xffD8D8D8);
 const kPremiumPlanColor = Color(0xFF8752EE);
 const kPremiumPlanColor2 = Color(0xFFFF5F00);
 const kTitleColor = Color(0xFF000000);
@@ -46,11 +47,11 @@ const kInputDecoration = InputDecoration(
   floatingLabelBehavior: FloatingLabelBehavior.always,
   enabledBorder: OutlineInputBorder(
     borderRadius: BorderRadius.all(Radius.circular(8.0)),
-    borderSide: BorderSide(color: kBorderColorTextField, width: 1),
+    borderSide: BorderSide(color: kBorderColor, width: 1),
   ),
   focusedBorder: OutlineInputBorder(
     borderRadius: BorderRadius.all(Radius.circular(6.0)),
-    borderSide: BorderSide(color: kBorderColorTextField, width: 1),
+    borderSide: BorderSide(color: kBorderColor, width: 1),
   ),
 );
 

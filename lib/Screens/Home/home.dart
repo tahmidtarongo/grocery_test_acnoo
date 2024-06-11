@@ -132,7 +132,7 @@ class _HomeState extends State<Home> {
             SvgPicture.asset('assets/cHome.svg',fit: BoxFit.scaleDown,height: 28,width: 28,),
             SvgPicture.asset('assets/cCart.svg',height: 28,width: 28,fit: BoxFit.scaleDown,),
             SvgPicture.asset('assets/cFile.svg',height: 28,width: 28,fit: BoxFit.scaleDown,),
-            SvgPicture.asset('assets/cSetting.svg',height: 30,width: 30,fit: BoxFit.scaleDown,),
+            SvgPicture.asset('assets/cSetting.svg',height: 28,width: 28,fit: BoxFit.scaleDown,),
           ],
           inactiveIcons:  [
             Column(

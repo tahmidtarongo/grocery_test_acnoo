@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:mobile_pos/Screens/Authentication/Sign%20Up/repo/sign_up_repo.dart';
 import 'package:mobile_pos/Screens/Authentication/Sign%20Up/verify_email.dart';
+import '../../../GlobalComponents/button_global.dart';
 import '../../../constant.dart';
 import '../Sign In/sign_in_screen.dart';
 import '../Wedgets/check_email_for_otp_popup.dart';
@@ -41,19 +43,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        automaticallyImplyLeading: false,
+        backgroundColor: kWhite,
         titleSpacing: 16,
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 16.0),
-          child: Back(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
-        ),
+        centerTitle: true,
+        surfaceTintColor: kWhite,
         title: Text(
           'Sign Up',
-          style: textTheme.titleMedium,
+          style: textTheme.titleMedium?.copyWith(fontSize: 20),
         ),
       ),
       body: SingleChildScrollView(
@@ -62,30 +58,27 @@ class _SignUpScreenState extends State<SignUpScreen> {
           child: Form(
             key: key,
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                const SizedBox(height: 24,),
+                const NameWithLogo(),
+                const SizedBox(height: 24,),
                 Text(
-                  'Create an Account',
-                  style: textTheme.titleMedium?.copyWith(fontSize: 30.0),
+                  'Create A Free Account',
+                  style: textTheme.titleMedium?.copyWith(fontSize: 24.0,fontWeight: FontWeight.w600),
                 ),
-                const SizedBox(height: 8.0),
                 Text(
-                  'Please enter your details.',
-                  style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor),
+                  'Please enter your details',
+                  style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor,fontSize: 16),
                 ),
                 const SizedBox(height: 24.0),
 
                 ///____________Name______________________________________________
-                Text(
-                  'Full Name',
-                  style: textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(height: 8.0),
                 TextFormField(
                   controller: nameTextController,
                   keyboardType: TextInputType.name,
-                  decoration: const InputDecoration(
-                    border: OutlineInputBorder(),
+                  decoration: kInputDecoration.copyWith(
+                    labelText: 'Full Name',
                     hintText: 'Enter your full name',
                   ),
                   validator: (value) {
@@ -98,17 +91,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 const SizedBox(height: 20.0),
 
                 ///__________Email______________________________________________
-                Text(
-                  'Email',
-                  style: textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(height: 8.0),
                 TextFormField(
                   controller: emailTextController,
                   keyboardType: TextInputType.emailAddress,
-                  decoration: const InputDecoration(
-                    border: OutlineInputBorder(),
-                    // labelText: 'email',
+                  decoration: kInputDecoration.copyWith(
+                    // border: OutlineInputBorder(),
+                    labelText: 'email',
                     hintText: 'Enter email address',
                   ),
                   validator: (value) {
@@ -123,18 +111,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 const SizedBox(height: 20.0),
 
                 ///___________Password_____________________________________________
-                Text(
-                  'Password',
-                  style: textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(height: 8.0),
                 TextFormField(
                   controller: passwordTextController,
                   keyboardType: TextInputType.text,
                   obscureText: showPassword,
-                  decoration: InputDecoration(
-                    border: const OutlineInputBorder(),
-                    // labelText: 'Password',
+                  decoration: kInputDecoration.copyWith(
+                    labelText: 'Password',
                     hintText: 'Enter password',
                     suffixIcon: IconButton(
                       onPressed: () {
@@ -143,7 +125,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         });
                       },
                       icon: Icon(
-                        showPassword ? Icons.visibility_off_outlined : Icons.visibility_outlined,
+                        showPassword ? FeatherIcons.eyeOff : FeatherIcons.eye,
                         color: kGreyTextColor,
                       ),
                     ),
@@ -160,8 +142,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 const SizedBox(height: 24.0),
 
                 ///________Button___________________________________________________
-                PrimaryButton(
-                  onPressed: () async {
+                UpdateButton(
+                  onpressed: () async {
                     if (isClicked) {
                       return;
                     }
@@ -188,37 +170,35 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   },
                   text: 'Sign Up',
                 ),
+                const SizedBox(height: 20,),
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    InkWell(
+                      highlightColor: kMainColor.withOpacity(0.1),
+                      borderRadius: BorderRadius.circular(3.0),
+                      onTap: () => Navigator.pop(context),
+                      hoverColor: kMainColor.withOpacity(0.1),
+                      child: RichText(
+                        text: TextSpan(
+                          text: 'Already have an account? ',
+                          style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor),
+                          children: [
+                            TextSpan(
+                              text: 'Sign In',
+                              style: textTheme.bodyMedium?.copyWith(color: kMainColor, fontWeight: FontWeight.bold),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                )
               ],
             ),
           ),
-        ),
-      ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 20.0),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            InkWell(
-              highlightColor: kMainColor.withOpacity(0.1),
-              borderRadius: BorderRadius.circular(3.0),
-              onTap: () => Navigator.pop(context),
-              hoverColor: kMainColor.withOpacity(0.1),
-              child: RichText(
-                text: TextSpan(
-                  text: 'Already have an account? ',
-                  style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor),
-                  children: [
-                    TextSpan(
-                      text: 'Sign In',
-                      style: textTheme.bodyMedium?.copyWith(color: kMainColor, fontWeight: FontWeight.bold),
-                    )
-                  ],
-                ),
-              ),
-            ),
-          ],
         ),
       ),
     );

@@ -18,7 +18,7 @@ List<GridItems> getFreeIcons({required BuildContext context}) {
     GridItems(title: lang.S.of(context).reports, icon: 'assets/reports.svg', route: 'Reports'),
     GridItems(
       title: lang.S.of(context).saleList,
-      icon: 'assets/saleslist.svg',
+      icon: 'assets/salelist.svg',
       route: 'Sales List',
     ),
     GridItems(
