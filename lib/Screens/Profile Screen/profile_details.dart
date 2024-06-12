@@ -143,6 +143,23 @@ class _ProfileDetailsState extends State<ProfileDetails> {
                     ),
                   ),
 
+                  ///________Email__________________________________
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: AppTextField(
+                      readOnly: true,
+                      initialValue: details.user?.email,
+                      cursorColor: kGreyTextColor,
+                      decoration: kInputDecoration.copyWith(
+                        labelText: "Email",
+                        border: const OutlineInputBorder().copyWith(borderSide: const BorderSide(color: kGreyTextColor)),
+                        hoverColor: kGreyTextColor,
+                        fillColor: kGreyTextColor,
+                      ),
+                      textFieldType: TextFieldType.NAME,
+                    ),
+                  ),
+
                   ///_____________Category__________________________________
                   Padding(
                     padding: const EdgeInsets.all(10.0),
@@ -161,21 +178,21 @@ class _ProfileDetailsState extends State<ProfileDetails> {
                   ),
 
                   ///_____________Phone_________________________________
-                  // Padding(
-                  //   padding: const EdgeInsets.all(10.0),
-                  //   child: AppTextField(
-                  //     readOnly: true,
-                  //     cursorColor: kGreyTextColor,
-                  //     controller: phoneController,
-                  //     decoration: kInputDecoration.copyWith(
-                  //       labelText: lang.S.of(context).phone,
-                  //       border: const OutlineInputBorder().copyWith(borderSide: const BorderSide(color: kGreyTextColor)),
-                  //       hoverColor: kGreyTextColor,
-                  //       fillColor: kGreyTextColor,
-                  //     ),
-                  //     textFieldType: TextFieldType.NAME,
-                  //   ),
-                  // ),
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: AppTextField(
+                      readOnly: true,
+                      cursorColor: kGreyTextColor,
+                      controller: phoneController,
+                      decoration: kInputDecoration.copyWith(
+                        labelText: lang.S.of(context).phone,
+                        border: const OutlineInputBorder().copyWith(borderSide: const BorderSide(color: kGreyTextColor)),
+                        hoverColor: kGreyTextColor,
+                        fillColor: kGreyTextColor,
+                      ),
+                      textFieldType: TextFieldType.NAME,
+                    ),
+                  ),
 
                   ///__________Address_________________________
                   Padding(

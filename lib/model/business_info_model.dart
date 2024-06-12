@@ -92,6 +92,7 @@ class User {
     this.role,
     this.visibility,
     this.lang,
+    this.email,
   });
 
   User.fromJson(dynamic json) {
@@ -100,18 +101,21 @@ class User {
     role = json['role'];
     visibility = json['visibility'] != null ? Visibility.fromJson(json['visibility']) : null;
     lang = json['lang'];
+    email = json['email'];
   }
   num? id;
   String? name;
   String? role;
   Visibility? visibility;
   dynamic lang;
+  String? email;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
     map['id'] = id;
     map['name'] = name;
     map['role'] = role;
+    map['email'] = email;
     if (visibility != null) {
       map['visibility'] = visibility?.toJson();
     }

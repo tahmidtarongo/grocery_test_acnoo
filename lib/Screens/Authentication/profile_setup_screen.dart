@@ -38,7 +38,7 @@ class _ProfileSetupState extends State<ProfileSetup> {
   XFile? pickedImage;
   TextEditingController addressController = TextEditingController();
   TextEditingController openingBalanceController = TextEditingController();
-  // TextEditingController phoneController = TextEditingController();
+  TextEditingController phoneController = TextEditingController();
   TextEditingController nameController = TextEditingController();
 
   // void _loadLanguages() async {
@@ -131,9 +131,12 @@ class _ProfileSetupState extends State<ProfileSetup> {
                       await businessSetupRepo.businessSetup(
                         context: context,
                         name: nameController.text,
+                        phone: phoneController.text,
                         address: addressController.text.isEmptyOrNull ? null : addressController.text,
                         categoryId: selectedBusinessCategory!.id.toString(),
+
                         image: pickedImage == null ? null : File(pickedImage!.path),
+
                         // languageCode: selectedLanguage!.code,
                         openingBalance: openingBalanceController.text.isEmptyOrNull ? null : openingBalanceController.text,
                         // phone: phoneController.text,
@@ -331,28 +334,24 @@ class _ProfileSetupState extends State<ProfileSetup> {
                       ),
 
                       ///__________Phone_________________________
-                      // Padding(
-                      //   padding: const EdgeInsets.all(10.0),
-                      //   child: SizedBox(
-                      //     height: 60.0,
-                      //     child: AppTextField(
-                      //       controller: phoneController,
-                      //       validator: (value) {
-                      //         if (value == null || value.isEmpty) {
-                      //           return 'Please enter a valid phone number';
-                      //         }
-                      //         // You can add more validation logic as needed
-                      //         return null;
-                      //       },
-                      //       textFieldType: TextFieldType.PHONE,
-                      //       decoration: InputDecoration(
-                      //         labelText: lang.S.of(context).phone,
-                      //         hintText: lang.S.of(context).enterYourPhoneNumber,
-                      //         border: const OutlineInputBorder(),
-                      //       ),
-                      //     ),
-                      //   ),
-                      // ),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: SizedBox(
+                          height: 60.0,
+                          child: AppTextField(
+                            controller: phoneController,
+                            validator: (value) {
+                              return null;
+                            },
+                            textFieldType: TextFieldType.PHONE,
+                            decoration: kInputDecoration.copyWith(
+                              labelText: lang.S.of(context).phone,
+                              hintText: lang.S.of(context).enterYourPhoneNumber,
+                              border: const OutlineInputBorder(),
+                            ),
+                          ),
+                        ),
+                      ),
 
                       ///_________Address___________________________
                       Padding(

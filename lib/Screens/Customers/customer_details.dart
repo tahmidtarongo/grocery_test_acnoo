@@ -304,7 +304,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                     const SizedBox(height: 20,),
                     widget.party.type != 'Supplier'
                         ? providerData.when(data: (transaction) {
-                            return transaction.isNotEmpty? ListView.builder(
+                            return  ListView.builder(
                               padding: EdgeInsets.zero,
                               shrinkWrap: true,
                               physics: const NeverScrollableScrollPhysics(),
@@ -321,7 +321,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                                     },
                                     child: Column(
                                       children: [
-                                        Container(
+                                        SizedBox(
                                           // padding: const EdgeInsets.all(20),
                                           width: context.width(),
                                           child: Column(
@@ -486,7 +486,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                                   ),
                                 );
                               },
-                            ):const Text('No Transaction');
+                            );
                           }, error: (e, stack) {
                             return Text(e.toString());
                           }, loading: () {
