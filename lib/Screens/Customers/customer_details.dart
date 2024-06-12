@@ -84,6 +84,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
       return Scaffold(
         backgroundColor: kWhite,
         appBar: AppBar(
+          surfaceTintColor: kWhite,
           backgroundColor: Colors.white,
           title: Text(
             widget.party.type != 'Supplier' ? lang.S.of(context).CustomerDetails : " Supplier Details",
