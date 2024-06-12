@@ -24,6 +24,7 @@ class _BrandsListState extends State<BrandsList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: kWhite,
       appBar: AppBar(
         title: Text(
           lang.S.of(context).brands,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:iconly/iconly.dart';
 import 'package:mobile_pos/Const/api_config.dart';
 import 'package:mobile_pos/Provider/product_provider.dart';
 import 'package:mobile_pos/Screens/Products/product_details.dart';
@@ -26,7 +27,7 @@ class _ProductListState extends State<ProductList> {
       builder: (context, ref, __) {
         final providerData = ref.watch(productProvider);
         return Scaffold(
-          backgroundColor: kWhite,
+          backgroundColor: Colors.white,
           appBar: AppBar(
             backgroundColor: Colors.white,
             surfaceTintColor: kWhite,
@@ -40,6 +41,13 @@ class _ProductListState extends State<ProductList> {
             ),
             centerTitle: true,
           ),
+          floatingActionButton: FloatingActionButton(
+            backgroundColor: kMainColor,
+               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
+              onPressed: (){
+                Navigator.pushNamed(context, '/AddProducts');
+              },
+            child: const Icon(Icons.add,color: kWhite,)),
           body: SingleChildScrollView(
             child: providerData.when(data: (products) {
               return products.isNotEmpty
@@ -49,9 +57,11 @@ class _ProductListState extends State<ProductList> {
                       itemCount: products.length,
                       itemBuilder: (_, i) {
                         return ListTile(
-                          onTap: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>const ProductDetails()));
-                          },
+                          // visualDensity: VisualDensity(horizontal: -4,vertical: -4),
+                         contentPadding: const EdgeInsets.only(left: 16),
+                          // onTap: () {
+                          //   Navigator.push(context, MaterialPageRoute(builder: (context)=>const ProductDetails()));
+                          // },
                           leading: Container(
                             height: 50,
                             width: 50,
@@ -80,9 +90,40 @@ class _ProductListState extends State<ProductList> {
                           ),
                           title: Text(products[i].productName ?? ''),
                           subtitle: Text("${lang.S.of(context).stock} : ${products[i].productStock}"),
-                          trailing: Text(
-                            "$currency ${products[i].productSalePrice}",
-                            style: const TextStyle(fontSize: 18),
+                          trailing: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Text(
+                                "$currency ${products[i].productSalePrice}",
+                                style: const TextStyle(fontSize: 18),
+                              ),
+                              PopupMenuButton<int>(
+                                itemBuilder: (context) => [
+                                  // popupmenu item 1
+                                    PopupMenuItem(
+                                      onTap: (){
+                                        Navigator.push(context, MaterialPageRoute(builder: (context)=>UpdateProduct(productModel: products[i],)));
+                                      },
+                                    value: 1,
+                                    // row has two child icon and text.
+                                    child: Row(
+                                      children: [
+                                        const Icon(IconlyBold.edit,color: kGreyTextColor,),
+                                        SizedBox(
+                                          // sized box with width 10
+                                          width: 10,
+                                        ),
+                                        Text("Edit",style: gTextStyle.copyWith(color: kGreyTextColor),)
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                                offset: const Offset(0, 40),
+                                color: kWhite,
+                                padding: EdgeInsets.zero,
+                                elevation: 2,
+                              ),
+                            ],
                           ),
                         );
                       })
@@ -99,15 +140,15 @@ class _ProductListState extends State<ProductList> {
               return const Center(child: CircularProgressIndicator());
             }),
           ),
-          bottomNavigationBar: ButtonGlobal(
-            iconWidget: Icons.add,
-            buttontext: lang.S.of(context).addNewProduct,
-            iconColor: Colors.white,
-            buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
-            onPressed: () {
-              Navigator.pushNamed(context, '/AddProducts');
-            },
-          ),
+          // bottomNavigationBar: ButtonGlobal(
+          //   iconWidget: Icons.add,
+          //   buttontext: lang.S.of(context).addNewProduct,
+          //   iconColor: Colors.white,
+          //   buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
+          //   onPressed: () {
+          //     Navigator.pushNamed(context, '/AddProducts');
+          //   },
+          // ),
         );
       },
     );

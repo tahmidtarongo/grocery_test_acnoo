@@ -32,6 +32,7 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
       final printerData = ref.watch(printerPurchaseProviderNotifier);
       return SafeArea(
         child: Scaffold(
+          backgroundColor: Colors.white,
           body: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.all(10.0),

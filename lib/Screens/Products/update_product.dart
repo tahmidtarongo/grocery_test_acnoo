@@ -22,9 +22,9 @@ import 'category_list_screen.dart';
 
 // ignore: must_be_immutable
 class UpdateProduct extends StatefulWidget {
-  UpdateProduct({Key? key, this.productModel}) : super(key: key);
+  UpdateProduct({Key? key,  this.productModel}) : super(key: key);
 
-  ProductModel? productModel;
+ final ProductModel ? productModel;
 
   @override
   // ignore: library_private_types_in_public_api

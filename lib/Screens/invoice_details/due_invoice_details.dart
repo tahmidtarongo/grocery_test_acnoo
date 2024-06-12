@@ -31,6 +31,7 @@ class _DueInvoiceDetailsState extends State<DueInvoiceDetails> {
       final printerData = ref.watch(printerDueProviderNotifier);
       return SafeArea(
         child: Scaffold(
+          backgroundColor: Colors.white,
           body: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.all(10.0),

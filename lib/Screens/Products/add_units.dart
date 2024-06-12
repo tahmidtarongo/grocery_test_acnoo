@@ -25,6 +25,7 @@ class _AddUnitsState extends State<AddUnits> {
   Widget build(BuildContext context) {
     return Consumer(builder: (context, ref, __) {
       return Scaffold(
+        backgroundColor: kWhite,
         appBar: AppBar(
           leading: IconButton(
               onPressed: () {

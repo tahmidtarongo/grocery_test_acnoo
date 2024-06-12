@@ -136,7 +136,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   const SizedBox(height: 10,),
                   Row(
                     children: [
-                      Expanded(child: GlobalContainer(title: 'Total Income', image: 'assets/saleslist.svg', subtitle: '$currency ${dashboard.data?.totalIncome.toString() ?? '0'}')),
+                      Expanded(child: GlobalContainer(title: 'Total Income', image: 'assets/totalIncome.svg', subtitle: '$currency ${dashboard.data?.totalIncome.toString() ?? '0'}')),
                       SizedBox(width: 12,),
                       Expanded(child: GlobalContainer(title: 'Total Expense', image: 'assets/expense.svg', subtitle: '$currency ${dashboard.data?.totalExpense.toString() ?? '0'}'))
                     ],
