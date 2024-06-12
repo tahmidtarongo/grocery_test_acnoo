@@ -158,140 +158,140 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                   widget.party.phone ?? '',
                   style: const TextStyle(fontSize: 16),
                 ),
-                const SizedBox(height: 30),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    GestureDetector(
-                      onTap: () async {
-                        final Uri url = Uri.parse('tel:${widget.party.phone}');
-                        if (await canLaunchUrl(url)) {
-                          await launchUrl(url);
-                        }
-                        setState(() {
-                          selectedIndex=0;
-                        });
-                      },
-                      child: Container(
-                        height: 90,
-                        width: 110,
-                        decoration: BoxDecoration(color: selectedIndex==0?kMainColor: kMainColor.withOpacity(0.10), borderRadius: const BorderRadius.all(Radius.circular(10))),
-                        child:  Center(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                FeatherIcons.phone,
-                                size: 25,
-                                color: selectedIndex==0?kWhite:  Colors.black,
-                              ),
-                              const SizedBox(height: 5),
-                              Text(
-                                'Call',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  color: selectedIndex==0?kWhite:  Colors.black,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () async {
-                        if (widget.party.type != 'Supplier') {
-                          showDialog(
-                            context: context,
-                            builder: (context1) {
-                              return SmsConfirmationPopup(
-                                customerName: widget.party.name ?? '',
-                                phoneNumber: widget.party.phone ?? '',
-                                onCancel: () {
-                                  Navigator.pop(context1);
-                                },
-                                onSendSms: () async {
-                                  EasyLoading.show(status: 'SMS Sending..');
-                                  PartyRepository repo = PartyRepository();
-                                  await repo.sendCustomerUdeSms(id: widget.party.id!, context: context);
-                                },
-                              );
-                            },
-                          );
-                        } else {
-                          final Uri url = Uri.parse('sms:${widget.party.phone}');
-
-                          if (await canLaunchUrl(url)) {
-                            await launchUrl(url);
-                          }
-                        }
-                        setState(() {
-                          selectedIndex=1;
-                        });
-                      },
-                      child: Container(
-                        height: 90,
-                        width: 110,
-                        decoration: BoxDecoration(
-                          color: selectedIndex==1?kMainColor:kMainColor.withOpacity(0.10),
-                          borderRadius: const BorderRadius.all(
-                            Radius.circular(10),
-                          ),
-                        ),
-                        child:  Center(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                FeatherIcons.messageSquare,
-                                size: 25,
-                                color:selectedIndex==1?kWhite: Colors.black,
-                              ),
-                              Text(
-                                'Message',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  color:selectedIndex==1?kWhite: Colors.black,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () async {
-                        setState(() {
-                          selectedIndex=2;
-                        });
-                      },
-                      child: Container(
-                        height: 90,
-                        width: 100,
-                        decoration: BoxDecoration(color: selectedIndex==2?kMainColor:kMainColor.withOpacity(0.10), borderRadius: const BorderRadius.all(Radius.circular(10))),
-                        child:  Center(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                FeatherIcons.mail,
-                                size: 25,
-                                color: selectedIndex==2?kWhite: Colors.black,
-                              ),
-                              Text(
-                                'Email',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  color:selectedIndex==2?kWhite: Colors.black,
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                // const SizedBox(height: 30),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //   children: [
+                //     GestureDetector(
+                //       onTap: () async {
+                //         final Uri url = Uri.parse('tel:${widget.party.phone}');
+                //         if (await canLaunchUrl(url)) {
+                //           await launchUrl(url);
+                //         }
+                //         setState(() {
+                //           selectedIndex=0;
+                //         });
+                //       },
+                //       child: Container(
+                //         height: 90,
+                //         width: 110,
+                //         decoration: BoxDecoration(color: selectedIndex==0?kMainColor: kMainColor.withOpacity(0.10), borderRadius: const BorderRadius.all(Radius.circular(10))),
+                //         child:  Center(
+                //           child: Column(
+                //             mainAxisAlignment: MainAxisAlignment.center,
+                //             children: [
+                //               Icon(
+                //                 FeatherIcons.phone,
+                //                 size: 25,
+                //                 color: selectedIndex==0?kWhite:  Colors.black,
+                //               ),
+                //               const SizedBox(height: 5),
+                //               Text(
+                //                 'Call',
+                //                 style: TextStyle(
+                //                   fontSize: 20,
+                //                   color: selectedIndex==0?kWhite:  Colors.black,
+                //                 ),
+                //               )
+                //             ],
+                //           ),
+                //         ),
+                //       ),
+                //     ),
+                //     GestureDetector(
+                //       onTap: () async {
+                //         if (widget.party.type != 'Supplier') {
+                //           showDialog(
+                //             context: context,
+                //             builder: (context1) {
+                //               return SmsConfirmationPopup(
+                //                 customerName: widget.party.name ?? '',
+                //                 phoneNumber: widget.party.phone ?? '',
+                //                 onCancel: () {
+                //                   Navigator.pop(context1);
+                //                 },
+                //                 onSendSms: () async {
+                //                   EasyLoading.show(status: 'SMS Sending..');
+                //                   PartyRepository repo = PartyRepository();
+                //                   await repo.sendCustomerUdeSms(id: widget.party.id!, context: context);
+                //                 },
+                //               );
+                //             },
+                //           );
+                //         } else {
+                //           final Uri url = Uri.parse('sms:${widget.party.phone}');
+                //
+                //           if (await canLaunchUrl(url)) {
+                //             await launchUrl(url);
+                //           }
+                //         }
+                //         setState(() {
+                //           selectedIndex=1;
+                //         });
+                //       },
+                //       child: Container(
+                //         height: 90,
+                //         width: 110,
+                //         decoration: BoxDecoration(
+                //           color: selectedIndex==1?kMainColor:kMainColor.withOpacity(0.10),
+                //           borderRadius: const BorderRadius.all(
+                //             Radius.circular(10),
+                //           ),
+                //         ),
+                //         child:  Center(
+                //           child: Column(
+                //             mainAxisAlignment: MainAxisAlignment.center,
+                //             children: [
+                //               Icon(
+                //                 FeatherIcons.messageSquare,
+                //                 size: 25,
+                //                 color:selectedIndex==1?kWhite: Colors.black,
+                //               ),
+                //               Text(
+                //                 'Message',
+                //                 style: TextStyle(
+                //                   fontSize: 20,
+                //                   color:selectedIndex==1?kWhite: Colors.black,
+                //                 ),
+                //               )
+                //             ],
+                //           ),
+                //         ),
+                //       ),
+                //     ),
+                //     GestureDetector(
+                //       onTap: () async {
+                //         setState(() {
+                //           selectedIndex=2;
+                //         });
+                //       },
+                //       child: Container(
+                //         height: 90,
+                //         width: 100,
+                //         decoration: BoxDecoration(color: selectedIndex==2?kMainColor:kMainColor.withOpacity(0.10), borderRadius: const BorderRadius.all(Radius.circular(10))),
+                //         child:  Center(
+                //           child: Column(
+                //             mainAxisAlignment: MainAxisAlignment.center,
+                //             children: [
+                //               Icon(
+                //                 FeatherIcons.mail,
+                //                 size: 25,
+                //                 color: selectedIndex==2?kWhite: Colors.black,
+                //               ),
+                //               Text(
+                //                 'Email',
+                //                 style: TextStyle(
+                //                   fontSize: 20,
+                //                   color:selectedIndex==2?kWhite: Colors.black,
+                //                 ),
+                //               )
+                //             ],
+                //           ),
+                //         ),
+                //       ),
+                //     ),
+                //   ],
+                // ),
                 const SizedBox(height: 20),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
