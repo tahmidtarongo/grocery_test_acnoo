@@ -40,29 +40,81 @@ class _NumericAxisChartState extends State<NumericAxisChart> {
         child: Container(
           color: kWhite,
           child: SfCartesianChart(
-            primaryXAxis: CategoryAxis(),
-            primaryYAxis: NumericAxis(),
+            primaryXAxis: const CategoryAxis(
+              axisLine: AxisLine(width: 0), // Remove bottom axis line
+              majorGridLines: MajorGridLines(width: 0), //// Remove vertical grid lines// Make labels transparent
+              majorTickLines: MajorTickLines(size: 0),
+            ),
+            primaryYAxis: const NumericAxis(
+              axisLine: AxisLine(width: 0), // Remove left axis line
+              majorGridLines: MajorGridLines(
+                color: Color(0xffD1D5DB),
+                dashArray: [5, 5], // Creates a dotted line pattern for horizontal grid lines
+              ),
+            ),
+            plotAreaBorderWidth: 0,
             series: <CartesianSeries<ChartData, String>>[
               ColumnSeries<ChartData, String>(
                 dataSource: chartData,
-                width: 0.2,
+                spacing: 0.3,
+                width: 0.5,
                 xValueMapper: (ChartData data, _) => data.x,
                 yValueMapper: (ChartData data, _) => data.y,
                 name: 'Sales',
                 dataLabelSettings: const DataLabelSettings(isVisible: false),
                 color: Colors.green,
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(10),
+                  topRight: Radius.circular(10),
+                  bottomRight: Radius.circular(10),
+                  bottomLeft: Radius.circular(10)
+                ),
               ),
               ColumnSeries<ChartData, String>(
                 dataSource: chartData,
-                width: 0.2,
+                width: 0.5,
+                spacing: 0.3,
                 xValueMapper: (ChartData data, _) => data.x,
                 yValueMapper: (ChartData data, _) => data.y1,
                 name: 'Purchase',
                 color: kMainColor,
                 dataLabelSettings: const DataLabelSettings(isVisible: false),
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(10),
+                  topRight: Radius.circular(10),
+                  bottomLeft: Radius.circular(10),
+                  bottomRight: Radius.circular(10)
+                ),
               ),
             ],
-          ),
+          )
+          ,
+          // child: SfCartesianChart(
+          //   primaryXAxis: const CategoryAxis(  majorGridLines: MajorGridLines(width: 0),),
+          //   primaryYAxis: const NumericAxis(  majorGridLines: MajorGridLines(width: 0),),
+          //   series: <CartesianSeries<ChartData, String>>[
+          //     ColumnSeries<ChartData, String>(
+          //       dataSource: chartData,
+          //       width: 0.2,
+          //       xValueMapper: (ChartData data, _) => data.x,
+          //       yValueMapper: (ChartData data, _) => data.y,
+          //       name: 'Sales',
+          //       dataLabelSettings: const DataLabelSettings(isVisible: false),
+          //       borderRadius:  BorderRadius.circular(10),
+          //       color: Colors.green,
+          //     ),
+          //     ColumnSeries<ChartData, String>(
+          //       dataSource: chartData,
+          //       width: 0.2,
+          //       xValueMapper: (ChartData data, _) => data.x,
+          //       yValueMapper: (ChartData data, _) => data.y1,
+          //       name: 'Purchase',
+          //       color: kMainColor,
+          //       dataLabelSettings: const DataLabelSettings(isVisible: false),
+          //       borderRadius:  BorderRadius.circular(10),
+          //     ),
+          //   ],
+          // ),
         ),
       ),
     );
