@@ -40,8 +40,8 @@ class _NumericAxisChartState extends State<NumericAxisChart> {
         child: Container(
           color: kWhite,
           child: SfCartesianChart(
-            primaryXAxis: CategoryAxis(),
-            primaryYAxis: NumericAxis(),
+            primaryXAxis: const CategoryAxis(),
+            primaryYAxis: const NumericAxis(),
             series: <CartesianSeries<ChartData, String>>[
               ColumnSeries<ChartData, String>(
                 dataSource: chartData,
@@ -50,6 +50,7 @@ class _NumericAxisChartState extends State<NumericAxisChart> {
                 yValueMapper: (ChartData data, _) => data.y,
                 name: 'Sales',
                 dataLabelSettings: const DataLabelSettings(isVisible: false),
+                borderRadius:  BorderRadius.circular(10),
                 color: Colors.green,
               ),
               ColumnSeries<ChartData, String>(
@@ -60,6 +61,7 @@ class _NumericAxisChartState extends State<NumericAxisChart> {
                 name: 'Purchase',
                 color: kMainColor,
                 dataLabelSettings: const DataLabelSettings(isVisible: false),
+                borderRadius:  BorderRadius.circular(10),
               ),
             ],
           ),
