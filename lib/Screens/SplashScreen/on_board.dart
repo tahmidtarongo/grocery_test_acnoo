@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
-import 'package:mobile_pos/Screens/Authentication/Phone%20Auth/phone_auth_screen.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../constant.dart';
 import '../Authentication/Sign In/sign_in_screen.dart';
-import '../payment getway/payment_getway_screen.dart';
 
 class OnBoard extends StatefulWidget {
   const OnBoard({Key? key}) : super(key: key);

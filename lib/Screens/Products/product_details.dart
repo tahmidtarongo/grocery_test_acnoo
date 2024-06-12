@@ -6,7 +6,9 @@ import 'package:mobile_pos/constant.dart';
 import 'package:mobile_pos/currency.dart';
 
 class ProductDetails extends StatefulWidget {
-  const ProductDetails({Key? key, }) : super(key: key);
+  const ProductDetails({
+    Key? key,
+  }) : super(key: key);
 
   @override
   State<ProductDetails> createState() => _ProductDetailsState();
@@ -30,13 +32,20 @@ class _ProductDetailsState extends State<ProductDetails> {
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: IconButton(
-                onPressed: (){
+                onPressed: () {
                   // Navigator.push(context, MaterialPageRoute(builder: (context)=>UpdateProduct()));
                 },
                 icon: Row(
                   children: [
-                    const Icon(IconlyBold.edit,color: kMainColor,size: 18,),
-                    Text('Edit',style: gTextStyle.copyWith(fontSize: 13,color: kMainColor),)
+                    const Icon(
+                      IconlyBold.edit,
+                      color: kMainColor,
+                      size: 18,
+                    ),
+                    Text(
+                      'Edit',
+                      style: gTextStyle.copyWith(fontSize: 13, color: kMainColor),
+                    )
                   ],
                 )),
           )
@@ -58,32 +67,52 @@ class _ProductDetailsState extends State<ProductDetails> {
                 Container(
                   height: 290,
                   width: MediaQuery.of(context).size.width,
-                  decoration:  BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    color: const Color(0xffFEF0F1),
-                      image: const DecorationImage(fit: BoxFit.cover,image: NetworkImage('https://tinyurl.com/3tme92c2'))
-                  ),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5), color: const Color(0xffFEF0F1), image: const DecorationImage(fit: BoxFit.cover, image: NetworkImage('https://tinyurl.com/3tme92c2'))),
                 ),
-                const SizedBox(height: 20,),
+                const SizedBox(
+                  height: 20,
+                ),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Smart watch',style: gTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor,fontSize: 20),),
-                        Text('Apple Watch',style: gTextStyle.copyWith(color: kGreyTextColor),),
+                        Text(
+                          'Smart watch',
+                          style: gTextStyle.copyWith(fontWeight: FontWeight.bold, color: kTitleColor, fontSize: 20),
+                        ),
+                        Text(
+                          'Apple Watch',
+                          style: gTextStyle.copyWith(color: kGreyTextColor),
+                        ),
                       ],
                     ),
                     Spacer(),
-                    Text('$currency 175.0',style: gTextStyle.copyWith(fontSize: 20,fontWeight: FontWeight.bold,color: kTitleColor),)
+                    Text(
+                      '$currency 175.0',
+                      style: gTextStyle.copyWith(fontSize: 20, fontWeight: FontWeight.bold, color: kTitleColor),
+                    )
                   ],
                 ),
-                SizedBox(height: 20,),
-                Text('Details',style: gTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor),),
-                SizedBox(height: 10,),
-                Text('Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.',style: gTextStyle.copyWith(color: kGreyTextColor),),
-                SizedBox(height: 20,),
+                SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  'Details',
+                  style: gTextStyle.copyWith(fontWeight: FontWeight.bold, color: kTitleColor),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  'Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.',
+                  style: gTextStyle.copyWith(color: kGreyTextColor),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
                 Container(
                   decoration: const BoxDecoration(
                     color: Color(0xffFEF0F1),
@@ -96,11 +125,28 @@ class _ProductDetailsState extends State<ProductDetails> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Sale Price',style: gTextStyle.copyWith(color: kTitleColor,fontSize: 16,),),
-                            Text('$currency ${180}',style: gTextStyle.copyWith(color: kGreyTextColor),),
-                            SizedBox(height: 20,),
-                            Text('Wholesale price',style: gTextStyle.copyWith(color: kTitleColor,fontSize: 16),),
-                            Text('$currency ${170}',style: gTextStyle.copyWith(color: kGreyTextColor),)
+                            Text(
+                              'Sale Price',
+                              style: gTextStyle.copyWith(
+                                color: kTitleColor,
+                                fontSize: 16,
+                              ),
+                            ),
+                            Text(
+                              '$currency ${180}',
+                              style: gTextStyle.copyWith(color: kGreyTextColor),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Text(
+                              'Wholesale price',
+                              style: gTextStyle.copyWith(color: kTitleColor, fontSize: 16),
+                            ),
+                            Text(
+                              '$currency ${170}',
+                              style: gTextStyle.copyWith(color: kGreyTextColor),
+                            )
                           ],
                         ),
                         RotatedBox(
@@ -114,11 +160,28 @@ class _ProductDetailsState extends State<ProductDetails> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Stock',style: gTextStyle.copyWith(color: kTitleColor,fontSize: 16,),),
-                            Text('250',style: gTextStyle.copyWith(color: kGreyTextColor),),
-                            const SizedBox(height: 20,),
-                            Text('Dealer price',style: gTextStyle.copyWith(color: kTitleColor,fontSize: 16),),
-                            Text('$currency ${175}',style: gTextStyle.copyWith(color: kGreyTextColor),)
+                            Text(
+                              'Stock',
+                              style: gTextStyle.copyWith(
+                                color: kTitleColor,
+                                fontSize: 16,
+                              ),
+                            ),
+                            Text(
+                              '250',
+                              style: gTextStyle.copyWith(color: kGreyTextColor),
+                            ),
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            Text(
+                              'Dealer price',
+                              style: gTextStyle.copyWith(color: kTitleColor, fontSize: 16),
+                            ),
+                            Text(
+                              '$currency ${175}',
+                              style: gTextStyle.copyWith(color: kGreyTextColor),
+                            )
                           ],
                         ),
                       ],

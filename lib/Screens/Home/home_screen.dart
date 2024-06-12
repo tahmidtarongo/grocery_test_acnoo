@@ -147,14 +147,14 @@ class _HomeScreenState extends State<HomeScreen> {
                       // ),
                     ],
                   ),
-                  actions: const [
-                    Padding(
-                      padding: EdgeInsets.all(15.0),
-                      child: Badge(
-
-                          child: Icon(FeatherIcons.bell,color: kTitleColor,)),
-                    )
-                  ],
+                  // actions: const [
+                  //   Padding(
+                  //     padding: EdgeInsets.all(15.0),
+                  //     child: Badge(
+                  //
+                  //         child: Icon(FeatherIcons.bell,color: kTitleColor,)),
+                  //   )
+                  // ],
                 ),
                 resizeToAvoidBottomInset: true,
                 body: SingleChildScrollView(

@@ -43,11 +43,11 @@ class GeneratePdf {
                   pw.SizedBox(width: 10.0),
                   pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
                     pw.Text(
-                      personalInformation.companyName!,
+                      personalInformation.companyName ?? '',
                       style: pw.Theme.of(context).defaultTextStyle.copyWith(color: PdfColors.black, fontSize: 25.0, fontWeight: pw.FontWeight.bold),
                     ),
                     pw.Text(
-                      'Tel: ${personalInformation.phoneNumber!}',
+                      'Tel: ${personalInformation.phoneNumber ?? ''}',
                       style: pw.Theme.of(context).defaultTextStyle.copyWith(color: PdfColors.red),
                     ),
                   ]),
@@ -407,7 +407,7 @@ class GeneratePdf {
       if (status != PermissionStatus.granted) {
         status = await Permission.storage.request();
       }
-      if (status.isGranted) {
+      if (true) {
         EasyLoading.show(status: 'Generating PDF');
         const downloadsFolderPath = '/storage/emulated/0/Download/';
         Directory dir = Directory(downloadsFolderPath);
@@ -490,11 +490,11 @@ class GeneratePdf {
                   pw.SizedBox(width: 10.0),
                   pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
                     pw.Text(
-                      personalInformation.companyName!,
+                      personalInformation.companyName ?? '',
                       style: pw.Theme.of(context).defaultTextStyle.copyWith(color: PdfColors.black, fontSize: 25.0, fontWeight: pw.FontWeight.bold),
                     ),
                     pw.Text(
-                      'Tel: ${personalInformation.phoneNumber!}',
+                      'Tel: ${personalInformation.phoneNumber ?? ''}',
                       style: pw.Theme.of(context).defaultTextStyle.copyWith(color: PdfColors.red),
                     ),
                   ]),
@@ -866,7 +866,7 @@ class GeneratePdf {
       if (status != PermissionStatus.granted) {
         status = await Permission.storage.request();
       }
-      if (status.isGranted) {
+      if (true) {
         EasyLoading.show(status: 'Generating PDF');
         const downloadsFolderPath = '/storage/emulated/0/Download/';
         Directory dir = Directory(downloadsFolderPath);
@@ -919,11 +919,11 @@ class GeneratePdf {
                   pw.SizedBox(width: 10.0),
                   pw.Column(crossAxisAlignment: pw.CrossAxisAlignment.start, children: [
                     pw.Text(
-                      personalInformation.companyName!,
+                      personalInformation.companyName ?? '',
                       style: pw.Theme.of(context).defaultTextStyle.copyWith(color: PdfColors.black, fontSize: 25.0, fontWeight: pw.FontWeight.bold),
                     ),
                     pw.Text(
-                      'Tel: ${personalInformation.phoneNumber!}',
+                      'Tel: ${personalInformation.phoneNumber ?? ''}',
                       style: pw.Theme.of(context).defaultTextStyle.copyWith(color: PdfColors.red),
                     ),
                   ]),
@@ -1280,7 +1280,7 @@ class GeneratePdf {
       if (status != PermissionStatus.granted) {
         status = await Permission.storage.request();
       }
-      if (status.isGranted) {
+      if (true) {
         EasyLoading.show(status: 'Generating PDF');
         const downloadsFolderPath = '/storage/emulated/0/Download/';
         Directory dir = Directory(downloadsFolderPath);

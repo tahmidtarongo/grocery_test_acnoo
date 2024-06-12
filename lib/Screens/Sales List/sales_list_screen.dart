@@ -82,7 +82,7 @@ class _SalesListScreenState extends State<SalesListScreen> {
                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
                                         Text(
-                                          transaction[index].party?.name??'',
+                                          transaction[index].party?.name ?? '',
                                           style: const TextStyle(fontSize: 16),
                                         ),
                                         Text('#${transaction[index].invoiceNumber}'),
@@ -103,7 +103,7 @@ class _SalesListScreenState extends State<SalesListScreen> {
                                           ),
                                         ),
                                         Text(
-                                          DateFormat.yMMMd().format(DateTime.parse(transaction[index].saleDate??'')),
+                                          DateFormat.yMMMd().format(DateTime.parse(transaction[index].saleDate ?? '')),
                                           style: const TextStyle(color: Colors.grey),
                                         ),
                                       ],
@@ -130,7 +130,7 @@ class _SalesListScreenState extends State<SalesListScreen> {
                                             children: [
                                               IconButton(
                                                   padding: EdgeInsets.zero,
-                                                  visualDensity: const VisualDensity(horizontal: -4,vertical: -4),
+                                                  visualDensity: const VisualDensity(horizontal: -4, vertical: -4),
                                                   onPressed: () async {
                                                     await printerData.getBluetooth();
                                                     PrintTransactionModel model = PrintTransactionModel(transitionModel: transaction[index], personalInformationModel: data);
@@ -152,8 +152,7 @@ class _SalesListScreenState extends State<SalesListScreen> {
                                                                       children: [
                                                                         ListView.builder(
                                                                           shrinkWrap: true,
-                                                                          itemCount:
-                                                                              printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
+                                                                          itemCount: printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
                                                                           itemBuilder: (context, index) {
                                                                             return ListTile(
                                                                               onTap: () async {
@@ -201,19 +200,23 @@ class _SalesListScreenState extends State<SalesListScreen> {
                                                     FeatherIcons.printer,
                                                     color: Colors.grey,
                                                   )),
-                                              const SizedBox(width: 10,),
+                                              const SizedBox(
+                                                width: 10,
+                                              ),
                                               IconButton(
                                                   padding: EdgeInsets.zero,
-                                                  visualDensity: const VisualDensity(horizontal: -4,vertical: -4),
+                                                  visualDensity: const VisualDensity(horizontal: -4, vertical: -4),
                                                   onPressed: () => GeneratePdf().generateSaleDocument(transaction[index], data, context),
                                                   icon: const Icon(
                                                     Icons.picture_as_pdf,
                                                     color: Colors.grey,
                                                   )),
-                                              const SizedBox(width: 10,),
+                                              const SizedBox(
+                                                width: 10,
+                                              ),
                                               IconButton(
                                                   padding: EdgeInsets.zero,
-                                                  visualDensity: const VisualDensity(horizontal: -4,vertical: -4),
+                                                  visualDensity: const VisualDensity(horizontal: -4, vertical: -4),
                                                   onPressed: () {
                                                     cart.clearCart();
                                                     SalesReportEditScreen(
