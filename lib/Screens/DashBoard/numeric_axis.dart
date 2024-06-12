@@ -49,7 +49,7 @@ class _NumericAxisChartState extends State<NumericAxisChart> {
               axisLine: AxisLine(width: 0), // Remove left axis line
               majorGridLines: MajorGridLines(
                 color: Color(0xffD1D5DB),
-                dashArray: [4, 4], // Creates a dotted line pattern for horizontal grid lines
+                dashArray: [5, 5], // Creates a dotted line pattern for horizontal grid lines
               ),
             ),
             plotAreaBorderWidth: 0,
