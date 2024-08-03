@@ -93,7 +93,7 @@ class _VerifyEmailState extends State<VerifyEmail> {
                 length: 6,
                 controller: pinController,
                 focusNode: focusNode,
-                listenForMultipleSmsOnAndroid: true,
+                // listenForMultipleSmsOnAndroid: true,
                 defaultPinTheme: defaultPinTheme,
                 separatorBuilder: (index) => const SizedBox(width: 11),
                 validator: (value) {
