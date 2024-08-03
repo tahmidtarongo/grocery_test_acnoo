@@ -200,7 +200,7 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
 
                   ///______________________________________________________________________
                   subscriptionPlanData.when(data: (data) {
-                    return SizedBox(
+                    return Container(
                       height: (context.width() / 2.5) + 18,
                       child: ListView.builder(
                         physics: const ClampingScrollPhysics(),
@@ -218,49 +218,49 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                                 ? Padding(
                                     padding: const EdgeInsets.only(right: 10),
                                     child: SizedBox(
-                                      height: (context.width() / 2.5) + 18,
+                                      height: (context.width() / 3) + 18,
                                       child: Stack(
-                                        alignment: Alignment.bottomCenter,
+                                        alignment: Alignment.center,
                                         children: [
-                                          Container(
-                                            height: (context.width() / 2.5),
-                                            width: (context.width() / 3) - 20,
-                                            decoration: BoxDecoration(
-                                              color: data[index].id == selectedPlan?.id ? kPremiumPlanColor2.withOpacity(0.1) : Colors.white,
-                                              borderRadius: const BorderRadius.all(
-                                                Radius.circular(10),
+                                          Padding(
+                                            padding: const EdgeInsets.only(bottom: 20, top: 20),
+                                            child: Container(
+                                              // height: (context.width() / 3) - 20,
+                                              width: (context.width() / 3) - 20,
+                                              decoration: BoxDecoration(
+                                                color: data[index].id == selectedPlan?.id ? kPremiumPlanColor2.withOpacity(0.1) : Colors.white,
+                                                borderRadius: const BorderRadius.all(
+                                                  Radius.circular(10),
+                                                ),
+                                                border: Border.all(
+                                                  width: 1,
+                                                  color: data[index].id == selectedPlan?.id ? kPremiumPlanColor2 : kPremiumPlanColor,
+                                                ),
                                               ),
-                                              border: Border.all(
-                                                width: 1,
-                                                color: data[index].id == selectedPlan?.id ? kPremiumPlanColor2 : kPremiumPlanColor,
-                                              ),
-                                            ),
-                                            child: Column(
-                                              mainAxisAlignment: MainAxisAlignment.center,
-                                              children: [
-                                                const SizedBox(height: 12),
-                                                const Text(
-                                                  'Mobile App +\nDesktop',
-                                                  textAlign: TextAlign.center,
-                                                  style: TextStyle(
-                                                    fontSize: 16,
+                                              child: Column(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                children: [
+                                                  Text(
+                                                    data[index].subscriptionName ?? '',
+                                                    style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                                                   ),
-                                                ),
-                                                const SizedBox(height: 10),
-                                                Text(
-                                                  data[index].subscriptionName ?? '',
-                                                  style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                                                ),
-                                                // const SizedBox(height: 0),
-                                                Text(
-                                                  '${getDefoultCurrency(currencies: currencyData.value ?? [])?.symbol ?? ''}${data[index].offerPrice}',
-                                                  style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: kPremiumPlanColor2),
-                                                ),
-                                                Text(
-                                                  '${getDefoultCurrency(currencies: currencyData.value ?? [])?.symbol ?? ''}${data[index].subscriptionPrice}',
-                                                  style: const TextStyle(decoration: TextDecoration.lineThrough, fontSize: 14, color: Colors.grey),
-                                                ),
-                                              ],
+                                                  Text(
+                                                    '${data[index].duration} days',
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                      fontSize: 13,
+                                                    ),
+                                                  ),
+                                                  Text(
+                                                    '${getDefoultCurrency(currencies: currencyData.value ?? [])?.symbol ?? ''}${data[index].offerPrice}',
+                                                    style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: kPremiumPlanColor2),
+                                                  ),
+                                                  Text(
+                                                    '${getDefoultCurrency(currencies: currencyData.value ?? [])?.symbol ?? ''}${data[index].subscriptionPrice}',
+                                                    style: const TextStyle(decoration: TextDecoration.lineThrough, fontSize: 14, color: Colors.grey),
+                                                  ),
+                                                ],
+                                              ),
                                             ),
                                           ),
                                           Positioned(
@@ -278,7 +278,7 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                                               ),
                                               child: Center(
                                                 child: Text(
-                                                  'Save ${(100 - (((data[index].offerPrice ?? 0) * 100) / (data[index].subscriptionPrice ?? 0))).toInt().toString()}%',
+                                                  'Save ${(100 - (((data[index].offerPrice ?? 0) * 100) / (data[index].subscriptionPrice ?? 0))).round().toString()}%',
                                                   style: const TextStyle(color: Colors.white),
                                                 ),
                                               ),
@@ -291,7 +291,6 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                                 : Padding(
                                     padding: const EdgeInsets.only(bottom: 20, top: 20, right: 10),
                                     child: Container(
-                                      height: (context.width() / 3) - 20,
                                       width: (context.width() / 3) - 20,
                                       decoration: BoxDecoration(
                                         color: data[index].id == selectedPlan?.id ? kPremiumPlanColor2.withOpacity(0.1) : Colors.white,
@@ -307,7 +306,14 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                                             data[index].subscriptionName ?? '',
                                             style: const TextStyle(fontSize: 16),
                                           ),
-                                          const SizedBox(height: 20),
+                                          Text(
+                                            '${data[index].duration} days',
+                                            textAlign: TextAlign.center,
+                                            style: const TextStyle(
+                                              fontSize: 13,
+                                            ),
+                                          ),
+                                          const SizedBox(height: 12),
                                           Text(
                                             '${getDefoultCurrency(currencies: currencyData.value ?? [])?.symbol ?? ''}${data[index].subscriptionPrice.toString()}',
                                             style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: kPremiumPlanColor),

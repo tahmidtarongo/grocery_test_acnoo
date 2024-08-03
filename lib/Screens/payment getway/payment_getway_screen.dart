@@ -30,6 +30,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
       ..setNavigationDelegate(
         NavigationDelegate(
           onPageStarted: (String url) {
+            print('Hasina:'+url);
             if (url.contains(successUrl)) {
               print('This is susses');
               Navigator.pop(context,true);
