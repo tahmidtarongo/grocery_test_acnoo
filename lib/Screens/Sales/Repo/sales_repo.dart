@@ -82,6 +82,7 @@ class SaleRepo {
         var data2 = ref.refresh(partiesProvider);
         var data3 = ref.refresh(salesTransactionProvider);
         var data4 = ref.refresh(businessInfoProvider);
+        ref.refresh(summaryInfoProvider);
         // Navigator.pop(context);
         return SalesTransaction.fromJson(parsedData['data']);
       } else {
@@ -146,30 +147,24 @@ class SaleRepo {
       print(parsedData);
 
       if (responseData.statusCode == 200) {
-        EasyLoading.showSuccess('Added successful!').then(
-            (value) {
-              var data1 = ref.refresh(productProvider);
-              var data2 = ref.refresh(partiesProvider);
-              var data3 = ref.refresh(salesTransactionProvider);
-              var data4 = ref.refresh(businessInfoProvider);
-              Navigator.pop(context);
-            }
-        );
+        EasyLoading.showSuccess('Added successful!').then((value) {
+          var data1 = ref.refresh(productProvider);
+          var data2 = ref.refresh(partiesProvider);
+          var data3 = ref.refresh(salesTransactionProvider);
+          var data4 = ref.refresh(businessInfoProvider);
+          Navigator.pop(context);
+        });
         // return PurchaseTransaction.fromJson(parsedData);
       } else {
-        EasyLoading.dismiss().then(
-            (value) {
-              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Sales creation failed: ${parsedData['message']}')));
-            }
-        );
+        EasyLoading.dismiss().then((value) {
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Sales creation failed: ${parsedData['message']}')));
+        });
         return;
       }
     } catch (error) {
-      EasyLoading.dismiss().then(
-          (value) {
-            ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('An error occurred: $error')));
-          }
-      );
+      EasyLoading.dismiss().then((value) {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('An error occurred: $error')));
+      });
       return;
     }
   }

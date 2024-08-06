@@ -50,7 +50,7 @@ class _StockListState extends State<StockList> {
             child: product.isNotEmpty
                 ? Column(
                     children: [
-                      SizedBox(height: 10,),
+                      const SizedBox(height: 10,),
                       Container(
                         height: 50,
                         color: const Color(0xffFEF0F1),
@@ -138,19 +138,20 @@ class _StockListState extends State<StockList> {
                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
                                         Text(
-                                          showableProducts[index].productStock.toString(),
-                                          textAlign: TextAlign.center,
-                                          style: GoogleFonts.poppins(
-                                            color: (showableProducts[index].productStock ?? 0) < 20 ? Colors.red : Colors.black,
-                                          ),
-                                        ),
-                                        Text(
                                           '${showableProducts[index].productPurchasePrice}',
                                           textAlign: TextAlign.start,
                                           style: GoogleFonts.poppins(
                                             color: (showableProducts[index].productStock ?? 0) < 20 ? Colors.red : Colors.black,
                                           ),
                                         ),
+                                        Text(
+                                          showableProducts[index].productStock.toString(),
+                                          textAlign: TextAlign.center,
+                                          style: GoogleFonts.poppins(
+                                            color: (showableProducts[index].productStock ?? 0) < 20 ? Colors.red : Colors.black,
+                                          ),
+                                        ),
+
                                         Text(
                                           '${showableProducts[index].productSalePrice}',
                                           textAlign: TextAlign.end,
@@ -175,32 +176,13 @@ class _StockListState extends State<StockList> {
               padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 16),
               child: Row(
                 // crossAxisAlignment: CrossAxisAlignment.end,
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Expanded(
-                      flex: 2,
-                      child: Text('Total:',style: kTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor,fontSize: 14),)),
-                  Expanded(
-                    flex: 2,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          '$totalStock',
-                          textAlign: TextAlign.start,
-                          style: GoogleFonts.poppins(color: Colors.black, fontSize: 14.0, fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          '$currency${totalParPrice.toInt().toString()}',
-                          style: GoogleFonts.poppins(color: Colors.black, fontSize: 14.0, fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          '$currency${totalSalePrice.toInt().toString()}',
-                          overflow: TextOverflow.ellipsis,
-                          style: GoogleFonts.poppins(color: Colors.black, fontSize: 14.0, fontWeight: FontWeight.bold),
-                        ),
-                      ],
-                    ),
+                  Text('Total Value:',style: kTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor,fontSize: 14),),
+                  Text(
+                    '$currency${totalSalePrice.toInt().toString()}',
+                    overflow: TextOverflow.ellipsis,
+                    style: GoogleFonts.poppins(color: Colors.black, fontSize: 14.0, fontWeight: FontWeight.bold),
                   ),
                 ],
               ),

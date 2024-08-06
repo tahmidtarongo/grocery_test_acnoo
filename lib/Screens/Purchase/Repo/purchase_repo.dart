@@ -74,6 +74,7 @@ class PurchaseRepo {
         var data2 = ref.refresh(partiesProvider);
         var data3 = ref.refresh(purchaseTransactionProvider);
         var data4 = ref.refresh(businessInfoProvider);
+        ref.refresh(summaryInfoProvider);
         // Navigator.pop(context);
         return PurchaseTransaction.fromJson(parsedData['data']);
       } else {

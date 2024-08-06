@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-// const kMainColor = Color(0xFF3F8CFF);
-// const kMainColor = Color(0xFF007AD0);
 const kMainColor = Color(0xffC52127);
 const kGreyTextColor = Color(0xFF828282);
 const kBackgroundColor = Color(0xffF5F3F3);
@@ -18,7 +16,7 @@ bool isPrintEnable = false;
 List<String> paymentsTypeList = ['Cash', 'Card', 'Check', 'Mobile Pay', 'Due'];
 bool isExpiringInFiveDays = false;
 bool isExpiringInOneDays = false;
-const String appVersion = '1.0';
+const String appVersion = '1.1';
 String paypalClientId = '';
 String paypalClientSecret = '';
 const bool sandbox = true;

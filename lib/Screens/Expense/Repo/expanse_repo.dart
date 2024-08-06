@@ -68,6 +68,7 @@ class ExpenseRepo {
       if (responseData.statusCode == 200) {
         var data1 = ref.refresh(expenseProvider);
         var data2 = ref.refresh(businessInfoProvider);
+        ref.refresh(summaryInfoProvider);
         Navigator.pop(context);
         // return PurchaseTransaction.fromJson(parsedData);
       } else {

@@ -86,6 +86,7 @@ class DueRepo {
         var businessInfoRefresh = ref.refresh(businessInfoProvider);
         var dueInvoiceListRefresh = ref.refresh(dueInvoiceListProvider(partyId.round()));
         var dueCollectionListRefresh = ref.refresh(dueCollectionListProvider);
+       var data=  ref.refresh(summaryInfoProvider);
 
         return DueCollection.fromJson(parsedData['data']);
         // Navigator.pop(context);
