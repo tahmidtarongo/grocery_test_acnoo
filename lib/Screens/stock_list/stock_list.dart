@@ -50,7 +50,9 @@ class _StockListState extends State<StockList> {
             child: product.isNotEmpty
                 ? Column(
                     children: [
-                      const SizedBox(height: 10,),
+                      const SizedBox(
+                        height: 10,
+                      ),
                       Container(
                         height: 50,
                         color: const Color(0xffFEF0F1),
@@ -64,7 +66,7 @@ class _StockListState extends State<StockList> {
                                   lang.S.of(context).product,
                                   textAlign: TextAlign.start,
                                   overflow: TextOverflow.ellipsis,
-                                  style: kTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor),
+                                  style: kTextStyle.copyWith(fontWeight: FontWeight.bold, color: kTitleColor),
                                 ),
                               ),
                               Expanded(
@@ -76,19 +78,19 @@ class _StockListState extends State<StockList> {
                                       'Cost',
                                       textAlign: TextAlign.start,
                                       overflow: TextOverflow.ellipsis,
-                                      style: kTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor),
+                                      style: kTextStyle.copyWith(fontWeight: FontWeight.bold, color: kTitleColor),
                                     ),
                                     Text(
                                       'Qty',
                                       textAlign: TextAlign.center,
                                       overflow: TextOverflow.ellipsis,
-                                      style: kTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor),
+                                      style: kTextStyle.copyWith(fontWeight: FontWeight.bold, color: kTitleColor),
                                     ),
                                     Text(
                                       lang.S.of(context).sale,
                                       textAlign: TextAlign.end,
                                       overflow: TextOverflow.ellipsis,
-                                      style:  kTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor),
+                                      style: kTextStyle.copyWith(fontWeight: FontWeight.bold, color: kTitleColor),
                                     ),
                                   ],
                                 ),
@@ -117,7 +119,7 @@ class _StockListState extends State<StockList> {
                                           showableProducts[index].productName.toString(),
                                           textAlign: TextAlign.start,
                                           style: GoogleFonts.poppins(
-                                            color: (showableProducts[index].productStock ?? 0) < 20 ? Colors.red : Colors.black,
+                                            color: Colors.black,
                                             fontSize: 16.0,
                                           ),
                                         ),
@@ -125,7 +127,7 @@ class _StockListState extends State<StockList> {
                                           showableProducts[index].brand?.brandName ?? '',
                                           textAlign: TextAlign.start,
                                           style: GoogleFonts.poppins(
-                                            color: (showableProducts[index].productStock ?? 0) < 20 ? Colors.red : kGreyTextColor,
+                                            color: kGreyTextColor,
                                             fontSize: 12.0,
                                           ),
                                         ),
@@ -151,7 +153,6 @@ class _StockListState extends State<StockList> {
                                             color: (showableProducts[index].productStock ?? 0) < 20 ? Colors.red : Colors.black,
                                           ),
                                         ),
-
                                         Text(
                                           '${showableProducts[index].productSalePrice}',
                                           textAlign: TextAlign.end,
@@ -173,12 +174,15 @@ class _StockListState extends State<StockList> {
           bottomNavigationBar: Container(
             color: const Color(0xffFEF0F1),
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
               child: Row(
                 // crossAxisAlignment: CrossAxisAlignment.end,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('Total Value:',style: kTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor,fontSize: 14),),
+                  Text(
+                    'Stock Value:',
+                    style: kTextStyle.copyWith(fontWeight: FontWeight.bold, color: kTitleColor, fontSize: 14),
+                  ),
                   Text(
                     '$currency${totalSalePrice.toInt().toString()}',
                     overflow: TextOverflow.ellipsis,
