@@ -75,4 +75,83 @@ class CategoryRepo {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('An error occurred: $error')));
     }
   }
+  Future<void> editCategory({
+    required WidgetRef ref,
+    required BuildContext context,
+    required num id,
+    required String name,
+    required bool variationSize,
+    required bool variationColor,
+    required bool variationCapacity,
+    required bool variationType,
+    required bool variationWeight,
+  }) async {
+    final uri = Uri.parse('${APIConfig.url}/categories/$id');
+
+    var responseData = await http.post(uri, headers: {
+      "Accept": 'application/json',
+      'Authorization': await getAuthToken(),
+    }, body: {
+      '_method': 'put',
+      'categoryName': name,
+      'variationSize': variationSize.toString(),
+      'variationColor': variationColor.toString(),
+      'variationCapacity': variationCapacity.toString(),
+      'variationType': variationType.toString(),
+      'variationWeight': variationWeight.toString(),
+    });
+
+    try {
+      // final response = await request.send();
+      // final responseData = await response.stream.bytesToString();
+      final parsedData = jsonDecode(responseData.body);
+
+      if (responseData.statusCode == 200) {
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Added successful!')));
+        var data1 = ref.refresh(categoryProvider);
+        Navigator.pop(context);
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Category creation failed: ${parsedData['message']}')));
+      }
+    } catch (error) {
+      // Handle unexpected errors gracefully
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('An error occurred: $error')));
+    }
+  }
+
+  Future<bool> deleteCategory({required BuildContext context, required num categoryId}) async {
+    final String apiUrl = '${APIConfig.url}/categories/$categoryId'; // Replace with your API URL
+
+    try {
+      final response = await http.delete(
+        Uri.parse(apiUrl),
+        headers: {
+          'Accept': 'application/json',
+          'Authorization': await getAuthToken(),
+        },
+      );
+
+      print(response.statusCode);
+      print(response.body);
+
+      if (response.statusCode == 200) {
+        final responseData = json.decode(response.body);
+        final String message = responseData['message'];
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(message)),
+        );
+        return true;
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Failed to delete category.')),
+        );
+        return false;
+      }
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('An error occurred.')),
+      );
+      return false;
+    }
+  }
 }

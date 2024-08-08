@@ -120,10 +120,6 @@ class ProductRepo {
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Product deleted successfully')));
 
         var data1 = ref.refresh(productProvider);
-
-        Navigator.pop(context); // Assuming you want to close the screen after deletion
-        Navigator.pop(context); // Assuming you want to close the screen after deletion
-        // Navigator.pop(context); // Assuming you want to close the screen after deletion
       } else {
         final parsedData = jsonDecode(response.body);
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Failed to delete product: ${parsedData['message']}')));

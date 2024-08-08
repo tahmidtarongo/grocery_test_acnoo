@@ -154,7 +154,7 @@ class _AddProductState extends State<AddProduct> {
                         return null;
                       },
                       onTap: () async {
-                        data = await const CategoryList().launch(context);
+                        data = await const CategoryList(isFromProductList: false,).launch(context);
                         setState(() {
                           categoryController.text = data.categoryName.categoryName ?? '';
                           selectedCategory = data.categoryName;
@@ -263,7 +263,7 @@ class _AddProductState extends State<AddProduct> {
                         return null;
                       },
                       onTap: () async {
-                        selectedBrand = await const BrandsList().launch(context);
+                        selectedBrand = await const BrandsList(isFromProductList: false,).launch(context);
                         setState(() {
                           brandController.text = selectedBrand?.brandName ?? '';
                         });
@@ -378,7 +378,7 @@ class _AddProductState extends State<AddProduct> {
                               return null;
                             },
                             onTap: () async {
-                              selectedUnit = await const UnitList().launch(context);
+                              selectedUnit = await const UnitList(isFromProductList: false,).launch(context);
                               setState(() {
                                 productUnitController.text = selectedUnit?.unitName ?? '';
                               });

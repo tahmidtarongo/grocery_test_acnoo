@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
 import 'package:mobile_pos/Const/api_config.dart';
 import 'package:mobile_pos/Provider/product_provider.dart';
-import 'package:mobile_pos/Screens/Products/product_details.dart';
+import 'package:mobile_pos/Screens/Products/brands_list.dart';
+import 'package:mobile_pos/Screens/Products/category_list_screen.dart';
+import 'package:mobile_pos/Screens/Products/unit_list.dart';
 import 'package:mobile_pos/Screens/Products/update_product.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
-import 'package:nb_utils/nb_utils.dart';
-
-import '../../GlobalComponents/button_global.dart';
 import '../../constant.dart';
 import '../../currency.dart';
+import 'Repo/product_repo.dart';
+import 'Widgets/widgets.dart';
 
 class ProductList extends StatefulWidget {
   const ProductList({Key? key}) : super(key: key);
@@ -39,15 +41,97 @@ class _ProductListState extends State<ProductList> {
                 color: Colors.black,
               ),
             ),
+            actions: [
+              PopupMenuButton<int>(
+                itemBuilder: (context) => [
+                  PopupMenuItem(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const CategoryList(
+                                    isFromProductList: true,
+                                  )));
+                    },
+                    child: Row(
+                      children: [
+                        const Icon(
+                          IconlyBold.category,
+                          color: kGreyTextColor,
+                        ),
+                        const SizedBox(width: 10),
+                        Text(
+                          "Product Category",
+                          style: gTextStyle.copyWith(color: kGreyTextColor),
+                        )
+                      ],
+                    ),
+                  ),
+                  PopupMenuItem(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const BrandsList(
+                                    isFromProductList: true,
+                                  )));
+                    },
+                    child: Row(
+                      children: [
+                        const Icon(
+                          IconlyBold.bookmark,
+                          color: kGreyTextColor,
+                        ),
+                        const SizedBox(width: 10),
+                        Text(
+                          "Brand",
+                          style: gTextStyle.copyWith(color: kGreyTextColor),
+                        )
+                      ],
+                    ),
+                  ),
+                  PopupMenuItem(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const UnitList(
+                                    isFromProductList: true,
+                                  )));
+                    },
+                    child: Row(
+                      children: [
+                        const Icon(
+                          Icons.scale,
+                          color: kGreyTextColor,
+                        ),
+                        const SizedBox(width: 10),
+                        Text(
+                          "Product Unit",
+                          style: gTextStyle.copyWith(color: kGreyTextColor),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+                offset: const Offset(0, 40),
+                color: kWhite,
+                padding: EdgeInsets.zero,
+                elevation: 2,
+              ),
+            ],
             centerTitle: true,
           ),
           floatingActionButton: FloatingActionButton(
-            backgroundColor: kMainColor,
-               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
-              onPressed: (){
+              backgroundColor: kMainColor,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
+              onPressed: () {
                 Navigator.pushNamed(context, '/AddProducts');
               },
-            child: const Icon(Icons.add,color: kWhite,)),
+              child: const Icon(
+                Icons.add,
+                color: kWhite,
+              )),
           body: SingleChildScrollView(
             child: providerData.when(data: (products) {
               return products.isNotEmpty
@@ -58,7 +142,7 @@ class _ProductListState extends State<ProductList> {
                       itemBuilder: (_, i) {
                         return ListTile(
                           // visualDensity: VisualDensity(horizontal: -4,vertical: -4),
-                         contentPadding: const EdgeInsets.only(left: 16),
+                          contentPadding: const EdgeInsets.only(left: 16),
                           // onTap: () {
                           //   Navigator.push(context, MaterialPageRoute(builder: (context)=>const ProductDetails()));
                           // },
@@ -100,20 +184,59 @@ class _ProductListState extends State<ProductList> {
                               PopupMenuButton<int>(
                                 itemBuilder: (context) => [
                                   // popupmenu item 1
-                                    PopupMenuItem(
-                                      onTap: (){
-                                        Navigator.push(context, MaterialPageRoute(builder: (context)=>UpdateProduct(productModel: products[i],)));
-                                      },
+                                  PopupMenuItem(
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => UpdateProduct(
+                                                    productModel: products[i],
+                                                  )));
+                                    },
                                     value: 1,
                                     // row has two child icon and text.
                                     child: Row(
                                       children: [
-                                        const Icon(IconlyBold.edit,color: kGreyTextColor,),
+                                        const Icon(
+                                          IconlyBold.edit,
+                                          color: kGreyTextColor,
+                                        ),
+                                        SizedBox(width: 10),
+                                        Text(
+                                          "Edit",
+                                          style: gTextStyle.copyWith(color: kGreyTextColor),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+
+                                  ///_________Delete___________________________________
+                                  PopupMenuItem(
+                                    onTap: () async {
+                                      bool confirmDelete = await showDeleteAlert(context: context, itemsName: 'product');
+
+                                      if (confirmDelete) {
+                                        EasyLoading.show(status: 'Deleting....');
+                                        ProductRepo productRepo = ProductRepo();
+                                        await productRepo.deleteProduct(id: products[i].id.toString(), context: context, ref: ref);
+                                      }
+                                    },
+                                    value: 1,
+                                    // row has two child icon and text.
+                                    child: Row(
+                                      children: [
+                                        const Icon(
+                                          IconlyBold.delete,
+                                          color: kGreyTextColor,
+                                        ),
                                         SizedBox(
                                           // sized box with width 10
                                           width: 10,
                                         ),
-                                        Text("Edit",style: gTextStyle.copyWith(color: kGreyTextColor),)
+                                        Text(
+                                          "Delete",
+                                          style: gTextStyle.copyWith(color: kGreyTextColor),
+                                        )
                                       ],
                                     ),
                                   ),

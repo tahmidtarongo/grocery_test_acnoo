@@ -4,12 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
+import 'package:mobile_pos/Screens/Products/Model/brands_model.dart';
 import 'package:mobile_pos/Screens/Products/Repo/brand_repo.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class AddBrands extends StatefulWidget {
-  const AddBrands({Key? key}) : super(key: key);
+  const AddBrands({Key? key, this.brand}) : super(key: key);
+
+  final Brand? brand;
 
   @override
   // ignore: library_private_types_in_public_api
@@ -21,6 +24,13 @@ class _AddBrandsState extends State<AddBrands> {
   TextEditingController brandController = TextEditingController();
 
   final GlobalKey<FormState> _key = GlobalKey();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    widget.brand != null ? brandController.text = widget.brand?.brandName ?? '' : null;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -82,9 +92,10 @@ class _AddBrandsState extends State<AddBrands> {
                   buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
                   onPressed: () async {
                     if (_key.currentState!.validate()) {
-
                       BrandsRepo brandRepo = BrandsRepo();
-                      await brandRepo.addBrand(ref: ref, context: context, name: brandController.text);
+                      widget.brand == null
+                          ? await brandRepo.addBrand(ref: ref, context: context, name: brandController.text)
+                          : await brandRepo.editBrand(ref: ref,id: widget.brand?.id??0, context: context, name: brandController.text);
                     }
                   },
                   buttonTextColor: Colors.white,

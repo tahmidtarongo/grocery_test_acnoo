@@ -80,7 +80,7 @@ class MyApp extends StatelessWidget {
                   '/Sales': (context) => const SalesContact(),
                   '/Parties': (context) => const CustomerList(),
                   '/Expense': (context) => const ExpenseList(),
-                  '/Stock': (context) => const StockList(),
+                  '/Stock': (context) => const StockList(isFromReport: false,),
                   '/Purchase': (context) => const PurchaseContacts(),
                   '/Reports': (context) => const Reports(),
                   '/Due List': (context) => const DueCalculationContactScreen(),

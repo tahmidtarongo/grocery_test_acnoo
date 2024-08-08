@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Screens/Products/Providers/category,brans,units_provide.dart';
@@ -7,11 +8,15 @@ import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../GlobalComponents/button_global.dart';
+import 'Repo/unit_repo.dart';
+import 'Widgets/widgets.dart';
 import 'add_units.dart';
 
 // ignore: must_be_immutable
 class UnitList extends StatefulWidget {
-  const UnitList({Key? key}) : super(key: key);
+  const UnitList({Key? key, required this.isFromProductList}) : super(key: key);
+
+  final bool isFromProductList;
 
   @override
   // ignore: library_private_types_in_public_api
@@ -77,7 +82,7 @@ class _UnitListState extends State<UnitList> {
                         },
                         child: Container(
                           padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-                          height: 60.0,
+                          height: 57.0,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(5.0),
                             border: Border.all(color: kGreyTextColor),
@@ -89,55 +94,90 @@ class _UnitListState extends State<UnitList> {
                         ),
                       ),
                     ),
-                    const SizedBox(
-                      width: 20.0,
-                    ),
                   ],
                 ),
                 unitData.when(data: (data) {
-                  return ListView.builder(
-                      physics: const NeverScrollableScrollPhysics(),
-                      shrinkWrap: true,
-                      itemCount: data.length,
-                      itemBuilder: (context, i) {
-                        return (data[i].unitName ?? '').toLowerCase().contains(search.toLowerCase())
-                            ? Padding(
-                                padding: const EdgeInsets.only(left: 10.0, right: 10.0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    Expanded(
-                                      flex: 3,
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.min,
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          Text(
-                                            data[i].unitName ?? '',
-                                            style: GoogleFonts.poppins(
-                                              fontSize: 18.0,
-                                              color: Colors.black,
-                                            ),
+                  return data.isNotEmpty
+                      ? ListView.builder(
+                          physics: const NeverScrollableScrollPhysics(),
+                          shrinkWrap: true,
+                          itemCount: data.length,
+                          itemBuilder: (context, i) {
+                            return (data[i].unitName ?? '').toLowerCase().contains(search.toLowerCase())
+                                ? GestureDetector(
+                                    onTap: widget.isFromProductList
+                                        ? () {}
+                                        : () {
+                                            Navigator.pop(context, data[i]);
+                                          },
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(top: 10),
+                                      child: Container(
+                                        height: 65,
+                                        decoration: BoxDecoration(border: Border.all(color: kBorderColor), borderRadius: const BorderRadius.all(Radius.circular(10))),
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                                          child: Row(
+                                            mainAxisSize: MainAxisSize.min,
+                                            children: [
+                                              Expanded(
+                                                flex: 3,
+                                                child: Column(
+                                                  mainAxisSize: MainAxisSize.min,
+                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  children: [
+                                                    Text(
+                                                      data[i].unitName ?? '',
+                                                      style: GoogleFonts.poppins(
+                                                        fontSize: 18.0,
+                                                        color: Colors.black,
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                              Expanded(
+                                                  flex: 1,
+                                                  child: Row(
+                                                    children: [
+                                                      IconButton(
+                                                          onPressed: () {
+                                                            Navigator.push(
+                                                                context,
+                                                                MaterialPageRoute(
+                                                                  builder: (context) =>  AddUnits(unit: data[i],),
+                                                                ));
+                                                          },
+                                                          icon: const Icon(Icons.edit)),
+                                                      IconButton(
+                                                          onPressed: () async {
+                                                            bool confirmDelete = await showDeleteAlert(context: context, itemsName: 'unit');
+                                                            if (confirmDelete) {
+                                                              EasyLoading.show();
+                                                              if (await UnitsRepo().deleteUnit(context: context, unitId: data[i].id ?? 0)) {
+                                                                ref.refresh(unitsProvider);
+                                                              }
+                                                              EasyLoading.dismiss();
+                                                            }
+                                                          },
+                                                          icon: const Icon(
+                                                            Icons.delete,
+                                                            color: Colors.redAccent,
+                                                          )),
+                                                    ],
+                                                  )),
+                                            ],
                                           ),
-                                        ],
+                                        ),
                                       ),
                                     ),
-                                    Expanded(
-                                      flex: 1,
-                                      child: ButtonGlobalWithoutIcon(
-                                        buttontext: 'Select',
-                                        buttonDecoration: kButtonDecoration.copyWith(color: kDarkWhite),
-                                        onPressed: () {
-                                          Navigator.pop(context, data[i]);
-                                        },
-                                        buttonTextColor: Colors.black,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              )
-                            : Container();
-                      });
+                                  )
+                                : Container();
+                          })
+                      : const Padding(
+                          padding: EdgeInsets.all(20.0),
+                          child: Text('No Data Found'),
+                        );
                 }, error: (_, __) {
                   return Container();
                 }, loading: () {

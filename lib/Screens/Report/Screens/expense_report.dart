@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:mobile_pos/currency.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
+import 'package:nb_utils/nb_utils.dart';
+import '../../Expense/Providers/all_expanse_provider.dart';
 
 class ExpenseReport extends StatefulWidget {
   const ExpenseReport({Key? key}) : super(key: key);
@@ -10,81 +16,175 @@ class ExpenseReport extends StatefulWidget {
 }
 
 class _ExpenseReportState extends State<ExpenseReport> {
+  final dateController = TextEditingController();
+
+  num totalExpense = 0;
+
+  @override
+  void dispose() {
+    dateController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      // backgroundColor: kWhite,
-      backgroundColor: kWhite,
-      appBar: AppBar(
+    totalExpense = 0;
+    return Consumer(builder: (context, ref, __) {
+      final expenseData = ref.watch(expenseProvider);
+
+      return Scaffold(
         backgroundColor: kWhite,
-        title: const Text('Expense Report'),
-        surfaceTintColor: kWhite,
-      ),
-      bottomNavigationBar: Container(
-        height: 50,
-        width: double.infinity,
-        padding: EdgeInsets.symmetric(horizontal: 16),
-        decoration: const BoxDecoration(
-            color: Color(0xffFEF0F1)
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text('Total:',style: gTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor),),
-            Text('$currency 500',style: gTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor),),
-          ],
-        ),
-      ),
-      body: Column(
-        children: [
-          Container(
-            padding: const EdgeInsets.all(16),
-            decoration: const BoxDecoration(
-              color: Color(0xffFEF0F1),
+        appBar: AppBar(
+          title: Text(
+            lang.S.of(context).expenseReport,
+            style: GoogleFonts.poppins(
+              color: Colors.black,
+              fontSize: 20.0,
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          ),
+          iconTheme: const IconThemeData(color: Colors.black),
+          centerTitle: true,
+          backgroundColor: Colors.white,
+          elevation: 0.0,
+        ),
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
               children: [
-                Text('Name',style: gTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor),),
-                Text('Category',style: gTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor),),
-                Text('Balance',style: gTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor),),
+                ///__________expense_data_table____________________________________________
+                Container(
+                  width: context.width(),
+                  height: 50,
+                  padding: const EdgeInsets.all(10),
+                  decoration: const BoxDecoration(color: kDarkWhite),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(
+                        width: 130,
+                        child: Text(
+                          lang.S.of(context).expenseFor,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 100,
+                        child: Text(lang.S.of(context).date),
+                      ),
+                      Container(
+                        alignment: Alignment.centerRight,
+                        width: 70,
+                        child: Text(lang.S.of(context).amount),
+                      )
+                    ],
+                  ),
+                ),
+
+                expenseData.when(data: (mainData) {
+                  if (mainData.isNotEmpty) {
+                    totalExpense = 0;
+                    for (var element in mainData) {
+                      totalExpense += element.amount ?? 0;
+                    }
+                    return SizedBox(
+                      width: context.width(),
+                      child: ListView.builder(
+                        shrinkWrap: true,
+                        itemCount: mainData.length,
+                        physics: const NeverScrollableScrollPhysics(),
+                        itemBuilder: (BuildContext context, int index) {
+                          return Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    SizedBox(
+                                      width: 130,
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            mainData[index].expanseFor ?? '',
+                                            maxLines: 2,
+                                            overflow: TextOverflow.ellipsis,
+                                          ),
+                                          const SizedBox(height: 5),
+                                          Text(
+                                            mainData[index].category?.categoryName ?? '',
+                                            maxLines: 2,
+                                            overflow: TextOverflow.ellipsis,
+                                            style: const TextStyle(color: Colors.grey, fontSize: 11),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 100,
+                                      child: Text(
+                                        DateFormat.yMMMd().format(DateTime.parse(mainData[index].expenseDate ?? '')),
+                                      ),
+                                    ),
+                                    Container(
+                                      alignment: Alignment.centerRight,
+                                      width: 70,
+                                      child: Text(mainData[index].amount.toString()),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                height: 1,
+                                color: Colors.black12,
+                              )
+                            ],
+                          );
+                        },
+                      ),
+                    );
+                  } else {
+                    return Padding(
+                      padding: const EdgeInsets.all(20),
+                      child: Center(
+                        child: Text(lang.S.of(context).noData),
+                      ),
+                    );
+                  }
+                }, error: (Object error, StackTrace? stackTrace) {
+                  return Text(error.toString());
+                }, loading: () {
+                  return const Center(child: Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: CircularProgressIndicator(),
+                  ));
+                }),
               ],
             ),
           ),
-          Expanded(
-            child: SingleChildScrollView(
-              child: Padding(
-                padding: const EdgeInsets.all(15),
-                child: ListView.builder(
-                    padding: EdgeInsets.zero,
-                    itemCount: 20,
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    itemBuilder: (_,index){
-                      return Padding(
-                        padding: const EdgeInsets.only(bottom: 16),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Text('Staff Salary'),
-                                Text('Jun 29, 2024',style: gTextStyle.copyWith(color: kGreyTextColor),)
-                              ],
-                            ),
-                            const Text('Salary'),
-                            Text('$currency 5,000.00')
-                          ],
-                        ),
-                      );
-                    }),
-              ),
+        ),
+        bottomNavigationBar: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Container(
+            height: 50,
+            padding: const EdgeInsets.all(10),
+            decoration: const BoxDecoration(color: kDarkWhite),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  lang.S.of(context).totalExpense,
+                ),
+                Text('$currency$totalExpense')
+              ],
             ),
-          )
-        ],
-      ),
-    );
+          ),
+        ),
+      );
+    });
   }
 }

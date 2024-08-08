@@ -220,7 +220,7 @@ class _DueReportScreenState extends State<DueReportScreen> {
                                       const SizedBox(
                                         width: 120,
                                         child: Text(
-                                          'Total Received Due',
+                                          'Customer Pay',
                                           maxLines: 2,
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
@@ -251,7 +251,7 @@ class _DueReportScreenState extends State<DueReportScreen> {
                                       const SizedBox(
                                         width: 100,
                                         child: Text(
-                                          'Total Paid Due',
+                                          'Suppler Pay',
                                           maxLines: 2,
                                           textAlign: TextAlign.center,
                                           style: TextStyle(
@@ -366,7 +366,7 @@ class _DueReportScreenState extends State<DueReportScreen> {
                                                     children: [
                                                       IconButton(
                                                           padding: EdgeInsets.zero,
-                                                          visualDensity: const VisualDensity(horizontal: -4,vertical: -4),
+                                                          visualDensity: const VisualDensity(horizontal: -4, vertical: -4),
                                                           onPressed: () async {
                                                             if ((Theme.of(context).platform == TargetPlatform.android)) {
                                                               ///________Print_______________________________________________________
@@ -440,10 +440,10 @@ class _DueReportScreenState extends State<DueReportScreen> {
                                                             FeatherIcons.printer,
                                                             color: Colors.grey,
                                                           )),
-                                                      SizedBox(width: 10,),
+                                                      const SizedBox(width: 10),
                                                       IconButton(
                                                           padding: EdgeInsets.zero,
-                                                          visualDensity: const VisualDensity(horizontal: -4,vertical: -4),
+                                                          visualDensity: const VisualDensity(horizontal: -4, vertical: -4),
                                                           onPressed: () => GeneratePdf().generateDueDocument(transaction[index], data, context),
                                                           icon: const Icon(
                                                             Icons.picture_as_pdf,

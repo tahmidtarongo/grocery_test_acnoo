@@ -10,6 +10,9 @@ import 'package:mobile_pos/constant.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
+import '../Loss_Profit/loss_profit_screen.dart';
+import '../stock_list/stock_list.dart';
+
 class Reports extends StatefulWidget {
   const Reports({Key? key}) : super(key: key);
 
@@ -46,34 +49,71 @@ class _ReportsState extends State<Reports> {
                 },
                 iconPath: 'assets/salesReport.svg',
                 title: lang.S.of(context).salesReport),
-            const SizedBox(height: 16,),
+            const SizedBox(
+              height: 16,
+            ),
             ReportCard(
                 pressed: () {
                   const PurchaseReportScreen().launch(context);
                 },
                 iconPath: 'assets/purchaseReport.svg',
                 title: lang.S.of(context).purchaseReport),
-            const SizedBox(height: 16,),
+            const SizedBox(
+              height: 16,
+            ),
             ReportCard(
                 pressed: () {
                   const DueReportScreen().launch(context);
                 },
                 iconPath: 'assets/duereport.svg',
                 title: lang.S.of(context).dueReport),
-            // const SizedBox(height: 16,),
+            const SizedBox(
+              height: 16,
+            ),
+
+            ///_______________Stock_report________________________________________________________________
+            ReportCard(
+                pressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const StockList(
+                                isFromReport: true,
+                              )));
+                },
+                iconPath: 'assets/stock.svg',
+                title: 'Stock Report'),
+            const SizedBox(height: 16),
+
+            ///_______________Loss/Profit________________________________________________________________
+            ReportCard(
+                pressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const LossProfitScreen()));
+                },
+                iconPath: 'assets/lossprofit.svg',
+                title: 'Loss/Profit Report'),
+            const SizedBox(
+              height: 16,
+            ),
+
+            ///_______________Income_report________________________________________________________________
             // ReportCard(
             //     pressed: () {
-            //       Navigator.push(context, MaterialPageRoute(builder: (context)=>const IncomeReport()));
+            //       Navigator.push(context, MaterialPageRoute(builder: (context) => const IncomeReport()));
             //     },
             //     iconPath: 'assets/incomeReport.svg',
             //     title: 'Income Report'),
-            // const SizedBox(height: 16,),
-            // ReportCard(
-            //     pressed: () {
-            //       Navigator.push(context, MaterialPageRoute(builder: (context)=>const ExpenseReport()));
-            //     },
-            //     iconPath: 'assets/expenseReport.svg',
-            //     title: 'Expense Report'),
+            // const SizedBox(
+            //   height: 16,
+            // ),
+
+            ///__________________Expense Report____________________________________________________________
+            ReportCard(
+                pressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const ExpenseReport()));
+                },
+                iconPath: 'assets/expenseReport.svg',
+                title: 'Expense Report'),
           ],
         ),
       ),
@@ -99,28 +139,19 @@ class ReportCard extends StatelessWidget {
     return GestureDetector(
       onTap: pressed,
       child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(6),
-          color: kWhite,
-          boxShadow: [
-            BoxShadow(
-              color: Color(0xff473232).withOpacity(0.05),
-              blurRadius: 8,
-              spreadRadius: -1,
-              offset: Offset(0, 3)
-            ),
-            BoxShadow(
-              color: Color(0xff0C1A4B).withOpacity(0.24),
-              blurRadius: 1
-            )
-          ]
-        ),
-        
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(6), color: kWhite, boxShadow: [
+          BoxShadow(color: Color(0xff473232).withOpacity(0.05), blurRadius: 8, spreadRadius: -1, offset: Offset(0, 3)),
+          BoxShadow(color: Color(0xff0C1A4B).withOpacity(0.24), blurRadius: 1)
+        ]),
         child: Row(
           children: [
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child: SvgPicture.asset(iconPath,height: 38,width: 38,),
+              child: SvgPicture.asset(
+                iconPath,
+                height: 38,
+                width: 38,
+              ),
             ),
             Padding(
               padding: const EdgeInsets.all(10.0),

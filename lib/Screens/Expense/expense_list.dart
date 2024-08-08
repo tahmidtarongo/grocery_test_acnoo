@@ -159,7 +159,8 @@ class _ExpenseListState extends State<ExpenseList> {
                   if (mainData.isNotEmpty) {
                     totalExpense = 0;
                     for (var element in mainData) {
-                      if ((fromDate.isBefore(DateTime.parse(element.expenseDate?.substring(0, 10) ?? '')) || DateTime.parse(element.expenseDate?.substring(0, 10) ?? '').isAtSameMomentAs(fromDate)) &&
+                      if ((fromDate.isBefore(DateTime.parse(element.expenseDate?.substring(0, 10) ?? '')) ||
+                              DateTime.parse(element.expenseDate?.substring(0, 10) ?? '').isAtSameMomentAs(fromDate)) &&
                           (toDate.isAfter(DateTime.parse(element.expenseDate?.substring(0, 10) ?? '')) ||
                               DateTime.parse(element.expenseDate?.substring(0, 10) ?? '').isAtSameMomentAs(DateTime.parse(toDate.toString().substring(0, 10))))) {
                         totalExpense += element.amount ?? 0;

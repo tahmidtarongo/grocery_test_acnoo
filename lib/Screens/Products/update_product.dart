@@ -22,7 +22,7 @@ import 'category_list_screen.dart';
 
 // ignore: must_be_immutable
 class UpdateProduct extends StatefulWidget {
-  UpdateProduct({Key? key,  this.productModel}) : super(key: key);
+  const UpdateProduct({Key? key,  this.productModel}) : super(key: key);
 
  final ProductModel ? productModel;
 
@@ -98,78 +98,78 @@ class _UpdateProductState extends State<UpdateProduct> {
               fontWeight: FontWeight.bold,
             ),
           ),
-          actions: [
-            IconButton(
-              onPressed: () {
-                showDialog(
-                  barrierDismissible: false,
-                  context: context,
-                  builder: (BuildContext context1) {
-                    return Padding(
-                      padding: const EdgeInsets.all(30.0),
-                      child: Center(
-                        child: Container(
-                          decoration: const BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.all(Radius.circular(30)),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                const SizedBox(height: 20),
-                                Text(
-                                  lang.S.of(context).youWantTodeletetheProduct,
-                                  textAlign: TextAlign.center,
-                                  style: const TextStyle(
-                                    fontSize: 22,
-                                  ),
-                                ),
-                                const SizedBox(height: 20),
-                                Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    Expanded(
-                                      child: ButtonGlobalWithoutIcon(
-                                        buttontext: lang.S.of(context).cancel,
-                                        buttonDecoration: kButtonDecoration.copyWith(color: Colors.green),
-                                        onPressed: (() {
-                                          Navigator.pop(context1);
-                                        }),
-                                        buttonTextColor: Colors.white,
-                                      ),
-                                    ),
-                                    Expanded(
-                                      child: ButtonGlobalWithoutIcon(
-                                        buttontext: lang.S.of(context).delete,
-                                        buttonDecoration: kButtonDecoration.copyWith(color: Colors.red),
-                                        onPressed: (() async {
-                                          EasyLoading.show(status: 'Deleting....');
-                                          ProductRepo productRepo = ProductRepo();
-                                          await productRepo.deleteProduct(id: widget.productModel!.id.toString(), context: context, ref: ref);
-                                        }),
-                                        buttonTextColor: Colors.white,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    );
-                  },
-                );
-              },
-              icon: const Icon(
-                Icons.delete,
-                color: Colors.red,
-              ),
-            )
-          ],
+          // actions: [
+          //   IconButton(
+          //     onPressed: () {
+          //       showDialog(
+          //         barrierDismissible: false,
+          //         context: context,
+          //         builder: (BuildContext context1) {
+          //           return Padding(
+          //             padding: const EdgeInsets.all(30.0),
+          //             child: Center(
+          //               child: Container(
+          //                 decoration: const BoxDecoration(
+          //                   color: Colors.white,
+          //                   borderRadius: BorderRadius.all(Radius.circular(30)),
+          //                 ),
+          //                 child: Padding(
+          //                   padding: const EdgeInsets.all(10.0),
+          //                   child: Column(
+          //                     crossAxisAlignment: CrossAxisAlignment.center,
+          //                     mainAxisSize: MainAxisSize.min,
+          //                     children: [
+          //                       const SizedBox(height: 20),
+          //                       Text(
+          //                         lang.S.of(context).youWantTodeletetheProduct,
+          //                         textAlign: TextAlign.center,
+          //                         style: const TextStyle(
+          //                           fontSize: 22,
+          //                         ),
+          //                       ),
+          //                       const SizedBox(height: 20),
+          //                       Row(
+          //                         mainAxisSize: MainAxisSize.min,
+          //                         children: [
+          //                           Expanded(
+          //                             child: ButtonGlobalWithoutIcon(
+          //                               buttontext: lang.S.of(context).cancel,
+          //                               buttonDecoration: kButtonDecoration.copyWith(color: Colors.green),
+          //                               onPressed: (() {
+          //                                 Navigator.pop(context1);
+          //                               }),
+          //                               buttonTextColor: Colors.white,
+          //                             ),
+          //                           ),
+          //                           Expanded(
+          //                             child: ButtonGlobalWithoutIcon(
+          //                               buttontext: lang.S.of(context).delete,
+          //                               buttonDecoration: kButtonDecoration.copyWith(color: Colors.red),
+          //                               onPressed: (() async {
+          //                                 EasyLoading.show(status: 'Deleting....');
+          //                                 ProductRepo productRepo = ProductRepo();
+          //                                 await productRepo.deleteProduct(id: widget.productModel!.id.toString(), context: context, ref: ref);
+          //                               }),
+          //                               buttonTextColor: Colors.white,
+          //                             ),
+          //                           ),
+          //                         ],
+          //                       ),
+          //                     ],
+          //                   ),
+          //                 ),
+          //               ),
+          //             ),
+          //           );
+          //         },
+          //       );
+          //     },
+          //     icon: const Icon(
+          //       Icons.delete,
+          //       color: Colors.red,
+          //     ),
+          //   )
+          // ],
           centerTitle: true,
         ),
         body: SingleChildScrollView(
@@ -222,7 +222,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                         return null;
                       },
                       onTap: () async {
-                        data = await const CategoryList().launch(context);
+                        data = await const CategoryList(isFromProductList: false,).launch(context);
                         setState(() {
                           categoryController.text = data.categoryName.categoryName ?? '';
                           selectedCategory = data.categoryName;
@@ -354,7 +354,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                         return null;
                       },
                       onTap: () async {
-                        selectedBrand = await const BrandsList().launch(context);
+                        selectedBrand = await const BrandsList(isFromProductList: false,).launch(context);
                         setState(() {
                           brandController.text = selectedBrand?.brandName ?? '';
                         });
@@ -446,7 +446,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                               return null;
                             },
                             onTap: () async {
-                              selectedUnit = await const UnitList().launch(context);
+                              selectedUnit = await const UnitList(isFromProductList: false,).launch(context);
                               setState(() {
                                 productUnitController.text = selectedUnit?.unitName ?? '';
                               });

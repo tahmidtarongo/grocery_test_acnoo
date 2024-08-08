@@ -17,7 +17,8 @@ import '../Home/home.dart';
 import '../Home/home_screen.dart';
 
 class LossProfitScreen extends StatefulWidget {
-  const LossProfitScreen({Key? key}) : super(key: key);
+  const LossProfitScreen({Key? key, this.fromReport}) : super(key: key);
+  final bool? fromReport;
 
   @override
   // ignore: library_private_types_in_public_api
@@ -43,7 +44,7 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
         appBar: AppBar(
           backgroundColor: Colors.white,
           title: Text(
-            lang.S.of(context).lp,
+            (widget.fromReport ?? false) ? 'Loss/Profit Report' : lang.S.of(context).lp,
             style: GoogleFonts.poppins(
               color: Colors.black,
             ),
@@ -131,11 +132,12 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                         ),
                       ),
                       providerData.when(data: (transaction) {
-
                         for (var element in transaction) {
                           if ((fromDate.isBefore(DateTime.parse(element.saleDate ?? '')) || DateTime.parse(element.saleDate ?? '').isAtSameMomentAs(fromDate)) &&
                               (toDate.isAfter(DateTime.parse(element.saleDate ?? '')) || DateTime.parse(element.saleDate ?? '').isAtSameMomentAs(toDate))) {
-                            (element.detailsSumLossProfit??0).isNegative ? totalLoss = totalLoss + (element.detailsSumLossProfit??0).abs() : totalProfit = totalProfit + (element.detailsSumLossProfit??0);
+                            (element.detailsSumLossProfit ?? 0).isNegative
+                                ? totalLoss = totalLoss + (element.detailsSumLossProfit ?? 0).abs()
+                                : totalProfit = totalProfit + (element.detailsSumLossProfit ?? 0);
                           }
                         }
 
@@ -232,7 +234,7 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                                                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                           children: [
                                                             Text(
-                                                              (transaction[index].party?.name!=null)
+                                                              (transaction[index].party?.name != null)
                                                                   ? transaction[index].party?.name ?? ''
                                                                   : transaction[index].party?.phone ?? '',
                                                               style: const TextStyle(fontSize: 16),

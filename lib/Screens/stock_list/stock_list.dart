@@ -8,7 +8,8 @@ import '../../Provider/product_provider.dart';
 import '../../currency.dart';
 
 class StockList extends StatefulWidget {
-  const StockList({Key? key}) : super(key: key);
+  const StockList({Key? key, required this.isFromReport}) : super(key: key);
+  final bool isFromReport;
 
   @override
   // ignore: library_private_types_in_public_api
@@ -38,7 +39,7 @@ class _StockListState extends State<StockList> {
           backgroundColor: Colors.white,
           appBar: AppBar(
             title: Text(
-              lang.S.of(context).stockList,
+             widget.isFromReport?'Stock Report': lang.S.of(context).stockList,
               style: GoogleFonts.poppins(color: Colors.black, fontSize: 22.0, fontWeight: FontWeight.w500),
             ),
             iconTheme: const IconThemeData(color: Colors.black),
