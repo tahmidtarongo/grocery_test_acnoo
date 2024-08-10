@@ -37,7 +37,8 @@ class Data {
       num? stockQty, 
       num? totalLoss, 
       num? totalProfit, 
-      List<Sales>? sales, 
+      num? stockValue,
+      List<Sales>? sales,
       List<Purchases>? purchases,}){
     _totalItems = totalItems;
     _totalCategories = totalCategories;
@@ -60,6 +61,7 @@ class Data {
     _stockQty = json['stock_qty'];
     _totalLoss = json['total_loss'];
     _totalProfit = json['total_profit'];
+    _stockValue = json['stock_value'];
     if (json['sales'] != null) {
       _sales = [];
       json['sales'].forEach((v) {
@@ -81,6 +83,7 @@ class Data {
   num? _stockQty;
   num? _totalLoss;
   num? _totalProfit;
+  num? _stockValue;
   List<Sales>? _sales;
   List<Purchases>? _purchases;
 
@@ -92,6 +95,7 @@ class Data {
   num? get stockQty => _stockQty;
   num? get totalLoss => _totalLoss;
   num? get totalProfit => _totalProfit;
+  num? get stockValue => _stockValue;
   List<Sales>? get sales => _sales;
   List<Purchases>? get purchases => _purchases;
 

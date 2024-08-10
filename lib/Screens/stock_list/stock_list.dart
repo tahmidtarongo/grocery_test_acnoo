@@ -185,7 +185,7 @@ class _StockListState extends State<StockList> {
                     style: kTextStyle.copyWith(fontWeight: FontWeight.bold, color: kTitleColor, fontSize: 14),
                   ),
                   Text(
-                    '$currency${totalSalePrice.toInt().toString()}',
+                    '$currency${totalParPrice.toInt().toString()}',
                     overflow: TextOverflow.ellipsis,
                     style: GoogleFonts.poppins(color: Colors.black, fontSize: 14.0, fontWeight: FontWeight.bold),
                   ),

@@ -3,6 +3,7 @@
 import 'dart:core';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -236,6 +237,14 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                             physics: const NeverScrollableScrollPhysics(),
                             itemCount: providerData.cartItemPurchaseList.length,
                             itemBuilder: (context, index) {
+                              providerData.controllers[index].text = providerData.cartItemPurchaseList[index].productStock.toString();
+                              providerData.focus[index].addListener(() {
+                                if(!providerData.focus[index].hasFocus){
+                                  setState(() {
+
+                                  });
+                                }
+                              },);
                               return Padding(
                                 padding: const EdgeInsets.only(left: 10, right: 10),
                                 child: ListTile(
@@ -271,13 +280,40 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                                               ),
                                             ),
                                             const SizedBox(width: 5),
-                                            Text(
-                                              providerData.cartItemPurchaseList[index].productStock.toString(),
-                                              style: GoogleFonts.poppins(
-                                                color: kGreyTextColor,
-                                                fontSize: 15.0,
+                                            SizedBox(
+                                              width: 30,
+                                              child: TextFormField(
+                                                onTap: () {
+                                                  providerData.controllers[index].clear();
+                                                },
+                                                focusNode: providerData.focus[index],
+                                                controller: providerData.controllers[index],
+                                                textAlign: TextAlign.center,
+                                                keyboardType: TextInputType.number,
+                                                inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
+                                                onChanged: (value) {
+                                                  // num stock = providerData.cartItemList[index].stock ?? 1;
+                                                  if (value.isEmpty || value == '0') {
+                                                    value = '1';
+                                                  } else if (num.tryParse(value) == null) {
+                                                    return;
+                                                  } else {
+                                                    final newQuantity = num.parse(value);
+                                                    providerData.cartItemPurchaseList[index].productStock = newQuantity.round();
+                                                  }
+                                                },
+                                                decoration: InputDecoration(
+                                                    border: InputBorder.none,
+                                                    hintText: providerData.focus[index].hasFocus ? null : providerData.cartItemPurchaseList[index].productStock.toString()),
                                               ),
                                             ),
+                                            // Text(
+                                            //   providerData.cartItemPurchaseList[index].productStock.toString(),
+                                            //   style: GoogleFonts.poppins(
+                                            //     color: kGreyTextColor,
+                                            //     fontSize: 15.0,
+                                            //   ),
+                                            // ),
                                             const SizedBox(width: 5),
                                             GestureDetector(
                                               onTap: () {

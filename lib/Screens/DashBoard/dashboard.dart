@@ -146,7 +146,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                     children: [
                       Expanded(child: GlobalContainer(title: 'Total Due', image: 'assets/duelist.svg', subtitle: '$currency ${dashboard.data?.totalDue.toString() ?? '0'}')),
                       SizedBox(width: 12,),
-                      Expanded(child: GlobalContainer(title: 'Stock Value', image: 'assets/stock.svg', subtitle: dashboard.data?.stockQty.toString() ?? '0'))
+                      Expanded(child: GlobalContainer(title: 'Stock Value', image: 'assets/stock.svg', subtitle: dashboard.data?.stockValue.toString() ?? '0'))
                     ],
                   ),
                   SizedBox(height: 20,),

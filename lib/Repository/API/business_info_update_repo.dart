@@ -30,7 +30,10 @@ class BusinessUpdateRepository {
     }
 
     final response = await request.send();
-    //await response.stream.bytesToString();
+  var da =   await response.stream.bytesToString();
+  print(response.statusCode);
+  print(da);
+  print(categoryId);
 
     if (response.statusCode == 200) {
       return true; // Update successful

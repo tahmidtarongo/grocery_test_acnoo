@@ -250,6 +250,14 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                             physics: const NeverScrollableScrollPhysics(),
                             itemCount: providerData.cartItemList.length,
                             itemBuilder: (context, index) {
+                              providerData.controllers[index].text = ( providerData.cartItemList[index].quantity.toString());
+                              providerData.focus[index].addListener(() {
+                                if(!providerData.focus[index].hasFocus){
+                                  setState(() {
+
+                                  });
+                                }
+                              },);
                               return Padding(
                                 padding: const EdgeInsets.only(left: 10, right: 10),
                                 child: ListTile(
@@ -285,13 +293,48 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                               ),
                                             ),
                                             const SizedBox(width: 5),
-                                            Text(
-                                              '${providerData.cartItemList[index].quantity}',
-                                              style: GoogleFonts.poppins(
-                                                color: kGreyTextColor,
-                                                fontSize: 15.0,
+                                            SizedBox(
+                                              width: 30,
+                                              child: TextFormField(
+
+                                                onTap: () {
+                                                  providerData.controllers[index].clear();
+                                                },
+
+                                                focusNode: providerData.focus[index],
+                                                controller: providerData.controllers[index],
+                                                textAlign: TextAlign.center,
+                                                keyboardType: TextInputType.number,
+                                                inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
+                                                onChanged: (value) {
+                                                  num stock = providerData.cartItemList[index].stock ?? 1;
+                                                  if (value.isEmpty || value == '0') {
+                                                    value = '1';
+                                                  } else if (num.tryParse(value) == null) {
+                                                    return;
+                                                  } else {
+                                                    final newQuantity = num.parse(value);
+                                                    if (newQuantity <= stock) {
+                                                        providerData.cartItemList[index].quantity = newQuantity.round();
+
+                                                    } else {
+                                                      providerData.controllers[index].text = '1';
+                                                      EasyLoading.showError('Out Of Stock');
+                                                    }
+                                                  }
+                                                },
+                                                decoration: InputDecoration(
+                                                    border: InputBorder.none,
+                                                    hintText: providerData.focus[index].hasFocus ? null : providerData.cartItemList[index].quantity.toString()),
                                               ),
                                             ),
+                                            // Text(
+                                            //   '${providerData.cartItemList[index].quantity}',
+                                            //   style: GoogleFonts.poppins(
+                                            //     color: kGreyTextColor,
+                                            //     fontSize: 15.0,
+                                            //   ),
+                                            // ),
                                             const SizedBox(width: 5),
                                             GestureDetector(
                                               onTap: () {
@@ -352,10 +395,11 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                       width: double.infinity,
                       decoration: BoxDecoration(color: kMainColor.withOpacity(0.1), borderRadius: const BorderRadius.all(Radius.circular(10))),
                       child: Center(
-                          child: Text(
-                        lang.S.of(context).addItems,
-                        style: const TextStyle(color: kMainColor, fontSize: 20),
-                      )),
+                        child: Text(
+                          lang.S.of(context).addItems,
+                          style: const TextStyle(color: kMainColor, fontSize: 20),
+                        ),
+                      ),
                     ),
                   ),
                   const SizedBox(height: 20),

@@ -8,6 +8,8 @@ class CartNotifier extends ChangeNotifier {
   List<ProductModel> cartItemPurchaseList = [];
   double discount = 0;
   String discountType = 'USD';
+  List<TextEditingController> controllers = [];
+  List<FocusNode> focus = [];
 
   final List<ProductModel> productList = [];
 
@@ -42,6 +44,8 @@ class CartNotifier extends ChangeNotifier {
     }
     if (isNotInList) {
       cartItemPurchaseList.add(cartItem);
+      controllers.add(TextEditingController());
+      focus.add(FocusNode());
     }
     notifyListeners();
   }

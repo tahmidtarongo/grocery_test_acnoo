@@ -284,7 +284,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                                 SizedBox(
                                   width: (context.width() - (context.width() / 2.4 + 20)) / 3,
                                   child: Text(
-                                    '$currency ${widget.saleTransaction.details![i].price}',
+                                    widget.saleTransaction.details![i].quantities.toString(),
                                     maxLines: 1,
                                     textAlign: TextAlign.center,
                                     overflow: TextOverflow.ellipsis,
@@ -294,13 +294,14 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                                 SizedBox(
                                   width: (context.width() - (context.width() / 2.4 + 20)) / 3,
                                   child: Text(
-                                    widget.saleTransaction.details![i].quantities.toString(),
+                                    '$currency ${widget.saleTransaction.details![i].price}',
                                     maxLines: 1,
                                     textAlign: TextAlign.center,
                                     overflow: TextOverflow.ellipsis,
                                     style: kTextStyle.copyWith(color: kGreyTextColor),
                                   ),
                                 ),
+
                                 SizedBox(
                                   width: (context.width() - (context.width() / 2.4 + 20)) / 3,
                                   child: Text(
