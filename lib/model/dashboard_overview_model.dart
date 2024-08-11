@@ -45,7 +45,7 @@ class Data {
     _totalIncome = totalIncome;
     _totalExpense = totalExpense;
     _totalDue = totalDue;
-    _stockQty = stockQty;
+    // _stockQty = stockQty;
     _totalLoss = totalLoss;
     _totalProfit = totalProfit;
     _sales = sales;
@@ -58,7 +58,7 @@ class Data {
     _totalIncome = json['total_income'];
     _totalExpense = json['total_expense'];
     _totalDue = json['total_due'];
-    _stockQty = json['stock_qty'];
+    // _stockQty = json['stock_qty'];
     _totalLoss = json['total_loss'];
     _totalProfit = json['total_profit'];
     _stockValue = json['stock_value'];
@@ -80,7 +80,7 @@ class Data {
   num? _totalIncome;
   num? _totalExpense;
   num? _totalDue;
-  num? _stockQty;
+  // num? _stockQty;
   num? _totalLoss;
   num? _totalProfit;
   num? _stockValue;
@@ -92,7 +92,7 @@ class Data {
   num? get totalIncome => _totalIncome;
   num? get totalExpense => _totalExpense;
   num? get totalDue => _totalDue;
-  num? get stockQty => _stockQty;
+  // num? get stockQty => _stockQty;
   num? get totalLoss => _totalLoss;
   num? get totalProfit => _totalProfit;
   num? get stockValue => _stockValue;
@@ -106,7 +106,7 @@ class Data {
     map['total_income'] = _totalIncome;
     map['total_expense'] = _totalExpense;
     map['total_due'] = _totalDue;
-    map['stock_qty'] = _stockQty;
+    // map['stock_qty'] = _stockQty;
     map['total_loss'] = _totalLoss;
     map['total_profit'] = _totalProfit;
     if (_sales != null) {

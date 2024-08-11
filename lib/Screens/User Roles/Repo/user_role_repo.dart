@@ -36,7 +36,7 @@ class UserRoleRepo {
     required WidgetRef ref,
     required BuildContext context,
     required String name,
-    required String phone,
+    required String email,
     // required String email,
     // required String password,
     // required String passwordConfirmation,
@@ -49,7 +49,7 @@ class UserRoleRepo {
       ..headers['Authorization'] = await getAuthToken();
     request.fields.addAll({
       "name": name,
-      "phone": phone,
+      "email": email,
       // "email": email,
       // "password": password,
       // "password_confirmation": passwordConfirmation,
@@ -59,6 +59,8 @@ class UserRoleRepo {
     final response = await request.send();
     final responseData = await response.stream.bytesToString();
     final parsedData = jsonDecode(responseData);
+    print(response.statusCode);
+    print(parsedData);
     EasyLoading.dismiss();
 
     if (response.statusCode == 200) {
@@ -112,7 +114,7 @@ class UserRoleRepo {
     required WidgetRef ref,
     required BuildContext context,
     required String userName,
-    required String phone,
+    required String email,
     required Permission permission,
   }) async {
     final uri = Uri.parse('${APIConfig.url}/users/$userId');
@@ -124,7 +126,7 @@ class UserRoleRepo {
     request.fields.addAll({
       "_method": "put",
       "name": userName,
-      "phone": phone,
+      "email": email,
     });
     request.fields.addAll(permission.toJson());
 

@@ -211,7 +211,10 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                     });
                                   }
                                 },
-                                title: const Text('All'),
+                                title: const Text(
+                                  'All',
+                                  style: TextStyle(fontSize: 14),
+                                ),
                               ),
                             ),
                           ],
@@ -229,7 +232,10 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                     profileEditPermission = value!;
                                   });
                                 },
-                                title: const Text('Profile Edit'),
+                                title: const Text(
+                                  'Profile Edit',
+                                  style: TextStyle(fontSize: 14),
+                                ),
                               ),
                             ),
 
@@ -242,7 +248,10 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                     salePermission = value!;
                                   });
                                 },
-                                title: const Text('Sales'),
+                                title: const Text(
+                                  'Sales',
+                                  style: TextStyle(fontSize: 14),
+                                ),
                               ),
                             ),
                           ],
@@ -259,7 +268,10 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                     partiesPermission = value!;
                                   });
                                 },
-                                title: const Text('Parties'),
+                                title: const Text(
+                                  'Parties',
+                                  style: TextStyle(fontSize: 14),
+                                ),
                               ),
                             ),
                             Expanded(
@@ -270,7 +282,10 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                     purchasePermission = value!;
                                   });
                                 },
-                                title: const Text('Purchase'),
+                                title: const Text(
+                                  'Purchase',
+                                  style: TextStyle(fontSize: 14),
+                                ),
                               ),
                             ),
                           ],
@@ -287,7 +302,10 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                     productPermission = value!;
                                   });
                                 },
-                                title: const Text('Products'),
+                                title: const Text(
+                                  'Products',
+                                  style: TextStyle(fontSize: 14),
+                                ),
                               ),
                             ),
                             Expanded(
@@ -298,7 +316,10 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                     dueListPermission = value!;
                                   });
                                 },
-                                title: const Text('Due List'),
+                                title: const Text(
+                                  'Due List',
+                                  style: TextStyle(fontSize: 14),
+                                ),
                               ),
                             ),
                           ],
@@ -315,7 +336,10 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                     stockPermission = value!;
                                   });
                                 },
-                                title: const Text('Stock'),
+                                title: const Text(
+                                  'Stock',
+                                  style: TextStyle(fontSize: 14),
+                                ),
                               ),
                             ),
                             Expanded(
@@ -326,7 +350,10 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                     reportsPermission = value!;
                                   });
                                 },
-                                title: const Text('Reports'),
+                                title: const Text(
+                                  'Reports',
+                                  style: TextStyle(fontSize: 14),
+                                ),
                               ),
                             ),
                           ],
@@ -343,7 +370,12 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                     salesListPermission = value!;
                                   });
                                 },
-                                title: const Text('Sales List'),
+                                title: const Text(
+                                  'Sales List',
+                                  style: TextStyle(fontSize: 14),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
                               ),
                             ),
                             Expanded(
@@ -354,7 +386,12 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                     purchaseListPermission = value!;
                                   });
                                 },
-                                title: const Text('Purchase List'),
+                                title: const Text(
+                                  'Purchase List',
+                                  style: TextStyle(fontSize: 14),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
                               ),
                             ),
                           ],
@@ -371,7 +408,10 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                     lossProfitPermission = value!;
                                   });
                                 },
-                                title: const Text('Loss Profit'),
+                                title: const Text(
+                                  'Loss Profit',
+                                  style: TextStyle(fontSize: 14),
+                                ),
                               ),
                             ),
                             Expanded(
@@ -382,7 +422,10 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                     addExpensePermission = value!;
                                   });
                                 },
-                                title: const Text('Expense'),
+                                title: const Text(
+                                  'Expense',
+                                  style: TextStyle(fontSize: 14),
+                                ),
                               ),
                             ),
                           ],
@@ -401,43 +444,23 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         ///__________email_________________________________________________________
-                        // AppTextField(
-                        //   readOnly: true,
-                        //   initialValue: widget.userRoleModel.email,
-                        //   // cursorColor: kTitleColor,
-                        //   decoration: kInputDecoration.copyWith(
-                        //     labelText: 'Email',
-                        //     // labelStyle: kTextStyle.copyWith(color: kTitleColor),
-                        //     hintText: 'Enter your email address',
-                        //     // hintStyle: kTextStyle.copyWith(color: kLitGreyColor),
-                        //     contentPadding: const EdgeInsets.all(10.0),
-                        //     enabledBorder: const OutlineInputBorder(
-                        //       borderRadius: BorderRadius.all(
-                        //         Radius.circular(4.0),
-                        //       ),
-                        //       borderSide: BorderSide(color: kBorderColorTextField, width: 1),
-                        //     ),
-                        //     errorBorder: const OutlineInputBorder(borderSide: BorderSide(color: Colors.red)),
-                        //     focusedBorder: const OutlineInputBorder(
-                        //       borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                        //       borderSide: BorderSide(color: kBorderColorTextField, width: 2),
-                        //     ),
-                        //   ),
-                        //   textFieldType: TextFieldType.EMAIL,
-                        // ),
-                        TextFormField(
-                          controller: phoneController,
+                        AppTextField(
+                          // readOnly: true,
+                          controller: emailController,
+                          // initialValue: widget.userRoleModel.email,
+                          // cursorColor: kTitleColor,
                           validator: (value) {
                             if (value == null || value.isEmpty) {
-                              return 'User Phone can\'n be empty';
+                              return 'Email can\'n be empty';
+                            } else if (!value.contains('@')) {
+                              return 'Please enter a valid email';
                             }
                             return null;
                           },
-                          // cursorColor: kTitleColor,
                           decoration: kInputDecoration.copyWith(
-                            labelText: 'Phone',
+                            labelText: 'Email',
                             // labelStyle: kTextStyle.copyWith(color: kTitleColor),
-                            hintText: 'Enter your phone number',
+                            hintText: 'Enter your email address',
                             // hintStyle: kTextStyle.copyWith(color: kLitGreyColor),
                             contentPadding: const EdgeInsets.all(10.0),
                             enabledBorder: const OutlineInputBorder(
@@ -452,7 +475,36 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                               borderSide: BorderSide(color: kBorderColorTextField, width: 2),
                             ),
                           ),
+                          textFieldType: TextFieldType.EMAIL,
                         ),
+                        // TextFormField(
+                        //   controller: phoneController,
+                        //   validator: (value) {
+                        //     if (value == null || value.isEmpty) {
+                        //       return 'User Phone can\'n be empty';
+                        //     }
+                        //     return null;
+                        //   },
+                        //   // cursorColor: kTitleColor,
+                        //   decoration: kInputDecoration.copyWith(
+                        //     labelText: 'Phone',
+                        //     // labelStyle: kTextStyle.copyWith(color: kTitleColor),
+                        //     hintText: 'Enter your phone number',
+                        //     // hintStyle: kTextStyle.copyWith(color: kLitGreyColor),
+                        //     contentPadding: const EdgeInsets.all(10.0),
+                        //     enabledBorder: const OutlineInputBorder(
+                        //       borderRadius: BorderRadius.all(
+                        //         Radius.circular(4.0),
+                        //       ),
+                        //       borderSide: BorderSide(color: kBorderColorTextField, width: 1),
+                        //     ),
+                        //     errorBorder: const OutlineInputBorder(borderSide: BorderSide(color: Colors.red)),
+                        //     focusedBorder: const OutlineInputBorder(
+                        //       borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                        //       borderSide: BorderSide(color: kBorderColorTextField, width: 2),
+                        //     ),
+                        //   ),
+                        // ),
                         const SizedBox(height: 20.0),
 
                         ///__________Title_________________________________________________________
@@ -550,7 +602,7 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                       ref: ref,
                       context: context,
                       userName: titleController.text,
-                      phone: phoneController.text,
+                      email: emailController.text,
                       permission: permission,
                     );
                   }

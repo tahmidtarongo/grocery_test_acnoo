@@ -23,7 +23,7 @@ class _AddUserRoleState extends State<AddUserRole> {
   GlobalKey<FormState> globalKey = GlobalKey<FormState>();
   bool validateAndSave() {
     final form = globalKey.currentState;
-    if (form!.validate() && (phoneNumber != null && phoneNumber != '')) {
+    if (form!.validate()) {
       form.save();
       return true;
     }
@@ -89,8 +89,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                           Row(
                             children: [
                               ///_______all__________________________
-                              SizedBox(
-                                width: context.width() / 2 - 20,
+                              Expanded(
                                 child: CheckboxListTile(
                                   contentPadding: const EdgeInsets.all(5),
                                   value: allPermissions,
@@ -129,8 +128,12 @@ class _AddUserRoleState extends State<AddUserRole> {
                                       });
                                     }
                                   },
-                                  title: const Text('All'),
+                                  title: const Text('All',style: TextStyle(fontSize: 14),),
+
                                 ),
+                              ),
+                              Expanded(
+                                child: Container()
                               ),
                             ],
                           ),
@@ -148,7 +151,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                                       profileEditPermission = value!;
                                     });
                                   },
-                                  title: const Text('Profile Edit'),
+                                  title: const Text('Profile Edit',style: TextStyle(fontSize: 14),),
                                 ),
                               ),
 
@@ -162,7 +165,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                                       salePermission = value!;
                                     });
                                   },
-                                  title: const Text('Sales'),
+                                  title: const Text('Sales',style: TextStyle(fontSize: 14),),
                                 ),
                               ),
                             ],
@@ -180,7 +183,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                                       partiesPermission = value!;
                                     });
                                   },
-                                  title: const Text('Parties'),
+                                  title: const Text('Parties',style: TextStyle(fontSize: 14),),
                                 ),
                               ),
                               Expanded(
@@ -192,7 +195,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                                       purchasePermission = value!;
                                     });
                                   },
-                                  title: const Text('Purchase'),
+                                  title: const Text('Purchase',style: TextStyle(fontSize: 14),),
                                 ),
                               ),
                             ],
@@ -210,7 +213,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                                       productPermission = value!;
                                     });
                                   },
-                                  title: const Text('Products'),
+                                  title: const Text('Products',style: TextStyle(fontSize: 14),),
                                 ),
                               ),
                               Expanded(
@@ -222,7 +225,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                                       dueListPermission = value!;
                                     });
                                   },
-                                  title: const Text('Due List'),
+                                  title: const Text('Due List',style: TextStyle(fontSize: 14),),
                                 ),
                               ),
                             ],
@@ -240,7 +243,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                                       stockPermission = value!;
                                     });
                                   },
-                                  title: const Text('Stock'),
+                                  title: const Text('Stock',style: TextStyle(fontSize: 14),),
                                 ),
                               ),
                               Expanded(
@@ -252,7 +255,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                                       reportsPermission = value!;
                                     });
                                   },
-                                  title: const Text('Reports'),
+                                  title: const Text('Reports',style: TextStyle(fontSize: 14),),
                                 ),
                               ),
                             ],
@@ -270,7 +273,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                                       salesListPermission = value!;
                                     });
                                   },
-                                  title: const Text('Sales List'),
+                                  title: const Text('Sales List',style: TextStyle(fontSize: 14),maxLines: 1,overflow: TextOverflow.ellipsis,),
                                 ),
                               ),
                               Expanded(
@@ -282,7 +285,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                                       purchaseListPermission = value!;
                                     });
                                   },
-                                  title: const Text('Purchase List'),
+                                  title: const Text('Purchase List',style: TextStyle(fontSize: 14), maxLines: 1,overflow: TextOverflow.ellipsis,),
                                 ),
                               ),
                             ],
@@ -300,7 +303,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                                       lossProfitPermission = value!;
                                     });
                                   },
-                                  title: const Text('Loss Profit'),
+                                  title: const Text('Loss Profit',style: TextStyle(fontSize: 14),),
                                 ),
                               ),
                               Expanded(
@@ -312,7 +315,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                                       addExpensePermission = value!;
                                     });
                                   },
-                                  title: const Text('Expense'),
+                                  title: const Text('Expense',style: TextStyle(fontSize: 14),),
                                 ),
                               ),
                             ],
@@ -363,66 +366,66 @@ class _AddUserRoleState extends State<AddUserRole> {
                         //   textFieldType: TextFieldType.EMAIL,
                         // ),
                         // const SizedBox(height: 20.0),
-                        IntlPhoneField(
-                          decoration: kInputDecoration.copyWith(
-                            labelText: 'Phone Number',
-                            hintText: 'Enter Phone Number'
-                            // border: OutlineInputBorder(borderSide: BorderSide(), borderRadius: BorderRadius.all(Radius.circular(5))),
-                          ),
-                          initialCountryCode: 'BD',
-                          // validator: (p0) {
-                          //   if(phoneNumber!=null){
-                          //     print(phoneNumber);
-                          //     return '';
-                          //   }
-                          //   return null;
-                          //   // if(!p0!.isValidNumber()){
-                          //   //   return 'Enter';
-                          //   // }
-                          // },
-                          onChanged: (phone) {
-                            phoneNumber = phone.number;
-                            phoneCode = phone.countryCode;
-                          },
-                          inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
-                        ),
+                        // IntlPhoneField(
+                        //   decoration: kInputDecoration.copyWith(
+                        //     labelText: 'Phone Number',
+                        //     hintText: 'Enter Phone Number'
+                        //     // border: OutlineInputBorder(borderSide: BorderSide(), borderRadius: BorderRadius.all(Radius.circular(5))),
+                        //   ),
+                        //   initialCountryCode: 'BD',
+                        //   // validator: (p0) {
+                        //   //   if(phoneNumber!=null){
+                        //   //     print(phoneNumber);
+                        //   //     return '';
+                        //   //   }
+                        //   //   return null;
+                        //   //   // if(!p0!.isValidNumber()){
+                        //   //   //   return 'Enter';
+                        //   //   // }
+                        //   // },
+                        //   onChanged: (phone) {
+                        //     phoneNumber = phone.number;
+                        //     phoneCode = phone.countryCode;
+                        //   },
+                        //   inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
+                        // ),
 
                         const SizedBox(height: 10),
 
                         ///__________email_________________________________________________________
-                        // AppTextField(
-                        //   validator: (value) {
-                        //     if (value == null || value.isEmpty) {
-                        //       return 'Email can\'n be empty';
-                        //     } else if (!value.contains('@')) {
-                        //       return 'Please enter a valid email';
-                        //     }
-                        //     return null;
-                        //   },
-                        //   showCursor: true,
-                        //   controller: emailController,
-                        //   // cursorColor: kTitleColor,
-                        //   decoration: kInputDecoration.copyWith(
-                        //     labelText: 'Email',
-                        //     // labelStyle: kTextStyle.copyWith(color: kTitleColor),
-                        //     hintText: 'Enter your email address',
-                        //     // hintStyle: kTextStyle.copyWith(color: kLitGreyColor),
-                        //     contentPadding: const EdgeInsets.all(10.0),
-                        //     enabledBorder: const OutlineInputBorder(
-                        //       borderRadius: BorderRadius.all(
-                        //         Radius.circular(4.0),
-                        //       ),
-                        //       borderSide: BorderSide(color: kBorderColorTextField, width: 1),
-                        //     ),
-                        //     errorBorder: const OutlineInputBorder(borderSide: BorderSide(color: Colors.red)),
-                        //     focusedBorder: const OutlineInputBorder(
-                        //       borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                        //       borderSide: BorderSide(color: kBorderColorTextField, width: 2),
-                        //     ),
-                        //   ),
-                        //   textFieldType: TextFieldType.EMAIL,
-                        // ),
-                        // const SizedBox(height: 20.0),
+                        AppTextField(
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Email can\'n be empty';
+                            } else if (!value.contains('@')) {
+                              return 'Please enter a valid email';
+                            }
+                            return null;
+                          },
+                          showCursor: true,
+                          controller: emailController,
+                          // cursorColor: kTitleColor,
+                          decoration: kInputDecoration.copyWith(
+                            labelText: 'Email',
+                            // labelStyle: kTextStyle.copyWith(color: kTitleColor),
+                            hintText: 'Enter your email address',
+                            // hintStyle: kTextStyle.copyWith(color: kLitGreyColor),
+                            contentPadding: const EdgeInsets.all(10.0),
+                            enabledBorder: const OutlineInputBorder(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(4.0),
+                              ),
+                              borderSide: BorderSide(color: kBorderColorTextField, width: 1),
+                            ),
+                            errorBorder: const OutlineInputBorder(borderSide: BorderSide(color: Colors.red)),
+                            focusedBorder: const OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                              borderSide: BorderSide(color: kBorderColorTextField, width: 2),
+                            ),
+                          ),
+                          textFieldType: TextFieldType.EMAIL,
+                        ),
+                        const SizedBox(height: 20.0),
 
                         ///______password___________________________________________________________
                         // AppTextField(
@@ -553,6 +556,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                     salesListPermission ||
                     purchaseListPermission) {
                   if (validateAndSave()) {
+                    EasyLoading.show();
                     user.Permission permission = user.Permission(
                       salePermission: salePermission,
                       partiesPermission: partiesPermission,
@@ -574,11 +578,9 @@ class _AddUserRoleState extends State<AddUserRole> {
                       ref: ref,
                       context: context,
                       name: titleController.text,
-                      phone: phoneCode! + phoneNumber!,
+                      email: emailController.text,
                       permission: permission,
                     );
-                  } else {
-                    EasyLoading.showError('Enter a Valid Phone Number');
                   }
                 } else {
                   EasyLoading.showError('You Have To Give Permission');

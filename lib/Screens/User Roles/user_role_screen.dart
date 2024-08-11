@@ -73,7 +73,7 @@ class _UserRoleScreenState extends State<UserRoleScreen> {
                               userRoleModel: users[index],
                             ).launch(context);
                           },
-                          title: Text(users[index].phone ?? ''),
+                          title: Text(users[index].email ?? ''),
                           subtitle: Text(users[index].name ?? ''),
                           trailing:  const Icon(Icons.arrow_forward_ios,color: kGreyTextColor,size: 20,),
                         ),
