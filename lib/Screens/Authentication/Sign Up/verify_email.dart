@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
@@ -10,12 +10,10 @@ import '../forgot password/repo/forgot_pass_repo.dart';
 import '../forgot password/set_new_password.dart';
 import '../profile_setup_screen.dart';
 
-
 class VerifyEmail extends StatefulWidget {
-  const VerifyEmail({Key? key,  required this.email, required this.isFormForgotPass}) : super(key: key);
+  const VerifyEmail({Key? key, required this.email, required this.isFormForgotPass}) : super(key: key);
   final String email;
   final bool isFormForgotPass;
-
 
   @override
   State<VerifyEmail> createState() => _VerifyEmailState();
@@ -25,14 +23,41 @@ class _VerifyEmailState extends State<VerifyEmail> {
   ///__________variables_____________
   bool isClicked = false;
 
+  ///________countdown_Timer___________________
+  Timer? _timer;
+  int _start = 180; // 3 minutes = 180 seconds
+  bool _isButtonEnabled = false;
+  void startTimer() {
+    _isButtonEnabled = false;
+    _start = 180; // Reset to 3 minutes
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      setState(() {
+        if (_start > 0) {
+          _start--;
+        } else {
+          _isButtonEnabled = true;
+          _timer?.cancel();
+        }
+      });
+    });
+  }
+
   final pinController = TextEditingController();
   final focusNode = FocusNode();
   final _pinputKey = GlobalKey<FormState>();
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    startTimer();
+  }
+
+  @override
   void dispose() {
     pinController.dispose();
     focusNode.dispose();
+
     super.dispose();
   }
 
@@ -54,7 +79,6 @@ class _VerifyEmailState extends State<VerifyEmail> {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
-    bool isDark = Theme.of(context).brightness == Brightness.dark;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -79,10 +103,10 @@ class _VerifyEmailState extends State<VerifyEmail> {
             const SizedBox(height: 8.0),
             RichText(
               textAlign: TextAlign.center,
-              text: TextSpan(text: '6-digits pin has been sent to your email address: ', style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor,fontSize: 16), children: [
+              text: TextSpan(text: '6-digits pin has been sent to your email address: ', style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor, fontSize: 16), children: [
                 TextSpan(
                   text: widget.email,
-                  style: textTheme.bodyMedium?.copyWith(color: kTitleColor, fontWeight: FontWeight.bold,fontSize: 16),
+                  style: textTheme.bodyMedium?.copyWith(color: kTitleColor, fontWeight: FontWeight.bold, fontSize: 16),
                 )
               ]),
             ),
@@ -121,6 +145,38 @@ class _VerifyEmailState extends State<VerifyEmail> {
                   border: Border.all(color: Colors.redAccent),
                 ),
               ),
+            ),
+            // const SizedBox(height: 24.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.only(top: 11, bottom: 11),
+                  child: Text(
+                    _isButtonEnabled ? 'You can now resend the OTP.' : 'Resend OTP in $_start seconds',
+                    // style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                const SizedBox(height: 20),
+                Visibility(
+                  visible: _isButtonEnabled,
+                  child: TextButton(
+                    onPressed: _isButtonEnabled
+                        ? () async {
+                            EasyLoading.show();
+                            SignUpRepo repo = SignUpRepo();
+                            if (await repo.resendOTP(email: widget.email, context: context)) {
+                              startTimer();
+                            }
+                          }
+                        : null,
+                    child: const Text(
+                      'Resend OTP',
+                      style: TextStyle(color: kMainColor),
+                    ),
+                  ),
+                ),
+              ],
             ),
             const SizedBox(height: 24.0),
             UpdateButton(
@@ -161,7 +217,7 @@ class _VerifyEmailState extends State<VerifyEmail> {
                           Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                              builder: (context) =>  ProfileSetup(),
+                              builder: (context) => const ProfileSetup(),
                             ),
                           );
                         } else {

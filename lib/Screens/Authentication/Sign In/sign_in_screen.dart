@@ -76,7 +76,7 @@ class _SignInState extends State<SignIn> {
         titleSpacing: 16,
         title: Text(
           'Sign in',
-          style: textTheme.titleSmall?.copyWith(fontSize: 20,color: kTitleColor),
+          style: textTheme.titleSmall?.copyWith(fontSize: 20, color: kTitleColor),
         ),
       ),
       body: SingleChildScrollView(
@@ -87,16 +87,20 @@ class _SignInState extends State<SignIn> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const SizedBox(height: 24,),
+                const SizedBox(
+                  height: 24,
+                ),
                 const NameWithLogo(),
-                const SizedBox(height: 24,),
+                const SizedBox(
+                  height: 24,
+                ),
                 Text(
                   'Welcome back!',
-                  style: textTheme.titleMedium?.copyWith(fontSize: 24.0,fontWeight: FontWeight.w600),
+                  style: textTheme.titleMedium?.copyWith(fontSize: 24.0, fontWeight: FontWeight.w600),
                 ),
                 Text(
                   'Please enter your details.',
-                  style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor,fontSize: 16),
+                  style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor, fontSize: 16),
                 ),
                 const SizedBox(height: 24.0),
                 TextFormField(
@@ -182,12 +186,12 @@ class _SignInState extends State<SignIn> {
                       onPressed: () => Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) =>  const ForgotPassword(),
+                          builder: (context) => const ForgotPassword(),
                         ),
                       ),
                       child: Text(
                         'Forgot password?',
-                        style: textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold,fontSize: 14),
+                        style: textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 14),
                       ),
                     ),
                   ],
@@ -212,7 +216,9 @@ class _SignInState extends State<SignIn> {
                   },
                   text: 'Login',
                 ),
-                const SizedBox(height: 16,),
+                const SizedBox(
+                  height: 16,
+                ),
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -222,9 +228,11 @@ class _SignInState extends State<SignIn> {
                       highlightColor: kMainColor.withOpacity(0.1),
                       borderRadius: BorderRadius.circular(3.0),
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) {
-                          return const SignUpScreen();
-                        },));
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return const SignUpScreen();
+                          },
+                        ));
                       },
                       hoverColor: kMainColor.withOpacity(0.1),
                       child: RichText(

@@ -7,6 +7,7 @@ import 'package:http/http.dart' as http;
 import '../../../../Const/api_config.dart';
 import '../../../../Repository/constant_functions.dart';
 import '../../../Home/home.dart';
+import '../../Sign Up/verify_email.dart';
 import '../../profile_setup_screen.dart';
 
 class LogInRepo {
@@ -42,6 +43,19 @@ class LogInRepo {
           );
           Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Home()));
         }
+
+        return true;
+      } else if (response.statusCode == 201) {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(responseData['message'])));
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => VerifyEmail(
+              email: email,
+              isFormForgotPass: false,
+            ),
+          ),
+        );
 
         return true;
       } else {

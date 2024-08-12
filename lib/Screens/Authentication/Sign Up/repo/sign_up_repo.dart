@@ -34,7 +34,6 @@ class SignUpRepo {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(responseData['message'])));
       }
     } catch (error) {
-      print(error);
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Network error: Please try again')));
     } finally {}
 
@@ -73,6 +72,35 @@ class SignUpRepo {
       }
     } catch (error) {
       print(error);
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Network error: Please try again')));
+    } finally {}
+
+    return false;
+  }
+  Future<bool> resendOTP({required String email,required BuildContext context}) async {
+    final url = Uri.parse('${APIConfig.url}/resend-otp');
+
+    final body = {
+      'email': email,
+    };
+    final headers = {
+      'Accept': 'application/json',
+    };
+
+    try {
+      final response = await http.post(url, headers: headers, body: body);
+
+      final responseData = jsonDecode(response.body);
+      EasyLoading.dismiss();
+      if (response.statusCode == 200) {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(responseData['message'])));
+
+
+        return true;
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(responseData['error'])));
+      }
+    } catch (error) {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Network error: Please try again')));
     } finally {}
 
