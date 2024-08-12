@@ -250,14 +250,17 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                             physics: const NeverScrollableScrollPhysics(),
                             itemCount: providerData.cartItemList.length,
                             itemBuilder: (context, index) {
-                              providerData.controllers[index].text = ( providerData.cartItemList[index].quantity.toString());
-                              providerData.focus[index].addListener(() {
-                                if(!providerData.focus[index].hasFocus){
-                                  setState(() {
-
-                                  });
-                                }
-                              },);
+                              providerData.controllers[index].text = (providerData.cartItemList[index].quantity.toString());
+                              providerData.focus[index].addListener(
+                                () {
+                                  if (!providerData.focus[index].hasFocus) {
+                                    setState(() {
+                                      vatAmount = (vatPercentageEditingController.text.toDouble() / 100) * providerData.getTotalAmount().toDouble();
+                                      vatAmountEditingController.text = vatAmount.toStringAsFixed(2);
+                                    });
+                                  }
+                                },
+                              );
                               return Padding(
                                 padding: const EdgeInsets.only(left: 10, right: 10),
                                 child: ListTile(
@@ -276,6 +279,10 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                             GestureDetector(
                                               onTap: () {
                                                 providerData.quantityDecrease(index);
+                                                setState(() {
+                                                  vatAmount = (vatPercentageEditingController.text.toDouble() / 100) * providerData.getTotalAmount().toDouble();
+                                                  vatAmountEditingController.text = vatAmount.toStringAsFixed(2);
+                                                });
                                               },
                                               child: Container(
                                                 height: 20,
@@ -296,11 +303,9 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                             SizedBox(
                                               width: 30,
                                               child: TextFormField(
-
                                                 onTap: () {
                                                   providerData.controllers[index].clear();
                                                 },
-
                                                 focusNode: providerData.focus[index],
                                                 controller: providerData.controllers[index],
                                                 textAlign: TextAlign.center,
@@ -315,8 +320,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                                   } else {
                                                     final newQuantity = num.parse(value);
                                                     if (newQuantity <= stock) {
-                                                        providerData.cartItemList[index].quantity = newQuantity.round();
-
+                                                      providerData.cartItemList[index].quantity = newQuantity.round();
                                                     } else {
                                                       providerData.controllers[index].text = '1';
                                                       EasyLoading.showError('Out Of Stock');
@@ -339,6 +343,10 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                             GestureDetector(
                                               onTap: () {
                                                 providerData.quantityIncrease(index);
+                                                setState(() {
+                                                  vatAmount = (vatPercentageEditingController.text.toDouble() / 100) * providerData.getTotalAmount().toDouble();
+                                                  vatAmountEditingController.text = vatAmount.toStringAsFixed(2);
+                                                });
                                               },
                                               child: Container(
                                                 height: 20,
@@ -361,6 +369,10 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                       GestureDetector(
                                         onTap: () {
                                           providerData.deleteToCart(index);
+                                          setState(() {
+                                            vatAmount = (vatPercentageEditingController.text.toDouble() / 100) * providerData.getTotalAmount().toDouble();
+                                            vatAmountEditingController.text = vatAmount.toStringAsFixed(2);
+                                          });
                                         },
                                         child: Container(
                                           padding: const EdgeInsets.all(4),
@@ -481,9 +493,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                       ),
                                     ),
                                   ),
-                                  const SizedBox(
-                                    width: 4.0,
-                                  ),
+                                  const SizedBox(width: 4.0),
                                   SizedBox(
                                     width: context.width() / 4,
                                     height: 40.0,
