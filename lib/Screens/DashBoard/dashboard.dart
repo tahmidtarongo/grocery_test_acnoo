@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mobile_pos/Screens/DashBoard/global_container.dart';
+import 'package:mobile_pos/Screens/DashBoard/test_numeric.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:mobile_pos/currency.dart';
 
@@ -148,7 +149,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             width: double.infinity,
                             child: NumericAxisChart(
                               model: dashboard,
-                            )),
+                            )
+                        ),
                       ],
                     ),
                   ),
