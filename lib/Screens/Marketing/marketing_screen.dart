@@ -69,7 +69,8 @@ class _MarketingScreenState extends State<MarketingScreen> {
               iconWidget: const Image(
                 image: AssetImage('images/fb.png'),
               ),
-              socialMediaName: 'Facebook',
+              socialMediaName: lang.S.of(context).facebook,
+              //'Facebook',
             ),
           ),
           Padding(
@@ -78,7 +79,8 @@ class _MarketingScreenState extends State<MarketingScreen> {
               iconWidget: const Image(
                 image: AssetImage('images/twitter.png'),
               ),
-              socialMediaName: 'Twitter',
+              socialMediaName:lang.S.of(context).twitter,
+              //'Twitter',
             ),
           ),
           Padding(
@@ -87,7 +89,8 @@ class _MarketingScreenState extends State<MarketingScreen> {
               iconWidget: const Image(
                 image: AssetImage('images/insta.png'),
               ),
-              socialMediaName: 'Instagram',
+              socialMediaName: lang.S.of(context).instagram,
+              //'Instagram',
             ),
           ),
           Padding(
@@ -96,7 +99,8 @@ class _MarketingScreenState extends State<MarketingScreen> {
               iconWidget: const Image(
                 image: AssetImage('images/linkedin.png'),
               ),
-              socialMediaName: 'LinkedIN',
+              socialMediaName:lang.S.of(context).linkedIN,
+             // 'LinkedIN',
             ),
           ),
         ],

@@ -63,7 +63,9 @@ class _ProfileSetupState extends State<ProfileSetup> {
       dropDownItems.add(item);
     }
     return DropdownButton(
-      hint: const Text('Select Business Category'),
+      hint: Text(lang.S.of(context).selectBusinessCategory
+          //'Select Business Category'
+         ),
       items: dropDownItems,
       value: selectedBusinessCategory,
       onChanged: (value) {
@@ -321,14 +323,16 @@ class _ProfileSetupState extends State<ProfileSetup> {
                           controller: nameController,
                           validator: (value) {
                             if (value == null || value.isEmpty) {
-                              return 'Please enter a valid business name';
+                             // return 'Please enter a valid business name';
+                              return lang.S.of(context).pleaseEnterAValidBusinessName;
                             }
                             return null;
                           },
                           decoration: kInputDecoration.copyWith(
                             labelText: lang.S.of(context).businessName,
                             border: const OutlineInputBorder(),
-                            hintText: 'Enter Business/Store Name'
+                            //hintText: 'Enter Business/Store Name'
+                            hintText: lang.S.of(context).enterBusiness,
                           ),
                         ),
                       ),
@@ -381,7 +385,8 @@ class _ProfileSetupState extends State<ProfileSetup> {
                           controller: openingBalanceController, // Optional
                           textFieldType: TextFieldType.PHONE,
                           decoration: kInputDecoration.copyWith(
-                            hintText: 'Enter opening balance',
+                            //hintText: 'Enter opening balance',
+                            hintText: lang.S.of(context).enterOpeningBalance,
                             labelText: lang.S.of(context).openingBalance,
                             border: const OutlineInputBorder(),
                           ),

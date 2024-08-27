@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
 
 import '../../../constant.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
+
+
 
 Future<dynamic> checkEmailForCodePupUp({required String email, required BuildContext context, required TextTheme textTheme}) {
   return showDialog(
@@ -28,12 +31,14 @@ Future<dynamic> checkEmailForCodePupUp({required String email, required BuildCon
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Verify Your Email',
+                    lang.S.of(context).verifyYourEmail,
+                   // 'Verify Your Email',
                     style: textTheme.titleMedium?.copyWith(fontSize: 24.0),
                   ),
                   const SizedBox(height: 10.0),
                   Text(
-                    'We have sent a confirmation email to',
+                    lang.S.of(context).weHaveSentAConfirmationEmailTo,
+                    //'We have sent a confirmation email to',
                     textAlign: TextAlign.center,
                     style: textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.normal, color: kGreyTextColor,fontSize: 16),
                   ),
@@ -43,7 +48,8 @@ Future<dynamic> checkEmailForCodePupUp({required String email, required BuildCon
                   ),
                   const SizedBox(height: 16.0),
                   Text(
-                    'It May be that the mail ended up in your spam folder.',
+                    lang.S.of(context).folder,
+                   // 'It May be that the mail ended up in your spam folder.',
                     textAlign: TextAlign.center,
                     style: textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.normal, color: kGreyTextColor,fontSize: 16),
                   ),
@@ -52,7 +58,9 @@ Future<dynamic> checkEmailForCodePupUp({required String email, required BuildCon
                     onpressed: () {
                       Navigator.pop(contextPopUp, true);
                     },
-                    text: 'Got It !',
+                    text:
+                    lang.S.of(context).gotIt,
+                    //'Got It !',
                   ),
                 ],
               ),

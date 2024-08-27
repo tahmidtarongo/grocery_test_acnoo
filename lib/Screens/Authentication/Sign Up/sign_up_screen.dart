@@ -7,6 +7,7 @@ import '../../../GlobalComponents/button_global.dart';
 import '../../../constant.dart';
 import '../Sign In/sign_in_screen.dart';
 import '../Wedgets/check_email_for_otp_popup.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -48,7 +49,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
         centerTitle: true,
         surfaceTintColor: kWhite,
         title: Text(
-          'Sign Up',
+          lang.S.of(context).signIn,
+          //'Sign Up',
           style: textTheme.titleMedium?.copyWith(fontSize: 20),
         ),
       ),
@@ -64,11 +66,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 const NameWithLogo(),
                 const SizedBox(height: 24,),
                 Text(
-                  'Create A Free Account',
+                  lang.S.of(context).createAFreeAccount,
+                  //'Create A Free Account',
                   style: textTheme.titleMedium?.copyWith(fontSize: 24.0,fontWeight: FontWeight.w600),
                 ),
                 Text(
-                  'Please enter your details',
+                  lang.S.of(context).pleaseEnterYourDetails,
+                  //'Please enter your details',
                   style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor,fontSize: 16),
                 ),
                 const SizedBox(height: 24.0),
@@ -78,12 +82,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   controller: nameTextController,
                   keyboardType: TextInputType.name,
                   decoration: kInputDecoration.copyWith(
-                    labelText: 'Full Name',
-                    hintText: 'Enter your full name',
+                    //labelText: 'Full Name',
+                    labelText: lang.S.of(context).fullName,
+                    //hintText: 'Enter your full name',
+                    hintText: lang.S.of(context).enterYourFullName,
                   ),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'name can\'n be empty';
+                      //return 'name can\'n be empty';
+                      return lang.S.of(context).nameCanNotBeEmpty;
                     }
                     return null;
                   },
@@ -96,14 +103,18 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   keyboardType: TextInputType.emailAddress,
                   decoration: kInputDecoration.copyWith(
                     // border: OutlineInputBorder(),
-                    labelText: 'email',
-                    hintText: 'Enter email address',
+                    // labelText: 'email',
+                    labelText: lang.S.of(context).lableEmail,
+                    //hintText: 'Enter email address',
+                    hintText: lang.S.of(context).hintEmail,
                   ),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Email can\'n be empty';
+                      //return 'Email can\'n be empty';
+                      return lang.S.of(context).emailCannotBeEmpty;
                     } else if (!value.contains('@')) {
-                      return 'Please enter a valid email';
+                      //return 'Please enter a valid email';
+                      return lang.S.of(context).pleaseEnterAValidEmail;
                     }
                     return null;
                   },
@@ -116,8 +127,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   keyboardType: TextInputType.text,
                   obscureText: showPassword,
                   decoration: kInputDecoration.copyWith(
-                    labelText: 'Password',
-                    hintText: 'Enter password',
+                    //labelText: 'Password',
+                    labelText: lang.S.of(context).lablePassword,
+                   // hintText: 'Enter password',
+                    hintText: lang.S.of(context).hintPassword,
                     suffixIcon: IconButton(
                       onPressed: () {
                         setState(() {
@@ -132,9 +145,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Password can\'t be empty';
+                      //return 'Password can\'t be empty';
+                      return lang.S.of(context).passwordCannotBeEmpty;
                     } else if (value.length < 6) {
-                      return 'Please enter a bigger password';
+                      //return 'Please enter a bigger password';
+                      return lang.S.of(context).pleaseEnterABiggerPassword;
                     }
                     return null;
                   },
@@ -168,7 +183,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       }
                     }
                   },
-                  text: 'Sign Up',
+                  text: lang.S.of(context).signIn,
+                  //'Sign Up',
                 ),
                 const SizedBox(height: 20,),
                 Column(
@@ -183,11 +199,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       hoverColor: kMainColor.withOpacity(0.1),
                       child: RichText(
                         text: TextSpan(
-                          text: 'Already have an account? ',
+                          text:
+                          lang.S.of(context).alreadyHaveAnAccount,
+                          //'Already have an account? ',
                           style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor),
                           children: [
                             TextSpan(
-                              text: 'Sign In',
+                              text:lang.S.of(context).signIn,
+                              //'Sign In',
                               style: textTheme.bodyMedium?.copyWith(color: kMainColor, fontWeight: FontWeight.bold),
                             )
                           ],

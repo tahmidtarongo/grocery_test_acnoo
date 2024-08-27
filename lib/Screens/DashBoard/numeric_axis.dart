@@ -4,6 +4,7 @@ import 'package:syncfusion_flutter_charts/charts.dart';
 
 import 'chart_data.dart';
 import 'package:mobile_pos/model/dashboard_overview_model.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class NumericAxisChart extends StatefulWidget {
   const NumericAxisChart({Key? key, required this.model}) : super(key: key);
@@ -60,7 +61,8 @@ class _NumericAxisChartState extends State<NumericAxisChart> {
                 width: 0.5,
                 xValueMapper: (ChartData data, _) => data.x,
                 yValueMapper: (ChartData data, _) => data.y,
-                name: 'Sales',
+                //name: 'Sales',
+                name: lang.S.of(context).sales,
                 dataLabelSettings: const DataLabelSettings(isVisible: false),
                 color: Colors.green,
                 borderRadius: const BorderRadius.only(
@@ -76,7 +78,8 @@ class _NumericAxisChartState extends State<NumericAxisChart> {
                 spacing: 0.3,
                 xValueMapper: (ChartData data, _) => data.x,
                 yValueMapper: (ChartData data, _) => data.y1,
-                name: 'Purchase',
+               // name: 'Purchase',
+                name: lang.S.of(context).purchase,
                 color: kMainColor,
                 dataLabelSettings: const DataLabelSettings(isVisible: false),
                 borderRadius: const BorderRadius.only(

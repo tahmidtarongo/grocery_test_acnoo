@@ -7,6 +7,7 @@ import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/constant.dart';
 
 import 'Repo/category_repo.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class AddCategory extends StatefulWidget {
   const AddCategory({Key? key}) : super(key: key);
@@ -39,7 +40,8 @@ class _AddCategoryState extends State<AddCategory> {
                 image: AssetImage('images/x.png'),
               )),
           title: Text(
-            'Add Category',
+            lang.S.of(context).addCategory,
+            //'Add Category',
             style: GoogleFonts.poppins(
               color: Colors.black,
               fontSize: 20.0,
@@ -68,21 +70,27 @@ class _AddCategoryState extends State<AddCategory> {
                 ),
                 TextFormField(
                   controller: categoryNameController,
-                  decoration: const InputDecoration(
+                  decoration:  InputDecoration(
                     border: OutlineInputBorder(),
-                    hintText: 'Enter category name',
+                    //hintText: 'Enter category name',
+                    hintText: lang.S.of(context).enterCategoryName,
                     floatingLabelBehavior: FloatingLabelBehavior.always,
-                    labelText: 'Category name',
+                    //labelText: 'Category name',
+                    labelText: lang.S.of(context).categoryName,
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Text('Select variations : '),
+                 Text(lang.S.of(context).selectVariations
+                     //'Select variations : '
+                 ),
                 Row(
                   children: [
                     Expanded(
                       child: CheckboxListTile(
-                        title: const Text(
-                          "Size",
+                        title:  Text(
+                          lang.S.of(context).size,
+                          //"Size",
+
                           overflow: TextOverflow.ellipsis,
                         ),
                         value: sizeCheckbox,
@@ -97,8 +105,9 @@ class _AddCategoryState extends State<AddCategory> {
                     ),
                     Expanded(
                       child: CheckboxListTile(
-                        title: const Text(
-                          "Color",
+                        title:  Text(
+                          lang.S.of(context).color,
+                          //"Color",
                           overflow: TextOverflow.ellipsis,
                         ),
                         value: colorCheckbox,
@@ -117,8 +126,9 @@ class _AddCategoryState extends State<AddCategory> {
                   children: [
                     Expanded(
                       child: CheckboxListTile(
-                        title: const Text(
-                          "Weight",
+                        title:  Text(
+                          lang.S.of(context).weight,
+                          //"Weight",
                           overflow: TextOverflow.ellipsis,
                         ),
                         checkboxShape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(50))),
@@ -133,8 +143,9 @@ class _AddCategoryState extends State<AddCategory> {
                     ),
                     Expanded(
                       child: CheckboxListTile(
-                        title: const Text(
-                          "Capacity",
+                        title:  Text(
+                          lang.S.of(context).capacity,
+                          //"Capacity",
                           overflow: TextOverflow.ellipsis,
                         ),
                         checkboxShape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(50))),
@@ -150,8 +161,9 @@ class _AddCategoryState extends State<AddCategory> {
                   ],
                 ),
                 CheckboxListTile(
-                  title: const Text(
-                    "Type",
+                  title:  Text(
+                    lang.S.of(context).type,
+                    //"Type",
                     overflow: TextOverflow.ellipsis,
                   ),
                   checkboxShape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(50))),
@@ -164,7 +176,8 @@ class _AddCategoryState extends State<AddCategory> {
                   controlAffinity: ListTileControlAffinity.leading, //  <-- leading Checkbox
                 ),
                 ButtonGlobalWithoutIcon(
-                  buttontext: 'Save',
+                  buttontext:lang.S.of(context).save,
+                  //'Save',
                   buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
                   onPressed: () async {
                     setState(() {

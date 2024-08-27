@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_pos/constant.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class SmsConfirmationPopup extends StatefulWidget {
   final String customerName;
@@ -70,7 +71,10 @@ class _SmsConfirmationPopupState extends State<SmsConfirmationPopup> with Single
                 children: [
                   ElevatedButton(
                     onPressed: widget.onCancel,
-                    child: const Text('Cancel'),
+                    child:  Text(
+                      lang.S.of(context).cancel,
+                        //'Cancel'
+                    ),
                   ),
                   ElevatedButton(
                     style: const ButtonStyle(backgroundColor: MaterialStatePropertyAll(kMainColor)),
@@ -78,8 +82,9 @@ class _SmsConfirmationPopupState extends State<SmsConfirmationPopup> with Single
                       widget.onSendSms();
                       Navigator.pop(context);
                     },
-                    child: const Text(
-                      'Send SMS',
+                    child:  Text(
+                      lang.S.of(context).sendSMS,
+                     // 'Send SMS',
                       style: TextStyle(color: Colors.white),
                     ),
                   ),

@@ -76,13 +76,15 @@ class _StockListState extends State<StockList> {
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     Text(
-                                      'Cost',
+                                      lang.S.of(context).cost,
+                                     // 'Cost',
                                       textAlign: TextAlign.start,
                                       overflow: TextOverflow.ellipsis,
                                       style: kTextStyle.copyWith(fontWeight: FontWeight.bold, color: kTitleColor),
                                     ),
                                     Text(
-                                      'Qty',
+                                      lang.S.of(context).qty,
+                                      //'Qty',
                                       textAlign: TextAlign.center,
                                       overflow: TextOverflow.ellipsis,
                                       style: kTextStyle.copyWith(fontWeight: FontWeight.bold, color: kTitleColor),
@@ -170,7 +172,10 @@ class _StockListState extends State<StockList> {
                       ),
                     ],
                   )
-                : const Center(child: Text('No Product Found')),
+                :  Center(child: Text(
+              lang.S.of(context).noProductFound,
+               // 'No Product Found'
+            )),
           ),
           bottomNavigationBar: Container(
             color: const Color(0xffFEF0F1),
@@ -181,7 +186,8 @@ class _StockListState extends State<StockList> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Stock Value:',
+                    lang.S.of(context).stockValue,
+                    //'Stock Value:',
                     style: kTextStyle.copyWith(fontWeight: FontWeight.bold, color: kTitleColor, fontSize: 14),
                   ),
                   Text(

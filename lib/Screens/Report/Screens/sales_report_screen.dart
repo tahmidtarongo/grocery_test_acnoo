@@ -406,7 +406,11 @@ class _SalesReportScreenState extends State<SalesReportScreen> {
                                                 }, error: (e, stack) {
                                                   return Text(e.toString());
                                                 }, loading: () {
-                                                  return const Text('Loading');
+                                                  //return  Text('Loading');
+                                                  return  Text(
+                                                    lang.S.of(context).loading,
+                                                      //'Loading'
+                                                  );
                                                 }),
                                               ],
                                             ),

@@ -5,10 +5,11 @@ import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/Screens/Authentication/Sign%20Up/repo/sign_up_repo.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:pinput/pinput.dart' as p;
-
 import '../forgot password/repo/forgot_pass_repo.dart';
 import '../forgot password/set_new_password.dart';
 import '../profile_setup_screen.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
+
 
 class VerifyEmail extends StatefulWidget {
   const VerifyEmail({Key? key, required this.email, required this.isFormForgotPass}) : super(key: key);
@@ -87,7 +88,8 @@ class _VerifyEmailState extends State<VerifyEmail> {
         centerTitle: true,
         titleSpacing: 16,
         title: Text(
-          'Verity Email',
+          lang.S.of(context).verityEmail,
+         // 'Verity Email',
           style: textTheme.titleMedium?.copyWith(fontSize: 20),
         ),
       ),
@@ -96,14 +98,14 @@ class _VerifyEmailState extends State<VerifyEmail> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
-              'Verification',
+            Text(lang.S.of(context).verityEmail,
+             // 'Verification',
               style: textTheme.titleMedium?.copyWith(fontSize: 24.0),
             ),
             const SizedBox(height: 8.0),
             RichText(
               textAlign: TextAlign.center,
-              text: TextSpan(text: '6-digits pin has been sent to your email address: ', style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor, fontSize: 16), children: [
+              text: TextSpan(text: lang.S.of(context).digits, style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor, fontSize: 16), children: [
                 TextSpan(
                   text: widget.email,
                   style: textTheme.bodyMedium?.copyWith(color: kTitleColor, fontWeight: FontWeight.bold, fontSize: 16),
@@ -122,7 +124,8 @@ class _VerifyEmailState extends State<VerifyEmail> {
                 separatorBuilder: (index) => const SizedBox(width: 11),
                 validator: (value) {
                   if ((value?.length ?? 0) < 6) {
-                    return 'Enter valid OTP';
+                    //return 'Enter valid OTP';
+                    return lang.S.of(context).enterValidOTP;
                   } else {
                     return null;
                   }
@@ -170,9 +173,10 @@ class _VerifyEmailState extends State<VerifyEmail> {
                             }
                           }
                         : null,
-                    child: const Text(
-                      'Resend OTP',
-                      style: TextStyle(color: kMainColor),
+                    child:  Text(
+                      lang.S.of(context).resendOTP,
+                      //'Resend OTP',
+                      style: const TextStyle(color: kMainColor),
                     ),
                   ),
                 ),
@@ -225,7 +229,8 @@ class _VerifyEmailState extends State<VerifyEmail> {
                         }
                       }
                     },
-              text: 'Continue',
+              text:lang.S.of(context).continueE,
+             // 'Continue',
             ),
           ],
         ),

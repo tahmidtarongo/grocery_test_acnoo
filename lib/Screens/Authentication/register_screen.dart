@@ -77,9 +77,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             ),
                             validator: (value) {
                               if (value == null || value.isEmpty) {
-                                return 'Email can\'n be empty';
+                               // return 'Email can\'n be empty';
+                                return lang.S.of(context).emailCannotBeEmpty;
                               } else if (!value.contains('@')) {
-                                return 'Please enter a valid email';
+                                //return 'Please enter a valid email';
+                                return lang.S.of(context).pleaseEnterAValidEmail;
                               }
                               return null;
                             },
@@ -109,11 +111,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             },
                             validator: (value) {
                               if (value == null || value.isEmpty) {
-                                return 'Password can\'t be empty';
+                                //return 'Password can\'t be empty';
+                                return lang.S.of(context).passwordCannotBeEmpty;
                               } else if (value.length < 4) {
-                                return 'Please enter a bigger password';
+                                //return 'Please enter a bigger password';
+                                return lang.S.of(context).pleaseEnterABiggerPassword;
                               } else if (value.length < 4) {
-                                return 'Please enter a bigger password';
+                                //return 'Please enter a bigger password';
+                                return lang.S.of(context).pleaseEnterABiggerPassword;
                               }
                               return null;
                             },
@@ -143,11 +148,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             },
                             validator: (value) {
                               if (value == null || value.isEmpty) {
-                                return 'Password can\'t be empty';
+                                //return 'Password can\'t be empty';
+                                return lang.S.of(context).passwordCannotBeEmpty;
                               } else if (value.length < 4) {
-                                return 'Please enter a bigger password';
+                               // return 'Please enter a bigger password';
+                                return lang.S.of(context).pleaseEnterABiggerPassword;
                               } else if (givenPassword != givenPassword2) {
-                                return 'Password Not mach';
+                                //return 'Password Not mach';
+                                return lang.S.of(context).passwordsDoNotMatch;
                               }
                               return null;
                             },

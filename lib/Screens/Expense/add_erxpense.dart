@@ -171,7 +171,8 @@ class _AddExpenseState extends State<AddExpense> {
                         controller: expanseForNameController,
                         validator: (value) {
                           if (value.isEmptyOrNull) {
-                            return 'Please Enter Name';
+                            //return 'Please Enter Name';
+                            return lang.S.of(context).pleaseEnterName;
                           }
                           return null;
                         },
@@ -211,7 +212,8 @@ class _AddExpenseState extends State<AddExpense> {
                         inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
                         validator: (value) {
                           if (value.isEmptyOrNull) {
-                            return 'please Inter Amount';
+                            //return 'Please Enter Amount';
+                            return lang.S.of(context).pleaseEnterAmount;
                           }
                           return null;
                         },
@@ -257,7 +259,8 @@ class _AddExpenseState extends State<AddExpense> {
                         controller: expanseNoteController,
                         validator: (value) {
                           if (value == null) {
-                            return 'please Inter Amount';
+                            //return 'please Inter Amount';
+                            return lang.S.of(context).pleaseEnterAmount;
                           }
                           return null;
                         },
@@ -267,7 +270,8 @@ class _AddExpenseState extends State<AddExpense> {
                         decoration: kInputDecoration.copyWith(
                           border: const OutlineInputBorder(),
                           labelText: lang.S.of(context).note,
-                          hintText: 'Enter Note',
+                          //hintText: 'Enter Note',
+                          hintText: lang.S.of(context).enterNote,
                         ),
                       ),
                       const SizedBox(height: 20),
@@ -294,7 +298,10 @@ class _AddExpenseState extends State<AddExpense> {
                                 note: expanseNoteController.text,
                               );
                             } else {
-                              EasyLoading.showError('Please select a expense category');
+                              EasyLoading.showError(
+                                lang.S.of(context).pleaseSelectAExpenseCategory,
+                                  //'Please select a expense category'
+                              );
                             }
                           }
                         },

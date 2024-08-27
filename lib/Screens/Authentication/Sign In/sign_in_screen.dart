@@ -7,6 +7,7 @@ import '../../../constant.dart';
 import '../Sign Up/sign_up_screen.dart';
 import '../forgot password/forgot_password.dart';
 import 'Repo/sign_in_repo.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -75,7 +76,8 @@ class _SignInState extends State<SignIn> {
         backgroundColor: kWhite,
         titleSpacing: 16,
         title: Text(
-          'Sign in',
+          // 'Sign in',
+          lang.S.of(context).signIn,
           style: textTheme.titleSmall?.copyWith(fontSize: 20, color: kTitleColor),
         ),
       ),
@@ -95,11 +97,13 @@ class _SignInState extends State<SignIn> {
                   height: 24,
                 ),
                 Text(
-                  'Welcome back!',
+                  // 'Welcome back!',f
+                  lang.S.of(context).welcomeBack,
                   style: textTheme.titleMedium?.copyWith(fontSize: 24.0, fontWeight: FontWeight.w600),
                 ),
                 Text(
-                  'Please enter your details.',
+                  lang.S.of(context).pleaseEnterYourDetails,
+                  //'Please enter your details.',
                   style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor, fontSize: 16),
                 ),
                 const SizedBox(height: 24.0),
@@ -108,14 +112,18 @@ class _SignInState extends State<SignIn> {
                   keyboardType: TextInputType.emailAddress,
                   decoration: kInputDecoration.copyWith(
                     floatingLabelBehavior: FloatingLabelBehavior.always,
-                    labelText: 'Email',
-                    hintText: 'Enter email address',
+                   // labelText: 'Email',
+                    labelText: lang.S.of(context).lableEmail,
+                    //hintText: 'Enter email address',
+                    hintText: lang.S.of(context).hintEmail,
                   ),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Email can\'t be empty';
+                     // return 'Email can\'t be empty';
+                      return lang.S.of(context).emailCannotBeEmpty;
                     } else if (!value.contains('@')) {
-                      return 'Please enter a valid email';
+                      //return 'Please enter a valid email';
+                      return lang.S.of(context).pleaseEnterAValidEmail;
                     }
                     return null;
                   },
@@ -126,8 +134,10 @@ class _SignInState extends State<SignIn> {
                   keyboardType: TextInputType.text,
                   obscureText: showPassword,
                   decoration: kInputDecoration.copyWith(
-                    labelText: 'Password',
-                    hintText: 'Enter password',
+                    //labelText: 'Password',
+                    labelText: lang.S.of(context).lablePassword,
+                    //hintText: 'Enter password',
+                    hintText: lang.S.of(context).hintPassword,
                     suffixIcon: IconButton(
                       onPressed: () {
                         setState(() {
@@ -142,9 +152,11 @@ class _SignInState extends State<SignIn> {
                   ),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Password can\'t be empty';
+                      // return 'Password can\'t be empty';
+                      return lang.S.of(context).passwordCannotBeEmpty;
                     } else if (value.length < 6) {
-                      return 'Please enter a bigger password';
+                      //return 'Please enter a bigger password';
+                      return lang.S.of(context).pleaseEnterABiggerPassword;
                     }
                     return null;
                   },
@@ -171,7 +183,8 @@ class _SignInState extends State<SignIn> {
                     ),
                     const SizedBox(width: 8.0),
                     Text(
-                      'Remember me',
+                      lang.S.of(context).rememberMe,
+                       //'Remember me',
                       style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor),
                     ),
                     const Spacer(),
@@ -190,7 +203,8 @@ class _SignInState extends State<SignIn> {
                         ),
                       ),
                       child: Text(
-                        'Forgot password?',
+                        lang.S.of(context).forgotPassword,
+                        //'Forgot password?',
                         style: textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold, fontSize: 14),
                       ),
                     ),
@@ -214,7 +228,8 @@ class _SignInState extends State<SignIn> {
                       }
                     }
                   },
-                  text: 'Login',
+                  text: lang.S.of(context).logIn,
+                  //'Login',
                 ),
                 const SizedBox(
                   height: 16,
@@ -237,11 +252,14 @@ class _SignInState extends State<SignIn> {
                       hoverColor: kMainColor.withOpacity(0.1),
                       child: RichText(
                         text: TextSpan(
-                          text: 'Don’t have an account? ',
+                          text:
+                         lang.S.of(context).donNotHaveAnAccount,
+                          //'Don’t have an account? ',
                           style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor),
                           children: [
                             TextSpan(
-                              text: 'Sign Up',
+                              text:lang.S.of(context).signIn,
+                              //'Sign Up',
                               style: textTheme.bodyMedium?.copyWith(color: kMainColor, fontWeight: FontWeight.bold),
                             )
                           ],

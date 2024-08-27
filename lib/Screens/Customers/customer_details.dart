@@ -50,12 +50,21 @@ class _CustomerDetailsState extends State<CustomerDetails> {
       context: context,
       builder: (BuildContext context1) {
         return AlertDialog(
-          title: const Text('Confirm Delete'),
-          content: const Text('Are you sure you want to delete this party?'),
+          title:  Text(
+            lang.S.of(context).confirmPassword,
+              //'Confirm Delete'
+          ),
+          content:  Text(
+            lang.S.of(context).areYouSureYouWant,
+              //'Are you sure you want to delete this party?'
+          ),
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context),
-              child: const Text('Cancel'),
+              child:  Text(
+                lang.S.of(context).cancel,
+                  //'Cancel'
+              ),
             ),
             TextButton(
               onPressed: () async {
@@ -63,7 +72,10 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                 final party = PartyRepository();
                 await party.deleteParty(id: id, context: context, ref: ref);
               },
-              child: const Text('Delete', style: TextStyle(color: Colors.red)),
+              child:  Text(
+                lang.S.of(context).delete,
+                 // 'Delete',
+                  style: TextStyle(color: Colors.red)),
             ),
           ],
         );

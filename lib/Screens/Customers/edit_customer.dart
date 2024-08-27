@@ -90,7 +90,8 @@ class _EditCustomerState extends State<EditCustomer> {
 
                             validator: (value) {
                               if (value == null || value.isEmpty) {
-                                return 'Please enter a valid phone number';
+                               // return 'Please enter a valid phone number';
+                                return lang.S.of(context).pleaseEnterAValidPhoneNumber;
                               }
                               return null;
                             },
@@ -110,7 +111,8 @@ class _EditCustomerState extends State<EditCustomer> {
                             controller: nameController,
                             validator: (value) {
                               if (value == null || value.isEmpty) {
-                                return 'Please enter a valid Name';
+                               // return 'Please enter a valid Name';
+                                return lang.S.of(context).pleaseEnterAValidName;
                               }
                               // You can add more validation logic as needed
                               return null;
@@ -379,7 +381,8 @@ class _EditCustomerState extends State<EditCustomer> {
                                   border: const OutlineInputBorder(),
                                   floatingLabelBehavior: FloatingLabelBehavior.always,
                                   labelText: lang.S.of(context).email,
-                                  hintText: 'Enter your email',
+                                 // hintText: 'Enter your email',
+                                  hintText: lang.S.of(context).hintEmail,
                                 ),
                               ),
                             ),
@@ -392,7 +395,9 @@ class _EditCustomerState extends State<EditCustomer> {
                                     border: const OutlineInputBorder(),
                                     floatingLabelBehavior: FloatingLabelBehavior.always,
                                     labelText: lang.S.of(context).address,
-                                    hintText: 'Enter your address'),
+                                    //hintText: 'Enter your address'
+                                   hintText: lang.S.of(context).hintEmail,
+                                ),
                               ),
                             ),
                             Padding(

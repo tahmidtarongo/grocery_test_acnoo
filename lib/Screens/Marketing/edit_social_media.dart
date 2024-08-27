@@ -40,7 +40,8 @@ class _EditSocialmediaState extends State<EditSocialmedia> {
               iconWidget: const Image(
                 image: AssetImage('images/fb.png'),
               ),
-              socialMediaName: 'Facebook',
+              socialMediaName: lang.S.of(context).facebook,
+              //'Facebook',
             ),
           ),
           Padding(
@@ -49,7 +50,8 @@ class _EditSocialmediaState extends State<EditSocialmedia> {
               iconWidget: const Image(
                 image: AssetImage('images/twitter.png'),
               ),
-              socialMediaName: 'Twitter',
+              socialMediaName: lang.S.of(context).twitter,
+             // 'Twitter',
             ),
           ),
           Padding(
@@ -58,7 +60,8 @@ class _EditSocialmediaState extends State<EditSocialmedia> {
               iconWidget: const Image(
                 image: AssetImage('images/insta.png'),
               ),
-              socialMediaName: 'Instagram',
+              socialMediaName: lang.S.of(context).instagram,
+              //'Instagram',
             ),
           ),
           Padding(
@@ -67,7 +70,8 @@ class _EditSocialmediaState extends State<EditSocialmedia> {
               iconWidget: const Image(
                 image: AssetImage('images/linkedin.png'),
               ),
-              socialMediaName: 'LinkedIN',
+              socialMediaName:lang.S.of(context).linkedIN,
+              //'LinkedIN',
             ),
           ),
         ],
@@ -116,7 +120,8 @@ class SocialMediaEditCard extends StatelessWidget {
                 color: Colors.white,
               ),
               Text(
-                'Link',
+                lang.S.of(context).link,
+                //'Link',
                 style: GoogleFonts.poppins(fontSize: 15.0, color: Colors.white),
               ),
             ],

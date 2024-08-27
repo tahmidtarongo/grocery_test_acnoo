@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class PaymentScreen extends StatefulWidget {
   const PaymentScreen({Key? key, required this.planId, required this.businessId}) : super(key: key);
@@ -61,7 +62,10 @@ class _PaymentScreenState extends State<PaymentScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Payment Gateway'),
+        title:  Text(
+          lang.S.of(context).paymentGateway,
+           // 'Payment Gateway'
+        ),
       ),
       body: WebViewWidget(
         controller: controller,
@@ -101,10 +105,16 @@ class SuccessScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Payment Success'),
+        title:  Text(
+          lang.S.of(context).paymentSuccess,
+           // 'Payment Success'
+        ),
       ),
-      body: const Center(
-        child: Text('Payment was successful!'),
+      body:  Center(
+        child: Text(
+            lang.S.of(context).paymentWasSuccessful,
+           // 'Payment was successful!'
+        ),
       ),
     );
   }
@@ -117,10 +127,16 @@ class FailureScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Payment Failed'),
+        title:  Text(
+          lang.S.of(context).paymentFailed,
+           // 'Payment Failed'
+        ),
       ),
-      body: const Center(
-        child: Text('Payment failed. Please try again.'),
+      body:  Center(
+        child: Text(
+          lang.S.of(context).paymentFailedPleaseTryAgain,
+            //'Payment failed. Please try again.'
+        ),
       ),
     );
   }

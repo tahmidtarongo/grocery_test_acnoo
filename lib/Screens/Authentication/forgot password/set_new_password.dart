@@ -3,8 +3,8 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/Screens/Authentication/forgot%20password/repo/forgot_pass_repo.dart';
-
 import '../../../constant.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class SetNewPassword extends StatefulWidget {
   const SetNewPassword({Key? key,  required this.email}) : super(key: key);
@@ -42,7 +42,8 @@ class _SetNewPasswordState extends State<SetNewPassword> {
         centerTitle: true,
         titleSpacing: 16,
         title: Text(
-          'Create New Password',
+          lang.S.of(context).createNewPassword,
+          //'Create New Password',
           style: textTheme.titleMedium?.copyWith(fontSize: 18),
         ),
       ),
@@ -55,12 +56,14 @@ class _SetNewPasswordState extends State<SetNewPassword> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
-                  'Set Up New Password',
+                 lang.S.of(context).setUpNewPassword,
+                 // 'Set Up New Password',
                   style: textTheme.titleMedium?.copyWith(fontSize: 24.0),
                 ),
                 const SizedBox(height: 8.0),
                 Text(
-                  'Reset your password to recovery and log in your account',
+                  lang.S.of(context).resetPassword,
+                  //'Reset your password to recovery and log in your account',
                   style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor,fontSize: 16),textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 24.0),
@@ -71,7 +74,8 @@ class _SetNewPasswordState extends State<SetNewPassword> {
                   decoration: kInputDecoration.copyWith(
                     // border: const OutlineInputBorder(),
                     hintText: '********',
-                    labelText: 'New Password',
+                    //labelText: 'New Password',
+                    labelText: lang.S.of(context).newPassword,
                     suffixIcon: IconButton(
                       onPressed: () {
                         setState(() {
@@ -86,9 +90,11 @@ class _SetNewPasswordState extends State<SetNewPassword> {
                   ),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Password can\'t be empty';
+                      //return 'Password can\'t be empty';
+                      return lang.S.of(context).passwordCannotBeEmpty;
                     } else if (value.length < 6) {
-                      return 'Please enter a bigger password';
+                      //return 'Please enter a bigger password';
+                      return lang.S.of(context).pleaseEnterABiggerPassword;
                     }
                     return null;
                   },
@@ -100,7 +106,8 @@ class _SetNewPasswordState extends State<SetNewPassword> {
                   obscureText: showConfirmPassword,
                   decoration: kInputDecoration.copyWith(
                     border: const OutlineInputBorder(),
-                    labelText: 'Confirm Password',
+                    ///labelText: 'Confirm Password',
+                    labelText: lang.S.of(context).confirmPassword,
                     hintText: '********',
                     suffixIcon: IconButton(
                       onPressed: () {
@@ -116,9 +123,11 @@ class _SetNewPasswordState extends State<SetNewPassword> {
                   ),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Password can\'t be empty';
+                      //return 'Password can\'t be empty';
+                      return lang.S.of(context).passwordCannotBeEmpty;
                     } else if (value != _passwordController.text) {
-                      return 'Passwords do not match';
+                      //return 'Passwords do not match';
+                      return lang.S.of(context).passwordsDoNotMatch;
                     }
                     return null;
                   },
@@ -140,7 +149,8 @@ class _SetNewPasswordState extends State<SetNewPassword> {
                       }
                     }
                   },
-                  text: 'Save',
+                  text: lang.S.of(context).save,
+                  //'Save',
                 ),
               ],
             ),

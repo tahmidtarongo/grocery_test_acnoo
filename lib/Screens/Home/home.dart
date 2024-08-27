@@ -75,16 +75,28 @@ class _HomeState extends State<Home> {
         final shouldPop = await showDialog<bool>(
           context: context,
           builder: (context) => AlertDialog(
-            title: const Text('Are you sure?'),
-            content: const Text('Do you want to exit the app?'),
+            title:  Text(
+              lang.S.of(context).areYouSure,
+                //'Are you sure?'
+            ),
+            content: Text(
+              lang.S.of(context).doYouWantToExitTheApp,
+                //'Do you want to exit the app?'
+            ),
             actions: [
               TextButton(
                 onPressed: () => Navigator.of(context).pop(false),
-                child: const Text('No'),
+                child:  Text(
+                  lang.S.of(context).no,
+                    //'No'
+                ),
               ),
               TextButton(
                 onPressed: () => Navigator.of(context).pop(true),
-                child: const Text('Yes'),
+                child:  Text(
+                  lang.S.of(context).yes,
+                  //  'Yes'
+                ),
               ),
             ],
           ),
@@ -140,28 +152,40 @@ class _HomeState extends State<Home> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SvgPicture.asset('assets/home.svg',height: 24,width: 24,color: kGreyTextColor,),
-                const Text("Home",style: TextStyle(color: kGreyTextColor),),
+                 Text(
+                   lang.S.of(context).home,
+                 //  "Home",
+                   style: TextStyle(color: kGreyTextColor),),
               ],
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SvgPicture.asset('assets/dashbord.svg',height: 24,width: 24,color: kGreyTextColor,),
-                const Text("Dashboard",style: TextStyle(color: kGreyTextColor),),
+                 Text(
+                   lang.S.of(context).dashboard,
+                   //"Dashboard",
+                   style: TextStyle(color: kGreyTextColor),),
               ],
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SvgPicture.asset('assets/file.svg',height: 24,width: 24,color: kGreyTextColor,),
-                Text("Reports",style: TextStyle(color: kGreyTextColor),),
+                Text(
+                  lang.S.of(context).reports,
+                 // "Reports",
+                  style: TextStyle(color: kGreyTextColor),),
               ],
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SvgPicture.asset('assets/setting.svg',height: 24,width: 24,color: kGreyTextColor,),
-                Text("Setting",style: TextStyle(color: kGreyTextColor),),
+                Text(
+                  lang.S.of(context).setting,
+                  //"Setting",
+                  style: TextStyle(color: kGreyTextColor),),
               ],
             ),
           ],

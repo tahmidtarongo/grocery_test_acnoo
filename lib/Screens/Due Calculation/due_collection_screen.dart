@@ -110,7 +110,10 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                                 child: DropdownButton<SalesDuesInvoice>(
                                   isExpanded: true,
                                   value: selectedInvoice,
-                                  hint: const Text('Select a invoice'),
+                                  hint:  Text(
+                                    lang.S.of(context).selectAInvoice,
+                                      //'Select a invoice'
+                                  ),
                                   icon: const Icon(Icons.keyboard_arrow_down),
                                   items: items.map((SalesDuesInvoice items) {
                                     return DropdownMenuItem(
@@ -174,8 +177,9 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          const Text(
-                            'Total Due amount ',
+                           Text(
+                             lang.S.of(context).totalDueAmount,
+                            //'Total Due amount ',
                           ),
                           Text(
                             widget.customerModel.due == null ? '$currency 0' : '$currency${widget.customerModel.due}',
@@ -250,7 +254,10 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                                         setState(() {
                                           paidAmount = 0;
                                         });
-                                        EasyLoading.showError('You can\'t pay more then due');
+                                        EasyLoading.showError(
+                                          lang.S.of(context).youCanNotPayMoreThenDue,
+                                           // 'You can\'t pay more then due'
+                                        );
                                       }
                                     }
                                   },
@@ -425,7 +432,10 @@ class _DueCollectionScreenState extends State<DueCollectionScreen> {
                                 ).launch(context);
                               }
                             } else {
-                              EasyLoading.showError('No Due Selected');
+                              EasyLoading.showError(
+                                lang.S.of(context).noDueSelected,
+                                  //'No Due Selected'
+                              );
                             }
                           },
                           child: Container(

@@ -1060,16 +1060,6 @@ class S {
     );
   }
 
-  /// `Save`
-  String get save {
-    return Intl.message(
-      'Save',
-      name: 'save',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Update`
   String get update {
     return Intl.message(
@@ -2530,16 +2520,6 @@ class S {
     );
   }
 
-  /// `Forgot password`
-  String get forgotPassword {
-    return Intl.message(
-      'Forgot password',
-      name: 'forgotPassword',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Please enter your email address below to receive password Reset Link.`
   String get enterEmail {
     return Intl.message(
@@ -2575,16 +2555,6 @@ class S {
     return Intl.message(
       'Password',
       name: 'password',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Log In`
-  String get logIn {
-    return Intl.message(
-      'Log In',
-      name: 'logIn',
       desc: '',
       args: [],
     );
@@ -2775,6 +2745,1046 @@ class S {
     return Intl.message(
       'Congratulations',
       name: 'congratulation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign in`
+  String get signIn {
+    return Intl.message(
+      'Sign in',
+      name: 'signIn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Log In`
+  String get logIn {
+    return Intl.message(
+      'Log In',
+      name: 'logIn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome back!`
+  String get welcomeBack {
+    return Intl.message(
+      'Welcome back!',
+      name: 'welcomeBack',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password can't be empty`
+  String get passwordCannotBeEmpty {
+    return Intl.message(
+      'Password can\'t be empty',
+      name: 'passwordCannotBeEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forgot password`
+  String get forgotPassword {
+    return Intl.message(
+      'Forgot password',
+      name: 'forgotPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset password by using your email or phone number`
+  String get reset {
+    return Intl.message(
+      'Reset password by using your email or phone number',
+      name: 'reset',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get lableEmail {
+    return Intl.message(
+      'Email',
+      name: 'lableEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter email address`
+  String get hintEmail {
+    return Intl.message(
+      'Enter email address',
+      name: 'hintEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email can't be empty`
+  String get emailCannotBeEmpty {
+    return Intl.message(
+      'Email can\'t be empty',
+      name: 'emailCannotBeEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid email`
+  String get pleaseEnterAValidEmail {
+    return Intl.message(
+      'Please enter a valid email',
+      name: 'pleaseEnterAValidEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue`
+  String get continueE {
+    return Intl.message(
+      'Continue',
+      name: 'continueE',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter your details.`
+  String get pleaseEnterYourDetails {
+    return Intl.message(
+      'Please enter your details.',
+      name: 'pleaseEnterYourDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get lablePassword {
+    return Intl.message(
+      'Password',
+      name: 'lablePassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter password`
+  String get hintPassword {
+    return Intl.message(
+      'Enter password',
+      name: 'hintPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a bigger password`
+  String get pleaseEnterABiggerPassword {
+    return Intl.message(
+      'Please enter a bigger password',
+      name: 'pleaseEnterABiggerPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Remember me`
+  String get rememberMe {
+    return Intl.message(
+      'Remember me',
+      name: 'rememberMe',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don’t have an account?`
+  String get donNotHaveAnAccount {
+    return Intl.message(
+      'Don’t have an account?',
+      name: 'donNotHaveAnAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create A Free Account`
+  String get createAFreeAccount {
+    return Intl.message(
+      'Create A Free Account',
+      name: 'createAFreeAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Full Name`
+  String get fullName {
+    return Intl.message(
+      'Full Name',
+      name: 'fullName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your full name`
+  String get enterYourFullName {
+    return Intl.message(
+      'Enter your full name',
+      name: 'enterYourFullName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `name can'n be empty`
+  String get nameCanNotBeEmpty {
+    return Intl.message(
+      'name can\'n be empty',
+      name: 'nameCanNotBeEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already have an account? `
+  String get alreadyHaveAnAccount {
+    return Intl.message(
+      'Already have an account? ',
+      name: 'alreadyHaveAnAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create New Password`
+  String get createNewPassword {
+    return Intl.message(
+      'Create New Password',
+      name: 'createNewPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Set Up New Password`
+  String get setUpNewPassword {
+    return Intl.message(
+      'Set Up New Password',
+      name: 'setUpNewPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reset your password to recovery and log in your account`
+  String get resetPassword {
+    return Intl.message(
+      'Reset your password to recovery and log in your account',
+      name: 'resetPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New Password`
+  String get newPassword {
+    return Intl.message(
+      'New Password',
+      name: 'newPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm Password`
+  String get confirmPassword {
+    return Intl.message(
+      'Confirm Password',
+      name: 'confirmPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Passwords do not match`
+  String get passwordsDoNotMatch {
+    return Intl.message(
+      'Passwords do not match',
+      name: 'passwordsDoNotMatch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verity Email`
+  String get verityEmail {
+    return Intl.message(
+      'Verity Email',
+      name: 'verityEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verification`
+  String get verification {
+    return Intl.message(
+      'Verification',
+      name: 'verification',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `6-digits pin has been sent to your email address: `
+  String get digits {
+    return Intl.message(
+      '6-digits pin has been sent to your email address: ',
+      name: 'digits',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter valid OTP`
+  String get enterValidOTP {
+    return Intl.message(
+      'Enter valid OTP',
+      name: 'enterValidOTP',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter valid OTP`
+  String get resendOTP {
+    return Intl.message(
+      'Enter valid OTP',
+      name: 'resendOTP',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verify Your Email`
+  String get verifyYourEmail {
+    return Intl.message(
+      'Verify Your Email',
+      name: 'verifyYourEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We have sent a confirmation email to`
+  String get weHaveSentAConfirmationEmailTo {
+    return Intl.message(
+      'We have sent a confirmation email to',
+      name: 'weHaveSentAConfirmationEmailTo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `It May be that the mail ended up in your spam folder.`
+  String get folder {
+    return Intl.message(
+      'It May be that the mail ended up in your spam folder.',
+      name: 'folder',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Got It`
+  String get gotIt {
+    return Intl.message(
+      'Got It',
+      name: 'gotIt',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter opening balance`
+  String get enterOpeningBalance {
+    return Intl.message(
+      'Enter opening balance',
+      name: 'enterOpeningBalance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid business name`
+  String get pleaseEnterAValidBusinessName {
+    return Intl.message(
+      'Please enter a valid business name',
+      name: 'pleaseEnterAValidBusinessName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Business/Store Name`
+  String get enterBusiness {
+    return Intl.message(
+      'Enter Business/Store Name',
+      name: 'enterBusiness',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Business Category`
+  String get selectBusinessCategory {
+    return Intl.message(
+      'Select Business Category',
+      name: 'selectBusinessCategory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Today’s Summary`
+  String get todaySummary {
+    return Intl.message(
+      'Today’s Summary',
+      name: 'todaySummary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sell All >`
+  String get sellAll {
+    return Intl.message(
+      'Sell All >',
+      name: 'sellAll',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Income`
+  String get income {
+    return Intl.message(
+      'Income',
+      name: 'income',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Purchased`
+  String get purchased {
+    return Intl.message(
+      'Purchased',
+      name: 'purchased',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `End your Free plan`
+  String get endYourFreePlan {
+    return Intl.message(
+      'End your Free plan',
+      name: 'endYourFreePlan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your Free Package is almost done, buy your next plan Thanks.`
+  String get yourFree {
+    return Intl.message(
+      'Your Free Package is almost done, buy your next plan Thanks.',
+      name: 'yourFree',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upgrade Now`
+  String get upgradeNow {
+    return Intl.message(
+      'Upgrade Now',
+      name: 'upgradeNow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Not Found`
+  String get notFound {
+    return Intl.message(
+      'Not Found',
+      name: 'notFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Update your subscription`
+  String get updateYourSubscription {
+    return Intl.message(
+      'Update your subscription',
+      name: 'updateYourSubscription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Data Found`
+  String get noDataFound {
+    return Intl.message(
+      'No Data Found',
+      name: 'noDataFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure?`
+  String get areYouSure {
+    return Intl.message(
+      'Are you sure?',
+      name: 'areYouSure',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you want to exit the app?`
+  String get doYouWantToExitTheApp {
+    return Intl.message(
+      'Do you want to exit the app?',
+      name: 'doYouWantToExitTheApp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No`
+  String get no {
+    return Intl.message(
+      'No',
+      name: 'no',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yes`
+  String get yes {
+    return Intl.message(
+      'Yes',
+      name: 'yes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dashboard`
+  String get dashboard {
+    return Intl.message(
+      'Dashboard',
+      name: 'dashboard',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sales & Purchase Overview`
+  String get salesPurchaseOverview {
+    return Intl.message(
+      'Sales & Purchase Overview',
+      name: 'salesPurchaseOverview',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total Items`
+  String get totalItems {
+    return Intl.message(
+      'Total Items',
+      name: 'totalItems',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total Categories`
+  String get totalCategories {
+    return Intl.message(
+      'Total Categories',
+      name: 'totalCategories',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Quick Overview`
+  String get quickOverview {
+    return Intl.message(
+      'Quick Overview',
+      name: 'quickOverview',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total Income`
+  String get totalIncome {
+    return Intl.message(
+      'Total Income',
+      name: 'totalIncome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Customer Due`
+  String get customerDue {
+    return Intl.message(
+      'Customer Due',
+      name: 'customerDue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stock Value`
+  String get stockValue {
+    return Intl.message(
+      'Stock Value',
+      name: 'stockValue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Loss/Profit`
+  String get lossProfit {
+    return Intl.message(
+      'Loss/Profit',
+      name: 'lossProfit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cost`
+  String get cost {
+    return Intl.message(
+      'Cost',
+      name: 'cost',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Qty`
+  String get qty {
+    return Intl.message(
+      'Qty',
+      name: 'qty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Product Found`
+  String get noProductFound {
+    return Intl.message(
+      'No Product Found',
+      name: 'noProductFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone Number`
+  String get phoneNumber {
+    return Intl.message(
+      'Phone Number',
+      name: 'phoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid Name`
+  String get pleaseEnterAValidName {
+    return Intl.message(
+      'Please enter a valid Name',
+      name: 'pleaseEnterAValidName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please Enter valid phone and name first`
+  String get pleaseEnterValidPhoneAndNameFirst {
+    return Intl.message(
+      'Please Enter valid phone and name first',
+      name: 'pleaseEnterValidPhoneAndNameFirst',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm Delete`
+  String get confirmDelete {
+    return Intl.message(
+      'Confirm Delete',
+      name: 'confirmDelete',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to delete this party?`
+  String get areYouSureYouWant {
+    return Intl.message(
+      'Are you sure you want to delete this party?',
+      name: 'areYouSureYouWant',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid phone number`
+  String get pleaseEnterAValidPhoneNumber {
+    return Intl.message(
+      'Please enter a valid phone number',
+      name: 'pleaseEnterAValidPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send SMS`
+  String get sendSMS {
+    return Intl.message(
+      'Send SMS',
+      name: 'sendSMS',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search Here....`
+  String get searchH {
+    return Intl.message(
+      'Search Here....',
+      name: 'searchH',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Transactions`
+  String get transactions {
+    return Intl.message(
+      'Transactions',
+      name: 'transactions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select a invoice`
+  String get selectAInvoice {
+    return Intl.message(
+      'Select a invoice',
+      name: 'selectAInvoice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total Due amount`
+  String get totalDueAmount {
+    return Intl.message(
+      'Total Due amount',
+      name: 'totalDueAmount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You can't pay more then due`
+  String get youCanNotPayMoreThenDue {
+    return Intl.message(
+      'You can\'t pay more then due',
+      name: 'youCanNotPayMoreThenDue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Due Selected`
+  String get noDueSelected {
+    return Intl.message(
+      'No Due Selected',
+      name: 'noDueSelected',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please Enter Name`
+  String get pleaseEnterName {
+    return Intl.message(
+      'Please Enter Name',
+      name: 'pleaseEnterName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please Enter Amount`
+  String get pleaseEnterAmount {
+    return Intl.message(
+      'Please Enter Amount',
+      name: 'pleaseEnterAmount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Note`
+  String get enterNote {
+    return Intl.message(
+      'Enter Note',
+      name: 'enterNote',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please select a expense category`
+  String get pleaseSelectAExpenseCategory {
+    return Intl.message(
+      'Please select a expense category',
+      name: 'pleaseSelectAExpenseCategory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter expanse category name`
+  String get enterExpanseCategoryName {
+    return Intl.message(
+      'Enter expanse category name',
+      name: 'enterExpanseCategoryName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Coming Soon`
+  String get comingSoon {
+    return Intl.message(
+      'Coming Soon',
+      name: 'comingSoon',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please make a sale first`
+  String get pleaseMakeASaleFirst {
+    return Intl.message(
+      'Please make a sale first',
+      name: 'pleaseMakeASaleFirst',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Facebook`
+  String get facebook {
+    return Intl.message(
+      'Facebook',
+      name: 'facebook',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Twitter`
+  String get twitter {
+    return Intl.message(
+      'Twitter',
+      name: 'twitter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Instagram`
+  String get instagram {
+    return Intl.message(
+      'Instagram',
+      name: 'instagram',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `LinkedIN`
+  String get linkedIN {
+    return Intl.message(
+      'LinkedIN',
+      name: 'linkedIN',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Link`
+  String get link {
+    return Intl.message(
+      'Link',
+      name: 'link',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lorem ipsum dolor sit amet, consectetur adip gravi iscing elit. Ultricies gravida scelerisque arcu facilisis duis in.`
+  String get lorem {
+    return Intl.message(
+      'Lorem ipsum dolor sit amet, consectetur adip gravi iscing elit. Ultricies gravida scelerisque arcu facilisis duis in.',
+      name: 'lorem',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment Gateway`
+  String get paymentGateway {
+    return Intl.message(
+      'Payment Gateway',
+      name: 'paymentGateway',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment Success`
+  String get paymentSuccess {
+    return Intl.message(
+      'Payment Success',
+      name: 'paymentSuccess',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment was successful!`
+  String get paymentWasSuccessful {
+    return Intl.message(
+      'Payment was successful!',
+      name: 'paymentWasSuccessful',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment Failed`
+  String get paymentFailed {
+    return Intl.message(
+      'Payment Failed',
+      name: 'paymentFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Payment failed. Please try again.`
+  String get paymentFailedPleaseTryAgain {
+    return Intl.message(
+      'Payment failed. Please try again.',
+      name: 'paymentFailedPleaseTryAgain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid brand name`
+  String get pleaseEnterAValidBrandName {
+    return Intl.message(
+      'Please enter a valid brand name',
+      name: 'pleaseEnterAValidBrandName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter a brand name`
+  String get enterABrandName {
+    return Intl.message(
+      'Enter a brand name',
+      name: 'enterABrandName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Category`
+  String get addCategory {
+    return Intl.message(
+      'Add Category',
+      name: 'addCategory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter category name`
+  String get enterCategoryName {
+    return Intl.message(
+      'Enter category name',
+      name: 'enterCategoryName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select variations : `
+  String get selectVariations {
+    return Intl.message(
+      'Select variations : ',
+      name: 'selectVariations',
       desc: '',
       args: [],
     );

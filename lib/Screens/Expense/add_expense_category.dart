@@ -68,7 +68,8 @@ class _AddExpenseCategoryState extends State<AddExpenseCategory> {
                   child: TextFormField(
                     validator: (value) {
                       if(value?.trim().isEmptyOrNull??true){
-                        return 'Enter expanse category name';
+                        //return 'Enter expanse category name';
+                        return lang.S.of(context).enterExpanseCategoryName;
                       }
                       return null;
                     },

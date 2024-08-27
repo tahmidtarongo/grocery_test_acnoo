@@ -6,6 +6,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../constant.dart';
 import '../../currency.dart';
 import 'Model/currency_model.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
+
 
 class CurrencyScreen extends StatefulWidget {
   const CurrencyScreen({Key? key}) : super(key: key);
@@ -27,7 +29,8 @@ class _CurrencyScreenState extends State<CurrencyScreen> {
         appBar: AppBar(
           backgroundColor: Colors.white,
           title: Text(
-            'Currency',
+            lang.S.of(context).currency,
+            //'Currency',
             style: GoogleFonts.poppins(
               color: Colors.black,
             ),
@@ -110,10 +113,11 @@ class _CurrencyScreenState extends State<CurrencyScreen> {
                 color: kMainColor,
                 borderRadius: BorderRadius.all(Radius.circular(10)),
               ),
-              child: const Center(
+              child:  Center(
                 child: Text(
-                  'Save',
-                  style: TextStyle(fontSize: 18, color: Colors.white),
+                  lang.S.of(context).save,
+                 // 'Save',
+                  style: const TextStyle(fontSize: 18, color: Colors.white),
                 ),
               ),
             ),

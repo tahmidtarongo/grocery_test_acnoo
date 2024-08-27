@@ -30,9 +30,13 @@ class _CustomerAllTransactionScreenState extends State<CustomerAllTransactionScr
         title: isSearch?TextFormField(
           decoration: kInputDecoration.copyWith(
             contentPadding: EdgeInsets.only(left: 12,right: 5),
-            hintText: 'Search Here.....',
+            //hintText: 'Search Here.....',
+           hintText: lang.S.of(context).searchH,
           ),
-        ): const Text('Transactions'),
+        ):  Text(
+          lang.S.of(context).transactions,
+          //  'Transactions'
+        ),
         actions:  [
           GestureDetector(
             onTap: (){
@@ -73,14 +77,15 @@ class _CustomerAllTransactionScreenState extends State<CustomerAllTransactionScr
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const Row(
+                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    "Sale",
-                                    style: TextStyle(fontSize: 16),
+                                    lang.S.of(context).sale,
+                                    //"Sale",
+                                    style: const TextStyle(fontSize: 16),
                                   ),
-                                  Text('#2145'),
+                                  const Text('#2145'),
                                 ],
                               ),
                               const SizedBox(height: 10),

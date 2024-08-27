@@ -6,6 +6,7 @@ import 'package:mobile_pos/currency.dart';
 
 import '../../Provider/profile_provider.dart';
 import 'numeric_axis.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({Key? key}) : super(key: key);
@@ -58,7 +59,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
           appBar: AppBar(
             backgroundColor: kWhite,
             surfaceTintColor: kWhite,
-            title: const Text('Dashboard'),
+            title:  Text(
+              lang.S.of(context).dashboard,
+                //'Dashboard'
+            ),
             actions: [
               Padding(
                 padding: const EdgeInsets.only(right: 12),
@@ -84,7 +88,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Sales & Purchase Overview',
+                          lang.S.of(context).salesPurchaseOverview,
+                         //'Sales & Purchase Overview',
                           style: gTextStyle.copyWith(fontWeight: FontWeight.bold, color: kTitleColor),
                         ),
                         const SizedBox(
@@ -102,7 +107,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
                               width: 5,
                             ),
                             RichText(
-                                text: const TextSpan(text: 'Sales', style: TextStyle(color: kTitleColor), children: [
+                                text:  TextSpan(text:
+                                    lang.S.of(context).sales,
+                                //'Sales',
+                                    style: const TextStyle(color: kTitleColor), children: const [
                               // TextSpan(
                               //     text: '$currency 500',
                               //     style: gTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor)
@@ -120,7 +128,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
                               width: 5,
                             ),
                             RichText(
-                                text: const TextSpan(text: 'Purchase', style: TextStyle(color: kTitleColor), children: [
+                                text:  TextSpan(text:
+                                    lang.S.of(context).purchase,
+
+                                //'Purchase',
+                                    style: const TextStyle(color: kTitleColor), children: const [
                               // TextSpan(
                               //     text: '$currency 300',
                               //     style: gTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor)
@@ -145,18 +157,27 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   ),
                   Row(
                     children: [
-                      Expanded(child: GlobalContainer(title: 'Total Items', image: 'assets/totalItem.svg', subtitle: dashboard.data?.totalItems.toString() ?? '0')),
-                      SizedBox(
+                      Expanded(child: GlobalContainer(
+                          title:
+                              lang.S.of(context).totalItems,
+                          //'Total Items'
+                           image: 'assets/totalItem.svg', subtitle: dashboard.data?.totalItems.toString() ?? '0')),
+                      const SizedBox(
                         width: 12,
                       ),
-                      Expanded(child: GlobalContainer(title: 'Total Categories', image: 'assets/purchaseLisst.svg', subtitle: dashboard.data?.totalCategories.toString() ?? '0'))
+                      Expanded(child: GlobalContainer(
+                          title:
+                              lang.S.of(context).totalCategories,
+                          //'Total Categories',
+                          image: 'assets/purchaseLisst.svg', subtitle: dashboard.data?.totalCategories.toString() ?? '0'))
                     ],
                   ),
                   const SizedBox(
                     height: 20,
                   ),
                   Text(
-                    'Quick Overview',
+                    lang.S.of(context).quickOverview,
+                    //'Quick Overview',
                     style: gTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold, fontSize: 18),
                   ),
                   const SizedBox(
@@ -165,11 +186,17 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   Row(
                     children: [
                       Expanded(
-                          child: GlobalContainer(title: 'Total Income', image: 'assets/totalIncome.svg', subtitle: '$currency ${dashboard.data?.totalIncome.toString() ?? '0'}')),
-                      SizedBox(
+                          child: GlobalContainer(title:
+                              lang.S.of(context).totalIncome,
+                          //'Total Income',
+                              image: 'assets/totalIncome.svg', subtitle: '$currency ${dashboard.data?.totalIncome.toString() ?? '0'}')),
+                      const SizedBox(
                         width: 12,
                       ),
-                      Expanded(child: GlobalContainer(title: 'Total Expense', image: 'assets/expense.svg', subtitle: '$currency ${dashboard.data?.totalExpense.toString() ?? '0'}'))
+                      Expanded(child: GlobalContainer(title:
+                          lang.S.of(context).totalExpense,
+                      //'Total Expense',
+                          image: 'assets/expense.svg', subtitle: '$currency ${dashboard.data?.totalExpense.toString() ?? '0'}'))
                     ],
                   ),
                   const SizedBox(
@@ -177,29 +204,42 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   ),
                   Row(
                     children: [
-                      Expanded(child: GlobalContainer(title: 'Customer Due', image: 'assets/duelist.svg', subtitle: '$currency ${dashboard.data?.totalDue.toString() ?? '0'}')),
+                      Expanded(child: GlobalContainer(title:
+                          lang.S.of(context).customerDue,
+                      //'Customer Due',
+                          image: 'assets/duelist.svg', subtitle: '$currency ${dashboard.data?.totalDue.toString() ?? '0'}')),
                       const SizedBox(
                         width: 12,
                       ),
-                      Expanded(child: GlobalContainer(title: 'Stock Value', image: 'assets/stock.svg', subtitle: dashboard.data?.stockValue.toString() ?? '0'))
+                      Expanded(child: GlobalContainer(title:
+                          lang.S.of(context).stockValue,
+                      //'Stock Value',
+                          image: 'assets/stock.svg', subtitle: dashboard.data?.stockValue.toString() ?? '0'))
                     ],
                   ),
                   const SizedBox(height: 20),
                   Text(
-                    'Loss/Profit',
+                    lang.S.of(context).lossProfit,
+                    //'Loss/Profit',
                     style: gTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold, fontSize: 18),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Row(
                     children: [
                       Expanded(
-                          child: GlobalContainer(title: 'Total Profit', image: 'assets/lossprofit.svg', subtitle: '$currency ${dashboard.data?.totalProfit.toString() ?? '0'}')),
-                      SizedBox(
+                          child: GlobalContainer(title:
+                              lang.S.of(context).totalProfit,
+                          //'Total Profit',
+                              image: 'assets/lossprofit.svg', subtitle: '$currency ${dashboard.data?.totalProfit.toString() ?? '0'}')),
+                      const SizedBox(
                         width: 12,
                       ),
-                      Expanded(child: GlobalContainer(title: 'Toatal Loss', image: 'assets/expense.svg', subtitle: '$currency ${dashboard.data?.totalLoss.toString() ?? '0'}'))
+                      Expanded(child: GlobalContainer(title:
+                          lang.S.of(context).totalLoss,
+                      //'Toatal Loss',
+                          image: 'assets/expense.svg', subtitle: '$currency ${dashboard.data?.totalLoss.toString() ?? '0'}'))
                     ],
                   ),
                 ],
@@ -223,7 +263,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
           ),
         );
       }, loading: () {
-        return Scaffold(
+        return const Scaffold(
           body: Center(
             child: CircularProgressIndicator(),
           ),

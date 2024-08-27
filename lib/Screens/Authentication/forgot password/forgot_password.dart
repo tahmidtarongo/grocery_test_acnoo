@@ -3,9 +3,9 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/Screens/Authentication/forgot%20password/repo/forgot_pass_repo.dart';
 import '../../../constant.dart';
-import '../Sign Up/sign_up_screen.dart';
 import '../Sign Up/verify_email.dart';
 import '../Wedgets/check_email_for_otp_popup.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class ForgotPassword extends StatefulWidget {
   const ForgotPassword({
@@ -38,7 +38,8 @@ class _ForgotPasswordState extends State<ForgotPassword> {
         surfaceTintColor: kWhite,
         centerTitle: true,
         title: Text(
-          'Forgot Password',
+           // 'Forgot Password',
+          lang.S.of(context).forgotPassword,
           style: textTheme.titleMedium?.copyWith(fontSize: 18),
         ),
       ),
@@ -50,12 +51,14 @@ class _ForgotPasswordState extends State<ForgotPassword> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                'Forgot Password',
+                // 'Forgot Password',
+                lang.S.of(context).forgotPassword,
                 style: textTheme.titleMedium?.copyWith(fontSize: 24.0),
               ),
               const SizedBox(height: 8.0),
               Text(
-                'Reset password by using your email or phone number',
+                //'Reset password by using your email or phone number',
+                lang.S.of(context).reset,
                 style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor,fontSize: 16),textAlign: TextAlign.center,
               ),
               const SizedBox(height: 24.0),
@@ -63,14 +66,18 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 controller: _emailController,
                 keyboardType: TextInputType.emailAddress,
                 decoration:  kInputDecoration.copyWith(
-                  labelText: 'Email',
-                  hintText: 'Enter email address',
+                  // labelText: 'Email',
+                  labelText: lang.S.of(context).lableEmail,
+                  // hintText: 'Enter email address',
+                  hintText: lang.S.of(context).hintEmail,
                 ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Email can\'t be empty';
+                    //return 'Email can\'t be empty';
+                    return lang.S.of(context).emailCannotBeEmpty;
                   } else if (!value.contains('@')) {
-                    return 'Please enter a valid email';
+                   // return 'Please enter a valid email';
+                    return lang.S.of(context).pleaseEnterAValidEmail;
                   }
                   return null;
                 },
@@ -102,7 +109,9 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                     }
                   }
                 },
-                text: 'Continue',
+                text:
+               lang.S.of(context).continueE,
+                //'Continue',
               ),
             ],
           ),

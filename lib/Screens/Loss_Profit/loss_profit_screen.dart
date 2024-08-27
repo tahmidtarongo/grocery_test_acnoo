@@ -9,13 +9,10 @@ import 'package:mobile_pos/Screens/Loss_Profit/single_loss_profit_screen.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:mobile_pos/model/print_transaction_model.dart';
 import 'package:nb_utils/nb_utils.dart';
-
 import '../../../Provider/profile_provider.dart';
 import '../../../constant.dart';
 import '../../currency.dart';
 import '../Home/home.dart';
-import '../Home/home_screen.dart';
-
 class LossProfitScreen extends StatefulWidget {
   const LossProfitScreen({Key? key, this.fromReport}) : super(key: key);
   final bool? fromReport;
@@ -339,7 +336,7 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                                                                                                     isConnect
                                                                                                         // ignore: use_build_context_synchronously
                                                                                                         ? finish(context)
-                                                                                                        : toast('Try Again');
+                                                                                                        : toast(lang.S.of(context).tryAgain);
                                                                                                   },
                                                                                                   title: Text('${printerData.availableBluetoothDevices[index]}'),
                                                                                                   subtitle: Text(lang.S.of(context).clickToConnect),
@@ -380,7 +377,10 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                                                                         color: Colors.grey,
                                                                       )),
                                                                   IconButton(
-                                                                      onPressed: () => toast('Coming Soon'),
+                                                                      onPressed: () => toast(
+                                                                        lang.S.of(context).comingSoon,
+                                                                          //'Coming Soon'
+                                                                      ),
                                                                       icon: const Icon(
                                                                         FeatherIcons.share,
                                                                         color: Colors.grey,
@@ -390,7 +390,11 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                                                             }, error: (e, stack) {
                                                               return Text(e.toString());
                                                             }, loading: () {
-                                                              return const Text('Loading');
+                                                              //return const Text('Loading');
+                                                              return  Text(
+                                                                lang.S.of(context).loading,
+                                                                  //'Loading'
+                                                              );
                                                             }),
                                                           ],
                                                         ),
@@ -410,9 +414,11 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                                   ),
                                 ],
                               )
-                            : const Padding(
-                                padding: EdgeInsets.only(top: 60),
-                                child: Text("Please make a sale first"),
+                            :  Padding(
+                                padding: const EdgeInsets.only(top: 60),
+                                child: Text(lang.S.of(context).pleaseMakeASaleFirst,
+                                    //"Please make a sale first"
+                                ),
                               );
                       }, error: (e, stack) {
                         return Text(e.toString());

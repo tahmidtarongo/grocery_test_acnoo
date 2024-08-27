@@ -79,15 +79,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 const SizedBox(
                   height: 20,
                 ),
-                const Text(
-                  'End your Free plan',
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600, color: kTitleColor),
+                 Text(
+                  lang.S.of(context).endYourFreePlan,
+                 // 'End your Free plan',
+                  style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w600, color: kTitleColor),
                 ),
                 const SizedBox(
                   height: 10,
                 ),
                 Text(
-                  'Your Free Package is almost done, buy your next plan Thanks.',
+                  lang.S.of(context).yourFree,
+                 // 'Your Free Package is almost done, buy your next plan Thanks.',
                   style: gTextStyle.copyWith(color: kGreyTextColor),
                   textAlign: TextAlign.center,
                 ),
@@ -95,7 +97,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: 20,
                 ),
                 UpdateButton(
-                    text: 'Upgrade Now',
+                    text: lang.S.of(context).upgradeNow,
+                    //'Upgrade Now',
                     onpressed: () {
                       Navigator.push(context, MaterialPageRoute(builder: (context) => const PackageScreen()));
                     }),
@@ -290,7 +293,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             Row(
                               children: [
                                 Text(
-                                  'Today’s Summary',
+                                 lang.S.of(context).todaySummary,
+                                  //'Today’s Summary',
                                   style: gTextStyle.copyWith(fontWeight: FontWeight.bold, color: kWhite, fontSize: 18),
                                 ),
                                 const Spacer(),
@@ -298,8 +302,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                     onTap: () {
                                       Navigator.push(context, MaterialPageRoute(builder: (context) => const DashboardScreen()));
                                     },
-                                    child: const Text(
-                                      'Sell All >',
+                                    child: Text(
+                                      lang.S.of(context).sellAll,
+                                      //'Sell All >',
                                       style: TextStyle(color: kWhite, fontWeight: FontWeight.w500),
                                     )),
                               ],
@@ -313,18 +318,20 @@ class _HomeScreenState extends State<HomeScreen> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      'Sales',
+                                      lang.S.of(context).sales,
+                                      //'Sales',
                                       style: gTextStyle.copyWith(color: kWhite),
                                     ),
                                     Text(
                                       '$currency ${summary.data?.sales ?? 0}',
                                       style: gTextStyle.copyWith(color: kWhite, fontWeight: FontWeight.bold),
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 10,
                                     ),
                                     Text(
-                                      'Income',
+                                      lang.S.of(context).income,
+                                      //'Income',
                                       style: gTextStyle.copyWith(color: kWhite),
                                     ),
                                     Text(
@@ -338,7 +345,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      'Purchased',
+                                      lang.S.of(context).purchased,
+                                     // 'Purchased',
                                       style: gTextStyle.copyWith(color: kWhite),
                                     ),
                                     Text(
@@ -349,7 +357,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                       height: 10,
                                     ),
                                     Text(
-                                      'Expense',
+                                      //'Expense',
+                                      lang.S.of(context).expense,
                                       style: gTextStyle.copyWith(color: kWhite),
                                     ),
                                     Text(
@@ -376,7 +385,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             Row(
                               children: [
                                 Text(
-                                  'Today’s Summary',
+                                  lang.S.of(context).todaySummary,
+                                  //'Today’s Summary',
                                   style: gTextStyle.copyWith(fontWeight: FontWeight.bold, color: kWhite, fontSize: 18),
                                 ),
                                 const Spacer(),
@@ -384,8 +394,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                     onTap: () {
                                       Navigator.push(context, MaterialPageRoute(builder: (context) => const DashboardScreen()));
                                     },
-                                    child: const Text(
-                                      'Sell All >',
+                                    child:  Text(
+                                      lang.S.of(context).sellAll,
+                                      //'Sell All >',
                                       style: TextStyle(color: kWhite, fontWeight: FontWeight.w500),
                                     )),
                               ],
@@ -399,22 +410,26 @@ class _HomeScreenState extends State<HomeScreen> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      'Sales',
+                                      lang.S.of(context).sales,
+                                      //'Sales',
                                       style: gTextStyle.copyWith(color: kWhite),
                                     ),
                                     Text(
-                                      'Not Found',
+                                      lang.S.of(context).notFound,
+                                     // 'Not Found',
                                       style: gTextStyle.copyWith(color: kWhite, fontWeight: FontWeight.bold),
                                     ),
                                     SizedBox(
                                       height: 10,
                                     ),
                                     Text(
-                                      'Income',
+                                      lang.S.of(context).income,
+                                     // 'Income',
                                       style: gTextStyle.copyWith(color: kWhite),
                                     ),
                                     Text(
-                                      'Not Found',
+                                      lang.S.of(context).notFound,
+                                      //'Not Found',
                                       style: gTextStyle.copyWith(color: kWhite, fontWeight: FontWeight.bold),
                                     ),
                                   ],
@@ -424,22 +439,26 @@ class _HomeScreenState extends State<HomeScreen> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      'Purchased',
+                                      lang.S.of(context).purchased,
+                                     // 'Purchased',
                                       style: gTextStyle.copyWith(color: kWhite),
                                     ),
                                     Text(
-                                      'Not Found',
+                                      lang.S.of(context).notFound,
+                                      //'Not Found',
                                       style: gTextStyle.copyWith(color: kWhite, fontWeight: FontWeight.bold),
                                     ),
                                     const SizedBox(
                                       height: 10,
                                     ),
                                     Text(
-                                      'Expense',
+                                      lang.S.of(context).expense,
+                                      //'Expense',
                                       style: gTextStyle.copyWith(color: kWhite),
                                     ),
                                     Text(
-                                      'Not Found',
+                                      lang.S.of(context).notFound,
+                                      //'Not Found',
                                       style: gTextStyle.copyWith(color: kWhite, fontWeight: FontWeight.bold),
                                     ),
                                   ],
@@ -462,7 +481,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             Row(
                               children: [
                                 Text(
-                                  'Today’s Summary',
+                                  lang.S.of(context).todaySummary,
+                                 // 'Today’s Summary',
                                   style: gTextStyle.copyWith(fontWeight: FontWeight.bold, color: kWhite, fontSize: 18),
                                 ),
                                 const Spacer(),
@@ -470,9 +490,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                     onTap: () {
                                       Navigator.push(context, MaterialPageRoute(builder: (context) => const DashboardScreen()));
                                     },
-                                    child: const Text(
-                                      'Sell All >',
-                                      style: TextStyle(color: kWhite, fontWeight: FontWeight.w500),
+                                    child:  Text(
+                                      lang.S.of(context).sellAll,
+                                      //'Sell All >',
+                                      style: const TextStyle(color: kWhite, fontWeight: FontWeight.w500),
                                     )),
                               ],
                             ),
@@ -485,22 +506,26 @@ class _HomeScreenState extends State<HomeScreen> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      'Sales',
+                                      lang.S.of(context).sales,
+                                     // 'Sales',
                                       style: gTextStyle.copyWith(color: kWhite),
                                     ),
                                     Text(
-                                      'Loading',
+                                      lang.S.of(context).loading,
+                                     // 'Loading',
                                       style: gTextStyle.copyWith(color: kWhite, fontWeight: FontWeight.bold),
                                     ),
                                     SizedBox(
                                       height: 10,
                                     ),
                                     Text(
-                                      'Income',
+                                      lang.S.of(context).income,
+                                      //'Income',
                                       style: gTextStyle.copyWith(color: kWhite),
                                     ),
                                     Text(
-                                      'Loading',
+                                      lang.S.of(context).loading,
+                                      //'Loading',
                                       style: gTextStyle.copyWith(color: kWhite, fontWeight: FontWeight.bold),
                                     ),
                                   ],
@@ -510,22 +535,26 @@ class _HomeScreenState extends State<HomeScreen> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      'Purchased',
+                                      lang.S.of(context).purchased,
+                                      //'Purchased',
                                       style: gTextStyle.copyWith(color: kWhite),
                                     ),
                                     Text(
-                                      'Loading',
+                                      lang.S.of(context).loading,
+                                      //'Loading',
                                       style: gTextStyle.copyWith(color: kWhite, fontWeight: FontWeight.bold),
                                     ),
                                     const SizedBox(
                                       height: 10,
                                     ),
                                     Text(
-                                      'Expense',
+                                      lang.S.of(context).expense,
+                                      //'Expense',
                                       style: gTextStyle.copyWith(color: kWhite),
                                     ),
                                     Text(
-                                      'Loading',
+                                      lang.S.of(context).loading,
+                                      //'Loading',
                                       style: gTextStyle.copyWith(color: kWhite, fontWeight: FontWeight.bold),
                                     ),
                                   ],
@@ -572,7 +601,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                     style: gTextStyle.copyWith(color: kGreyTextColor, fontWeight: FontWeight.w400))
                               ])),
                           subtitle: Text(
-                            'Update your subscription',
+                            lang.S.of(context).updateYourSubscription,
+                            //'Update your subscription',
                             style: gTextStyle.copyWith(color: kGreyTextColor, fontSize: 14),
                           ),
                           trailing: const Icon(
@@ -717,8 +747,11 @@ class _HomeScreenState extends State<HomeScreen> {
                           height: 150,
                           width: 320,
                           color: Colors.grey.shade200,
-                          child: const Center(
-                            child: Text('No Data Found'),
+                          child:  Center(
+                            child: Text(
+                              lang.S.of(context).noDataFound,
+                                //'No Data Found'
+                            ),
                           ),
                           // decoration: const BoxDecoration(image: DecorationImage(image: AssetImage('images/banner1.png'))),
                         ),
