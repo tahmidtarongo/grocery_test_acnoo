@@ -4369,6 +4369,276 @@ class S {
       args: [],
     );
   }
+
+  /// `This Product Already added!`
+  String get thisProductAlreadyAdded {
+    return Intl.message(
+      'This Product Already added!',
+      name: 'thisProductAlreadyAdded',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid product Name`
+  String get pleaseEnterAValidProductName {
+    return Intl.message(
+      'Please enter a valid product Name',
+      name: 'pleaseEnterAValidProductName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter product Name`
+  String get enterProductName {
+    return Intl.message(
+      'Enter product Name',
+      name: 'enterProductName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please select a category`
+  String get pleaseSelectACategory {
+    return Intl.message(
+      'Please select a category',
+      name: 'pleaseSelectACategory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product Category`
+  String get productCategory {
+    return Intl.message(
+      'Product Category',
+      name: 'productCategory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Product Category`
+  String get selectProductCategory {
+    return Intl.message(
+      'Select Product Category',
+      name: 'selectProductCategory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Size`
+  String get enterSize {
+    return Intl.message(
+      'Enter Size',
+      name: 'enterSize',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter color`
+  String get enterColor {
+    return Intl.message(
+      'Enter color',
+      name: 'enterColor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter weight`
+  String get enterWeight {
+    return Intl.message(
+      'Enter weight',
+      name: 'enterWeight',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Capacity`
+  String get enterCapacity {
+    return Intl.message(
+      'Enter Capacity',
+      name: 'enterCapacity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Type`
+  String get enterType {
+    return Intl.message(
+      'Enter Type',
+      name: 'enterType',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product Brand`
+  String get productBrand {
+    return Intl.message(
+      'Product Brand',
+      name: 'productBrand',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select a brand`
+  String get selectABrand {
+    return Intl.message(
+      'Select a brand',
+      name: 'selectABrand',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `product code is required`
+  String get productCodeIsRequired {
+    return Intl.message(
+      'product code is required',
+      name: 'productCodeIsRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter a valid stock`
+  String get enterAValidStock {
+    return Intl.message(
+      'Enter a valid stock',
+      name: 'enterAValidStock',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter stock`
+  String get enterStock {
+    return Intl.message(
+      'Enter stock',
+      name: 'enterStock',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product Unit`
+  String get productUnit {
+    return Intl.message(
+      'Product Unit',
+      name: 'productUnit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Product Unit`
+  String get selectProductUnit {
+    return Intl.message(
+      'Select Product Unit',
+      name: 'selectProductUnit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid purchase price`
+  String get pleaseEnterAValidPurchasePrice {
+    return Intl.message(
+      'Please enter a valid purchase price',
+      name: 'pleaseEnterAValidPurchasePrice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Purchase price`
+  String get enterPurchasePrice {
+    return Intl.message(
+      'Enter Purchase price',
+      name: 'enterPurchasePrice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid Sale price`
+  String get pleaseEnterAValidSalePrice {
+    return Intl.message(
+      'Please enter a valid Sale price',
+      name: 'pleaseEnterAValidSalePrice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Salting price`
+  String get enterSaltingPrice {
+    return Intl.message(
+      'Enter Salting price',
+      name: 'enterSaltingPrice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter wholesale price`
+  String get enterWholesalePrice {
+    return Intl.message(
+      'Enter wholesale price',
+      name: 'enterWholesalePrice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter dealer price`
+  String get enterDealerPrice {
+    return Intl.message(
+      'Enter dealer price',
+      name: 'enterDealerPrice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter discount`
+  String get enterDiscount {
+    return Intl.message(
+      'Enter discount',
+      name: 'enterDiscount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter manufacturer name`
+  String get enterManufacturerName {
+    return Intl.message(
+      'Enter manufacturer name',
+      name: 'enterManufacturerName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Adding..`
+  String get adding {
+    return Intl.message(
+      'Adding..',
+      name: 'adding',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

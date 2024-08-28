@@ -53,6 +53,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("Add Unit"),
         "addUserRole": MessageLookupByLibrary.simpleMessage("Add User Role"),
         "addedToCart": MessageLookupByLibrary.simpleMessage("Added To Cart"),
+        "adding": MessageLookupByLibrary.simpleMessage("Adding.."),
         "address": MessageLookupByLibrary.simpleMessage("Address"),
         "all": MessageLookupByLibrary.simpleMessage("All"),
         "allBusinessSolutions":
@@ -194,13 +195,20 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter a brand name"),
         "enterAValidDiscount":
             MessageLookupByLibrary.simpleMessage("Enter a valid Discount"),
+        "enterAValidStock":
+            MessageLookupByLibrary.simpleMessage("Enter a valid stock"),
         "enterAmount": MessageLookupByLibrary.simpleMessage("Enter Amount"),
         "enterBusiness":
             MessageLookupByLibrary.simpleMessage("Enter Business/Store Name"),
+        "enterCapacity": MessageLookupByLibrary.simpleMessage("Enter Capacity"),
         "enterCategoryName":
             MessageLookupByLibrary.simpleMessage("Enter category name"),
+        "enterColor": MessageLookupByLibrary.simpleMessage("Enter color"),
         "enterCustomerPhoneNumber":
             MessageLookupByLibrary.simpleMessage("Enter customer phone number"),
+        "enterDealerPrice":
+            MessageLookupByLibrary.simpleMessage("Enter dealer price"),
+        "enterDiscount": MessageLookupByLibrary.simpleMessage("Enter discount"),
         "enterEmail": MessageLookupByLibrary.simpleMessage(
             "Please enter your email address below to receive password Reset Link."),
         "enterExpanseCategoryName":
@@ -209,17 +217,31 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter expense date"),
         "enterFullAddress":
             MessageLookupByLibrary.simpleMessage("Enter Full Address"),
+        "enterManufacturerName":
+            MessageLookupByLibrary.simpleMessage("Enter manufacturer name"),
         "enterName": MessageLookupByLibrary.simpleMessage("Enter Name"),
         "enterNote": MessageLookupByLibrary.simpleMessage("Enter Note"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("Enter opening balance"),
+        "enterProductName":
+            MessageLookupByLibrary.simpleMessage("Enter product Name"),
+        "enterPurchasePrice":
+            MessageLookupByLibrary.simpleMessage("Enter Purchase price"),
         "enterQuantity": MessageLookupByLibrary.simpleMessage("Enter quantity"),
         "enterRefNumber":
             MessageLookupByLibrary.simpleMessage("Enter reference number"),
+        "enterSaltingPrice":
+            MessageLookupByLibrary.simpleMessage("Enter Salting price"),
+        "enterSize": MessageLookupByLibrary.simpleMessage("Enter Size"),
+        "enterStock": MessageLookupByLibrary.simpleMessage("Enter stock"),
+        "enterType": MessageLookupByLibrary.simpleMessage("Enter Type"),
         "enterUserTitle":
             MessageLookupByLibrary.simpleMessage("Enter User Title"),
         "enterValidOTP":
             MessageLookupByLibrary.simpleMessage("Enter valid OTP"),
+        "enterWeight": MessageLookupByLibrary.simpleMessage("Enter weight"),
+        "enterWholesalePrice":
+            MessageLookupByLibrary.simpleMessage("Enter wholesale price"),
         "enterYourEmailAddress":
             MessageLookupByLibrary.simpleMessage("Enter your email address"),
         "enterYourFullName":
@@ -391,6 +413,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please enter a valid Name"),
         "pleaseEnterAValidPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Please enter a valid phone number"),
+        "pleaseEnterAValidProductName": MessageLookupByLibrary.simpleMessage(
+            "Please enter a valid product Name"),
+        "pleaseEnterAValidPurchasePrice": MessageLookupByLibrary.simpleMessage(
+            "Please enter a valid purchase price"),
+        "pleaseEnterAValidSalePrice": MessageLookupByLibrary.simpleMessage(
+            "Please enter a valid Sale price"),
         "pleaseEnterAmount":
             MessageLookupByLibrary.simpleMessage("Please Enter Amount"),
         "pleaseEnterName":
@@ -402,6 +430,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please enter your details."),
         "pleaseMakeASaleFirst":
             MessageLookupByLibrary.simpleMessage("Please make a sale first"),
+        "pleaseSelectACategory":
+            MessageLookupByLibrary.simpleMessage("Please select a category"),
         "pleaseSelectAExpenseCategory": MessageLookupByLibrary.simpleMessage(
             "Please select a expense category"),
         "powerdedByAcnoo":
@@ -413,9 +443,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "print": MessageLookupByLibrary.simpleMessage("Print"),
         "printing": MessageLookupByLibrary.simpleMessage("Printing Option"),
         "product": MessageLookupByLibrary.simpleMessage("Product"),
+        "productBrand": MessageLookupByLibrary.simpleMessage("Product Brand"),
+        "productCategory":
+            MessageLookupByLibrary.simpleMessage("Product Category"),
         "productCode": MessageLookupByLibrary.simpleMessage("Product Code"),
+        "productCodeIsRequired":
+            MessageLookupByLibrary.simpleMessage("product code is required"),
         "productList": MessageLookupByLibrary.simpleMessage("Product List"),
         "productName": MessageLookupByLibrary.simpleMessage("Product name"),
+        "productUnit": MessageLookupByLibrary.simpleMessage("Product Unit"),
         "products": MessageLookupByLibrary.simpleMessage("Products"),
         "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "profileEdit": MessageLookupByLibrary.simpleMessage("Profile Edit"),
@@ -478,6 +514,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "seeAllPromoCode":
             MessageLookupByLibrary.simpleMessage("See all promo code"),
         "select": MessageLookupByLibrary.simpleMessage("Select"),
+        "selectABrand": MessageLookupByLibrary.simpleMessage("Select a brand"),
         "selectAInvoice":
             MessageLookupByLibrary.simpleMessage("Select a invoice"),
         "selectBusinessCategory":
@@ -486,6 +523,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Select Category"),
         "selectLang":
             MessageLookupByLibrary.simpleMessage("Select Your Language"),
+        "selectProductCategory":
+            MessageLookupByLibrary.simpleMessage("Select Product Category"),
+        "selectProductUnit":
+            MessageLookupByLibrary.simpleMessage("Select Product Unit"),
         "selectVariations":
             MessageLookupByLibrary.simpleMessage("Select variations : "),
         "sellAll": MessageLookupByLibrary.simpleMessage("Sell All >"),
@@ -541,6 +582,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Thak you for your purchase"),
         "thankYouForYourDuePayment": MessageLookupByLibrary.simpleMessage(
             "Thank you for your due payment"),
+        "thisProductAlreadyAdded":
+            MessageLookupByLibrary.simpleMessage("This Product Already added!"),
         "toDate": MessageLookupByLibrary.simpleMessage("To Date"),
         "todaySummary": MessageLookupByLibrary.simpleMessage("Today’s Summary"),
         "total": MessageLookupByLibrary.simpleMessage("Total"),

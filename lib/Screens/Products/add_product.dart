@@ -22,7 +22,6 @@ import 'package:nb_utils/nb_utils.dart';
 
 import '../../constant.dart';
 import '../Home/home.dart';
-import '../Home/home_screen.dart';
 import 'Model/category_model.dart';
 
 // ignore: must_be_immutable
@@ -77,11 +76,15 @@ class _AddProductState extends State<AddProduct> {
     try {
       barcodeScanRes = await FlutterBarcodeScanner.scanBarcode('#ff6666', 'Cancel', true, ScanMode.BARCODE);
     } on PlatformException {
-      barcodeScanRes = 'Failed to get platform version.';
+      barcodeScanRes =lang.S.of(context).failedToGetPlatformVersion;
+      //'Failed to get platform version.';
     }
     if (!mounted) return;
     if (codeList.contains(barcodeScanRes)) {
-      EasyLoading.showError('This Product Already added!');
+      EasyLoading.showError(
+        lang.S.of(context).thisProductAlreadyAdded,
+         // 'This Product Already added!'
+      );
     } else {
       if (barcodeScanRes != '-1') {
         setState(() {
@@ -127,7 +130,8 @@ class _AddProductState extends State<AddProduct> {
                       controller: nameController,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                          return 'Please enter a valid product Name';
+                         // return 'Please enter a valid product Name';
+                          return lang.S.of(context).pleaseEnterAValidProductName;
                         }
                         // You can add more validation logic as needed
                         return null;
@@ -135,7 +139,8 @@ class _AddProductState extends State<AddProduct> {
                       decoration: kInputDecoration.copyWith(
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         labelText: lang.S.of(context).productName,
-                        hintText: 'Enter product Name',
+                        //hintText: 'Enter product Name',
+                        hintText: lang.S.of(context).enterProductName,
                         border: const OutlineInputBorder(),
                       ),
                     ),
@@ -149,7 +154,8 @@ class _AddProductState extends State<AddProduct> {
                       controller: categoryController,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                          return 'Please select a category';
+                          //return 'Please select a category';
+                          return lang.S.of(context).pleaseSelectACategory;
                         }
                         return null;
                       },
@@ -163,8 +169,10 @@ class _AddProductState extends State<AddProduct> {
                       decoration: kInputDecoration.copyWith(
                         suffixIcon: Icon(Icons.keyboard_arrow_down),
                         floatingLabelBehavior: FloatingLabelBehavior.always,
-                        labelText: 'Product Category',
-                        hintText: 'Select Product Category',
+                        //labelText: 'Product Category',
+                        labelText: lang.S.of(context).productCategory,
+                        //hintText: 'Select Product Category',
+                        hintText: lang.S.of(context).selectProductCategory,
                         border: OutlineInputBorder(),
                       ),
                     ),
@@ -182,12 +190,13 @@ class _AddProductState extends State<AddProduct> {
                             decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).size,
-                              hintText: 'Enter Size',
+                              //hintText: 'Enter Size',
+                              hintText: lang.S.of(context).enterSize,
                               border: const OutlineInputBorder(),
                             ),
                           ),
                         ),
-                      ).visible(data.variations.contains('Size')),
+                      ).visible(data.variations.contains(lang.S.of(context).size)),
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.all(10.0),
@@ -196,12 +205,13 @@ class _AddProductState extends State<AddProduct> {
                             decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).color,
-                              hintText: 'Enter color',
+                              //hintText: 'Enter color',
+                              hintText: lang.S.of(context).enterColor,
                               border: const OutlineInputBorder(),
                             ),
                           ),
                         ),
-                      ).visible(data.variations.contains('Color')),
+                      ).visible(data.variations.contains(lang.S.of(context).color)),
                     ],
                   ),
 
@@ -216,12 +226,13 @@ class _AddProductState extends State<AddProduct> {
                             decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).weight,
-                              hintText: 'Enter weight',
+                              //hintText: 'Enter weight',
+                              hintText: lang.S.of(context).enterWeight,
                               border: const OutlineInputBorder(),
                             ),
                           ),
                         ),
-                      ).visible(data.variations.contains('Weight')),
+                      ).visible(data.variations.contains(lang.S.of(context).weight)),
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.all(10.0),
@@ -230,12 +241,13 @@ class _AddProductState extends State<AddProduct> {
                             decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).capacity,
-                              hintText: 'Enter Capacity',
+                              //hintText: 'Enter Capacity',
+                              hintText: lang.S.of(context).enterCapacity,
                               border: const OutlineInputBorder(),
                             ),
                           ),
                         ),
-                      ).visible(data.variations.contains('Capacity')),
+                      ).visible(data.variations.contains(lang.S.of(context).capacity)),
                     ],
                   ),
 
@@ -247,11 +259,12 @@ class _AddProductState extends State<AddProduct> {
                       decoration: kInputDecoration.copyWith(
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         labelText: lang.S.of(context).type,
-                        hintText: 'Enter Type',
+                       // hintText: 'Enter Type',
+                        hintText: lang.S.of(context).enterType,
                         border: const OutlineInputBorder(),
                       ),
                     ),
-                  ).visible(data.variations.contains('Type')),
+                  ).visible(data.variations.contains(lang.S.of(context).type)),
 
                   ///_______Brand__________________________________
                   Padding(
@@ -271,9 +284,11 @@ class _AddProductState extends State<AddProduct> {
                       decoration: kInputDecoration.copyWith(
                         suffixIcon: Icon(Icons.keyboard_arrow_down),
                         floatingLabelBehavior: FloatingLabelBehavior.always,
-                        labelText: 'Product Brand',
-                        hintText: 'Select a brand',
-                        border: OutlineInputBorder(),
+                       // labelText: 'Product Brand',
+                        labelText: lang.S.of(context).productBrand,
+                       // hintText: 'Select a brand',
+                        hintText: lang.S.of(context).selectABrand,
+                        border: const OutlineInputBorder(),
                       ),
                     ),
                   ),
@@ -289,7 +304,8 @@ class _AddProductState extends State<AddProduct> {
                             controller: productCodeController,
                             validator: (value) {
                               if (value == null || value.isEmpty) {
-                                return 'product code is required';
+                                //return 'product code is required';
+                                return lang.S.of(context).productCodeIsRequired;
                               }
                               return null;
                             },
@@ -301,7 +317,10 @@ class _AddProductState extends State<AddProduct> {
                             },
                             onFieldSubmitted: (value) {
                               if (codeList.contains(value)) {
-                                EasyLoading.showError('This Product Already added!');
+                                EasyLoading.showError(
+                                  lang.S.of(context).thisProductAlreadyAdded,
+                                   // 'This Product Already added!'
+                                );
                                 productCodeController.clear();
                               } else {
                                 setState(() {
@@ -353,7 +372,8 @@ class _AddProductState extends State<AddProduct> {
                             controller: productStockController,
                             validator: (value) {
                               if (value == null || value.isEmpty) {
-                                return 'Enter a valid stock';
+                                //return 'Enter a valid stock';
+                                return lang.S.of(context).enterAValidStock;
                               }
                               return null;
                             },
@@ -362,7 +382,8 @@ class _AddProductState extends State<AddProduct> {
                             decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).stock,
-                              hintText: 'Enter stock',
+                             // hintText: 'Enter stock',
+                              hintText:lang.S.of(context).enterStock,
                               border: const OutlineInputBorder(),
                             ),
                           ),
@@ -386,9 +407,11 @@ class _AddProductState extends State<AddProduct> {
                             decoration: kInputDecoration.copyWith(
                               suffixIcon: Icon(Icons.keyboard_arrow_down),
                               floatingLabelBehavior: FloatingLabelBehavior.always,
-                              labelText: 'Product Unit',
-                              hintText: 'Select Product Unit',
-                              border: OutlineInputBorder(),
+                              //labelText: 'Product Unit',
+                              labelText: lang.S.of(context).productUnit,
+                             // hintText: 'Select Product Unit',
+                              hintText: lang.S.of(context).selectProductUnit,
+                              border: const OutlineInputBorder(),
                             ),
                           ),
                         ),
@@ -406,7 +429,8 @@ class _AddProductState extends State<AddProduct> {
                             controller: purchasePriceController,
                             validator: (value) {
                               if (value == null || value.isEmpty) {
-                                return 'Please enter a valid purchase price';
+                                //return 'Please enter a valid purchase price';
+                                return lang.S.of(context).pleaseEnterAValidProductName;
                               }
                               // You can add more validation logic as needed
                               return null;
@@ -416,7 +440,8 @@ class _AddProductState extends State<AddProduct> {
                             decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).purchasePrice,
-                              hintText: 'Enter Purchase price',
+                             // hintText: 'Enter Purchase price',
+                              hintText: lang.S.of(context).enterPurchasePrice,
                               border: const OutlineInputBorder(),
                             ),
                           ),
@@ -429,7 +454,8 @@ class _AddProductState extends State<AddProduct> {
                             controller: salePriceController,
                             validator: (value) {
                               if (value == null || value.isEmpty) {
-                                return 'Please enter a valid Sale price';
+                                //return 'Please enter a valid Sale price';
+                                return lang.S.of(context).pleaseEnterAValidSalePrice;
                               }
                               // You can add more validation logic as needed
                               return null;
@@ -439,7 +465,8 @@ class _AddProductState extends State<AddProduct> {
                             decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).mrp,
-                              hintText: 'Enter Salting price',
+                              //hintText: 'Enter Salting price',
+                              hintText: lang.S.of(context).enterSaltingPrice,
                               border: const OutlineInputBorder(),
                             ),
                           ),
@@ -461,7 +488,8 @@ class _AddProductState extends State<AddProduct> {
                             decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).wholeSalePrice,
-                              hintText: 'Enter wholesale price',
+                              //hintText: 'Enter wholesale price',
+                              hintText: lang.S.of(context).enterWholesalePrice,
                               border: const OutlineInputBorder(),
                             ),
                           ),
@@ -477,7 +505,8 @@ class _AddProductState extends State<AddProduct> {
                             decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).dealerPrice,
-                              hintText: 'Enter dealer price',
+                              //hintText: 'Enter dealer price',
+                              hintText: lang.S.of(context).enterDealerPrice,
                               border: const OutlineInputBorder(),
                             ),
                           ),
@@ -497,7 +526,8 @@ class _AddProductState extends State<AddProduct> {
                           decoration: kInputDecoration.copyWith(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             labelText: lang.S.of(context).discount,
-                            hintText: 'Enter discount',
+                            //hintText: 'Enter discount',
+                            hintText: lang.S.of(context).enterDiscount,
                             border: const OutlineInputBorder(),
                           ),
                         ),
@@ -510,7 +540,8 @@ class _AddProductState extends State<AddProduct> {
                             decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).manufacturer,
-                              hintText: 'Enter manufacturer name',
+                              //hintText: 'Enter manufacturer name',
+                              hintText: lang.S.of(context).enterManufacturerName,
                               border: const OutlineInputBorder(),
                             ),
                           ),
@@ -666,7 +697,10 @@ class _AddProductState extends State<AddProduct> {
                         bool result = await InternetConnectionChecker().hasConnection;
                         if (result) {
                           ProductRepo product = ProductRepo();
-                          EasyLoading.show(status: 'Adding..');
+                          EasyLoading.show(status:
+                          lang.S.of(context).adding,
+                          //'Adding..'
+                          );
                           await product.addProduct(
                             ref: ref,
                             context: context,
@@ -691,7 +725,10 @@ class _AddProductState extends State<AddProduct> {
                           );
                         } else {
                           try {
-                            EasyLoading.show(status: 'Loading...', dismissOnTap: false);
+                            EasyLoading.show(status:
+                                lang.S.of(context).loading,
+                           // 'Loading...',
+                                dismissOnTap: false);
                             Future.delayed(const Duration(milliseconds: 100), () {
                               const Home().launch(context, isNewTask: true);
                             });
