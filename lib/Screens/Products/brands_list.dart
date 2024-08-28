@@ -161,9 +161,12 @@ class _BrandsListState extends State<BrandsList> {
                                   )
                                 : Container();
                           })
-                      : const Padding(
+                      :  Padding(
                           padding: EdgeInsets.all(20.0),
-                          child: Text('No Data Found'),
+                          child: Text(
+                            lang.S.of(context).noDataFound,
+                              //'No Data Found'
+                          ),
                         );
                 }, error: (_, __) {
                   return Container();

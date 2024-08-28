@@ -4,7 +4,7 @@ import 'package:iconly/iconly.dart';
 import 'package:mobile_pos/Screens/Products/update_product.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:mobile_pos/currency.dart';
-
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 class ProductDetails extends StatefulWidget {
   const ProductDetails({
     Key? key,
@@ -23,7 +23,8 @@ class _ProductDetailsState extends State<ProductDetails> {
         backgroundColor: kWhite,
         surfaceTintColor: kWhite,
         title: Text(
-          'Product Details',
+         //lang.S.of(context).productDetails,
+         'Product Details',
           style: GoogleFonts.poppins(
             color: kTitleColor,
           ),
@@ -43,7 +44,8 @@ class _ProductDetailsState extends State<ProductDetails> {
                       size: 18,
                     ),
                     Text(
-                      'Edit',
+                      lang.S.of(context).edit,
+                     // 'Edit',
                       style: gTextStyle.copyWith(fontSize: 13, color: kMainColor),
                     )
                   ],
@@ -80,6 +82,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
+                         // lang.S.of(context).
                           'Smart watch',
                           style: gTextStyle.copyWith(fontWeight: FontWeight.bold, color: kTitleColor, fontSize: 20),
                         ),
@@ -100,16 +103,28 @@ class _ProductDetailsState extends State<ProductDetails> {
                   height: 20,
                 ),
                 Text(
+                 // lang.S.of(context).det
                   'Details',
                   style: gTextStyle.copyWith(fontWeight: FontWeight.bold, color: kTitleColor),
                 ),
                 SizedBox(
                   height: 10,
                 ),
+
+
+
+
+
                 Text(
+                  //lang.S.of(context).loremIpsumDolor,
                   'Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.',
                   style: gTextStyle.copyWith(color: kGreyTextColor),
                 ),
+
+
+
+
+
                 SizedBox(
                   height: 20,
                 ),
@@ -126,7 +141,8 @@ class _ProductDetailsState extends State<ProductDetails> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Sale Price',
+                              lang.S.of(context).salePrice,
+                              //'Sale Price',
                               style: gTextStyle.copyWith(
                                 color: kTitleColor,
                                 fontSize: 16,
@@ -140,7 +156,8 @@ class _ProductDetailsState extends State<ProductDetails> {
                               height: 20,
                             ),
                             Text(
-                              'Wholesale price',
+                              lang.S.of(context).wholeSalePrice,
+                            //  'Wholesale price',
                               style: gTextStyle.copyWith(color: kTitleColor, fontSize: 16),
                             ),
                             Text(
@@ -161,7 +178,8 @@ class _ProductDetailsState extends State<ProductDetails> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Stock',
+                              lang.S.of(context).stock,
+                              //'Stock',
                               style: gTextStyle.copyWith(
                                 color: kTitleColor,
                                 fontSize: 16,
@@ -175,7 +193,8 @@ class _ProductDetailsState extends State<ProductDetails> {
                               height: 20,
                             ),
                             Text(
-                              'Dealer price',
+                              lang.S.of(context).dealerPrice,
+                              //'Dealer price',
                               style: gTextStyle.copyWith(color: kTitleColor, fontSize: 16),
                             ),
                             Text(

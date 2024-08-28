@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Screens/Products/Model/category_model.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:nb_utils/nb_utils.dart';
-
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import '../../GlobalComponents/button_global.dart';
 import 'Providers/category,brans,units_provide.dart';
 import 'Repo/category_repo.dart';
@@ -32,7 +32,8 @@ class _CategoryListState extends State<CategoryList> {
       backgroundColor: kWhite,
       appBar: AppBar(
         title: Text(
-          'Categories',
+          lang.S.of(context).categories,
+          //'Categories',
           style: GoogleFonts.poppins(
             color: Colors.black,
             fontSize: 20.0,
@@ -56,8 +57,9 @@ class _CategoryListState extends State<CategoryList> {
                     child: AppTextField(
                       textFieldType: TextFieldType.NAME,
                       decoration: InputDecoration(
-                        border: const OutlineInputBorder(),
-                        hintText: 'Search',
+                        border:  const OutlineInputBorder(),
+                        //hintText: 'Search',
+                        hintText: lang.S.of(context).search,
                         prefixIcon: Icon(
                           Icons.search,
                           color: kGreyTextColor.withOpacity(0.5),
@@ -177,9 +179,12 @@ class _CategoryListState extends State<CategoryList> {
                                     )
                                   : Container();
                             })
-                        : const Padding(
-                            padding: EdgeInsets.all(20.0),
-                            child: Text('No Data Found'),
+                        :  Padding(
+                            padding: const EdgeInsets.all(20.0),
+                            child: Text(
+                              lang.S.of(context).noDataFound,
+                                //'No Data Found'
+                            ),
                           ),
                   );
                 }, error: (_, __) {

@@ -75,6 +75,8 @@ class _AddUnitsState extends State<AddUnits> {
                   validator: (value) {
                     if (value == null || value.isEmpty) {
                       return 'Please enter a valid unit name';
+                     //return lang.S.of(context).pleaseEnterAValidU;
+
                     }
                     return null;
                   },

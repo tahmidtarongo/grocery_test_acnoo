@@ -276,9 +276,6 @@
 
 
 
-
-
-
   "signIn" : "Sign in",
   "logIn": "Log In",
   "welcomeBack" : "Welcome back!",
@@ -467,7 +464,15 @@
   "enterDealerPrice": "Enter dealer price",
   "enterDiscount": "Enter discount",
   "enterManufacturerName": "Enter manufacturer name",
-  "adding": "Adding.."
+  "adding": "Adding..",
+  "pleaseEnterAValidUnitName": "Please enter a valid unit name",
+  "pleaseEnterUnitName": "Please enter unit name",
+  "productDetails": "Product Details",
+  "smartWatch": "Smart watch",
+  "appleWatch": "Apple Watch",
+  "deleting": "Deleting....",
+  "brand": "Brand",
+  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."
 
 
 }
