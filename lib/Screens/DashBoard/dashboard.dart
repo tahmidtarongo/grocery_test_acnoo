@@ -147,7 +147,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         SizedBox(
                             height: 250,
                             width: double.infinity,
-                            child: NumericAxisChart(
+                            child: DashboardChart(
                               model: dashboard,
                             )
                         ),
