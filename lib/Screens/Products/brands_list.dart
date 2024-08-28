@@ -116,46 +116,43 @@ class _BrandsListState extends State<BrandsList> {
                                           child: Row(
                                             mainAxisSize: MainAxisSize.min,
                                             children: [
-                                              Expanded(
-                                                flex: 3,
-                                                child: Text(
-                                                  data[i].brandName ?? '',
-                                                  style: GoogleFonts.poppins(
-                                                    fontSize: 18.0,
-                                                    color: Colors.black,
-                                                  ),
+                                              Text(
+                                                data[i].brandName ?? '',
+                                                style: GoogleFonts.poppins(
+                                                  fontSize: 18.0,
+                                                  color: Colors.black,
                                                 ),
                                               ),
-                                              Expanded(
-                                                  flex: 1,
-                                                  child: Row(
-                                                    children: [
-                                                      IconButton(
-                                                          onPressed: () {
-                                                            Navigator.push(
-                                                                context,
-                                                                MaterialPageRoute(
-                                                                  builder: (context) =>  AddBrands(brand: data[i],),
-                                                                ));
-                                                          },
-                                                          icon: const Icon(Icons.edit)),
-                                                      IconButton(
-                                                          onPressed: () async {
-                                                            bool confirmDelete = await showDeleteAlert(context: context, itemsName: 'brand');
-                                                            if (confirmDelete) {
-                                                              EasyLoading.show();
-                                                              if (await BrandsRepo().deleteBrand(context: context, brandId: data[i].id ?? 0)) {
-                                                                ref.refresh(brandsProvider);
-                                                              }
-                                                              EasyLoading.dismiss();
-                                                            }
-                                                          },
-                                                          icon: const Icon(
-                                                            Icons.delete,
-                                                            color: Colors.redAccent,
-                                                          )),
-                                                    ],
-                                                  )),
+                                              const Spacer(),
+                                              Row(
+                                                children: [
+                                                  IconButton(
+                                                      onPressed: () {
+                                                        Navigator.push(
+                                                            context,
+                                                            MaterialPageRoute(
+                                                              builder: (context) =>  AddBrands(brand: data[i],),
+                                                            ));
+                                                      },
+                                                      icon: const Icon(Icons.edit)),
+                                                  IconButton(
+                                                    visualDensity: const VisualDensity(horizontal: -4),
+                                                      onPressed: () async {
+                                                        bool confirmDelete = await showDeleteAlert(context: context, itemsName: 'brand');
+                                                        if (confirmDelete) {
+                                                          EasyLoading.show();
+                                                          if (await BrandsRepo().deleteBrand(context: context, brandId: data[i].id ?? 0)) {
+                                                            ref.refresh(brandsProvider);
+                                                          }
+                                                          EasyLoading.dismiss();
+                                                        }
+                                                      },
+                                                      icon: const Icon(
+                                                        Icons.delete,
+                                                        color: Colors.redAccent,
+                                                      )),
+                                                ],
+                                              ),
                                             ],
                                           ),
                                         ),
