@@ -120,52 +120,43 @@ class _UnitListState extends State<UnitList> {
                                           child: Row(
                                             mainAxisSize: MainAxisSize.min,
                                             children: [
-                                              Expanded(
-                                                flex: 3,
-                                                child: Column(
-                                                  mainAxisSize: MainAxisSize.min,
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                                  children: [
-                                                    Text(
-                                                      data[i].unitName ?? '',
-                                                      style: GoogleFonts.poppins(
-                                                        fontSize: 18.0,
-                                                        color: Colors.black,
-                                                      ),
-                                                    ),
-                                                  ],
+                                              Text(
+                                                data[i].unitName ?? '',
+                                                style: GoogleFonts.poppins(
+                                                  fontSize: 18.0,
+                                                  color: Colors.black,
                                                 ),
                                               ),
-                                              Expanded(
-                                                  flex: 1,
-                                                  child: Row(
-                                                    children: [
-                                                      IconButton(
-                                                          onPressed: () {
-                                                            Navigator.push(
-                                                                context,
-                                                                MaterialPageRoute(
-                                                                  builder: (context) =>  AddUnits(unit: data[i],),
-                                                                ));
-                                                          },
-                                                          icon: const Icon(Icons.edit)),
-                                                      IconButton(
-                                                          onPressed: () async {
-                                                            bool confirmDelete = await showDeleteAlert(context: context, itemsName: 'unit');
-                                                            if (confirmDelete) {
-                                                              EasyLoading.show();
-                                                              if (await UnitsRepo().deleteUnit(context: context, unitId: data[i].id ?? 0)) {
-                                                                ref.refresh(unitsProvider);
-                                                              }
-                                                              EasyLoading.dismiss();
-                                                            }
-                                                          },
-                                                          icon: const Icon(
-                                                            Icons.delete,
-                                                            color: Colors.redAccent,
-                                                          )),
-                                                    ],
-                                                  )),
+                                              const Spacer(),
+                                              Row(
+                                                children: [
+                                                  IconButton(
+                                                     visualDensity:const VisualDensity(horizontal: -4),
+                                                      onPressed: () {
+                                                        Navigator.push(
+                                                            context,
+                                                            MaterialPageRoute(
+                                                              builder: (context) =>  AddUnits(unit: data[i],),
+                                                            ));
+                                                      },
+                                                      icon: const Icon(Icons.edit)),
+                                                  IconButton(
+                                                      onPressed: () async {
+                                                        bool confirmDelete = await showDeleteAlert(context: context, itemsName: 'unit');
+                                                        if (confirmDelete) {
+                                                          EasyLoading.show();
+                                                          if (await UnitsRepo().deleteUnit(context: context, unitId: data[i].id ?? 0)) {
+                                                            ref.refresh(unitsProvider);
+                                                          }
+                                                          EasyLoading.dismiss();
+                                                        }
+                                                      },
+                                                      icon: const Icon(
+                                                        Icons.delete,
+                                                        color: Colors.redAccent,
+                                                      )),
+                                                ],
+                                              ),
                                             ],
                                           ),
                                         ),
