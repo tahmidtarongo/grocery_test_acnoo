@@ -128,48 +128,47 @@ class _CategoryListState extends State<CategoryList> {
                                             child: Row(
                                               mainAxisSize: MainAxisSize.min,
                                               children: [
-                                                Expanded(
-                                                  flex: 3,
-                                                  child: Text(
-                                                    data[i].categoryName.toString(),
-                                                    style: GoogleFonts.poppins(
-                                                      fontSize: 18.0,
-                                                      color: Colors.black,
-                                                    ),
+                                                Text(
+                                                  data[i].categoryName.toString(),
+                                                  style: GoogleFonts.poppins(
+                                                    fontSize: 18.0,
+                                                    color: Colors.black,
                                                   ),
                                                 ),
-                                                Expanded(
-                                                    flex: 1,
-                                                    child: Row(
-                                                      children: [
-                                                        IconButton(
-                                                            onPressed: () {
-                                                              Navigator.push(
-                                                                  context,
-                                                                  MaterialPageRoute(
-                                                                    builder: (context) => EditCategory(
-                                                                      categoryModel: data[i],
-                                                                    ),
-                                                                  ));
-                                                            },
-                                                            icon: const Icon(Icons.edit)),
-                                                        IconButton(
-                                                            onPressed: () async {
-                                                              bool confirmDelete = await showDeleteAlert(context: context, itemsName: 'category');
-                                                              if (confirmDelete) {
-                                                                EasyLoading.show();
-                                                                if (await CategoryRepo().deleteCategory(context: context, categoryId: data[i].id ?? 0)) {
-                                                                  ref.refresh(categoryProvider);
-                                                                }
-                                                                EasyLoading.dismiss();
-                                                              }
-                                                            },
-                                                            icon: const Icon(
-                                                              Icons.delete,
-                                                              color: Colors.redAccent,
-                                                            )),
-                                                      ],
-                                                    )),
+                                                const Spacer(),
+                                                Row(
+                                                  children: [
+                                                    IconButton(
+                                                        padding: EdgeInsets.zero,
+                                                        onPressed: () {
+                                                          Navigator.push(
+                                                              context,
+                                                              MaterialPageRoute(
+                                                                builder: (context) => EditCategory(
+                                                                  categoryModel: data[i],
+                                                                ),
+                                                              ));
+                                                        },
+                                                        icon: const Icon(Icons.edit)),
+                                                    IconButton(
+                                                      visualDensity: const VisualDensity(horizontal: -4),
+                                                       padding: EdgeInsets.zero,
+                                                        onPressed: () async {
+                                                          bool confirmDelete = await showDeleteAlert(context: context, itemsName: 'category');
+                                                          if (confirmDelete) {
+                                                            EasyLoading.show();
+                                                            if (await CategoryRepo().deleteCategory(context: context, categoryId: data[i].id ?? 0)) {
+                                                              ref.refresh(categoryProvider);
+                                                            }
+                                                            EasyLoading.dismiss();
+                                                          }
+                                                        },
+                                                        icon: const Icon(
+                                                          Icons.delete,
+                                                          color: Colors.redAccent,
+                                                        )),
+                                                  ],
+                                                ),
                                               ],
                                             ),
                                           ),
