@@ -2,7 +2,7 @@
   "addUserRole" : "Add User Role",
   "noRoleFound" : "No User Role Found",
   "yourPackageExpiredInDays" : "Your Package Will Expire in 5 Day",
-  "yourPackageExpiredToday" : "Your Package Will Expire Today\n\nPlease Purchase again",
+  "yourPackageExpiredToday" : "Your Package Will Expire Today Please Purchase again",
   "contactUs" : "Contact Us",
   "writeYourMessageHere" : "Write your message here",
   "sendMessage" : "Send Message",
@@ -274,7 +274,8 @@
 
 
 
-
+  "signUp" : "Sign Up",
+  "hello" : "hello",
   "signIn" : "Sign in",
   "logIn": "Log In",
   "welcomeBack" : "Welcome back!",
