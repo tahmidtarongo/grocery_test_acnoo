@@ -217,13 +217,14 @@ class _DueReportScreenState extends State<DueReportScreen> {
                                         ),
                                       ),
                                       const SizedBox(height: 10),
-                                      const SizedBox(
+                                       SizedBox(
                                         width: 120,
                                         child: Text(
-                                          'Customer Pay',
+                                          lang.S.of(context).customerPay,
+                                          //'Customer Pay',
                                           maxLines: 2,
                                           textAlign: TextAlign.center,
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                             color: Colors.black,
                                             fontSize: 16,
                                           ),
@@ -248,13 +249,14 @@ class _DueReportScreenState extends State<DueReportScreen> {
                                         ),
                                       ),
                                       const SizedBox(height: 10),
-                                      const SizedBox(
+                                       SizedBox(
                                         width: 100,
                                         child: Text(
-                                          'Suppler Pay',
+                                          lang.S.of(context).supplerPay,
+                                         // 'Suppler Pay',
                                           maxLines: 2,
                                           textAlign: TextAlign.center,
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                             color: Colors.black,
                                             fontSize: 16,
                                           ),
@@ -403,7 +405,10 @@ class _DueReportScreenState extends State<DueReportScreen> {
                                                                                         isConnect
                                                                                             // ignore: use_build_context_synchronously
                                                                                             ? finish(context)
-                                                                                            : toast('Try Again');
+                                                                                            : toast(
+                                                                                          lang.S.of(context).tryAgain,
+                                                                                            //'Try Again'
+                                                                                        );
                                                                                       },
                                                                                       title: Text('${printerData.availableBluetoothDevices[index]}'),
                                                                                       subtitle: Text(lang.S.of(context).clickToConnect),
@@ -454,7 +459,8 @@ class _DueReportScreenState extends State<DueReportScreen> {
                                                 }, error: (e, stack) {
                                                   return Text(e.toString());
                                                 }, loading: () {
-                                                  return const Text('Loading');
+                                                  //return const Text('Loading');
+                                                  return  Text(lang.S.of(context).loading);
                                                 }),
                                               ],
                                             ),

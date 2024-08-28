@@ -59,7 +59,10 @@ class _PackageScreenState extends State<PackageScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text('Unlimited Usages of Our Package👇 ',style: gTextStyle.copyWith(fontWeight: FontWeight.bold,fontSize: 19,color: kTitleColor),textAlign: TextAlign.center,),
+                      Text(
+                        lang.S.of(context).unlimitedUsagesOfOurPackage,
+                        //'Unlimited Usages of Our Package👇 ',
+                        style: gTextStyle.copyWith(fontWeight: FontWeight.bold,fontSize: 19,color: kTitleColor),textAlign: TextAlign.center,),
                       Padding(
                         padding: const EdgeInsets.all(16.0),
                         child: GestureDetector(

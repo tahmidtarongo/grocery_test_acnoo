@@ -3789,6 +3789,586 @@ class S {
       args: [],
     );
   }
+
+  /// `Data saved successfully.`
+  String get dataSavedSuccessfully {
+    return Intl.message(
+      'Data saved successfully.',
+      name: 'dataSavedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Something is`
+  String get somethingIs {
+    return Intl.message(
+      'Something is',
+      name: 'somethingIs',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Update your profile to connect your customer with better impression`
+  String get updateYourProfile {
+    return Intl.message(
+      'Update your profile to connect your customer with better impression',
+      name: 'updateYourProfile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shop Opening Balance`
+  String get shopOpeningBalance {
+    return Intl.message(
+      'Shop Opening Balance',
+      name: 'shopOpeningBalance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Shop Remaining Balance`
+  String get shopRemainingBalance {
+    return Intl.message(
+      'Shop Remaining Balance',
+      name: 'shopRemainingBalance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter a valid Discount`
+  String get enterAValidDiscount {
+    return Intl.message(
+      'Enter a valid Discount',
+      name: 'enterAValidDiscount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add product first`
+  String get addProductFirst {
+    return Intl.message(
+      'Add product first',
+      name: 'addProductFirst',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Subtotal`
+  String get subtotal {
+    return Intl.message(
+      'Subtotal',
+      name: 'subtotal',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Purchase Details`
+  String get purchaseDetails {
+    return Intl.message(
+      'Purchase Details',
+      name: 'purchaseDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Riead`
+  String get riead {
+    return Intl.message(
+      'Riead',
+      name: 'riead',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total:`
+  String get totall {
+    return Intl.message(
+      'Total:',
+      name: 'totall',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start Date`
+  String get startDate {
+    return Intl.message(
+      'Start Date',
+      name: 'startDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pick Start Date`
+  String get pickStartDate {
+    return Intl.message(
+      'Pick Start Date',
+      name: 'pickStartDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `End Date`
+  String get endDate {
+    return Intl.message(
+      'End Date',
+      name: 'endDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pick End Date`
+  String get pickEndDate {
+    return Intl.message(
+      'Pick End Date',
+      name: 'pickEndDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Failed to get platform version.`
+  String get failedToGetPlatformVersion {
+    return Intl.message(
+      'Failed to get platform version.',
+      name: 'failedToGetPlatformVersion',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter quantity`
+  String get enterQuantity {
+    return Intl.message(
+      'Enter quantity',
+      name: 'enterQuantity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please add quantity`
+  String get pleaseAddQuantity {
+    return Intl.message(
+      'Please add quantity',
+      name: 'pleaseAddQuantity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Will be Added Soon`
+  String get willBeAddedSoon {
+    return Intl.message(
+      'Will be Added Soon',
+      name: 'willBeAddedSoon',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Added To Cart`
+  String get addedToCart {
+    return Intl.message(
+      'Added To Cart',
+      name: 'addedToCart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Connect Your printer`
+  String get connectYourPrinter {
+    return Intl.message(
+      'Connect Your printer',
+      name: 'connectYourPrinter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Customer Pay`
+  String get customerPay {
+    return Intl.message(
+      'Customer Pay',
+      name: 'customerPay',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Suppler Pay`
+  String get supplerPay {
+    return Intl.message(
+      'Suppler Pay',
+      name: 'supplerPay',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Income Report`
+  String get incomeReport {
+    return Intl.message(
+      'Income Report',
+      name: 'incomeReport',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Category`
+  String get category {
+    return Intl.message(
+      'Category',
+      name: 'category',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Balance`
+  String get balance {
+    return Intl.message(
+      'Balance',
+      name: 'balance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `items Sales`
+  String get itemsSales {
+    return Intl.message(
+      'items Sales',
+      name: 'itemsSales',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total Purchase`
+  String get totalPurchase {
+    return Intl.message(
+      'Total Purchase',
+      name: 'totalPurchase',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total Sales`
+  String get totalSales {
+    return Intl.message(
+      'Total Sales',
+      name: 'totalSales',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stock Report`
+  String get stockReport {
+    return Intl.message(
+      'Stock Report',
+      name: 'stockReport',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Loss/Profit Report`
+  String get lossProfitReport {
+    return Intl.message(
+      'Loss/Profit Report',
+      name: 'lossProfitReport',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Out Of Stock`
+  String get outOfStock {
+    return Intl.message(
+      'Out Of Stock',
+      name: 'outOfStock',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `VAT`
+  String get vat {
+    return Intl.message(
+      'VAT',
+      name: 'vat',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Customer Phone Number`
+  String get customerPhoneNumber {
+    return Intl.message(
+      'Customer Phone Number',
+      name: 'customerPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter customer phone number`
+  String get enterCustomerPhoneNumber {
+    return Intl.message(
+      'Enter customer phone number',
+      name: 'enterCustomerPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Walk-in Customer`
+  String get walkInCustomer {
+    return Intl.message(
+      'Walk-in Customer',
+      name: 'walkInCustomer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Guest`
+  String get guest {
+    return Intl.message(
+      'Guest',
+      name: 'guest',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stock: `
+  String get stocks {
+    return Intl.message(
+      'Stock: ',
+      name: 'stocks',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lorem ipsum dolor sit amet, consectetur elit. Interdum cons.`
+  String get loremIpsumDolorSitAmetConsecteturElitInterdumCons {
+    return Intl.message(
+      'Lorem ipsum dolor sit amet, consectetur elit. Interdum cons.',
+      name: 'loremIpsumDolorSitAmetConsecteturElitInterdumCons',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do Not Disturb`
+  String get doNotDisturb {
+    return Intl.message(
+      'Do Not Disturb',
+      name: 'doNotDisturb',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `On`
+  String get on {
+    return Intl.message(
+      'On',
+      name: 'on',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Off`
+  String get off {
+    return Intl.message(
+      'Off',
+      name: 'off',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unlimited Usages of Our Package👇`
+  String get unlimitedUsagesOfOurPackage {
+    return Intl.message(
+      'Unlimited Usages of Our Package👇',
+      name: 'unlimitedUsagesOfOurPackage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Natoque aliquet et, cur eget. Tellus sapien odio aliq.`
+  String get loremIpsumDolor {
+    return Intl.message(
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Natoque aliquet et, cur eget. Tellus sapien odio aliq.',
+      name: 'loremIpsumDolor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pay for Subscribe`
+  String get payForSubscribe {
+    return Intl.message(
+      'Pay for Subscribe',
+      name: 'payForSubscribe',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Field`
+  String get field {
+    return Intl.message(
+      'Field',
+      name: 'field',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `successfully paid`
+  String get successfullyPaid {
+    return Intl.message(
+      'successfully paid',
+      name: 'successfullyPaid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Profile Edit`
+  String get profileEdit {
+    return Intl.message(
+      'Profile Edit',
+      name: 'profileEdit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Products`
+  String get products {
+    return Intl.message(
+      'Products',
+      name: 'products',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sales List`
+  String get salesList {
+    return Intl.message(
+      'Sales List',
+      name: 'salesList',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User title can'n be empty`
+  String get useTitleCanNotBeEmpty {
+    return Intl.message(
+      'User title can\'n be empty',
+      name: 'useTitleCanNotBeEmpty',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User Title`
+  String get userTitle {
+    return Intl.message(
+      'User Title',
+      name: 'userTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter User Title`
+  String get enterUserTitle {
+    return Intl.message(
+      'Enter User Title',
+      name: 'enterUserTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create`
+  String get create {
+    return Intl.message(
+      'Create',
+      name: 'create',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You Have To Give Permission`
+  String get youHaveToGivePermission {
+    return Intl.message(
+      'You Have To Give Permission',
+      name: 'youHaveToGivePermission',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All`
+  String get all {
+    return Intl.message(
+      'All',
+      name: 'all',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User Role Details`
+  String get userRoleDetails {
+    return Intl.message(
+      'User Role Details',
+      name: 'userRoleDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you want to delete the user?`
+  String get doYouWantToDeleteTheUser {
+    return Intl.message(
+      'Do you want to delete the user?',
+      name: 'doYouWantToDeleteTheUser',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

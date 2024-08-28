@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nb_utils/nb_utils.dart';
-
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import '../../constant.dart';
 
 class PurchaseList extends StatefulWidget {
@@ -51,7 +51,8 @@ class _PurchaseListState extends State<PurchaseList> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Purchase List',
+          lang.S.of(context).purchaseList,
+          //'Purchase List',
           style: GoogleFonts.poppins(
             color: Colors.black,
             fontSize: 20.0,
@@ -93,12 +94,24 @@ class _PurchaseListState extends State<PurchaseList> {
                           textFieldType: TextFieldType.NAME,
                           readOnly: true,
                           onTap: () async {
-                            var date = await showDatePicker(context: context, initialDate: DateTime.now(), firstDate: DateTime(1900), lastDate: DateTime(2100));
-                            dateController.text = date.toString().substring(0, 10);
+                            var date = await showDatePicker(
+                                context: context,
+                                initialDate: DateTime.now(),
+                                firstDate: DateTime(1900),
+                                lastDate: DateTime(2100));
+                            dateController.text =
+                                date.toString().substring(0, 10);
                           },
                           controller: dateController,
-                          decoration: const InputDecoration(
-                              border: OutlineInputBorder(), floatingLabelBehavior: FloatingLabelBehavior.always, labelText: 'Start Date', hintText: 'Pick Start Date'),
+                          decoration:  InputDecoration(
+                              border: OutlineInputBorder(),
+                              floatingLabelBehavior:
+                                  FloatingLabelBehavior.always,
+                              //labelText: 'Start Date',
+                              labelText: lang.S.of(context).startDate,
+                              //hintText: 'Pick Start Date'
+                              hintText: lang.S.of(context).pickStartDate
+                          ),
                         ),
                       ),
                     ),
@@ -109,12 +122,25 @@ class _PurchaseListState extends State<PurchaseList> {
                           textFieldType: TextFieldType.OTHER,
                           readOnly: true,
                           onTap: () async {
-                            var date = await showDatePicker(context: context, initialDate: DateTime.now(), firstDate: DateTime(1900), lastDate: DateTime(2100));
-                            dateController.text = date.toString().substring(0, 10);
+                            var date = await showDatePicker(
+                                context: context,
+                                initialDate: DateTime.now(),
+                                firstDate: DateTime(1900),
+                                lastDate: DateTime(2100));
+                            dateController.text =
+                                date.toString().substring(0, 10);
                           },
                           controller: dateController,
-                          decoration: const InputDecoration(
-                              border: OutlineInputBorder(), floatingLabelBehavior: FloatingLabelBehavior.always, labelText: 'End Date', hintText: 'Pick End Date'),
+                          decoration:  InputDecoration(
+                              border: OutlineInputBorder(),
+                              floatingLabelBehavior:
+                                  FloatingLabelBehavior.always,
+                              //labelText: 'End Date',
+                              labelText:
+                              lang.S.of(context).endDate,
+                              //hintText: 'Pick End Date'
+                              hintText: lang.S.of(context).pickEndDate
+                          ),
                         ),
                       ),
                     ),
@@ -128,21 +154,25 @@ class _PurchaseListState extends State<PurchaseList> {
                   child: DataTable(
                     columnSpacing: 80,
                     horizontalMargin: 0,
-                    headingRowColor: MaterialStateColor.resolveWith((states) => kDarkWhite),
-                    columns: const <DataColumn>[
+                    headingRowColor:
+                        MaterialStateColor.resolveWith((states) => kDarkWhite),
+                    columns:  <DataColumn>[
                       DataColumn(
                         label: Text(
-                          'Name',
+                         // 'Name',
+                          lang.S.of(context).name
                         ),
                       ),
                       DataColumn(
                         label: Text(
-                          'Quantity',
+                          lang.S.of(context).quantity
+                          //'Quantity',
                         ),
                       ),
                       DataColumn(
                         label: Text(
-                          'Amount',
+                          lang.S.of(context).amount
+                          //'Amount',
                         ),
                       ),
                     ],
@@ -157,11 +187,13 @@ class _PurchaseListState extends State<PurchaseList> {
                                   height: 30.0,
                                   width: 30.0,
                                   child: const CircleAvatar(
-                                    backgroundImage: AssetImage('images/profile.png'),
+                                    backgroundImage:
+                                        AssetImage('images/profile.png'),
                                   ),
                                 ),
                                 Text(
-                                  'Riead',
+                                  lang.S.of(context).riead,
+                                 // 'Riead',
                                   textAlign: TextAlign.start,
                                   style: GoogleFonts.poppins(
                                     color: Colors.black,
@@ -187,11 +219,13 @@ class _PurchaseListState extends State<PurchaseList> {
             const Spacer(),
             DataTable(
               columnSpacing: 120,
-              headingRowColor: MaterialStateColor.resolveWith((states) => kDarkWhite),
-              columns: const <DataColumn>[
+              headingRowColor:
+                  MaterialStateColor.resolveWith((states) => kDarkWhite),
+              columns:  <DataColumn>[
                 DataColumn(
                   label: Text(
-                    'Total:',
+                    lang.S.of(context).totall
+                    //'Total:',
                   ),
                 ),
                 DataColumn(

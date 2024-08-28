@@ -73,7 +73,9 @@ class _EditProfileState extends State<EditProfile> {
       dropDownItems.add(item);
     }
     return DropdownButton(
-      hint: const Text('Select Business Category'),
+      hint:  Text(lang.S.of(context).selectBusinessCategory,
+          //'Select Business Category'
+      ),
       items: dropDownItems,
       value: selectedBusinessCategory,
       onChanged: (value) {
@@ -121,10 +123,16 @@ class _EditProfileState extends State<EditProfile> {
 
             if (isProfileUpdated) {
               widget.ref.refresh(businessInfoProvider);
-              EasyLoading.showSuccess('Data saved successfully.');
+              EasyLoading.showSuccess(
+                lang.S.of(context).dataSavedSuccessfully,
+                  //'Data saved successfully.'
+              );
               Navigator.pop(context);
             } else {
-              EasyLoading.showError('Something is ');
+              EasyLoading.showError(
+                lang.S.of(context).somethingIs,
+                 // 'Something is '
+              );
             }
           }
         },
@@ -146,9 +154,10 @@ class _EditProfileState extends State<EditProfile> {
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(10.0),
+                    padding:  EdgeInsets.all(10.0),
                     child: Text(
-                      "Update your profile to connect your customer with better impression",
+                      lang.S.of(context).updateYourProfile,
+                     // "Update your profile to connect your customer with better impression",
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.center,
@@ -198,7 +207,8 @@ class _EditProfileState extends State<EditProfile> {
                                               color: kMainColor,
                                             ),
                                             Text(
-                                              'Gallery',
+                                              lang.S.of(context).gallery,
+                                             // 'Gallery',
                                               style: GoogleFonts.poppins(
                                                 fontSize: 20.0,
                                                 color: kMainColor,
@@ -229,7 +239,8 @@ class _EditProfileState extends State<EditProfile> {
                                               color: kGreyTextColor,
                                             ),
                                             Text(
-                                              'Camera',
+                                              lang.S.of(context).camera,
+                                             // 'Camera',
                                               style: GoogleFonts.poppins(
                                                 fontSize: 20.0,
                                                 color: kGreyTextColor,
@@ -324,7 +335,8 @@ class _EditProfileState extends State<EditProfile> {
                             controller: nameController, // Optional
                             validator: (value) {
                               if (value == null || value.isEmpty) {
-                                return 'Please enter a valid business name';
+                                //return 'Please enter a valid business name';
+                                return lang.S.of(context).pleaseEnterAValidBusinessName;
                               }
                               return null;
                             },

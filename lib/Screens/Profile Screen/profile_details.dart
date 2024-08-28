@@ -151,7 +151,8 @@ class _ProfileDetailsState extends State<ProfileDetails> {
                       initialValue: details.user?.email,
                       cursorColor: kGreyTextColor,
                       decoration: kInputDecoration.copyWith(
-                        labelText: "Email",
+                        //labelText: "Email",
+                        labelText: lang.S.of(context).email,
                         border: const OutlineInputBorder().copyWith(borderSide: const BorderSide(color: kGreyTextColor)),
                         hoverColor: kGreyTextColor,
                         fillColor: kGreyTextColor,
@@ -219,7 +220,8 @@ class _ProfileDetailsState extends State<ProfileDetails> {
                       cursorColor: kGreyTextColor,
                       controller: openingBalanceController,
                       decoration: kInputDecoration.copyWith(
-                        labelText: 'Shop Opening Balance',
+                        //labelText: 'Shop Opening Balance',
+                        labelText: lang.S.of(context).shopOpeningBalance,
                         border: const OutlineInputBorder().copyWith(borderSide: const BorderSide(color: kGreyTextColor)),
                         hoverColor: kGreyTextColor,
                         fillColor: kGreyTextColor,
@@ -236,7 +238,8 @@ class _ProfileDetailsState extends State<ProfileDetails> {
                       cursorColor: kGreyTextColor,
                       controller: remainingBalanceController,
                       decoration: kInputDecoration.copyWith(
-                        labelText: 'Shop Remaining Balance',
+                        //labelText: 'Shop Remaining Balance',
+                        labelText: lang.S.of(context).shopRemainingBalance,
                         border: const OutlineInputBorder().copyWith(borderSide: const BorderSide(color: kGreyTextColor)),
                         hoverColor: kGreyTextColor,
                         fillColor: kGreyTextColor,

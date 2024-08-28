@@ -2,7 +2,7 @@
   "addUserRole" : "Add User Role",
   "noRoleFound" : "No User Role Found",
   "yourPackageExpiredInDays" : "Your Package Will Expire in 5 Day",
-  "yourPackageExpiredToday" : "Your Package Will Expire Today Please Purchase again",
+  "yourPackageExpiredToday" : "Your Package Will Expire Today\n\nPlease Purchase again",
   "contactUs" : "Contact Us",
   "writeYourMessageHere" : "Write your message here",
   "sendMessage" : "Send Message",
@@ -274,8 +274,11 @@
 
 
 
-  "signUp" : "Sign Up",
-  "hello" : "hello",
+
+
+
+
+
   "signIn" : "Sign in",
   "logIn": "Log In",
   "welcomeBack" : "Welcome back!",
@@ -379,12 +382,65 @@
   "enterABrandName": "Enter a brand name",
   "addCategory": "Add Category",
   "enterCategoryName": "Enter category name",
-  "selectVariations": "Select variations : "
-
-
-
-
-
+  "selectVariations": "Select variations : ",
+  "dataSavedSuccessfully": "Data saved successfully.",
+  "somethingIs": "Something is",
+  "updateYourProfile": "Update your profile to connect your customer with better impression",
+  "shopOpeningBalance": "Shop Opening Balance",
+  "shopRemainingBalance": "Shop Remaining Balance",
+  "enterAValidDiscount": "Enter a valid Discount",
+  "addProductFirst": "Add product first",
+  "subtotal": "Subtotal",
+  "purchaseDetails": "Purchase Details",
+  "riead": "Riead",
+  "totall": "Total:",
+  "startDate": "Start Date",
+  "pickStartDate": "Pick Start Date",
+  "endDate": "End Date",
+  "pickEndDate": "Pick End Date",
+  "failedToGetPlatformVersion": "Failed to get platform version.",
+  "enterQuantity": "Enter quantity",
+  "pleaseAddQuantity": "Please add quantity",
+  "willBeAddedSoon": "Will be Added Soon",
+  "addedToCart": "Added To Cart",
+  "connectYourPrinter": "Connect Your printer",
+  "customerPay": "Customer Pay",
+  "supplerPay": "Suppler Pay",
+  "incomeReport": "Income Report",
+  "category": "Category",
+  "balance": "Balance",
+  "itemsSales": "items Sales",
+  "totalPurchase": "Total Purchase",
+  "totalSales": "Total Sales",
+  "stockReport": "Stock Report",
+  "lossProfitReport": "Loss/Profit Report",
+  "outOfStock": "Out Of Stock",
+  "vat": "VAT",
+  "customerPhoneNumber": "Customer Phone Number",
+  "enterCustomerPhoneNumber": "Enter customer phone number",
+  "walkInCustomer": "Walk-in Customer",
+  "guest": "Guest",
+  "stocks": "Stock: ",
+  "loremIpsumDolorSitAmetConsecteturElitInterdumCons": "Lorem ipsum dolor sit amet, consectetur elit. Interdum cons.",
+  "doNotDisturb": "Do Not Disturb",
+  "on": "On",
+  "off": "Off",
+  "unlimitedUsagesOfOurPackage": "Unlimited Usages of Our Package\uD83D\uDC47",
+  "loremIpsumDolor": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Natoque aliquet et, cur eget. Tellus sapien odio aliq.",
+  "payForSubscribe": "Pay for Subscribe",
+  "field": "Field",
+  "successfullyPaid": "successfully paid",
+  "profileEdit": "Profile Edit",
+  "products": "Products",
+  "salesList": "Sales List",
+  "useTitleCanNotBeEmpty": "User title can'n be empty",
+  "userTitle": "User Title",
+  "enterUserTitle": "Enter User Title",
+  "create": "Create",
+  "youHaveToGivePermission": "You Have To Give Permission",
+  "all": "All",
+  "userRoleDetails": "User Role Details",
+  "doYouWantToDeleteTheUser": "Do you want to delete the user?"
 
 
 }

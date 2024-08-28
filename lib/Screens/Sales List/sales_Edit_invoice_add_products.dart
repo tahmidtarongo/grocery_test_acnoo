@@ -49,7 +49,8 @@ class _EditSaleInvoiceSaleProductsState extends State<EditSaleInvoiceSaleProduct
     try {
       barcodeScanRes = await FlutterBarcodeScanner.scanBarcode('#ff6666', 'Cancel', true, ScanMode.BARCODE);
     } on PlatformException {
-      barcodeScanRes = 'Failed to get platform version.';
+      barcodeScanRes = lang.S.of(context).failedToGetPlatformVersion;
+      //'Failed to get platform version.';
     }
     if (!mounted) return;
 
@@ -99,7 +100,8 @@ class _EditSaleInvoiceSaleProductsState extends State<EditSaleInvoiceSaleProduct
                           },
                           decoration: InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: 'Product Code',
+                            //labelText: 'Product Code',
+                            labelText: lang.S.of(context).productCode,
                             hintText: productCode == '0000' || productCode == '-1' ? 'Scan product QR code' : productCode,
                             border: const OutlineInputBorder(),
                           ),
@@ -173,7 +175,10 @@ class _EditSaleInvoiceSaleProductsState extends State<EditSaleInvoiceSaleProduct
                               );
                               providerData.addToCartRiverPod(cartItem);
                               providerData.addProductsInSales(products[i]);
-                              EasyLoading.showSuccess('Added To Cart');
+                              EasyLoading.showSuccess(
+                                lang.S.of(context).addedToCart,
+                                  //'Added To Cart'
+                              );
                               Navigator.pop(context);
                             }
                           },

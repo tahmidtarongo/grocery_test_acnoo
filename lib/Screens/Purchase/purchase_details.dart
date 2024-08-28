@@ -10,6 +10,7 @@ import 'package:mobile_pos/Screens/Payment/payment_options.dart';
 import 'package:nb_utils/nb_utils.dart';
 import '../../constant.dart';
 import '../../currency.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 // ignore: must_be_immutable
 class PurchaseDetails extends StatefulWidget {
@@ -38,7 +39,8 @@ class _PurchaseDetailsState extends State<PurchaseDetails> {
         return Scaffold(
           appBar: AppBar(
             title: Text(
-              'Purchase Details',
+              lang.S.of(context).purchaseDetails,
+              //'Purchase Details',
               style: GoogleFonts.poppins(
                 color: Colors.black,
                 fontSize: 20.0,
@@ -101,11 +103,12 @@ class _PurchaseDetailsState extends State<PurchaseDetails> {
                       thickness: 0.5,
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 25.0, right: 25.0, bottom: 10.0),
+                      padding:  const EdgeInsets.only(left: 25.0, right: 25.0, bottom: 10.0),
                       child: Row(
                         children: [
                           Text(
-                            'Subtotal',
+                            lang.S.of(context).subTotal,
+                            //'Subtotal',
                             style: GoogleFonts.poppins(
                               color: kGreyTextColor,
                               fontSize: 15.0,
@@ -123,11 +126,12 @@ class _PurchaseDetailsState extends State<PurchaseDetails> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 25.0, right: 25.0, bottom: 10.0),
+                      padding:  const EdgeInsets.only(left: 25.0, right: 25.0, bottom: 10.0),
                       child: Row(
                         children: [
                           Text(
-                            'Discount',
+                            lang.S.of(context).discount,
+                            //'Discount',
                             style: GoogleFonts.poppins(
                               color: kGreyTextColor,
                               fontSize: 15.0,
@@ -153,11 +157,12 @@ class _PurchaseDetailsState extends State<PurchaseDetails> {
                       width: MediaQuery.of(context).size.width,
                       color: kDarkWhite,
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 25.0, right: 25.0, bottom: 10.0),
+                        padding:  EdgeInsets.only(left: 25.0, right: 25.0, bottom: 10.0),
                         child: Row(
                           children: [
                             Text(
-                              'Total',
+                              lang.S.of(context).total,
+                              //'Total',
                               style: GoogleFonts.poppins(
                                 color: Colors.black,
                                 fontSize: 15.0,
@@ -178,7 +183,8 @@ class _PurchaseDetailsState extends State<PurchaseDetails> {
                     const Spacer(),
                     ButtonGlobal(
                       iconWidget: Icons.arrow_forward,
-                      buttontext: 'Continue',
+                      //buttontext: 'Continue',
+                      buttontext:lang.S.of(context).continueE,
                       iconColor: Colors.white,
                       buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
                       onPressed: () async {

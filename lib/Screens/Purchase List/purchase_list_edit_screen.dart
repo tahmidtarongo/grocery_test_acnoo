@@ -302,7 +302,10 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                     onTap: () {
                       EditPurchaseInvoiceSaleProducts(
                         catName: null,
-                        customerModel: party.Party(type: 'Retailer'),
+                        customerModel: party.Party(type:
+                            lang.S.of(context).retailer,
+                        //'Retailer'
+                        ),
                         purchaseTransaction: widget.transitionModel,
                       ).launch(context);
                     },
@@ -370,7 +373,10 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                                         setState(() {
                                           discountAmount = 0;
                                         });
-                                        EasyLoading.showError('Enter a valid Discount');
+                                        EasyLoading.showError(
+                                          lang.S.of(context).enterAValidDiscount,
+                                            //'Enter a valid Discount'
+                                        );
                                       }
                                     }
                                   },
@@ -526,10 +532,12 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                           onChanged: (value) {
                             setState(() {});
                           },
-                          decoration: const InputDecoration(
+                          decoration:  InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: 'Description',
-                            hintText: 'Add Note',
+                            //labelText: 'Description',
+                            labelText: lang.S.of(context).description,
+                            //hintText: 'Add Note',
+                            hintText: lang.S.of(context).addNote,
                             border: OutlineInputBorder(),
                           ),
                         ),
@@ -539,7 +547,7 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                           height: 60,
                           width: 100,
                           decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), color: Colors.grey.shade200),
-                          child: const Center(
+                          child:  Center(
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
@@ -549,7 +557,8 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                                 ),
                                 SizedBox(width: 5),
                                 Text(
-                                  'Image',
+                                  lang.S.of(context).image,
+                                  //'Image',
                                   style: TextStyle(color: Colors.grey, fontSize: 16),
                                 )
                               ],
@@ -584,7 +593,10 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                           onTap: () async {
                             if (providerData.cartItemPurchaseList.isNotEmpty) {
                               try {
-                                EasyLoading.show(status: 'Loading...', dismissOnTap: false);
+                                EasyLoading.show(status:
+                                    lang.S.of(context).loading,
+                                //'Loading...',
+                                    dismissOnTap: false);
                                 List<CartProducts> selectedProductList = [];
 
                                 for (var element in providerData.cartItemPurchaseList) {
@@ -626,7 +638,9 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
                               }
                             } else {
-                              EasyLoading.showError('Add product first');
+                              EasyLoading.showError(lang.S.of(context).addProductFirst,
+                                  //'Add product first'
+                              );
                             }
                           },
                           child: Container(

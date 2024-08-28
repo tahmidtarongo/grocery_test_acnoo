@@ -109,12 +109,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                   ),
                 ),
-                const Expanded(
+                 Expanded(
                   child: Padding(
                     padding: EdgeInsets.all(10.0),
                     child: IconWithText(
                       bgColor: Color(0xFFF1F7F7),
-                      title: 'Email',
+                      title:lang.S.of(context).email,
+                      //'Email',
                       iconData: Icons.email_outlined,
                       iconColor: Colors.black,
                     ),

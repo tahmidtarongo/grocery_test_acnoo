@@ -40,7 +40,7 @@ class _ContactUsState extends State<ContactUs> {
                 keyboardType: TextInputType.name,
                 maxLines: 30,
                 decoration: InputDecoration(
-                  border: OutlineInputBorder(),
+                  border: const OutlineInputBorder(),
                   hintText: lang.S.of(context).writeYourMessageHere,
                 ),
               ),
@@ -104,9 +104,10 @@ class _ContactUsState extends State<ContactUs> {
                           ),
                           Center(
                             child: Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding:  EdgeInsets.all(8.0),
                               child: Text(
-                                'Lorem ipsum dolor sit amet, consectetur elit. Interdum cons.',
+                                lang.S.of(context).loremIpsumDolorSitAmetConsecteturElitInterdumCons,
+                                //'Lorem ipsum dolor sit amet, consectetur elit. Interdum cons.',
                                 maxLines: 2,
                                 textAlign: TextAlign.center,
                                 style: GoogleFonts.poppins(

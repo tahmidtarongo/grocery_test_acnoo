@@ -102,14 +102,16 @@ class _SalesContactState extends State<SalesContact> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      'Walk-in Customer',
+                                      lang.S.of(context).walkInCustomer,
+                                      //'Walk-in Customer',
                                       style: GoogleFonts.poppins(
                                         color: Colors.black,
                                         fontSize: 15.0,
                                       ),
                                     ),
                                     Text(
-                                      'Guest',
+                                      lang.S.of(context).guest,
+                                      //'Guest',
                                       style: GoogleFonts.poppins(
                                         color: Colors.grey,
                                         fontSize: 15.0,
@@ -257,14 +259,16 @@ class _SalesContactState extends State<SalesContact> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  'Walk-in Customer',
+                                  lang.S.of(context).walkInCustomer,
+                                  //'Walk-in Customer',
                                   style: GoogleFonts.poppins(
                                     color: Colors.black,
                                     fontSize: 15.0,
                                   ),
                                 ),
                                 Text(
-                                  'Guest',
+                                  lang.S.of(context).guest,
+                                  //'Guest',
                                   style: GoogleFonts.poppins(
                                     color: Colors.grey,
                                     fontSize: 15.0,

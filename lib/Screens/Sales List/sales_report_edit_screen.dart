@@ -12,7 +12,6 @@ import 'package:mobile_pos/Screens/Sales%20List/sales_Edit_invoice_add_products.
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:mobile_pos/model/sale_transaction_model.dart';
 import 'package:nb_utils/nb_utils.dart';
-
 import '../../Provider/product_provider.dart';
 import '../../constant.dart';
 import '../../currency.dart';
@@ -427,8 +426,9 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              const Text(
-                                'VAT',
+                               Text(
+                                 lang.S.of(context).vat,
+                                //'VAT',
                                 style: TextStyle(fontSize: 16),
                               ),
                               Row(
@@ -559,7 +559,10 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                                         setState(() {
                                           discountAmount = 0;
                                         });
-                                        EasyLoading.showError('Enter a valid Discount');
+                                        EasyLoading.showError(
+                                          lang.S.of(context).enterAValidDiscount,
+                                            //'Enter a valid Discount'
+                                        );
                                       }
                                     }
                                   },
@@ -729,11 +732,13 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                           onChanged: (value) {
                             setState(() {});
                           },
-                          decoration: const InputDecoration(
+                          decoration:  InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: 'Description',
-                            hintText: 'Add Note',
-                            border: OutlineInputBorder(),
+                            //labelText: 'Description',
+                            labelText: lang.S.of(context).description,
+                            //hintText: 'Add Note',
+                            hintText: lang.S.of(context).addNote,
+                            border: const OutlineInputBorder(),
                           ),
                         ),
                       ),
@@ -742,18 +747,19 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                         height: 60,
                         width: 100,
                         decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), color: Colors.grey.shade200),
-                        child: const Center(
+                        child:  Center(
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              Icon(
+                              const Icon(
                                 FeatherIcons.camera,
                                 color: Colors.grey,
                               ),
-                              SizedBox(width: 5),
+                              const SizedBox(width: 5),
                               Text(
-                                'Image',
-                                style: TextStyle(color: Colors.grey, fontSize: 16),
+                                lang.S.of(context).image,
+                                //'Image',
+                                style: const TextStyle(color: Colors.grey, fontSize: 16),
                               )
                             ],
                           ),
@@ -788,7 +794,10 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                           onTap: () async {
                             if (providerData.cartItemList.isNotEmpty) {
                               try {
-                                EasyLoading.show(status: 'Loading...', dismissOnTap: false);
+                                EasyLoading.show(status:
+                                    lang.S.of(context).loading,
+                                //'Loading...',
+                                    dismissOnTap: false);
                                 List<CartSaleProducts> selectedProductList = [];
 
                                 for (var element in providerData.cartItemList) {
@@ -825,7 +834,10 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
                               }
                             } else {
-                              EasyLoading.showError('Add product first');
+                              EasyLoading.showError(
+                                lang.S.of(context).addProductFirst
+                                  //'Add product first'
+                              );
                             }
                           },
                           child: Container(

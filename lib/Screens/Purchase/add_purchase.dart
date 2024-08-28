@@ -174,7 +174,10 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          const Text('Due Amount: '),
+                           Text(
+                             lang.S.of(context).dueAmount
+                               //'Due Amount: '
+                           ),
                           Text(
                             widget.party.due == null ? '$currency 0' : '$currency${widget.party.due}',
                             style: const TextStyle(color: Color(0xFFFF8C34)),
@@ -432,7 +435,10 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                                         setState(() {
                                           discountAmount = 0;
                                         });
-                                        EasyLoading.showError('Enter a valid Discount');
+                                        EasyLoading.showError(
+                                          lang.S.of(context).enterAValidDiscount,
+                                            //'Enter a valid Discount'
+                                        );
                                       }
                                     }
                                   },
@@ -587,11 +593,13 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                           onChanged: (value) {
                             setState(() {});
                           },
-                          decoration: const InputDecoration(
+                          decoration:  InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: 'Description',
-                            hintText: 'Add Note',
-                            border: OutlineInputBorder(),
+                            //labelText: 'Description',
+                            labelText: lang.S.of(context).description,
+                           // hintText: 'Add Note',
+                            hintText: lang.S.of(context).addNote,
+                            border: const OutlineInputBorder(),
                           ),
                         ),
                       ),
@@ -600,18 +608,19 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                           height: 60,
                           width: 100,
                           decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), color: Colors.grey.shade200),
-                          child: const Center(
+                          child:  Center(
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                Icon(
+                                const Icon(
                                   FeatherIcons.camera,
                                   color: Colors.grey,
                                 ),
-                                SizedBox(width: 5),
+                                const SizedBox(width: 5),
                                 Text(
-                                  'Image',
-                                  style: TextStyle(color: Colors.grey, fontSize: 16),
+                                  lang.S.of(context).image,
+                                  //'Image',
+                                  style: const TextStyle(color: Colors.grey, fontSize: 16),
                                 )
                               ],
                             ),
@@ -648,7 +657,10 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                           onTap: () async {
                             if (providerData.cartItemPurchaseList.isNotEmpty) {
                               try {
-                                EasyLoading.show(status: 'Loading...', dismissOnTap: false);
+                                EasyLoading.show(status:
+                                    lang.S.of(context).loading,
+                                //'Loading...',
+                                    dismissOnTap: false);
                                 List<CartProducts> selectedProductList = [];
 
                                 for (var element in providerData.cartItemPurchaseList) {
@@ -696,7 +708,10 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
                               }
                             } else {
-                              EasyLoading.showError('Add product first');
+                              EasyLoading.showError(
+                                lang.S.of(context).addProductFirst,
+                                 // 'Add product first'
+                              );
                             }
                           },
                           child: Container(

@@ -201,8 +201,10 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                             textFieldType: TextFieldType.PHONE,
                             decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
-                              labelText: 'Customer Phone Number',
-                              hintText: 'Enter customer phone number',
+                              //labelText: 'Customer Phone Number',
+                              labelText: lang.S.of(context).customerPhoneNumber,
+                              //hintText: 'Enter customer phone number',
+                              hintText: lang.S.of(context).enterCustomerPhoneNumber,
                             ),
                           ),
                         ),
@@ -323,7 +325,10 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                                       providerData.cartItemList[index].quantity = newQuantity.round();
                                                     } else {
                                                       providerData.controllers[index].text = '1';
-                                                      EasyLoading.showError('Out Of Stock');
+                                                      EasyLoading.showError(
+                                                        lang.S.of(context).outOfStock,
+                                                         // 'Out Of Stock'
+                                                      );
                                                     }
                                                   }
                                                 },
@@ -443,8 +448,9 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              const Text(
-                                'VAT',
+                               Text(
+                                 lang.S.of(context).vat,
+                               // 'VAT',
                                 style: TextStyle(fontSize: 16),
                               ),
                               Row(
@@ -571,7 +577,10 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                         setState(() {
                                           discountAmount = 0;
                                         });
-                                        EasyLoading.showError('Enter a valid Discount');
+                                        EasyLoading.showError(
+                                          lang.S.of(context).enterAValidDiscount
+                                            //'Enter a valid Discount'
+                                        );
                                       }
                                     }
                                   },
@@ -729,10 +738,11 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                             color: Colors.grey.shade300,
                             borderRadius: const BorderRadius.all(Radius.circular(10)),
                           ),
-                          child: const Center(
+                          child:  Center(
                             child: Text(
-                              'Cancel',
-                              style: TextStyle(fontSize: 18),
+                              lang.S.of(context).cancel,
+                              //'Cancel',
+                              style: const TextStyle(fontSize: 18),
                             ),
                           ),
                         ),
@@ -743,7 +753,10 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                           onTap: () async {
                             if (providerData.cartItemList.isNotEmpty) {
                               try {
-                                EasyLoading.show(status: 'Loading...', dismissOnTap: false);
+                                EasyLoading.show(status:
+                                    lang.S.of(context).loading,
+                                //'Loading...',
+                                    dismissOnTap: false);
                                 List<CartSaleProducts> selectedProductList = [];
 
                                 for (var element in providerData.cartItemList) {
@@ -788,7 +801,10 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
                               }
                             } else {
-                              EasyLoading.showError('Add product first');
+                              EasyLoading.showError(
+                                lang.S.of(context).addProductFirst,
+                                  //'Add product first'
+                              );
                             }
                           },
                           child: Container(
@@ -797,9 +813,10 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                               color: kMainColor,
                               borderRadius: BorderRadius.all(Radius.circular(10)),
                             ),
-                            child: const Center(
+                            child:  Center(
                               child: Text(
-                                'Save',
+                                lang.S.of(context).save,
+                                //'Save',
                                 style: TextStyle(fontSize: 18, color: Colors.white),
                               ),
                             ),

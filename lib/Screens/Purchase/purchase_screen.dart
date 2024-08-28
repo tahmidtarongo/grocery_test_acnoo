@@ -8,7 +8,7 @@ import 'package:mobile_pos/Provider/product_provider.dart';
 import 'package:mobile_pos/Screens/Purchase/purchase_details.dart';
 import 'package:mobile_pos/Screens/Sales/sales_products_list_screen.dart';
 import 'package:nb_utils/nb_utils.dart';
-
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 import '../../constant.dart';
 import '../../currency.dart';
 import '../Products/add_category_screen.dart';
@@ -44,7 +44,8 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
       return Scaffold(
         appBar: AppBar(
           title: Text(
-            'Purchase',
+            lang.S.of(context).purchase,
+            //'Purchase',
             style: GoogleFonts.poppins(
               color: Colors.black,
               fontSize: 20.0,
@@ -104,7 +105,8 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
                         flex: 2,
                         child: Center(
                           child: Text(
-                            'Total: $currency$total',
+                            //'Total: $currency$total',
+                            '${lang.S.of(context).totall} $currency$total',
                             style: GoogleFonts.poppins(
                               color: Colors.white,
                               fontSize: 16.0,
@@ -138,7 +140,10 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
                         ),
                         child: GestureDetector(
                           onTap: () {
-                            EasyLoading.showInfo('Will be Added Soon');
+                            EasyLoading.showInfo(
+                              lang.S.of(context).willBeAddedSoon,
+                                //'Will be Added Soon'
+                            );
                           },
                           child: Row(
                             children: [
@@ -196,7 +201,10 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
                                 variants: [],
                                 productDetails: ''));
                             // cart.addToCart(productId: items, unitPrice: products[index].productSalePrice, productName: products[index].productName);
-                            EasyLoading.showSuccess('Added To Cart', duration: const Duration(milliseconds: 1000));
+                            EasyLoading.showSuccess(
+                              lang.S.of(context).addedToCart,
+                                //'Added To Cart',
+                                duration: const Duration(milliseconds: 1000));
                             setState(() {
                               total = cart.total.toString();
                               items++;
@@ -222,7 +230,8 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
         ),
         bottomNavigationBar: ButtonGlobal(
           iconWidget: Icons.arrow_forward,
-          buttontext: 'Purchase List',
+         // buttontext: 'Purchase List',
+          buttontext: lang.S.of(context).purchaseList,
           iconColor: Colors.white,
           buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
           onPressed: () {

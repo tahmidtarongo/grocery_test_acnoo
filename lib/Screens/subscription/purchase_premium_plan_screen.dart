@@ -151,10 +151,12 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                                           style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                                         ),
                                         const SizedBox(height: 15),
-                                        const Padding(
+                                         Padding(
                                           padding: EdgeInsets.all(8.0),
-                                          child: Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Natoque aliquet et, cur eget. Tellus sapien odio aliq.',
-                                              textAlign: TextAlign.center, style: TextStyle(fontSize: 16)),
+                                          child: Text(
+                                            lang.S.of(context).loremIpsumDolor,
+                                              //'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Natoque aliquet et, cur eget. Tellus sapien odio aliq.',
+                                              textAlign: TextAlign.center, style: const TextStyle(fontSize: 16)),
                                         ),
                                         const SizedBox(height: 20),
                                       ],
@@ -169,8 +171,8 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                                 BoxShadow(color: const Color(0xff473232).withOpacity(0.05), offset: const Offset(0, 3), blurRadius: 8, spreadRadius: -1)
                               ]),
                               child: ListTile(
-                                visualDensity: VisualDensity(horizontal: -4),
-                                contentPadding: EdgeInsets.only(left: 8, right: 10),
+                                visualDensity: const VisualDensity(horizontal: -4),
+                                contentPadding: const EdgeInsets.only(left: 8, right: 10),
                                 leading: SizedBox(
                                   height: 40,
                                   width: 40,
@@ -347,11 +349,17 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                               ));
 
                           if (success) {
-                            EasyLoading.showSuccess('successfully paid');
+                            EasyLoading.showSuccess(
+                              lang.S.of(context).successfullyPaid,
+                               // 'successfully paid'
+                            );
 
                             ref.refresh(businessInfoProvider);
                           } else {
-                            EasyLoading.showError('Field');
+                            EasyLoading.showError(
+                              lang.S.of(context).field,
+                               // 'Field'
+                            );
                           }
                           // SubscriptionPlanRepo repo = SubscriptionPlanRepo();
                           // PaymentCredentialModel paymentCredential = await repo.getPaymentCredential();
@@ -370,10 +378,11 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                           color: kMainColor,
                           borderRadius: BorderRadius.all(Radius.circular(10)),
                         ),
-                        child: const Center(
+                        child:  Center(
                           child: Text(
-                            'Pay for Subscribe',
-                            style: TextStyle(fontSize: 18, color: Colors.white),
+                            lang.S.of(context).payForSubscribe,
+                            //'Pay for Subscribe',
+                            style: const TextStyle(fontSize: 18, color: Colors.white),
                           ),
                         ),
                       ),

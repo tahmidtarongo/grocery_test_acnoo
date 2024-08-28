@@ -53,7 +53,8 @@ class _SalesCategoryListState extends State<SalesCategoryList> {
                     textFieldType: TextFieldType.NAME,
                     decoration: InputDecoration(
                       border: const OutlineInputBorder(),
-                      hintText: 'Search',
+                     // hintText: 'Search',
+                      hintText:lang.S.of(context).search,
                       prefixIcon: Icon(
                         Icons.search,
                         color: kGreyTextColor.withOpacity(0.5),

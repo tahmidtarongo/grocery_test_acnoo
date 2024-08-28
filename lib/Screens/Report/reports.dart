@@ -82,7 +82,9 @@ class _ReportsState extends State<Reports> {
                               )));
                 },
                 iconPath: 'assets/stock.svg',
-                title: 'Stock Report'),
+                //title: 'Stock Report'
+                title: lang.S.of(context).stockReport
+            ),
             const SizedBox(height: 16),
 
             ///_______________Loss/Profit________________________________________________________________
@@ -91,7 +93,9 @@ class _ReportsState extends State<Reports> {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => const LossProfitScreen()));
                 },
                 iconPath: 'assets/lossprofit.svg',
-                title: 'Loss/Profit Report'),
+                //title: 'Loss/Profit Report'
+                title: lang.S.of(context).lossProfitReport
+            ),
             const SizedBox(
               height: 16,
             ),
@@ -113,7 +117,9 @@ class _ReportsState extends State<Reports> {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => const ExpenseReport()));
                 },
                 iconPath: 'assets/expenseReport.svg',
-                title: 'Expense Report'),
+                //title: 'Expense Report'
+                title: lang.S.of(context).expenseReport
+            ),
           ],
         ),
       ),
@@ -140,8 +146,8 @@ class ReportCard extends StatelessWidget {
       onTap: pressed,
       child: Container(
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(6), color: kWhite, boxShadow: [
-          BoxShadow(color: Color(0xff473232).withOpacity(0.05), blurRadius: 8, spreadRadius: -1, offset: Offset(0, 3)),
-          BoxShadow(color: Color(0xff0C1A4B).withOpacity(0.24), blurRadius: 1)
+          BoxShadow(color: const Color(0xff473232).withOpacity(0.05), blurRadius: 8, spreadRadius: -1, offset: const Offset(0, 3)),
+          BoxShadow(color: const Color(0xff0C1A4B).withOpacity(0.24), blurRadius: 1)
         ]),
         child: Row(
           children: [

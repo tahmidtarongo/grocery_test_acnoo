@@ -16,7 +16,6 @@ import '../../../model/print_transaction_model.dart';
 import '../../Provider/add_to_cart_purchase.dart';
 import '../../currency.dart';
 import '../Home/home.dart';
-import '../Home/home_screen.dart';
 import '../invoice_details/purchase_invoice_details.dart';
 
 class PurchaseListScreen extends StatefulWidget {
@@ -171,15 +170,22 @@ class _PurchaseReportState extends State<PurchaseListScreen> {
                                                                               isConnect
                                                                                   // ignore: use_build_context_synchronously
                                                                                   ? finish(context)
-                                                                                  : toast('Try Again');
+                                                                                  : toast(lang.S.of(context).tryAgain,
+                                                                                  //'Try Again'
+                                                                              );
                                                                             },
                                                                             title: Text('${printerData.availableBluetoothDevices[index]}'),
-                                                                            subtitle: const Text("Click to connect"),
+                                                                            subtitle:  Text(
+                                                                              lang.S.of(context).clickToConnect,
+                                                                               // "Click to connect"
+                                                                            ),
                                                                           );
                                                                         },
                                                                       ),
                                                                       const SizedBox(height: 10),
-                                                                      const Text('Connect Your printer'),
+                                                                       Text(lang.S.of(context).connectYourPrinter,
+                                                                          // 'Connect Your printer'
+                                                                       ),
                                                                       const SizedBox(height: 10),
                                                                       Container(height: 1, width: double.infinity, color: Colors.grey),
                                                                       const SizedBox(height: 15),
@@ -187,9 +193,10 @@ class _PurchaseReportState extends State<PurchaseListScreen> {
                                                                         onTap: () {
                                                                           Navigator.pop(context);
                                                                         },
-                                                                        child: const Center(
+                                                                        child:  Center(
                                                                           child: Text(
-                                                                            'Cancel',
+                                                                            lang.S.of(context).cancel,
+                                                                           // 'Cancel',
                                                                             style: TextStyle(color: kMainColor),
                                                                           ),
                                                                         ),
@@ -235,7 +242,8 @@ class _PurchaseReportState extends State<PurchaseListScreen> {
                                         }, error: (e, stack) {
                                           return Text(e.toString());
                                         }, loading: () {
-                                          return const Text('Loading');
+                                          //return  Text('Loading');
+                                          return  Text(lang.S.of(context).loading);
                                         }),
                                       ],
                                     ),

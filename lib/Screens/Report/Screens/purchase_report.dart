@@ -169,9 +169,10 @@ class _PurchaseReportState extends State<PurchaseReportScreen> {
                                         ),
                                       ),
                                       const SizedBox(height: 10),
-                                      const Text(
-                                        'Total Purchase',
-                                        style: TextStyle(
+                                       Text(
+                                         lang.S.of(context).totalPurchase,
+                                        //'Total Purchase',
+                                        style: const TextStyle(
                                           color: Colors.black,
                                           fontSize: 16,
                                         ),
@@ -349,7 +350,10 @@ class _PurchaseReportState extends State<PurchaseReportScreen> {
                                                                                         isConnect
                                                                                             // ignore: use_build_context_synchronously
                                                                                             ? finish(context)
-                                                                                            : toast('Try Again');
+                                                                                            : toast(
+                                                                                          lang.S.of(context).tryAgain,
+                                                                                            //'Try Again'
+                                                                                        );
                                                                                       },
                                                                                       title: Text('${printerData.availableBluetoothDevices[index]}'),
                                                                                       subtitle: Text(lang.S.of(context).clickToConnect),
@@ -400,7 +404,8 @@ class _PurchaseReportState extends State<PurchaseReportScreen> {
                                                 }, error: (e, stack) {
                                                   return Text(e.toString());
                                                 }, loading: () {
-                                                  return const Text('Loading');
+                                                  //return const Text('Loading');
+                                                  return  Text(lang.S.of(context).loading);
                                                 }),
                                               ],
                                             ),

@@ -48,7 +48,8 @@ class _SaleProductsListState extends State<SaleProductsList> {
     try {
       barcodeScanRes = await FlutterBarcodeScanner.scanBarcode('#ff6666', 'Cancel', true, ScanMode.BARCODE);
     } on PlatformException {
-      barcodeScanRes = 'Failed to get platform version.';
+      barcodeScanRes = lang.S.of(context).failedToGetPlatformVersion;
+      //'Failed to get platform version.';
     }
     if (!mounted) return;
 
@@ -364,7 +365,8 @@ class _ProductCardState extends State<ProductCard> {
                         ),
                       ),
                       Text(
-                        'Stock: ${widget.stock}',
+                        //'Stock: ${widget.stock}',
+                        '${lang.S.of(context).stocks}${widget.stock}',
                         style: GoogleFonts.jost(
                           color: Colors.black,
                         ),

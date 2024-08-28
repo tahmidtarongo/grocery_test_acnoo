@@ -51,7 +51,9 @@ class _PurchaseProductsState extends State<PurchaseProducts> {
     try {
       barcodeScanRes = await FlutterBarcodeScanner.scanBarcode('#ff6666', 'Cancel', true, ScanMode.BARCODE);
     } on PlatformException {
-      barcodeScanRes = 'Failed to get platform version.';
+      barcodeScanRes = lang.S.of(context).failedToGetPlatformVersion;
+      //'Failed to get platform version.';
+
     }
     if (!mounted) return;
 
@@ -265,7 +267,8 @@ class _PurchaseProductsState extends State<PurchaseProducts> {
                                                   decoration: InputDecoration(
                                                     floatingLabelBehavior: FloatingLabelBehavior.always,
                                                     labelText: lang.S.of(context).quantity,
-                                                    hintText: 'Enter quantity',
+                                                   // hintText: 'Enter quantity',
+                                                    hintText: lang.S.of(context).enterQuantity,
                                                     border: const OutlineInputBorder(),
                                                   ),
                                                 ),
@@ -358,7 +361,10 @@ class _PurchaseProductsState extends State<PurchaseProducts> {
                                                   return count++ == 2;
                                                 });
                                               } else {
-                                                EasyLoading.showError('Please add quantity');
+                                                EasyLoading.showError(
+                                                  lang.S.of(context).pleaseAddQuantity,
+                                                   // 'Please add quantity'
+                                                );
                                               }
                                             },
                                             child: Container(

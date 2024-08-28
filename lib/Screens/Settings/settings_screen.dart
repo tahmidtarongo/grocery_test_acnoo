@@ -230,7 +230,8 @@ class _SettingScreenState extends State<SettingScreen> {
                 ///_________DashBoard_____________________________________________________
                 ListTile(
                   title: Text(
-                    'Dashboard',
+                    lang.S.of(context).dashboard,
+                   // 'Dashboard',
                     style: GoogleFonts.poppins(
                       color: Colors.black,
                       fontSize: 16.0,
@@ -365,7 +366,10 @@ class _SettingScreenState extends State<SettingScreen> {
                   ),
                   onTap: () async {
                     ref.invalidate(businessInfoProvider);
-                    EasyLoading.show(status: 'Log out');
+                    EasyLoading.show(status:
+                        lang.S.of(context).logOut,
+                    //'Log out'
+                    );
                     LogOutRepo repo = LogOutRepo();
                     await repo.signOutApi(context: context, ref: ref);
                   },
@@ -459,7 +463,8 @@ class _NoticationSettingsState extends State<NoticationSettings> {
           ),
           Center(
             child: Text(
-              'Do Not Disturb',
+              lang.S.of(context).doNotDisturb,
+              //'Do Not Disturb',
               style: GoogleFonts.poppins(
                 color: Colors.black,
                 fontSize: 20.0,
@@ -471,7 +476,8 @@ class _NoticationSettingsState extends State<NoticationSettings> {
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                'Lorem ipsum dolor sit amet, consectetur elit. Interdum cons.',
+                lang.S.of(context).loremIpsumDolorSitAmetConsecteturElitInterdumCons,
+                //'Lorem ipsum dolor sit amet, consectetur elit. Interdum cons.',
                 maxLines: 2,
                 textAlign: TextAlign.center,
                 style: GoogleFonts.poppins(
@@ -496,7 +502,7 @@ class _NoticationSettingsState extends State<NoticationSettings> {
                 onChanged: (val) {
                   setState(() {
                     notify = val;
-                    val ? notificationText = 'On' : notificationText = 'Off';
+                    val ? notificationText = '${lang.S.of(context).on}' : notificationText = '${lang.S.of(context).off}';
                   });
                 },
               ),

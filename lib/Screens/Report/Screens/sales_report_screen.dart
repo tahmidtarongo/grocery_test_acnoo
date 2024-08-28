@@ -176,9 +176,10 @@ class _SalesReportScreenState extends State<SalesReportScreen> {
                                         ),
                                       ),
                                       const SizedBox(height: 10),
-                                      const Text(
-                                        'Total Sales',
-                                        style: TextStyle(
+                                       Text(
+                                         lang.S.of(context).totalSales,
+                                        //'Total Sales',
+                                        style: const TextStyle(
                                           color: Colors.black,
                                           fontSize: 16,
                                         ),
@@ -356,7 +357,10 @@ class _SalesReportScreenState extends State<SalesReportScreen> {
                                                                                           isConnect
                                                                                               // ignore: use_build_context_synchronously
                                                                                               ? finish(context)
-                                                                                              : toast('Try Again');
+                                                                                              : toast(
+                                                                                            lang.S.of(context).tryAgain,
+                                                                                              //'Try Again'
+                                                                                          );
                                                                                         },
                                                                                         title: Text('${printerData.availableBluetoothDevices[index]}'),
                                                                                         subtitle: Text(lang.S.of(context).clickToConnect),

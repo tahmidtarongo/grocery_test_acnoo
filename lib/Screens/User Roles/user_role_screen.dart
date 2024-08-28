@@ -66,8 +66,8 @@ class _UserRoleScreenState extends State<UserRoleScreen> {
                           ],
                         ),
                         child: ListTile(
-                          visualDensity: VisualDensity(vertical: -4,horizontal: -4),
-                          contentPadding: EdgeInsets.symmetric(horizontal: 10),
+                          visualDensity: const VisualDensity(vertical: -4,horizontal: -4),
+                          contentPadding: const EdgeInsets.symmetric(horizontal: 10),
                           onTap: () {
                             UserRoleDetails(
                               userRoleModel: users[index],
