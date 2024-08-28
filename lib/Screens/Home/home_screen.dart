@@ -669,7 +669,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Container(
                                     padding: const EdgeInsets.all(10),
                                     height: 150,
-                                    width: 310,
+                                    width: MediaQuery.of(context).size.width - 80,
                                     child: PageView.builder(
                                       pageSnapping: true,
                                       itemCount: images.length,
