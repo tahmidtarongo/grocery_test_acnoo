@@ -93,7 +93,7 @@
   "rememberMeLater" : "Remember me later",
   "powerdedByAcnoo" : "Powered By Acnoo",
   "lossOrProfit" : "Loss/Profit",
-   "expense" : "Expense",
+  "expense" : "Expense",
   "parties" : "Parties",
   "home" : "Home",
   "sales" : "Sales",
@@ -272,10 +272,8 @@
   "congratulation": "Congratulations",
 
 
-
-
-
-
+  "signUp": "Sign Up",
+  "amarSonarBangla" : "Amar sonar bangla",
   "signIn" : "Sign in",
   "logIn": "Log In",
   "welcomeBack" : "Welcome back!",
