@@ -258,8 +258,8 @@ class _SignInState extends State<SignIn> {
                           style: textTheme.bodyMedium?.copyWith(color: kGreyTextColor),
                           children: [
                             TextSpan(
-                              // text:lang.S.of(context).signUp,
-                              text:'Sign Up',
+                              text:lang.S.of(context).signUp,
+                              // text:'Sign Up',
                               style: textTheme.bodyMedium?.copyWith(color: kMainColor, fontWeight: FontWeight.bold),
                             )
                           ],
