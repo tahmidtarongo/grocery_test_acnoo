@@ -244,7 +244,10 @@ class _ProductListState extends State<ProductList> {
 
 
                                       if (confirmDelete) {
-                                        EasyLoading.show(status: 'Deleting....');
+                                        EasyLoading.show(status:
+                                            //lang.S.of(context).,
+                                        'Deleting....'
+                                        );
                                         ProductRepo productRepo = ProductRepo();
                                         await productRepo.deleteProduct(id: products[i].id.toString(), context: context, ref: ref);
                                       }

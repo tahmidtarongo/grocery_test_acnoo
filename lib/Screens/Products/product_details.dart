@@ -103,7 +103,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                   height: 20,
                 ),
                 Text(
-                 // lang.S.of(context).det
+                // lang.S.of(context).
                   'Details',
                   style: gTextStyle.copyWith(fontWeight: FontWeight.bold, color: kTitleColor),
                 ),
@@ -116,8 +116,8 @@ class _ProductDetailsState extends State<ProductDetails> {
 
 
                 Text(
-                  //lang.S.of(context).loremIpsumDolor,
-                  'Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.',
+                  lang.S.of(context).loremIpsumDolor,
+                  //'Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.',
                   style: gTextStyle.copyWith(color: kGreyTextColor),
                 ),
 
