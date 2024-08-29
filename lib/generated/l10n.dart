@@ -2750,6 +2750,26 @@ class S {
     );
   }
 
+  /// `Sign Up`
+  String get signUp {
+    return Intl.message(
+      'Sign Up',
+      name: 'signUp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Amar sonar bangla`
+  String get amarSonarBangla {
+    return Intl.message(
+      'Amar sonar bangla',
+      name: 'amarSonarBangla',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Sign in`
   String get signIn {
     return Intl.message(
@@ -4635,6 +4655,86 @@ class S {
     return Intl.message(
       'Adding..',
       name: 'adding',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid unit name`
+  String get pleaseEnterAValidUnitName {
+    return Intl.message(
+      'Please enter a valid unit name',
+      name: 'pleaseEnterAValidUnitName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter unit name`
+  String get pleaseEnterUnitName {
+    return Intl.message(
+      'Please enter unit name',
+      name: 'pleaseEnterUnitName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product Details`
+  String get productDetails {
+    return Intl.message(
+      'Product Details',
+      name: 'productDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Smart watch`
+  String get smartWatch {
+    return Intl.message(
+      'Smart watch',
+      name: 'smartWatch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Apple Watch`
+  String get appleWatch {
+    return Intl.message(
+      'Apple Watch',
+      name: 'appleWatch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Deleting....`
+  String get deleting {
+    return Intl.message(
+      'Deleting....',
+      name: 'deleting',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Brand`
+  String get brand {
+    return Intl.message(
+      'Brand',
+      name: 'brand',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.`
+  String get loremIpsumDolorSit {
+    return Intl.message(
+      'Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.',
+      name: 'loremIpsumDolorSit',
       desc: '',
       args: [],
     );

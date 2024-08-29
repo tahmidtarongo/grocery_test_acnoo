@@ -63,9 +63,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Already Added"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account? "),
+        "amarSonarBangla":
+            MessageLookupByLibrary.simpleMessage("Amar sonar bangla"),
         "amount": MessageLookupByLibrary.simpleMessage("Amount"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "A new update available\nPlease update your app"),
+        "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
         "apply": MessageLookupByLibrary.simpleMessage("Apply"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("Are you sure?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
@@ -74,6 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "balance": MessageLookupByLibrary.simpleMessage("Balance"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("Bangladesh"),
         "billTO": MessageLookupByLibrary.simpleMessage("Bill To"),
+        "brand": MessageLookupByLibrary.simpleMessage("Brand"),
         "brandName": MessageLookupByLibrary.simpleMessage("Brand name"),
         "brands": MessageLookupByLibrary.simpleMessage("Brands"),
         "businessCat":
@@ -152,6 +156,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "dealer": MessageLookupByLibrary.simpleMessage("Dealer"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage("Dealer price"),
         "delete": MessageLookupByLibrary.simpleMessage("Delete"),
+        "deleting": MessageLookupByLibrary.simpleMessage("Deleting...."),
         "deliveryAddress":
             MessageLookupByLibrary.simpleMessage("Delivery Address"),
         "deliveryCharge":
@@ -309,6 +314,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Lorem ipsum dolor sit amet, consectetur adip gravi iscing elit. Ultricies gravida scelerisque arcu facilisis duis in."),
         "loremIpsumDolor": MessageLookupByLibrary.simpleMessage(
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Natoque aliquet et, cur eget. Tellus sapien odio aliq."),
+        "loremIpsumDolorSit": MessageLookupByLibrary.simpleMessage(
+            "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."),
         "loremIpsumDolorSitAmetConsecteturElitInterdumCons":
             MessageLookupByLibrary.simpleMessage(
                 "Lorem ipsum dolor sit amet, consectetur elit. Interdum cons."),
@@ -419,10 +426,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "Please enter a valid purchase price"),
         "pleaseEnterAValidSalePrice": MessageLookupByLibrary.simpleMessage(
             "Please enter a valid Sale price"),
+        "pleaseEnterAValidUnitName": MessageLookupByLibrary.simpleMessage(
+            "Please enter a valid unit name"),
         "pleaseEnterAmount":
             MessageLookupByLibrary.simpleMessage("Please Enter Amount"),
         "pleaseEnterName":
             MessageLookupByLibrary.simpleMessage("Please Enter Name"),
+        "pleaseEnterUnitName":
+            MessageLookupByLibrary.simpleMessage("Please enter unit name"),
         "pleaseEnterValidPhoneAndNameFirst":
             MessageLookupByLibrary.simpleMessage(
                 "Please Enter valid phone and name first"),
@@ -449,6 +460,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "productCode": MessageLookupByLibrary.simpleMessage("Product Code"),
         "productCodeIsRequired":
             MessageLookupByLibrary.simpleMessage("product code is required"),
+        "productDetails":
+            MessageLookupByLibrary.simpleMessage("Product Details"),
         "productList": MessageLookupByLibrary.simpleMessage("Product List"),
         "productName": MessageLookupByLibrary.simpleMessage("Product name"),
         "productUnit": MessageLookupByLibrary.simpleMessage("Product Unit"),
@@ -553,10 +566,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "shopRemainingBalance":
             MessageLookupByLibrary.simpleMessage("Shop Remaining Balance"),
         "signIn": MessageLookupByLibrary.simpleMessage("Sign in"),
+        "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "size": MessageLookupByLibrary.simpleMessage("Size"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
         "skipTheUpdate":
             MessageLookupByLibrary.simpleMessage("Skip the update"),
+        "smartWatch": MessageLookupByLibrary.simpleMessage("Smart watch"),
         "socialMarketing":
             MessageLookupByLibrary.simpleMessage("Social Marketing"),
         "somethingIs": MessageLookupByLibrary.simpleMessage("Something is"),
