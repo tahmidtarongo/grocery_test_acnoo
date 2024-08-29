@@ -32,6 +32,9 @@ dependencies:
 
   flutter_localizations:
     sdk: flutter
+  intl:
+
+
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -59,7 +62,6 @@ dependencies:
   in_app_update: ^4.0.1
   shared_preferences: ^2.0.15
   restart_app: ^1.2.1
-  intl:
   pinput: ^5.0.0
   nb_utils: ^7.0.3
   youtube_player_flutter: ^9.0.1
@@ -97,12 +99,14 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
   uses-material-design: true
+  generate: true
   assets:
     - images/
     - assets/
 
 flutter_intl:
   enabled: true
+
 
 icons_launcher:
   image_path: "images/appIcon.png"
