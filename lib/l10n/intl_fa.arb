@@ -469,7 +469,12 @@
   "appleWatch": "اپل واچ",
   "deleting": "در حال حذف....",
   "brand": "برند",
-  "loremIpsumDolorSit": "لورم ایپسوم dolor sit amet، consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."
-
+  "loremIpsumDolorSit": "لورم ایپسوم dolor sit amet، consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.",
+  "details": "تفاصيل",
+  "weSentAnOTPInYourPhoneNumber": "لقد أرسلنا لك رمز التحقق (OTP) على رقم هاتفك",
+  "pleaseEnterTheOTP": "الرجاء إدخال رمز التحقق (OTP)",
+  "enterAValidOTP": "أدخل رمز التحقق (OTP) صالحًا",
+  "verify": "التحقق",
+  "resendOTPIn ": "إعادة إرسال رمز التحقق (OTP) في"
 
 }

@@ -466,7 +466,12 @@
   "appleWatch": "Apple Watch",
   "deleting": "Жою...",
   "brand": "Бренд",
-  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."
-
+  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.",
+  "Details": "Толығырақ",
+  "We sent an OTP in your phone number": "Сіздің телефон нөміріңізге OTP жібердік",
+  "Please enter the OTP": "OTP кодын енгізіңіз",
+  "Enter a valid OTP": "Жарамды OTP кодын енгізіңіз",
+  "Verify": "Тексеру",
+  "Resend OTP in": "OTP қайта жіберу"
 
 }

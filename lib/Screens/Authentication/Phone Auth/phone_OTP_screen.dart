@@ -87,8 +87,10 @@ class _OTPVerifyState extends State<OTPVerify> {
                   style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 10),
-                const Text(
-                  'We sent an OTP in your phone number',
+                 Text(
+                   //lang.S.of(context)
+                   lang.S.of(context).weSentAnOTPInYourPhoneNumber,
+                 // 'We sent an OTP in your phone number',
                   style: TextStyle(
                     fontSize: 16,
                   ),
@@ -125,10 +127,12 @@ class _OTPVerifyState extends State<OTPVerify> {
                           PinTheme(width: 50, height: 50, decoration: BoxDecoration(color: Colors.red.shade200, borderRadius: const BorderRadius.all(Radius.circular(8)))),
                       validator: (value) {
                         if (value.isEmptyOrNull) {
-                          return 'Please enter the OTP';
+                          //return 'Please enter the OTP';
+                          return lang.S.of(context).pleaseEnterTheOTP;
                         }
                         if (value!.length < 4) {
-                          return 'Enter a valid OTP';
+                          //return 'Enter a valid OTP';
+                          return lang.S.of(context).enterAValidOTP;
                         } else {
                           return null;
                         }
@@ -156,8 +160,9 @@ class _OTPVerifyState extends State<OTPVerify> {
                           await repo.submitOTP(phoneNumber: widget.phoneNumber, otp: code, context: context);
                         }
                       },
-                      child:  const Text(
-                        'Verify',
+                      child:   Text(
+                       lang.S.of(context).verify,
+                       // 'Verify',
                         style: TextStyle(color: Colors.white),
                       )),
                 ),
@@ -170,14 +175,18 @@ class _OTPVerifyState extends State<OTPVerify> {
                     _start == 0
                         ? GestureDetector(
                             onTap: _resendOtp,
-                            child: const Text(
-                              'Resend OTP',
+                            child:  Text(
+                              //'Resend OTP',
+                            lang.S.of(context).resendOTP,
                               style: TextStyle(color: kMainColor),
                             ))
                         : Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              const Text('Resend OTP in '),
+                               Text(
+                                 lang.S.of(context).resendOTPIn,
+                                  // 'Resend OTP in '
+                               ),
                               Text(
                                 '${_start.toString()} seconds',
                                 style: const TextStyle(color: Colors.grey),

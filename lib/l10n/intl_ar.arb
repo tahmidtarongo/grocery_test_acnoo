@@ -469,7 +469,12 @@
   "appleWatch": "ساعة آبل",
   "deleting": "جارٍ الحذف....",
   "brand": "العلامة التجارية",
-  "loremIpsumDolorSit": "لوريم إيبسوم دولار سيت أميت، كونسكتتور أديبيسيسي إليت."
+  "loremIpsumDolorSit": "لوريم إيبسوم دولار سيت أميت، كونسكتتور أديبيسيسي إليت.",
 
-
+  "details": "التفاصيل",
+  "weSentAnOTPInYourPhoneNumber": "أرسلنا OTP إلى رقم هاتفك",
+  "pleaseEnterTheOTP": "يرجى إدخال OTP",
+  "enterAValidOTP": "أدخل OTP صالح",
+  "verify": "تحقق",
+  "resendOTPIn ": "أعد إرسال OTP في "
 }

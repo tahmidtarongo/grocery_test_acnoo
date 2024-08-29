@@ -465,7 +465,12 @@
   "appleWatch": "Apple Watch",
   "deleting": "Maže se....",
   "brand": "Značka",
-  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."
+  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.",
 
-
+  "details": "Detaily",
+  "weSentAnOTPInYourPhoneNumber": "Odeslali jsme OTP na vaše telefonní číslo",
+  "pleaseEnterTheOTP": "Zadejte OTP",
+  "enterAValidOTP": "Zadejte platné OTP",
+  "verify": "Ověřit",
+  "resendOTPIn ": "Znovu odeslat OTP za "
 }

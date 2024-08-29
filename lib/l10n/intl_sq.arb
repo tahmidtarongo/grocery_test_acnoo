@@ -471,7 +471,12 @@
   "appleWatch": "Apple Watch",
   "deleting": "Fshirja....",
   "brand": "Marka",
-  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."
+  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.",
 
-
+  "Details": "Detaje",
+  "We sent an OTP in your phone number": "Kemi dërguar një OTP në numrin tuaj të telefonit",
+  "Please enter the OTP": "Ju lutem, vendosni OTP-në",
+  "Enter a valid OTP": "Vendosni një OTP të vlefshme",
+  "Verify": "Verifikoni",
+  "Resend OTP in": "Riposhtoni OTP në"
 }

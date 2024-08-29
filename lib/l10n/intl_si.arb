@@ -471,7 +471,12 @@
   "appleWatch": "ඇපල් වොච්",
   "deleting": "මැකීම....",
   "brand": "බ්‍රෑන්ඩ්",
-  "loremIpsumDolorSit": "ලොරම් ඉප්සම් ඩොලෝර් සිට් අමෙට්, කොන්සෙක්ටේටුර ආඩිප් සීල්වන්න. නාටෝක් ආලෙකුවොන් දක්වා."
+  "loremIpsumDolorSit": "ලොරම් ඉප්සම් ඩොලෝර් සිට් අමෙට්, කොන්සෙක්ටේටුර ආඩිප් සීල්වන්න. නාටෝක් ආලෙකුවොන් දක්වා.",
 
-
+  "Details": "විස්තර",
+  "We sent an OTP in your phone number": "ඔබගේ දුරකථන අංකයට OTP යවා ඇත",
+  "Please enter the OTP": "කරුණාකර OTP ලබා දෙන්න",
+  "Enter a valid OTP": "වලංගු OTP එකක් ලබා දෙන්න",
+  "Verify": "සත්‍යාපනය කරන්න",
+  "Resend OTP in": "OTP නැවත යවන්න"
 }

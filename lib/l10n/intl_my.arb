@@ -471,7 +471,12 @@
   "appleWatch": "အက်ပယ် နာရီ",
   "deleting": "ဖျက်နေပါသည်....",
   "brand": "အမှတ်တံဆိပ်",
-  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."
-
+  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.",
+  "Details": "အသေးစိတ်",
+  "We sent an OTP in your phone number": "သင့်ဖုန်းနံပါတ်သို့ OTP ပို့ပြီးပါပြီ",
+  "Please enter the OTP": "OTP ကို ရိုက်ထည့်ပေးပါ",
+  "Enter a valid OTP": "သက်ဆိုင်သော OTP ကို ရိုက်ထည့်ပါ",
+  "Verify": "အတည်ပြုပါ",
+  "Resend OTP in": "OTP ကို နောက်တစ်ကြိမ်ပို့ပါ"
 
 }

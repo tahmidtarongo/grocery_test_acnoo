@@ -467,7 +467,12 @@
   "appleWatch": "Apple Horlosie",
   "deleting": "Verwyder....",
   "brand": "Handelsmerk",
-  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."
+  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.",
 
-
+  "details": "Besonderhede",
+  "weSentAnOTPInYourPhoneNumber": "Ons het 'n OTP na jou foonnommer gestuur",
+  "pleaseEnterTheOTP": "Tik asseblief die OTP in",
+  "enterAValidOTP": "Tik 'n geldige OTP in",
+  "verify": "Verifieer",
+  "resendOTPIn ": "Stuur OTP weer in"
 }

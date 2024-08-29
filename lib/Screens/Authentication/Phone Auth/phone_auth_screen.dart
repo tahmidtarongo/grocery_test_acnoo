@@ -63,9 +63,10 @@ class _PhoneAuthState extends State<PhoneAuth> {
               ),
               const SizedBox(height: 30),
               IntlPhoneField(
-                decoration: const InputDecoration(
-                  labelText: 'Phone Number',
-                  border: OutlineInputBorder(borderSide: BorderSide(), borderRadius: BorderRadius.all(Radius.circular(15))),
+                decoration:  InputDecoration(
+                  //labelText: 'Phone Number',
+                  labelText: lang.S.of(context).phoneNumber,
+                  border: const OutlineInputBorder(borderSide: BorderSide(), borderRadius: BorderRadius.all(Radius.circular(15))),
                 ),
                 initialCountryCode: 'BD',
                 onChanged: (phone) {
@@ -170,7 +171,10 @@ class _PhoneAuthState extends State<PhoneAuth> {
                           OTPVerify(phoneNumber: phoneNumber!).launch(context);
                         }
                       } else {
-                        EasyLoading.showError('Enter a valid Phone Number');
+                        EasyLoading.showError(
+                          lang.S.of(context).pleaseEnterAValidPhoneNumber,
+                            //'Enter a valid Phone Number'
+                        );
                       }
                     },
                     child: Text(

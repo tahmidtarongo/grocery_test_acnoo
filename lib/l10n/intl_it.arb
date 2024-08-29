@@ -466,7 +466,12 @@
   "appleWatch": "Apple Watch",
   "deleting": "Eliminando....",
   "brand": "Marca",
-  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."
-
+  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.",
+  "details": "Dettagli",
+  "weSentAnOTPInYourPhoneNumber": "Abbiamo inviato un OTP al tuo numero di telefono",
+  "pleaseEnterTheOTP": "Per favore inserisci l'OTP",
+  "enterAValidOTP": "Inserisci un OTP valido",
+  "verify": "Verifica",
+  "resendOTPIn ": "Invia di nuovo l'OTP in "
 
 }

@@ -471,8 +471,13 @@
   "appleWatch": "Apple Saatı",
   "deleting": "Silinir....",
   "brand": "Marka",
-  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."
-
+  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.",
+  "details": "Təfərrüatlar",
+  "weSentAnOTPInYourPhoneNumber": "Telefon nömrənizə OTP göndərdik",
+  "pleaseEnterTheOTP": "OTP-ni daxil edin",
+  "enterAValidOTP": "Doğru OTP daxil edin",
+  "verify": "Təsdiqlə",
+  "resendOTPIn ": "OTP-ni yenidən göndəri"
 
 
 }

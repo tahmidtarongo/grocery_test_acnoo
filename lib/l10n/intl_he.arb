@@ -466,7 +466,12 @@
   "appleWatch": "אפל ווטש",
   "deleting": "מוחק....",
   "brand": "מותג",
-  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."
+  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.",
 
-
+  "Details": "פרטים",
+  "We sent an OTP in your phone number": "שלחנו OTP למספר הטלפון שלך",
+  "Please enter the OTP": "אנא הזן את ה-OTP",
+  "Enter a valid OTP": "הזן OTP תקף",
+  "Verify": "אשר",
+  "Resend OTP in": "שלח מחדש את ה-OTP ב"
 }

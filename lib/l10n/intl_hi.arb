@@ -469,7 +469,12 @@
   "appleWatch": "एप्पल वॉच",
   "deleting": "हटा रहे हैं....",
   "brand": "ब्रांड",
-  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."
+  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.",
 
-
+  "details": "विवरण",
+  "weSentAnOTPInYourPhoneNumber": "हमने आपके फोन नंबर पर एक OTP भेजा है",
+  "pleaseEnterTheOTP": "कृपया OTP दर्ज करें",
+  "enterAValidOTP": "एक वैध OTP दर्ज करें",
+  "verify": "सत्यापित करें",
+  "resendOTPIn ": "OTP पुनः भेजें "
 }

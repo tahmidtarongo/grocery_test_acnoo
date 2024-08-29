@@ -84,30 +84,11 @@ class _ProductListState extends State<ProductList> {
                           color: kGreyTextColor,
                         ),
                         const SizedBox(width: 10),
-
-
-
-
-
-
-
                         Text(
-                          //lang.S.of(context).brands
-                          "Brand",
+                          lang.S.of(context).brand,
+                          //"Brand",
                           style: gTextStyle.copyWith(color: kGreyTextColor),
                         )
-
-
-
-
-
-
-
-
-
-
-
-
                       ],
                     ),
                   ),
@@ -237,27 +218,14 @@ class _ProductListState extends State<ProductList> {
                                   PopupMenuItem(
                                     onTap: () async {
                                       bool confirmDelete = await showDeleteAlert(context: context, itemsName: 'product');
-
-
-
-
-
-
                                       if (confirmDelete) {
                                         EasyLoading.show(status:
-                                            //lang.S.of(context).,
-                                        'Deleting....'
+                                            lang.S.of(context).deleting,
+                                       // 'Deleting....'
                                         );
                                         ProductRepo productRepo = ProductRepo();
                                         await productRepo.deleteProduct(id: products[i].id.toString(), context: context, ref: ref);
                                       }
-
-
-
-
-
-
-
                                     },
                                     value: 1,
                                     // row has two child icon and text.

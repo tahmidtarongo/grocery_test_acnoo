@@ -469,8 +469,13 @@
   "appleWatch": "Apple Watch",
   "deleting": "Διαγραφή....",
   "brand": "Μάρκα",
-  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan vulputate tellus scelerisque odio consectetur tincidunt semper."
-
+  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan vulputate tellus scelerisque odio consectetur tincidunt semper.",
+  "details": "Λεπτομέρειες",
+  "weSentAnOTPInYourPhoneNumber": "Στείλαμε έναν OTP στον αριθμό τηλεφώνου σας",
+  "pleaseEnterTheOTP": "Παρακαλώ εισάγετε το OTP",
+  "enterAValidOTP": "Εισάγετε ένα έγκυρο OTP",
+  "verify": "Επιβεβαίωση",
+  "resendOTPIn ": "Επαναποστολή OTP σε "
 
 
 }

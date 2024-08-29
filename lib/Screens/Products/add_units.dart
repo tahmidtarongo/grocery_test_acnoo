@@ -74,15 +74,16 @@ class _AddUnitsState extends State<AddUnits> {
                   controller: unitController,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please enter a valid unit name';
-                     //return lang.S.of(context).pleaseEnterAValidU;
+                     // return 'Please enter a valid unit name';
+                     return lang.S.of(context).pleaseEnterAValidUnitName;
 
                     }
                     return null;
                   },
                   decoration: InputDecoration(
-                    border: const OutlineInputBorder(),
-                    hintText: 'Please enter unit name',
+                    border:  OutlineInputBorder(),
+                   // hintText: 'Please enter unit name',
+                    hintText: lang.S.of(context).pleaseEnterUnitName,
                     floatingLabelBehavior: FloatingLabelBehavior.always,
                     labelText: lang.S.of(context).unitName,
                   ),

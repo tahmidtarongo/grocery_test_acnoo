@@ -4739,6 +4739,55 @@ class S {
       args: [],
     );
   }
+  /// `Details`
+  String get details {
+    return Intl.message(
+      'Details',
+      name: 'details',
+      desc: '',
+      args: [],
+    );
+  }
+  String get weSentAnOTPInYourPhoneNumber {
+    return Intl.message(
+      'We sent an OTP in your phone number',
+      name: 'weSentAnOTPInYourPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+  String get pleaseEnterTheOTP {
+    return Intl.message(
+      'Please enter the OTP',
+      name: 'pleaseEnterTheOTP',
+      desc: '',
+      args: [],
+    );
+  }
+  String get enterAValidOTP {
+    return Intl.message(
+      'Enter a valid OTP',
+      name: 'enterAValidOTP',
+      desc: '',
+      args: [],
+    );
+  }
+  String get verify {
+    return Intl.message(
+      'Verify',
+      name: 'verify',
+      desc: '',
+      args: [],
+    );
+  }
+  String get resendOTPIn {
+    return Intl.message(
+      'Resend OTP in',
+      name: 'resendOTPIn',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

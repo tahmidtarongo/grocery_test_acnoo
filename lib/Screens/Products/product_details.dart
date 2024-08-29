@@ -23,8 +23,8 @@ class _ProductDetailsState extends State<ProductDetails> {
         backgroundColor: kWhite,
         surfaceTintColor: kWhite,
         title: Text(
-         //lang.S.of(context).productDetails,
-         'Product Details',
+         lang.S.of(context).productDetails,
+         //'Product Details',
           style: GoogleFonts.poppins(
             color: kTitleColor,
           ),
@@ -82,49 +82,40 @@ class _ProductDetailsState extends State<ProductDetails> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                         // lang.S.of(context).
-                          'Smart watch',
+                          lang.S.of(context).smartWatch,
+                          //'Smart watch',
                           style: gTextStyle.copyWith(fontWeight: FontWeight.bold, color: kTitleColor, fontSize: 20),
                         ),
                         Text(
-                          'Apple Watch',
+                          lang.S.of(context).appleWatch,
+                          //'Apple Watch',
                           style: gTextStyle.copyWith(color: kGreyTextColor),
                         ),
                       ],
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Text(
                       '$currency 175.0',
                       style: gTextStyle.copyWith(fontSize: 20, fontWeight: FontWeight.bold, color: kTitleColor),
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Text(
-                // lang.S.of(context).
-                  'Details',
+                 lang.S.of(context).details,
+                 // 'Details',
                   style: gTextStyle.copyWith(fontWeight: FontWeight.bold, color: kTitleColor),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-
-
-
-
-
                 Text(
                   lang.S.of(context).loremIpsumDolor,
                   //'Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.',
                   style: gTextStyle.copyWith(color: kGreyTextColor),
                 ),
-
-
-
-
-
                 SizedBox(
                   height: 20,
                 ),

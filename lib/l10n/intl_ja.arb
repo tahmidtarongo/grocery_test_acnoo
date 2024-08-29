@@ -466,7 +466,12 @@
   "appleWatch": "アップルウォッチ",
   "deleting": "削除中....",
   "brand": "ブランド",
-  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan vulputate tellus scelerisque odio consectetur tincidunt semper."
-
+  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan vulputate tellus scelerisque odio consectetur tincidunt semper.",
+  "details": "詳細",
+  "weSentAnOTPInYourPhoneNumber": "あなたの電話番号に OTP を送信しました",
+  "pleaseEnterTheOTP": "OTP を入力してください",
+  "enterAValidOTP": "有効な OTP を入力してください",
+  "verify": "確認",
+  "resendOTPIn ": "OTP を再送信する "
 
 }

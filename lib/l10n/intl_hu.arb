@@ -471,7 +471,12 @@
   "appleWatch": "Apple Watch",
   "deleting": "Törlés....",
   "brand": "Márka",
-  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."
+  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.",
 
-
+  "Details": "Részletek",
+  "We sent an OTP in your phone number": "Elküldtük az OTP-t a telefonszámára",
+  "Please enter the OTP": "Kérjük, adja meg az OTP-t",
+  "Enter a valid OTP": "Adjon meg egy érvényes OTP-t",
+  "Verify": "Ellenőrzés",
+  "Resend OTP in": "Újraküldés OTP itt"
 }

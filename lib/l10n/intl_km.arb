@@ -470,7 +470,12 @@
   "appleWatch": "នាឡិកា Apple",
   "deleting": "កំពុងលុប....",
   "brand": "ម៉ាក",
-  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."
-
+  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.",
+  "Details": "ព័ត៌មានលម្អិត",
+  "We sent an OTP in your phone number": "យើងបានផ្ញើ OTP ទៅលេខទូរស័ព្ទរបស់អ្នក",
+  "Please enter the OTP": "សូមបញ្ចូល OTP",
+  "Enter a valid OTP": "បញ្ចូល OTP ដែលមានសុពលភាព",
+  "Verify": "ផ្ទៀងផ្ទាត់",
+  "Resend OTP in": "ផ្ញើ OTP ម្តងទៀតនៅក្នុង"
 
 }

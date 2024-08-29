@@ -466,8 +466,13 @@
   "appleWatch": "애플워치",
   "deleting": "삭제하는 중...",
   "brand": "브랜드",
-  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."
+  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.",
 
-
+  "Details": "상세정보",
+  "We sent an OTP in your phone number": "전화번호로 OTP를 전송했습니다",
+  "Please enter the OTP": "OTP를 입력해 주세요",
+  "Enter a valid OTP": "유효한 OTP를 입력해 주세요",
+  "Verify": "확인",
+  "Resend OTP in": "다시 OTP 전송"
 
 }
