@@ -204,7 +204,7 @@ class _ProductListState extends State<ProductList> {
                                           IconlyBold.edit,
                                           color: kGreyTextColor,
                                         ),
-                                        SizedBox(width: 10),
+                                        const SizedBox(width: 10),
                                         Text(
                                           lang.S.of(context).edit,
                                           //"Edit",

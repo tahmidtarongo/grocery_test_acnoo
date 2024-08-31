@@ -102,7 +102,8 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                   Row(
                     children: [
                       Text(
-                        'Name: ${widget.transitionModel.party?.name ?? ''}',
+                        //'Name: ${widget.transitionModel.party?.name ?? ''}',
+                        '${lang.S.of(context).name} : ${widget.transitionModel.party?.name ?? ''}',
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                       const Spacer(),
@@ -116,7 +117,8 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                   Row(
                     children: [
                       Text(
-                        'Phone: ${widget.transitionModel.party?.phone ?? ''}',
+                        //'Phone: ${widget.transitionModel.party?.phone ?? ''}',
+                        '${lang.S.of(context).phonee} ${widget.transitionModel.party?.phone ?? ''}',
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                       const Spacer(),
@@ -128,7 +130,8 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                   ),
                   const SizedBox(height: 5.0),
                   Text(
-                    'Purchase By: ${widget.transitionModel.user?.name ?? ''}',
+                    //'Purchase By: ${widget.transitionModel.user?.name ?? ''}',
+                    '${lang.S.of(context).purchaseBy} ${widget.transitionModel.user?.name ?? ''}',
                     style: kTextStyle.copyWith(color: kGreyTextColor),
                   ),
                   const SizedBox(height: 10.0),
@@ -510,10 +513,11 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                         Radius.circular(30),
                       ),
                     ),
-                    child: const Center(
+                    child:  Center(
                       child: Text(
-                        'Cancel',
-                        style: TextStyle(
+                        lang.S.of(context).cancel,
+                        ///'Cancel',
+                        style: const TextStyle(
                           fontSize: 18,
                           color: Colors.white,
                         ),
@@ -557,7 +561,10 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                                                 String mac = list[1];
                                                 bool isConnect = await printerData.setConnect(mac);
                                                 // ignore: use_build_context_synchronously
-                                                isConnect ? finish(context) : toast('Try Again');
+                                                isConnect ? finish(context) : toast(
+                                                  lang.S.of(context).tryAgain,
+                                                    //'Try Again'
+                                                );
                                               },
                                               title: Text('${printerData.availableBluetoothDevices[index]}'),
                                               subtitle: Text(lang.S.of(context).clickToConnect),

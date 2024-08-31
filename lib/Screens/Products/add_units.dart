@@ -81,7 +81,7 @@ class _AddUnitsState extends State<AddUnits> {
                     return null;
                   },
                   decoration: InputDecoration(
-                    border:  OutlineInputBorder(),
+                    border:  const OutlineInputBorder(),
                    // hintText: 'Please enter unit name',
                     hintText: lang.S.of(context).pleaseEnterUnitName,
                     floatingLabelBehavior: FloatingLabelBehavior.always,

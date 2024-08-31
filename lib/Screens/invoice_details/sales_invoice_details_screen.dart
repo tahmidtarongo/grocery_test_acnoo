@@ -102,7 +102,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                   Row(
                     children: [
                       Text(
-                        'Name: ${widget.saleTransaction.party?.name ?? ''}',
+                        '${lang.S.of(context).name} : ${widget.saleTransaction.party?.name ?? ''}',
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                       const Spacer(),
@@ -116,7 +116,7 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                   Row(
                     children: [
                       Text(
-                        'Phone: ${widget.saleTransaction.party?.phone ?? (widget.saleTransaction.meta?.customerPhone ?? 'Guest')}',
+                        '${lang.S.of(context).phonee} ${widget.saleTransaction.party?.phone ?? (widget.saleTransaction.meta?.customerPhone ?? 'Guest')}',
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                       const Spacer(),
@@ -128,7 +128,8 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                   ),
                   const SizedBox(height: 5.0),
                   Text(
-                    'Sales By: ${widget.saleTransaction.user?.name ?? ''}',
+                   // 'Sales By: ${widget.saleTransaction.user?.name ?? ''}',
+                    '${lang.S.of(context).salesBy} ${widget.saleTransaction.user?.name ?? ''}',
                     style: kTextStyle.copyWith(color: kGreyTextColor),
                   ),
                   const SizedBox(height: 10.0),
@@ -490,10 +491,11 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                         Radius.circular(30),
                       ),
                     ),
-                    child: const Center(
+                    child:  Center(
                       child: Text(
-                        'Cancel',
-                        style: TextStyle(
+                        lang.S.of(context).cancel,
+                        //'Cancel',
+                        style: const TextStyle(
                           fontSize: 18,
                           color: Colors.white,
                         ),
@@ -536,7 +538,10 @@ class _SalesInvoiceDetailsState extends State<SalesInvoiceDetails> {
                                                 String mac = list[1];
                                                 bool isConnect = await printerData.setConnect(mac);
                                                 // ignore: use_build_context_synchronously
-                                                isConnect ? finish(context) : toast('Try Again');
+                                                isConnect ? finish(context) : toast(
+                                                  lang.S.of(context).tryAgain,
+                                                    //'Try Again'
+                                                );
                                               },
                                               title: Text('${printerData.availableBluetoothDevices[index]}'),
                                               subtitle: Text(lang.S.of(context).clickToConnect),

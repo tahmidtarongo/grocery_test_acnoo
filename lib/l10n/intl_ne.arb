@@ -472,6 +472,18 @@
   "pleaseEnterTheOTP": "कृपया OTP प्रविष्ट गर्नुहोस्",
   "enterAValidOTP": "मान्य OTP प्रविष्ट गर्नुहोस्",
   "verify": "सत्यापित गर्नुहोस्",
-  "resendOTPIn ": "OTP पुनः पठाउनुहोस् "
+  "resendIn": "OTP पुनः पठाउनुहोस् ",
+  "dueCollection": "बाँकी रकम उठाउने",
+  "noTransaction": "कुनै कारोबार छैन",
+  "updating": "अपडेट गर्दै...",
+  "confirmSMSTo": "SMS पुष्टि गर्नुहोस्",
+  "anSMSWillBeSentToTheFollowingNumber": "निम्न नम्बरमा SMS पठाइनेछ:",
+  "package": "प्याकेज",
+  "permissionNotGranted": "अनुमति प्रदान गरिएको छैन!",
+  "collectedBy": "संकलनकर्ता:",
+  "phonee": "फोन:",
+  "purchaseBy": "खरिदकर्ता:",
+  "salesBy": "बिक्रेता:",
+  "days": "दिन"
 
 }

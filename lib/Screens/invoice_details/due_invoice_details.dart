@@ -101,7 +101,7 @@ class _DueInvoiceDetailsState extends State<DueInvoiceDetails> {
                   Row(
                     children: [
                       Text(
-                        'Name: ${widget.dueCollection.party?.name ?? ''}',
+                        '${lang.S.of(context).name} : ${widget.dueCollection.party?.name ?? ''}',
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                       const Spacer(),
@@ -115,7 +115,7 @@ class _DueInvoiceDetailsState extends State<DueInvoiceDetails> {
                   Row(
                     children: [
                       Text(
-                        'Phone: ${widget.dueCollection.party?.phone ?? ''}',
+                        '${lang.S.of(context).phonee} ${widget.dueCollection.party?.phone ?? ''}',
                         style: kTextStyle.copyWith(color: kGreyTextColor),
                       ),
                       const Spacer(),
@@ -127,7 +127,7 @@ class _DueInvoiceDetailsState extends State<DueInvoiceDetails> {
                   ),
                   const SizedBox(height: 5.0),
                   Text(
-                    'Collected By: ${widget.dueCollection.user?.name ?? ''}',
+                    '${lang.S.of(context).collectedBy} ${widget.dueCollection.user?.name ?? ''}',
                     style: kTextStyle.copyWith(color: kGreyTextColor),
                   ),
                   const SizedBox(height: 10.0),
@@ -239,10 +239,11 @@ class _DueInvoiceDetailsState extends State<DueInvoiceDetails> {
                         Radius.circular(30),
                       ),
                     ),
-                    child: const Center(
+                    child:  Center(
                       child: Text(
-                        'Cancel',
-                        style: TextStyle(
+                        lang.S.of(context).cancel,
+                       // 'Cancel',
+                        style: const TextStyle(
                           fontSize: 18,
                           color: Colors.white,
                         ),
@@ -284,7 +285,10 @@ class _DueInvoiceDetailsState extends State<DueInvoiceDetails> {
                                                 String mac = list[1];
                                                 bool isConnect = await printerData.setConnect(mac);
                                                 // ignore: use_build_context_synchronously
-                                                isConnect ? finish(context) : toast('Try Again');
+                                                isConnect ? finish(context) : toast(
+                                                  lang.S.of(context).tryAgain,
+                                                    //'Try Again'
+                                                );
                                               },
                                               title: Text('${printerData.availableBluetoothDevices[index]}'),
                                               subtitle: Text(lang.S.of(context).clickToConnect),

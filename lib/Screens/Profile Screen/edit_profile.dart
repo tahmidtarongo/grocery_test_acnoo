@@ -154,7 +154,7 @@ class _EditProfileState extends State<EditProfile> {
               child: Column(
                 children: [
                   Padding(
-                    padding:  EdgeInsets.all(10.0),
+                    padding:  const EdgeInsets.all(10.0),
                     child: Text(
                       lang.S.of(context).updateYourProfile,
                      // "Update your profile to connect your customer with better impression",

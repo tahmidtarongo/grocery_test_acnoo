@@ -477,6 +477,20 @@
   "pleaseEnterTheOTP": "অনুগ্রহ করে OTP প্রবেশ করুন",
   "enterAValidOTP": "একটি বৈধ OTP প্রবেশ করুন",
   "verify": "যাচাই করুন",
-  "resendOTPIn ": "OTP পুনরায় প্রেরণ করুন "
+  "resendIn": "OTP পুনরায় প্রেরণ করুন ",
+
+
+  "dueCollection": "বকেয়া সংগ্রহ",
+  "noTransaction": "কোন লেনদেন নেই",
+  "updating": "আপডেট হচ্ছে...",
+  "confirmSMSTo": "এসএমএস নিশ্চিত করুন",
+  "anSMSWillBeSentToTheFollowingNumber": "নিচের নম্বরে একটি এসএমএস পাঠানো হবে: ",
+  "package": "প্যাকেজ",
+  "permissionNotGranted": "অনুমতি দেওয়া হয়নি!",
+  "collectedBy": "সংগ্রহ করেছে:",
+  "phonee": "ফোন:",
+  "purchaseBy": "কেনেছে:",
+  "salesBy": "বিক্রি করেছে:",
+  "days": "দিন"
 
 }

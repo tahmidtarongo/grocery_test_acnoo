@@ -27,7 +27,7 @@ class _SmsConfirmationPopupState extends State<SmsConfirmationPopup> with Single
     super.initState();
     _animationController = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 250),
+      duration: const Duration(milliseconds: 250),
     );
   }
 
@@ -55,12 +55,14 @@ class _SmsConfirmationPopupState extends State<SmsConfirmationPopup> with Single
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                'Confirm SMS to ${widget.customerName}',
+               // 'Confirm SMS to ${widget.customerName}',
+                '${lang.S.of(context).confirmSMSTo} ${widget.customerName}',
                 style: Theme.of(context).textTheme.bodyMedium,
               ),
               const SizedBox(height: 8.0),
               Text(
-                'An SMS will be sent to the following number: ${widget.phoneNumber}',
+                //'An SMS will be sent to the following number: ${widget.phoneNumber}',
+                '${lang.S.of(context).anSMSWillBeSentToTheFollowingNumber} ${widget.phoneNumber}',
                 style: Theme.of(context).textTheme.bodySmall,
               ),
               const SizedBox(
@@ -85,7 +87,7 @@ class _SmsConfirmationPopupState extends State<SmsConfirmationPopup> with Single
                     child:  Text(
                       lang.S.of(context).sendSMS,
                      // 'Send SMS',
-                      style: TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.white),
                     ),
                   ),
                 ],

@@ -474,5 +474,19 @@
   "pleaseEnterTheOTP": "Tik asseblief die OTP in",
   "enterAValidOTP": "Tik 'n geldige OTP in",
   "verify": "Verifieer",
-  "resendOTPIn ": "Stuur OTP weer in"
+  "resendIn": "Stuur OTP weer in",
+
+
+  "dueCollection": "Vorderende Invordering",
+  "noTransaction": "Geen Transaksie",
+  "updating": "Opdateer...",
+  "confirmSMSTo": "Bevestig SMS na",
+  "anSMSWillBeSentToTheFollowingNumber": "‘n SMS sal na die volgende nommer gestuur word: ",
+  "package": "Pakket",
+  "permissionNotGranted": "Toestemming nie verleen nie!",
+  "collectedBy": "Ingewin deur:",
+  "phonee": "Telefoon:",
+  "purchaseBy": "Gekoop deur:",
+  "salesBy": "Verkoop deur:",
+  "days": "dae"
 }

@@ -36,6 +36,7 @@ class _AddExpenseState extends State<AddExpense> {
   TextEditingController expanseNoteController = TextEditingController();
   TextEditingController expanseRefController = TextEditingController();
   List<String> paymentMethods = [
+    //lang.S.of(context).cancel,
     'Cash',
     'Bank',
     'Card',

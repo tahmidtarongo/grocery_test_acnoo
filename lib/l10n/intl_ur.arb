@@ -472,6 +472,19 @@
   "pleaseEnterTheOTP": "براہ کرم OTP درج کریں",
   "enterAValidOTP": "براہ کرم ایک درست OTP درج کریں",
   "verify": "تصدیق کریں",
-  "resendOTPIn ": "OTP دوبارہ بھیجیں"
+  "resendIn": "OTP دوبارہ بھیجیں",
+
+  "dueCollection": "واجب وصولی",
+  "noTransaction": "کوئی معاملہ نہیں",
+  "updating": "اپ ڈیٹ کر رہا ہے...",
+  "confirmSMSTo": "ایس ایم ایس کی تصدیق کریں",
+  "anSMSWillBeSentToTheFollowingNumber": "ایس ایم ایس مندرجہ ذیل نمبر پر بھیجا جائے گا:",
+  "package": "پیکیج",
+  "permissionNotGranted": "اجازت نہیں دی گئی!",
+  "collectedBy": "جمع کیا گیا:",
+  "phonee": "فون:",
+  "purchaseBy": "خریداری کی گئی:",
+  "salesBy": "فروخت کیا گیا:",
+  "days": "دن"
 
 }

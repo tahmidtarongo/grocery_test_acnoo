@@ -472,6 +472,18 @@
   "pleaseEnterTheOTP": "Vă rugăm să introduceți OTP",
   "enterAValidOTP": "Introduceți un OTP valid",
   "verify": "Verificați",
-  "resendOTPIn ": "Retrimite OTP în "
+  "resendIn": "Retrimite OTP în ",
+  "dueCollection": "Recuperarea creanțelor",
+  "noTransaction": "Fără tranzacție",
+  "updating": "Se actualizează...",
+  "confirmSMSTo": "Confirmați SMS către",
+  "anSMSWillBeSentToTheFollowingNumber": "Un SMS va fi trimis la următorul număr:",
+  "package": "Pachet",
+  "permissionNotGranted": "Permisiune nu acordată!",
+  "collectedBy": "Colectat de:",
+  "phonee": "Telefon:",
+  "purchaseBy": "Cumpărat de:",
+  "salesBy": "Vândut de:",
+  "days": "zile"
 
 }

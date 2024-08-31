@@ -551,15 +551,15 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                Icon(
+                                const Icon(
                                   FeatherIcons.camera,
                                   color: Colors.grey,
                                 ),
-                                SizedBox(width: 5),
+                                const SizedBox(width: 5),
                                 Text(
                                   lang.S.of(context).image,
                                   //'Image',
-                                  style: TextStyle(color: Colors.grey, fontSize: 16),
+                                  style: const TextStyle(color: Colors.grey, fontSize: 16),
                                 )
                               ],
                             ),

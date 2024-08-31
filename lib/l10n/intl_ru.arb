@@ -472,6 +472,19 @@
   "pleaseEnterTheOTP": "Пожалуйста, введите OTP",
   "enterAValidOTP": "Введите действительный OTP",
   "verify": "Проверить",
-  "resendOTPIn ": "Отправить OTP снова через "
+  "resendIn": "Отправить OTP снова через ",
+  "dueCollection": "Взыскание задолженности",
+  "noTransaction": "Нет транзакции",
+  "updating": "Обновление...",
+  "confirmSMSTo": "Подтвердить SMS на",
+  "anSMSWillBeSentToTheFollowingNumber": "SMS будет отправлено на следующий номер:",
+  "package": "Пакет",
+  "permissionNotGranted": "Разрешение не предоставлено!",
+  "collectedBy": "Собрано кем:",
+  "phonee": "Телефон:",
+  "purchaseBy": "Куплено кем:",
+  "salesBy": "Продано кем:",
+  "days": "дней"
+
 
 }

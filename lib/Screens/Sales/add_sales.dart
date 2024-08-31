@@ -451,7 +451,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                Text(
                                  lang.S.of(context).vat,
                                // 'VAT',
-                                style: TextStyle(fontSize: 16),
+                                style: const TextStyle(fontSize: 16),
                               ),
                               Row(
                                 children: [
@@ -817,7 +817,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                               child: Text(
                                 lang.S.of(context).save,
                                 //'Save',
-                                style: TextStyle(fontSize: 18, color: Colors.white),
+                                style: const TextStyle(fontSize: 18, color: Colors.white),
                               ),
                             ),
                           ),

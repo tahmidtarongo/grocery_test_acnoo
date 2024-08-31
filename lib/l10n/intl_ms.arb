@@ -472,6 +472,18 @@
   "pleaseEnterTheOTP": "Sila masukkan OTP",
   "enterAValidOTP": "Masukkan OTP yang sah",
   "verify": "Sahkan",
-  "resendOTPIn ": "Hantar semula OTP dalam "
+  "resendIn": "Hantar semula OTP dalam ",
+  "dueCollection": "Pemungutan hutang",
+  "noTransaction": "Tiada urus niaga",
+  "updating": "Sedang mengemas kini...",
+  "confirmSMSTo": "Sahkan SMS kepada",
+  "anSMSWillBeSentToTheFollowingNumber": "SMS akan dihantar ke nombor berikut:",
+  "package": "Pakej",
+  "permissionNotGranted": "Kebenaran tidak diberikan!",
+  "collectedBy": "Dikumpul oleh:",
+  "phonee": "Telefon:",
+  "purchaseBy": "Dibeli oleh:",
+  "salesBy": "Dijual oleh:",
+  "days": "hari"
 
 }

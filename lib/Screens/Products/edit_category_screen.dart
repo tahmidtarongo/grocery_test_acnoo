@@ -84,7 +84,7 @@ class _AddCategoryState extends State<EditCategory> {
                 TextFormField(
                   controller: categoryNameController,
                   decoration:  InputDecoration(
-                    border: OutlineInputBorder(),
+                    border: const OutlineInputBorder(),
                    // hintText: 'Enter category name',
                     hintText: lang.S.of(context).enterCategoryName,
                     floatingLabelBehavior: FloatingLabelBehavior.always,

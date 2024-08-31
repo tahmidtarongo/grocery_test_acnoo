@@ -75,7 +75,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
               child:  Text(
                 lang.S.of(context).delete,
                  // 'Delete',
-                  style: TextStyle(color: Colors.red)),
+                  style: const TextStyle(color: Colors.red)),
             ),
           ],
         );
@@ -422,15 +422,22 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                                                                                           isConnect
                                                                                               // ignore: use_build_context_synchronously
                                                                                               ? finish(context)
-                                                                                              : toast('Try Again');
+                                                                                              : toast(
+                                                                                            lang.S.of(context).tryAgain,
+                                                                                              //'Try Again'
+                                                                                          );
                                                                                         },
                                                                                         title: Text('${printerData.availableBluetoothDevices[index]}'),
-                                                                                        subtitle: const Text("Click to connect"),
+                                                                                       // subtitle:  Text("Click to connect"),
+                                                                                        subtitle:  Text(lang.S.of(context).clickToConnect),
                                                                                       );
                                                                                     },
                                                                                   ),
                                                                                   const SizedBox(height: 10),
-                                                                                  const Text('Connect Your printer'),
+                                                                                   Text(
+                                                                                     lang.S.of(context).connectYourPrinter,
+                                                                                       //'Connect Your printer'
+                                                                                   ),
                                                                                   const SizedBox(height: 10),
                                                                                   Container(height: 1, width: double.infinity, color: Colors.grey),
                                                                                   const SizedBox(height: 15),
@@ -438,10 +445,11 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                                                                                     onTap: () {
                                                                                       Navigator.pop(context);
                                                                                     },
-                                                                                    child: const Center(
+                                                                                    child:  Center(
                                                                                       child: Text(
-                                                                                        'Cancel',
-                                                                                        style: TextStyle(color: kMainColor),
+                                                                                        lang.S.of(context).cancel,
+                                                                                       // 'Cancel',
+                                                                                        style: const TextStyle(color: kMainColor),
                                                                                       ),
                                                                                     ),
                                                                                   ),
@@ -483,7 +491,10 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                                               }, error: (e, stack) {
                                                 return Text(e.toString());
                                               }, loading: () {
-                                                return const Text('Loading');
+                                                return  Text(
+                                                  lang.S.of(context).loading,
+                                                    //'Loading'
+                                                );
                                               }),
                                             ],
                                           ),
@@ -610,15 +621,22 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                                                                                         isConnect
                                                                                             // ignore: use_build_context_synchronously
                                                                                             ? finish(context)
-                                                                                            : toast('Try Again');
+                                                                                            : toast(
+                                                                                          lang.S.of(context).tryAgain,
+                                                                                           // 'Try Again'
+                                                                                        );
                                                                                       },
                                                                                       title: Text('${printerData.availableBluetoothDevices[index]}'),
-                                                                                      subtitle: const Text("Click to connect"),
+                                                                                      //subtitle:  Text("Click to connect"),
+                                                                                      subtitle:  Text(lang.S.of(context).clickToConnect),
                                                                                     );
                                                                                   },
                                                                                 ),
                                                                                 const SizedBox(height: 10),
-                                                                                const Text('Connect Your printer'),
+                                                                                 Text(
+                                                                                   lang.S.of(context).connectYourPrinter,
+                                                                                     //'Connect Your printer'
+                                                                                 ),
                                                                                 const SizedBox(height: 10),
                                                                                 Container(height: 1, width: double.infinity, color: Colors.grey),
                                                                                 const SizedBox(height: 15),
@@ -626,10 +644,11 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                                                                                   onTap: () {
                                                                                     Navigator.pop(context);
                                                                                   },
-                                                                                  child: const Center(
+                                                                                  child:  Center(
                                                                                     child: Text(
-                                                                                      'Cancel',
-                                                                                      style: TextStyle(color: kMainColor),
+                                                                                      lang.S.of(context).cancel,
+                                                                                      //'Cancel',
+                                                                                      style: const TextStyle(color: kMainColor),
                                                                                     ),
                                                                                   ),
                                                                                 ),
@@ -686,7 +705,10 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                                   ),
                                 );
                               },
-                            ):const Text('No Transaction');
+                            ):  Text(
+                              lang.S.of(context).noTransaction,
+                               // 'No Transaction'
+                            );
                           }, error: (e, stack) {
                             return Text(e.toString());
                           }, loading: () {

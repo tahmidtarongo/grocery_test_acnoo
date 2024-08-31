@@ -344,10 +344,10 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                                                                                               },
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: EdgeInsets.only(top: 20, bottom: 10),
+                                                                                              padding: const EdgeInsets.only(top: 20, bottom: 10),
                                                                                               child: Text(
                                                                                                 lang.S.of(context).pleaseConnectYourBlutohPrinter,
-                                                                                                style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                                                                                                style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
                                                                                               ),
                                                                                             ),
                                                                                             const SizedBox(height: 10),
@@ -360,7 +360,7 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                                                                                               child: Center(
                                                                                                 child: Text(
                                                                                                   lang.S.of(context).cancel,
-                                                                                                  style: TextStyle(color: kMainColor),
+                                                                                                  style: const TextStyle(color: kMainColor),
                                                                                                 ),
                                                                                               ),
                                                                                             ),

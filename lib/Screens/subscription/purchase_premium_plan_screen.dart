@@ -152,7 +152,7 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                                         ),
                                         const SizedBox(height: 15),
                                          Padding(
-                                          padding: EdgeInsets.all(8.0),
+                                          padding: const EdgeInsets.all(8.0),
                                           child: Text(
                                             lang.S.of(context).loremIpsumDolor,
                                               //'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Natoque aliquet et, cur eget. Tellus sapien odio aliq.',
@@ -249,7 +249,7 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                                                   Text(
                                                     '${data[index].duration} days',
                                                     textAlign: TextAlign.center,
-                                                    style: TextStyle(
+                                                    style: const TextStyle(
                                                       fontSize: 13,
                                                     ),
                                                   ),
@@ -280,7 +280,8 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                                               ),
                                               child: Center(
                                                 child: Text(
-                                                  'Save ${(100 - (((data[index].offerPrice ?? 0) * 100) / (data[index].subscriptionPrice ?? 0))).round().toString()}%',
+                                                 // 'Save ${(100 - (((data[index].offerPrice ?? 0) * 100) / (data[index].subscriptionPrice ?? 0))).round().toString()}%',
+                                                  '${lang.S.of(context).save} ${(100 - (((data[index].offerPrice ?? 0) * 100) / (data[index].subscriptionPrice ?? 0))).round().toString()}%',
                                                   style: const TextStyle(color: Colors.white),
                                                 ),
                                               ),
@@ -309,7 +310,8 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                                             style: const TextStyle(fontSize: 16),
                                           ),
                                           Text(
-                                            '${data[index].duration} days',
+                                            //'${data[index].duration} days',
+                                            '${data[index].duration} ${lang.S.of(context).days}',
                                             textAlign: TextAlign.center,
                                             style: const TextStyle(
                                               fontSize: 13,

@@ -473,5 +473,17 @@
   "pleaseEnterTheOTP": "Voer de OTP in",
   "enterAValidOTP": "Voer een geldige OTP in",
   "verify": "Verifiëren",
-  "resendOTPIn ": "Herstuur OTP in "
+  "resendIn": "Herstuur OTP in ",
+  "dueCollection": "Openstaande betalingen innen",
+  "noTransaction": "Geen transactie",
+  "updating": "Bijwerken...",
+  "confirmSMSTo": "SMS bevestigen aan",
+  "anSMSWillBeSentToTheFollowingNumber": "Een SMS wordt naar het volgende nummer gestuurd:",
+  "package": "Pakket",
+  "permissionNotGranted": "Toegang niet verleend!",
+  "collectedBy": "Ingepakt door:",
+  "phonee": "Telefoon:",
+  "purchaseBy": "Gekochte door:",
+  "salesBy": "Verkocht door:",
+  "days": "dagen"
 }

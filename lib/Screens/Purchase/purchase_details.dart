@@ -157,7 +157,7 @@ class _PurchaseDetailsState extends State<PurchaseDetails> {
                       width: MediaQuery.of(context).size.width,
                       color: kDarkWhite,
                       child: Padding(
-                        padding:  EdgeInsets.only(left: 25.0, right: 25.0, bottom: 10.0),
+                        padding:  const EdgeInsets.only(left: 25.0, right: 25.0, bottom: 10.0),
                         child: Row(
                           children: [
                             Text(

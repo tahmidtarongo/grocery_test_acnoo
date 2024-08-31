@@ -100,7 +100,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
                 Expanded(
                   child: Padding(
-                    padding: EdgeInsets.all(10.0),
+                    padding: const EdgeInsets.all(10.0),
                     child: IconWithText(
                       bgColor: kMainColor,
                       title: lang.S.of(context).messege,
@@ -111,9 +111,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
                  Expanded(
                   child: Padding(
-                    padding: EdgeInsets.all(10.0),
+                    padding: const EdgeInsets.all(10.0),
                     child: IconWithText(
-                      bgColor: Color(0xFFF1F7F7),
+                      bgColor: const Color(0xFFF1F7F7),
                       title:lang.S.of(context).email,
                       //'Email',
                       iconData: Icons.email_outlined,

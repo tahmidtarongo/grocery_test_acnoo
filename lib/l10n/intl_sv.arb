@@ -460,11 +460,24 @@
   "brand": "Märke",
   "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan vulputate tellus scelerisque odio consectetur tincidunt semper.",
 
-  "Details": "Detaily",
-  "We sent an OTP in your phone number": "Poslali sme OTP na vaše telefónne číslo",
-  "Please enter the OTP": "Prosím, zadajte OTP",
-  "Enter a valid OTP": "Zadajte platné OTP",
-  "Verify": "Overiť",
-  "Resend OTP in": "Znova odoslať OTP za"
+  "details": "Detaily",
+  "weSentAnOTPInYourPhoneNumber": "Poslali sme OTP na vaše telefónne číslo",
+  "pleaseEnterTheOTP": "Prosím, zadajte OTP",
+  "enterAValidOTP": "Zadajte platné OTP",
+  "verify": "Overiť",
+  "resendIn": "Znova odoslať OTP za",
+  "dueCollection": "Inkassering av förfallobetalningar",
+  "noTransaction": "Ingen transaktion",
+  "updating": "Uppdaterar...",
+  "confirmSMSTo": "Bekräfta SMS till",
+  "anSMSWillBeSentToTheFollowingNumber": "Ett SMS kommer att skickas till följande nummer:",
+  "package": "Paket",
+  "permissionNotGranted": "Tillstånd inte beviljat!",
+  "collectedBy": "Insamlad av:",
+  "phonee": "Telefon:",
+  "purchaseBy": "Köpt av:",
+  "salesBy": "Såld av:",
+  "days": "dagar"
+
 
 }

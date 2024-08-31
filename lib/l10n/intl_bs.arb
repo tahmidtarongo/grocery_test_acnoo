@@ -472,6 +472,21 @@
   "pleaseEnterTheOTP": "Unesite OTP",
   "enterAValidOTP": "Unesite ispravan OTP",
   "verify": "Potvrdi",
-  "resendOTPIn ": "Pošalji OTP ponovo za"
+  "resendIn": "Pošalji OTP ponovo za",
+
+
+
+  "dueCollection": "Dugovanje za naplatu",
+  "noTransaction": "Nema transakcija",
+  "updating": "Ažuriranje...",
+  "confirmSMSTo": "Potvrdite SMS na",
+  "anSMSWillBeSentToTheFollowingNumber": "SMS će biti poslat na sledeći broj: ",
+  "package": "Paketi",
+  "permissionNotGranted": "Dozvola nije odobrena!",
+  "collectedBy": "Sakupljeno od strane:",
+  "phonee": "Telefon:",
+  "purchaseBy": "Kupio:",
+  "salesBy": "Prodao:",
+  "days": "dani"
 
 }

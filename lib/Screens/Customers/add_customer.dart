@@ -77,7 +77,7 @@ class _AddPartyState extends State<AddParty> {
                           decoration:  InputDecoration(
                            // labelText: 'Phone Number',
                             labelText: lang.S.of(context).phoneNumber,
-                            border: OutlineInputBorder(
+                            border: const OutlineInputBorder(
                               borderSide: BorderSide(),
                             ),
                           ),

@@ -167,13 +167,13 @@ class _AddProductState extends State<AddProduct> {
                         });
                       },
                       decoration: kInputDecoration.copyWith(
-                        suffixIcon: Icon(Icons.keyboard_arrow_down),
+                        suffixIcon: const Icon(Icons.keyboard_arrow_down),
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         //labelText: 'Product Category',
                         labelText: lang.S.of(context).productCategory,
                         //hintText: 'Select Product Category',
                         hintText: lang.S.of(context).selectProductCategory,
-                        border: OutlineInputBorder(),
+                        border: const OutlineInputBorder(),
                       ),
                     ),
                   ),
@@ -282,7 +282,7 @@ class _AddProductState extends State<AddProduct> {
                         });
                       },
                       decoration: kInputDecoration.copyWith(
-                        suffixIcon: Icon(Icons.keyboard_arrow_down),
+                        suffixIcon: const Icon(Icons.keyboard_arrow_down),
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                        // labelText: 'Product Brand',
                         labelText: lang.S.of(context).productBrand,
@@ -405,7 +405,7 @@ class _AddProductState extends State<AddProduct> {
                               });
                             },
                             decoration: kInputDecoration.copyWith(
-                              suffixIcon: Icon(Icons.keyboard_arrow_down),
+                              suffixIcon: const Icon(Icons.keyboard_arrow_down),
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               //labelText: 'Product Unit',
                               labelText: lang.S.of(context).productUnit,

@@ -475,6 +475,25 @@
   "pleaseEnterTheOTP": "الرجاء إدخال رمز التحقق (OTP)",
   "enterAValidOTP": "أدخل رمز التحقق (OTP) صالحًا",
   "verify": "التحقق",
-  "resendOTPIn ": "إعادة إرسال رمز التحقق (OTP) في"
+  "resendIn": "إعادة إرسال رمز التحقق (OTP) في",
+
+  "dueCollection": "جمع‌آوری معوقه",
+  "noTransaction": "هیچ تراکنشی وجود ندارد",
+  "updating": "در حال به‌روزرسانی...",
+  "confirmSMSTo": "تأیید SMS به",
+  "anSMSWillBeSentToTheFollowingNumber": "یک SMS به شماره زیر ارسال خواهد شد: ",
+  "package": "بسته",
+  "permissionNotGranted": "اجازه داده نشده است!",
+  "collectedBy": "جمع‌آوری شده توسط:",
+  "phonee": "تلفن:",
+  "purchaseBy": "خریداری شده توسط:",
+  "salesBy": "فروشنده:",
+  "days": "روزها"
+
+
+
+
+
+
 
 }

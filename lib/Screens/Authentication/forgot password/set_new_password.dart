@@ -106,7 +106,7 @@ class _SetNewPasswordState extends State<SetNewPassword> {
                   obscureText: showConfirmPassword,
                   decoration: kInputDecoration.copyWith(
                     border: const OutlineInputBorder(),
-                    ///labelText: 'Confirm Password',
+                    //labelText: 'Confirm Password',
                     labelText: lang.S.of(context).confirmPassword,
                     hintText: '********',
                     suffixIcon: IconButton(

@@ -470,11 +470,26 @@
   "deleting": "删除中....",
   "brand": "品牌",
   "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.",
+
   "details": "详情",
   "weSentAnOTPInYourPhoneNumber": "我们已将 OTP 发送到您的手机号码",
   "pleaseEnterTheOTP": "请输入 OTP",
   "enterAValidOTP": "请输入有效的 OTP",
   "verify": "验证",
-  "resendOTPIn ": "在 ... 秒后重新发送 OTP"
+  "resendIn": "在 ... 秒后重新发送 OTP",
+
+  "dueCollection": "应收账款",
+  "noTransaction": "无交易",
+  "updating": "更新中...",
+  "confirmSMSTo": "确认短信到",
+  "anSMSWillBeSentToTheFollowingNumber": "短信将发送到以下号码：",
+  "package": "包裹",
+  "permissionNotGranted": "未授予权限！",
+  "collectedBy": "收集者：",
+  "phonee": "电话：",
+  "purchaseBy": "购买者：",
+  "salesBy": "销售者：",
+  "days": "天"
+
 
 }

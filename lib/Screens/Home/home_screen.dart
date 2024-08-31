@@ -51,8 +51,8 @@ class _HomeScreenState extends State<HomeScreen> {
             surfaceTintColor: kWhite,
             elevation: 0.0,
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-            contentPadding: EdgeInsets.all(20),
-            titlePadding: EdgeInsets.all(0),
+            contentPadding: const EdgeInsets.all(20),
+            titlePadding: const EdgeInsets.all(0),
             content: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -290,23 +290,52 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
+                            // Row(
+                            //   children: [
+                            //     Text(
+                            //      lang.S.of(context).todaySummary,
+                            //       //'Today’s Summary',
+                            //       style: gTextStyle.copyWith(fontWeight: FontWeight.bold, color: kWhite, fontSize: 18),
+                            //     ),
+                            //     const Spacer(),
+                            //     GestureDetector(
+                            //         onTap: () {
+                            //           Navigator.push(context, MaterialPageRoute(builder: (context) => const DashboardScreen()));
+                            //         },
+                            //         child: Text(
+                            //           lang.S.of(context).sellAll,
+                            //
+                            //           //'Sell All >',
+                            //           style: const TextStyle(color: kWhite, fontWeight: FontWeight.w500),
+                            //         )),
+                            //   ],
+                            // ),
                             Row(
                               children: [
-                                Text(
-                                 lang.S.of(context).todaySummary,
-                                  //'Today’s Summary',
-                                  style: gTextStyle.copyWith(fontWeight: FontWeight.bold, color: kWhite, fontSize: 18),
+                                Expanded(
+                                  flex: 3,
+                                  child: Text(
+                                    lang.S.of(context).todaySummary,
+                                    //'Today’s Summary',
+                                    style: gTextStyle.copyWith(fontWeight: FontWeight.bold, color: kWhite, fontSize: 18),
+                                    maxLines: 1,overflow: TextOverflow.ellipsis,
+                                  ),
                                 ),
                                 const Spacer(),
-                                GestureDetector(
-                                    onTap: () {
-                                      Navigator.push(context, MaterialPageRoute(builder: (context) => const DashboardScreen()));
-                                    },
-                                    child: Text(
-                                      lang.S.of(context).sellAll,
-                                      //'Sell All >',
-                                      style: TextStyle(color: kWhite, fontWeight: FontWeight.w500),
-                                    )),
+                                Expanded(
+                                  flex: 1,
+                                  child: GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(context, MaterialPageRoute(builder: (context) => const DashboardScreen()));
+                                      },
+                                      child: Text(
+                                        lang.S.of(context).sellAll,
+
+                                        //'Sell All >',
+                                        style: const TextStyle(color: kWhite, fontWeight: FontWeight.w500),
+                                        maxLines: 1,
+                                      )),
+                                ),
                               ],
                             ),
                             const SizedBox(
@@ -397,7 +426,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     child:  Text(
                                       lang.S.of(context).sellAll,
                                       //'Sell All >',
-                                      style: TextStyle(color: kWhite, fontWeight: FontWeight.w500),
+                                      style: const TextStyle(color: kWhite, fontWeight: FontWeight.w500),
                                     )),
                               ],
                             ),
@@ -419,7 +448,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                      // 'Not Found',
                                       style: gTextStyle.copyWith(color: kWhite, fontWeight: FontWeight.bold),
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 10,
                                     ),
                                     Text(
@@ -515,7 +544,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                      // 'Loading',
                                       style: gTextStyle.copyWith(color: kWhite, fontWeight: FontWeight.bold),
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 10,
                                     ),
                                     Text(
@@ -592,7 +621,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           title: RichText(
                               text: TextSpan(
-                                  text: '${details.enrolledPlan?.plan?.subscriptionName} Package ',
+                                  text: '${details.enrolledPlan?.plan?.subscriptionName} ${lang.S.of(context).package} ',
                                   style: gTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold, fontSize: 16),
                                   children: [
                                 TextSpan(
@@ -894,7 +923,10 @@ class _HomeGridCardsState extends State<HomeGridCards> {
           if (checkPermission(item: widget.gridItems.route)) {
             Navigator.of(context).pushNamed('/${widget.gridItems.route}');
           } else {
-            EasyLoading.showError('Permission not granted!');
+            EasyLoading.showError(
+              lang.S.of(context).permissionNotGranted,
+               // 'Permission not granted!'
+            );
           }
         },
         child: Container(

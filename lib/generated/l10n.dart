@@ -4730,15 +4730,126 @@ class S {
     );
   }
 
-  /// `Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.`
-  String get loremIpsumDolorSit {
+  /// `Due collection`
+  String get dueCollection {
     return Intl.message(
-      'Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.',
-      name: 'loremIpsumDolorSit',
+      'Due collection',
+      name: 'dueCollection',
       desc: '',
       args: [],
     );
   }
+
+  /// `No Transaction`
+  String get noTransaction {
+    return Intl.message(
+      'No Transaction',
+      name: 'noTransaction',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Updating...`
+  String get updating {
+    return Intl.message(
+      'Updating...',
+      name: 'updating',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm SMS to`
+  String get confirmSMSTo {
+    return Intl.message(
+      'Confirm SMS to',
+      name: 'confirmSMSTo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An SMS will be sent to the following number: `
+  String get anSMSWillBeSentToTheFollowingNumber {
+    return Intl.message(
+      'An SMS will be sent to the following number: ',
+      name: 'anSMSWillBeSentToTheFollowingNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Package`
+  String get package {
+    return Intl.message(
+      'Package',
+      name: 'package',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Permission not granted!`
+  String get permissionNotGranted {
+    return Intl.message(
+      'Permission not granted!',
+      name: 'permissionNotGranted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Collected By:`
+  String get collectedBy {
+    return Intl.message(
+      'Collected By:',
+      name: 'collectedBy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone:`
+  String get phonee {
+    return Intl.message(
+      'Phone:',
+      name: 'phonee',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Purchase By:`
+  String get purchaseBy {
+    return Intl.message(
+      'Purchase By:',
+      name: 'purchaseBy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sales By:`
+  String get salesBy {
+    return Intl.message(
+      'Sales By:',
+      name: 'salesBy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `days`
+  String get days {
+    return Intl.message(
+      'days',
+      name: 'days',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Details`
   String get details {
     return Intl.message(
@@ -4748,6 +4859,8 @@ class S {
       args: [],
     );
   }
+
+  /// `We sent an OTP in your phone number`
   String get weSentAnOTPInYourPhoneNumber {
     return Intl.message(
       'We sent an OTP in your phone number',
@@ -4756,6 +4869,8 @@ class S {
       args: [],
     );
   }
+
+  /// `Please enter the OTP`
   String get pleaseEnterTheOTP {
     return Intl.message(
       'Please enter the OTP',
@@ -4764,6 +4879,8 @@ class S {
       args: [],
     );
   }
+
+  /// `Enter a valid OTP`
   String get enterAValidOTP {
     return Intl.message(
       'Enter a valid OTP',
@@ -4772,6 +4889,8 @@ class S {
       args: [],
     );
   }
+
+  /// `Verify`
   String get verify {
     return Intl.message(
       'Verify',
@@ -4780,10 +4899,22 @@ class S {
       args: [],
     );
   }
-  String get resendOTPIn {
+
+  /// `Resend OTP in `
+  String get resendIn {
     return Intl.message(
-      'Resend OTP in',
-      name: 'resendOTPIn',
+      'Resend OTP in ',
+      name: 'resendIn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.`
+  String get loremIpsumDolorSit {
+    return Intl.message(
+      'Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.',
+      name: 'loremIpsumDolorSit',
       desc: '',
       args: [],
     );

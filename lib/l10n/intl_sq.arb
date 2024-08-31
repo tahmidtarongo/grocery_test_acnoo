@@ -473,10 +473,22 @@
   "brand": "Marka",
   "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.",
 
-  "Details": "Detaje",
-  "We sent an OTP in your phone number": "Kemi dërguar një OTP në numrin tuaj të telefonit",
-  "Please enter the OTP": "Ju lutem, vendosni OTP-në",
-  "Enter a valid OTP": "Vendosni një OTP të vlefshme",
-  "Verify": "Verifikoni",
-  "Resend OTP in": "Riposhtoni OTP në"
+  "details": "Detaje",
+  "weSentAnOTPInYourPhoneNumber": "Kemi dërguar një OTP në numrin tuaj të telefonit",
+  "pleaseEnterTheOTP": "Ju lutem, vendosni OTP-në",
+  "enterAValidOTP": "Vendosni një OTP të vlefshme",
+  "verify": "Verifikoni",
+  "resendIn": "Riposhtoni OTP në",
+  "dueCollection": "Mbledhja e borxhit",
+  "noTransaction": "Nuk ka transaksion",
+  "updating": "Po përditësohet...",
+  "confirmSMSTo": "Konfirmo SMS për",
+  "anSMSWillBeSentToTheFollowingNumber": "Një SMS do të dërgohet në numrin e mëposhtëm:",
+  "package": "Paketë",
+  "permissionNotGranted": "Leje jo e dhënë!",
+  "collectedBy": "Mbledhur nga:",
+  "phonee": "Telefon:",
+  "purchaseBy": "Blerë nga:",
+  "salesBy": "Shitur nga:",
+  "days": "ditë"
 }

@@ -477,5 +477,21 @@
   "pleaseEnterTheOTP": "Por favor, ingresa el OTP",
   "enterAValidOTP": "Ingresa un OTP válido",
   "verify": "Verificar",
-  "resendOTPIn ": "Reenviar OTP en "
+  "resendIn": "Reenviar OTP en ",
+
+
+  "dueCollection": "Cobro pendiente",
+  "noTransaction": "Sin transacción",
+  "updating": "Actualizando...",
+  "confirmSMSTo": "Confirmar SMS a",
+  "anSMSWillBeSentToTheFollowingNumber": "Se enviará un SMS al siguiente número: ",
+  "package": "Paquete",
+  "permissionNotGranted": "¡Permiso no concedido!",
+  "collectedBy": "Recogido por:",
+  "phonee": "Teléfono:",
+  "purchaseBy": "Comprado por:",
+  "salesBy": "Vendido por:",
+  "days": "días"
+
+
 }

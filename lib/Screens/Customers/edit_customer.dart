@@ -424,7 +424,10 @@ class _EditCustomerState extends State<EditCustomer> {
                       onPressed: () async {
                         if (_formKay.currentState!.validate()) {
                           try {
-                            EasyLoading.show(status: 'Updating...');
+                            EasyLoading.show(status:
+                                lang.S.of(context).updating,
+                           // 'Updating...'
+                            );
                             final party = PartyRepository();
                             await party.updateParty(
                               id: widget.customerModel.id.toString(), // Assuming id is a property in customerModel

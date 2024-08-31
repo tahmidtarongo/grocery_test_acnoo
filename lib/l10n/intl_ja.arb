@@ -472,6 +472,21 @@
   "pleaseEnterTheOTP": "OTP を入力してください",
   "enterAValidOTP": "有効な OTP を入力してください",
   "verify": "確認",
-  "resendOTPIn ": "OTP を再送信する "
+  "resendIn": "OTP を再送信する ",
+
+
+
+  "dueCollection": "未収金",
+  "noTransaction": "取引なし",
+  "updating": "更新中...",
+  "confirmSMSTo": "SMSを確認する",
+  "anSMSWillBeSentToTheFollowingNumber": "以下の番号にSMSが送信されます: ",
+  "package": "パッケージ",
+  "permissionNotGranted": "許可が与えられていません!",
+  "collectedBy": "収集者:",
+  "phonee": "電話:",
+  "purchaseBy": "購入者:",
+  "salesBy": "販売者:",
+  "days": "日"
 
 }

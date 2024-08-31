@@ -282,7 +282,7 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                 title:  Text(
                                   lang.S.of(context).parties,
                                   //'Parties',
-                                  style: TextStyle(fontSize: 14),
+                                  style: const TextStyle(fontSize: 14),
                                 ),
                               ),
                             ),

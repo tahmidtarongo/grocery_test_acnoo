@@ -472,6 +472,18 @@
   "pleaseEnterTheOTP": "Vui lòng nhập OTP",
   "enterAValidOTP": "Vui lòng nhập OTP hợp lệ",
   "verify": "Xác minh",
-  "resendOTPIn ": "Gửi lại OTP trong "
+  "resendIn": "Gửi lại OTP trong ",
+  "dueCollection": "Thu hồi nợ",
+  "noTransaction": "Không có giao dịch",
+  "updating": "Đang cập nhật...",
+  "confirmSMSTo": "Xác nhận SMS đến",
+  "anSMSWillBeSentToTheFollowingNumber": "Một tin nhắn SMS sẽ được gửi đến số điện thoại sau:",
+  "package": "Gói",
+  "permissionNotGranted": "Không được cấp quyền!",
+  "collectedBy": "Thu thập bởi:",
+  "phonee": "Điện thoại:",
+  "purchaseBy": "Mua bởi:",
+  "salesBy": "Bán bởi:",
+  "days": "ngày"
 
 }

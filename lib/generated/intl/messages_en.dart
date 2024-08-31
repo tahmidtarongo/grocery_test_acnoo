@@ -66,6 +66,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "amarSonarBangla":
             MessageLookupByLibrary.simpleMessage("Amar sonar bangla"),
         "amount": MessageLookupByLibrary.simpleMessage("Amount"),
+        "anSMSWillBeSentToTheFollowingNumber":
+            MessageLookupByLibrary.simpleMessage(
+                "An SMS will be sent to the following number: "),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "A new update available\nPlease update your app"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
@@ -111,6 +114,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "collectDue": MessageLookupByLibrary.simpleMessage("Collect Due"),
         "collectDues":
             MessageLookupByLibrary.simpleMessage("Please Collect A Due"),
+        "collectedBy": MessageLookupByLibrary.simpleMessage("Collected By:"),
         "color": MessageLookupByLibrary.simpleMessage("Color"),
         "comingSoon": MessageLookupByLibrary.simpleMessage("Coming Soon"),
         "companyAddress":
@@ -119,6 +123,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "confirmPass": MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
+        "confirmSMSTo": MessageLookupByLibrary.simpleMessage("Confirm SMS to"),
         "congratulation":
             MessageLookupByLibrary.simpleMessage("Congratulations"),
         "connect": MessageLookupByLibrary.simpleMessage("Click to connect"),
@@ -153,6 +158,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Data saved successfully."),
         "date": MessageLookupByLibrary.simpleMessage("Date"),
         "dates": MessageLookupByLibrary.simpleMessage("Date:"),
+        "days": MessageLookupByLibrary.simpleMessage("days"),
         "dealer": MessageLookupByLibrary.simpleMessage("Dealer"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage("Dealer price"),
         "delete": MessageLookupByLibrary.simpleMessage("Delete"),
@@ -162,6 +168,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "deliveryCharge":
             MessageLookupByLibrary.simpleMessage("Delivery Charge"),
         "description": MessageLookupByLibrary.simpleMessage("Description"),
+        "details": MessageLookupByLibrary.simpleMessage("Details"),
         "digits": MessageLookupByLibrary.simpleMessage(
             "6-digits pin has been sent to your email address: "),
         "discount": MessageLookupByLibrary.simpleMessage("Discount"),
@@ -174,6 +181,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Don’t have an account?"),
         "due": MessageLookupByLibrary.simpleMessage("Due"),
         "dueAmount": MessageLookupByLibrary.simpleMessage("Due Amount: "),
+        "dueCollection": MessageLookupByLibrary.simpleMessage("Due collection"),
         "dueList": MessageLookupByLibrary.simpleMessage("Due List"),
         "dueReport": MessageLookupByLibrary.simpleMessage("Due Report"),
         "easyToUseThePos":
@@ -200,6 +208,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter a brand name"),
         "enterAValidDiscount":
             MessageLookupByLibrary.simpleMessage("Enter a valid Discount"),
+        "enterAValidOTP":
+            MessageLookupByLibrary.simpleMessage("Enter a valid OTP"),
         "enterAValidStock":
             MessageLookupByLibrary.simpleMessage("Enter a valid stock"),
         "enterAmount": MessageLookupByLibrary.simpleMessage("Enter Amount"),
@@ -352,6 +362,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("No User Role Found"),
         "noSupplier":
             MessageLookupByLibrary.simpleMessage("No Supplier Available"),
+        "noTransaction": MessageLookupByLibrary.simpleMessage("No Transaction"),
         "notFound": MessageLookupByLibrary.simpleMessage("Not Found"),
         "note": MessageLookupByLibrary.simpleMessage("Note"),
         "notification": MessageLookupByLibrary.simpleMessage("Notification"),
@@ -362,6 +373,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "outOfStock": MessageLookupByLibrary.simpleMessage("Out Of Stock"),
         "packFeatures":
             MessageLookupByLibrary.simpleMessage("Package Features"),
+        "package": MessageLookupByLibrary.simpleMessage("Package"),
         "paid": MessageLookupByLibrary.simpleMessage("Paid"),
         "paidAmount": MessageLookupByLibrary.simpleMessage("Paid Amount"),
         "parties": MessageLookupByLibrary.simpleMessage("Parties"),
@@ -391,10 +403,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "paymentsAmount":
             MessageLookupByLibrary.simpleMessage("Payment Amounts"),
         "paypalPay": MessageLookupByLibrary.simpleMessage("Pay With Paypal"),
+        "permissionNotGranted":
+            MessageLookupByLibrary.simpleMessage("Permission not granted!"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone Number"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone Number"),
         "phoneVerification":
             MessageLookupByLibrary.simpleMessage("Phone Verification"),
+        "phonee": MessageLookupByLibrary.simpleMessage("Phone:"),
         "pickEndDate": MessageLookupByLibrary.simpleMessage("Pick End Date"),
         "pickStartDate":
             MessageLookupByLibrary.simpleMessage("Pick Start Date"),
@@ -432,6 +447,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please Enter Amount"),
         "pleaseEnterName":
             MessageLookupByLibrary.simpleMessage("Please Enter Name"),
+        "pleaseEnterTheOTP":
+            MessageLookupByLibrary.simpleMessage("Please enter the OTP"),
         "pleaseEnterUnitName":
             MessageLookupByLibrary.simpleMessage("Please enter unit name"),
         "pleaseEnterValidPhoneAndNameFirst":
@@ -473,6 +490,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "promoCode": MessageLookupByLibrary.simpleMessage("Promo Code"),
         "purchase": MessageLookupByLibrary.simpleMessage("Purchase"),
         "purchaseAlarm": MessageLookupByLibrary.simpleMessage("Purchase Alarm"),
+        "purchaseBy": MessageLookupByLibrary.simpleMessage("Purchase By:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Purchase Confirmed"),
         "purchaseDetails":
@@ -501,6 +519,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "rememberMeLater":
             MessageLookupByLibrary.simpleMessage("Remember me later"),
         "reports": MessageLookupByLibrary.simpleMessage("Reports"),
+        "resendIn": MessageLookupByLibrary.simpleMessage("Resend OTP in "),
         "resendOTP": MessageLookupByLibrary.simpleMessage("Enter valid OTP"),
         "reset": MessageLookupByLibrary.simpleMessage(
             "Reset password by using your email or phone number"),
@@ -514,6 +533,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "saleList": MessageLookupByLibrary.simpleMessage("Sales List"),
         "salePrice": MessageLookupByLibrary.simpleMessage("Sale Price"),
         "sales": MessageLookupByLibrary.simpleMessage("Sales"),
+        "salesBy": MessageLookupByLibrary.simpleMessage("Sales By:"),
         "salesDetails": MessageLookupByLibrary.simpleMessage("Sales Details"),
         "salesList": MessageLookupByLibrary.simpleMessage("Sales List"),
         "salesPurchaseOverview":
@@ -641,6 +661,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Update your profile to connect your customer with better impression"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("Update your subscription"),
+        "updating": MessageLookupByLibrary.simpleMessage("Updating..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("Upgrade Now"),
         "useTitleCanNotBeEmpty":
             MessageLookupByLibrary.simpleMessage("User title can\'n be empty"),
@@ -650,6 +671,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "userTitle": MessageLookupByLibrary.simpleMessage("User Title"),
         "vat": MessageLookupByLibrary.simpleMessage("VAT"),
         "verification": MessageLookupByLibrary.simpleMessage("Verification"),
+        "verify": MessageLookupByLibrary.simpleMessage("Verify"),
         "verifyYourEmail":
             MessageLookupByLibrary.simpleMessage("Verify Your Email"),
         "verityEmail": MessageLookupByLibrary.simpleMessage("Verity Email"),
@@ -658,6 +680,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Walk-in Customer"),
         "weHaveSentAConfirmationEmailTo": MessageLookupByLibrary.simpleMessage(
             "We have sent a confirmation email to"),
+        "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
+            "We sent an OTP in your phone number"),
         "weight": MessageLookupByLibrary.simpleMessage("Weight"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome back!"),
         "whatNew": MessageLookupByLibrary.simpleMessage("What\'s New"),

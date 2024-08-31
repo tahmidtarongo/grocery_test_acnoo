@@ -197,7 +197,7 @@ class _PurchaseReportState extends State<PurchaseListScreen> {
                                                                           child: Text(
                                                                             lang.S.of(context).cancel,
                                                                            // 'Cancel',
-                                                                            style: TextStyle(color: kMainColor),
+                                                                            style: const TextStyle(color: kMainColor),
                                                                           ),
                                                                         ),
                                                                       ),

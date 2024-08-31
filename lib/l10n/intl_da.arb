@@ -472,6 +472,24 @@
   "pleaseEnterTheOTP": "Indtast OTP",
   "enterAValidOTP": "Indtast en gyldig OTP",
   "verify": "Bekræft",
-  "resendOTPIn ": "Send OTP igen om "
+  "resendIn": "Send OTP igen om ",
+
+
+  "dueCollection": "Udgående opkrævning",
+  "noTransaction": "Ingen transaktion",
+  "updating": "Opdaterer...",
+  "confirmSMSTo": "Bekræft SMS til",
+  "anSMSWillBeSentToTheFollowingNumber": "En SMS vil blive sendt til følgende nummer: ",
+  "package": "Pakke",
+  "permissionNotGranted": "Tilladelse ikke givet!",
+  "collectedBy": "Indsamlet af:",
+  "phonee": "Telefon:",
+  "purchaseBy": "Købt af:",
+  "salesBy": "Solgt af:",
+  "days": "dage"
+
+
+
+
 
 }

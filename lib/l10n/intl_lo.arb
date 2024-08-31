@@ -471,6 +471,19 @@
   "pleaseEnterTheOTP": "ກະລຸນາໃສ່ OTP",
   "enterAValidOTP": "ໃສ່ OTP ທີ່ຖືກ",
   "verify": "ຢຶດຢັນ",
-  "resendOTPIn ": "ສົ່ງໃຫມ່ OTP ໃນ "
+  "resendIn": "ສົ່ງໃຫມ່ OTP ໃນ ",
+
+  "dueCollection": "ການເກັບກູ້ຄ່າທີ່ຄ້າງ",
+  "noTransaction": "ບໍ່ມີການເຮັດທຸລະກຳ",
+  "updating": "ກຳລັງປັບປຸງ...",
+  "confirmSMSTo": "ຢືນຢັນ SMS ຫາ",
+  "anSMSWillBeSentToTheFollowingNumber": "ຈະສົ່ງ SMS ໄປຫາໝາຍເລກຕໍ່ໄປນີ້:",
+  "package": "ຊຸດ",
+  "permissionNotGranted": "ບໍ່ໄດ້ອະນຸຍາດ!",
+  "collectedBy": "ເກັບໂດຍ:",
+  "phonee": "ໂທລະສັບ:",
+  "purchaseBy": "ຊື້ໂດຍ:",
+  "salesBy": "ຂາຍໂດຍ:",
+  "days": "ມື້"
 
 }

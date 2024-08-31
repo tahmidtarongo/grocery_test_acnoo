@@ -468,10 +468,22 @@
   "brand": "பிராண்ட்",
   "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.",
 
-  "Details": "விவரங்கள்",
-  "We sent an OTP in your phone number": "உங்கள் தொலைபேசி எண்ணிற்கு OTP அனுப்பப்பட்டது",
-  "Please enter the OTP": "OTP ஐ உள்ளிடவும்",
-  "Enter a valid OTP": "சரியான OTP ஐ உள்ளிடவும்",
-  "Verify": "சரிபார்க்கவும்",
-  "Resend OTP in": "OTP மறுதொடர்ந்து அனுப்பவும்"
+  "details": "விவரங்கள்",
+  "weSentAnOTPInYourPhoneNumber": "உங்கள் தொலைபேசி எண்ணிற்கு OTP அனுப்பப்பட்டது",
+  "pleaseEnterTheOTP": "OTP ஐ உள்ளிடவும்",
+  "enterAValidOTP": "சரியான OTP ஐ உள்ளிடவும்",
+  "verify": "சரிபார்க்கவும்",
+  "resendIn": "OTP மறுதொடர்ந்து அனுப்பவும்",
+  "dueCollection": "கடன் வசூல்",
+  "noTransaction": "பரிவர்த்தனை இல்லை",
+  "updating": "புதுப்பித்து வருகிறது...",
+  "confirmSMSTo": "SMS ஐ உறுதிப்படுத்தவும்",
+  "anSMSWillBeSentToTheFollowingNumber": "SMS அனுப்பப்படும் எண்ணுக்கு:",
+  "package": "தொகுப்பு",
+  "permissionNotGranted": "அனுமதி வழங்கப்படவில்லை!",
+  "collectedBy": "சேகரித்தவர்:",
+  "phonee": "தொலைபேசி:",
+  "purchaseBy": "வாங்கியவர்:",
+  "salesBy": "விற்றவர்:",
+  "days": "நாட்கள்"
 }

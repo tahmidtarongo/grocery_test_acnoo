@@ -468,10 +468,25 @@
   "brand": "מותג",
   "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.",
 
-  "Details": "פרטים",
-  "We sent an OTP in your phone number": "שלחנו OTP למספר הטלפון שלך",
-  "Please enter the OTP": "אנא הזן את ה-OTP",
-  "Enter a valid OTP": "הזן OTP תקף",
-  "Verify": "אשר",
-  "Resend OTP in": "שלח מחדש את ה-OTP ב"
+  "details": "פרטים",
+  "weSentAnOTPInYourPhoneNumber": "שלחנו OTP למספר הטלפון שלך",
+  "pleaseEnterTheOTP": "אנא הזן את ה-OTP",
+  "enterAValidOTP": "הזן OTP תקף",
+  "verify": "אשר",
+  "resendIn": "שלח מחדש את ה-OTP ב",
+
+
+
+  "dueCollection": "איסוף חוב",
+  "noTransaction": "אין עסקה",
+  "updating": "מעודכן...",
+  "confirmSMSTo": "אשר SMS ל",
+  "anSMSWillBeSentToTheFollowingNumber": "יישלח SMS למספר הבא: ",
+  "package": "חבילה",
+  "permissionNotGranted": "הרשאה לא ניתנה!",
+  "collectedBy": "אסוף על ידי:",
+  "phonee": "טלפון:",
+  "purchaseBy": "נרכש על ידי:",
+  "salesBy": "נמכר על ידי:",
+  "days": "ימים"
 }

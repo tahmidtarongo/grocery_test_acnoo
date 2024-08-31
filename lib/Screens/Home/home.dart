@@ -155,7 +155,7 @@ class _HomeState extends State<Home> {
                  Text(
                    lang.S.of(context).home,
                  //  "Home",
-                   style: TextStyle(color: kGreyTextColor),),
+                   style: const TextStyle(color: kGreyTextColor),),
               ],
             ),
             Column(
@@ -165,7 +165,7 @@ class _HomeState extends State<Home> {
                  Text(
                    lang.S.of(context).dashboard,
                    //"Dashboard",
-                   style: TextStyle(color: kGreyTextColor),),
+                   style: const TextStyle(color: kGreyTextColor),),
               ],
             ),
             Column(
@@ -175,7 +175,7 @@ class _HomeState extends State<Home> {
                 Text(
                   lang.S.of(context).reports,
                  // "Reports",
-                  style: TextStyle(color: kGreyTextColor),),
+                  style: const TextStyle(color: kGreyTextColor),),
               ],
             ),
             Column(
@@ -185,7 +185,7 @@ class _HomeState extends State<Home> {
                 Text(
                   lang.S.of(context).setting,
                   //"Setting",
-                  style: TextStyle(color: kGreyTextColor),),
+                  style: const TextStyle(color: kGreyTextColor),),
               ],
             ),
           ],

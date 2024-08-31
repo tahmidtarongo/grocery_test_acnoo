@@ -29,7 +29,7 @@ class _CustomerAllTransactionScreenState extends State<CustomerAllTransactionScr
         backgroundColor: kWhite,
         title: isSearch?TextFormField(
           decoration: kInputDecoration.copyWith(
-            contentPadding: EdgeInsets.only(left: 12,right: 5),
+            contentPadding: const EdgeInsets.only(left: 12,right: 5),
             //hintText: 'Search Here.....',
            hintText: lang.S.of(context).searchH,
           ),
@@ -99,7 +99,7 @@ class _CustomerAllTransactionScreenState extends State<CustomerAllTransactionScr
                                         borderRadius: const BorderRadius.all(Radius.circular(10))),
                                     child: Text(
                                       lang.S.of(context).paid,
-                                      style: TextStyle(color: const Color(0xff0dbf7d)),
+                                      style: const TextStyle(color: Color(0xff0dbf7d)),
                                     ),
                                   ),
                                   const Text(

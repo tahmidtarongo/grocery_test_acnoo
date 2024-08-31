@@ -473,5 +473,26 @@
   "pleaseEnterTheOTP": "Veuillez saisir l'OTP",
   "enterAValidOTP": "Saisissez un OTP valide",
   "verify": "Vérifier",
-  "resendOTPIn ": "Renvoyer l'OTP dans"
+  "resendIn": "Renvoyer l'OTP dans",
+
+
+  "dueCollection": "Collecte due",
+  "noTransaction": "Aucune transaction",
+  "updating": "Mise à jour...",
+  "confirmSMSTo": "Confirmer le SMS au",
+  "anSMSWillBeSentToTheFollowingNumber": "Un SMS sera envoyé au numéro suivant : ",
+  "package": "Forfait",
+  "permissionNotGranted": "Autorisation non accordée !",
+  "collectedBy": "Collecté par :",
+  "phonee": "Téléphone :",
+  "purchaseBy": "Acheté par :",
+  "salesBy": "Vendu par :",
+  "days": "jours"
+
+
+
+
+
+
+
 }

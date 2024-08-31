@@ -467,11 +467,25 @@
   "deleting": "Жою...",
   "brand": "Бренд",
   "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.",
-  "Details": "Толығырақ",
-  "We sent an OTP in your phone number": "Сіздің телефон нөміріңізге OTP жібердік",
-  "Please enter the OTP": "OTP кодын енгізіңіз",
-  "Enter a valid OTP": "Жарамды OTP кодын енгізіңіз",
-  "Verify": "Тексеру",
-  "Resend OTP in": "OTP қайта жіберу"
+  "details": "Толығырақ",
+  "weSentAnOTPInYourPhoneNumber": "Сіздің телефон нөміріңізге OTP жібердік",
+  "pleaseEnterTheOTP": "OTP кодын енгізіңіз",
+  "enterAValidOTP": "Жарамды OTP кодын енгізіңіз",
+  "verify": "Тексеру",
+  "resendIn": "OTP қайта жіберу",
+
+
+  "dueCollection": "Кеңес алу",
+  "noTransaction": "Транзакция жоқ",
+  "updating": "Жаңарту...",
+  "confirmSMSTo": "SMS-ті растау",
+  "anSMSWillBeSentToTheFollowingNumber": "SMS келесі нөмірге жіберіледі: ",
+  "package": "Пакет",
+  "permissionNotGranted": "Рұқсат берілмеді!",
+  "collectedBy": "Жиналған:",
+  "phonee": "Телефон:",
+  "purchaseBy": "Сатылып алынған:",
+  "salesBy": "Сатушы:",
+  "days": "күн"
 
 }

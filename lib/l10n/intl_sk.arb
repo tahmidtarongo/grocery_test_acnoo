@@ -468,10 +468,22 @@
   "brand": "Značka",
   "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.",
 
-  "Details": "Detaljer",
-  "We sent an OTP in your phone number": "Vi har skickat en OTP till ditt telefonnummer",
-  "Please enter the OTP": "Vänligen ange OTP",
-  "Enter a valid OTP": "Ange en giltig OTP",
-  "Verify": "Verifiera",
-  "Resend OTP in": "Skicka OTP på nytt om"
+  "details": "Detaljer",
+  "weSentAnOTPInYourPhoneNumber": "Vi har skickat en OTP till ditt telefonnummer",
+  "pleaseEnterTheOTP": "Vänligen ange OTP",
+  "enterAValidOTP": "Ange en giltig OTP",
+  "verify": "Verifiera",
+  "resendIn": "Skicka OTP på nytt om",
+  "dueCollection": "Inkassering av förfallobetalningar",
+  "noTransaction": "Ingen transaktion",
+  "updating": "Uppdaterar...",
+  "confirmSMSTo": "Bekräfta SMS till",
+  "anSMSWillBeSentToTheFollowingNumber": "Ett SMS kommer att skickas till följande nummer:",
+  "package": "Paket",
+  "permissionNotGranted": "Tillstånd inte beviljat!",
+  "collectedBy": "Insamlad av:",
+  "phonee": "Telefon:",
+  "purchaseBy": "Köpt av:",
+  "salesBy": "Såld av:",
+  "days": "dagar"
 }

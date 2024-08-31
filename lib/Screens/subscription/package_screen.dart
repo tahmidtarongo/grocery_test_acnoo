@@ -18,7 +18,7 @@ class _PackageScreenState extends State<PackageScreen> {
   Duration? remainTime;
   List<String>? initialPackageService;
   List<int>? mainPackageService;
-  List<String> nameList = ['Sales', 'Purchase', 'Due collection', 'Parties', 'Products'];
+  //List<String> nameList = ['Sales', 'Purchase', 'Due collection', 'Parties', 'Products'];
   List<String> imageList = [
     'images/sales_2.png',
     'images/purchase_2.png',
@@ -34,6 +34,13 @@ class _PackageScreenState extends State<PackageScreen> {
 
   @override
   Widget build(BuildContext context) {
+    List<String> nameList = [
+      lang.S.of(context).sales,
+      lang.S.of(context).purchase,
+      lang.S.of(context).dueCollection,
+      lang.S.of(context).parties,
+      lang.S.of(context).products,
+    ];
     return Consumer(builder: (context, ref, __) {
       final profileInfo = ref.watch(businessInfoProvider);
       return profileInfo.when(
@@ -55,14 +62,17 @@ class _PackageScreenState extends State<PackageScreen> {
               bottomNavigationBar: Visibility(
                 visible: info.user?.role != 'staff',
                 child: SizedBox(
-                  height: 110,
+                  height: 112,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(
-                        lang.S.of(context).unlimitedUsagesOfOurPackage,
-                        //'Unlimited Usages of Our Package👇 ',
-                        style: gTextStyle.copyWith(fontWeight: FontWeight.bold,fontSize: 19,color: kTitleColor),textAlign: TextAlign.center,),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 20,right: 20),
+                        child: Text(
+                          lang.S.of(context).unlimitedUsagesOfOurPackage,
+                          //'Unlimited Usages of Our Package👇 ',
+                          style: gTextStyle.copyWith(fontWeight: FontWeight.bold,fontSize: 19,color: kTitleColor),textAlign: TextAlign.center,overflow: TextOverflow.ellipsis,),
+                      ),
                       Padding(
                         padding: const EdgeInsets.all(16.0),
                         child: GestureDetector(
@@ -92,7 +102,7 @@ class _PackageScreenState extends State<PackageScreen> {
               ),
               body: SingleChildScrollView(
                     child: Padding(
-                      padding: const EdgeInsets.all(25.0),
+                      padding: const EdgeInsets.all(20.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [

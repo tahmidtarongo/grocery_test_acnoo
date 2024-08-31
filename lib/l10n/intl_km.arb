@@ -471,11 +471,24 @@
   "deleting": "កំពុងលុប....",
   "brand": "ម៉ាក",
   "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.",
-  "Details": "ព័ត៌មានលម្អិត",
-  "We sent an OTP in your phone number": "យើងបានផ្ញើ OTP ទៅលេខទូរស័ព្ទរបស់អ្នក",
-  "Please enter the OTP": "សូមបញ្ចូល OTP",
-  "Enter a valid OTP": "បញ្ចូល OTP ដែលមានសុពលភាព",
-  "Verify": "ផ្ទៀងផ្ទាត់",
-  "Resend OTP in": "ផ្ញើ OTP ម្តងទៀតនៅក្នុង"
+  "details": "ព័ត៌មានលម្អិត",
+  "weSentAnOTPInYourPhoneNumber": "យើងបានផ្ញើ OTP ទៅលេខទូរស័ព្ទរបស់អ្នក",
+  "pleaseEnterTheOTP": "សូមបញ្ចូល OTP",
+  "enterAValidOTP": "បញ្ចូល OTP ដែលមានសុពលភាព",
+  "verify": "ផ្ទៀងផ្ទាត់",
+  "resendIn": "ផ្ញើ OTP ម្តងទៀតនៅក្នុង",
+
+  "dueCollection": "ការប្រមូលបំណុល",
+  "noTransaction": "គ្មានប្រតិបត្តិការ",
+  "updating": "កំពុងធ្វើបច្ចុប្បន្នភាព...",
+  "confirmSMSTo": "បញ្ជាក់ SMS ទៅ",
+  "anSMSWillBeSentToTheFollowingNumber": "សារ SMS នឹងត្រូវបញ្ជូនទៅលេខដូចខាងក្រោម:",
+  "package": "កញ្ចប់",
+  "permissionNotGranted": "មិនបានផ្តល់សិទ្ធិ!",
+  "collectedBy": "ប្រមូលដោយ:",
+  "phonee": "ទូរស័ព្ទ:",
+  "purchaseBy": "ទិញដោយ:",
+  "salesBy": "លក់ដោយ:",
+  "days": "ថ្ងៃ"
 
 }

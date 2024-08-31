@@ -279,7 +279,7 @@
   "pleaseEnterTheOTP": "Per favore inserisci l'OTP",
   "enterAValidOTP": "Inserisci un OTP valido",
   "verify": "Verifica",
-  "resendOTPIn ": "Invia di nuovo l'OTP in ",
+  "resendIn": "Invia di nuovo l'OTP in ",
 
   "signIn": "Accedi",
   "welcomeBack": "Bentornato!",
@@ -474,7 +474,22 @@
   "appleWatch": "Apple Watch",
   "deleting": "Eliminazione in corso....",
   "brand": "Marca",
-  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan vulputate tellus scelerisque odio consectetur tincidunt semper."
+  "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan vulputate tellus scelerisque odio consectetur tincidunt semper.",
+
+  "dueCollection": "Fällige Sammlung",
+  "noTransaction": "Keine Transaktion",
+  "updating": "Aktualisiere...",
+  "confirmSMSTo": "SMS bestätigen an",
+  "anSMSWillBeSentToTheFollowingNumber": "Eine SMS wird an die folgende Nummer gesendet: ",
+  "package": "Paket",
+  "permissionNotGranted": "Keine Erlaubnis erteilt!",
+  "collectedBy": "Eingesammelt von:",
+  "phonee": "Telefon:",
+  "purchaseBy": "Gekauft von:",
+  "salesBy": "Verkauft von:",
+  "days": "Tage"
+
+
 
 
 }

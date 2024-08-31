@@ -53,8 +53,8 @@ class _TestNumericAxisChartState extends State<TestNumericAxisChart> {
                 show: true,
                 drawVerticalLine: false,
                 getDrawingHorizontalLine: (value) {
-                  return FlLine(
-                    color: const Color(0xffD1D5DB),
+                  return const FlLine(
+                    color: Color(0xffD1D5DB),
                     dashArray: [5, 5],
                     strokeWidth: 1,
                   );
@@ -95,7 +95,7 @@ class _TestNumericAxisChartState extends State<TestNumericAxisChart> {
   }
 
   Widget _getBottomTitles(double value, TitleMeta meta) {
-    final style = TextStyle(
+    final style = const TextStyle(
       color: Colors.black,
       fontWeight: FontWeight.normal,
       fontSize: 12,
@@ -115,7 +115,7 @@ class _TestNumericAxisChartState extends State<TestNumericAxisChart> {
       axisSide: meta.axisSide,
       child: Text(
         value.toInt().toString(),
-        style: TextStyle(
+        style: const TextStyle(
           color: Colors.black,
           fontWeight: FontWeight.normal,
           fontSize: 12,

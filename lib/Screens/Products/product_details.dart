@@ -116,7 +116,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                   //'Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.',
                   style: gTextStyle.copyWith(color: kGreyTextColor),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Container(
@@ -143,7 +143,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                               '$currency ${180}',
                               style: gTextStyle.copyWith(color: kGreyTextColor),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 20,
                             ),
                             Text(

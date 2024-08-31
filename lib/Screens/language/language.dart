@@ -7,7 +7,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../constant.dart';
 import '../Home/home.dart';
-import '../Home/home_screen.dart';
 import 'language_provider.dart';
 
 class SelectLanguage extends StatefulWidget {
@@ -86,15 +85,27 @@ class _SelectLanguageState extends State<SelectLanguage> {
             color: kMainColor,
             borderRadius: BorderRadius.circular(6.0),
           ),
-          onPressed: () {
-            setState(
-              () async {
-                await saveData(selectedLanguage).then(
-                  (value) => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Home())),
-                );
-              },
-            );
+          // onPressed: () async {
+          //   await saveData(selectedLanguage);
+          //   setState(
+          //     () async {
+          //       await saveData(selectedLanguage).then(
+          //         (value) => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Home())),
+          //       );
+          //     },
+          //   );
+          // },
+
+          onPressed: () async {
+            // Perform the asynchronous operation
+            await saveData(selectedLanguage);
+
+            // Update the state and navigate synchronously
+            setState(() {
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Home()));
+            });
           },
+
           buttonTextColor: Colors.white),
       backgroundColor: Colors.white,
       appBar: AppBar(

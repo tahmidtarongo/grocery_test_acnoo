@@ -473,10 +473,22 @@
   "brand": "බ්‍රෑන්ඩ්",
   "loremIpsumDolorSit": "ලොරම් ඉප්සම් ඩොලෝර් සිට් අමෙට්, කොන්සෙක්ටේටුර ආඩිප් සීල්වන්න. නාටෝක් ආලෙකුවොන් දක්වා.",
 
-  "Details": "විස්තර",
-  "We sent an OTP in your phone number": "ඔබගේ දුරකථන අංකයට OTP යවා ඇත",
-  "Please enter the OTP": "කරුණාකර OTP ලබා දෙන්න",
-  "Enter a valid OTP": "වලංගු OTP එකක් ලබා දෙන්න",
-  "Verify": "සත්‍යාපනය කරන්න",
-  "Resend OTP in": "OTP නැවත යවන්න"
+  "details": "විස්තර",
+  "weSentAnOTPInYourPhoneNumber": "ඔබගේ දුරකථන අංකයට OTP යවා ඇත",
+  "pleaseEnterTheOTP": "කරුණාකර OTP ලබා දෙන්න",
+  "enterAValidOTP\n": "වලංගු OTP එකක් ලබා දෙන්න",
+  "verify": "සත්‍යාපනය කරන්න",
+  "resendIn": "OTP නැවත යවන්න",
+  "dueCollection": "ගෙවීමට ඇති එකතුව",
+  "noTransaction": "කිසිදු ගනුදෙනුවක් නැත",
+  "updating": "යාවත්කාලීන කරමින්...",
+  "confirmSMSTo": "SMS තහවුරු කරන්න",
+  "anSMSWillBeSentToTheFollowingNumber": "SMS එක පහත සඳහන් අංකයට යවනු ලැබේ:",
+  "package": "පැකේජය",
+  "permissionNotGranted": "අවසරය ලබා නොදීම",
+  "collectedBy": "එකතු කරන ලද්දේ:",
+  "phonee": "දුරකථනය:",
+  "purchaseBy": "මිලදී ගත්තේ:",
+  "salesBy": "විකුණුවේ:",
+  "days": "දින"
 }

@@ -472,11 +472,25 @@
   "deleting": "Brisanje....",
   "brand": "Brend",
   "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.",
-  "Details": "Detalji",
-  "We sent an OTP in your phone number": "Poslali smo OTP na vaš broj telefona",
-  "Please enter the OTP": "Molimo unesite OTP",
-  "Enter a valid OTP": "Unesite valjani OTP",
-  "Verify": "Potvrdi",
-  "Resend OTP in": "Ponovno pošaljite OTP za"
+  "details": "Detalji",
+  "weSentAnOTPInYourPhoneNumber": "Poslali smo OTP na vaš broj telefona",
+  "pleaseEnterTheOTP": "Molimo unesite OTP",
+  "enterAValidOTP": "Unesite valjani OTP",
+  "verify": "Potvrdi",
+  "resendIn": "Ponovno pošaljite OTP za",
+
+
+  "dueCollection": "Prikupljanje duga",
+  "noTransaction": "Nema transakcije",
+  "updating": "Ažuriranje...",
+  "confirmSMSTo": "Potvrdi SMS na",
+  "anSMSWillBeSentToTheFollowingNumber": "SMS će biti poslat na sledeći broj: ",
+  "package": "Paketa",
+  "permissionNotGranted": "Dozvola nije odobrena!",
+  "collectedBy": "Prikupio:",
+  "phonee": "Telefon:",
+  "purchaseBy": "Kupljeno od:",
+  "salesBy": "Prodao:",
+  "days": "dani"
 
 }

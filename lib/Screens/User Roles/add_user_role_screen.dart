@@ -340,7 +340,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                                   title:  Text(
                                     lang.S.of(context).lossProfit,
                                     //'Loss Profit',
-                                    style: TextStyle(fontSize: 14),),
+                                    style: const TextStyle(fontSize: 14),),
                                 ),
                               ),
                               Expanded(

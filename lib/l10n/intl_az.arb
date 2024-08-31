@@ -477,7 +477,21 @@
   "pleaseEnterTheOTP": "OTP-ni daxil edin",
   "enterAValidOTP": "Doğru OTP daxil edin",
   "verify": "Təsdiqlə",
-  "resendOTPIn ": "OTP-ni yenidən göndəri"
+  "resendIn": "OTP-ni yenidən göndəri",
+
+
+  "dueCollection": "Borclu toplama",
+  "noTransaction": "Heç bir əməliyyat yoxdur",
+  "updating": "Yenilənir...",
+  "confirmSMSTo": "SMS təsdiqlə",
+  "anSMSWillBeSentToTheFollowingNumber": "Aşağıdakı nömrəyə SMS göndəriləcək: ",
+  "package": "Paket",
+  "permissionNotGranted": "İcazə verilməyib!",
+  "collectedBy": "Toplanmışdır:",
+  "phonee": "Telefon:",
+  "purchaseBy": "Alış edən:",
+  "salesBy": "Satış edən:",
+  "days": "gün"
 
 
 }

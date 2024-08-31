@@ -470,12 +470,28 @@
   "deleting": "Διαγραφή....",
   "brand": "Μάρκα",
   "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan vulputate tellus scelerisque odio consectetur tincidunt semper.",
+
+
+
   "details": "Λεπτομέρειες",
   "weSentAnOTPInYourPhoneNumber": "Στείλαμε έναν OTP στον αριθμό τηλεφώνου σας",
   "pleaseEnterTheOTP": "Παρακαλώ εισάγετε το OTP",
   "enterAValidOTP": "Εισάγετε ένα έγκυρο OTP",
   "verify": "Επιβεβαίωση",
-  "resendOTPIn ": "Επαναποστολή OTP σε "
+  "resendIn": "Επαναποστολή OTP σε ",
+
+  "dueCollection": "Οφειλόμενη είσπραξη",
+  "noTransaction": "Καμία Συναλλαγή",
+  "updating": "Ενημέρωση...",
+  "confirmSMSTo": "Επιβεβαιώστε το SMS στο",
+  "anSMSWillBeSentToTheFollowingNumber": "Θα σταλεί ένα SMS στον εξής αριθμό: ",
+  "package": "Πακέτο",
+  "permissionNotGranted": "Η άδεια δεν χορηγήθηκε!",
+  "collectedBy": "Συλλέχθηκε από:",
+  "phonee": "Τηλέφωνο:",
+  "purchaseBy": "Αγοράστηκε από:",
+  "salesBy": "Πωλήθηκε από:",
+  "days": "ημέρες"
 
 
 }

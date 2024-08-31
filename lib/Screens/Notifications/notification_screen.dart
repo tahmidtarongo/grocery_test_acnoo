@@ -30,7 +30,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
         elevation: 0.0,
       ),
       body: Padding(
-        padding: EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10.0),
         child: Column(
           children: [
             NotificationCard(

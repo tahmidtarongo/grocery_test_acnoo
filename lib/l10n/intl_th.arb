@@ -467,11 +467,24 @@
   "deleting": "กำลังลบ....",
   "brand": "แบรนด์",
   "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.",
-  "Details": "รายละเอียด",
-  "We sent an OTP in your phone number": "เราได้ส่ง OTP ไปยังหมายเลขโทรศัพท์ของคุณ",
-  "Please enter the OTP": "กรุณากรอก OTP",
-  "Enter a valid OTP": "กรอก OTP ที่ถูกต้อง",
-  "Verify": "ตรวจสอบ",
-  "Resend OTP in": "ส่ง OTP อีกครั้งใน"
+  "details": "รายละเอียด",
+  "weSentAnOTPInYourPhoneNumber": "เราได้ส่ง OTP ไปยังหมายเลขโทรศัพท์ของคุณ",
+  "pleaseEnterTheOTP": "กรุณากรอก OTP",
+  "enterAValidOTP": "กรอก OTP ที่ถูกต้อง",
+  "verify": "ตรวจสอบ",
+  "resendIn": "ส่ง OTP อีกครั้งใน",
+  "dueCollection": "การเก็บเงินค้างชำระ",
+  "noTransaction": "ไม่มีธุรกรรม",
+  "updating": "กำลังอัปเดต...",
+  "confirmSMSTo": "ยืนยัน SMS ไปยัง",
+  "anSMSWillBeSentToTheFollowingNumber": "จะส่ง SMS ไปยังหมายเลขต่อไปนี้:",
+  "package": "แพ็กเกจ",
+  "permissionNotGranted": "ไม่ได้รับอนุญาต!",
+  "collectedBy": "เก็บโดย:",
+  "phonee": "โทรศัพท์:",
+  "purchaseBy": "ซื้อโดย:",
+  "salesBy": "ขายโดย:",
+  "days": "วัน"
+
 
 }

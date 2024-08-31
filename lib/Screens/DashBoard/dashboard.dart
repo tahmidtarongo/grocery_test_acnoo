@@ -69,7 +69,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 padding: const EdgeInsets.only(right: 12),
                 child: Container(
                     height: 32,
-                    padding: EdgeInsets.symmetric(horizontal: 5),
+                    padding: const EdgeInsets.symmetric(horizontal: 5),
                     // width: 100,
                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(5), border: Border.all(color: kBorderColorTextField)),
                     child: DropdownButtonHideUnderline(child: getTime(ref))),
@@ -257,7 +257,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'No data found $e',
+                  //'{No data found} $e',
+                  '${lang.S.of(context).noDataFound} $e',
                   style: const TextStyle(color: kGreyTextColor, fontSize: 16, fontWeight: FontWeight.w500),
                 ),
               ],

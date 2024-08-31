@@ -468,11 +468,23 @@
   "brand": "브랜드",
   "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.",
 
-  "Details": "상세정보",
-  "We sent an OTP in your phone number": "전화번호로 OTP를 전송했습니다",
-  "Please enter the OTP": "OTP를 입력해 주세요",
-  "Enter a valid OTP": "유효한 OTP를 입력해 주세요",
-  "Verify": "확인",
-  "Resend OTP in": "다시 OTP 전송"
+  "details": "상세정보",
+  "weSentAnOTPInYourPhoneNumber": "전화번호로 OTP를 전송했습니다",
+  "pleaseEnterTheOTP": "OTP를 입력해 주세요",
+  "enterAValidOTP": "유효한 OTP를 입력해 주세요",
+  "verify": "확인",
+  "resendIn": "다시 OTP 전송",
+  "dueCollection": "미납금 수금",
+  "noTransaction": "거래 없음",
+  "updating": "업데이트 중...",
+  "confirmSMSTo": "SMS 확인",
+  "anSMSWillBeSentToTheFollowingNumber": "다음 번호로 SMS가 전송됩니다:",
+  "package": "패키지",
+  "permissionNotGranted": "권한이 부여되지 않았습니다!",
+  "collectedBy": "수집자:",
+  "phonee": "전화:",
+  "purchaseBy": "구매자:",
+  "salesBy": "판매자:",
+  "days": "일"
 
 }

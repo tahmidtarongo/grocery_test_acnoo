@@ -145,34 +145,34 @@ class _PaymentCompletedState extends State<PaymentCompleted> {
                 ),
               ),
               ListTile(
-                leading: Icon(
+                leading: const Icon(
                   Icons.payment,
                   color: kGreyTextColor,
                 ),
                 title: Text(lang.S.of(context).sendEmail),
-                trailing: Icon(
+                trailing: const Icon(
                   Icons.email,
                   color: kGreyTextColor,
                 ),
               ),
               ListTile(
-                leading: Icon(
+                leading: const Icon(
                   Icons.payment,
                   color: kGreyTextColor,
                 ),
                 title: Text(lang.S.of(context).sendSms),
-                trailing: Icon(
+                trailing: const Icon(
                   Icons.message_outlined,
                   color: kGreyTextColor,
                 ),
               ),
               ListTile(
-                leading: Icon(
+                leading: const Icon(
                   Icons.payment,
                   color: kGreyTextColor,
                 ),
                 title: Text(lang.S.of(context).recivethePin),
-                trailing: Icon(
+                trailing: const Icon(
                   Icons.local_print_shop,
                   color: kGreyTextColor,
                 ),

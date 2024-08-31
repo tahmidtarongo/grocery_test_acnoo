@@ -477,6 +477,18 @@
   "pleaseEnterTheOTP": "Будь ласка, введіть OTP",
   "enterAValidOTP": "Введіть правильний OTP",
   "verify": "Перевірити",
-  "resendOTPIn ": "Переслати OTP через "
+  "resendIn": "Переслати OTP через ",
+  "dueCollection": "Стягнення заборгованості",
+  "noTransaction": "Немає транзакції",
+  "updating": "Оновлюється...",
+  "confirmSMSTo": "Підтвердити SMS до",
+  "anSMSWillBeSentToTheFollowingNumber": "SMS буде відправлено на наступний номер:",
+  "package": "Пакет",
+  "permissionNotGranted": "Дозвіл не надано!",
+  "collectedBy": "Зібрано:",
+  "phonee": "Телефон:",
+  "purchaseBy": "Куплено:",
+  "salesBy": "Продано:",
+  "days": "дні"
 
 }

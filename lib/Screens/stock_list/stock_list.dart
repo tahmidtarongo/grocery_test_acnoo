@@ -39,7 +39,7 @@ class _StockListState extends State<StockList> {
           backgroundColor: Colors.white,
           appBar: AppBar(
             title: Text(
-             widget.isFromReport?'Stock Report': lang.S.of(context).stockList,
+             widget.isFromReport?lang.S.of(context).stockList : lang.S.of(context).stockList,
               style: GoogleFonts.poppins(color: Colors.black, fontSize: 22.0, fontWeight: FontWeight.w500),
             ),
             iconTheme: const IconThemeData(color: Colors.black),

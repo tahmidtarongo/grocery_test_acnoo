@@ -472,5 +472,26 @@
   "pleaseEnterTheOTP": "Zadejte OTP",
   "enterAValidOTP": "Zadejte platné OTP",
   "verify": "Ověřit",
-  "resendOTPIn ": "Znovu odeslat OTP za "
+  "resendIn": "Znovu odeslat OTP za ",
+
+
+  "dueCollection": "Dlužné inkaso",
+  "noTransaction": "Žádná transakce",
+  "updating": "Aktualizuji...",
+  "confirmSMSTo": "Potvrdit SMS na",
+  "anSMSWillBeSentToTheFollowingNumber": "SMS bude odeslána na následující číslo: ",
+  "package": "Balíček",
+  "permissionNotGranted": "Povolení nebylo uděleno!",
+  "collectedBy": "Vybral:",
+  "phonee": "Telefon:",
+  "purchaseBy": "Zakoupil:",
+  "salesBy": "Prodal:",
+  "days": "dny"
+
+
+
+
+
+
+
 }

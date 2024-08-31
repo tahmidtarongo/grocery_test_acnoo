@@ -473,5 +473,18 @@
   "pleaseEnterTheOTP": "Syötä OTP",
   "enterAValidOTP": "Syötä kelvollinen OTP",
   "verify": "Vahvista",
-  "resendOTPIn ": "Lähetä OTP uudelleen "
+  "resendIn": "Lähetä OTP uudelleen ",
+
+  "dueCollection": "Erääntynyt keräys",
+  "noTransaction": "Ei tapahtumia",
+  "updating": "Päivitetään...",
+  "confirmSMSTo": "Vahvista SMS numeroon",
+  "anSMSWillBeSentToTheFollowingNumber": "SMS lähetetään seuraavaan numeroon: ",
+  "package": "Paketti",
+  "permissionNotGranted": "Lupaa ei myönnetty!",
+  "collectedBy": "Keräsi:",
+  "phonee": "Puhelin:",
+  "purchaseBy": "Ostettu:",
+  "salesBy": "Myyty:",
+  "days": "päivää"
 }

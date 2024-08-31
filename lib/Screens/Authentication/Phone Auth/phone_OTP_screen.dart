@@ -163,10 +163,10 @@ class _OTPVerifyState extends State<OTPVerify> {
                       child:   Text(
                        lang.S.of(context).verify,
                        // 'Verify',
-                        style: TextStyle(color: Colors.white),
+                        style: const TextStyle(color: Colors.white),
                       )),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
@@ -178,14 +178,14 @@ class _OTPVerifyState extends State<OTPVerify> {
                             child:  Text(
                               //'Resend OTP',
                             lang.S.of(context).resendOTP,
-                              style: TextStyle(color: kMainColor),
+                              style: const TextStyle(color: kMainColor),
                             ))
                         : Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                               Text(
-                                 lang.S.of(context).resendOTPIn,
-                                  // 'Resend OTP in '
+                                Text(
+                                  lang.S.of(context).resendIn,
+                                   //'Resend OTP in '
                                ),
                               Text(
                                 '${_start.toString()} seconds',

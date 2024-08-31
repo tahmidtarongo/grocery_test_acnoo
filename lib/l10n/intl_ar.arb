@@ -476,5 +476,19 @@
   "pleaseEnterTheOTP": "يرجى إدخال OTP",
   "enterAValidOTP": "أدخل OTP صالح",
   "verify": "تحقق",
-  "resendOTPIn ": "أعد إرسال OTP في "
+  "resendIn": "أعد إرسال OTP في ",
+
+
+  "dueCollection": "التحصيل المستحق",
+  "noTransaction": "لا توجد معاملات",
+  "updating": "جاري التحديث...",
+  "confirmSMSTo": "تأكيد الرسالة النصية إلى",
+  "anSMSWillBeSentToTheFollowingNumber": "سيتم إرسال رسالة نصية إلى الرقم التالي: ",
+  "package": "الباقة",
+  "permissionNotGranted": "لم يتم منح الإذن!",
+  "collectedBy": "تم جمعه بواسطة:",
+  "phonee": "الهاتف:",
+  "purchaseBy": "تم الشراء بواسطة:",
+  "salesBy": "تم البيع بواسطة:",
+  "days": "أيام"
 }

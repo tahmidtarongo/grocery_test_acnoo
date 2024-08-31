@@ -228,12 +228,12 @@ class _PurchaseListState extends State<PurchaseList> {
                     //'Total:',
                   ),
                 ),
-                DataColumn(
+                const DataColumn(
                   label: Text(
                     '8',
                   ),
                 ),
-                DataColumn(
+                const DataColumn(
                   label: Text(
                     '50',
                   ),
