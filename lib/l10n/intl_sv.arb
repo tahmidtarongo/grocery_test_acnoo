@@ -477,7 +477,12 @@
   "phonee": "Telefon:",
   "purchaseBy": "Köpt av:",
   "salesBy": "Såld av:",
-  "days": "dagar"
-
+  "days": "dagar",
+  "freeLifetimeUpdate": "Gratis livstidsuppdatering",
+  "android": "Android & iOS appstöd",
+  "premiumCustomerSupport": "Android & iOS appstöd",
+  "customInvoiceBranding": "Anpassad fakturabrand",
+  "unlimitedUsage": "Obegränsad användning",
+  "freeDataBackup": "Gratis datorsäkerhetskopiering"
 
 }

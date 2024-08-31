@@ -58,6 +58,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "amount": MessageLookupByLibrary.simpleMessage("額"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage("以下の番号にSMSが送信されます: "),
+        "android": MessageLookupByLibrary.simpleMessage("AndroidおよびiOSアプリサポート"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "新しいアップデートが利用可能です\nアプリを更新してください"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("アップルウォッチ"),
@@ -120,6 +121,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("新しいパスワードを作成"),
         "currency": MessageLookupByLibrary.simpleMessage("通貨"),
+        "customInvoiceBranding":
+            MessageLookupByLibrary.simpleMessage("カスタム請求書ブランディング"),
         "customerDue": MessageLookupByLibrary.simpleMessage("顧客の支払額"),
         "customerName": MessageLookupByLibrary.simpleMessage("顧客名"),
         "customerPay": MessageLookupByLibrary.simpleMessage("顧客支払"),
@@ -242,6 +245,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "folder":
             MessageLookupByLibrary.simpleMessage("メールが迷惑メールフォルダーに届いた可能性があります。"),
         "forgotPassword": MessageLookupByLibrary.simpleMessage("パスワードをお忘れですか"),
+        "freeDataBackup": MessageLookupByLibrary.simpleMessage("無料のデータバックアップ"),
+        "freeLifetimeUpdate": MessageLookupByLibrary.simpleMessage("無料の生涯更新"),
         "freePack": MessageLookupByLibrary.simpleMessage("無料パッケージ"),
         "freePlan": MessageLookupByLibrary.simpleMessage("フリープラン"),
         "fromDate": MessageLookupByLibrary.simpleMessage("開始日"),
@@ -401,6 +406,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("経費カテゴリを選択してください"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Powered By Acnoo"),
+        "premiumCustomerSupport":
+            MessageLookupByLibrary.simpleMessage("AndroidおよびiOSアプリサポート"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("プレミアムプラン"),
         "previousDue": MessageLookupByLibrary.simpleMessage("期限前"),
         "previousPayAmount": MessageLookupByLibrary.simpleMessage("以前の支払額"),
@@ -560,6 +567,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitPirce": MessageLookupByLibrary.simpleMessage("単価"),
         "units": MessageLookupByLibrary.simpleMessage("単位"),
         "unlimited": MessageLookupByLibrary.simpleMessage("無制限"),
+        "unlimitedUsage": MessageLookupByLibrary.simpleMessage("無制限の使用"),
         "unlimitedUsagesOfOurPackage":
             MessageLookupByLibrary.simpleMessage("無制限のパッケージ使用👇"),
         "update": MessageLookupByLibrary.simpleMessage("アップデート"),

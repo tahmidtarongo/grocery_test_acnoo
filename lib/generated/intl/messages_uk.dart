@@ -67,6 +67,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS буде відправлено на наступний номер:"),
+        "android": MessageLookupByLibrary.simpleMessage(
+            "Підтримка додатків для Android та iOS"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
         "apply": MessageLookupByLibrary.simpleMessage("Застосувати"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("Ви впевнені?"),
@@ -141,6 +143,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Створіть новий пароль"),
         "currency": MessageLookupByLibrary.simpleMessage("Валюта"),
+        "customInvoiceBranding": MessageLookupByLibrary.simpleMessage(
+            "Індивідуальне брендування рахунків"),
         "customerDue":
             MessageLookupByLibrary.simpleMessage("Заборгованість клієнта"),
         "customerName": MessageLookupByLibrary.simpleMessage("Ім\'я клієнта"),
@@ -276,6 +280,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "folder": MessageLookupByLibrary.simpleMessage(
             "Можливо, лист потрапив у вашу папку зі спамом."),
         "forgotPassword": MessageLookupByLibrary.simpleMessage("Забули пароль"),
+        "freeDataBackup": MessageLookupByLibrary.simpleMessage(
+            "Безкоштовне резервне копіювання даних"),
+        "freeLifetimeUpdate": MessageLookupByLibrary.simpleMessage(
+            "Безкоштовне оновлення на все життя"),
         "freePack": MessageLookupByLibrary.simpleMessage("Безкоштовний пакет"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Безкоштовний план"),
         "fromDate": MessageLookupByLibrary.simpleMessage("З дати"),
@@ -454,6 +462,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Будь ласка, виберіть категорію"),
         "pleaseSelectAExpenseCategory": MessageLookupByLibrary.simpleMessage(
             "Будь ласка, виберіть категорію витрат"),
+        "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
+            "Підтримка додатків для Android та iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Преміальний план"),
         "previousDue": MessageLookupByLibrary.simpleMessage("Попередній строк"),
         "previousPayAmount":
@@ -655,6 +665,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitName": MessageLookupByLibrary.simpleMessage("Назва одиниці"),
         "units": MessageLookupByLibrary.simpleMessage("одиниці"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Необмежений"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("Необмежене використання"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "Необмежене використання нашого пакета👇"),
         "update": MessageLookupByLibrary.simpleMessage("оновлення"),

@@ -68,6 +68,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "សារ SMS នឹងត្រូវបញ្ជូនទៅលេខដូចខាងក្រោម:"),
+        "android": MessageLookupByLibrary.simpleMessage(
+            "ការគាំទ្រអំពីកម្មវិធី Android និង iOS"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("នាឡិកា Apple"),
         "apply": MessageLookupByLibrary.simpleMessage("អនុវត្ត"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("តើអ្នកប្រាកដថា?"),
@@ -141,6 +143,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("បង្កើតពាក្យសម្ងាត់ថ្មី"),
         "currency": MessageLookupByLibrary.simpleMessage("រូបិយប័ណ្ណ"),
+        "customInvoiceBranding": MessageLookupByLibrary.simpleMessage(
+            "ការប្រកាសផ្ទាល់ខ្លួនលើវិក័យប័ត្រ"),
         "customerDue":
             MessageLookupByLibrary.simpleMessage("ប្រាក់កំពុងទទួលពីអតិថិជន"),
         "customerName": MessageLookupByLibrary.simpleMessage("ឈ្មោះ​អតិថិជន"),
@@ -274,6 +278,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "ប្រហែលជាអ៊ីមែលបានចូលទៅក្នុងថតសារប្រឡែង"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("ភ្លេច​លេខសំងាត់​"),
+        "freeDataBackup":
+            MessageLookupByLibrary.simpleMessage("ការបម្រុងទិន្នន័យឥតគិតថ្លៃ"),
+        "freeLifetimeUpdate": MessageLookupByLibrary.simpleMessage(
+            "អាប់ដេតឥតគិតថ្លៃជារៀងរាល់ជីវិត"),
         "freePack": MessageLookupByLibrary.simpleMessage("កញ្ចប់ឥតគិតថ្លៃ"),
         "freePlan": MessageLookupByLibrary.simpleMessage("ផែនការឥតគិតថ្លៃ"),
         "fromDate": MessageLookupByLibrary.simpleMessage("ពីកាលបរិច្ឆេទ"),
@@ -449,6 +457,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("សូមជ្រើសប្រភេទមួយ"),
         "pleaseSelectAExpenseCategory":
             MessageLookupByLibrary.simpleMessage("សូមជ្រើសប្រភេទចំណាយ"),
+        "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
+            "ការគាំទ្រអំពីកម្មវិធី Android និង iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("គម្រោងពិសេស"),
         "previousDue": MessageLookupByLibrary.simpleMessage("ផុតកំណត់មុន"),
         "previousPayAmount":
@@ -636,6 +646,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitName": MessageLookupByLibrary.simpleMessage("ឈ្មោះអង្គភាព"),
         "units": MessageLookupByLibrary.simpleMessage("ឯកតា"),
         "unlimited": MessageLookupByLibrary.simpleMessage("គ្មានដែនកំណត់"),
+        "unlimitedUsage": MessageLookupByLibrary.simpleMessage(
+            "ការប្រើប្រាស់ដោយមិនមានការកំណត់"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "ការប្រើប្រាស់មិនមានកំណត់នៃកញ្ចប់របស់យើង👇"),
         "update": MessageLookupByLibrary.simpleMessage("ធ្វើបច្ចុប្បន្នភាព"),

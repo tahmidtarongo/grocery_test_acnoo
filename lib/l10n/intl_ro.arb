@@ -484,6 +484,13 @@
   "phonee": "Telefon:",
   "purchaseBy": "Cumpărat de:",
   "salesBy": "Vândut de:",
-  "days": "zile"
+  "days": "zile",
+
+  "freeLifetimeUpdate": "Actualizare gratuită pe viață",
+  "android": "Suport pentru aplicații Android și iOS",
+  "premiumCustomerSupport": "Suport pentru aplicații Android și iOS",
+  "customInvoiceBranding": "Branding personalizat al facturilor",
+  "unlimitedUsage": "Utilizare nelimitată",
+  "freeDataBackup": "Backup de date gratuit"
 
 }

@@ -71,6 +71,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "En SMS vil blive sendt til følgende nummer: "),
+        "android":
+            MessageLookupByLibrary.simpleMessage("Android & iOS app-support"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "En ny opdatering er tilgængelig\nOpdater venligst din app"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
@@ -148,6 +150,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Opret ny adgangskode"),
         "currency": MessageLookupByLibrary.simpleMessage("Valuta"),
+        "customInvoiceBranding":
+            MessageLookupByLibrary.simpleMessage("Tilpasset fakturabranding"),
         "customerDue": MessageLookupByLibrary.simpleMessage("Kundeudestående"),
         "customerName": MessageLookupByLibrary.simpleMessage("Kundens navn"),
         "customerPay": MessageLookupByLibrary.simpleMessage("Kunde betaler"),
@@ -286,6 +290,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Det kan være, at mailen endte i din spam-mappe."),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Glemt adgangskode"),
+        "freeDataBackup":
+            MessageLookupByLibrary.simpleMessage("Gratis datalagring"),
+        "freeLifetimeUpdate":
+            MessageLookupByLibrary.simpleMessage("Gratis livstidsopdatering"),
         "freePack": MessageLookupByLibrary.simpleMessage("Gratis pakke"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Gratis plan"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Fra dato"),
@@ -471,6 +479,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Vælg en udgiftskategori"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Drevet af Acnoo"),
+        "premiumCustomerSupport":
+            MessageLookupByLibrary.simpleMessage("Android & iOS app-support"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Premium plan"),
         "previousDue":
             MessageLookupByLibrary.simpleMessage("Tidligere skyldige"),
@@ -657,6 +667,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitPirce": MessageLookupByLibrary.simpleMessage("Enhedspris"),
         "units": MessageLookupByLibrary.simpleMessage("Enheder"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Ubegrænset"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("Ubegrænset brug"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "Ubegrænsede anvendelser af vores pakke👇"),
         "update": MessageLookupByLibrary.simpleMessage("Opdater"),

@@ -489,7 +489,13 @@
   "phonee": "电话：",
   "purchaseBy": "购买者：",
   "salesBy": "销售者：",
-  "days": "天"
+  "days": "天",
+  "freeLifetimeUpdate": "终身免费更新",
+  "android": "安卓和iOS应用支持",
+  "premiumCustomerSupport": "安卓和iOS应用支持",
+  "customInvoiceBranding": "自定义发票品牌",
+  "unlimitedUsage": "无限使用",
+  "freeDataBackup": "免费数据备份"
 
 
 }

@@ -485,5 +485,11 @@
   "phonee": "தொலைபேசி:",
   "purchaseBy": "வாங்கியவர்:",
   "salesBy": "விற்றவர்:",
-  "days": "நாட்கள்"
+  "days": "நாட்கள்",
+  "freeLifetimeUpdate": "சாதாரணமாகச் சொந்தமாகுமாறு மாற்றங்களை இலகுவாகக் பெறுங்கள்",
+  "android": "Android & iOS செயலி ஆதரவு",
+  "premiumCustomerSupport": "Android & iOS செயலி ஆதரவு",
+  "customInvoiceBranding": "தனிப்பயனாக்கப்பட்ட பில் மார்கிங்",
+  "unlimitedUsage": "முறைப்பாடு இல்லாத பயன்பாடு",
+  "freeDataBackup": "இலவச தரவுப் பாதுகாப்பு"
 }

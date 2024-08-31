@@ -72,6 +72,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "নিচের নম্বরে একটি এসএমএস পাঠানো হবে: "),
+        "android": MessageLookupByLibrary.simpleMessage(
+            "অ্যান্ড্রয়েড ও আইওএস অ্যাপ সমর্থন"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("অ্যাপল ওয়াচ"),
         "apply": MessageLookupByLibrary.simpleMessage("প্রয়োগ"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("আপনি কি নিশ্চিত?"),
@@ -150,6 +152,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("নতুন পাসওয়ার্ড তৈরি করুন"),
         "currency": MessageLookupByLibrary.simpleMessage("মুদ্রা"),
+        "customInvoiceBranding":
+            MessageLookupByLibrary.simpleMessage("কাস্টম ইনভয়েস ব্র্যান্ডিং"),
         "customerDue": MessageLookupByLibrary.simpleMessage("গ্রাহক ঋণ"),
         "customerName": MessageLookupByLibrary.simpleMessage("ক্রেতার নাম"),
         "customerPay": MessageLookupByLibrary.simpleMessage("গ্রাহক পেমেন্ট"),
@@ -282,6 +286,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "মেইলটি আপনার স্প্যাম ফোল্ডারে চলে যেতে পারে।"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("পাসওয়ার্ড ভুলে গেছেন"),
+        "freeDataBackup":
+            MessageLookupByLibrary.simpleMessage("মুক্ত ডেটা ব্যাকআপ"),
+        "freeLifetimeUpdate":
+            MessageLookupByLibrary.simpleMessage("মুক্ত আজীবন আপডেট"),
         "freePack": MessageLookupByLibrary.simpleMessage("ফ্রি প্যাকেজ"),
         "freePlan": MessageLookupByLibrary.simpleMessage("ফ্রি প্ল্যান"),
         "fromDate": MessageLookupByLibrary.simpleMessage("তারিখ হইতে"),
@@ -459,6 +467,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "একটি ক্যাটাগরি নির্বাচন করুন"),
         "pleaseSelectAExpenseCategory": MessageLookupByLibrary.simpleMessage(
             "একটি খরচ ক্যাটাগরি নির্বাচন করুন"),
+        "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
+            "অ্যান্ড্রয়েড ও আইওএস অ্যাপ সমর্থন"),
         "premiumPlan":
             MessageLookupByLibrary.simpleMessage("প্রিমিয়াম প্ল্যান"),
         "previousDue": MessageLookupByLibrary.simpleMessage("আগের বকেয়া"),
@@ -650,6 +660,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitName": MessageLookupByLibrary.simpleMessage("ইউনিট নাম"),
         "units": MessageLookupByLibrary.simpleMessage("ইউনিট"),
         "unlimited": MessageLookupByLibrary.simpleMessage("সীমাহীন"),
+        "unlimitedUsage": MessageLookupByLibrary.simpleMessage("অনন্ত ব্যবহার"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "আমাদের প্যাকেজের অযথা ব্যবহার👇"),
         "update": MessageLookupByLibrary.simpleMessage("হালনাগাদ"),

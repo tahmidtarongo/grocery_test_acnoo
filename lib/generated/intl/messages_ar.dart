@@ -69,6 +69,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "سيتم إرسال رسالة نصية إلى الرقم التالي: "),
+        "android":
+            MessageLookupByLibrary.simpleMessage("دعم تطبيقات أندرويد و iOS"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "تحديث جديد متاح\nالرجاء تحديث تطبيقك"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("ساعة آبل"),
@@ -143,6 +145,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("إنشاء كلمة مرور جديدة"),
         "currency": MessageLookupByLibrary.simpleMessage("عملة"),
+        "customInvoiceBranding":
+            MessageLookupByLibrary.simpleMessage("تخصيص علامة الفواتير"),
         "customerDue": MessageLookupByLibrary.simpleMessage("مستحقات العميل"),
         "customerName": MessageLookupByLibrary.simpleMessage("اسم الزبون"),
         "customerPay": MessageLookupByLibrary.simpleMessage("دفع العميل"),
@@ -275,6 +279,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "قد يكون البريد قد انتهى في مجلد البريد العشوائي."),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمة السر"),
+        "freeDataBackup":
+            MessageLookupByLibrary.simpleMessage("نسخ احتياطي مجاني للبيانات"),
+        "freeLifetimeUpdate":
+            MessageLookupByLibrary.simpleMessage("تحديث مجاني مدى الحياة"),
         "freePack": MessageLookupByLibrary.simpleMessage("حزمة مجانية"),
         "freePlan": MessageLookupByLibrary.simpleMessage("خطة مجانية"),
         "fromDate": MessageLookupByLibrary.simpleMessage("من التاريخ"),
@@ -454,6 +462,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("يرجى اختيار فئة نفقات"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("مشغل بواسطة Acnoo"),
+        "premiumCustomerSupport":
+            MessageLookupByLibrary.simpleMessage("دعم تطبيقات أندرويد و iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("خطة بريميوم"),
         "previousDue":
             MessageLookupByLibrary.simpleMessage("تاريخ الاستحقاق السابق"),
@@ -637,6 +647,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitPirce": MessageLookupByLibrary.simpleMessage("سعر الوحدة"),
         "units": MessageLookupByLibrary.simpleMessage("الوحدات"),
         "unlimited": MessageLookupByLibrary.simpleMessage("غير محدود"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("استخدام غير محدود"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "استخدامات غير محدودة لحزمتنا👇"),
         "update": MessageLookupByLibrary.simpleMessage("تحديث"),

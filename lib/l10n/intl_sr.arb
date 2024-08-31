@@ -485,7 +485,13 @@
   "phonee": "Telefon:",
   "purchaseBy": "Kupljeno od:",
   "salesBy": "Prodato od:",
-  "days": "dana"
+  "days": "dana",
+  "freeLifetimeUpdate": "Besplatna ažuriranja za ceo život",
+  "android": "Podrška za Android i iOS aplikacije",
+  "premiumCustomerSupport": "Podrška za Android i iOS aplikacije",
+  "customInvoiceBranding": "Prilagođeno brendiranje faktura",
+  "unlimitedUsage": "Neograničena upotreba",
+  "freeDataBackup": "Besplatan sigurnosni kopija podataka"
 
 
 }

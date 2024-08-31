@@ -484,6 +484,13 @@
   "phonee": "Telefon:",
   "purchaseBy": "Dibeli oleh:",
   "salesBy": "Dijual oleh:",
-  "days": "hari"
+  "days": "hari",
+
+  "freeLifetimeUpdate": "Kemas Kini Percuma Sepanjang Hayat",
+  "android": "Sokongan Apl Android & iOS",
+  "premiumCustomerSupport": "Sokongan Apl Android & iOS",
+  "customInvoiceBranding": "Penjenamaan Invois Kustom",
+  "unlimitedUsage": "Penggunaan Tanpa Had",
+  "freeDataBackup": "Sandaran Data Percuma"
 
 }

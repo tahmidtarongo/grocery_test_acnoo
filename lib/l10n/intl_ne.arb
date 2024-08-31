@@ -484,6 +484,12 @@
   "phonee": "फोन:",
   "purchaseBy": "खरिदकर्ता:",
   "salesBy": "बिक्रेता:",
-  "days": "दिन"
+  "days": "दिन",
+  "freeLifetimeUpdate": "फ्री लाइफटाइम अपडेट",
+  "android": "Android र iOS एप समर्थन",
+  "premiumCustomerSupport": "Android र iOS एप समर्थन",
+  "customInvoiceBranding": "अनुकूलन गरिएको इन्वोइस ब्रान्डिङ",
+  "unlimitedUsage": "असीमित प्रयोग",
+  "freeDataBackup": "फ्री डेटा ब्याकअप"
 
 }

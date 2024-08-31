@@ -484,6 +484,12 @@
   "phonee": "Simu:",
   "purchaseBy": "Kununuliwa na:",
   "salesBy": "Iliuziwa na:",
-  "days": "siku"
+  "days": "siku",
+  "freeLifetimeUpdate": "Miselemko ya bure kwa maisha yote",
+  "android": "Msaada wa programu za Android na iOS",
+  "premiumCustomerSupport": "Msaada wa programu za Android na iOS",
+  "customInvoiceBranding": "Uchapishaji wa bili ulioagizwa",
+  "unlimitedUsage": "Matumizi yasiyo na kikomo",
+  "freeDataBackup": "Hifadhi ya data bure"
 
 }

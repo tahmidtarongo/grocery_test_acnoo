@@ -74,6 +74,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "Θα σταλεί ένα SMS στον εξής αριθμό: "),
+        "android": MessageLookupByLibrary.simpleMessage(
+            "Υποστήριξη Εφαρμογών Android & iOS"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "Υπάρχει διαθέσιμη μια νέα ενημέρωση\nΠαρακαλώ ενημερώστε την εφαρμογή σας"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
@@ -157,6 +159,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Δημιουργία νέου κωδικού"),
         "currency": MessageLookupByLibrary.simpleMessage("Νόμισμα"),
+        "customInvoiceBranding": MessageLookupByLibrary.simpleMessage(
+            "Προσαρμοσμένο Branding Τιμολογίων"),
         "customerDue": MessageLookupByLibrary.simpleMessage("Οφειλές Πελάτη"),
         "customerName": MessageLookupByLibrary.simpleMessage("Όνομα πελάτη"),
         "customerPay": MessageLookupByLibrary.simpleMessage("Πληρωμή Πελάτη"),
@@ -302,6 +306,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ίσως το email να κατέληξε στο φάκελο ανεπιθύμητης αλληλογραφίας."),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Ξεχάσατε τον κωδικό"),
+        "freeDataBackup": MessageLookupByLibrary.simpleMessage(
+            "Δωρεάν Αντίγραφο Ασφαλείας Δεδομένων"),
+        "freeLifetimeUpdate": MessageLookupByLibrary.simpleMessage(
+            "Δωρεάν Ενημέρωση Διαρκούς Χρόνου"),
         "freePack": MessageLookupByLibrary.simpleMessage("Δωρεάν Πακέτο"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Δωρεάν σχέδιο"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Από την ημερομηνία"),
@@ -494,6 +502,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Παρακαλώ επιλέξτε μια κατηγορία δαπανών"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Υποστηρίζεται από Acnoo"),
+        "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
+            "Υποστήριξη Εφαρμογών Android & iOS"),
         "premiumPlan":
             MessageLookupByLibrary.simpleMessage("Πρόγραμμα Premium"),
         "previousDue":
@@ -701,6 +711,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitPirce": MessageLookupByLibrary.simpleMessage("Τιμή μονάδας"),
         "units": MessageLookupByLibrary.simpleMessage("Μονάδες"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Απεριόριστος"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("Απεριόριστη Χρήση"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "Απεριόριστη Χρήση του Πακέτου μας👇"),
         "update": MessageLookupByLibrary.simpleMessage("Εκσυγχρονίζω"),

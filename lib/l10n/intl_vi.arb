@@ -484,6 +484,13 @@
   "phonee": "Điện thoại:",
   "purchaseBy": "Mua bởi:",
   "salesBy": "Bán bởi:",
-  "days": "ngày"
+  "days": "ngày",
+
+  "freeLifetimeUpdate": "Cập nhật miễn phí trọn đời",
+  "android": "Hỗ trợ ứng dụng Android và iOS",
+  "premiumCustomerSupport": "Hỗ trợ ứng dụng Android và iOS",
+  "customInvoiceBranding": "Tùy chỉnh thương hiệu hóa đơn",
+  "unlimitedUsage": "Sử dụng không giới hạn",
+  "freeDataBackup": "Sao lưu dữ liệu miễn phí"
 
 }

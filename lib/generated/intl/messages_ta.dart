@@ -80,6 +80,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS அனுப்பப்படும் எண்ணுக்கு:"),
+        "android":
+            MessageLookupByLibrary.simpleMessage("Android & iOS செயலி ஆதரவு"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "புதிய புதுப்பித்தல் கிடைக்கின்றது\nதயவுசெய்து உங்கள் ஆப்பை புதுப்பிக்கவும்"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("ஆப்பிள் வாட்ச்"),
@@ -163,6 +165,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword": MessageLookupByLibrary.simpleMessage(
             "புதிய கடவுச்சொல்லை உருவாக்கவும்"),
         "currency": MessageLookupByLibrary.simpleMessage("நாணயம்"),
+        "customInvoiceBranding": MessageLookupByLibrary.simpleMessage(
+            "தனிப்பயனாக்கப்பட்ட பில் மார்கிங்"),
         "customerDue":
             MessageLookupByLibrary.simpleMessage("வாடிக்கையாளர் கடன்"),
         "customerName":
@@ -311,6 +315,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "அந்த மின்னஞ்சல் உங்கள் ஸ்பாம் கோப்பகத்தில் முடிந்திருக்கும்."),
         "forgotPassword": MessageLookupByLibrary.simpleMessage(
             "கடவுச்சொல்லை மறந்துவிட்டீர்களா?"),
+        "freeDataBackup":
+            MessageLookupByLibrary.simpleMessage("இலவச தரவுப் பாதுகாப்பு"),
+        "freeLifetimeUpdate": MessageLookupByLibrary.simpleMessage(
+            "சாதாரணமாகச் சொந்தமாகுமாறு மாற்றங்களை இலகுவாகக் பெறுங்கள்"),
         "freePack": MessageLookupByLibrary.simpleMessage("இலவச தொகுதி"),
         "freePlan": MessageLookupByLibrary.simpleMessage("இலவச திட்டம்"),
         "fromDate": MessageLookupByLibrary.simpleMessage("முதல் தேதி"),
@@ -502,6 +510,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "ஒரு செலவுப் பிரிவை தேர்ந்தெடுக்கவும்"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("அக்னூ விரிவுருக்கப்பட்டது"),
+        "premiumCustomerSupport":
+            MessageLookupByLibrary.simpleMessage("Android & iOS செயலி ஆதரவு"),
         "premiumPlan":
             MessageLookupByLibrary.simpleMessage("பிரீமியம் திட்டம்"),
         "previousDue": MessageLookupByLibrary.simpleMessage("முந்தைய பாதிப்பு"),
@@ -708,6 +718,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ஒருங்கிணைக்கான விலை"),
         "units": MessageLookupByLibrary.simpleMessage("அலகுகள்"),
         "unlimited": MessageLookupByLibrary.simpleMessage("வரம்புள்ள"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("முறைப்பாடு இல்லாத பயன்பாடு"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "எங்கள் தொகுப்பின் எல்லையற்ற பயன்பாடுகள்👇"),
         "update": MessageLookupByLibrary.simpleMessage("புதுப்பிக்கவும்"),

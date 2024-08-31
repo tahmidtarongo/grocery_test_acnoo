@@ -485,7 +485,13 @@
   "phonee": "Telefon:",
   "purchaseBy": "Kupione przez:",
   "salesBy": "Sprzedane przez:",
-  "days": "dni"
+  "days": "dni",
+  "freeLifetimeUpdate": "Darmowa aktualizacja dożywotnia",
+  "android": "Wsparcie aplikacji Android i iOS",
+  "premiumCustomerSupport": "Wsparcie aplikacji Android i iOS",
+  "customInvoiceBranding": "Personalizacja faktur",
+  "unlimitedUsage": "Nieograniczone użytkowanie",
+  "freeDataBackup": "Darmowe kopie zapasowe danych"
 
 
 }

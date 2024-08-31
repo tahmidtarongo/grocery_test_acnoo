@@ -487,7 +487,15 @@
   "phonee": "Telefon:",
   "purchaseBy": "Gekauft von:",
   "salesBy": "Verkauft von:",
-  "days": "Tage"
+  "days": "Tage",
+
+
+  "freeLifetimeUpdate": "Lebenslange kostenlose Updates",
+  "android": "Support für Android- und iOS-Apps",
+  "premiumCustomerSupport": "Support für Android- und iOS-Apps",
+  "customInvoiceBranding": "Individuelle Rechnungsmarkierung",
+  "unlimitedUsage": "Unbegrenzte Nutzung",
+  "freeDataBackup": "Kostenloses Daten-Backup"
 
 
 

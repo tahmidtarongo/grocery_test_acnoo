@@ -485,5 +485,13 @@
   "phonee": "Telefon:",
   "purchaseBy": "Köpt av:",
   "salesBy": "Såld av:",
-  "days": "dagar"
+  "days": "dagar",
+
+  "freeLifetimeUpdate": "Bezplatná celoživotná aktualizácia",
+  "android": "Podpora aplikácií pre Android a iOS",
+  "premiumCustomerSupport": "Podpora aplikácií pre Android a iOS",
+  "customInvoiceBranding": "Vlastné označenie faktúr",
+  "unlimitedUsage": "Neobmedzené používanie",
+  "freeDataBackup": "Bezplatná záloha údajov"
+
 }

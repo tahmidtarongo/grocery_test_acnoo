@@ -70,6 +70,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "ایس ایم ایس مندرجہ ذیل نمبر پر بھیجا جائے گا:"),
+        "android":
+            MessageLookupByLibrary.simpleMessage("Android اور iOS ایپ سپورٹ"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "نیا اپڈیٹ دستیاب ہے\nبراہ کرم اپنی ایپ کو اپ ڈیٹ کریں"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("ایپل واچ"),
@@ -149,6 +151,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("نیا پاس ورڈ بنائیں"),
         "currency": MessageLookupByLibrary.simpleMessage("کرنسی"),
+        "customInvoiceBranding":
+            MessageLookupByLibrary.simpleMessage("حسب ضرورت بل برانڈنگ"),
         "customerDue":
             MessageLookupByLibrary.simpleMessage("کسٹمر کی واجب الادا رقم"),
         "customerName": MessageLookupByLibrary.simpleMessage("کسٹمر کا نام"),
@@ -284,6 +288,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "یہ ممکن ہے کہ میل آپ کی اسپام فولڈر میں جا پہنچی ہو."),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("پاس ورڈ بھول گئے؟"),
+        "freeDataBackup":
+            MessageLookupByLibrary.simpleMessage("مفت ڈیٹا بیک اپ"),
+        "freeLifetimeUpdate":
+            MessageLookupByLibrary.simpleMessage("مفت عمر بھر کی اپ ڈیٹ"),
         "freePack": MessageLookupByLibrary.simpleMessage("مفت پیکیج"),
         "freePlan": MessageLookupByLibrary.simpleMessage("مفت پلان"),
         "fromDate": MessageLookupByLibrary.simpleMessage("تاریخ سے"),
@@ -467,6 +475,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "براہ کرم ایک خرچ کا زمرہ منتخب کریں"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("آکنو کی طرف سے طاقت دی گئی"),
+        "premiumCustomerSupport":
+            MessageLookupByLibrary.simpleMessage("Android اور iOS ایپ سپورٹ"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("پریمیم پلان"),
         "previousDue": MessageLookupByLibrary.simpleMessage("پچھلا باقی"),
         "previousPayAmount":
@@ -655,6 +665,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitPirce": MessageLookupByLibrary.simpleMessage("یونٹ قیمت"),
         "units": MessageLookupByLibrary.simpleMessage("یونٹس"),
         "unlimited": MessageLookupByLibrary.simpleMessage("لامحدود"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("لامحدود استعمال"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "ہمارے پیکیج کا لامحدود استعمال👇"),
         "update": MessageLookupByLibrary.simpleMessage("اپ ڈیٹ کریں"),

@@ -71,6 +71,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS akan dihantar ke nombor berikut:"),
+        "android":
+            MessageLookupByLibrary.simpleMessage("Sokongan Apl Android & iOS"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "Pembaruan baru tersedia\nSila kemas kini aplikasi anda"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
@@ -153,6 +155,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Buat Kata Laluan Baru"),
         "currency": MessageLookupByLibrary.simpleMessage("mata wang"),
+        "customInvoiceBranding":
+            MessageLookupByLibrary.simpleMessage("Penjenamaan Invois Kustom"),
         "customerDue": MessageLookupByLibrary.simpleMessage("Hutang Pelanggan"),
         "customerName": MessageLookupByLibrary.simpleMessage("Nama Pelanggan"),
         "customerPay":
@@ -297,6 +301,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Mungkin emel tersebut berada dalam folder spam anda."),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Lupa kata laluan"),
+        "freeDataBackup":
+            MessageLookupByLibrary.simpleMessage("Sandaran Data Percuma"),
+        "freeLifetimeUpdate": MessageLookupByLibrary.simpleMessage(
+            "Kemas Kini Percuma Sepanjang Hayat"),
         "freePack": MessageLookupByLibrary.simpleMessage("Pakej Percuma"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Pelan Percuma"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Dari tarikh"),
@@ -488,6 +496,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Sila pilih kategori perbelanjaan"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Dikuasakan oleh Acnoo"),
+        "premiumCustomerSupport":
+            MessageLookupByLibrary.simpleMessage("Sokongan Apl Android & iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Pelan Premium"),
         "previousDue":
             MessageLookupByLibrary.simpleMessage("Terakhir Sebelumnya"),
@@ -685,6 +695,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitPirce": MessageLookupByLibrary.simpleMessage("Harga Unit"),
         "units": MessageLookupByLibrary.simpleMessage("Unit"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Tidak terhad"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("Penggunaan Tanpa Had"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "Penggunaan Tidak Terhad dari Pakej Kami👇"),
         "update": MessageLookupByLibrary.simpleMessage("Kemas kini"),

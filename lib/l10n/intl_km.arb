@@ -489,6 +489,12 @@
   "phonee": "ទូរស័ព្ទ:",
   "purchaseBy": "ទិញដោយ:",
   "salesBy": "លក់ដោយ:",
-  "days": "ថ្ងៃ"
+  "days": "ថ្ងៃ",
+  "freeLifetimeUpdate": "អាប់ដេតឥតគិតថ្លៃជារៀងរាល់ជីវិត",
+  "android": "ការគាំទ្រអំពីកម្មវិធី Android និង iOS",
+  "premiumCustomerSupport": "ការគាំទ្រអំពីកម្មវិធី Android និង iOS",
+  "customInvoiceBranding": "ការប្រកាសផ្ទាល់ខ្លួនលើវិក័យប័ត្រ",
+  "unlimitedUsage": "ការប្រើប្រាស់ដោយមិនមានការកំណត់",
+  "freeDataBackup": "ការបម្រុងទិន្នន័យឥតគិតថ្លៃ"
 
 }

@@ -70,6 +70,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS bude odeslána na následující číslo: "),
+        "android": MessageLookupByLibrary.simpleMessage(
+            "Podpora aplikací pro Android a iOS"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "Je k dispozici nová aktualizace\nProsím, proveďte aktualizaci aplikace"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
@@ -151,6 +153,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Vytvořte nové heslo"),
         "currency": MessageLookupByLibrary.simpleMessage("Měna"),
+        "customInvoiceBranding":
+            MessageLookupByLibrary.simpleMessage("Vlastní brandování faktur"),
         "customerDue": MessageLookupByLibrary.simpleMessage("Zákaznický dluh"),
         "customerName": MessageLookupByLibrary.simpleMessage("Jméno zákazníka"),
         "customerPay": MessageLookupByLibrary.simpleMessage("Platba zákazníka"),
@@ -288,6 +292,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Může se stát, že e-mail skončil ve vaší složce nevyžádané pošty."),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Zapomněli jste heslo"),
+        "freeDataBackup":
+            MessageLookupByLibrary.simpleMessage("Bezplatné zálohování dat"),
+        "freeLifetimeUpdate": MessageLookupByLibrary.simpleMessage(
+            "Bezplatná doživotní aktualizace"),
         "freePack": MessageLookupByLibrary.simpleMessage("Bezplatný balíček"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Bezplatný plán"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Od data"),
@@ -473,6 +481,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Vyberte kategorii výdajů"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Vytvořeno společností Acnoo"),
+        "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
+            "Podpora aplikací pro Android a iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Prémiový plán"),
         "previousDue": MessageLookupByLibrary.simpleMessage("Předchozí dluh"),
         "previousPayAmount":
@@ -671,6 +681,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitPirce": MessageLookupByLibrary.simpleMessage("Jednotková cena"),
         "units": MessageLookupByLibrary.simpleMessage("Jednotky"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Neomezený"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("Neomezené používání"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "Neomezené používání našeho balíčku👇"),
         "update": MessageLookupByLibrary.simpleMessage("Aktualizovat"),

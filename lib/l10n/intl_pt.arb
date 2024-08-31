@@ -490,5 +490,11 @@
   "phonee": "Telefone:",
   "purchaseBy": "Comprado por:",
   "salesBy": "Vendido por:",
-  "days": "dias"
+  "days": "dias",
+  "freeLifetimeUpdate": "Atualização Vitalícia Gratuita",
+  "android": "Suporte para Apps Android e iOS",
+  "premiumCustomerSupport": "Suporte para Apps Android e iOS",
+  "customInvoiceBranding": "Personalização da Fatura",
+  "unlimitedUsage": "Uso Ilimitado",
+  "freeDataBackup": "Backup de Dados Gratuito"
 }

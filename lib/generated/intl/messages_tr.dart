@@ -67,6 +67,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS, aşağıdaki numaraya gönderilecektir:"),
+        "android": MessageLookupByLibrary.simpleMessage(
+            "Android ve iOS Uygulama Desteği"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "Yeni bir güncelleme mevcut\nLütfen uygulamanızı güncelleyin"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
@@ -145,6 +147,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Yeni Şifre Oluştur"),
         "currency": MessageLookupByLibrary.simpleMessage("Para birimi"),
+        "customInvoiceBranding":
+            MessageLookupByLibrary.simpleMessage("Özel Fatura Markalama"),
         "customerDue": MessageLookupByLibrary.simpleMessage("Müşteri Borcu"),
         "customerName": MessageLookupByLibrary.simpleMessage("müşteri adı"),
         "customerPay": MessageLookupByLibrary.simpleMessage("Müşteri Ödemesi"),
@@ -280,6 +284,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "E-posta spam klasörünüze düşmüş olabilir."),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Parolanızı mı unuttunuz"),
+        "freeDataBackup":
+            MessageLookupByLibrary.simpleMessage("Ücretsiz Veri Yedekleme"),
+        "freeLifetimeUpdate": MessageLookupByLibrary.simpleMessage(
+            "Ücretsiz Ömür Boyu Güncelleme"),
         "freePack": MessageLookupByLibrary.simpleMessage("Ücretsiz Paket"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Ücretsiz Plan"),
         "fromDate": MessageLookupByLibrary.simpleMessage("İtibaren"),
@@ -463,6 +471,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Lütfen bir harcama kategorisi seçin"),
         "powerdedByAcnoo": MessageLookupByLibrary.simpleMessage(
             "Acnoo tarafından desteklenmektedir"),
+        "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
+            "Android ve iOS Uygulama Desteği"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Prim Planı"),
         "previousDue": MessageLookupByLibrary.simpleMessage("Önceki vadesi"),
         "previousPayAmount":
@@ -656,6 +666,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitPirce": MessageLookupByLibrary.simpleMessage("Birim Fiyat"),
         "units": MessageLookupByLibrary.simpleMessage("Birimler"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Sınırsız"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("Sınırsız Kullanım"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "Paketimizin Sınırsız Kullanımları👇"),
         "update": MessageLookupByLibrary.simpleMessage("Güncelleme"),

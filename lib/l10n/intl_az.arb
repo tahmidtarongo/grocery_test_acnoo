@@ -491,7 +491,13 @@
   "phonee": "Telefon:",
   "purchaseBy": "Alış edən:",
   "salesBy": "Satış edən:",
-  "days": "gün"
+  "days": "gün",
+  "freeLifetimeUpdate": "Pulsuz Ömürlük Yeniləmə",
+  "android": "Android və iOS Tətbiq Dəstəyi",
+  "premiumCustomerSupport": "Android və iOS Tətbiq Dəstəyi",
+  "customInvoiceBranding": "Fərdi Qaimə Brendləşdirmə",
+  "unlimitedUsage": "Məhdudiyyətsiz İstifadə",
+  "freeDataBackup": "Pulsuz Məlumat Yedəkləmə"
 
 
 }

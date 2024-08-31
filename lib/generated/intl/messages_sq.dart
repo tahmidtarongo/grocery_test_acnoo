@@ -71,6 +71,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "Një SMS do të dërgohet në numrin e mëposhtëm:"),
+        "android": MessageLookupByLibrary.simpleMessage(
+            "Mbështetje për Aplikacionet Android & iOS"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
         "apply": MessageLookupByLibrary.simpleMessage("Zbato"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("A jeni të sigurt?"),
@@ -151,6 +153,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Krijo një fjalëkalim të ri"),
         "currency": MessageLookupByLibrary.simpleMessage("Monedha"),
+        "customInvoiceBranding": MessageLookupByLibrary.simpleMessage(
+            "Markimi i Personalizuar i Fakturave"),
         "customerDue":
             MessageLookupByLibrary.simpleMessage("Detyrimi i Klientit"),
         "customerName": MessageLookupByLibrary.simpleMessage("Emri i Klientit"),
@@ -290,6 +294,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Mund të jetë që emaili ka përfunduar në dosjen e spam-it tuaj."),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Harruat fjalëkalimin"),
+        "freeDataBackup":
+            MessageLookupByLibrary.simpleMessage("Backup i Lirë i Të Dhënave"),
+        "freeLifetimeUpdate":
+            MessageLookupByLibrary.simpleMessage("Përditësim i Lirë për Jetë"),
         "freePack": MessageLookupByLibrary.simpleMessage("Paketën e Lirë"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Paketa e Lirë"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Nga data"),
@@ -476,6 +484,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ju lutemi zgjidhni një kategori"),
         "pleaseSelectAExpenseCategory": MessageLookupByLibrary.simpleMessage(
             "Ju lutemi zgjidhni një kategori shpenzimesh"),
+        "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
+            "Mbështetje për Aplikacionet Android & iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Paketa Premium"),
         "previousDue":
             MessageLookupByLibrary.simpleMessage("Borxhi i mëparshëm"),
@@ -677,6 +687,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitName": MessageLookupByLibrary.simpleMessage("Emri i Njësisë"),
         "units": MessageLookupByLibrary.simpleMessage("Njësitë"),
         "unlimited": MessageLookupByLibrary.simpleMessage("E pa kufizuar"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("Përdorim i Pa Kufizuar"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "Përdorime të Pakufizuara të Paketës Tonë👇"),
         "update": MessageLookupByLibrary.simpleMessage("Përditëso"),

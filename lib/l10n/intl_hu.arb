@@ -491,5 +491,11 @@
   "phonee": "Telefon:",
   "purchaseBy": "Vásárolta:",
   "salesBy": "Eladta:",
-  "days": "nap"
+  "days": "nap",
+  "freeLifetimeUpdate": "Ingyenes Élethosszig Tartó Frissítés",
+  "android": "Android és iOS alkalmazás támogatás",
+  "premiumCustomerSupport": "Android és iOS alkalmazás támogatás",
+  "customInvoiceBranding": "Személyre szabott számlamárkázás",
+  "unlimitedUsage": "Korlátlan használat",
+  "freeDataBackup": "Ingyenes adatmentés"
 }

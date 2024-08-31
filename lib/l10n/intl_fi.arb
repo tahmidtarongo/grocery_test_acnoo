@@ -486,5 +486,11 @@
   "phonee": "Puhelin:",
   "purchaseBy": "Ostettu:",
   "salesBy": "Myyty:",
-  "days": "päivää"
+  "days": "päivää",
+  "freeLifetimeUpdate": "Ilmainen elinikäinen päivitys",
+  "android": "Android- ja iOS-sovellustuki",
+  "premiumCustomerSupport": "Android- ja iOS-sovellustuki",
+  "customInvoiceBranding": "Mukautettu laskujen brändäys",
+  "unlimitedUsage": "Rajoittamaton käyttö",
+  "freeDataBackup": "Ilmainen tietojen varmuuskopiointi"
 }

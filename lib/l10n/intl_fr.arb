@@ -487,7 +487,14 @@
   "phonee": "Téléphone :",
   "purchaseBy": "Acheté par :",
   "salesBy": "Vendu par :",
-  "days": "jours"
+  "days": "jours",
+
+  "freeLifetimeUpdate": "Mise à jour gratuite à vie",
+  "android": "Support des applications Android et iOS",
+  "premiumCustomerSupport": "Support des applications Android et iOS",
+  "customInvoiceBranding": "Marquage personnalisé des factures",
+  "unlimitedUsage": "Utilisation illimitée",
+  "freeDataBackup": "Sauvegarde des données gratuite"
 
 
 

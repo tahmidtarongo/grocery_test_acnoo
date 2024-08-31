@@ -489,6 +489,12 @@
   "phonee": "ဖုန်း:",
   "purchaseBy": "ဝယ်သူ:",
   "salesBy": "ရောင်းသူ:",
-  "days": "ရက်များ"
+  "days": "ရက်များ",
+  "freeLifetimeUpdate": "အခမဲ့ အကြီးအကျယ် အပ်ဒိတ်",
+  "android": "Android နှင့် iOS အက်ပ် အထောက်အပံ့",
+  "premiumCustomerSupport": "Android နှင့် iOS အက်ပ် အထောက်အပံ့",
+  "customInvoiceBranding": "ကိုယ်ပိုင် အကောင့် အမှတ်အသား",
+  "unlimitedUsage": "အကန့်အသတ်မရှိ သုံးစွဲမှု",
+  "freeDataBackup": "အခမဲ့ ဒေတာ ဘက်ပ်"
 
 }

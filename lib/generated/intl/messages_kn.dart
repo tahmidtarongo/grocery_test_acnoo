@@ -71,6 +71,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "ಈ ಕೆಳಗಿನ ಸಂಖ್ಯೆಗೆ SMS ಕಳುಹಿಸಲಾಗುತ್ತದೆ:"),
+        "android": MessageLookupByLibrary.simpleMessage(
+            "ಆಂಡ್ರಾಯ್ಡ್ ಮತ್ತು iOS ಅಪ್ಲಿಕೇಶನ್ ಬೆಂಬಲ"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "ಹೊಸ ಅಪ್‌ಡೇಟ್ ಲಭ್ಯವಿದೆ\nದಯವಿಟ್ಟು ನಿಮ್ಮ ಆಪ್‌ಡೇಟ್ ಮಾಡಿ"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("ಆಪಲ್ ವಾಚ್"),
@@ -152,6 +154,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("ಹೊಸ ಪಾಸ್ವರ್ಡ್ ರಚಿಸಿ"),
         "currency": MessageLookupByLibrary.simpleMessage("ಕರೆನ್ಸಿ"),
+        "customInvoiceBranding":
+            MessageLookupByLibrary.simpleMessage("ಕಸ್ಟಮ್ ಇನ್ವಾಯ್ಸ್ ಬ್ರಾಂಡಿಂಗ್"),
         "customerDue": MessageLookupByLibrary.simpleMessage("ಗ್ರಾಹಕ ಬಾಕಿ"),
         "customerName": MessageLookupByLibrary.simpleMessage("ಗ್ರಾಹಕ ಹೆಸರು"),
         "customerPay": MessageLookupByLibrary.simpleMessage("ಗ್ರಾಹಕ ಪಾವತಿ"),
@@ -286,6 +290,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "ಇಮೇಲ್ ಸ್ಪಾಮ್ ಫೋಲ್ಡರ್‌ಗೆಯಲ್ಲಿ ಹೋಗಬಹುದು."),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("ಪಾಸ್ವರ್ಡ್ ಮರೆತೆ?"),
+        "freeDataBackup":
+            MessageLookupByLibrary.simpleMessage("ಉಚಿತ ಡೇಟಾ ಬ್ಯಾಕಪ್"),
+        "freeLifetimeUpdate":
+            MessageLookupByLibrary.simpleMessage("ಮೋಡತ ಬದಲಾವಣೆ ಸದಾ ಉಚಿತ"),
         "freePack": MessageLookupByLibrary.simpleMessage("ಉಚಿತ ಪ್ಯಾಕೇಜ್"),
         "freePlan": MessageLookupByLibrary.simpleMessage("ಉಚಿತ ಪ್ಯಾಕೇಜ್"),
         "fromDate": MessageLookupByLibrary.simpleMessage("ದಿನಾಂಕ ಯಿಂದ"),
@@ -467,6 +475,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "ದಯವಿಟ್ಟು ಖರ್ಚು ವರ್ಗವನ್ನು ಆಯ್ಕೆಮಾಡಿ"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("ಶಕ್ತಿಯಿಂದ ಆಚನು"),
+        "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
+            "ಆಂಡ್ರಾಯ್ಡ್ ಮತ್ತು iOS ಅಪ್ಲಿಕೇಶನ್ ಬೆಂಬಲ"),
         "premiumPlan":
             MessageLookupByLibrary.simpleMessage("ಪ್ರೀಮಿಯಂ ಪ್ಯಾಕೇಜ್"),
         "previousDue": MessageLookupByLibrary.simpleMessage("ಹಿಂದಿನ ಬಾಕಿ"),
@@ -655,6 +665,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitPirce": MessageLookupByLibrary.simpleMessage("ಘಟಕ ಬೆಲೆ"),
         "units": MessageLookupByLibrary.simpleMessage("ಯೂನಿಟ್‌ಗಳು"),
         "unlimited": MessageLookupByLibrary.simpleMessage("ಅಸಂಖ್ಯಾತ"),
+        "unlimitedUsage": MessageLookupByLibrary.simpleMessage("ಅನಂತ ಬಳಕೆ"),
         "unlimitedUsagesOfOurPackage":
             MessageLookupByLibrary.simpleMessage("ನಮ್ಮ ಪ್ಯಾಕೇಜ್‌ನ ಅಮಿತ ಬಳಕೆ👇"),
         "update": MessageLookupByLibrary.simpleMessage("ನವೀಕರಿಸು"),

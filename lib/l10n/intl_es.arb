@@ -491,7 +491,14 @@
   "phonee": "Teléfono:",
   "purchaseBy": "Comprado por:",
   "salesBy": "Vendido por:",
-  "days": "días"
+  "days": "días",
+
+  "freeLifetimeUpdate": "Actualización gratuita de por vida",
+  "android": "Soporte para aplicaciones Android e iOS",
+  "premiumCustomerSupport": "Soporte para aplicaciones Android e iOS",
+  "customInvoiceBranding": "Marca personalizada en facturas",
+  "unlimitedUsage": "Uso ilimitado",
+  "freeDataBackup": "Copia de seguridad de datos gratuita"
 
 
 }

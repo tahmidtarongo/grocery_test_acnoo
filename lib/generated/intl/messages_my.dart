@@ -74,6 +74,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS ကို နောက်လိုက်သည့်နံပါတ်သို့ ပို့ပေးပါမည်။"),
+        "android": MessageLookupByLibrary.simpleMessage(
+            "Android နှင့် iOS အက်ပ် အထောက်အပံ့"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("အက်ပယ် နာရီ"),
         "apply": MessageLookupByLibrary.simpleMessage("လျှောက်ထားသည်"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("သေချာပါသလား?"),
@@ -153,6 +155,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("အသစ်သော စကားဝှက် ဖန်တီးပါ"),
         "currency": MessageLookupByLibrary.simpleMessage("ငွေကြေး"),
+        "customInvoiceBranding": MessageLookupByLibrary.simpleMessage(
+            "ကိုယ်ပိုင် အကောင့် အမှတ်အသား"),
         "customerDue": MessageLookupByLibrary.simpleMessage("ဖောက်သည် အကြွေး"),
         "customerName": MessageLookupByLibrary.simpleMessage("ကုန်သည်အမည်"),
         "customerPay":
@@ -305,6 +309,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "ထိုအီးမေးလ်သည် သင်၏ စပမ်းဖိုက်လ်တွင် မရောက်နိုင်ပါ"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("စကားဝှက်မေ့နေပါသလား"),
+        "freeDataBackup":
+            MessageLookupByLibrary.simpleMessage("အခမဲ့ ဒေတာ ဘက်ပ်"),
+        "freeLifetimeUpdate":
+            MessageLookupByLibrary.simpleMessage("အခမဲ့ အကြီးအကျယ် အပ်ဒိတ်"),
         "freePack": MessageLookupByLibrary.simpleMessage("အခမဲ့ အများဆုံး"),
         "freePlan": MessageLookupByLibrary.simpleMessage("အခမဲ့ အများဆုံး"),
         "fromDate": MessageLookupByLibrary.simpleMessage("မှာယူသည့်ရက်စွဲ"),
@@ -494,6 +502,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("အမျိုးအစား ရွေးချယ်ပါ"),
         "pleaseSelectAExpenseCategory": MessageLookupByLibrary.simpleMessage(
             "အသုံးစရိတ် အမျိုးအစား ရွေးချယ်ပါ"),
+        "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
+            "Android နှင့် iOS အက်ပ် အထောက်အပံ့"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("အလဲမရှိသေးပါ"),
         "previousDue":
             MessageLookupByLibrary.simpleMessage("အတွက်ကျန်ပါကျမှန်ကန်ခံရသည်"),
@@ -703,6 +713,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitName": MessageLookupByLibrary.simpleMessage("ယူနစ်အမည်"),
         "units": MessageLookupByLibrary.simpleMessage("ယူနစ်များ"),
         "unlimited": MessageLookupByLibrary.simpleMessage("အမြင့်မလိုဘူး"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("အကန့်အသတ်မရှိ သုံးစွဲမှု"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "သင့် package ကို အကန့်အသတ်မရှိ အသုံးပြုနိုင်သည်👇"),
         "update": MessageLookupByLibrary.simpleMessage("အပ်ဒိတ်ပြုပါ"),

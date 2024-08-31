@@ -488,5 +488,11 @@
   "phonee": "Telefoon:",
   "purchaseBy": "Gekoop deur:",
   "salesBy": "Verkoop deur:",
-  "days": "dae"
+  "days": "dae",
+  "freeLifetimeUpdate": "Gratis Lewenslange Opgradering",
+  "android": "Android & iOS App Ondersteuning",
+  "premiumCustomerSupport": "Android & iOS App Ondersteuning",
+  "customInvoiceBranding": "Pasgemaakte Faktuur Merk",
+  "unlimitedUsage": "Onbeperkte Gebruik",
+  "freeDataBackup": "Gratis Data Rugsteun"
 }

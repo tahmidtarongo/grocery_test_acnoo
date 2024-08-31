@@ -491,7 +491,13 @@
   "phonee": "Τηλέφωνο:",
   "purchaseBy": "Αγοράστηκε από:",
   "salesBy": "Πωλήθηκε από:",
-  "days": "ημέρες"
+  "days": "ημέρες",
+  "freeLifetimeUpdate": "Δωρεάν Ενημέρωση Διαρκούς Χρόνου",
+  "android": "Υποστήριξη Εφαρμογών Android & iOS",
+  "premiumCustomerSupport": "Υποστήριξη Εφαρμογών Android & iOS",
+  "customInvoiceBranding": "Προσαρμοσμένο Branding Τιμολογίων",
+  "unlimitedUsage": "Απεριόριστη Χρήση",
+  "freeDataBackup": "Δωρεάν Αντίγραφο Ασφαλείας Δεδομένων"
 
 
 }

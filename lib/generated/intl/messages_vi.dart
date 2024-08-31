@@ -70,6 +70,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "Một tin nhắn SMS sẽ được gửi đến số điện thoại sau:"),
+        "android": MessageLookupByLibrary.simpleMessage(
+            "Hỗ trợ ứng dụng Android và iOS"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "Có phiên bản cập nhật mới\nVui lòng cập nhật ứng dụng của bạn"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
@@ -148,6 +150,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Tạo mật khẩu mới"),
         "currency": MessageLookupByLibrary.simpleMessage("Tiền tệ"),
+        "customInvoiceBranding": MessageLookupByLibrary.simpleMessage(
+            "Tùy chỉnh thương hiệu hóa đơn"),
         "customerDue":
             MessageLookupByLibrary.simpleMessage("Khách hàng còn nợ"),
         "customerName": MessageLookupByLibrary.simpleMessage("tên khách hàng"),
@@ -284,6 +288,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "folder": MessageLookupByLibrary.simpleMessage(
             "Có thể email đã bị đưa vào thư mục spam của bạn."),
         "forgotPassword": MessageLookupByLibrary.simpleMessage("Quên mật khẩu"),
+        "freeDataBackup":
+            MessageLookupByLibrary.simpleMessage("Sao lưu dữ liệu miễn phí"),
+        "freeLifetimeUpdate":
+            MessageLookupByLibrary.simpleMessage("Cập nhật miễn phí trọn đời"),
         "freePack": MessageLookupByLibrary.simpleMessage("Gói miễn phí"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Gói miễn phí"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Từ ngày"),
@@ -472,6 +480,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Vui lòng chọn danh mục chi phí"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Được cung cấp bởi Acnoo"),
+        "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
+            "Hỗ trợ ứng dụng Android và iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Gói cao cấp"),
         "previousDue": MessageLookupByLibrary.simpleMessage("Đến hạn trước"),
         "previousPayAmount": MessageLookupByLibrary.simpleMessage(
@@ -669,6 +679,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitPirce": MessageLookupByLibrary.simpleMessage("Giá đơn vị"),
         "units": MessageLookupByLibrary.simpleMessage("Các đơn vị"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Vô hạn"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("Sử dụng không giới hạn"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "Sử dụng không giới hạn gói của chúng tôi👇"),
         "update": MessageLookupByLibrary.simpleMessage("Cập nhật"),

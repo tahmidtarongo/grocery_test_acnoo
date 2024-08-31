@@ -70,6 +70,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "یک SMS به شماره زیر ارسال خواهد شد: "),
+        "android": MessageLookupByLibrary.simpleMessage(
+            "پشتیبانی از برنامه‌های Android و iOS"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "بروزرسانی جدید موجود است\nلطفاً نرم‌افزار خود را بروز کنید"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("اپل واچ"),
@@ -145,6 +147,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("ایجاد رمز عبور جدید"),
         "currency": MessageLookupByLibrary.simpleMessage("واحد پول"),
+        "customInvoiceBranding":
+            MessageLookupByLibrary.simpleMessage("برندسازی سفارشی فاکتور"),
         "customerDue": MessageLookupByLibrary.simpleMessage("بدهی مشتری"),
         "customerName": MessageLookupByLibrary.simpleMessage("نام مشتری"),
         "customerPay": MessageLookupByLibrary.simpleMessage("پرداخت مشتری"),
@@ -283,6 +287,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "ممکن است ایمیل به پوشه هرزنامه شما رفته باشد."),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("رمز عبور را فراموش کرده اید"),
+        "freeDataBackup": MessageLookupByLibrary.simpleMessage(
+            "پشتیبان‌گیری رایگان از داده‌ها"),
+        "freeLifetimeUpdate":
+            MessageLookupByLibrary.simpleMessage("بروزرسانی رایگان برای همیشه"),
         "freePack": MessageLookupByLibrary.simpleMessage("بسته رایگان"),
         "freePlan": MessageLookupByLibrary.simpleMessage("طرح رایگان"),
         "fromDate": MessageLookupByLibrary.simpleMessage("از تاریخ"),
@@ -456,6 +464,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "لطفاً یک دسته بندی هزینه انتخاب کنید"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("توسط اکنو پشتیبانی می‌شود"),
+        "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
+            "پشتیبانی از برنامه‌های Android و iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("طرح حق بیمه"),
         "previousDue": MessageLookupByLibrary.simpleMessage("سررسید قبلی"),
         "previousPayAmount":
@@ -637,6 +647,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitName": MessageLookupByLibrary.simpleMessage("نام واحد"),
         "units": MessageLookupByLibrary.simpleMessage("واحدها"),
         "unlimited": MessageLookupByLibrary.simpleMessage("نامحدود"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("استفاده نامحدود"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "استفاده نامحدود از بسته ما👇"),
         "update": MessageLookupByLibrary.simpleMessage("به روز رسانی"),

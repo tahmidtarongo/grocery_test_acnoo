@@ -4910,6 +4910,66 @@ class S {
     );
   }
 
+  /// `Free Lifetime Update`
+  String get freeLifetimeUpdate {
+    return Intl.message(
+      'Free Lifetime Update',
+      name: 'freeLifetimeUpdate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Android & iOS App Support`
+  String get android {
+    return Intl.message(
+      'Android & iOS App Support',
+      name: 'android',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Android & iOS App Support`
+  String get premiumCustomerSupport {
+    return Intl.message(
+      'Android & iOS App Support',
+      name: 'premiumCustomerSupport',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Custom Invoice Branding`
+  String get customInvoiceBranding {
+    return Intl.message(
+      'Custom Invoice Branding',
+      name: 'customInvoiceBranding',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unlimited Usage`
+  String get unlimitedUsage {
+    return Intl.message(
+      'Unlimited Usage',
+      name: 'unlimitedUsage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Free Data Backup`
+  String get freeDataBackup {
+    return Intl.message(
+      'Free Data Backup',
+      name: 'freeDataBackup',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.`
   String get loremIpsumDolorSit {
     return Intl.message(

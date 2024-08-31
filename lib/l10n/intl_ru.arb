@@ -484,7 +484,13 @@
   "phonee": "Телефон:",
   "purchaseBy": "Куплено кем:",
   "salesBy": "Продано кем:",
-  "days": "дней"
+  "days": "дней",
+  "freeLifetimeUpdate": "Бесплатное обновление на всю жизнь",
+  "android": "Поддержка приложений для Android и iOS",
+  "premiumCustomerSupport": "Поддержка приложений для Android и iOS",
+  "customInvoiceBranding": "Индивидуальный брендинг счетов",
+  "unlimitedUsage": "Неограниченное использование",
+  "freeDataBackup": "Бесплатное резервное копирование данных"
 
 
 }

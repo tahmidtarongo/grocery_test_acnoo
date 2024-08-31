@@ -67,6 +67,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS će biti poslan na sljedeći broj:"),
+        "android": MessageLookupByLibrary.simpleMessage(
+            "Podrška za Android i iOS aplikacije"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "Dostupno je novo ažuriranje\nMolimo ažurirajte svoju aplikaciju"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
@@ -148,6 +150,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Kreirajte novu lozinku"),
         "currency": MessageLookupByLibrary.simpleMessage("Valuta"),
+        "customInvoiceBranding": MessageLookupByLibrary.simpleMessage(
+            "Prilagođeno brendiranje faktura"),
         "customerDue": MessageLookupByLibrary.simpleMessage("Dug kupca"),
         "customerName": MessageLookupByLibrary.simpleMessage("Ime kupca"),
         "customerPay": MessageLookupByLibrary.simpleMessage("Plaćanje kupca"),
@@ -288,6 +292,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Može se desiti da je email završio u vašem spam folderu."),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Zaboravili ste lozinku"),
+        "freeDataBackup": MessageLookupByLibrary.simpleMessage(
+            "Besplatan sigurnosni kopija podataka"),
+        "freeLifetimeUpdate": MessageLookupByLibrary.simpleMessage(
+            "Besplatna ažuriranja za ceo život"),
         "freePack": MessageLookupByLibrary.simpleMessage("Besplatni paket"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Besplatni paket"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Od datuma"),
@@ -472,6 +480,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Molimo izaberite kategoriju troškova"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Powered By Acnoo"),
+        "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
+            "Podrška za Android i iOS aplikacije"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Premium paket"),
         "previousDue": MessageLookupByLibrary.simpleMessage("Prethodni dug"),
         "previousPayAmount":
@@ -667,6 +677,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitPirce": MessageLookupByLibrary.simpleMessage("Jedinična cena"),
         "units": MessageLookupByLibrary.simpleMessage("Jedinice"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Neograničeno"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("Neograničena upotreba"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "Neograničeno korišćenje našeg paketa👇"),
         "update": MessageLookupByLibrary.simpleMessage("Ažuriraj"),

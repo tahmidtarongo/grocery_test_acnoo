@@ -70,6 +70,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "Ett SMS kommer att skickas till följande nummer:"),
+        "android":
+            MessageLookupByLibrary.simpleMessage("Android & iOS appstöd"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Klocka"),
         "apply": MessageLookupByLibrary.simpleMessage("Aplikovať"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("Är du säker?"),
@@ -140,6 +142,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Skapa nytt lösenord"),
         "currency": MessageLookupByLibrary.simpleMessage("Valuta"),
+        "customInvoiceBranding":
+            MessageLookupByLibrary.simpleMessage("Anpassad fakturabrand"),
         "customerDue": MessageLookupByLibrary.simpleMessage("Kundens skuld"),
         "customerName": MessageLookupByLibrary.simpleMessage("Kundnamn"),
         "customerPay":
@@ -278,6 +282,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Det kan vara att mailet hamnade i din skräppost."),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Glömt lösenordet"),
+        "freeDataBackup": MessageLookupByLibrary.simpleMessage(
+            "Gratis datorsäkerhetskopiering"),
+        "freeLifetimeUpdate":
+            MessageLookupByLibrary.simpleMessage("Gratis livstidsuppdatering"),
         "freePack": MessageLookupByLibrary.simpleMessage("Gratis paket"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Gratis plan"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Från datum"),
@@ -451,6 +459,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Välj en kategori"),
         "pleaseSelectAExpenseCategory":
             MessageLookupByLibrary.simpleMessage("Välj en utgiftskategori"),
+        "premiumCustomerSupport":
+            MessageLookupByLibrary.simpleMessage("Android & iOS appstöd"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Premiumplan"),
         "previousDue": MessageLookupByLibrary.simpleMessage("Tidigare skuld"),
         "previousPayAmount":
@@ -632,6 +642,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitName": MessageLookupByLibrary.simpleMessage("Enhetenhet"),
         "units": MessageLookupByLibrary.simpleMessage("Enheter"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Obegränsad"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("Obegränsad användning"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "Obegränsad användning av vårt paket👇"),
         "update": MessageLookupByLibrary.simpleMessage("Uppdatera"),

@@ -485,6 +485,11 @@
   "phonee": "فون:",
   "purchaseBy": "خریداری کی گئی:",
   "salesBy": "فروخت کیا گیا:",
-  "days": "دن"
-
+  "days": "دن",
+  "freeLifetimeUpdate": "مفت عمر بھر کی اپ ڈیٹ",
+  "android": "Android اور iOS ایپ سپورٹ",
+  "premiumCustomerSupport": "Android اور iOS ایپ سپورٹ",
+  "customInvoiceBranding": "حسب ضرورت بل برانڈنگ",
+  "unlimitedUsage": "لامحدود استعمال",
+  "freeDataBackup": "مفت ڈیٹا بیک اپ"
 }

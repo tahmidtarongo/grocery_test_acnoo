@@ -491,7 +491,14 @@
   "phonee": "फोन:",
   "purchaseBy": "खरीदने वाला:",
   "salesBy": "बेचने वाला:",
-  "days": "दिन"
+  "days": "दिन",
+
+  "freeLifetimeUpdate": "मुक्त आजीवन अपडेट",
+  "android": "एंड्रॉइड और iOS ऐप समर्थन",
+  "premiumCustomerSupport": "एंड्रॉइड और iOS ऐप समर्थन",
+  "customInvoiceBranding": "कस्टम इनवॉइस ब्रांडिंग",
+  "unlimitedUsage": "अनलिमिटेड उपयोग",
+  "freeDataBackup": "मुक्त डेटा बैकअप"
 
 
 

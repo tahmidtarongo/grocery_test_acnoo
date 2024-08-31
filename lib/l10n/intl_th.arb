@@ -484,7 +484,14 @@
   "phonee": "โทรศัพท์:",
   "purchaseBy": "ซื้อโดย:",
   "salesBy": "ขายโดย:",
-  "days": "วัน"
+  "days": "วัน",
+
+  "freeLifetimeUpdate": "อัปเดตฟรีตลอดชีพ",
+  "android": "การสนับสนุนแอป Android และ iOS",
+  "premiumCustomerSupport": "การสนับสนุนแอป Android และ iOS",
+  "customInvoiceBranding": "การสร้างแบรนด์ใบแจ้งหนี้แบบกำหนดเอง",
+  "unlimitedUsage": "การใช้งานไม่จำกัด",
+  "freeDataBackup": "สำรองข้อมูลฟรี"
 
 
 }

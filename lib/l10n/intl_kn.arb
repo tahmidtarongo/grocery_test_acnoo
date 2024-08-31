@@ -485,6 +485,12 @@
   "phonee": "ಫೋನ್:",
   "purchaseBy": "ಖರೀದಿಸಿದವರು:",
   "salesBy": "ಮಾರಾಟ ಮಾಡಿದವರು:",
-  "days": "ದಿನಗಳು"
+  "days": "ದಿನಗಳು",
+  "freeLifetimeUpdate": "ಮೋಡತ ಬದಲಾವಣೆ ಸದಾ ಉಚಿತ",
+  "android": "ಆಂಡ್ರಾಯ್ಡ್ ಮತ್ತು iOS ಅಪ್ಲಿಕೇಶನ್ ಬೆಂಬಲ",
+  "premiumCustomerSupport": "ಆಂಡ್ರಾಯ್ಡ್ ಮತ್ತು iOS ಅಪ್ಲಿಕೇಶನ್ ಬೆಂಬಲ",
+  "customInvoiceBranding": "ಕಸ್ಟಮ್ ಇನ್ವಾಯ್ಸ್ ಬ್ರಾಂಡಿಂಗ್",
+  "unlimitedUsage": "ಅನಂತ ಬಳಕೆ",
+  "freeDataBackup": "ಉಚಿತ ಡೇಟಾ ಬ್ಯಾಕಪ್"
 
 }

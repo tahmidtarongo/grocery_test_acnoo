@@ -35,14 +35,6 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
     'images/sp6.png',
   ];
 
-  List<String> titleListData = [
-    'Free Lifetime Update',
-    'Android & iOS App Support',
-    'Premium Customer Support',
-    'Custom Invoice Branding',
-    'Unlimited Usage',
-    'Free Data Backup',
-  ];
 
   List<String> planDetailsImages = [
     'images/plan_details_1.png',
@@ -51,14 +43,6 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
     'images/plan_details_4.png',
     'images/plan_details_5.png',
     'images/plan_details_6.png',
-  ];
-  List<String> planDetailsText = [
-    'Free Lifetime Update',
-    'Android & iOS App Support',
-    'Premium Customer Support',
-    'Custom Invoice Branding',
-    'Unlimited Usage',
-    'Free Data Backup',
   ];
 
   @override
@@ -78,6 +62,36 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
 
   @override
   Widget build(BuildContext context) {
+    List<String> planDetailsText = [
+      lang.S.of(context).freeLifetimeUpdate,
+      lang.S.of(context).android,
+      lang.S.of(context).premiumCustomerSupport,
+      lang.S.of(context).customInvoiceBranding,
+      lang.S.of(context).unlimitedUsage,
+      lang.S.of(context).freeDataBackup,
+      // 'Free Lifetime Update',
+      // 'Android & iOS App Support',
+      // 'Premium Customer Support',
+      // 'Custom Invoice Branding',
+      // 'Unlimited Usage',
+      // 'Free Data Backup',
+    ];
+    List<String> titleListData = [
+      lang.S.of(context).freeLifetimeUpdate,
+      lang.S.of(context).android,
+      lang.S.of(context).premiumCustomerSupport,
+      lang.S.of(context).customInvoiceBranding,
+      lang.S.of(context).unlimitedUsage,
+      lang.S.of(context).freeDataBackup,
+
+      // 'Free Lifetime Update',
+      // 'Android & iOS App Support',
+      // 'Premium Customer Support',
+      // 'Custom Invoice Branding',
+      // 'Unlimited Usage',
+      // 'Free Data Backup',
+    ];
+
     return Consumer(builder: (context, ref, __) {
       final subscriptionPlanData = ref.watch(subscriptionPlanProvider);
       final businessInfo = ref.watch(businessInfoProvider);

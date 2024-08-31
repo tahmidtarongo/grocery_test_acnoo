@@ -73,6 +73,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "Aşağıdakı nömrəyə SMS göndəriləcək: "),
+        "android": MessageLookupByLibrary.simpleMessage(
+            "Android və iOS Tətbiq Dəstəyi"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Saatı"),
         "apply": MessageLookupByLibrary.simpleMessage("Tətbiq et"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("Əminsiniz?"),
@@ -147,6 +149,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Yeni Şifrə Yaradın"),
         "currency": MessageLookupByLibrary.simpleMessage("Valyuta"),
+        "customInvoiceBranding":
+            MessageLookupByLibrary.simpleMessage("Fərdi Qaimə Brendləşdirmə"),
         "customerDue": MessageLookupByLibrary.simpleMessage("Müştəri Borcu"),
         "customerName": MessageLookupByLibrary.simpleMessage("Müştəri adı"),
         "customerPay": MessageLookupByLibrary.simpleMessage("Müştəri Ödənişi"),
@@ -287,6 +291,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "E-poçtunuz spam qovluğuna düşə bilər."),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Şifrəni unutdunuz?"),
+        "freeDataBackup":
+            MessageLookupByLibrary.simpleMessage("Pulsuz Məlumat Yedəkləmə"),
+        "freeLifetimeUpdate":
+            MessageLookupByLibrary.simpleMessage("Pulsuz Ömürlük Yeniləmə"),
         "freePack": MessageLookupByLibrary.simpleMessage("Pulsuz paket"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Pulsuz plan"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Başlama tarixi"),
@@ -464,6 +472,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Kateqoriya seçin"),
         "pleaseSelectAExpenseCategory":
             MessageLookupByLibrary.simpleMessage("Xərc kateqoriyasını seçin"),
+        "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
+            "Android və iOS Tətbiq Dəstəyi"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Premium plan"),
         "previousDue": MessageLookupByLibrary.simpleMessage("Əvvəlki borc"),
         "previousPayAmount":
@@ -650,6 +660,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitName": MessageLookupByLibrary.simpleMessage("Vahid adı"),
         "units": MessageLookupByLibrary.simpleMessage("Vahid"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Limitsiz"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("Məhdudiyyətsiz İstifadə"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "Paketimizdən məhdudiyyətsiz istifadə"),
         "update": MessageLookupByLibrary.simpleMessage("Yenilə"),

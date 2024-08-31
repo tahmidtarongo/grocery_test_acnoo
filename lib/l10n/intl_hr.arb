@@ -491,6 +491,12 @@
   "phonee": "Telefon:",
   "purchaseBy": "Kupljeno od:",
   "salesBy": "Prodao:",
-  "days": "dani"
+  "days": "dani",
+  "freeLifetimeUpdate": "Besplatna ažuriranja za cijeli život",
+  "android": "Podrška za Android i iOS aplikacije",
+  "premiumCustomerSupport": "Podrška za Android i iOS aplikacije",
+  "customInvoiceBranding": "Prilagođeno brendiranje računa",
+  "unlimitedUsage": "Neograničena upotreba",
+  "freeDataBackup": "Besplatna sigurnosna kopija podataka"
 
 }

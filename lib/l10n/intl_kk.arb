@@ -486,6 +486,12 @@
   "phonee": "Телефон:",
   "purchaseBy": "Сатылып алынған:",
   "salesBy": "Сатушы:",
-  "days": "күн"
+  "days": "күн",
+  "freeLifetimeUpdate": "Тегін Өмірлік Жаңарту",
+  "android": "Android және iOS Қолдау",
+  "premiumCustomerSupport": "Android және iOS Қолдау",
+  "customInvoiceBranding": "Жеке Шот-Брендинг",
+  "unlimitedUsage": "Шектеусіз Пайдалану",
+  "freeDataBackup": "Тегін Деректерді Қайта Қалпына Келтіру"
 
 }

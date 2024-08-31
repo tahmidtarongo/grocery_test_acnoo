@@ -60,6 +60,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "amount": MessageLookupByLibrary.simpleMessage("כמות"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage("יישלח SMS למספר הבא: "),
+        "android": MessageLookupByLibrary.simpleMessage(
+            "תמיכה באפליקציות Android ו-iOS"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "קיימת עדכון חדש זמין\nאנא עדכן את האפליקציה שלך"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("אפל ווטש"),
@@ -129,6 +131,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("צור סיסמה חדשה"),
         "currency": MessageLookupByLibrary.simpleMessage("מַטְבֵּעַ"),
+        "customInvoiceBranding":
+            MessageLookupByLibrary.simpleMessage("מותג אישי לחשבוניות"),
         "customerDue": MessageLookupByLibrary.simpleMessage("חוב לקוח"),
         "customerName": MessageLookupByLibrary.simpleMessage("שם לקוח"),
         "customerPay": MessageLookupByLibrary.simpleMessage("תשלום לקוח"),
@@ -255,6 +259,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "אולי האימייל נשלח לתיקיית הספאם שלך."),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("שכחת את הסיסמא"),
+        "freeDataBackup":
+            MessageLookupByLibrary.simpleMessage("גיבוי נתונים חינם"),
+        "freeLifetimeUpdate":
+            MessageLookupByLibrary.simpleMessage("עדכון חינם לכל החיים"),
         "freePack": MessageLookupByLibrary.simpleMessage("חבילה חינם"),
         "freePlan": MessageLookupByLibrary.simpleMessage("תוכנית חינם"),
         "fromDate": MessageLookupByLibrary.simpleMessage("מתאריך"),
@@ -423,6 +431,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("אנא בחר קטגוריית הוצאה"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("מופעל על ידי Acnoo"),
+        "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
+            "תמיכה באפליקציות Android ו-iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("תוכנית פרימיום"),
         "previousDue": MessageLookupByLibrary.simpleMessage("הקודם בשל"),
         "previousPayAmount":
@@ -595,6 +605,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitPirce": MessageLookupByLibrary.simpleMessage("מחיר ליחידה"),
         "units": MessageLookupByLibrary.simpleMessage("יחידות"),
         "unlimited": MessageLookupByLibrary.simpleMessage("ללא הגבלה"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("שימוש ללא הגבלה"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "שימושים בלתי מוגבלים בחבילה שלנו👇"),
         "update": MessageLookupByLibrary.simpleMessage("עדכון"),

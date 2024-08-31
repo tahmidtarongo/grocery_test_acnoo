@@ -57,6 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "amount": MessageLookupByLibrary.simpleMessage("양"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage("다음 번호로 SMS가 전송됩니다:"),
+        "android": MessageLookupByLibrary.simpleMessage("Android 및 iOS 앱 지원"),
         "anewUpdateAvailable":
             MessageLookupByLibrary.simpleMessage("새 업데이트가 가능합니다.\n앱을 업데이트하세요"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("애플워치"),
@@ -117,6 +118,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createAcc": MessageLookupByLibrary.simpleMessage("무료 계정 만들기"),
         "createNewPassword": MessageLookupByLibrary.simpleMessage("새 비밀번호 만들기"),
         "currency": MessageLookupByLibrary.simpleMessage("통화"),
+        "customInvoiceBranding":
+            MessageLookupByLibrary.simpleMessage("맞춤형 인보이스 브랜딩"),
         "customerDue": MessageLookupByLibrary.simpleMessage("고객 채무"),
         "customerName": MessageLookupByLibrary.simpleMessage("고객 이름"),
         "customerPay": MessageLookupByLibrary.simpleMessage("고객 결제"),
@@ -224,6 +227,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "firstName": MessageLookupByLibrary.simpleMessage("이름"),
         "folder": MessageLookupByLibrary.simpleMessage("스팸 폴더에 메일이 있을 수 있습니다."),
         "forgotPassword": MessageLookupByLibrary.simpleMessage("비밀번호를 잊으 셨나요"),
+        "freeDataBackup": MessageLookupByLibrary.simpleMessage("무료 데이터 백업"),
+        "freeLifetimeUpdate":
+            MessageLookupByLibrary.simpleMessage("평생 무료 업데이트"),
         "freePack": MessageLookupByLibrary.simpleMessage("무료 패키지"),
         "freePlan": MessageLookupByLibrary.simpleMessage("무료 플랜"),
         "fromDate": MessageLookupByLibrary.simpleMessage("시작 날짜"),
@@ -381,6 +387,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("지출 카테고리를 선택하세요"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Powered By Acnoo"),
+        "premiumCustomerSupport":
+            MessageLookupByLibrary.simpleMessage("Android 및 iOS 앱 지원"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("프리미엄 플랜"),
         "previousDue": MessageLookupByLibrary.simpleMessage("이전 기한"),
         "previousPayAmount": MessageLookupByLibrary.simpleMessage("이전 지불 금액"),
@@ -539,6 +547,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitPirce": MessageLookupByLibrary.simpleMessage("단가"),
         "units": MessageLookupByLibrary.simpleMessage("단위"),
         "unlimited": MessageLookupByLibrary.simpleMessage("제한 없는"),
+        "unlimitedUsage": MessageLookupByLibrary.simpleMessage("무제한 사용"),
         "unlimitedUsagesOfOurPackage":
             MessageLookupByLibrary.simpleMessage("우리 패키지의 무제한 사용👇"),
         "update": MessageLookupByLibrary.simpleMessage("업데이트"),

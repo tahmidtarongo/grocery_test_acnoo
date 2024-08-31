@@ -71,6 +71,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "Un SMS va fi trimis la următorul număr:"),
+        "android": MessageLookupByLibrary.simpleMessage(
+            "Suport pentru aplicații Android și iOS"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "Este disponibilă o actualizare nouă.\nVă rugăm să actualizați aplicația"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
@@ -155,6 +157,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Creează o parolă nouă"),
         "currency": MessageLookupByLibrary.simpleMessage("Valută"),
+        "customInvoiceBranding": MessageLookupByLibrary.simpleMessage(
+            "Branding personalizat al facturilor"),
         "customerDue":
             MessageLookupByLibrary.simpleMessage("Datorii ale clienților"),
         "customerName":
@@ -298,6 +302,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "S-ar putea ca emailul să fi ajuns în folderul de spam."),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Aţi uitat parola"),
+        "freeDataBackup":
+            MessageLookupByLibrary.simpleMessage("Backup de date gratuit"),
+        "freeLifetimeUpdate": MessageLookupByLibrary.simpleMessage(
+            "Actualizare gratuită pe viață"),
         "freePack": MessageLookupByLibrary.simpleMessage("Pachet gratuit"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Plan gratuit"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Din data"),
@@ -484,6 +492,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Te rugăm să selectezi o categorie de cheltuieli"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Furnizat de Acnoo"),
+        "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
+            "Suport pentru aplicații Android și iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Plan Premium"),
         "previousDue":
             MessageLookupByLibrary.simpleMessage("Datorită anterioară"),
@@ -688,6 +698,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitPirce": MessageLookupByLibrary.simpleMessage("Preț unitar"),
         "units": MessageLookupByLibrary.simpleMessage("Unități"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Nelimitat"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("Utilizare nelimitată"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "Utilizări nelimitate ale pachetului nostru👇"),
         "update": MessageLookupByLibrary.simpleMessage("Actualizați"),

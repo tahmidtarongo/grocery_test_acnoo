@@ -56,6 +56,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "amount": MessageLookupByLibrary.simpleMessage("数量"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage("短信将发送到以下号码："),
+        "android": MessageLookupByLibrary.simpleMessage("安卓和iOS应用支持"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("苹果手表"),
         "apply": MessageLookupByLibrary.simpleMessage("应用"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("您确定吗？"),
@@ -113,6 +114,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createAcc": MessageLookupByLibrary.simpleMessage("创建一个免费帐户"),
         "createNewPassword": MessageLookupByLibrary.simpleMessage("创建新密码"),
         "currency": MessageLookupByLibrary.simpleMessage("货币"),
+        "customInvoiceBranding":
+            MessageLookupByLibrary.simpleMessage("自定义发票品牌"),
         "customerDue": MessageLookupByLibrary.simpleMessage("客户欠款"),
         "customerName": MessageLookupByLibrary.simpleMessage("顾客姓名"),
         "customerPay": MessageLookupByLibrary.simpleMessage("客户支付"),
@@ -212,6 +215,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "firstName": MessageLookupByLibrary.simpleMessage("名"),
         "folder": MessageLookupByLibrary.simpleMessage("可能邮件已被发送到您的垃圾邮件文件夹。"),
         "forgotPassword": MessageLookupByLibrary.simpleMessage("忘记密码"),
+        "freeDataBackup": MessageLookupByLibrary.simpleMessage("免费数据备份"),
+        "freeLifetimeUpdate": MessageLookupByLibrary.simpleMessage("终身免费更新"),
         "freePack": MessageLookupByLibrary.simpleMessage("免费套餐"),
         "freePlan": MessageLookupByLibrary.simpleMessage("免费计划"),
         "fromDate": MessageLookupByLibrary.simpleMessage("从日期"),
@@ -352,6 +357,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("请选择一个类别"),
         "pleaseSelectAExpenseCategory":
             MessageLookupByLibrary.simpleMessage("请选择费用类别"),
+        "premiumCustomerSupport":
+            MessageLookupByLibrary.simpleMessage("安卓和iOS应用支持"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("保费计划"),
         "previousDue": MessageLookupByLibrary.simpleMessage("以前到期"),
         "previousPayAmount": MessageLookupByLibrary.simpleMessage("以前的支付金额"),
@@ -503,6 +510,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitName": MessageLookupByLibrary.simpleMessage("单位名称"),
         "units": MessageLookupByLibrary.simpleMessage("单位"),
         "unlimited": MessageLookupByLibrary.simpleMessage("无限"),
+        "unlimitedUsage": MessageLookupByLibrary.simpleMessage("无限使用"),
         "unlimitedUsagesOfOurPackage":
             MessageLookupByLibrary.simpleMessage("我们套餐的无限使用👇"),
         "update": MessageLookupByLibrary.simpleMessage("更新"),

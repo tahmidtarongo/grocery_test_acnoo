@@ -71,6 +71,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "Se enviará un SMS al siguiente número: "),
+        "android": MessageLookupByLibrary.simpleMessage(
+            "Soporte para aplicaciones Android e iOS"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
         "apply": MessageLookupByLibrary.simpleMessage("Aplicar"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("¿Estás seguro?"),
@@ -150,6 +152,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Crear una nueva contraseña"),
         "currency": MessageLookupByLibrary.simpleMessage("Divisa"),
+        "customInvoiceBranding": MessageLookupByLibrary.simpleMessage(
+            "Marca personalizada en facturas"),
         "customerDue":
             MessageLookupByLibrary.simpleMessage("Deuda del cliente"),
         "customerName":
@@ -297,6 +301,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Puede que el correo haya terminado en tu carpeta de spam."),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Has olvidado tu contraseña"),
+        "freeDataBackup": MessageLookupByLibrary.simpleMessage(
+            "Copia de seguridad de datos gratuita"),
+        "freeLifetimeUpdate": MessageLookupByLibrary.simpleMessage(
+            "Actualización gratuita de por vida"),
         "freePack": MessageLookupByLibrary.simpleMessage("Paquete Gratis"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Plan Gratis"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Partir de la fecha"),
@@ -484,6 +492,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Por favor, selecciona una categoría"),
         "pleaseSelectAExpenseCategory": MessageLookupByLibrary.simpleMessage(
             "Por favor, selecciona una categoría de gasto"),
+        "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
+            "Soporte para aplicaciones Android e iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Plan Premium"),
         "previousDue":
             MessageLookupByLibrary.simpleMessage("Vencimiento anterior"),
@@ -684,6 +694,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitName": MessageLookupByLibrary.simpleMessage("Nombre de la unidad"),
         "units": MessageLookupByLibrary.simpleMessage("Unidades"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Ilimitado"),
+        "unlimitedUsage": MessageLookupByLibrary.simpleMessage("Uso ilimitado"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "Usos ilimitados de nuestro paquete👇"),
         "update": MessageLookupByLibrary.simpleMessage("Actualizar"),

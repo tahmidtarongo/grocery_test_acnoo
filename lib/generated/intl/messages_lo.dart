@@ -69,6 +69,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "ຈະສົ່ງ SMS ໄປຫາໝາຍເລກຕໍ່ໄປນີ້:"),
+        "android":
+            MessageLookupByLibrary.simpleMessage("ສະໜອງອະບັບ Android ແລະ iOS"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "ມີການປັບປຸງໃຫມ່ຢູ່\nກະລຸນາປັບປຸງແອດອັນຂອງທ່ານ"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("ນາມໄຟເປິງ"),
@@ -142,6 +144,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("ສ້າງລະຫັດໃໝ່"),
         "currency": MessageLookupByLibrary.simpleMessage("ສະກຸນເງິນ"),
+        "customInvoiceBranding": MessageLookupByLibrary.simpleMessage(
+            "ສະບັດຕິບອກແບບໃຫມ່ທີ່ລອງສົກລະຄາສະຕິ"),
         "customerDue": MessageLookupByLibrary.simpleMessage("ບັດບໍ່ອິນ"),
         "customerName": MessageLookupByLibrary.simpleMessage("ຊື່ລູກຄ້າ"),
         "customerPay":
@@ -276,6 +280,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "folder": MessageLookupByLibrary.simpleMessage(
             "ໃອເບີ່ງວ່າອີເມວອາດຈະຈົ່ງຈົ່ງຢູ່ໃນບິນສະສໍາແລະໃນຈະແບບສ່ອງ"),
         "forgotPassword": MessageLookupByLibrary.simpleMessage("ລືມລະຫັດຜ່ານ"),
+        "freeDataBackup":
+            MessageLookupByLibrary.simpleMessage("ສໍາເລັດຂໍ້ມູນຟຣີ"),
+        "freeLifetimeUpdate":
+            MessageLookupByLibrary.simpleMessage("ອັບໍ່ງເປັນເສດສະດອບໄດ້"),
         "freePack": MessageLookupByLibrary.simpleMessage("ຊຸດຟຣີ"),
         "freePlan": MessageLookupByLibrary.simpleMessage("ແຜນການຟຣີ"),
         "fromDate": MessageLookupByLibrary.simpleMessage("ຈາກວັນທີ"),
@@ -451,6 +459,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ເລືອກໝວດປະເພດຄ່າໃຊ້"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("ສະຫນັບໂດຍ Acnoo"),
+        "premiumCustomerSupport":
+            MessageLookupByLibrary.simpleMessage("ສະໜອງອະບັບ Android ແລະ iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("ແຜນພຣີມຽມ"),
         "previousDue":
             MessageLookupByLibrary.simpleMessage("ໝົດກຳນົດກ່ອນໜ້ານີ້"),
@@ -638,6 +648,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitPirce": MessageLookupByLibrary.simpleMessage("ລາຄາໜ້າຫຼັກ"),
         "units": MessageLookupByLibrary.simpleMessage("ໜ່ວຍ"),
         "unlimited": MessageLookupByLibrary.simpleMessage("ບໍ່ຈຳກັດ"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("ການໃຊ້ງານບໍ່ຈຳກັດ"),
         "unlimitedUsagesOfOurPackage":
             MessageLookupByLibrary.simpleMessage("ໃຊ້ງານໃນບັດໍາກັບເປັນປະເພດ"),
         "update": MessageLookupByLibrary.simpleMessage("ອັບເດດ"),

@@ -490,5 +490,12 @@
   "phonee": "الهاتف:",
   "purchaseBy": "تم الشراء بواسطة:",
   "salesBy": "تم البيع بواسطة:",
-  "days": "أيام"
+  "days": "أيام",
+
+  "freeLifetimeUpdate": "تحديث مجاني مدى الحياة",
+  "android": "دعم تطبيقات أندرويد و iOS",
+  "premiumCustomerSupport": "دعم تطبيقات أندرويد و iOS",
+  "customInvoiceBranding": "تخصيص علامة الفواتير",
+  "unlimitedUsage": "استخدام غير محدود",
+  "freeDataBackup": "نسخ احتياطي مجاني للبيانات"
 }

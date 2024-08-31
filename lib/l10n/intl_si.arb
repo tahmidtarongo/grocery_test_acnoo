@@ -490,5 +490,12 @@
   "phonee": "දුරකථනය:",
   "purchaseBy": "මිලදී ගත්තේ:",
   "salesBy": "විකුණුවේ:",
-  "days": "දින"
+  "days": "දින",
+
+  "freeLifetimeUpdate": "අනෙක් ජීවිතය සඳහා නොමිලේ යාවත්කාලීන",
+  "android": "Android සහ iOS යෙදුම් සහාය",
+  "premiumCustomerSupport": "Android සහ iOS යෙදුම් සහාය",
+  "customInvoiceBranding": "අභිරුචි බිල්පත් මැරීම",
+  "unlimitedUsage": "අසීමිත භාවිතය",
+  "freeDataBackup": "නොමිලේ දත්ත ආපසු ලබාදීම"
 }

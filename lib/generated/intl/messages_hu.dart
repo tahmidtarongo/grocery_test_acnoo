@@ -76,6 +76,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS-t az alábbi számra küldjük: "),
+        "android": MessageLookupByLibrary.simpleMessage(
+            "Android és iOS alkalmazás támogatás"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
         "apply": MessageLookupByLibrary.simpleMessage("Alkalmaz"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("Biztos benne?"),
@@ -155,6 +157,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Új jelszó létrehozása"),
         "currency": MessageLookupByLibrary.simpleMessage("Valuta"),
+        "customInvoiceBranding": MessageLookupByLibrary.simpleMessage(
+            "Személyre szabott számlamárkázás"),
         "customerDue": MessageLookupByLibrary.simpleMessage("Ügyfél tartozás"),
         "customerName": MessageLookupByLibrary.simpleMessage("Ügyfél neve"),
         "customerPay": MessageLookupByLibrary.simpleMessage("Ügyfél fizetés"),
@@ -295,6 +299,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Lehet, hogy az e-mail a spam mappába került."),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Elfelejtett jelszó"),
+        "freeDataBackup":
+            MessageLookupByLibrary.simpleMessage("Ingyenes adatmentés"),
+        "freeLifetimeUpdate": MessageLookupByLibrary.simpleMessage(
+            "Ingyenes Élethosszig Tartó Frissítés"),
         "freePack": MessageLookupByLibrary.simpleMessage("Ingyenes csomag"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Ingyenes terv"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Dátumtól"),
@@ -474,6 +482,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Kérjük, válasszon ki egy kategóriát"),
         "pleaseSelectAExpenseCategory": MessageLookupByLibrary.simpleMessage(
             "Kérjük, válasszon ki egy költségkategóriát"),
+        "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
+            "Android és iOS alkalmazás támogatás"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Prémium csomag"),
         "previousDue": MessageLookupByLibrary.simpleMessage("Előző esedékes"),
         "previousPayAmount":
@@ -669,6 +679,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitName": MessageLookupByLibrary.simpleMessage("Az egység neve"),
         "units": MessageLookupByLibrary.simpleMessage("Egységek"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Korlátlan"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("Korlátlan használat"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "Csomagunk korlátlan használata👇"),
         "update": MessageLookupByLibrary.simpleMessage("Megment"),

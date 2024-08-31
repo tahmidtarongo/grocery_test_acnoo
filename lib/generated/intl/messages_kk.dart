@@ -65,6 +65,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS келесі нөмірге жіберіледі: "),
+        "android":
+            MessageLookupByLibrary.simpleMessage("Android және iOS Қолдау"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "Жаңа жаңарту қол жетімді\nПриложениеңізді жаңартыңыз"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
@@ -143,6 +145,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Жаңа пароль жасау"),
         "currency": MessageLookupByLibrary.simpleMessage("Валюта"),
+        "customInvoiceBranding":
+            MessageLookupByLibrary.simpleMessage("Жеке Шот-Брендинг"),
         "customerDue": MessageLookupByLibrary.simpleMessage("Клиенттің қарызы"),
         "customerName": MessageLookupByLibrary.simpleMessage("Мүштері аты"),
         "customerPay": MessageLookupByLibrary.simpleMessage("Клиент төлемі"),
@@ -286,6 +290,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Хаттың спам қалтасына түскен болуы мүмкін."),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Құпия сөзді ұмыттыңыз ба?"),
+        "freeDataBackup": MessageLookupByLibrary.simpleMessage(
+            "Тегін Деректерді Қайта Қалпына Келтіру"),
+        "freeLifetimeUpdate":
+            MessageLookupByLibrary.simpleMessage("Тегін Өмірлік Жаңарту"),
         "freePack": MessageLookupByLibrary.simpleMessage("Тегін пакет"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Тегін план"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Басталу күні"),
@@ -468,6 +476,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Шығын категориясын таңдаңыз"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Acnoo бетімен жеткізілген"),
+        "premiumCustomerSupport":
+            MessageLookupByLibrary.simpleMessage("Android және iOS Қолдау"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Премиум план"),
         "previousDue": MessageLookupByLibrary.simpleMessage("Алдыңғы төлем"),
         "previousPayAmount":
@@ -663,6 +673,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitPirce": MessageLookupByLibrary.simpleMessage("Бірлік бағасы"),
         "units": MessageLookupByLibrary.simpleMessage("Бірліктер"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Шектеусіз"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("Шектеусіз Пайдалану"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "Біздің пакеттің шектеусіз пайдалануы👇"),
         "update": MessageLookupByLibrary.simpleMessage("Жаңарту"),

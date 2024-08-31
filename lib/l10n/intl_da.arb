@@ -486,7 +486,13 @@
   "phonee": "Telefon:",
   "purchaseBy": "Købt af:",
   "salesBy": "Solgt af:",
-  "days": "dage"
+  "days": "dage",
+  "freeLifetimeUpdate": "Gratis livstidsopdatering",
+  "android": "Android & iOS app-support",
+  "premiumCustomerSupport": "Android & iOS app-support",
+  "customInvoiceBranding": "Tilpasset fakturabranding",
+  "unlimitedUsage": "Ubegrænset brug",
+  "freeDataBackup": "Gratis datalagring"
 
 
 

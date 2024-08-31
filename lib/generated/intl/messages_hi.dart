@@ -69,6 +69,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "एक SMS निम्नलिखित नंबर पर भेजा जाएगा: "),
+        "android":
+            MessageLookupByLibrary.simpleMessage("एंड्रॉइड और iOS ऐप समर्थन"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "एक नया अपडेट उपलब्ध है\nकृपया अपना ऐप अपडेट करें"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("एप्पल वॉच"),
@@ -147,6 +149,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("नया पासवर्ड बनाएं"),
         "currency": MessageLookupByLibrary.simpleMessage("मुद्रा"),
+        "customInvoiceBranding":
+            MessageLookupByLibrary.simpleMessage("कस्टम इनवॉइस ब्रांडिंग"),
         "customerDue": MessageLookupByLibrary.simpleMessage("ग्राहक बकाया"),
         "customerName": MessageLookupByLibrary.simpleMessage("ग्राहक का नाम"),
         "customerPay": MessageLookupByLibrary.simpleMessage("ग्राहक भुगतान"),
@@ -281,6 +285,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "हो सकता है कि मेल आपके स्पैम फ़ोल्डर में चला गया हो।"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("पासवर्ड भूल गए"),
+        "freeDataBackup":
+            MessageLookupByLibrary.simpleMessage("मुक्त डेटा बैकअप"),
+        "freeLifetimeUpdate":
+            MessageLookupByLibrary.simpleMessage("मुक्त आजीवन अपडेट"),
         "freePack": MessageLookupByLibrary.simpleMessage("मुफ्त पैकेज"),
         "freePlan": MessageLookupByLibrary.simpleMessage("मुफ्त योजना"),
         "fromDate": MessageLookupByLibrary.simpleMessage("की तिथि से"),
@@ -463,6 +471,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("कृपया एक खर्च श्रेणी चुनें"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("द्वारा प्रोत्साहित: एकनू"),
+        "premiumCustomerSupport":
+            MessageLookupByLibrary.simpleMessage("एंड्रॉइड और iOS ऐप समर्थन"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("प्रीमियम योजना"),
         "previousDue": MessageLookupByLibrary.simpleMessage("पिछला देय"),
         "previousPayAmount":
@@ -646,6 +656,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitPirce": MessageLookupByLibrary.simpleMessage("इकाई मूल्य"),
         "units": MessageLookupByLibrary.simpleMessage("इकाइयों"),
         "unlimited": MessageLookupByLibrary.simpleMessage("असीमित"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("अनलिमिटेड उपयोग"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "हमारे पैकेज के असीमित उपयोग👇"),
         "update": MessageLookupByLibrary.simpleMessage("अद्यतन"),

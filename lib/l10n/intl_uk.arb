@@ -489,6 +489,12 @@
   "phonee": "Телефон:",
   "purchaseBy": "Куплено:",
   "salesBy": "Продано:",
-  "days": "дні"
+  "days": "дні",
+  "freeLifetimeUpdate": "Безкоштовне оновлення на все життя",
+  "android": "Підтримка додатків для Android та iOS",
+  "premiumCustomerSupport": "Підтримка додатків для Android та iOS",
+  "customInvoiceBranding": "Індивідуальне брендування рахунків",
+  "unlimitedUsage": "Необмежене використання",
+  "freeDataBackup": "Безкоштовне резервне копіювання даних"
 
 }

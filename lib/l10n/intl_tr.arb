@@ -486,5 +486,11 @@
   "phonee": "Telefon:",
   "purchaseBy": "Satın alındı ​​tarafından:",
   "salesBy": "Satıldı tarafından:",
-  "days": "gün"
+  "days": "gün",
+  "freeLifetimeUpdate": "Ücretsiz Ömür Boyu Güncelleme",
+  "android": "Android ve iOS Uygulama Desteği",
+  "premiumCustomerSupport": "Android ve iOS Uygulama Desteği",
+  "customInvoiceBranding": "Özel Fatura Markalama",
+  "unlimitedUsage": "Sınırsız Kullanım",
+  "freeDataBackup": "Ücretsiz Veri Yedekleme"
 }

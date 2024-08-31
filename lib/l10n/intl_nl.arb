@@ -485,5 +485,11 @@
   "phonee": "Telefoon:",
   "purchaseBy": "Gekochte door:",
   "salesBy": "Verkocht door:",
-  "days": "dagen"
+  "days": "dagen",
+  "freeLifetimeUpdate": "Gratis levenslange update",
+  "android": "Ondersteuning voor Android- en iOS-apps",
+  "premiumCustomerSupport": "Ondersteuning voor Android- en iOS-apps",
+  "customInvoiceBranding": "Aangepaste factuursbranding",
+  "unlimitedUsage": "Onbeperkt gebruik",
+  "freeDataBackup": "Gratis gegevensback-up"
 }

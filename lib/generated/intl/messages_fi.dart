@@ -70,6 +70,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS lähetetään seuraavaan numeroon: "),
+        "android": MessageLookupByLibrary.simpleMessage(
+            "Android- ja iOS-sovellustuki"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "Uusi päivitys saatavilla\nPäivitä sovelluksesi"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
@@ -149,6 +151,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Luo uusi salasana"),
         "currency": MessageLookupByLibrary.simpleMessage("Valuutta"),
+        "customInvoiceBranding": MessageLookupByLibrary.simpleMessage(
+            "Mukautettu laskujen brändäys"),
         "customerDue": MessageLookupByLibrary.simpleMessage("Asiakasvelat"),
         "customerName": MessageLookupByLibrary.simpleMessage("Asiakkaan nimi"),
         "customerPay": MessageLookupByLibrary.simpleMessage("Asiakas maksaa"),
@@ -287,6 +291,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Saattaa olla, että viesti päätyi roskapostikansioon."),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Unohtuiko salasana"),
+        "freeDataBackup": MessageLookupByLibrary.simpleMessage(
+            "Ilmainen tietojen varmuuskopiointi"),
+        "freeLifetimeUpdate": MessageLookupByLibrary.simpleMessage(
+            "Ilmainen elinikäinen päivitys"),
         "freePack": MessageLookupByLibrary.simpleMessage("Ilmainen paketti"),
         "freePlan":
             MessageLookupByLibrary.simpleMessage("Ilmainen suunnitelma"),
@@ -471,6 +479,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Valitse kulukategoria"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Powered By Acnoo"),
+        "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
+            "Android- ja iOS-sovellustuki"),
         "premiumPlan":
             MessageLookupByLibrary.simpleMessage("Premium-suunnitelma"),
         "previousDue":
@@ -670,6 +680,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitPirce": MessageLookupByLibrary.simpleMessage("Yksikköhinta"),
         "units": MessageLookupByLibrary.simpleMessage("Yksiköt"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Rajoittamaton"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("Rajoittamaton käyttö"),
         "unlimitedUsagesOfOurPackage":
             MessageLookupByLibrary.simpleMessage("Rajaton käyttöpakettimme👇"),
         "update": MessageLookupByLibrary.simpleMessage("Päivittää"),

@@ -66,6 +66,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS će biti poslat na sledeći broj: "),
+        "android": MessageLookupByLibrary.simpleMessage(
+            "Podrška za Android i iOS aplikacije"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
         "apply": MessageLookupByLibrary.simpleMessage("Primijeni"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("Jeste li sigurni?"),
@@ -141,6 +143,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Kreirajte novu lozinku"),
         "currency": MessageLookupByLibrary.simpleMessage("Valuta"),
+        "customInvoiceBranding": MessageLookupByLibrary.simpleMessage(
+            "Prilagođeno brendiranje računa"),
         "customerDue": MessageLookupByLibrary.simpleMessage("Dugovanje kupca"),
         "customerName": MessageLookupByLibrary.simpleMessage("Ime kupca"),
         "customerPay": MessageLookupByLibrary.simpleMessage("Kupac plaća"),
@@ -279,6 +283,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Možda je e-mail završio u vašem spam folderu."),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Zaboravljena lozinka"),
+        "freeDataBackup": MessageLookupByLibrary.simpleMessage(
+            "Besplatna sigurnosna kopija podataka"),
+        "freeLifetimeUpdate": MessageLookupByLibrary.simpleMessage(
+            "Besplatna ažuriranja za cijeli život"),
         "freePack": MessageLookupByLibrary.simpleMessage("Besplatni paket"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Besplatni plan"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Od datuma"),
@@ -457,6 +465,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Molimo odaberite kategoriju"),
         "pleaseSelectAExpenseCategory": MessageLookupByLibrary.simpleMessage(
             "Molimo odaberite kategoriju troška"),
+        "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
+            "Podrška za Android i iOS aplikacije"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Premium plan"),
         "previousDue":
             MessageLookupByLibrary.simpleMessage("Prethodno dugovanje"),
@@ -647,6 +657,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitName": MessageLookupByLibrary.simpleMessage("Naziv jedinice"),
         "units": MessageLookupByLibrary.simpleMessage("Jedinice"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Neograničeno"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("Neograničena upotreba"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "Neograničena upotreba našeg paketa👇"),
         "update": MessageLookupByLibrary.simpleMessage("Ažuriraj"),

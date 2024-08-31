@@ -73,6 +73,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "Een SMS wordt naar het volgende nummer gestuurd:"),
+        "android": MessageLookupByLibrary.simpleMessage(
+            "Ondersteuning voor Android- en iOS-apps"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "Er is een nieuwe update beschikbaar\nWerk alstublieft uw app bij"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
@@ -158,6 +160,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Nieuw wachtwoord aanmaken"),
         "currency": MessageLookupByLibrary.simpleMessage("Munteenheid"),
+        "customInvoiceBranding":
+            MessageLookupByLibrary.simpleMessage("Aangepaste factuursbranding"),
         "customerDue":
             MessageLookupByLibrary.simpleMessage("Te betalen door klant"),
         "customerName": MessageLookupByLibrary.simpleMessage("klantnaam"),
@@ -298,6 +302,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Het kan zijn dat de e-mail in je spammap terecht is gekomen."),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Wachtwoord vergeten"),
+        "freeDataBackup":
+            MessageLookupByLibrary.simpleMessage("Gratis gegevensback-up"),
+        "freeLifetimeUpdate":
+            MessageLookupByLibrary.simpleMessage("Gratis levenslange update"),
         "freePack": MessageLookupByLibrary.simpleMessage("Gratis pakket"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Gratis abonnement"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Van datum"),
@@ -483,6 +491,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Selecteer een uitgaven-categorie"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Aangedreven door Acnoo"),
+        "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
+            "Ondersteuning voor Android- en iOS-apps"),
         "premiumPlan":
             MessageLookupByLibrary.simpleMessage("Premium-abonnement"),
         "previousDue": MessageLookupByLibrary.simpleMessage("Vorige vervaldag"),
@@ -682,6 +692,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitPirce": MessageLookupByLibrary.simpleMessage("Eenheidsprijs"),
         "units": MessageLookupByLibrary.simpleMessage("Eenheden"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Onbeperkt"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("Onbeperkt gebruik"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "Onbeperkte gebruik van ons pakket👇"),
         "update": MessageLookupByLibrary.simpleMessage("Update"),

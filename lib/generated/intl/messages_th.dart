@@ -65,6 +65,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "จะส่ง SMS ไปยังหมายเลขต่อไปนี้:"),
+        "android": MessageLookupByLibrary.simpleMessage(
+            "การสนับสนุนแอป Android และ iOS"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "มีการอัปเดตใหม่\nโปรดอัปเดตแอปของคุณ"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
@@ -138,6 +140,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("สร้างรหัสผ่านใหม่"),
         "currency": MessageLookupByLibrary.simpleMessage("สกุลเงิน"),
+        "customInvoiceBranding": MessageLookupByLibrary.simpleMessage(
+            "การสร้างแบรนด์ใบแจ้งหนี้แบบกำหนดเอง"),
         "customerDue": MessageLookupByLibrary.simpleMessage("หนี้ลูกค้า"),
         "customerName": MessageLookupByLibrary.simpleMessage("ชื่อลูกค้า"),
         "customerPay": MessageLookupByLibrary.simpleMessage("ลูกค้าชำระเงิน"),
@@ -273,6 +277,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "folder": MessageLookupByLibrary.simpleMessage(
             "อาจเป็นไปได้ว่าอีเมลถูกส่งไปที่โฟลเดอร์สแปมของคุณ"),
         "forgotPassword": MessageLookupByLibrary.simpleMessage("ลืมรหัสผ่าน"),
+        "freeDataBackup":
+            MessageLookupByLibrary.simpleMessage("สำรองข้อมูลฟรี"),
+        "freeLifetimeUpdate":
+            MessageLookupByLibrary.simpleMessage("อัปเดตฟรีตลอดชีพ"),
         "freePack": MessageLookupByLibrary.simpleMessage("แพ็คเกจฟรี"),
         "freePlan": MessageLookupByLibrary.simpleMessage("แผนฟรี"),
         "fromDate": MessageLookupByLibrary.simpleMessage("จากวันที่"),
@@ -454,6 +462,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "กรุณาเลือกหมวดหมู่ค่าใช้จ่าย"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("ขับเคลื่อนโดย Acnoo"),
+        "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
+            "การสนับสนุนแอป Android และ iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("แผนพรีเมียม"),
         "previousDue": MessageLookupByLibrary.simpleMessage("ก่อนครบกำหนด"),
         "previousPayAmount":
@@ -639,6 +649,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitPirce": MessageLookupByLibrary.simpleMessage("ราคาต่อหน่วย"),
         "units": MessageLookupByLibrary.simpleMessage("หน่วย"),
         "unlimited": MessageLookupByLibrary.simpleMessage("ไม่ จำกัด"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("การใช้งานไม่จำกัด"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "การใช้งานไม่จำกัดของแพ็คเกจของเรา👇"),
         "update": MessageLookupByLibrary.simpleMessage("อัปเดต"),

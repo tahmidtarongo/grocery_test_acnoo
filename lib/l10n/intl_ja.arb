@@ -487,6 +487,13 @@
   "phonee": "電話:",
   "purchaseBy": "購入者:",
   "salesBy": "販売者:",
-  "days": "日"
+  "days": "日",
+
+  "freeLifetimeUpdate": "無料の生涯更新",
+  "android": "AndroidおよびiOSアプリサポート",
+  "premiumCustomerSupport": "AndroidおよびiOSアプリサポート",
+  "customInvoiceBranding": "カスタム請求書ブランディング",
+  "unlimitedUsage": "無制限の使用",
+  "freeDataBackup": "無料のデータバックアップ"
 
 }

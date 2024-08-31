@@ -491,6 +491,14 @@
   "phonee": "ফোন:",
   "purchaseBy": "কেনেছে:",
   "salesBy": "বিক্রি করেছে:",
-  "days": "দিন"
+  "days": "দিন",
+
+
+  "freeLifetimeUpdate": "মুক্ত আজীবন আপডেট",
+  "android": "অ্যান্ড্রয়েড ও আইওএস অ্যাপ সমর্থন",
+  "premiumCustomerSupport": "অ্যান্ড্রয়েড ও আইওএস অ্যাপ সমর্থন",
+  "customInvoiceBranding": "কাস্টম ইনভয়েস ব্র্যান্ডিং",
+  "unlimitedUsage": "অনন্ত ব্যবহার",
+  "freeDataBackup": "মুক্ত ডেটা ব্যাকআপ"
 
 }

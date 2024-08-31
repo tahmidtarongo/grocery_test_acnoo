@@ -486,7 +486,15 @@
   "phonee": "Telepon:",
   "purchaseBy": "Dibeli oleh:",
   "salesBy": "Dijual oleh:",
-  "days": "hari"
+  "days": "hari",
+
+  "freeLifetimeUpdate": "Pembaruan Seumur Hidup Gratis",
+  "android": "Dukungan Aplikasi Android & iOS",
+  "premiumCustomerSupport": "Dukungan Aplikasi Android & iOS",
+  "customInvoiceBranding": "Penandaan Faktur Kustom",
+  "unlimitedUsage": "Penggunaan Tak Terbatas",
+  "freeDataBackup": "Cadangan Data Gratis"
+
 
 
 }

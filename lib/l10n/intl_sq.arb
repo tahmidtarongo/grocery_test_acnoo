@@ -490,5 +490,11 @@
   "phonee": "Telefon:",
   "purchaseBy": "Blerë nga:",
   "salesBy": "Shitur nga:",
-  "days": "ditë"
+  "days": "ditë",
+  "freeLifetimeUpdate": "Përditësim i Lirë për Jetë",
+  "android": "Mbështetje për Aplikacionet Android & iOS",
+  "premiumCustomerSupport": "Mbështetje për Aplikacionet Android & iOS",
+  "customInvoiceBranding": "Markimi i Personalizuar i Fakturave",
+  "unlimitedUsage": "Përdorim i Pa Kufizuar",
+  "freeDataBackup": "Backup i Lirë i Të Dhënave"
 }

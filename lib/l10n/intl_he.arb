@@ -488,5 +488,11 @@
   "phonee": "טלפון:",
   "purchaseBy": "נרכש על ידי:",
   "salesBy": "נמכר על ידי:",
-  "days": "ימים"
+  "days": "ימים",
+  "freeLifetimeUpdate": "עדכון חינם לכל החיים",
+  "android": "תמיכה באפליקציות Android ו-iOS",
+  "premiumCustomerSupport": "תמיכה באפליקציות Android ו-iOS",
+  "customInvoiceBranding": "מותג אישי לחשבוניות",
+  "unlimitedUsage": "שימוש ללא הגבלה",
+  "freeDataBackup": "גיבוי נתונים חינם"
 }

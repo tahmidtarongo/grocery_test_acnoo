@@ -484,6 +484,12 @@
   "phonee": "ໂທລະສັບ:",
   "purchaseBy": "ຊື້ໂດຍ:",
   "salesBy": "ຂາຍໂດຍ:",
-  "days": "ມື້"
+  "days": "ມື້",
+  "freeLifetimeUpdate": "ອັບໍ່ງເປັນເສດສະດອບໄດ້",
+  "android": "ສະໜອງອະບັບ Android ແລະ iOS",
+  "premiumCustomerSupport": "ສະໜອງອະບັບ Android ແລະ iOS",
+  "customInvoiceBranding": "ສະບັດຕິບອກແບບໃຫມ່ທີ່ລອງສົກລະຄາສະຕິ",
+  "unlimitedUsage": "ການໃຊ້ງານບໍ່ຈຳກັດ",
+  "freeDataBackup": "ສໍາເລັດຂໍ້ມູນຟຣີ"
 
 }

@@ -73,6 +73,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS itatumwa kwa nambari ifuatayo:"),
+        "android": MessageLookupByLibrary.simpleMessage(
+            "Msaada wa programu za Android na iOS"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "Sasisho jipya linapatikana\nTafadhali sasisha programu yako"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Saa ya Apple"),
@@ -155,6 +157,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Tengeneza Nenosiri Mpya"),
         "currency": MessageLookupByLibrary.simpleMessage("Sarafu"),
+        "customInvoiceBranding": MessageLookupByLibrary.simpleMessage(
+            "Uchapishaji wa bili ulioagizwa"),
         "customerDue": MessageLookupByLibrary.simpleMessage("Denim ya Mteja"),
         "customerName": MessageLookupByLibrary.simpleMessage("Jina la Mteja"),
         "customerPay": MessageLookupByLibrary.simpleMessage("Mteja Analipa"),
@@ -291,6 +295,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Inaweza kuwa barua hiyo imeingia kwenye folda yako ya barua taka."),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Umesahau nenosiri"),
+        "freeDataBackup":
+            MessageLookupByLibrary.simpleMessage("Hifadhi ya data bure"),
+        "freeLifetimeUpdate": MessageLookupByLibrary.simpleMessage(
+            "Miselemko ya bure kwa maisha yote"),
         "freePack": MessageLookupByLibrary.simpleMessage("Kifurushi cha Bure"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Mpango wa Bure"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Tarehe ya Kuanzia"),
@@ -480,6 +488,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Tafadhali chagua aina ya gharama"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Imewezeshwa na Acnoo"),
+        "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
+            "Msaada wa programu za Android na iOS"),
         "premiumPlan":
             MessageLookupByLibrary.simpleMessage("Mpango wa Premium"),
         "previousDue": MessageLookupByLibrary.simpleMessage("Deni la Awali"),
@@ -680,6 +690,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitPirce": MessageLookupByLibrary.simpleMessage("Bei ya Kipande"),
         "units": MessageLookupByLibrary.simpleMessage("Vipimo"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Haijapunguzwa"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("Matumizi yasiyo na kikomo"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "Matumizi Yasiyo na Kikomo ya Kifurushi Chetu👇"),
         "update": MessageLookupByLibrary.simpleMessage("Sasisha"),

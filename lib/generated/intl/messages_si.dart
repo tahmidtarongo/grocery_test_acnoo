@@ -74,6 +74,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS එක පහත සඳහන් අංකයට යවනු ලැබේ:"),
+        "android":
+            MessageLookupByLibrary.simpleMessage("Android සහ iOS යෙදුම් සහාය"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("ඇපල් වොච්"),
         "apply": MessageLookupByLibrary.simpleMessage("අයදුම් කරනවා"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("ඔබට සහතිකද?"),
@@ -151,6 +153,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("නව මුරපදය තනන්න"),
         "currency": MessageLookupByLibrary.simpleMessage("වින්යාව"),
+        "customInvoiceBranding":
+            MessageLookupByLibrary.simpleMessage("අභිරුචි බිල්පත් මැරීම"),
         "customerDue": MessageLookupByLibrary.simpleMessage(
             "ගනුදෙනුකරුවාට බදවාගත යුතු මුදල්"),
         "customerName": MessageLookupByLibrary.simpleMessage("කුරුණෑගල් නම"),
@@ -288,6 +292,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "folder": MessageLookupByLibrary.simpleMessage(
             "ඔබගේ ඊ-මේල්ය ස්පාම් ෆෝල්ඩරය තුළ අවශ්‍ය විය හැක."),
         "forgotPassword": MessageLookupByLibrary.simpleMessage("මුරපදය අමතකද?"),
+        "freeDataBackup":
+            MessageLookupByLibrary.simpleMessage("නොමිලේ දත්ත ආපසු ලබාදීම"),
+        "freeLifetimeUpdate": MessageLookupByLibrary.simpleMessage(
+            "අනෙක් ජීවිතය සඳහා නොමිලේ යාවත්කාලීන"),
         "freePack": MessageLookupByLibrary.simpleMessage("නිදහස් පැකේජය"),
         "freePlan": MessageLookupByLibrary.simpleMessage("නිදහස් සැලසුම්"),
         "fromDate": MessageLookupByLibrary.simpleMessage("දිනයේ සිට"),
@@ -464,6 +472,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("කරුණාකර කාණ්ඩයක් තෝරන්න"),
         "pleaseSelectAExpenseCategory": MessageLookupByLibrary.simpleMessage(
             "කරුණාකර වියදම් කාණ්ඩයක් තෝරන්න"),
+        "premiumCustomerSupport":
+            MessageLookupByLibrary.simpleMessage("Android සහ iOS යෙදුම් සහාය"),
         "premiumPlan":
             MessageLookupByLibrary.simpleMessage("ප්‍රිමාන්ත සැලසුම්"),
         "previousDue": MessageLookupByLibrary.simpleMessage("ප්‍රථම ඇගයීම"),
@@ -650,6 +660,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitName": MessageLookupByLibrary.simpleMessage("ඒකකයේ නම"),
         "units": MessageLookupByLibrary.simpleMessage("ඒකකයන්"),
         "unlimited": MessageLookupByLibrary.simpleMessage("සීමාවෙන්"),
+        "unlimitedUsage": MessageLookupByLibrary.simpleMessage("අසීමිත භාවිතය"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "අපේ පැකේජයේ අවසන් භාවිතාවන්👇"),
         "update": MessageLookupByLibrary.simpleMessage("යාවත්කාලීන කරන්න"),

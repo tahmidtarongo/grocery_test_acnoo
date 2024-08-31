@@ -72,6 +72,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS будет отправлено на следующий номер:"),
+        "android": MessageLookupByLibrary.simpleMessage(
+            "Поддержка приложений для Android и iOS"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "Доступно новое обновление\nПожалуйста, обновите ваше приложение"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
@@ -155,6 +157,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Создать новый пароль"),
         "currency": MessageLookupByLibrary.simpleMessage("Валюта"),
+        "customInvoiceBranding": MessageLookupByLibrary.simpleMessage(
+            "Индивидуальный брендинг счетов"),
         "customerDue": MessageLookupByLibrary.simpleMessage("Долг клиента"),
         "customerName": MessageLookupByLibrary.simpleMessage("Имя Клиента"),
         "customerPay": MessageLookupByLibrary.simpleMessage("Оплата клиента"),
@@ -295,6 +299,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "folder": MessageLookupByLibrary.simpleMessage(
             "Возможно, письмо попало в папку со спамом."),
         "forgotPassword": MessageLookupByLibrary.simpleMessage("Забыли пароль"),
+        "freeDataBackup": MessageLookupByLibrary.simpleMessage(
+            "Бесплатное резервное копирование данных"),
+        "freeLifetimeUpdate": MessageLookupByLibrary.simpleMessage(
+            "Бесплатное обновление на всю жизнь"),
         "freePack": MessageLookupByLibrary.simpleMessage("Бесплатный пакет"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Бесплатный план"),
         "fromDate": MessageLookupByLibrary.simpleMessage("С даты"),
@@ -479,6 +487,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Пожалуйста, выберите категорию расхода"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Разработано Acnoo"),
+        "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
+            "Поддержка приложений для Android и iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Премиум план"),
         "previousDue": MessageLookupByLibrary.simpleMessage("Предыдущий срок"),
         "previousPayAmount":
@@ -674,6 +684,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitPirce": MessageLookupByLibrary.simpleMessage("Цена за единицу"),
         "units": MessageLookupByLibrary.simpleMessage("Единицы"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Неограниченный"),
+        "unlimitedUsage": MessageLookupByLibrary.simpleMessage(
+            "Неограниченное использование"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "Неограниченное использование нашего пакета👇"),
         "update": MessageLookupByLibrary.simpleMessage("Обновлять"),

@@ -68,6 +68,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "खालील क्रमांकावर एक SMS पाठवला जाईल: "),
+        "android":
+            MessageLookupByLibrary.simpleMessage("Android आणि iOS अ‍ॅप समर्थन"),
         "anewUpdateAvailable": MessageLookupByLibrary.simpleMessage(
             "नवीन अपडेट उपलब्ध आहे\nकृपया आपले अ‍ॅप अपडेट करा"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("ऍपल वॉच"),
@@ -147,6 +149,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("नवीन पासवर्ड तयार करा"),
         "currency": MessageLookupByLibrary.simpleMessage("मुद्रा"),
+        "customInvoiceBranding":
+            MessageLookupByLibrary.simpleMessage("कस्टम चालान ब्रँडिंग"),
         "customerDue": MessageLookupByLibrary.simpleMessage("ग्राहकाचे देणे"),
         "customerName": MessageLookupByLibrary.simpleMessage("ग्राहकाचं नाव"),
         "customerPay": MessageLookupByLibrary.simpleMessage("ग्राहकाचे देय"),
@@ -286,6 +290,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "कदाचित मेल तुमच्या स्पॅम फोल्डरमध्ये गेला असेल."),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("पासवर्ड विसरलात?"),
+        "freeDataBackup":
+            MessageLookupByLibrary.simpleMessage("विनामूल्य डेटा बॅकअप"),
+        "freeLifetimeUpdate":
+            MessageLookupByLibrary.simpleMessage("आयुष्यभर विनामूल्य अद्यतने"),
         "freePack": MessageLookupByLibrary.simpleMessage("विनामूल्य पॅक"),
         "freePlan": MessageLookupByLibrary.simpleMessage("विनामूल्य प्लॅन"),
         "fromDate": MessageLookupByLibrary.simpleMessage("तारखेपासून"),
@@ -467,6 +475,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("कृपया एक खर्च श्रेणी निवडा"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("द्वारा संचालित Acnoo"),
+        "premiumCustomerSupport":
+            MessageLookupByLibrary.simpleMessage("Android आणि iOS अ‍ॅप समर्थन"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("प्रीमियम प्लॅन"),
         "previousDue": MessageLookupByLibrary.simpleMessage("मागील बाकी"),
         "previousPayAmount":
@@ -647,6 +657,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "unitPirce": MessageLookupByLibrary.simpleMessage("एकक मूल्य"),
         "units": MessageLookupByLibrary.simpleMessage("एकके"),
         "unlimited": MessageLookupByLibrary.simpleMessage("अमर्यादित"),
+        "unlimitedUsage":
+            MessageLookupByLibrary.simpleMessage("अमर्यादित वापर"),
         "unlimitedUsagesOfOurPackage": MessageLookupByLibrary.simpleMessage(
             "आमच्या पॅकेजचे अनलिमिटेड वापर👇"),
         "update": MessageLookupByLibrary.simpleMessage("अद्यतनित करा"),

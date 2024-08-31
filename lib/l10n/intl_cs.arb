@@ -486,8 +486,13 @@
   "phonee": "Telefon:",
   "purchaseBy": "Zakoupil:",
   "salesBy": "Prodal:",
-  "days": "dny"
-
+  "days": "dny",
+  "freeLifetimeUpdate": "Bezplatná doživotní aktualizace",
+  "android": "Podpora aplikací pro Android a iOS",
+  "premiumCustomerSupport": "Podpora aplikací pro Android a iOS",
+  "customInvoiceBranding": "Vlastní brandování faktur",
+  "unlimitedUsage": "Neomezené používání",
+  "freeDataBackup": "Bezplatné zálohování dat"
 
 
 
