@@ -5,7 +5,7 @@ import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-import 'package:mobile_pos/Provider/print_sales_invoice_provider.dart';
+import 'package:mobile_pos/Provider/print_thermal_invoice_provider.dart';
 import 'package:mobile_pos/Provider/transactions_provider.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:mobile_pos/model/print_transaction_model.dart';
@@ -71,7 +71,7 @@ class _SalesReportScreenState extends State<SalesReportScreen> {
       ),
       body: Consumer(builder: (context, ref, __) {
         final providerData = ref.watch(salesTransactionProvider);
-        final printerData = ref.watch(salesPrinterProvider);
+        final printerData = ref.watch(thermalPrinterProvider);
         final personalData = ref.watch(businessInfoProvider);
         return SingleChildScrollView(
           child: Column(
@@ -330,66 +330,7 @@ class _SalesReportScreenState extends State<SalesReportScreen> {
                                                                       productList: model.transitionModel!.details,
                                                                     )
                                                                   // ignore: use_build_context_synchronously
-                                                                  : showDialog(
-                                                                      context: context,
-                                                                      builder: (_) {
-                                                                        return WillPopScope(
-                                                                          onWillPop: () async => false,
-                                                                          child: Dialog(
-                                                                            child: SizedBox(
-                                                                              child: Column(
-                                                                                mainAxisSize: MainAxisSize.min,
-                                                                                children: [
-                                                                                  ListView.builder(
-                                                                                    shrinkWrap: true,
-                                                                                    itemCount: printerData.availableBluetoothDevices.isNotEmpty
-                                                                                        ? printerData.availableBluetoothDevices.length
-                                                                                        : 0,
-                                                                                    itemBuilder: (context, index) {
-                                                                                      return ListTile(
-                                                                                        onTap: () async {
-                                                                                          String select = printerData.availableBluetoothDevices[index];
-                                                                                          List list = select.split("#");
-                                                                                          // String name = list[0];
-                                                                                          String mac = list[1];
-                                                                                          bool isConnect = await printerData.setConnect(mac);
-                                                                                          // ignore: use_build_context_synchronously
-                                                                                          isConnect
-                                                                                              // ignore: use_build_context_synchronously
-                                                                                              ? finish(context)
-                                                                                              : toast(
-                                                                                            lang.S.of(context).tryAgain,
-                                                                                              //'Try Again'
-                                                                                          );
-                                                                                        },
-                                                                                        title: Text('${printerData.availableBluetoothDevices[index]}'),
-                                                                                        subtitle: Text(lang.S.of(context).clickToConnect),
-                                                                                      );
-                                                                                    },
-                                                                                  ),
-                                                                                  const SizedBox(height: 10),
-                                                                                  Text(lang.S.of(context).connectPrinter),
-                                                                                  const SizedBox(height: 10),
-                                                                                  Container(height: 1, width: double.infinity, color: Colors.grey),
-                                                                                  const SizedBox(height: 15),
-                                                                                  GestureDetector(
-                                                                                    onTap: () {
-                                                                                      Navigator.pop(context);
-                                                                                    },
-                                                                                    child: Center(
-                                                                                      child: Text(
-                                                                                        lang.S.of(context).cancel,
-                                                                                        style: const TextStyle(color: kMainColor),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ),
-                                                                                  const SizedBox(height: 15),
-                                                                                ],
-                                                                              ),
-                                                                            ),
-                                                                          ),
-                                                                        );
-                                                                      });
+                                                                  : printerData.listOfBluDialog(context: context);
                                                             }
                                                           },
                                                           icon: const Icon(

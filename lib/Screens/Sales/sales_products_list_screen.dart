@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 import 'package:flutter_cart/flutter_cart.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -9,6 +8,7 @@ import 'package:mobile_pos/Provider/product_provider.dart';
 import 'package:mobile_pos/Screens/Customers/Model/parties_model.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
+import 'package:mobile_scanner/mobile_scanner.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../Const/api_config.dart';
@@ -32,6 +32,7 @@ class SaleProductsList extends StatefulWidget {
 class _SaleProductsListState extends State<SaleProductsList> {
   String dropdownValue = '';
   String productCode = '0000';
+ TextEditingController codeController = TextEditingController();
 
   var salesCart = FlutterCart();
   num productPrice = 0;
@@ -41,21 +42,6 @@ class _SaleProductsListState extends State<SaleProductsList> {
   void initState() {
     widget.catName == null ? dropdownValue = 'Fashion' : dropdownValue = widget.catName;
     super.initState();
-  }
-
-  Future<void> scanBarcodeNormal() async {
-    String barcodeScanRes;
-    try {
-      barcodeScanRes = await FlutterBarcodeScanner.scanBarcode('#ff6666', 'Cancel', true, ScanMode.BARCODE);
-    } on PlatformException {
-      barcodeScanRes = lang.S.of(context).failedToGetPlatformVersion;
-      //'Failed to get platform version.';
-    }
-    if (!mounted) return;
-
-    setState(() {
-      productCode = barcodeScanRes;
-    });
   }
 
   @override
@@ -171,6 +157,7 @@ class _SaleProductsListState extends State<SaleProductsList> {
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: AppTextField(
+                          controller: codeController,
                           textFieldType: TextFieldType.NAME,
                           onChanged: (value) {
                             setState(() {
@@ -191,7 +178,56 @@ class _SaleProductsListState extends State<SaleProductsList> {
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: GestureDetector(
-                          onTap: () => scanBarcodeNormal(),
+                          onTap: () async {
+                            await showDialog(
+                              context: context,
+                              useSafeArea: true,
+                              builder: (context1) {
+                                MobileScannerController controller = MobileScannerController(
+                                  torchEnabled: false,
+                                  returnImage: false,
+                                );
+                                return Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadiusDirectional.circular(6.0),
+                                  ),
+                                  child: Column(
+                                    children: [
+                                      AppBar(
+                                        backgroundColor: Colors.transparent,
+                                        iconTheme: const IconThemeData(color: Colors.white),
+                                        leading: IconButton(
+                                          icon: const Icon(Icons.arrow_back),
+                                          onPressed: () {
+                                            Navigator.pop(context1);
+                                          },
+                                        ),
+                                      ),
+                                      Expanded(
+                                        child: MobileScanner(
+                                          fit: BoxFit.contain,
+                                          controller: controller,
+                                          onDetect: (capture) {
+                                            final List<Barcode> barcodes = capture.barcodes;
+
+                                            if (barcodes.isNotEmpty) {
+                                              final Barcode barcode = barcodes.first;
+                                              debugPrint('Barcode found! ${barcode.rawValue}');
+                                              setState(() {
+                                                productCode = barcode.rawValue!;
+                                                codeController.text = productCode;
+                                              });
+                                              Navigator.pop(context1);
+                                            }
+                                          },
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                );
+                              },
+                            );
+                          },
                           child: Container(
                             height: 60.0,
                             width: 100.0,

@@ -13,7 +13,6 @@ import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../Provider/add_to_cart_purchase.dart';
-import '../../Provider/print_purchase_invoice_provider.dart';
 import '../../Provider/profile_provider.dart';
 import '../../Repository/API/future_invoice.dart';
 import '../../constant.dart';
@@ -69,7 +68,6 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
   Widget build(BuildContext context) {
     return Consumer(builder: (context, consumerRef, __) {
       final providerData = consumerRef.watch(cartNotifierPurchase);
-      final printerData = consumerRef.watch(printerPurchaseProviderNotifier);
       final personalData = consumerRef.watch(businessInfoProvider);
       return personalData.when(data: (businessInfo) {
         return Scaffold(

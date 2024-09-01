@@ -1,23 +1,17 @@
 // ignore_for_file: unused_result
 
 import 'package:flutter/material.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Const/api_config.dart';
-import 'package:mobile_pos/Provider/print_purchase_invoice_provider.dart';
 import 'package:mobile_pos/Provider/transactions_provider.dart';
 import 'package:mobile_pos/Screens/Customers/edit_customer.dart';
-import 'package:mobile_pos/Screens/Customers/sms_sent_confirmation.dart';
-import 'package:mobile_pos/Screens/Customers/transaction_screen.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
-import 'package:url_launcher/url_launcher.dart';
-import '../../GlobalComponents/button_global.dart';
 import '../../PDF Invoice/generate_pdf.dart';
-import '../../Provider/print_sales_invoice_provider.dart';
+import '../../Provider/print_thermal_invoice_provider.dart';
 import '../../Provider/profile_provider.dart';
 import '../../currency.dart';
 import '../../model/print_transaction_model.dart';
@@ -50,20 +44,20 @@ class _CustomerDetailsState extends State<CustomerDetails> {
       context: context,
       builder: (BuildContext context1) {
         return AlertDialog(
-          title:  Text(
+          title: Text(
             lang.S.of(context).confirmPassword,
-              //'Confirm Delete'
+            //'Confirm Delete'
           ),
-          content:  Text(
+          content: Text(
             lang.S.of(context).areYouSureYouWant,
-              //'Are you sure you want to delete this party?'
+            //'Are you sure you want to delete this party?'
           ),
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context),
-              child:  Text(
+              child: Text(
                 lang.S.of(context).cancel,
-                  //'Cancel'
+                //'Cancel'
               ),
             ),
             TextButton(
@@ -72,9 +66,8 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                 final party = PartyRepository();
                 await party.deleteParty(id: id, context: context, ref: ref);
               },
-              child:  Text(
-                lang.S.of(context).delete,
-                 // 'Delete',
+              child: Text(lang.S.of(context).delete,
+                  // 'Delete',
                   style: const TextStyle(color: Colors.red)),
             ),
           ],
@@ -83,15 +76,14 @@ class _CustomerDetailsState extends State<CustomerDetails> {
     );
   }
 
-  int selectedIndex=0;
+  int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, cRef, __) {
       final providerData = cRef.watch(salesTransactionProvider);
       final purchaseList = cRef.watch(purchaseTransactionProvider);
-      final printerData = cRef.watch(salesPrinterProvider);
-      final printerDataPurchase = cRef.watch(printerPurchaseProviderNotifier);
+      final printerData = cRef.watch(thermalPrinterProvider);
       final personalData = cRef.watch(businessInfoProvider);
       return Scaffold(
         backgroundColor: kWhite,
@@ -106,7 +98,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
           ),
           actions: [
             IconButton(
-              visualDensity: const VisualDensity(horizontal: -4,vertical: -4),
+              visualDensity: const VisualDensity(horizontal: -4, vertical: -4),
               padding: EdgeInsets.zero,
               onPressed: () {
                 EditCustomer(customerModel: widget.party).launch(context);
@@ -120,7 +112,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
             Padding(
               padding: const EdgeInsets.only(right: 8),
               child: IconButton(
-                visualDensity: const VisualDensity(horizontal: -4,vertical: -4),
+                visualDensity: const VisualDensity(horizontal: -4, vertical: -4),
                 padding: EdgeInsets.zero,
                 onPressed: () async {
                   await showDeleteConfirmationAlert(context: context, id: widget.party.id.toString(), ref: cRef);
@@ -311,12 +303,14 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                   children: [
                     Text(
                       lang.S.of(context).recentTransaction,
-                      style: const TextStyle(fontSize: 18,fontWeight: FontWeight.bold),
+                      style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
-                    const SizedBox(height: 20,),
+                    const SizedBox(
+                      height: 20,
+                    ),
                     widget.party.type != 'Supplier'
                         ? providerData.when(data: (transaction) {
-                            return  ListView.builder(
+                            return ListView.builder(
                               padding: EdgeInsets.zero,
                               shrinkWrap: true,
                               physics: const NeverScrollableScrollPhysics(),
@@ -356,7 +350,9 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                                                   Container(
                                                     // padding: const EdgeInsets.all(8),
                                                     decoration: BoxDecoration(
-                                                        color: transaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d).withOpacity(0.1) : const Color(0xFFED1A3B).withOpacity(0.1),
+                                                        color: transaction[index].dueAmount! <= 0
+                                                            ? const Color(0xff0dbf7d).withOpacity(0.1)
+                                                            : const Color(0xFFED1A3B).withOpacity(0.1),
                                                         borderRadius: const BorderRadius.all(Radius.circular(10))),
                                                     child: Text(
                                                       transaction[index].dueAmount! <= 0 ? lang.S.of(context).paid : lang.S.of(context).unPaid,
@@ -387,79 +383,14 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                                                         IconButton(
                                                             onPressed: () async {
                                                               await printerData.getBluetooth();
-                                                              PrintTransactionModel model = PrintTransactionModel(transitionModel: transaction[index], personalInformationModel: data);
+                                                              PrintTransactionModel model =
+                                                                  PrintTransactionModel(transitionModel: transaction[index], personalInformationModel: data);
                                                               connected
                                                                   ? printerData.printSalesTicket(
                                                                       printTransactionModel: model,
                                                                       productList: model.transitionModel!.details,
                                                                     )
-                                                                  // ignore: use_build_context_synchronously
-                                                                  : showDialog(
-                                                                      context: context,
-                                                                      builder: (_) {
-                                                                        return WillPopScope(
-                                                                          onWillPop: () async => false,
-                                                                          child: Dialog(
-                                                                            child: SizedBox(
-                                                                              child: Column(
-                                                                                mainAxisSize: MainAxisSize.min,
-                                                                                children: [
-                                                                                  ListView.builder(
-                                                                                    padding: EdgeInsets.zero,
-                                                                                    shrinkWrap: true,
-                                                                                    itemCount: printerData.availableBluetoothDevices.isNotEmpty
-                                                                                        ? printerData.availableBluetoothDevices.length
-                                                                                        : 0,
-                                                                                    itemBuilder: (context, index) {
-                                                                                      return ListTile(
-                                                                                        onTap: () async {
-                                                                                          String select = printerData.availableBluetoothDevices[index];
-                                                                                          List list = select.split("#");
-                                                                                          // String name = list[0];
-                                                                                          String mac = list[1];
-                                                                                          bool isConnect = await printerData.setConnect(mac);
-                                                                                          // ignore: use_build_context_synchronously
-                                                                                          isConnect
-                                                                                              // ignore: use_build_context_synchronously
-                                                                                              ? finish(context)
-                                                                                              : toast(
-                                                                                            lang.S.of(context).tryAgain,
-                                                                                              //'Try Again'
-                                                                                          );
-                                                                                        },
-                                                                                        title: Text('${printerData.availableBluetoothDevices[index]}'),
-                                                                                       // subtitle:  Text("Click to connect"),
-                                                                                        subtitle:  Text(lang.S.of(context).clickToConnect),
-                                                                                      );
-                                                                                    },
-                                                                                  ),
-                                                                                  const SizedBox(height: 10),
-                                                                                   Text(
-                                                                                     lang.S.of(context).connectYourPrinter,
-                                                                                       //'Connect Your printer'
-                                                                                   ),
-                                                                                  const SizedBox(height: 10),
-                                                                                  Container(height: 1, width: double.infinity, color: Colors.grey),
-                                                                                  const SizedBox(height: 15),
-                                                                                  GestureDetector(
-                                                                                    onTap: () {
-                                                                                      Navigator.pop(context);
-                                                                                    },
-                                                                                    child:  Center(
-                                                                                      child: Text(
-                                                                                        lang.S.of(context).cancel,
-                                                                                       // 'Cancel',
-                                                                                        style: const TextStyle(color: kMainColor),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ),
-                                                                                  const SizedBox(height: 15),
-                                                                                ],
-                                                                              ),
-                                                                            ),
-                                                                          ),
-                                                                        );
-                                                                      });
+                                                                  : printerData.listOfBluDialog(context: context);
                                                             },
                                                             icon: const Icon(
                                                               FeatherIcons.printer,
@@ -471,19 +402,6 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                                                               Icons.picture_as_pdf,
                                                               color: Colors.grey,
                                                             )),
-                                                        // IconButton(
-                                                        //   onPressed: () {},
-                                                        //   icon: const Icon(
-                                                        //     FeatherIcons.share,
-                                                        //     color: Colors.grey,
-                                                        //   ),
-                                                        // ),
-                                                        // IconButton(
-                                                        //     onPressed: () {},
-                                                        //     icon: const Icon(
-                                                        //       FeatherIcons.moreVertical,
-                                                        //       color: Colors.grey,
-                                                        //     )),
                                                       ],
                                                     )
                                                   ],
@@ -491,9 +409,9 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                                               }, error: (e, stack) {
                                                 return Text(e.toString());
                                               }, loading: () {
-                                                return  Text(
+                                                return Text(
                                                   lang.S.of(context).loading,
-                                                    //'Loading'
+                                                  //'Loading'
                                                 );
                                               }),
                                             ],
@@ -516,199 +434,140 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                             return const Center(child: CircularProgressIndicator());
                           })
                         : purchaseList.when(data: (transaction) {
-                            return transaction.isNotEmpty? ListView.builder(
-                              shrinkWrap: true,
-                              physics: const NeverScrollableScrollPhysics(),
-                              itemCount: transaction.length,
-                              itemBuilder: (context, index) {
-                                return Visibility(
-                                  visible: transaction[index].party?.id == widget.party.id,
-                                  child: GestureDetector(
-                                    onTap: () {
-                                      PurchaseInvoiceDetails(
-                                        transitionModel: transaction[index],
-                                        businessInfo: personalData.value!,
-                                      ).launch(context);
-                                    },
-                                    child: Column(
-                                      children: [
-                                        Container(
-                                          // padding: const EdgeInsets.all(20),
-                                          width: context.width(),
+                            return transaction.isNotEmpty
+                                ? ListView.builder(
+                                    shrinkWrap: true,
+                                    physics: const NeverScrollableScrollPhysics(),
+                                    itemCount: transaction.length,
+                                    itemBuilder: (context, index) {
+                                      return Visibility(
+                                        visible: transaction[index].party?.id == widget.party.id,
+                                        child: GestureDetector(
+                                          onTap: () {
+                                            PurchaseInvoiceDetails(
+                                              transitionModel: transaction[index],
+                                              businessInfo: personalData.value!,
+                                            ).launch(context);
+                                          },
                                           child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
                                             children: [
-                                              Row(
-                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                children: [
-                                                  Text(
-                                                    "${lang.S.of(context).totalProduct} : ${transaction[index].details!.length.toString()}",
-                                                    style: const TextStyle(fontSize: 16),
-                                                  ),
-                                                  Text('#${transaction[index].invoiceNumber}'),
-                                                ],
-                                              ),
-                                              const SizedBox(height: 10),
-                                              Row(
-                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                children: [
-                                                  Container(
-                                                    padding: const EdgeInsets.all(8),
-                                                    decoration: BoxDecoration(
-                                                        color: transaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d).withOpacity(0.1) : const Color(0xFFED1A3B).withOpacity(0.1),
-                                                        borderRadius: const BorderRadius.all(Radius.circular(10))),
-                                                    child: Text(
-                                                      transaction[index].dueAmount! <= 0 ? lang.S.of(context).paid : lang.S.of(context).unPaid,
-                                                      style: TextStyle(color: transaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d) : const Color(0xFFED1A3B)),
-                                                    ),
-                                                  ),
-                                                  Text(
-                                                    transaction[index].purchaseDate!.substring(0, 10),
-                                                    style: const TextStyle(color: Colors.grey),
-                                                  ),
-                                                ],
-                                              ),
-                                              const SizedBox(height: 10),
-                                              Text(
-                                                '${lang.S.of(context).total} : $currency ${transaction[index].totalAmount.toString()}',
-                                                style: const TextStyle(color: Colors.grey),
-                                              ),
-                                              Row(
-                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                children: [
-                                                  Text(
-                                                    '${lang.S.of(context).due}: $currency ${transaction[index].dueAmount.toString()}',
-                                                    style: const TextStyle(fontSize: 16),
-                                                  ),
-                                                  personalData.when(data: (data) {
-                                                    return Row(
+                                              Container(
+                                                // padding: const EdgeInsets.all(20),
+                                                width: context.width(),
+                                                child: Column(
+                                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                                  children: [
+                                                    Row(
+                                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                       children: [
-                                                        IconButton(
-                                                            onPressed: () async {
-                                                              ///________Print_______________________________________________________
-                                                              await printerDataPurchase.getBluetooth();
-                                                              PrintPurchaseTransactionModel model =
-                                                                  PrintPurchaseTransactionModel(purchaseTransitionModel: transaction[index], personalInformationModel: data);
-                                                              if (connected) {
-                                                                await printerDataPurchase.printPurchaseThermalInvoice(
-                                                                  printTransactionModel: model,
-                                                                  productList: model.purchaseTransitionModel!.details,
-                                                                );
-                                                              } else {
-                                                                // ignore: use_build_context_synchronously
-                                                                showDialog(
-                                                                    context: context,
-                                                                    builder: (_) {
-                                                                      return WillPopScope(
-                                                                        onWillPop: () async => false,
-                                                                        child: Dialog(
-                                                                          child: SizedBox(
-                                                                            child: Column(
-                                                                              mainAxisSize: MainAxisSize.min,
-                                                                              children: [
-                                                                                ListView.builder(
-                                                                                  shrinkWrap: true,
-                                                                                  itemCount:
-                                                                                      printerData.availableBluetoothDevices.isNotEmpty ? printerData.availableBluetoothDevices.length : 0,
-                                                                                  itemBuilder: (context, index) {
-                                                                                    return ListTile(
-                                                                                      onTap: () async {
-                                                                                        String select = printerData.availableBluetoothDevices[index];
-                                                                                        List list = select.split("#");
-                                                                                        // String name = list[0];
-                                                                                        String mac = list[1];
-                                                                                        bool isConnect = await printerData.setConnect(mac);
-                                                                                        isConnect
-                                                                                            // ignore: use_build_context_synchronously
-                                                                                            ? finish(context)
-                                                                                            : toast(
-                                                                                          lang.S.of(context).tryAgain,
-                                                                                           // 'Try Again'
-                                                                                        );
-                                                                                      },
-                                                                                      title: Text('${printerData.availableBluetoothDevices[index]}'),
-                                                                                      //subtitle:  Text("Click to connect"),
-                                                                                      subtitle:  Text(lang.S.of(context).clickToConnect),
-                                                                                    );
-                                                                                  },
-                                                                                ),
-                                                                                const SizedBox(height: 10),
-                                                                                 Text(
-                                                                                   lang.S.of(context).connectYourPrinter,
-                                                                                     //'Connect Your printer'
-                                                                                 ),
-                                                                                const SizedBox(height: 10),
-                                                                                Container(height: 1, width: double.infinity, color: Colors.grey),
-                                                                                const SizedBox(height: 15),
-                                                                                GestureDetector(
-                                                                                  onTap: () {
-                                                                                    Navigator.pop(context);
-                                                                                  },
-                                                                                  child:  Center(
-                                                                                    child: Text(
-                                                                                      lang.S.of(context).cancel,
-                                                                                      //'Cancel',
-                                                                                      style: const TextStyle(color: kMainColor),
-                                                                                    ),
-                                                                                  ),
-                                                                                ),
-                                                                                const SizedBox(height: 15),
-                                                                              ],
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      );
-                                                                    });
-                                                              }
-                                                            },
-                                                            icon: const Icon(
-                                                              FeatherIcons.printer,
-                                                              color: Colors.grey,
-                                                            )),
-                                                        IconButton(
-                                                            onPressed: () => GeneratePdf().generatePurchaseDocument(transaction[index], data, context),
-                                                            icon: const Icon(
-                                                              Icons.picture_as_pdf,
-                                                              color: Colors.grey,
-                                                            )),
-                                                        // IconButton(
-                                                        //     onPressed: () {},
-                                                        //     icon: const Icon(
-                                                        //       FeatherIcons.share,
-                                                        //       color: Colors.grey,
-                                                        //     )),
-                                                        // IconButton(
-                                                        //     onPressed: () {},
-                                                        //     icon: const Icon(
-                                                        //       FeatherIcons.moreVertical,
-                                                        //       color: Colors.grey,
-                                                        //     )),
+                                                        Text(
+                                                          "${lang.S.of(context).totalProduct} : ${transaction[index].details!.length.toString()}",
+                                                          style: const TextStyle(fontSize: 16),
+                                                        ),
+                                                        Text('#${transaction[index].invoiceNumber}'),
                                                       ],
-                                                    );
-                                                  }, error: (e, stack) {
-                                                    return Text(e.toString());
-                                                  }, loading: () {
-                                                    return Text(lang.S.of(context).loading);
-                                                  }),
-                                                ],
+                                                    ),
+                                                    const SizedBox(height: 10),
+                                                    Row(
+                                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                      children: [
+                                                        Container(
+                                                          padding: const EdgeInsets.all(8),
+                                                          decoration: BoxDecoration(
+                                                              color: transaction[index].dueAmount! <= 0
+                                                                  ? const Color(0xff0dbf7d).withOpacity(0.1)
+                                                                  : const Color(0xFFED1A3B).withOpacity(0.1),
+                                                              borderRadius: const BorderRadius.all(Radius.circular(10))),
+                                                          child: Text(
+                                                            transaction[index].dueAmount! <= 0 ? lang.S.of(context).paid : lang.S.of(context).unPaid,
+                                                            style: TextStyle(color: transaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d) : const Color(0xFFED1A3B)),
+                                                          ),
+                                                        ),
+                                                        Text(
+                                                          transaction[index].purchaseDate!.substring(0, 10),
+                                                          style: const TextStyle(color: Colors.grey),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                    const SizedBox(height: 10),
+                                                    Text(
+                                                      '${lang.S.of(context).total} : $currency ${transaction[index].totalAmount.toString()}',
+                                                      style: const TextStyle(color: Colors.grey),
+                                                    ),
+                                                    Row(
+                                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                      children: [
+                                                        Text(
+                                                          '${lang.S.of(context).due}: $currency ${transaction[index].dueAmount.toString()}',
+                                                          style: const TextStyle(fontSize: 16),
+                                                        ),
+                                                        personalData.when(data: (data) {
+                                                          return Row(
+                                                            children: [
+                                                              IconButton(
+                                                                  onPressed: () async {
+                                                                    ///________Print_______________________________________________________
+                                                                    await printerData.getBluetooth();
+                                                                    PrintPurchaseTransactionModel model =
+                                                                        PrintPurchaseTransactionModel(purchaseTransitionModel: transaction[index], personalInformationModel: data);
+                                                                    if (connected) {
+                                                                      await printerData.printPurchaseThermalInvoice(
+                                                                        printTransactionModel: model,
+                                                                        productList: model.purchaseTransitionModel!.details,
+                                                                      );
+                                                                    } else {
+                                                                      printerData.listOfBluDialog(context: context);
+                                                                    }
+                                                                  },
+                                                                  icon: const Icon(
+                                                                    FeatherIcons.printer,
+                                                                    color: Colors.grey,
+                                                                  )),
+                                                              IconButton(
+                                                                  onPressed: () => GeneratePdf().generatePurchaseDocument(transaction[index], data, context),
+                                                                  icon: const Icon(
+                                                                    Icons.picture_as_pdf,
+                                                                    color: Colors.grey,
+                                                                  )),
+                                                              // IconButton(
+                                                              //     onPressed: () {},
+                                                              //     icon: const Icon(
+                                                              //       FeatherIcons.share,
+                                                              //       color: Colors.grey,
+                                                              //     )),
+                                                              // IconButton(
+                                                              //     onPressed: () {},
+                                                              //     icon: const Icon(
+                                                              //       FeatherIcons.moreVertical,
+                                                              //       color: Colors.grey,
+                                                              //     )),
+                                                            ],
+                                                          );
+                                                        }, error: (e, stack) {
+                                                          return Text(e.toString());
+                                                        }, loading: () {
+                                                          return Text(lang.S.of(context).loading);
+                                                        }),
+                                                      ],
+                                                    ),
+                                                  ],
+                                                ),
                                               ),
+                                              Container(
+                                                height: 0.5,
+                                                width: context.width(),
+                                                color: Colors.grey,
+                                              )
                                             ],
                                           ),
                                         ),
-                                        Container(
-                                          height: 0.5,
-                                          width: context.width(),
-                                          color: Colors.grey,
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                );
-                              },
-                            ):  Text(
-                              lang.S.of(context).noTransaction,
-                               // 'No Transaction'
-                            );
+                                      );
+                                    },
+                                  )
+                                : Text(
+                                    lang.S.of(context).noTransaction,
+                                    // 'No Transaction'
+                                  );
                           }, error: (e, stack) {
                             return Text(e.toString());
                           }, loading: () {
