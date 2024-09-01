@@ -1,7 +1,11 @@
 // ignore_for_file: use_build_context_synchronously
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:mobile_pos/Screens/SplashScreen/on_board.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
@@ -12,8 +16,8 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../../Repository/API/business_info_repo.dart';
 import '../../currency.dart';
+import '../Authentication/Repo/licnese_repo.dart';
 import '../Home/home.dart';
-import '../Home/home_screen.dart';
 import '../language/language_provider.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -44,13 +48,66 @@ class _SplashScreenState extends State<SplashScreen> {
     ].request();
   }
 
+  checkUser() async {
+    bool result = await InternetConnectionChecker().hasConnection;
+    if (result) {
+      await PurchaseModel().isActiveBuyer().then((value) {
+        if (!value) {
+          showDialog(
+            context: context,
+            builder: (context) => AlertDialog(
+              title: const Text("Not Active User"),
+              content: const Text("Please use the valid purchase code to use the app."),
+              actions: [
+                TextButton(
+                  onPressed: () {
+                    //Exit app
+                    if (Platform.isAndroid) {
+                      SystemNavigator.pop();
+                    } else {
+                      exit(0);
+                    }
+                  },
+                  child: const Text("OK"),
+                ),
+              ],
+            ),
+          );
+        } else {
+          nextPage();
+        }
+      });
+    } else {
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: const Text('No Internet Connection'),
+            content: const Text('Please check your internet connection.'),
+            actions: [
+              TextButton(
+                child: const Text('Retry'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                  // _checkConnectivity();
+                  checkUser();
+                },
+              ),
+            ],
+          );
+        },
+      );
+    }
+  }
+
   @override
   void initState() {
     super.initState();
     // init();
     getPermission();
     getCurrency();
-    nextPage();
+
+    checkUser();
     // currentUserData.getUserData();
   }
 
@@ -493,9 +550,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Container(
               height: 230,
               width: 230,
-              decoration: const BoxDecoration(
-                image: DecorationImage(image: AssetImage(splashLogo))
-              ),
+              decoration: const BoxDecoration(image: DecorationImage(image: AssetImage(splashLogo))),
             ),
             const Spacer(),
             Column(
