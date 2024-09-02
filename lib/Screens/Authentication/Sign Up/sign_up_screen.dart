@@ -49,7 +49,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         centerTitle: true,
         surfaceTintColor: kWhite,
         title: Text(
-          lang.S.of(context).signIn,
+          lang.S.of(context).signUp,
           //'Sign Up',
           style: textTheme.titleMedium?.copyWith(fontSize: 20),
         ),
@@ -183,7 +183,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       }
                     }
                   },
-                  text: lang.S.of(context).signIn,
+                  text: lang.S.of(context).signUp,
                   //'Sign Up',
                 ),
                 const SizedBox(height: 20,),
