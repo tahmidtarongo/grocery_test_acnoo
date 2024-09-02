@@ -21,7 +21,7 @@ String paypalClientId = '';
 String paypalClientSecret = '';
 const bool sandbox = true;
 String noProductImageUrl = 'images/no_product_image.png';
-String purchaseCode = 'Enter your purchase code here';
+String purchaseCode = '3e873705-9a73-4a00-81f9-1f2fbef74e66';
 
 ///---------------update information---------------
 
