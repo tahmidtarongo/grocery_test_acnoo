@@ -1,4 +1,4 @@
-package com.maantechnology.salesprosaasmain;
+package com.acnoo.groceryshop;
 
 import io.flutter.embedding.android.FlutterActivity;
 

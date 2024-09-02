@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-const kMainColor = Color(0xffC52127);
+const kMainColor = Color(0xff019934);
 const kGreyTextColor = Color(0xFF828282);
 const kBackgroundColor = Color(0xffF5F3F3);
 const kBorderColorTextField = Color(0xFFC2C2C2);
@@ -16,7 +16,7 @@ bool isPrintEnable = false;
 List<String> paymentsTypeList = ['Cash', 'Card', 'Check', 'Mobile Pay', 'Due'];
 bool isExpiringInFiveDays = false;
 bool isExpiringInOneDays = false;
-const String appVersion = '1.1';
+const String appVersion = '1.0';
 String paypalClientId = '';
 String paypalClientSecret = '';
 const bool sandbox = true;
@@ -30,7 +30,7 @@ const String onboard1 = 'images/onbord1.png';
 const String onboard2 = 'images/onbord2.png';
 const String onboard3 = 'images/onbord3.png';
 const String logo = 'images/logo.png';
-const String appsName = 'POSpro';
+const String appsName = 'Grocery Shop';
 
 const kButtonDecoration = BoxDecoration(
   borderRadius: BorderRadius.all(
