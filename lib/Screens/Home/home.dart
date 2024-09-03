@@ -104,32 +104,6 @@ class _HomeState extends State<Home> {
         return shouldPop ?? false; // Allow default back button behavior if dialog is dismissed
       },
       child: Scaffold(
-        // body: Center(
-        //   child: _widgetOptions.elementAt(_selectedIndex),
-        // ),
-        // bottomNavigationBar: BottomNavigationBar(
-        //   type: BottomNavigationBarType.fixed,
-        //   elevation: 6.0,
-        //   backgroundColor: kWhite,
-        //   selectedItemColor: kMainColor,
-        //   items: [
-        //     BottomNavigationBarItem(
-        //       icon: const Icon(FeatherIcons.home),
-        //       label: lang.S.of(context).home,
-        //     ),
-        //     BottomNavigationBarItem(
-        //       icon: const Icon(FeatherIcons.shoppingCart),
-        //       label: lang.S.of(context).sales,
-        //     ),
-        //     BottomNavigationBarItem(
-        //       icon: const Icon(FeatherIcons.fileText),
-        //       label: lang.S.of(context).reports,
-        //     ),
-        //     BottomNavigationBarItem(icon: const Icon(FeatherIcons.settings), label: lang.S.of(context).setting),
-        //   ],
-        //   currentIndex: _selectedIndex,
-        //   onTap: _onItemTapped,
-        // ),
         body: PageView(
           controller: pageController,
           onPageChanged: (v) {

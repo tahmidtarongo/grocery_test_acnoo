@@ -113,8 +113,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // print('UserId: $constUserId');
-    // print('UserId: ${FirebaseAuth.instance.currentUser!.uid}');
     freeIcons = getFreeIcons(context: context);
     return SafeArea(
       child: Consumer(builder: (_, ref, __) {
@@ -124,32 +122,75 @@ class _HomeScreenState extends State<HomeScreen> {
         return businessInfo.when(data: (details) {
           return Scaffold(
             backgroundColor: kBackgroundColor,
+            drawer: Drawer(
+              child: ListView(
+                padding: EdgeInsets.zero,
+                children: <Widget>[
+                  DrawerHeader(
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                    ),
+                    child: Text(
+                      'Menu',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 24,
+                      ),
+                    ),
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.home),
+                    title: Text('Home'),
+                    onTap: () {
+                      // Handle Home tap here
+                      Navigator.pop(context); // Close the drawer
+                    },
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.settings),
+                    title: Text('Settings'),
+                    onTap: () {
+                      // Handle Settings tap here
+                      Navigator.pop(context); // Close the drawer
+                    },
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.contacts),
+                    title: Text('Contact Us'),
+                    onTap: () {
+                      // Handle Contact Us tap here
+                      Navigator.pop(context); // Close the drawer
+                    },
+                  ),
+                ],
+              ),
+            ),
             appBar: AppBar(
-              backgroundColor: kWhite,
+              backgroundColor: kMainColor,
               // leadingWidth: 60,
               titleSpacing: 5,
               surfaceTintColor: kWhite,
-              leading: Padding(
-                padding: const EdgeInsets.all(10),
-                child: GestureDetector(
-                  onTap: () {
-                    const ProfileDetails().launch(context);
-                  },
-                  child: Container(
-                    height: 50,
-                    width: 50,
-                    decoration: details.pictureUrl == null
-                        ? BoxDecoration(
-                            image: const DecorationImage(image: AssetImage('images/no_shop_image.png'), fit: BoxFit.cover),
-                            borderRadius: BorderRadius.circular(50),
-                          )
-                        : BoxDecoration(
-                            image: DecorationImage(image: NetworkImage('${APIConfig.domain}${details.pictureUrl}'), fit: BoxFit.cover),
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                  ),
-                ),
-              ),
+              // leading: Padding(
+              //   padding: const EdgeInsets.all(10),
+              //   child: GestureDetector(
+              //     onTap: () {
+              //       const ProfileDetails().launch(context);
+              //     },
+              //     child: Container(
+              //       height: 50,
+              //       width: 50,
+              //       decoration: details.pictureUrl == null
+              //           ? BoxDecoration(
+              //               image: const DecorationImage(image: AssetImage('images/no_shop_image.png'), fit: BoxFit.cover),
+              //               borderRadius: BorderRadius.circular(50),
+              //             )
+              //           : BoxDecoration(
+              //               image: DecorationImage(image: NetworkImage('${APIConfig.domain}${details.pictureUrl}'), fit: BoxFit.cover),
+              //               borderRadius: BorderRadius.circular(50),
+              //             ),
+              //     ),
+              //   ),
+              // ),
               title: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
