@@ -32,7 +32,7 @@ class SaleProductsList extends StatefulWidget {
 class _SaleProductsListState extends State<SaleProductsList> {
   String dropdownValue = '';
   String productCode = '0000';
- TextEditingController codeController = TextEditingController();
+  TextEditingController codeController = TextEditingController();
 
   var salesCart = FlutterCart();
   num productPrice = 0;

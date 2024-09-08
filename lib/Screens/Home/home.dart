@@ -75,25 +75,25 @@ class _HomeState extends State<Home> {
         final shouldPop = await showDialog<bool>(
           context: context,
           builder: (context) => AlertDialog(
-            title:  Text(
+            title: Text(
               lang.S.of(context).areYouSure,
-                //'Are you sure?'
+              //'Are you sure?'
             ),
             content: Text(
               lang.S.of(context).doYouWantToExitTheApp,
-                //'Do you want to exit the app?'
+              //'Do you want to exit the app?'
             ),
             actions: [
               TextButton(
                 onPressed: () => Navigator.of(context).pop(false),
-                child:  Text(
+                child: Text(
                   lang.S.of(context).no,
-                    //'No'
+                  //'No'
                 ),
               ),
               TextButton(
                 onPressed: () => Navigator.of(context).pop(true),
-                child:  Text(
+                child: Text(
                   lang.S.of(context).yes,
                   //  'Yes'
                 ),
@@ -109,57 +109,98 @@ class _HomeState extends State<Home> {
           onPageChanged: (v) {
             tabIndex = v;
           },
-          children: const [
-            HomeScreen(), DashboardScreen(), Reports(), SettingScreen()
-          ],
+          children: const [HomeScreen(), DashboardScreen(), Reports(), SettingScreen()],
         ),
-
         bottomNavigationBar: CircleNavBar(
-          activeIcons:   [
-            SvgPicture.asset('assets/cHome.svg',fit: BoxFit.scaleDown,height: 28,width: 28,),
-            SvgPicture.asset('assets/dashbord1.svg',height: 28,width: 28,fit: BoxFit.scaleDown,),
-            SvgPicture.asset('assets/cFile.svg',height: 28,width: 28,fit: BoxFit.scaleDown,),
-            SvgPicture.asset('assets/cSetting.svg',height: 28,width: 28,fit: BoxFit.scaleDown,),
+          activeIcons: [
+            SvgPicture.asset(
+              'assets/cHome.svg',
+              fit: BoxFit.scaleDown,
+              height: 28,
+              width: 28,
+            ),
+            SvgPicture.asset(
+              'assets/dashbord1.svg',
+              height: 28,
+              width: 28,
+              fit: BoxFit.scaleDown,
+            ),
+            SvgPicture.asset(
+              'assets/cFile.svg',
+              height: 28,
+              width: 28,
+              fit: BoxFit.scaleDown,
+            ),
+            SvgPicture.asset(
+              'assets/cSetting.svg',
+              height: 28,
+              width: 28,
+              fit: BoxFit.scaleDown,
+            ),
           ],
-          inactiveIcons:  [
+          inactiveIcons: [
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SvgPicture.asset('assets/home.svg',height: 24,width: 24,color: kGreyTextColor,),
-                 Text(
-                   lang.S.of(context).home,
-                 //  "Home",
-                   style: const TextStyle(color: kGreyTextColor),),
+                SvgPicture.asset(
+                  'assets/home.svg',
+                  height: 24,
+                  width: 24,
+                  color: kGreyTextColor,
+                ),
+                Text(
+                  lang.S.of(context).home,
+                  //  "Home",
+                  style: const TextStyle(color: kGreyTextColor),
+                ),
               ],
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SvgPicture.asset('assets/dashbord.svg',height: 24,width: 24,color: kGreyTextColor,),
-                 Text(
-                   lang.S.of(context).dashboard,
-                   //"Dashboard",
-                   style: const TextStyle(color: kGreyTextColor),),
+                SvgPicture.asset(
+                  'assets/dashbord.svg',
+                  height: 24,
+                  width: 24,
+                  color: kGreyTextColor,
+                ),
+                Text(
+                  lang.S.of(context).dashboard,
+                  //"Dashboard",
+                  style: const TextStyle(color: kGreyTextColor),
+                ),
               ],
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SvgPicture.asset('assets/file.svg',height: 24,width: 24,color: kGreyTextColor,),
+                SvgPicture.asset(
+                  'assets/file.svg',
+                  height: 24,
+                  width: 24,
+                  color: kGreyTextColor,
+                ),
                 Text(
                   lang.S.of(context).reports,
-                 // "Reports",
-                  style: const TextStyle(color: kGreyTextColor),),
+                  // "Reports",
+                  style: const TextStyle(color: kGreyTextColor),
+                ),
               ],
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SvgPicture.asset('assets/setting.svg',height: 24,width: 24,color: kGreyTextColor,),
+                SvgPicture.asset(
+                  'assets/setting.svg',
+                  height: 24,
+                  width: 24,
+                  color: kGreyTextColor,
+                ),
                 Text(
                   lang.S.of(context).setting,
                   //"Setting",
-                  style: const TextStyle(color: kGreyTextColor),),
+                  style: const TextStyle(color: kGreyTextColor),
+                ),
               ],
             ),
           ],
@@ -171,18 +212,15 @@ class _HomeState extends State<Home> {
             tabIndex = index;
             pageController.jumpToPage(tabIndex);
           },
-          padding:  EdgeInsets.zero,
+          padding: EdgeInsets.zero,
           cornerRadius: const BorderRadius.only(
             topLeft: Radius.circular(8),
             topRight: Radius.circular(8),
-
           ),
           shadowColor: kBorderColorTextField,
           elevation: 2,
         ),
-
       ),
     );
   }
 }
-

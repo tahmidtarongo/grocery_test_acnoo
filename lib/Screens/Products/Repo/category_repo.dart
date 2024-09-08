@@ -75,6 +75,7 @@ class CategoryRepo {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('An error occurred: $error')));
     }
   }
+
   Future<void> editCategory({
     required WidgetRef ref,
     required BuildContext context,

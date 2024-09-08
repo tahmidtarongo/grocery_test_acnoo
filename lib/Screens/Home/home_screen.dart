@@ -146,41 +146,7 @@ class _HomeScreenState extends State<HomeScreen> {
             drawer: Drawer(
               child: ListView(
                 padding: EdgeInsets.zero,
-                children: <Widget>[
-                  const DrawerHeader(
-                    decoration: BoxDecoration(
-                      color: Colors.blue,
-                    ),
-                    child: Text(
-                      'Menu',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 24,
-                      ),
-                    ),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.home),
-                    title: Text('Home'),
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.settings),
-                    title: Text('Settings'),
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.contacts),
-                    title: Text('Contact Us'),
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                  ),
-                ],
+                children: <Widget>[],
               ),
             ),
 
@@ -404,7 +370,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ),
-
                   Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: product.when(
@@ -423,10 +388,10 @@ class _HomeScreenState extends State<HomeScreen> {
                             physics: const NeverScrollableScrollPhysics(),
                             shrinkWrap: true,
                             itemBuilder: (context, index) {
-                             return Column(
+                              return Column(
                                 children: [
                                   Expanded(
-                                    child: Image.network(data[index].productPicture ?? ''),
+                                    child: data[index].productPicture == null ? Image.asset(noProductImageUrl) : Image.network(data[index].productPicture ?? ''),
                                   ),
                                   const SizedBox(height: 8.0),
                                   Text(
@@ -447,7 +412,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       loading: () => const CircularProgressIndicator(),
                     ),
                   ),
-
                   Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: Column(
@@ -713,9 +677,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           // 'Not Found',
                                           style: gTextStyle.copyWith(color: kWhite, fontWeight: FontWeight.bold),
                                         ),
-                                        const SizedBox(
-                                          height: 10,
-                                        ),
+                                        const SizedBox(height: 10),
                                         Text(
                                           lang.S.of(context).income,
                                           // 'Income',
@@ -1226,4 +1188,3 @@ class _HomeGridCardsState extends State<HomeGridCards> {
     });
   }
 }
-

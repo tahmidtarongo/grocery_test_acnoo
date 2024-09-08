@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -148,7 +147,11 @@ class _SettingScreenState extends State<SettingScreen> {
                   onTap: () {
                     const ProfileDetails().launch(context);
                   },
-                  leading: SvgPicture.asset('assets/profile.svg',height: 36,width: 36,),
+                  leading: SvgPicture.asset(
+                    'assets/profile.svg',
+                    height: 36,
+                    width: 36,
+                  ),
                   trailing: const Icon(
                     Icons.arrow_forward_ios,
                     color: kGreyTextColor,
@@ -171,7 +174,11 @@ class _SettingScreenState extends State<SettingScreen> {
                       fontSize: 16.0,
                     ),
                   ),
-                  leading: SvgPicture.asset('assets/print.svg',height: 36,width: 36,),
+                  leading: SvgPicture.asset(
+                    'assets/print.svg',
+                    height: 36,
+                    width: 36,
+                  ),
                   trailing: Transform.scale(
                     scale: 0.7,
                     child: SizedBox(
@@ -211,7 +218,11 @@ class _SettingScreenState extends State<SettingScreen> {
                   onTap: () {
                     const PackageScreen().launch(context);
                   },
-                  leading: SvgPicture.asset('assets/subscription.svg',height: 36,width: 36,),
+                  leading: SvgPicture.asset(
+                    'assets/subscription.svg',
+                    height: 36,
+                    width: 36,
+                  ),
                   trailing: const Icon(
                     Icons.arrow_forward_ios,
                     color: kGreyTextColor,
@@ -231,7 +242,7 @@ class _SettingScreenState extends State<SettingScreen> {
                 ListTile(
                   title: Text(
                     lang.S.of(context).dashboard,
-                   // 'Dashboard',
+                    // 'Dashboard',
                     style: GoogleFonts.poppins(
                       color: Colors.black,
                       fontSize: 16.0,
@@ -240,7 +251,11 @@ class _SettingScreenState extends State<SettingScreen> {
                   onTap: () {
                     const DashboardScreen().launch(context);
                   },
-                  leading: SvgPicture.asset('assets/dashboard.svg',height: 36,width: 36,),
+                  leading: SvgPicture.asset(
+                    'assets/dashboard.svg',
+                    height: 36,
+                    width: 36,
+                  ),
                   trailing: const Icon(
                     Icons.arrow_forward_ios,
                     color: kGreyTextColor,
@@ -268,7 +283,11 @@ class _SettingScreenState extends State<SettingScreen> {
                   onTap: () {
                     const UserRoleScreen().launch(context);
                   },
-                  leading: SvgPicture.asset('assets/userRole.svg',height: 36,width: 36,),
+                  leading: SvgPicture.asset(
+                    'assets/userRole.svg',
+                    height: 36,
+                    width: 36,
+                  ),
                   trailing: const Icon(
                     Icons.arrow_forward_ios,
                     color: kGreyTextColor,
@@ -297,7 +316,11 @@ class _SettingScreenState extends State<SettingScreen> {
                       fontSize: 16.0,
                     ),
                   ),
-                  leading: SvgPicture.asset('assets/currency.svg',height: 36,width: 36,),
+                  leading: SvgPicture.asset(
+                    'assets/currency.svg',
+                    height: 36,
+                    width: 36,
+                  ),
                   trailing: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -311,7 +334,11 @@ class _SettingScreenState extends State<SettingScreen> {
                       const SizedBox(
                         width: 4.0,
                       ),
-                      const Icon(Icons.arrow_forward_ios,color: kGreyTextColor,size: 18,),
+                      const Icon(
+                        Icons.arrow_forward_ios,
+                        color: kGreyTextColor,
+                        size: 18,
+                      ),
                     ],
                   ),
                 ),
@@ -339,7 +366,11 @@ class _SettingScreenState extends State<SettingScreen> {
                       builder: (context) => const SelectLanguage(),
                     ),
                   ),
-                  leading: SvgPicture.asset('assets/language.svg',height: 36,width: 36,),
+                  leading: SvgPicture.asset(
+                    'assets/language.svg',
+                    height: 36,
+                    width: 36,
+                  ),
                   trailing: const Icon(
                     Icons.arrow_forward_ios,
                     color: kGreyTextColor,
@@ -366,14 +397,18 @@ class _SettingScreenState extends State<SettingScreen> {
                   ),
                   onTap: () async {
                     ref.invalidate(businessInfoProvider);
-                    EasyLoading.show(status:
-                        lang.S.of(context).logOut,
-                    //'Log out'
+                    EasyLoading.show(
+                      status: lang.S.of(context).logOut,
+                      //'Log out'
                     );
                     LogOutRepo repo = LogOutRepo();
                     await repo.signOutApi(context: context, ref: ref);
                   },
-                  leading: SvgPicture.asset('assets/logout.svg',height: 36,width: 36,),
+                  leading: SvgPicture.asset(
+                    'assets/logout.svg',
+                    height: 36,
+                    width: 36,
+                  ),
                   trailing: const Icon(
                     Icons.arrow_forward_ios,
                     color: kGreyTextColor,
