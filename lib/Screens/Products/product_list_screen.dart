@@ -110,7 +110,7 @@ class _ProductListState extends State<ProductList> {
                         const SizedBox(width: 10),
                         Text(
                           lang.S.of(context).productUnit,
-                         // "Product Unit",
+                          // "Product Unit",
                           style: gTextStyle.copyWith(color: kGreyTextColor),
                         )
                       ],
@@ -219,9 +219,9 @@ class _ProductListState extends State<ProductList> {
                                     onTap: () async {
                                       bool confirmDelete = await showDeleteAlert(context: context, itemsName: 'product');
                                       if (confirmDelete) {
-                                        EasyLoading.show(status:
-                                            lang.S.of(context).deleting,
-                                       // 'Deleting....'
+                                        EasyLoading.show(
+                                          status: lang.S.of(context).deleting,
+                                          // 'Deleting....'
                                         );
                                         ProductRepo productRepo = ProductRepo();
                                         await productRepo.deleteProduct(id: products[i].id.toString(), context: context, ref: ref);

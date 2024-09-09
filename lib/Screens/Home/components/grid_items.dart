@@ -16,38 +16,10 @@ List<GridItems> getFreeIcons({required BuildContext context}) {
     GridItems(title: lang.S.of(context).dueList, icon: 'assets/duelist.svg', route: 'Due List'),
     GridItems(title: lang.S.of(context).stockList, icon: 'assets/stock.svg', route: 'Stock'),
     GridItems(title: lang.S.of(context).reports, icon: 'assets/reports.svg', route: 'Reports'),
-    GridItems(
-      title: lang.S.of(context).saleList,
-      icon: 'assets/salelist.svg',
-      route: 'Sales List',
-    ),
-    GridItems(
-      title: lang.S.of(context).purchaseList,
-      icon: 'assets/purchaseLisst.svg',
-      route: 'Purchase List',
-    ),
-    GridItems(
-      title: lang.S.of(context).lossOrProfit,
-      icon: 'assets/lossprofit.svg',
-      route: 'Loss/Profit',
-    ),
-    GridItems(
-      title: lang.S.of(context).expense,
-      icon: 'assets/expense.svg',
-      route: 'Expense',
-    ),
-    // GridItems(
-    //   title: 'Delivery',
-    //   icon: 'images/delivery.png',
-    // ),
-    // GridItems(
-    //   title: 'Calculator',
-    //   icon: 'images/calculator.png',
-    // ),
-    // GridItems(
-    //   title: 'Expense',
-    //   icon: 'images/expenses.png',
-    // )
+    GridItems(title: lang.S.of(context).saleList, icon: 'assets/salelist.svg', route: 'Sales List'),
+    GridItems(title: lang.S.of(context).purchaseList, icon: 'assets/purchaseLisst.svg', route: 'Purchase List'),
+    GridItems(title: lang.S.of(context).lossOrProfit, icon: 'assets/lossprofit.svg', route: 'Loss/Profit'),
+    GridItems(title: lang.S.of(context).expense, icon: 'assets/expense.svg', route: 'Expense'),
   ];
   return freeIcons;
 }

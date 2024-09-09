@@ -5,10 +5,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:iconly/iconly.dart';
 import 'package:mobile_pos/Screens/DashBoard/dashboard.dart';
 import 'package:mobile_pos/Screens/Home/home_screen.dart';
+import 'package:mobile_pos/Screens/Products/add_product.dart';
 import 'package:mobile_pos/Screens/Report/reports.dart';
 import 'package:mobile_pos/Screens/Settings/settings_screen.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
+import 'package:nb_utils/nb_utils.dart';
 import '../Sales/sales_contact.dart';
 
 class Home extends StatefulWidget {
@@ -20,38 +22,9 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int _selectedIndex = 0;
   bool isDeviceConnected = false;
   bool isAlertSet = false;
   bool isNoInternet = false;
-
-  static const List<Widget> _widgetOptions = <Widget>[HomeScreen(), SalesContact(), Reports(), SettingScreen()];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
-  // void signOutAutoLogin() async {
-  //   CurrentUserData currentUserData = CurrentUserData();
-  //   if (await currentUserData.isSubUserEmailNotFound() && isSubUser) {
-  //     await FirebaseAuth.instance.signOut();
-  //     Future.delayed(const Duration(milliseconds: 5000), () async {
-  //       EasyLoading.showError('User is deleted');
-  //     });
-  //     Future.delayed(const Duration(milliseconds: 1000), () async {
-  //       Restart.restartApp();
-  //     });
-  //   }
-  // }
-  //
-  // @override
-  // void initState() {
-  //   // TODO: implement initState
-  //   super.initState();
-  //   isSubUser ? signOutAutoLogin() : null;
-  // }
 
   int _tabIndex = 0;
   int get tabIndex => _tabIndex;
@@ -109,33 +82,42 @@ class _HomeState extends State<Home> {
           onPageChanged: (v) {
             tabIndex = v;
           },
-          children: const [HomeScreen(), DashboardScreen(), Reports(), SettingScreen()],
+          children: const [HomeScreen(), DashboardScreen(), Reports(), Reports(), SettingScreen()],
         ),
         bottomNavigationBar: CircleNavBar(
           activeIcons: [
             SvgPicture.asset(
-              'assets/cHome.svg',
+              'assets/grocery/home.svg',
               fit: BoxFit.scaleDown,
               height: 28,
               width: 28,
+              color: kMainColor,
             ),
             SvgPicture.asset(
               'assets/dashbord1.svg',
               height: 28,
               width: 28,
               fit: BoxFit.scaleDown,
+              color: kMainColor,
+            ),
+            FloatingActionButton(
+              backgroundColor: kMainColor,
+              onPressed: () {},
+              foregroundColor: kMainColor,
             ),
             SvgPicture.asset(
               'assets/cFile.svg',
               height: 28,
               width: 28,
               fit: BoxFit.scaleDown,
+              color: kMainColor,
             ),
             SvgPicture.asset(
               'assets/cSetting.svg',
               height: 28,
               width: 28,
               fit: BoxFit.scaleDown,
+              color: kMainColor,
             ),
           ],
           inactiveIcons: [
@@ -171,6 +153,21 @@ class _HomeState extends State<Home> {
                 ),
               ],
             ),
+            SizedBox(
+              height: 50,
+              width: 50,
+              child: FloatingActionButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => AddProduct()));
+                },
+                shape: const CircleBorder(side: BorderSide(color: Colors.white)),
+                backgroundColor: kMainColor,
+                child: const Icon(
+                  Icons.add,
+                  color: Colors.white,
+                ),
+              ),
+            ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -205,7 +202,7 @@ class _HomeState extends State<Home> {
             ),
           ],
           color: Colors.white,
-          height: 65,
+          height: 85,
           circleWidth: 60,
           activeIndex: tabIndex,
           onTap: (index) {
