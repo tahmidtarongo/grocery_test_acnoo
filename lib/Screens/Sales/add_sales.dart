@@ -269,7 +269,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                   contentPadding: const EdgeInsets.all(0),
                                   title: Text(providerData.cartItemList[index].productName.toString()),
                                   subtitle: Text(
-                                      '${providerData.cartItemList[index].quantity} X ${providerData.cartItemList[index].subTotal} = ${(double.parse(providerData.cartItemList[index].subTotal) * providerData.cartItemList[index].quantity).toStringAsFixed(2)}'),
+                                      '${providerData.cartItemList[index].quantity} X ${providerData.cartItemList[index].price} = ${(double.parse(providerData.cartItemList[index].price) * providerData.cartItemList[index].quantity).toStringAsFixed(2)}'),
                                   trailing: Row(
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
@@ -764,8 +764,8 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                     CartSaleProducts(
                                       productId: element.uuid.toInt(),
                                       quantities: element.quantity.toInt(),
-                                      price: (num.tryParse(element.subTotal.toString()) ?? 0),
-                                      lossProfit: (element.quantity * (num.tryParse(element.subTotal.toString()) ?? 0)) -
+                                      price: (num.tryParse(element.price.toString()) ?? 0),
+                                      lossProfit: (element.quantity * (num.tryParse(element.price.toString()) ?? 0)) -
                                           (element.quantity * (num.tryParse(element.productPurchasePrice.toString()) ?? 0)),
                                     ),
                                   );

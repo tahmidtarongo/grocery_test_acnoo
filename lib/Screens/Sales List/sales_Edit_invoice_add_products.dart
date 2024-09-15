@@ -203,13 +203,13 @@ class _EditSaleInvoiceSaleProductsState extends State<EditSaleInvoiceSaleProduct
 
                               AddToCartModel cartItem = AddToCartModel(
                                 productName: products[i].productName,
-                                subTotal: sentProductPrice,
+                                price: sentProductPrice,
                                 productId: products[i].productCode,
                                 uuid: products[i].id ?? 0,
                                 productBrandName: products[i].brand?.brandName ?? '',
                                 stock: (products[i].productStock ?? 0).round(),
                               );
-                              providerData.addToCartRiverPod(cartItem);
+                              providerData.addToCart(cartItem);
                               providerData.addProductsInSales(products[i]);
                               EasyLoading.showSuccess(
                                 lang.S.of(context).addedToCart,

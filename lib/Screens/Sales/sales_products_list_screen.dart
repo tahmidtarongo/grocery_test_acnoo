@@ -287,14 +287,14 @@ class _SaleProductsListState extends State<SaleProductsList> {
 
                               AddToCartModel cartItem = AddToCartModel(
                                 productName: products[i].productName,
-                                subTotal: sentProductPrice,
+                                price: sentProductPrice,
                                 productId: products[i].productCode,
                                 productBrandName: products[i].brand?.brandName ?? '',
                                 productPurchasePrice: products[i].productPurchasePrice,
                                 stock: (products[i].productStock ?? 0).round(),
                                 uuid: products[i].id ?? 0,
                               );
-                              providerData.addToCartRiverPod(cartItem);
+                              providerData.addToCart(cartItem);
                               providerData.addProductsInSales(products[i]);
                               Navigator.pop(context);
                             }
@@ -351,7 +351,7 @@ class ProductCard extends StatefulWidget {
 }
 
 class _ProductCardState extends State<ProductCard> {
-  int quantity = 0;
+  num quantity = 0;
 
   @override
   Widget build(BuildContext context) {

@@ -23,7 +23,6 @@ import 'package:mobile_pos/Screens/stock_list/stock_list.dart';
 import 'package:provider/provider.dart' as pro;
 import 'package:shurjopay/utilities/functions.dart';
 import 'Screens/Due Calculation/due_calculation_contact_screen.dart';
-import 'Screens/Home/home_screen.dart';
 import 'Screens/Loss_Profit/loss_profit_screen.dart';
 import 'Screens/Products/update_product.dart';
 import 'Screens/Purchase List/purchase_list_screen.dart';
@@ -59,7 +58,7 @@ class MyApp extends StatelessWidget {
                   GlobalCupertinoLocalizations.delegate,
                 ],
                 supportedLocales: S.delegate.supportedLocales,
-                title: 'POSpro',
+                title: 'Grocery Shop',
                 initialRoute: '/',
                 builder: EasyLoading.init(),
                 routes: {
@@ -72,7 +71,7 @@ class MyApp extends StatelessWidget {
                   '/home': (context) => const Home(),
                   '/profile': (context) => const ProfileScreen(),
                   '/AddProducts': (context) => AddProduct(),
-                  '/UpdateProducts': (context) => UpdateProduct(),
+                  '/UpdateProducts': (context) => const UpdateProduct(),
                   '/Products': (context) => const ProductList(),
                   '/salesCustomer': (context) => const SalesContact(),
                   '/addPromoCode': (context) => const AddPromoCode(),
@@ -80,7 +79,7 @@ class MyApp extends StatelessWidget {
                   '/Sales': (context) => const SalesContact(),
                   '/Parties': (context) => const CustomerList(),
                   '/Expense': (context) => const ExpenseList(),
-                  '/Stock': (context) => const StockList(isFromReport: false,),
+                  '/Stock': (context) => const StockList(isFromReport: false),
                   '/Purchase': (context) => const PurchaseContacts(),
                   '/Reports': (context) => const Reports(),
                   '/Due List': (context) => const DueCalculationContactScreen(),

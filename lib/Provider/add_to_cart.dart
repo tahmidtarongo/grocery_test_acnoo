@@ -21,10 +21,19 @@ class CartNotifier extends ChangeNotifier {
     notifyListeners();
   }
 
+  num? getAProductQuantity({required num uid}) {
+    for (var element in cartItemList) {
+      if (element.uuid == uid) {
+        return element.quantity;
+      }
+    }
+    return null;
+  }
+
   double getTotalAmount() {
     double totalAmountOfCart = 0;
     for (var element in cartItemList) {
-      totalAmountOfCart = totalAmountOfCart + (double.parse(element.subTotal.toString()) * double.parse(element.quantity.toString()));
+      totalAmountOfCart = totalAmountOfCart + (double.parse(element.price.toString()) * double.parse(element.quantity.toString()));
     }
 
     if (discount >= 0) {
@@ -53,7 +62,7 @@ class CartNotifier extends ChangeNotifier {
     notifyListeners();
   }
 
-  addToCartRiverPod(AddToCartModel cartItem) {
+  addToCart(AddToCartModel cartItem) {
     bool isNotInList = true;
     for (var element in cartItemList) {
       if (element.productId == cartItem.productId) {
@@ -69,6 +78,14 @@ class CartNotifier extends ChangeNotifier {
       controllers.add(TextEditingController());
       focus.add(FocusNode());
     }
+    notifyListeners();
+  }
+
+  updateProductInCart(AddToCartModel cartItem) {
+    int index = cartItemList.indexWhere(
+      (element) => element.productId == cartItem.productId,
+    );
+    cartItemList[index] = cartItem;
     notifyListeners();
   }
 

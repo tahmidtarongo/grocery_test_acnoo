@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -7,7 +8,9 @@ import 'package:iconly/iconly.dart';
 import 'package:mobile_pos/Provider/product_provider.dart';
 import 'package:mobile_pos/Screens/Home/components/grid_items.dart';
 import 'package:mobile_pos/Screens/Products/Providers/category,brans,units_provide.dart';
+import 'package:mobile_pos/currency.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
+import 'package:nb_utils/nb_utils.dart';
 import '../../Const/api_config.dart';
 import '../../Provider/add_to_cart.dart';
 import '../../Provider/profile_provider.dart';
@@ -201,9 +204,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           ///_______Cart_________________________________
                           Visibility(
-
                             visible: cartData.cartItemList.isNotEmpty,
-
                             child: Padding(
                               padding: const EdgeInsets.only(bottom: 20),
                               child: Container(
@@ -224,7 +225,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                               child: Container(
                                                 height: 40,
                                                 width: 55,
-                                                decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(8)), border: Border.all(color: Colors.white, width: 2)),
+                                                decoration:
+                                                    BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(8)), border: Border.all(color: Colors.white, width: 2)),
                                               ),
                                             ),
                                             Container(
@@ -240,9 +242,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                           ],
                                         ),
                                       ),
-                                      const Text(
-                                        '\$500.00',
-                                        style: TextStyle(fontSize: 22, color: Colors.white, fontWeight: FontWeight.bold),
+                                      Text(
+                                        '$currency ${cartData.getTotalAmount()}',
+                                        style: const TextStyle(fontSize: 22, color: Colors.white, fontWeight: FontWeight.bold),
                                       ),
                                       const Icon(
                                         Icons.arrow_forward_ios,
@@ -348,7 +350,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       data: (products) {
                         return SizedBox(
                           width: MediaQuery.of(context).size.width,
-                          height: 500,
                           child: GridView.builder(
                             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 3,
@@ -363,61 +364,80 @@ class _HomeScreenState extends State<HomeScreen> {
                               return Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: GestureDetector(
-                                  onTap: () async {
-                                    if ((products[index].productStock ?? 0) <= 0) {
-                                      EasyLoading.showError('Out of stock');
-                                    } else {
-                                      // if (widget.customerModel == null) {
-                                      //   sentProductPrice = products[i].productSalePrice.toString();
-                                      // } else {
-                                      //   if (widget.customerModel!.type!.contains('Retailer')) {
-                                      //     sentProductPrice = products[i].productSalePrice.toString();
-                                      //   } else if (widget.customerModel!.type!.contains('Dealer')) {
-                                      //     sentProductPrice = products[i].productDealerPrice.toString();
-                                      //   } else if (widget.customerModel!.type!.contains('Wholesaler')) {
-                                      //     sentProductPrice = products[i].productWholeSalePrice.toString();
-                                      //   } else if (widget.customerModel!.type!.contains('Supplier')) {
-                                      //     sentProductPrice = products[i].productPurchasePrice.toString();
-                                      //   }
-                                      // }
-
-                                      AddToCartModel cartItem = AddToCartModel(
-                                        productName: products[index].productName,
-                                        subTotal: products[index].productSalePrice,
-                                        productId: products[index].productCode,
-                                        productBrandName: products[index].brand?.brandName ?? '',
-                                        productPurchasePrice: products[index].productPurchasePrice,
-                                        stock: (products[index].productStock ?? 0).round(),
-                                        uuid: products[index].id ?? 0,
-                                      );
-                                      cartData.addToCartRiverPod(cartItem);
-                                      cartData.addProductsInSales(products[index]);
-                                      // Navigator.pop(context);
-                                    }
+                                  onTap: () {
+                                    AddToCartModel cartItem = AddToCartModel(
+                                      productName: products[index].productName,
+                                      price: products[index].productSalePrice,
+                                      productId: products[index].productCode,
+                                      productBrandName: products[index].brand?.brandName,
+                                      productPurchasePrice: products[index].productPurchasePrice,
+                                      stock: (products[index].productStock ?? 0),
+                                      uuid: products[index].id ?? 0,
+                                      unitName: products[index].unit?.unitName,
+                                    );
+                                    showModalBottomSheet(
+                                      context: context,
+                                      isScrollControlled: true,
+                                      shape: const RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.vertical(
+                                          top: Radius.circular(20),
+                                        ),
+                                      ),
+                                      builder: (context) => ItemDetailsModal(
+                                        product: cartItem,
+                                        ref: ref,
+                                      ),
+                                    );
                                   },
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      Expanded(
-                                        child: products[index].productPicture == null
-                                            ? Image.asset(
+                                      products[index].productPicture == null
+                                          ? SizedBox(
+                                              height: 80,
+                                              width: 500,
+                                              child: Image.asset(
                                                 noProductImageUrl,
-                                                fit: BoxFit.fill,
-                                              )
-                                            : Image.network(
-                                                '${APIConfig.domain}${products[index].productPicture!}',
-                                                fit: BoxFit.fill,
+                                                fit: BoxFit.cover,
                                               ),
-                                      ),
-                                      const SizedBox(height: 8.0),
+                                            )
+                                          : SizedBox(
+                                              height: 80,
+                                              width: 500,
+                                              child: Image.network(
+                                                '${APIConfig.domain}${products[index].productPicture!}',
+                                                fit: BoxFit.cover,
+                                              ),
+                                            ),
+                                      const SizedBox(height: 5.0),
                                       Text(
                                         products[index].productName ?? '',
                                         style: const TextStyle(fontWeight: FontWeight.bold),
                                       ),
-                                      const SizedBox(height: 4.0),
+                                      // const SizedBox(height: 2.0),
                                       Text("${products[index].productStock} ${products[index].unit?.unitName ?? ''}"),
-                                      const SizedBox(height: 4.0),
-                                      Text('\$${products[index].productSalePrice?.toStringAsFixed(2)}'),
+                                      // const SizedBox(height: 2.0),
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text('\$${products[index].productSalePrice?.toStringAsFixed(2)}'),
+                                          Visibility(
+                                            visible: cartData.getAProductQuantity(uid: products[index].id ?? 0) != null,
+                                            child: CircleAvatar(
+                                              backgroundColor: kMainColor,
+                                              minRadius: 5,
+                                              child: SizedBox(
+                                                  height: 24,
+                                                  width: 24,
+                                                  child: Center(
+                                                      child: Text(
+                                                    '${cartData.getAProductQuantity(uid: products[index].id ?? 0)}',
+                                                    style: const TextStyle(fontSize: 12, color: Colors.white),
+                                                  ))),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -430,8 +450,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       loading: () => const CircularProgressIndicator(),
                     ),
                   ),
-
-                  const SizedBox(height: 50,),
+                  const SizedBox(height: 50),
                 ],
               ),
             ),
@@ -451,4 +470,197 @@ class DrawerManuTile {
   late String image;
   late String route;
   DrawerManuTile({required this.title, required this.image, required this.route});
+}
+
+class ItemDetailsModal extends StatefulWidget {
+  ItemDetailsModal({Key? key, required this.product, required this.ref}) : super(key: key);
+
+  AddToCartModel product;
+  final WidgetRef ref;
+
+  @override
+  State<ItemDetailsModal> createState() => _ItemDetailsModalState();
+}
+
+class _ItemDetailsModalState extends State<ItemDetailsModal> {
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+  TextEditingController quantityController = TextEditingController();
+  TextEditingController priceController = TextEditingController();
+  bool isAlreadyInCart = false;
+
+  @override
+  void initState() {
+    super.initState();
+    for (var element in widget.ref.watch(cartNotifier).cartItemList) {
+      if (element.uuid == widget.product.uuid) {
+        setState(() {
+          widget.product = element;
+          isAlreadyInCart = true;
+        });
+      }
+    }
+    quantityController.text = '${widget.product.quantity}';
+    priceController.text = '${widget.product.price}';
+  }
+
+  @override
+  void dispose() {
+    quantityController.dispose();
+    priceController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(
+        bottom: MediaQuery.of(context).viewInsets.bottom,
+        left: 15,
+        right: 15,
+        top: 10,
+      ),
+      child: Form(
+        key: _formKey,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            /// Item Details Header______________________________
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  'Item Details',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Icon(Icons.clear),
+                  ),
+                ),
+              ],
+            ),
+            const Divider(),
+
+            ///_________ Item Name and Price_________________________
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  widget.product.productName ?? '',
+                  style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+                const Text('Unit price'),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('${widget.product.stock} ${widget.product.unitName ?? ''}'),
+                Text(
+                  '$currency ${widget.product.price}',
+                  style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+            const SizedBox(height: 12),
+            // Unit Input Field
+            Row(
+              children: [
+                Expanded(
+                  child: TextFormField(
+                    controller: quantityController,
+                    inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
+                    decoration: InputDecoration(
+                      labelText: 'Quantity',
+                      hintText: 'Enter unit quantity',
+                      border: const OutlineInputBorder(),
+                      suffixIcon: (widget.product.unitName.isEmptyOrNull)
+                          ? null
+                          : Padding(
+                              padding: const EdgeInsets.only(right: 4),
+                              child: Container(
+                                width: 100,
+                                decoration: BoxDecoration(color: kBorderColorTextField.withOpacity(.5), borderRadius: const BorderRadius.all(Radius.circular(5))),
+                                child: Center(child: Text(widget.product.unitName ?? '')),
+                              ),
+                            ),
+                      suffixIconColor: Colors.red,
+                    ),
+                    keyboardType: TextInputType.number,
+                    validator: (value) {
+                      final quantity = num.tryParse(value ?? '') ?? 0;
+                      if (quantity <= 0) {
+                        return 'Quantity must be greater than 0';
+                      }
+                      if (quantity > (widget.product.stock ?? 0)) {
+                        return 'Quantity exceeds available stock';
+                      }
+                      return null;
+                    },
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 12),
+            // Price Input Field
+            TextFormField(
+              controller: priceController,
+              inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
+              decoration: const InputDecoration(
+                labelText: 'Sales Price',
+                hintText: 'Please enter sales price',
+                border: OutlineInputBorder(),
+              ),
+              keyboardType: TextInputType.number,
+              validator: (value) {
+                final price = num.tryParse(value ?? '') ?? 0;
+                if (price <= 0) {
+                  return 'Price must be greater than 0';
+                }
+                return null;
+              },
+            ),
+            const SizedBox(height: 20),
+            // Add to Cart Button
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: kMainColor,
+                  padding: const EdgeInsets.symmetric(vertical: 15),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                ),
+                child: Text(
+                  'Add to Cart - Total: $currency ${(num.tryParse(quantityController.text) ?? 1) * (num.tryParse(priceController.text) ?? 0)}',
+                  style: const TextStyle(fontSize: 16, color: Colors.white),
+                ),
+                onPressed: () {
+                  if (_formKey.currentState?.validate() ?? false) {
+                    final quantity = num.tryParse(quantityController.text) ?? 1;
+                    final price = num.tryParse(priceController.text) ?? 0;
+
+                    widget.product.quantity = quantity;
+                    widget.product.price = price;
+
+                    isAlreadyInCart ? widget.ref.watch(cartNotifier).updateProductInCart(widget.product) : widget.ref.watch(cartNotifier).addToCart(widget.product);
+
+                    Navigator.pop(context);
+                  }
+                },
+              ),
+            ),
+            const SizedBox(height: 20),
+          ],
+        ),
+      ),
+    );
+  }
 }
