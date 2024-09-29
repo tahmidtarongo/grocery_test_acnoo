@@ -24,7 +24,7 @@ List<GridItems> getFreeIcons({required BuildContext context}) {
   return freeIcons;
 }
 
-List<GridItems> freeIcons = [];
+
 
 List<GridItems> businessIcons = [
   GridItems(
