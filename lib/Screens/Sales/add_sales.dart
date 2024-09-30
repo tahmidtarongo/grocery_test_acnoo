@@ -6,9 +6,11 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:iconly/iconly.dart';
 import 'package:mobile_pos/Provider/add_to_cart.dart';
 import 'package:mobile_pos/Provider/profile_provider.dart';
 import 'package:mobile_pos/Screens/Sales/Repo/sales_repo.dart';
+import 'package:mobile_pos/Screens/Sales/sales_contact.dart';
 import 'package:mobile_pos/Screens/Sales/sales_products_list_screen.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
@@ -75,6 +77,8 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
   TextEditingController dateController = TextEditingController(text: DateTime.now().toString().substring(0, 10));
   TextEditingController phoneContoller = TextEditingController();
 
+  Party? selectedCustomer;
+
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, consumerRef, __) {
@@ -98,11 +102,77 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
             surfaceTintColor: kWhite,
           ),
           body: SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Column(
-                children: [
-                  Row(
+            child: Column(
+              children: [
+                ///__________Select_Customer________________________________
+                selectedCustomer != null
+                    ? ListTile(
+                        leading: const Icon(IconlyBold.add_user, color: kMainColor, size: 26),
+                        title: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              selectedCustomer?.name ?? '',
+                              style: const TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            Text(
+                              selectedCustomer?.due.toString() ?? '',
+                              style: const TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                        subtitle: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              selectedCustomer?.phone ?? '',
+                            ),
+                            const Text(
+                              'Previous Due',
+                            ),
+                          ],
+                        ),
+                        shape: const Border(bottom: BorderSide(width: 1, color: kBorderColor), top: BorderSide(width: 1, color: kBorderColor)),
+                        trailing: GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              selectedCustomer = null;
+                            });
+                          },
+                          child: const Icon(
+                            Icons.close,
+                            color: Colors.red,
+                          ),
+                        ),
+                      )
+                    : ListTile(
+                        onTap: () async {
+                          selectedCustomer = await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const SalesContact(),
+                              ));
+
+                          setState(() {});
+                        },
+                        leading: const Icon(IconlyBold.add_user, color: kMainColor, size: 26),
+                        title: const Text(
+                          'Add Customer',
+                          style: TextStyle(color: kMainColor),
+                        ),
+                        shape: const Border(bottom: BorderSide(width: 1, color: kBorderColor), top: BorderSide(width: 1, color: kBorderColor)),
+                        trailing: const Icon(
+                          Icons.arrow_forward_ios,
+                          size: 18,
+                        ),
+                      ),
+
+                const SizedBox(height: 20),
+
+                ///______________Invoice and Date________________________________
+                Padding(
+                  padding: const EdgeInsets.only(right: 10, left: 10),
+                  child: Row(
                     children: [
                       FutureBuilder(
                         future: FutureInvoice().getFutureInvoice(tag: 'sales'),
@@ -135,7 +205,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                           }
                         },
                       ),
-                      const SizedBox(width: 20),
+                      const SizedBox(width: 15),
                       Expanded(
                         child: TextFormField(
                           readOnly: true,
@@ -165,668 +235,632 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 20),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text(lang.S.of(context).dueAmount),
-                          Text(
-                            widget.customerModel?.due == null ? '$currency 0' : '$currency${widget.customerModel?.due}',
-                            style: const TextStyle(color: Color(0xFFFF8C34)),
-                          ),
-                        ],
+                ),
+                const SizedBox(height: 20),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    AppTextField(
+                      textFieldType: TextFieldType.NAME,
+                      readOnly: true,
+                      initialValue: widget.customerModel?.name ?? 'Guest',
+                      decoration: InputDecoration(
+                        floatingLabelBehavior: FloatingLabelBehavior.always,
+                        labelText: lang.S.of(context).customerName,
+                        border: const OutlineInputBorder(),
                       ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      AppTextField(
-                        textFieldType: TextFieldType.NAME,
-                        readOnly: true,
-                        initialValue: widget.customerModel?.name ?? 'Guest',
-                        decoration: InputDecoration(
-                          floatingLabelBehavior: FloatingLabelBehavior.always,
-                          labelText: lang.S.of(context).customerName,
-                          border: const OutlineInputBorder(),
-                        ),
-                      ),
-                      Visibility(
-                        visible: widget.customerModel == null,
-                        child: Padding(
-                          padding: const EdgeInsets.only(top: 20.0),
-                          child: AppTextField(
-                            controller: phoneContoller,
-                            textFieldType: TextFieldType.PHONE,
-                            decoration: kInputDecoration.copyWith(
-                              floatingLabelBehavior: FloatingLabelBehavior.always,
-                              //labelText: 'Customer Phone Number',
-                              labelText: lang.S.of(context).customerPhoneNumber,
-                              //hintText: 'Enter customer phone number',
-                              hintText: lang.S.of(context).enterCustomerPhoneNumber,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 20),
-
-                  ///_______Added_ItemS__________________________________________________
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
-                      border: Border.all(width: 1, color: const Color(0xffEAEFFA)),
                     ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                            width: double.infinity,
-                            decoration: const BoxDecoration(
-                              color: Color(0xffEAEFFA),
-                              borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+                    Visibility(
+                      visible: widget.customerModel == null,
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 20.0),
+                        child: AppTextField(
+                          controller: phoneContoller,
+                          textFieldType: TextFieldType.PHONE,
+                          decoration: kInputDecoration.copyWith(
+                            floatingLabelBehavior: FloatingLabelBehavior.always,
+                            //labelText: 'Customer Phone Number',
+                            labelText: lang.S.of(context).customerPhoneNumber,
+                            //hintText: 'Enter customer phone number',
+                            hintText: lang.S.of(context).enterCustomerPhoneNumber,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 20),
+
+                ///_______Added_ItemS__________________________________________________
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+                    border: Border.all(width: 1, color: const Color(0xffEAEFFA)),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                          width: double.infinity,
+                          decoration: const BoxDecoration(
+                            color: Color(0xffEAEFFA),
+                            borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(10),
+                            child: SizedBox(
+                              width: context.width() / 1.35,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    lang.S.of(context).itemAdded,
+                                    style: const TextStyle(fontSize: 16),
+                                  ),
+                                  Text(
+                                    lang.S.of(context).quantity,
+                                    style: const TextStyle(fontSize: 16),
+                                  ),
+                                ],
+                              ),
                             ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(10),
-                              child: SizedBox(
-                                width: context.width() / 1.35,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          )),
+                      ListView.builder(
+                          shrinkWrap: true,
+                          physics: const NeverScrollableScrollPhysics(),
+                          itemCount: providerData.cartItemList.length,
+                          itemBuilder: (context, index) {
+                            providerData.controllers[index].text = (providerData.cartItemList[index].quantity.toString());
+                            providerData.focus[index].addListener(
+                              () {
+                                if (!providerData.focus[index].hasFocus) {
+                                  setState(() {
+                                    vatAmount = (vatPercentageEditingController.text.toDouble() / 100) * providerData.getTotalAmount().toDouble();
+                                    vatAmountEditingController.text = vatAmount.toStringAsFixed(2);
+                                  });
+                                }
+                              },
+                            );
+                            return Padding(
+                              padding: const EdgeInsets.only(left: 10, right: 10),
+                              child: ListTile(
+                                contentPadding: const EdgeInsets.all(0),
+                                title: Text(providerData.cartItemList[index].productName.toString()),
+                                subtitle: Text(
+                                    '${providerData.cartItemList[index].quantity} X ${providerData.cartItemList[index].price} = ${(double.parse(providerData.cartItemList[index].price.toString()) * providerData.cartItemList[index].quantity).toStringAsFixed(2)}'),
+                                trailing: Row(
+                                  mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    Text(
-                                      lang.S.of(context).itemAdded,
-                                      style: const TextStyle(fontSize: 16),
+                                    SizedBox(
+                                      width: 80,
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          GestureDetector(
+                                            onTap: () {
+                                              providerData.quantityDecrease(index);
+                                              setState(() {
+                                                vatAmount = (vatPercentageEditingController.text.toDouble() / 100) * providerData.getTotalAmount().toDouble();
+                                                vatAmountEditingController.text = vatAmount.toStringAsFixed(2);
+                                              });
+                                            },
+                                            child: Container(
+                                              height: 20,
+                                              width: 20,
+                                              decoration: const BoxDecoration(
+                                                color: kMainColor,
+                                                borderRadius: BorderRadius.all(Radius.circular(10)),
+                                              ),
+                                              child: const Center(
+                                                child: Text(
+                                                  '-',
+                                                  style: TextStyle(fontSize: 14, color: Colors.white),
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                          const SizedBox(width: 5),
+                                          SizedBox(
+                                            width: 30,
+                                            child: TextFormField(
+                                              onTap: () {
+                                                providerData.controllers[index].clear();
+                                              },
+                                              focusNode: providerData.focus[index],
+                                              controller: providerData.controllers[index],
+                                              textAlign: TextAlign.center,
+                                              keyboardType: TextInputType.number,
+                                              inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
+                                              onChanged: (value) {
+                                                num stock = providerData.cartItemList[index].stock ?? 1;
+                                                if (value.isEmpty || value == '0') {
+                                                  value = '1';
+                                                } else if (num.tryParse(value) == null) {
+                                                  return;
+                                                } else {
+                                                  final newQuantity = num.parse(value);
+                                                  if (newQuantity <= stock) {
+                                                    providerData.cartItemList[index].quantity = newQuantity.round();
+                                                  } else {
+                                                    providerData.controllers[index].text = '1';
+                                                    EasyLoading.showError(
+                                                      lang.S.of(context).outOfStock,
+                                                      // 'Out Of Stock'
+                                                    );
+                                                  }
+                                                }
+                                              },
+                                              decoration: InputDecoration(
+                                                  border: InputBorder.none,
+                                                  hintText: providerData.focus[index].hasFocus ? null : providerData.cartItemList[index].quantity.toString()),
+                                            ),
+                                          ),
+                                          // Text(
+                                          //   '${providerData.cartItemList[index].quantity}',
+                                          //   style: GoogleFonts.poppins(
+                                          //     color: kGreyTextColor,
+                                          //     fontSize: 15.0,
+                                          //   ),
+                                          // ),
+                                          const SizedBox(width: 5),
+                                          GestureDetector(
+                                            onTap: () {
+                                              providerData.quantityIncrease(index);
+                                              setState(() {
+                                                vatAmount = (vatPercentageEditingController.text.toDouble() / 100) * providerData.getTotalAmount().toDouble();
+                                                vatAmountEditingController.text = vatAmount.toStringAsFixed(2);
+                                              });
+                                            },
+                                            child: Container(
+                                              height: 20,
+                                              width: 20,
+                                              decoration: const BoxDecoration(
+                                                color: kMainColor,
+                                                borderRadius: BorderRadius.all(Radius.circular(10)),
+                                              ),
+                                              child: const Center(
+                                                  child: Text(
+                                                '+',
+                                                style: TextStyle(fontSize: 14, color: Colors.white),
+                                              )),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ),
-                                    Text(
-                                      lang.S.of(context).quantity,
-                                      style: const TextStyle(fontSize: 16),
+                                    const SizedBox(width: 10),
+                                    GestureDetector(
+                                      onTap: () {
+                                        providerData.deleteToCart(index);
+                                        setState(() {
+                                          vatAmount = (vatPercentageEditingController.text.toDouble() / 100) * providerData.getTotalAmount().toDouble();
+                                          vatAmountEditingController.text = vatAmount.toStringAsFixed(2);
+                                        });
+                                      },
+                                      child: Container(
+                                        padding: const EdgeInsets.all(4),
+                                        color: Colors.red.withOpacity(0.1),
+                                        child: const Icon(
+                                          Icons.delete,
+                                          size: 20,
+                                          color: Colors.red,
+                                        ),
+                                      ),
                                     ),
                                   ],
                                 ),
                               ),
-                            )),
-                        ListView.builder(
-                            shrinkWrap: true,
-                            physics: const NeverScrollableScrollPhysics(),
-                            itemCount: providerData.cartItemList.length,
-                            itemBuilder: (context, index) {
-                              providerData.controllers[index].text = (providerData.cartItemList[index].quantity.toString());
-                              providerData.focus[index].addListener(
-                                () {
-                                  if (!providerData.focus[index].hasFocus) {
-                                    setState(() {
-                                      vatAmount = (vatPercentageEditingController.text.toDouble() / 100) * providerData.getTotalAmount().toDouble();
-                                      vatAmountEditingController.text = vatAmount.toStringAsFixed(2);
-                                    });
-                                  }
-                                },
-                              );
-                              return Padding(
-                                padding: const EdgeInsets.only(left: 10, right: 10),
-                                child: ListTile(
-                                  contentPadding: const EdgeInsets.all(0),
-                                  title: Text(providerData.cartItemList[index].productName.toString()),
-                                  subtitle: Text(
-                                      '${providerData.cartItemList[index].quantity} X ${providerData.cartItemList[index].price} = ${(double.parse(providerData.cartItemList[index].price) * providerData.cartItemList[index].quantity).toStringAsFixed(2)}'),
-                                  trailing: Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      SizedBox(
-                                        width: 80,
-                                        child: Row(
-                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            GestureDetector(
-                                              onTap: () {
-                                                providerData.quantityDecrease(index);
-                                                setState(() {
-                                                  vatAmount = (vatPercentageEditingController.text.toDouble() / 100) * providerData.getTotalAmount().toDouble();
-                                                  vatAmountEditingController.text = vatAmount.toStringAsFixed(2);
-                                                });
-                                              },
-                                              child: Container(
-                                                height: 20,
-                                                width: 20,
-                                                decoration: const BoxDecoration(
-                                                  color: kMainColor,
-                                                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                                                ),
-                                                child: const Center(
-                                                  child: Text(
-                                                    '-',
-                                                    style: TextStyle(fontSize: 14, color: Colors.white),
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                            const SizedBox(width: 5),
-                                            SizedBox(
-                                              width: 30,
-                                              child: TextFormField(
-                                                onTap: () {
-                                                  providerData.controllers[index].clear();
-                                                },
-                                                focusNode: providerData.focus[index],
-                                                controller: providerData.controllers[index],
-                                                textAlign: TextAlign.center,
-                                                keyboardType: TextInputType.number,
-                                                inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
-                                                onChanged: (value) {
-                                                  num stock = providerData.cartItemList[index].stock ?? 1;
-                                                  if (value.isEmpty || value == '0') {
-                                                    value = '1';
-                                                  } else if (num.tryParse(value) == null) {
-                                                    return;
-                                                  } else {
-                                                    final newQuantity = num.parse(value);
-                                                    if (newQuantity <= stock) {
-                                                      providerData.cartItemList[index].quantity = newQuantity.round();
-                                                    } else {
-                                                      providerData.controllers[index].text = '1';
-                                                      EasyLoading.showError(
-                                                        lang.S.of(context).outOfStock,
-                                                         // 'Out Of Stock'
-                                                      );
-                                                    }
-                                                  }
-                                                },
-                                                decoration: InputDecoration(
-                                                    border: InputBorder.none,
-                                                    hintText: providerData.focus[index].hasFocus ? null : providerData.cartItemList[index].quantity.toString()),
-                                              ),
-                                            ),
-                                            // Text(
-                                            //   '${providerData.cartItemList[index].quantity}',
-                                            //   style: GoogleFonts.poppins(
-                                            //     color: kGreyTextColor,
-                                            //     fontSize: 15.0,
-                                            //   ),
-                                            // ),
-                                            const SizedBox(width: 5),
-                                            GestureDetector(
-                                              onTap: () {
-                                                providerData.quantityIncrease(index);
-                                                setState(() {
-                                                  vatAmount = (vatPercentageEditingController.text.toDouble() / 100) * providerData.getTotalAmount().toDouble();
-                                                  vatAmountEditingController.text = vatAmount.toStringAsFixed(2);
-                                                });
-                                              },
-                                              child: Container(
-                                                height: 20,
-                                                width: 20,
-                                                decoration: const BoxDecoration(
-                                                  color: kMainColor,
-                                                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                                                ),
-                                                child: const Center(
-                                                    child: Text(
-                                                  '+',
-                                                  style: TextStyle(fontSize: 14, color: Colors.white),
-                                                )),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                      const SizedBox(width: 10),
-                                      GestureDetector(
-                                        onTap: () {
-                                          providerData.deleteToCart(index);
-                                          setState(() {
-                                            vatAmount = (vatPercentageEditingController.text.toDouble() / 100) * providerData.getTotalAmount().toDouble();
-                                            vatAmountEditingController.text = vatAmount.toStringAsFixed(2);
-                                          });
-                                        },
-                                        child: Container(
-                                          padding: const EdgeInsets.all(4),
-                                          color: Colors.red.withOpacity(0.1),
-                                          child: const Icon(
-                                            Icons.delete,
-                                            size: 20,
-                                            color: Colors.red,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              );
-                            }),
-                      ],
-                    ).visible(providerData.cartItemList.isNotEmpty),
-                  ),
-                  const SizedBox(height: 20),
+                            );
+                          }),
+                    ],
+                  ).visible(providerData.cartItemList.isNotEmpty),
+                ),
+                const SizedBox(height: 20),
 
-                  ///_______Add_Button__________________________________________________
-                  GestureDetector(
-                    onTap: () {
-                      SaleProductsList(
-                        catName: null,
-                        customerModel: widget.customerModel,
-                      ).launch(context);
-                    },
-                    child: Container(
-                      height: 50,
-                      width: double.infinity,
-                      decoration: BoxDecoration(color: kMainColor.withOpacity(0.1), borderRadius: const BorderRadius.all(Radius.circular(10))),
-                      child: Center(
-                        child: Text(
-                          lang.S.of(context).addItems,
-                          style: const TextStyle(color: kMainColor, fontSize: 20),
+                ///_____Total______________________________
+                Container(
+                  decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), border: Border.all(color: Colors.grey.shade300, width: 1)),
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        decoration: const BoxDecoration(color: Color(0xffEAEFFA), borderRadius: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10))),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              lang.S.of(context).subTotal,
+                              style: const TextStyle(fontSize: 16),
+                            ),
+                            Text(
+                              providerData.getTotalAmount().toStringAsFixed(2),
+                              style: const TextStyle(fontSize: 16),
+                            ),
+                          ],
                         ),
                       ),
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-
-                  ///_____Total______________________________
-                  Container(
-                    decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), border: Border.all(color: Colors.grey.shade300, width: 1)),
-                    child: Column(
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.all(10),
-                          decoration: const BoxDecoration(color: Color(0xffEAEFFA), borderRadius: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10))),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                lang.S.of(context).subTotal,
-                                style: const TextStyle(fontSize: 16),
-                              ),
-                              Text(
-                                providerData.getTotalAmount().toStringAsFixed(2),
-                                style: const TextStyle(fontSize: 16),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                               Text(
-                                 lang.S.of(context).vat,
-                               // 'VAT',
-                                style: const TextStyle(fontSize: 16),
-                              ),
-                              Row(
-                                children: [
-                                  SizedBox(
-                                    width: context.width() / 4,
-                                    height: 40.0,
-                                    child: Center(
-                                      child: AppTextField(
-                                        inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
-                                        controller: vatPercentageEditingController,
-                                        onChanged: (value) {
-                                          if (value == '') {
-                                            setState(() {
-                                              vatAmountEditingController.text = 0.toString();
-                                              vatAmount = 0;
-                                            });
-                                          } else {
-                                            setState(() {
-                                              vatAmount = (value.toDouble() / 100) * providerData.getTotalAmount().toDouble();
-                                              vatAmountEditingController.text = vatAmount.toStringAsFixed(2);
-                                            });
-                                          }
-                                        },
-                                        textAlign: TextAlign.right,
-                                        decoration: InputDecoration(
-                                          contentPadding: const EdgeInsets.only(right: 6.0),
-                                          hintText: '0',
-                                          border: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: Color(0xFFff5f00))),
-                                          enabledBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: Color(0xFFff5f00))),
-                                          disabledBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: Color(0xFFff5f00))),
-                                          focusedBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: Color(0xFFff5f00))),
-                                          prefixIconConstraints: const BoxConstraints(maxWidth: 30.0, minWidth: 30.0),
-                                          prefixIcon: Container(
-                                            padding: const EdgeInsets.only(top: 8.0, left: 8.0),
-                                            height: 40,
-                                            decoration: const BoxDecoration(
-                                                color: Color(0xFFff5f00), borderRadius: BorderRadius.only(topLeft: Radius.circular(4.0), bottomLeft: Radius.circular(4.0))),
-                                            child: const Text(
-                                              '%',
-                                              style: TextStyle(fontSize: 18.0, color: Colors.white),
-                                            ),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              lang.S.of(context).vat,
+                              // 'VAT',
+                              style: const TextStyle(fontSize: 16),
+                            ),
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width: context.width() / 4,
+                                  height: 40.0,
+                                  child: Center(
+                                    child: AppTextField(
+                                      inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
+                                      controller: vatPercentageEditingController,
+                                      onChanged: (value) {
+                                        if (value == '') {
+                                          setState(() {
+                                            vatAmountEditingController.text = 0.toString();
+                                            vatAmount = 0;
+                                          });
+                                        } else {
+                                          setState(() {
+                                            vatAmount = (value.toDouble() / 100) * providerData.getTotalAmount().toDouble();
+                                            vatAmountEditingController.text = vatAmount.toStringAsFixed(2);
+                                          });
+                                        }
+                                      },
+                                      textAlign: TextAlign.right,
+                                      decoration: InputDecoration(
+                                        contentPadding: const EdgeInsets.only(right: 6.0),
+                                        hintText: '0',
+                                        border: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: Color(0xFFff5f00))),
+                                        enabledBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: Color(0xFFff5f00))),
+                                        disabledBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: Color(0xFFff5f00))),
+                                        focusedBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: Color(0xFFff5f00))),
+                                        prefixIconConstraints: const BoxConstraints(maxWidth: 30.0, minWidth: 30.0),
+                                        prefixIcon: Container(
+                                          padding: const EdgeInsets.only(top: 8.0, left: 8.0),
+                                          height: 40,
+                                          decoration: const BoxDecoration(
+                                              color: Color(0xFFff5f00), borderRadius: BorderRadius.only(topLeft: Radius.circular(4.0), bottomLeft: Radius.circular(4.0))),
+                                          child: const Text(
+                                            '%',
+                                            style: TextStyle(fontSize: 18.0, color: Colors.white),
                                           ),
                                         ),
-                                        textFieldType: TextFieldType.PHONE,
                                       ),
+                                      textFieldType: TextFieldType.PHONE,
                                     ),
                                   ),
-                                  const SizedBox(width: 4.0),
-                                  SizedBox(
-                                    width: context.width() / 4,
-                                    height: 40.0,
-                                    child: Center(
-                                      child: AppTextField(
-                                        inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
-                                        controller: vatAmountEditingController,
-                                        onChanged: (value) {
-                                          if (value == '') {
-                                            setState(() {
-                                              vatAmount = 0;
-                                              vatPercentageEditingController.clear();
-                                            });
-                                          } else {
-                                            setState(() {
-                                              vatAmount = double.parse(value);
-                                              vatPercentageEditingController.text = ((vatAmount * 100) / providerData.getTotalAmount()).toStringAsFixed(2);
-                                            });
-                                          }
-                                        },
-                                        textAlign: TextAlign.right,
-                                        decoration: InputDecoration(
-                                          contentPadding: const EdgeInsets.only(right: 6.0),
-                                          hintText: '0',
-                                          border: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: kMainColor)),
-                                          enabledBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: kMainColor)),
-                                          disabledBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: kMainColor)),
-                                          focusedBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: kMainColor)),
-                                          prefixIconConstraints: const BoxConstraints(maxWidth: 30.0, minWidth: 30.0),
-                                          prefixIcon: Container(
-                                            alignment: Alignment.center,
-                                            height: 40,
-                                            decoration: const BoxDecoration(
-                                                color: kMainColor, borderRadius: BorderRadius.only(topLeft: Radius.circular(4.0), bottomLeft: Radius.circular(4.0))),
-                                            child: Text(
-                                              currency,
-                                              style: const TextStyle(fontSize: 14.0, color: Colors.white),
-                                            ),
+                                ),
+                                const SizedBox(width: 4.0),
+                                SizedBox(
+                                  width: context.width() / 4,
+                                  height: 40.0,
+                                  child: Center(
+                                    child: AppTextField(
+                                      inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
+                                      controller: vatAmountEditingController,
+                                      onChanged: (value) {
+                                        if (value == '') {
+                                          setState(() {
+                                            vatAmount = 0;
+                                            vatPercentageEditingController.clear();
+                                          });
+                                        } else {
+                                          setState(() {
+                                            vatAmount = double.parse(value);
+                                            vatPercentageEditingController.text = ((vatAmount * 100) / providerData.getTotalAmount()).toStringAsFixed(2);
+                                          });
+                                        }
+                                      },
+                                      textAlign: TextAlign.right,
+                                      decoration: InputDecoration(
+                                        contentPadding: const EdgeInsets.only(right: 6.0),
+                                        hintText: '0',
+                                        border: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: kMainColor)),
+                                        enabledBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: kMainColor)),
+                                        disabledBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: kMainColor)),
+                                        focusedBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: kMainColor)),
+                                        prefixIconConstraints: const BoxConstraints(maxWidth: 30.0, minWidth: 30.0),
+                                        prefixIcon: Container(
+                                          alignment: Alignment.center,
+                                          height: 40,
+                                          decoration: const BoxDecoration(
+                                              color: kMainColor, borderRadius: BorderRadius.only(topLeft: Radius.circular(4.0), bottomLeft: Radius.circular(4.0))),
+                                          child: Text(
+                                            currency,
+                                            style: const TextStyle(fontSize: 14.0, color: Colors.white),
                                           ),
                                         ),
-                                        textFieldType: TextFieldType.PHONE,
                                       ),
+                                      textFieldType: TextFieldType.PHONE,
                                     ),
                                   ),
-                                ],
-                              ),
-                            ],
-                          ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                lang.S.of(context).discount,
-                                style: const TextStyle(fontSize: 16),
-                              ),
-                              SizedBox(
-                                width: context.width() / 4,
-                                child: TextField(
-                                  controller: paidText,
-                                  onChanged: (value) {
-                                    if (value == '') {
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              lang.S.of(context).discount,
+                              style: const TextStyle(fontSize: 16),
+                            ),
+                            SizedBox(
+                              width: context.width() / 4,
+                              child: TextField(
+                                controller: paidText,
+                                onChanged: (value) {
+                                  if (value == '') {
+                                    setState(() {
+                                      discountAmount = 0;
+                                    });
+                                  } else {
+                                    if (value.toInt() <= providerData.getTotalAmount()) {
+                                      setState(() {
+                                        discountAmount = double.parse(value);
+                                      });
+                                    } else {
+                                      paidText.clear();
                                       setState(() {
                                         discountAmount = 0;
                                       });
-                                    } else {
-                                      if (value.toInt() <= providerData.getTotalAmount()) {
-                                        setState(() {
-                                          discountAmount = double.parse(value);
-                                        });
-                                      } else {
-                                        paidText.clear();
-                                        setState(() {
-                                          discountAmount = 0;
-                                        });
-                                        EasyLoading.showError(
-                                          lang.S.of(context).enterAValidDiscount
-                                            //'Enter a valid Discount'
-                                        );
-                                      }
+                                      EasyLoading.showError(lang.S.of(context).enterAValidDiscount
+                                          //'Enter a valid Discount'
+                                          );
                                     }
-                                  },
-                                  textAlign: TextAlign.right,
-                                  decoration: const InputDecoration(
-                                    hintText: '0',
-                                  ),
-                                  keyboardType: TextInputType.number,
+                                  }
+                                },
+                                textAlign: TextAlign.right,
+                                decoration: const InputDecoration(
+                                  hintText: '0',
                                 ),
+                                keyboardType: TextInputType.number,
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                lang.S.of(context).total,
-                                style: const TextStyle(fontSize: 16),
-                              ),
-                              Text(
-                                calculateSubtotal(total: providerData.getTotalAmount()).toStringAsFixed(2),
-                                style: const TextStyle(fontSize: 16),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                lang.S.of(context).paidAmount,
-                                style: const TextStyle(fontSize: 16),
-                              ),
-                              SizedBox(
-                                width: context.width() / 4,
-                                child: TextField(
-                                  keyboardType: TextInputType.number,
-                                  onChanged: (value) {
-                                    if (value == '') {
-                                      setState(() {
-                                        paidAmount = 0;
-                                      });
-                                    } else {
-                                      setState(() {
-                                        paidAmount = double.parse(value);
-                                      });
-                                    }
-                                  },
-                                  textAlign: TextAlign.right,
-                                  decoration: const InputDecoration(hintText: '0'),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                lang.S.of(context).returnAmount,
-                                style: const TextStyle(fontSize: 16),
-                              ),
-                              Text(
-                                calculateReturnAmount(total: subTotal).abs().toStringAsFixed(2),
-                                style: const TextStyle(fontSize: 16),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                lang.S.of(context).dueAmount,
-                                style: const TextStyle(fontSize: 16),
-                              ),
-                              Text(
-                                calculateDueAmount(total: subTotal).toStringAsFixed(2),
-                                style: const TextStyle(fontSize: 16),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: 20),
-                  Container(
-                    height: 1,
-                    width: double.infinity,
-                    color: Colors.grey,
-                  ),
-                  const SizedBox(height: 10),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Text(
-                            lang.S.of(context).paymentTypes,
-                            style: const TextStyle(fontSize: 16, color: Colors.black54),
-                          ),
-                          const SizedBox(
-                            width: 5,
-                          ),
-                          const Icon(
-                            Icons.wallet,
-                            color: Colors.green,
-                          )
-                        ],
                       ),
-                      DropdownButton(
-                        value: paymentType,
-                        icon: const Icon(Icons.keyboard_arrow_down),
-                        items: paymentsTypeList.map((String items) {
-                          return DropdownMenuItem(
-                            value: items,
-                            child: Text(items),
-                          );
-                        }).toList(),
-                        onChanged: (newValue) {
-                          setState(() {
-                            paymentType = newValue.toString();
-                          });
-                        },
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              lang.S.of(context).total,
+                              style: const TextStyle(fontSize: 16),
+                            ),
+                            Text(
+                              calculateSubtotal(total: providerData.getTotalAmount()).toStringAsFixed(2),
+                              style: const TextStyle(fontSize: 16),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              lang.S.of(context).paidAmount,
+                              style: const TextStyle(fontSize: 16),
+                            ),
+                            SizedBox(
+                              width: context.width() / 4,
+                              child: TextField(
+                                keyboardType: TextInputType.number,
+                                onChanged: (value) {
+                                  if (value == '') {
+                                    setState(() {
+                                      paidAmount = 0;
+                                    });
+                                  } else {
+                                    setState(() {
+                                      paidAmount = double.parse(value);
+                                    });
+                                  }
+                                },
+                                textAlign: TextAlign.right,
+                                decoration: const InputDecoration(hintText: '0'),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              lang.S.of(context).returnAmount,
+                              style: const TextStyle(fontSize: 16),
+                            ),
+                            Text(
+                              calculateReturnAmount(total: subTotal).abs().toStringAsFixed(2),
+                              style: const TextStyle(fontSize: 16),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              lang.S.of(context).dueAmount,
+                              style: const TextStyle(fontSize: 16),
+                            ),
+                            Text(
+                              calculateDueAmount(total: subTotal).toStringAsFixed(2),
+                              style: const TextStyle(fontSize: 16),
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
-                  const SizedBox(height: 10),
-                  Container(
-                    height: 1,
-                    width: double.infinity,
-                    color: Colors.grey,
-                  ),
-                  const SizedBox(height: 30),
-                  Row(
-                    children: [
-                      Expanded(
-                          child: GestureDetector(
+                ),
+                const SizedBox(height: 20),
+                Container(
+                  height: 1,
+                  width: double.infinity,
+                  color: Colors.grey,
+                ),
+                const SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          lang.S.of(context).paymentTypes,
+                          style: const TextStyle(fontSize: 16, color: Colors.black54),
+                        ),
+                        const SizedBox(
+                          width: 5,
+                        ),
+                        const Icon(
+                          Icons.wallet,
+                          color: Colors.green,
+                        )
+                      ],
+                    ),
+                    DropdownButton(
+                      value: paymentType,
+                      icon: const Icon(Icons.keyboard_arrow_down),
+                      items: paymentsTypeList.map((String items) {
+                        return DropdownMenuItem(
+                          value: items,
+                          child: Text(items),
+                        );
+                      }).toList(),
+                      onChanged: (newValue) {
+                        setState(() {
+                          paymentType = newValue.toString();
+                        });
+                      },
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 10),
+                Container(
+                  height: 1,
+                  width: double.infinity,
+                  color: Colors.grey,
+                ),
+                const SizedBox(height: 30),
+                Row(
+                  children: [
+                    Expanded(
+                        child: GestureDetector(
+                      onTap: () async {
+                        const Home().launch(context, isNewTask: true);
+                      },
+                      child: Container(
+                        height: 60,
+                        decoration: BoxDecoration(
+                          color: Colors.grey.shade300,
+                          borderRadius: const BorderRadius.all(Radius.circular(10)),
+                        ),
+                        child: Center(
+                          child: Text(
+                            lang.S.of(context).cancel,
+                            //'Cancel',
+                            style: const TextStyle(fontSize: 18),
+                          ),
+                        ),
+                      ),
+                    )),
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: GestureDetector(
                         onTap: () async {
-                          const Home().launch(context, isNewTask: true);
+                          if (providerData.cartItemList.isNotEmpty) {
+                            try {
+                              EasyLoading.show(
+                                  status: lang.S.of(context).loading,
+                                  //'Loading...',
+                                  dismissOnTap: false);
+                              List<CartSaleProducts> selectedProductList = [];
+
+                              for (var element in providerData.cartItemList) {
+                                selectedProductList.add(
+                                  CartSaleProducts(
+                                    productId: element.uuid.toInt(),
+                                    quantities: element.quantity.toInt(),
+                                    price: (num.tryParse(element.price.toString()) ?? 0),
+                                    lossProfit: (element.quantity * (num.tryParse(element.price.toString()) ?? 0)) -
+                                        (element.quantity * (num.tryParse(element.productPurchasePrice.toString()) ?? 0)),
+                                  ),
+                                );
+                              }
+
+                              SaleRepo repo = SaleRepo();
+                              SalesTransaction? saleData;
+                              saleData = await repo.createSale(
+                                ref: consumerRef,
+                                context: context,
+                                totalAmount: subTotal,
+                                purchaseDate: selectedDate.toString(),
+                                products: selectedProductList,
+                                paymentType: paymentType ?? 'Cash',
+                                partyId: widget.customerModel?.id,
+                                customerPhone: widget.customerModel == null ? phoneContoller.text : null,
+                                vatAmount: vatAmount,
+                                vatPercent: vatPercentageEditingController.text.toInt(),
+                                isPaid: dueAmount <= 0 ? true : false,
+                                dueAmount: dueAmount <= 0 ? 0 : dueAmount,
+                                discountAmount: discountAmount,
+                                paidAmount: paidAmount,
+                              );
+                              if (saleData != null) {
+                                SalesInvoiceDetails(
+                                  businessInfo: personalData.value!,
+                                  saleTransaction: saleData,
+                                  fromSale: true,
+                                ).launch(context);
+                              }
+                            } catch (e) {
+                              EasyLoading.dismiss();
+                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
+                            }
+                          } else {
+                            EasyLoading.showError(
+                              lang.S.of(context).addProductFirst,
+                              //'Add product first'
+                            );
+                          }
                         },
                         child: Container(
                           height: 60,
-                          decoration: BoxDecoration(
-                            color: Colors.grey.shade300,
-                            borderRadius: const BorderRadius.all(Radius.circular(10)),
+                          decoration: const BoxDecoration(
+                            color: kMainColor,
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
                           ),
-                          child:  Center(
+                          child: Center(
                             child: Text(
-                              lang.S.of(context).cancel,
-                              //'Cancel',
-                              style: const TextStyle(fontSize: 18),
-                            ),
-                          ),
-                        ),
-                      )),
-                      const SizedBox(width: 10),
-                      Expanded(
-                        child: GestureDetector(
-                          onTap: () async {
-                            if (providerData.cartItemList.isNotEmpty) {
-                              try {
-                                EasyLoading.show(status:
-                                    lang.S.of(context).loading,
-                                //'Loading...',
-                                    dismissOnTap: false);
-                                List<CartSaleProducts> selectedProductList = [];
-
-                                for (var element in providerData.cartItemList) {
-                                  selectedProductList.add(
-                                    CartSaleProducts(
-                                      productId: element.uuid.toInt(),
-                                      quantities: element.quantity.toInt(),
-                                      price: (num.tryParse(element.price.toString()) ?? 0),
-                                      lossProfit: (element.quantity * (num.tryParse(element.price.toString()) ?? 0)) -
-                                          (element.quantity * (num.tryParse(element.productPurchasePrice.toString()) ?? 0)),
-                                    ),
-                                  );
-                                }
-
-                                SaleRepo repo = SaleRepo();
-                                SalesTransaction? saleData;
-                                saleData = await repo.createSale(
-                                  ref: consumerRef,
-                                  context: context,
-                                  totalAmount: subTotal,
-                                  purchaseDate: selectedDate.toString(),
-                                  products: selectedProductList,
-                                  paymentType: paymentType ?? 'Cash',
-                                  partyId: widget.customerModel?.id,
-                                  customerPhone: widget.customerModel == null ? phoneContoller.text : null,
-                                  vatAmount: vatAmount,
-                                  vatPercent: vatPercentageEditingController.text.toInt(),
-                                  isPaid: dueAmount <= 0 ? true : false,
-                                  dueAmount: dueAmount <= 0 ? 0 : dueAmount,
-                                  discountAmount: discountAmount,
-                                  paidAmount: paidAmount,
-                                );
-                                if (saleData != null) {
-                                  SalesInvoiceDetails(
-                                    businessInfo: personalData.value!,
-                                    saleTransaction: saleData,
-                                    fromSale: true,
-                                  ).launch(context);
-                                }
-                              } catch (e) {
-                                EasyLoading.dismiss();
-                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
-                              }
-                            } else {
-                              EasyLoading.showError(
-                                lang.S.of(context).addProductFirst,
-                                  //'Add product first'
-                              );
-                            }
-                          },
-                          child: Container(
-                            height: 60,
-                            decoration: const BoxDecoration(
-                              color: kMainColor,
-                              borderRadius: BorderRadius.all(Radius.circular(10)),
-                            ),
-                            child:  Center(
-                              child: Text(
-                                lang.S.of(context).save,
-                                //'Save',
-                                style: const TextStyle(fontSize: 18, color: Colors.white),
-                              ),
+                              lang.S.of(context).save,
+                              //'Save',
+                              style: const TextStyle(fontSize: 18, color: Colors.white),
                             ),
                           ),
                         ),
                       ),
-                    ],
-                  )
-                ],
-              ),
+                    ),
+                  ],
+                )
+              ],
             ),
           ),
         );

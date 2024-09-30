@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -9,6 +8,7 @@ import 'package:iconly/iconly.dart';
 import 'package:mobile_pos/Provider/product_provider.dart';
 import 'package:mobile_pos/Screens/Products/Model/product_model.dart';
 import 'package:mobile_pos/Screens/Products/Providers/category,brans,units_provide.dart';
+import 'package:mobile_pos/Screens/Sales/add_sales.dart';
 import 'package:mobile_pos/currency.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
@@ -207,51 +207,60 @@ class _HomeScreenState extends State<HomeScreen> {
                             visible: cartData.cartItemList.isNotEmpty,
                             child: Padding(
                               padding: const EdgeInsets.only(bottom: 20),
-                              child: Container(
-                                decoration: const BoxDecoration(color: kMainColor, borderRadius: BorderRadius.all(Radius.circular(15))),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(15.0),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      SizedBox(
-                                        height: 47,
-                                        width: 62,
-                                        child: Stack(
-                                          children: [
-                                            Positioned(
-                                              bottom: 0,
-                                              right: 0,
-                                              child: Container(
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => AddSalesScreen(customerModel: null),
+                                      ));
+                                },
+                                child: Container(
+                                  decoration: const BoxDecoration(color: kMainColor, borderRadius: BorderRadius.all(Radius.circular(15))),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(15.0),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        SizedBox(
+                                          height: 47,
+                                          width: 62,
+                                          child: Stack(
+                                            children: [
+                                              Positioned(
+                                                bottom: 0,
+                                                right: 0,
+                                                child: Container(
+                                                  height: 40,
+                                                  width: 55,
+                                                  decoration:
+                                                      BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(8)), border: Border.all(color: Colors.white, width: 2)),
+                                                ),
+                                              ),
+                                              Container(
                                                 height: 40,
                                                 width: 55,
-                                                decoration:
-                                                    BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(8)), border: Border.all(color: Colors.white, width: 2)),
+                                                decoration: const BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(8)), color: Colors.white),
+                                                child: Center(
+                                                    child: Text(
+                                                  '${cartData.cartItemList.length}',
+                                                  style: const TextStyle(fontSize: 20, color: Colors.black),
+                                                )),
                                               ),
-                                            ),
-                                            Container(
-                                              height: 40,
-                                              width: 55,
-                                              decoration: const BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(8)), color: Colors.white),
-                                              child: Center(
-                                                  child: Text(
-                                                '${cartData.cartItemList.length}',
-                                                style: const TextStyle(fontSize: 20, color: Colors.black),
-                                              )),
-                                            ),
-                                          ],
+                                            ],
+                                          ),
                                         ),
-                                      ),
-                                      Text(
-                                        '$currency ${cartData.getTotalAmount()}',
-                                        style: const TextStyle(fontSize: 22, color: Colors.white, fontWeight: FontWeight.bold),
-                                      ),
-                                      const Icon(
-                                        Icons.arrow_forward_ios,
-                                        size: 22,
-                                        color: Colors.white,
-                                      )
-                                    ],
+                                        Text(
+                                          '$currency ${cartData.getTotalAmount()}',
+                                          style: const TextStyle(fontSize: 22, color: Colors.white, fontWeight: FontWeight.bold),
+                                        ),
+                                        const Icon(
+                                          Icons.arrow_forward_ios,
+                                          size: 22,
+                                          color: Colors.white,
+                                        )
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),

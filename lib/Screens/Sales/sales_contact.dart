@@ -72,8 +72,7 @@ class _SalesContactState extends State<SalesContact> {
                         ),
                         GestureDetector(
                           onTap: () {
-                            AddSalesScreen(customerModel: null).launch(context);
-                            cart.clearCart();
+                            Navigator.pop(context, null);
                           },
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
@@ -141,8 +140,7 @@ class _SalesContactState extends State<SalesContact> {
                               return customer[index].name!.contains(searchCustomer) && !customer[index].type!.contains('Supplier')
                                   ? GestureDetector(
                                       onTap: () {
-                                        AddSalesScreen(customerModel: customer[index]).launch(context);
-                                        cart.clearCart();
+                                        Navigator.pop(context, customer[index]);
                                       },
                                       child: Padding(
                                         padding: const EdgeInsets.all(8.0),
@@ -229,8 +227,7 @@ class _SalesContactState extends State<SalesContact> {
                     )
                   : GestureDetector(
                       onTap: () {
-                        AddSalesScreen(customerModel: null).launch(context);
-                        cart.clearCart();
+                        Navigator.pop(context,null);
                       },
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -294,11 +291,12 @@ class _SalesContactState extends State<SalesContact> {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          backgroundColor: kMainColor,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(100)
-          ),
-            child: const Icon(Icons.add,color: kWhite,),
+            backgroundColor: kMainColor,
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(100)),
+            child: const Icon(
+              Icons.add,
+              color: kWhite,
+            ),
             onPressed: () {
               const AddParty().launch(context);
             }),
