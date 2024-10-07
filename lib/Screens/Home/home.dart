@@ -43,7 +43,6 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-
     return WillPopScope(
       onWillPop: () async {
         final shouldPop = await showDialog<bool>(
@@ -81,9 +80,10 @@ class _HomeState extends State<Home> {
         body: PageView(
           controller: pageController,
           onPageChanged: (v) {
+            print(v);
             tabIndex = v;
           },
-          children: const [HomeScreen(), DashboardScreen(), Reports(), Reports(), SettingScreen()],
+          children: [const HomeScreen(), const DashboardScreen(), AddProduct(), const Reports(), const SettingScreen()],
         ),
         bottomNavigationBar: CircleNavBar(
           activeIcons: [
@@ -101,10 +101,14 @@ class _HomeState extends State<Home> {
               fit: BoxFit.scaleDown,
               color: kMainColor,
             ),
-            FloatingActionButton(
-              backgroundColor: kMainColor,
-              onPressed: () {},
-              foregroundColor: kMainColor,
+            Container(
+              height: 50,
+              width: 50,
+              decoration: const BoxDecoration(color: kMainColor, borderRadius: BorderRadius.all(Radius.circular(50))),
+              child: const Icon(
+                Icons.add,
+                color: kWhite,
+              ),
             ),
             SvgPicture.asset(
               'assets/cFile.svg',
@@ -154,19 +158,13 @@ class _HomeState extends State<Home> {
                 ),
               ],
             ),
-            SizedBox(
+            Container(
               height: 50,
               width: 50,
-              child: FloatingActionButton(
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => AddProduct()));
-                },
-                shape: const CircleBorder(side: BorderSide(color: Colors.white)),
-                backgroundColor: kMainColor,
-                child: const Icon(
-                  Icons.add,
-                  color: Colors.white,
-                ),
+              decoration: const BoxDecoration(color: kMainColor, borderRadius: BorderRadius.all(Radius.circular(50))),
+              child: const Icon(
+                Icons.add,
+                color: kWhite,
               ),
             ),
             Column(

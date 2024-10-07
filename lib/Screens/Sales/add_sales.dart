@@ -1,5 +1,3 @@
-// ignore_for_file: unused_result, use_build_context_synchronously
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -11,10 +9,10 @@ import 'package:mobile_pos/Provider/add_to_cart.dart';
 import 'package:mobile_pos/Provider/profile_provider.dart';
 import 'package:mobile_pos/Screens/Sales/Repo/sales_repo.dart';
 import 'package:mobile_pos/Screens/Sales/sales_contact.dart';
-import 'package:mobile_pos/Screens/Sales/sales_products_list_screen.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
+import '../../Const/api_config.dart';
 import '../../Repository/API/future_invoice.dart';
 import '../../constant.dart';
 import '../../currency.dart';
@@ -36,6 +34,8 @@ class AddSalesScreen extends StatefulWidget {
 }
 
 class _AddSalesScreenState extends State<AddSalesScreen> {
+  bool isFullReceved = false;
+  TextEditingController paindAmountController = TextEditingController();
   TextEditingController paidText = TextEditingController();
   int invoice = 0;
   double paidAmount = 0;
@@ -78,35 +78,63 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
   TextEditingController phoneContoller = TextEditingController();
 
   Party? selectedCustomer;
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    paindAmountController.dispose();
+    phoneContoller.dispose();
+    dateController.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, consumerRef, __) {
-      final providerData = consumerRef.watch(cartNotifier);
+      final cartProviderData = consumerRef.watch(cartNotifier);
       final personalData = consumerRef.watch(businessInfoProvider);
       return personalData.when(data: (data) {
         personalInformationModel = data;
         return Scaffold(
-          backgroundColor: kWhite,
+          backgroundColor: kBackgroundColor,
+
+          ///________APP_BAR_______________________
           appBar: AppBar(
-            backgroundColor: Colors.white,
+            backgroundColor: kWhite,
             title: Text(
               lang.S.of(context).addSales,
               style: GoogleFonts.poppins(
                 color: Colors.black,
               ),
             ),
+            actions: [
+              PopupMenuButton(
+                itemBuilder: (context) {
+                  return [
+                    PopupMenuItem(
+                      onTap: () {
+                        cartProviderData.clearCart();
+                        Navigator.pop(context);
+                      },
+                      child: const Text('Clear All'),
+                    ),
+                  ];
+                },
+              )
+            ],
             centerTitle: true,
             iconTheme: const IconThemeData(color: Colors.black),
             elevation: 2.0,
             surfaceTintColor: kWhite,
           ),
+
+          ///_______Body___________________________
           body: SingleChildScrollView(
             child: Column(
               children: [
                 ///__________Select_Customer________________________________
                 selectedCustomer != null
                     ? ListTile(
+                        tileColor: kWhite,
                         leading: const Icon(IconlyBold.add_user, color: kMainColor, size: 26),
                         title: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -146,6 +174,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                         ),
                       )
                     : ListTile(
+                        tileColor: kWhite,
                         onTap: () async {
                           selectedCustomer = await Navigator.push(
                               context,
@@ -167,7 +196,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                         ),
                       ),
 
-                const SizedBox(height: 20),
+                const SizedBox(height: 15),
 
                 ///______________Invoice and Date________________________________
                 Padding(
@@ -236,86 +265,47 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                     ],
                   ),
                 ),
-                const SizedBox(height: 20),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    AppTextField(
-                      textFieldType: TextFieldType.NAME,
-                      readOnly: true,
-                      initialValue: widget.customerModel?.name ?? 'Guest',
-                      decoration: InputDecoration(
-                        floatingLabelBehavior: FloatingLabelBehavior.always,
-                        labelText: lang.S.of(context).customerName,
-                        border: const OutlineInputBorder(),
-                      ),
-                    ),
-                    Visibility(
-                      visible: widget.customerModel == null,
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 20.0),
-                        child: AppTextField(
-                          controller: phoneContoller,
-                          textFieldType: TextFieldType.PHONE,
-                          decoration: kInputDecoration.copyWith(
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
-                            //labelText: 'Customer Phone Number',
-                            labelText: lang.S.of(context).customerPhoneNumber,
-                            //hintText: 'Enter customer phone number',
-                            hintText: lang.S.of(context).enterCustomerPhoneNumber,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 15),
 
                 ///_______Added_ItemS__________________________________________________
                 Container(
-                  decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
-                    border: Border.all(width: 1, color: const Color(0xffEAEFFA)),
-                  ),
+                  decoration: const BoxDecoration(color: kWhite),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
-                          width: double.infinity,
-                          decoration: const BoxDecoration(
-                            color: Color(0xffEAEFFA),
-                            borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(10),
-                            child: SizedBox(
-                              width: context.width() / 1.35,
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    lang.S.of(context).itemAdded,
-                                    style: const TextStyle(fontSize: 16),
-                                  ),
-                                  Text(
-                                    lang.S.of(context).quantity,
-                                    style: const TextStyle(fontSize: 16),
-                                  ),
-                                ],
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: SizedBox(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                lang.S.of(context).itemAdded,
+                                style: const TextStyle(fontSize: 16),
                               ),
-                            ),
-                          )),
+                              TextButton(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  child: const Text(
+                                    '+ Add Items',
+                                    style: TextStyle(fontSize: 16, color: kMainColor),
+                                  )),
+                            ],
+                          ),
+                        ),
+                      ),
                       ListView.builder(
                           shrinkWrap: true,
                           physics: const NeverScrollableScrollPhysics(),
-                          itemCount: providerData.cartItemList.length,
+                          itemCount: cartProviderData.cartItemList.length,
                           itemBuilder: (context, index) {
-                            providerData.controllers[index].text = (providerData.cartItemList[index].quantity.toString());
-                            providerData.focus[index].addListener(
+                            cartProviderData.controllers[index].text = (cartProviderData.cartItemList[index].quantity.toString());
+                            cartProviderData.focus[index].addListener(
                               () {
-                                if (!providerData.focus[index].hasFocus) {
+                                if (!cartProviderData.focus[index].hasFocus) {
                                   setState(() {
-                                    vatAmount = (vatPercentageEditingController.text.toDouble() / 100) * providerData.getTotalAmount().toDouble();
+                                    vatAmount = (vatPercentageEditingController.text.toDouble() / 100) * cartProviderData.getTotalAmount().toDouble();
                                     vatAmountEditingController.text = vatAmount.toStringAsFixed(2);
                                   });
                                 }
@@ -325,146 +315,82 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                               padding: const EdgeInsets.only(left: 10, right: 10),
                               child: ListTile(
                                 contentPadding: const EdgeInsets.all(0),
-                                title: Text(providerData.cartItemList[index].productName.toString()),
-                                subtitle: Text(
-                                    '${providerData.cartItemList[index].quantity} X ${providerData.cartItemList[index].price} = ${(double.parse(providerData.cartItemList[index].price.toString()) * providerData.cartItemList[index].quantity).toStringAsFixed(2)}'),
+                                leading: cartProviderData.cartItemList[index].imageUrl != null
+                                    ? Container(
+                                        height: 30,
+                                        width: 30,
+                                        decoration: BoxDecoration(
+                                            color: kMainColor,
+                                            borderRadius: const BorderRadius.all(Radius.circular(50)),
+                                            image: DecorationImage(image: NetworkImage('${APIConfig.domain}${cartProviderData.cartItemList[index].imageUrl!}'), fit: BoxFit.cover)),
+                                      )
+                                    : Container(
+                                        height: 30,
+                                        width: 30,
+                                        decoration: BoxDecoration(
+                                          color: kMainColor,
+                                          borderRadius: const BorderRadius.all(Radius.circular(50)),
+                                          image: DecorationImage(fit: BoxFit.cover, image: AssetImage(noProductImageUrl)),
+                                        ),
+                                      ),
+                                title: RichText(
+                                  text: TextSpan(
+                                    text: cartProviderData.cartItemList[index].productName.toString(),
+                                    style: DefaultTextStyle.of(context).style,
+                                    children: <TextSpan>[
+                                      TextSpan(text: ' X ${cartProviderData.cartItemList[index].quantity}', style: const TextStyle(color: kMainColor)),
+                                    ],
+                                  ),
+                                ),
                                 trailing: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    SizedBox(
-                                      width: 80,
-                                      child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          GestureDetector(
-                                            onTap: () {
-                                              providerData.quantityDecrease(index);
-                                              setState(() {
-                                                vatAmount = (vatPercentageEditingController.text.toDouble() / 100) * providerData.getTotalAmount().toDouble();
-                                                vatAmountEditingController.text = vatAmount.toStringAsFixed(2);
-                                              });
-                                            },
-                                            child: Container(
-                                              height: 20,
-                                              width: 20,
-                                              decoration: const BoxDecoration(
-                                                color: kMainColor,
-                                                borderRadius: BorderRadius.all(Radius.circular(10)),
-                                              ),
-                                              child: const Center(
-                                                child: Text(
-                                                  '-',
-                                                  style: TextStyle(fontSize: 14, color: Colors.white),
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                          const SizedBox(width: 5),
-                                          SizedBox(
-                                            width: 30,
-                                            child: TextFormField(
-                                              onTap: () {
-                                                providerData.controllers[index].clear();
-                                              },
-                                              focusNode: providerData.focus[index],
-                                              controller: providerData.controllers[index],
-                                              textAlign: TextAlign.center,
-                                              keyboardType: TextInputType.number,
-                                              inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
-                                              onChanged: (value) {
-                                                num stock = providerData.cartItemList[index].stock ?? 1;
-                                                if (value.isEmpty || value == '0') {
-                                                  value = '1';
-                                                } else if (num.tryParse(value) == null) {
-                                                  return;
-                                                } else {
-                                                  final newQuantity = num.parse(value);
-                                                  if (newQuantity <= stock) {
-                                                    providerData.cartItemList[index].quantity = newQuantity.round();
-                                                  } else {
-                                                    providerData.controllers[index].text = '1';
-                                                    EasyLoading.showError(
-                                                      lang.S.of(context).outOfStock,
-                                                      // 'Out Of Stock'
-                                                    );
-                                                  }
-                                                }
-                                              },
-                                              decoration: InputDecoration(
-                                                  border: InputBorder.none,
-                                                  hintText: providerData.focus[index].hasFocus ? null : providerData.cartItemList[index].quantity.toString()),
-                                            ),
-                                          ),
-                                          // Text(
-                                          //   '${providerData.cartItemList[index].quantity}',
-                                          //   style: GoogleFonts.poppins(
-                                          //     color: kGreyTextColor,
-                                          //     fontSize: 15.0,
-                                          //   ),
-                                          // ),
-                                          const SizedBox(width: 5),
-                                          GestureDetector(
-                                            onTap: () {
-                                              providerData.quantityIncrease(index);
-                                              setState(() {
-                                                vatAmount = (vatPercentageEditingController.text.toDouble() / 100) * providerData.getTotalAmount().toDouble();
-                                                vatAmountEditingController.text = vatAmount.toStringAsFixed(2);
-                                              });
-                                            },
-                                            child: Container(
-                                              height: 20,
-                                              width: 20,
-                                              decoration: const BoxDecoration(
-                                                color: kMainColor,
-                                                borderRadius: BorderRadius.all(Radius.circular(10)),
-                                              ),
-                                              child: const Center(
-                                                  child: Text(
-                                                '+',
-                                                style: TextStyle(fontSize: 14, color: Colors.white),
-                                              )),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
+                                    Text(
+                                      '$currency ${cartProviderData.cartItemList[index].price * cartProviderData.cartItemList[index].quantity}',
+                                      style: const TextStyle(fontSize: 16),
                                     ),
                                     const SizedBox(width: 10),
-                                    GestureDetector(
-                                      onTap: () {
-                                        providerData.deleteToCart(index);
-                                        setState(() {
-                                          vatAmount = (vatPercentageEditingController.text.toDouble() / 100) * providerData.getTotalAmount().toDouble();
-                                          vatAmountEditingController.text = vatAmount.toStringAsFixed(2);
-                                        });
+                                    IconButton(
+                                      onPressed: () {
+                                        showModalBottomSheet(
+                                          context: context,
+                                          isScrollControlled: true,
+                                          shape: const RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.vertical(
+                                              top: Radius.circular(20),
+                                            ),
+                                          ),
+                                          builder: (context) => ItemDetailsModal(
+                                            product: cartProviderData.cartItemList[index],
+                                            ref: consumerRef,
+                                          ),
+                                        );
                                       },
-                                      child: Container(
-                                        padding: const EdgeInsets.all(4),
-                                        color: Colors.red.withOpacity(0.1),
-                                        child: const Icon(
-                                          Icons.delete,
-                                          size: 20,
-                                          color: Colors.red,
-                                        ),
-                                      ),
-                                    ),
+                                      icon: const Icon(IconlyLight.edit_square),
+                                    )
                                   ],
                                 ),
                               ),
                             );
                           }),
                     ],
-                  ).visible(providerData.cartItemList.isNotEmpty),
+                  ).visible(cartProviderData.cartItemList.isNotEmpty),
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 15),
 
-                ///_____Total______________________________
+                ///_____Total_______________________________________________________
                 Container(
-                  decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), border: Border.all(color: Colors.grey.shade300, width: 1)),
+                  decoration: const BoxDecoration(
+                    color: kWhite,
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                  ),
                   child: Column(
                     children: [
                       Container(
                         padding: const EdgeInsets.all(10),
-                        decoration: const BoxDecoration(color: Color(0xffEAEFFA), borderRadius: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10))),
+                        decoration: BoxDecoration(
+                          color: kMainColor.withOpacity(.2),
+                        ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -473,7 +399,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                               style: const TextStyle(fontSize: 16),
                             ),
                             Text(
-                              providerData.getTotalAmount().toStringAsFixed(2),
+                              cartProviderData.getTotalAmount().toStringAsFixed(2),
                               style: const TextStyle(fontSize: 16),
                             ),
                           ],
@@ -506,7 +432,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                           });
                                         } else {
                                           setState(() {
-                                            vatAmount = (value.toDouble() / 100) * providerData.getTotalAmount().toDouble();
+                                            vatAmount = (value.toDouble() / 100) * cartProviderData.getTotalAmount().toDouble();
                                             vatAmountEditingController.text = vatAmount.toStringAsFixed(2);
                                           });
                                         }
@@ -552,7 +478,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                         } else {
                                           setState(() {
                                             vatAmount = double.parse(value);
-                                            vatPercentageEditingController.text = ((vatAmount * 100) / providerData.getTotalAmount()).toStringAsFixed(2);
+                                            vatPercentageEditingController.text = ((vatAmount * 100) / cartProviderData.getTotalAmount()).toStringAsFixed(2);
                                           });
                                         }
                                       },
@@ -604,7 +530,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                       discountAmount = 0;
                                     });
                                   } else {
-                                    if (value.toInt() <= providerData.getTotalAmount()) {
+                                    if (value.toInt() <= cartProviderData.getTotalAmount()) {
                                       setState(() {
                                         discountAmount = double.parse(value);
                                       });
@@ -639,24 +565,41 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                               style: const TextStyle(fontSize: 16),
                             ),
                             Text(
-                              calculateSubtotal(total: providerData.getTotalAmount()).toStringAsFixed(2),
+                              calculateSubtotal(total: cartProviderData.getTotalAmount()).toStringAsFixed(2),
                               style: const TextStyle(fontSize: 16),
                             ),
                           ],
                         ),
                       ),
+
+                      ///______Received_amount___________________________________________
                       Padding(
-                        padding: const EdgeInsets.all(10.0),
+                        padding: const EdgeInsets.only(right: 10.0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(
-                              lang.S.of(context).paidAmount,
-                              style: const TextStyle(fontSize: 16),
+                            Row(
+                              children: [
+                                Checkbox(
+                                  value: isFullReceved,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      isFullReceved = !isFullReceved;
+                                      paidAmount = subTotal;
+                                      paindAmountController.text = subTotal.toString();
+                                    });
+                                  },
+                                ),
+                                const Text(
+                                  'Received Amount',
+                                  style: TextStyle(fontSize: 16),
+                                ),
+                              ],
                             ),
                             SizedBox(
                               width: context.width() / 4,
                               child: TextField(
+                                controller: paindAmountController,
                                 keyboardType: TextInputType.number,
                                 onChanged: (value) {
                                   if (value == '') {
@@ -711,155 +654,155 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                     ],
                   ),
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 15),
+
+                ///_____Payment_Type____________________________________________________
                 Container(
-                  height: 1,
-                  width: double.infinity,
-                  color: Colors.grey,
-                ),
-                const SizedBox(height: 10),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
+                  decoration: const BoxDecoration(color: kWhite),
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          lang.S.of(context).paymentTypes,
-                          style: const TextStyle(fontSize: 16, color: Colors.black54),
+                        Row(
+                          children: [
+                            Text(
+                              lang.S.of(context).paymentTypes,
+                              style: const TextStyle(fontSize: 16, color: Colors.black54),
+                            ),
+                            const SizedBox(width: 5),
+                            const Icon(
+                              Icons.wallet,
+                              color: Colors.green,
+                            )
+                          ],
                         ),
-                        const SizedBox(
-                          width: 5,
+                        DropdownButton(
+                          value: paymentType,
+                          icon: const Icon(Icons.keyboard_arrow_down),
+                          items: paymentsTypeList.map((String items) {
+                            return DropdownMenuItem(
+                              value: items,
+                              child: Text(items),
+                            );
+                          }).toList(),
+                          onChanged: (newValue) {
+                            setState(() {
+                              paymentType = newValue.toString();
+                            });
+                          },
                         ),
-                        const Icon(
-                          Icons.wallet,
-                          color: Colors.green,
-                        )
                       ],
                     ),
-                    DropdownButton(
-                      value: paymentType,
-                      icon: const Icon(Icons.keyboard_arrow_down),
-                      items: paymentsTypeList.map((String items) {
-                        return DropdownMenuItem(
-                          value: items,
-                          child: Text(items),
-                        );
-                      }).toList(),
-                      onChanged: (newValue) {
-                        setState(() {
-                          paymentType = newValue.toString();
-                        });
-                      },
-                    ),
-                  ],
+                  ),
                 ),
+
+                ///______Buttons_________________________________________________________
                 const SizedBox(height: 10),
-                Container(
-                  height: 1,
-                  width: double.infinity,
-                  color: Colors.grey,
-                ),
-                const SizedBox(height: 30),
-                Row(
-                  children: [
-                    Expanded(
-                        child: GestureDetector(
-                      onTap: () async {
-                        const Home().launch(context, isNewTask: true);
-                      },
-                      child: Container(
-                        height: 60,
-                        decoration: BoxDecoration(
-                          color: Colors.grey.shade300,
-                          borderRadius: const BorderRadius.all(Radius.circular(10)),
-                        ),
-                        child: Center(
-                          child: Text(
-                            lang.S.of(context).cancel,
-                            //'Cancel',
-                            style: const TextStyle(fontSize: 18),
-                          ),
-                        ),
-                      ),
-                    )),
-                    const SizedBox(width: 10),
-                    Expanded(
-                      child: GestureDetector(
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Row(
+                    children: [
+                      Expanded(
+                          child: GestureDetector(
                         onTap: () async {
-                          if (providerData.cartItemList.isNotEmpty) {
-                            try {
-                              EasyLoading.show(
-                                  status: lang.S.of(context).loading,
-                                  //'Loading...',
-                                  dismissOnTap: false);
-                              List<CartSaleProducts> selectedProductList = [];
-
-                              for (var element in providerData.cartItemList) {
-                                selectedProductList.add(
-                                  CartSaleProducts(
-                                    productId: element.uuid.toInt(),
-                                    quantities: element.quantity.toInt(),
-                                    price: (num.tryParse(element.price.toString()) ?? 0),
-                                    lossProfit: (element.quantity * (num.tryParse(element.price.toString()) ?? 0)) -
-                                        (element.quantity * (num.tryParse(element.productPurchasePrice.toString()) ?? 0)),
-                                  ),
-                                );
-                              }
-
-                              SaleRepo repo = SaleRepo();
-                              SalesTransaction? saleData;
-                              saleData = await repo.createSale(
-                                ref: consumerRef,
-                                context: context,
-                                totalAmount: subTotal,
-                                purchaseDate: selectedDate.toString(),
-                                products: selectedProductList,
-                                paymentType: paymentType ?? 'Cash',
-                                partyId: widget.customerModel?.id,
-                                customerPhone: widget.customerModel == null ? phoneContoller.text : null,
-                                vatAmount: vatAmount,
-                                vatPercent: vatPercentageEditingController.text.toInt(),
-                                isPaid: dueAmount <= 0 ? true : false,
-                                dueAmount: dueAmount <= 0 ? 0 : dueAmount,
-                                discountAmount: discountAmount,
-                                paidAmount: paidAmount,
-                              );
-                              if (saleData != null) {
-                                SalesInvoiceDetails(
-                                  businessInfo: personalData.value!,
-                                  saleTransaction: saleData,
-                                  fromSale: true,
-                                ).launch(context);
-                              }
-                            } catch (e) {
-                              EasyLoading.dismiss();
-                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
-                            }
-                          } else {
-                            EasyLoading.showError(
-                              lang.S.of(context).addProductFirst,
-                              //'Add product first'
-                            );
-                          }
+                          const Home().launch(context, isNewTask: true);
                         },
                         child: Container(
                           height: 60,
-                          decoration: const BoxDecoration(
-                            color: kMainColor,
-                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                          decoration: BoxDecoration(
+                            color: Colors.grey.shade300,
+                            borderRadius: const BorderRadius.all(Radius.circular(10)),
                           ),
                           child: Center(
                             child: Text(
-                              lang.S.of(context).save,
-                              //'Save',
-                              style: const TextStyle(fontSize: 18, color: Colors.white),
+                              lang.S.of(context).cancel,
+                              //'Cancel',
+                              style: const TextStyle(fontSize: 18),
+                            ),
+                          ),
+                        ),
+                      )),
+                      const SizedBox(width: 10),
+                      Expanded(
+                        child: GestureDetector(
+                          onTap: () async {
+                            if (cartProviderData.cartItemList.isNotEmpty) {
+                              try {
+                                EasyLoading.show(
+                                    status: lang.S.of(context).loading,
+                                    //'Loading...',
+                                    dismissOnTap: false);
+                                List<CartSaleProducts> selectedProductList = [];
+
+                                for (var element in cartProviderData.cartItemList) {
+                                  selectedProductList.add(
+                                    CartSaleProducts(
+                                      productId: element.uuid.toInt(),
+                                      quantities: element.quantity.toInt(),
+                                      price: (num.tryParse(element.price.toString()) ?? 0),
+                                      lossProfit: (element.quantity * (num.tryParse(element.price.toString()) ?? 0)) -
+                                          (element.quantity * (num.tryParse(element.productPurchasePrice.toString()) ?? 0)),
+                                    ),
+                                  );
+                                }
+
+                                SaleRepo repo = SaleRepo();
+                                SalesTransaction? saleData;
+                                saleData = await repo.createSale(
+                                  ref: consumerRef,
+                                  context: context,
+                                  totalAmount: subTotal,
+                                  purchaseDate: selectedDate.toString(),
+                                  products: selectedProductList,
+                                  paymentType: paymentType ?? 'Cash',
+                                  partyId: selectedCustomer?.id,
+                                  customerPhone: widget.customerModel == null ? phoneContoller.text : null,
+                                  vatAmount: vatAmount,
+                                  vatPercent: vatPercentageEditingController.text.toInt(),
+                                  isPaid: dueAmount <= 0 ? true : false,
+                                  dueAmount: dueAmount <= 0 ? 0 : dueAmount,
+                                  discountAmount: discountAmount,
+                                  paidAmount: paidAmount,
+                                );
+                                if (saleData != null) {
+                                  cartProviderData.clearCart();
+                                  SalesInvoiceDetails(
+                                    businessInfo: personalData.value!,
+                                    saleTransaction: saleData,
+                                    fromSale: true,
+                                  ).launch(context);
+                                }
+                              } catch (e) {
+                                EasyLoading.dismiss();
+                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
+                              }
+                            } else {
+                              EasyLoading.showError(
+                                lang.S.of(context).addProductFirst,
+                                //'Add product first'
+                              );
+                            }
+                          },
+                          child: Container(
+                            height: 60,
+                            decoration: const BoxDecoration(
+                              color: kMainColor,
+                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                            ),
+                            child: Center(
+                              child: Text(
+                                lang.S.of(context).save,
+                                //'Save',
+                                style: const TextStyle(fontSize: 18, color: Colors.white),
+                              ),
                             ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
-                )
+                    ],
+                  ),
+                ),
               ],
             ),
           ),

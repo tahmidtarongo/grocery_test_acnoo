@@ -287,10 +287,24 @@ class _HomeScreenState extends State<HomeScreen> {
                                       padding: const EdgeInsets.only(right: 10),
                                       child: Column(
                                         children: [
-                                          const CircleAvatar(
-                                            minRadius: 30,
-                                            foregroundColor: Colors.red,
-                                          ),
+                                          data[index].variationColor == null
+                                              ? Container(
+                                                  height: 50,
+                                                  width: 50,
+                                                  decoration: BoxDecoration(
+                                                      color: kMainColor,
+                                                      borderRadius: const BorderRadius.all(Radius.circular(50)),
+                                                      image: DecorationImage(image: NetworkImage('${APIConfig.domain}${''}'), fit: BoxFit.cover)),
+                                                )
+                                              : Container(
+                                                  height: 50,
+                                                  width: 50,
+                                                  decoration: BoxDecoration(
+                                                    color: kMainColor,
+                                                    borderRadius: const BorderRadius.all(Radius.circular(50)),
+                                                    image: DecorationImage(fit: BoxFit.cover, image: AssetImage(noProductImageUrl)),
+                                                  ),
+                                                ),
                                           Text(data[index].categoryName.toString()),
                                         ],
                                       ),
@@ -380,94 +394,96 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: SizedBox(
                               width: MediaQuery.of(context).size.width,
                               child: GridView.builder(
+                                // gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 3,childAspectRatio: 2,crossAxisSpacing: 0.4,mainAxisExtent: 20,mainAxisSpacing: 30),
                                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                                   crossAxisCount: 3,
-                                  crossAxisSpacing: 8.0,
-                                  mainAxisSpacing: 8.0,
-                                  childAspectRatio: 2 / 2.5,
+                                  childAspectRatio: 0.7,
                                 ),
                                 itemCount: productsList.length,
                                 physics: const NeverScrollableScrollPhysics(),
                                 shrinkWrap: true,
                                 itemBuilder: (context, index) {
-                                  return Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: GestureDetector(
-                                      onTap: () {
-                                        AddToCartModel cartItem = AddToCartModel(
-                                          productName: productsList[index].productName,
-                                          price: productsList[index].productSalePrice,
-                                          productId: productsList[index].productCode,
-                                          productBrandName: productsList[index].brand?.brandName,
-                                          productPurchasePrice: productsList[index].productPurchasePrice,
-                                          stock: (productsList[index].productStock ?? 0),
-                                          uuid: productsList[index].id ?? 0,
-                                          unitName: productsList[index].unit?.unitName,
-                                        );
-                                        showModalBottomSheet(
-                                          context: context,
-                                          isScrollControlled: true,
-                                          shape: const RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.vertical(
-                                              top: Radius.circular(20),
-                                            ),
-                                          ),
-                                          builder: (context) => ItemDetailsModal(
-                                            product: cartItem,
-                                            ref: ref,
-                                          ),
-                                        );
-                                      },
-                                      child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                          productsList[index].productPicture == null
-                                              ? SizedBox(
-                                                  height: 80,
-                                                  width: 500,
-                                                  child: Image.asset(
-                                                    noProductImageUrl,
-                                                    fit: BoxFit.cover,
-                                                  ),
-                                                )
-                                              : SizedBox(
-                                                  height: 80,
-                                                  width: 500,
-                                                  child: Image.network(
-                                                    '${APIConfig.domain}${productsList[index].productPicture!}',
-                                                    fit: BoxFit.cover,
-                                                  ),
-                                                ),
-                                          const SizedBox(height: 5.0),
-                                          Text(
-                                            productsList[index].productName ?? '',
-                                            style: const TextStyle(fontWeight: FontWeight.bold),
-                                          ),
-                                          // const SizedBox(height: 2.0),
-                                          Text("${productsList[index].productStock} ${productsList[index].unit?.unitName ?? ''}"),
-                                          // const SizedBox(height: 2.0),
-                                          Row(
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Text('\$${productsList[index].productSalePrice?.toStringAsFixed(2)}'),
-                                              Visibility(
-                                                visible: cartData.getAProductQuantity(uid: productsList[index].id ?? 0) != null,
-                                                child: CircleAvatar(
-                                                  backgroundColor: kMainColor,
-                                                  minRadius: 5,
-                                                  child: SizedBox(
-                                                      height: 24,
-                                                      width: 24,
-                                                      child: Center(
-                                                          child: Text(
-                                                        '${cartData.getAProductQuantity(uid: productsList[index].id ?? 0)}',
-                                                        style: const TextStyle(fontSize: 12, color: Colors.white),
-                                                      ))),
-                                                ),
+                                  return SizedBox(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: GestureDetector(
+                                        onTap: () {
+                                          AddToCartModel cartItem = AddToCartModel(
+                                            productName: productsList[index].productName,
+                                            price: productsList[index].productSalePrice,
+                                            productId: productsList[index].productCode,
+                                            productBrandName: productsList[index].brand?.brandName,
+                                            productPurchasePrice: productsList[index].productPurchasePrice,
+                                            stock: (productsList[index].productStock ?? 0),
+                                            uuid: productsList[index].id ?? 0,
+                                            unitName: productsList[index].unit?.unitName,
+                                            imageUrl: productsList[index].productPicture,
+                                          );
+                                          showModalBottomSheet(
+                                            context: context,
+                                            isScrollControlled: true,
+                                            shape: const RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.vertical(
+                                                top: Radius.circular(20),
                                               ),
-                                            ],
-                                          ),
-                                        ],
+                                            ),
+                                            builder: (context) => ItemDetailsModal(
+                                              product: cartItem,
+                                              ref: ref,
+                                            ),
+                                          );
+                                        },
+                                        child: Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            productsList[index].productPicture == null
+                                                ? SizedBox(
+                                                    height: 80,
+                                                    width: 500,
+                                                    child: Image.asset(
+                                                      noProductImageUrl,
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  )
+                                                : SizedBox(
+                                                    height: 80,
+                                                    width: 500,
+                                                    child: Image.network(
+                                                      '${APIConfig.domain}${productsList[index].productPicture!}',
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  ),
+                                            const SizedBox(height: 5.0),
+                                            Text(
+                                              productsList[index].productName ?? '',
+                                              style: const TextStyle(fontWeight: FontWeight.bold),
+                                            ),
+                                            // const SizedBox(height: 2.0),
+                                            Text("${productsList[index].productStock} ${productsList[index].unit?.unitName ?? ''}"),
+                                            // const SizedBox(height: 2.0),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              children: [
+                                                Text('\$${productsList[index].productSalePrice?.toStringAsFixed(2)}'),
+                                                Visibility(
+                                                  visible: cartData.getAProductQuantity(uid: productsList[index].id ?? 0) != null,
+                                                  child: CircleAvatar(
+                                                    backgroundColor: kMainColor,
+                                                    minRadius: 5,
+                                                    child: SizedBox(
+                                                        height: 24,
+                                                        width: 24,
+                                                        child: Center(
+                                                            child: Text(
+                                                          '${cartData.getAProductQuantity(uid: productsList[index].id ?? 0)}',
+                                                          style: const TextStyle(fontSize: 12, color: Colors.white),
+                                                        ))),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   );

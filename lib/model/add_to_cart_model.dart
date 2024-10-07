@@ -15,6 +15,7 @@ class AddToCartModel {
     this.stock,
     this.productPurchasePrice,
     this.unitName,
+    this.imageUrl,
   });
 
   num uuid;
@@ -31,6 +32,7 @@ class AddToCartModel {
   int itemCartIndex;
   num? stock;
   String? unitName;
+  String? imageUrl;
 
   factory AddToCartModel.fromJson(String str) => AddToCartModel.fromMap(json.decode(str));
 
