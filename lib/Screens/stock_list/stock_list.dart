@@ -24,7 +24,7 @@ class _StockListState extends State<StockList> {
     double totalSalePrice = 0;
     double totalParPrice = 0;
     return Consumer(builder: (context, ref, __) {
-      final providerData = ref.watch(productProvider);
+      final providerData = ref.watch(productProvider(null));
       return providerData.when(data: (product) {
         List<ProductModel> showableProducts = [];
         for (var element in product) {

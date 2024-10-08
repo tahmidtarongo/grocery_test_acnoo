@@ -27,7 +27,7 @@ class _ProductListState extends State<ProductList> {
   Widget build(BuildContext context) {
     return Consumer(
       builder: (context, ref, __) {
-        final providerData = ref.watch(productProvider);
+        final providerData = ref.watch(productProvider(null));
         return Scaffold(
           backgroundColor: Colors.white,
           appBar: AppBar(

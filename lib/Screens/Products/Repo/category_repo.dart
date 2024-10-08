@@ -1,5 +1,6 @@
 //ignore_for_file: file_names, unused_element, unused_local_variable
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -43,27 +44,31 @@ class CategoryRepo {
     required bool variationCapacity,
     required bool variationType,
     required bool variationWeight,
+    File? image,
   }) async {
     final uri = Uri.parse('${APIConfig.url}/categories');
 
-    var responseData = await http.post(uri, headers: {
-      "Accept": 'application/json',
-      'Authorization': await getAuthToken(),
-    }, body: {
-      'categoryName': name,
-      'variationSize': variationSize.toString(),
-      'variationColor': variationColor.toString(),
-      'variationCapacity': variationCapacity.toString(),
-      'variationType': variationType.toString(),
-      'variationWeight': variationWeight.toString(),
+    var request = http.MultipartRequest('POST', uri)
+      ..headers['Accept'] = 'application/json'
+      ..headers['Authorization'] = await getAuthToken();
+    request.fields.addAll({
+      "categoryName": name,
+      "variationSize": variationSize.toString(),
+      "variationColor": variationColor.toString(),
+      "variationCapacity": variationCapacity.toString(),
+      "variationType": variationType.toString(),
+      "variationWeight": variationWeight.toString(),
     });
+    if (image != null) {
+      request.files.add(http.MultipartFile.fromBytes('icon', image.readAsBytesSync(), filename: image.path));
+    }
 
     try {
-      // final response = await request.send();
-      // final responseData = await response.stream.bytesToString();
-      final parsedData = jsonDecode(responseData.body);
+      final response = await request.send();
+      final responseData = await response.stream.bytesToString();
+      final parsedData = jsonDecode(responseData);
 
-      if (responseData.statusCode == 200) {
+      if (response.statusCode == 200) {
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Added successful!')));
         var data1 = ref.refresh(categoryProvider);
         Navigator.pop(context);
@@ -86,28 +91,32 @@ class CategoryRepo {
     required bool variationCapacity,
     required bool variationType,
     required bool variationWeight,
+    required File? image,
   }) async {
     final uri = Uri.parse('${APIConfig.url}/categories/$id');
+    var request = http.MultipartRequest('POST', uri)
+      ..headers['Accept'] = 'application/json'
+      ..headers['Authorization'] = await getAuthToken();
 
-    var responseData = await http.post(uri, headers: {
-      "Accept": 'application/json',
-      'Authorization': await getAuthToken(),
-    }, body: {
-      '_method': 'put',
-      'categoryName': name,
-      'variationSize': variationSize.toString(),
-      'variationColor': variationColor.toString(),
-      'variationCapacity': variationCapacity.toString(),
-      'variationType': variationType.toString(),
-      'variationWeight': variationWeight.toString(),
+    request.fields['_method'] = 'put';
+    request.fields.addAll({
+      "categoryName": name,
+      "variationSize": variationSize.toString(),
+      "variationColor": variationColor.toString(),
+      "variationCapacity": variationCapacity.toString(),
+      "variationType": variationType.toString(),
+      "variationWeight": variationWeight.toString(),
     });
+    if (image != null) {
+      request.files.add(http.MultipartFile.fromBytes('icon', image.readAsBytesSync(), filename: image.path));
+    }
 
     try {
-      // final response = await request.send();
-      // final responseData = await response.stream.bytesToString();
-      final parsedData = jsonDecode(responseData.body);
+      final response = await request.send();
+      final responseData = await response.stream.bytesToString();
+      final parsedData = jsonDecode(responseData);
 
-      if (responseData.statusCode == 200) {
+      if (response.statusCode == 200) {
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Added successful!')));
         var data1 = ref.refresh(categoryProvider);
         Navigator.pop(context);

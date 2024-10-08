@@ -98,7 +98,7 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
     return Consumer(builder: (context, consumerRef, __) {
       final providerData = consumerRef.watch(cartNotifierPurchase);
       final personalData = consumerRef.watch(businessInfoProvider);
-      final productList = consumerRef.watch(productProvider);
+      final productList = consumerRef.watch(productProvider(null));
 
       ///__________Add_previous_products_in_the_List___________________________________________
 
@@ -144,7 +144,7 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
           if (widget.transitionModel.details?.length == cartList.length) {
             // providerData.addToCartRiverPodForEdit(cartList);
             doNotCheckProducts = true;
-            consumerRef.refresh(productProvider);
+            consumerRef.refresh(productProvider(null));
           }
         }
       }

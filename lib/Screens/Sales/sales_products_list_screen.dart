@@ -47,7 +47,7 @@ class _SaleProductsListState extends State<SaleProductsList> {
   Widget build(BuildContext context) {
     return Consumer(builder: (context, ref, __) {
       final providerData = ref.watch(cartNotifier);
-      final productList = ref.watch(productProvider);
+      final productList = ref.watch(productProvider(null));
 
       return Scaffold(
         backgroundColor: kWhite,

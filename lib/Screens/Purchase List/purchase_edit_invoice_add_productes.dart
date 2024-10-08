@@ -63,7 +63,7 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
   Widget build(BuildContext context) {
     return Consumer(builder: (context, ref, __) {
       final providerData = ref.watch(cartNotifierPurchase);
-      final productList = ref.watch(productProvider);
+      final productList = ref.watch(productProvider(null));
 
       return Scaffold(
         appBar: AppBar(
@@ -397,7 +397,7 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
                                               if ((tempProduct.productStock ?? 0) > 0) {
                                                 providerData.addToCartRiverPod(tempProduct);
                                                 providerData.addProductsInSales(products[i]);
-                                                ref.refresh(productProvider);
+                                                ref.refresh(productProvider(null));
                                                 int count = 0;
                                                 Navigator.popUntil(context, (route) {
                                                   return count++ == 2;

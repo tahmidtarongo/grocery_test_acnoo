@@ -40,7 +40,7 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, ref, __) {
-      final providerData = ref.watch(productProvider);
+      final providerData = ref.watch(productProvider(null));
       return Scaffold(
         appBar: AppBar(
           title: Text(

@@ -70,7 +70,7 @@ class PurchaseRepo {
 
       if (responseData.statusCode == 200) {
         EasyLoading.showSuccess('Added successful!');
-        var data1 = ref.refresh(productProvider);
+        var data1 = ref.refresh(productProvider(null));
         var data2 = ref.refresh(partiesProvider);
         var data3 = ref.refresh(purchaseTransactionProvider);
         var data4 = ref.refresh(businessInfoProvider);
@@ -131,7 +131,7 @@ class PurchaseRepo {
 
       if (responseData.statusCode == 200) {
         EasyLoading.showSuccess('Added successful!');
-        var data1 = ref.refresh(productProvider);
+        var data1 = ref.refresh(productProvider(null));
         var data2 = ref.refresh(partiesProvider);
         var data3 = ref.refresh(purchaseTransactionProvider);
         var data4 = ref.refresh(businessInfoProvider);
@@ -173,7 +173,7 @@ class PurchaseRepo {
       if (response.statusCode == 200) {
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Product deleted successfully')));
 
-        var data1 = ref.refresh(productProvider);
+        var data1 = ref.refresh(productProvider(null));
 
         Navigator.pop(context); // Assuming you want to close the screen after deletion
         Navigator.pop(context); // Assuming you want to close the screen after deletion

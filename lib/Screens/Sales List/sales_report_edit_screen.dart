@@ -108,7 +108,7 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
     return Consumer(builder: (context, consumerRef, __) {
       final providerData = consumerRef.watch(cartNotifier);
       final personalData = consumerRef.watch(businessInfoProvider);
-      final productList = consumerRef.watch(productProvider);
+      final productList = consumerRef.watch(productProvider(null));
 
       if (!doNotCheckProducts) {
         List<AddToCartModel> list = [];

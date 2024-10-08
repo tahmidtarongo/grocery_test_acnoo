@@ -13,8 +13,8 @@ import '../../../Repository/constant_functions.dart';
 import '../Model/product_model.dart';
 
 class ProductRepo {
-  Future<List<ProductModel>> fetchAllProducts() async {
-    final uri = Uri.parse('${APIConfig.url}/products');
+  Future<List<ProductModel>> fetchAllProducts({num? categoryId}) async {
+    final uri = Uri.parse('${APIConfig.url}/products${categoryId != null ? "?category_id=$categoryId" : ''}');
 
     final response = await http.get(uri, headers: {
       'Accept': 'application/json',
@@ -89,7 +89,8 @@ class ProductRepo {
 
     if (response.statusCode == 200) {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Added successful!')));
-      var data1 = ref.refresh(productProvider);
+      ref.refresh(productProvider(null));
+      ref.refresh(productProvider(num.tryParse(categoryId)));
 
       Navigator.pop(context);
     } else {
@@ -119,7 +120,7 @@ class ProductRepo {
       if (response.statusCode == 200) {
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Product deleted successfully')));
 
-        var data1 = ref.refresh(productProvider);
+        var data1 = ref.refresh(productProvider(null));
       } else {
         final parsedData = jsonDecode(response.body);
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Failed to delete product: ${parsedData['message']}')));
@@ -189,7 +190,7 @@ class ProductRepo {
 
     if (response.statusCode == 200) {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Updated Successfully!')));
-      var data1 = ref.refresh(productProvider);
+      var data1 = ref.refresh(productProvider(null));
 
       Navigator.pop(context);
     } else {

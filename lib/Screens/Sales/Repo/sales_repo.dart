@@ -78,7 +78,7 @@ class SaleRepo {
 
       if (responseData.statusCode == 200) {
         EasyLoading.showSuccess('Added successful!');
-        var data1 = ref.refresh(productProvider);
+        var data1 = ref.refresh(productProvider(null));
         var data2 = ref.refresh(partiesProvider);
         var data3 = ref.refresh(salesTransactionProvider);
         var data4 = ref.refresh(businessInfoProvider);
@@ -148,7 +148,7 @@ class SaleRepo {
 
       if (responseData.statusCode == 200) {
         EasyLoading.showSuccess('Added successful!').then((value) {
-          var data1 = ref.refresh(productProvider);
+          var data1 = ref.refresh(productProvider(null));
           var data2 = ref.refresh(partiesProvider);
           var data3 = ref.refresh(salesTransactionProvider);
           var data4 = ref.refresh(businessInfoProvider);

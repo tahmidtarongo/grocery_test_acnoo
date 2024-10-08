@@ -1,8 +1,11 @@
 // ignore_for_file: unused_result
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/constant.dart';
 
@@ -24,6 +27,8 @@ class _AddCategoryState extends State<AddCategory> {
   bool weightCheckbox = false;
   bool capacityCheckbox = false;
   bool typeCheckbox = false;
+  final ImagePicker _picker = ImagePicker();
+  XFile? pickedImage;
   TextEditingController categoryNameController = TextEditingController();
 
   @override
@@ -175,6 +180,143 @@ class _AddCategoryState extends State<AddCategory> {
                   },
                   controlAffinity: ListTileControlAffinity.leading, //  <-- leading Checkbox
                 ),
+                GestureDetector(
+                  onTap: () {
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return Dialog(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12.0),
+                            ),
+                            // ignore: sized_box_for_whitespace
+                            child: Container(
+                              height: 200.0,
+                              width: MediaQuery.of(context).size.width - 80,
+                              child: Center(
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    GestureDetector(
+                                      onTap: () async {
+                                        pickedImage = await _picker.pickImage(source: ImageSource.gallery);
+
+                                        setState(() {});
+
+                                        Future.delayed(const Duration(milliseconds: 100), () {
+                                          Navigator.pop(context);
+                                        });
+                                      },
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          const Icon(
+                                            Icons.photo_library_rounded,
+                                            size: 60.0,
+                                            color: kMainColor,
+                                          ),
+                                          Text(
+                                            lang.S.of(context).gallery,
+                                            style: GoogleFonts.poppins(
+                                              fontSize: 20.0,
+                                              color: kMainColor,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      width: 40.0,
+                                    ),
+                                    GestureDetector(
+                                      onTap: () async {
+                                        pickedImage = await _picker.pickImage(source: ImageSource.camera);
+                                        setState(() {});
+                                        Future.delayed(const Duration(milliseconds: 100), () {
+                                          Navigator.pop(context);
+                                        });
+                                      },
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          const Icon(
+                                            Icons.camera,
+                                            size: 60.0,
+                                            color: kGreyTextColor,
+                                          ),
+                                          Text(
+                                            lang.S.of(context).camera,
+                                            style: GoogleFonts.poppins(
+                                              fontSize: 20.0,
+                                              color: kGreyTextColor,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          );
+                        });
+                  },
+                  child: Stack(
+                    children: [
+                      Container(
+                        height: 120,
+                        width: 120,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.black54, width: 1),
+                          borderRadius: const BorderRadius.all(Radius.circular(120)),
+                          image: pickedImage == null
+                              ? DecorationImage(
+                                  image: AssetImage(noProductImageUrl),
+                                  fit: BoxFit.cover,
+                                )
+                              : DecorationImage(
+                                  image: FileImage(File(pickedImage!.path)),
+                                  fit: BoxFit.cover,
+                                ),
+                        ),
+                      ),
+                      Container(
+                        height: 120,
+                        width: 120,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.black54, width: 1),
+                          borderRadius: const BorderRadius.all(Radius.circular(120)),
+                          // image: DecorationImage(
+                          //   image: FileImage(File(pickedImage!.path)),
+                          //   fit: BoxFit.cover,
+                          // ),
+                        ),
+                        // child: imageFile.path == 'No File' ? null : Image.file(imageFile),
+                      ),
+                      Positioned(
+                        bottom: 0,
+                        right: 0,
+                        child: Container(
+                          height: 35,
+                          width: 35,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.white, width: 2),
+                            borderRadius: const BorderRadius.all(Radius.circular(120)),
+                            color: kMainColor,
+                          ),
+                          child: const Icon(
+                            Icons.camera_alt_outlined,
+                            size: 20,
+                            color: Colors.white,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
                 ButtonGlobalWithoutIcon(
                   buttontext: lang.S.of(context).save,
                   //'Save',
@@ -193,6 +335,7 @@ class _AddCategoryState extends State<AddCategory> {
                       variationCapacity: capacityCheckbox,
                       variationType: typeCheckbox,
                       variationWeight: weightCheckbox,
+                      image: pickedImage != null ? File(pickedImage!.path) : null,
                     );
                     setState(() {
                       showProgress = false;

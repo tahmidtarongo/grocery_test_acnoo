@@ -26,16 +26,7 @@ import 'Model/category_model.dart';
 
 // ignore: must_be_immutable
 class AddProduct extends StatefulWidget {
-  AddProduct({Key? key, this.catName, this.unitsName, this.brandName}) : super(key: key);
-
-  // ignore: prefer_typing_uninitialized_variables
-  var catName;
-
-  // ignore: prefer_typing_uninitialized_variables
-  var unitsName;
-
-  // ignore: prefer_typing_uninitialized_variables
-  var brandName;
+  const AddProduct({Key? key,}) : super(key: key);
 
   @override
   // ignore: library_private_types_in_public_api
