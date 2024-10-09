@@ -26,7 +26,9 @@ import 'Model/category_model.dart';
 
 // ignore: must_be_immutable
 class AddProduct extends StatefulWidget {
-  const AddProduct({Key? key,}) : super(key: key);
+  const AddProduct({
+    Key? key,
+  }) : super(key: key);
 
   @override
   // ignore: library_private_types_in_public_api
@@ -121,7 +123,7 @@ class _AddProductState extends State<AddProduct> {
                       controller: nameController,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                         // return 'Please enter a valid product Name';
+                          // return 'Please enter a valid product Name';
                           return lang.S.of(context).pleaseEnterAValidProductName;
                         }
                         // You can add more validation logic as needed
@@ -151,7 +153,9 @@ class _AddProductState extends State<AddProduct> {
                         return null;
                       },
                       onTap: () async {
-                        data = await const CategoryList(isFromProductList: false,).launch(context);
+                        data = await const CategoryList(
+                          isFromProductList: false,
+                        ).launch(context);
                         setState(() {
                           categoryController.text = data.categoryName.categoryName ?? '';
                           selectedCategory = data.categoryName;
@@ -250,7 +254,7 @@ class _AddProductState extends State<AddProduct> {
                       decoration: kInputDecoration.copyWith(
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         labelText: lang.S.of(context).type,
-                       // hintText: 'Enter Type',
+                        // hintText: 'Enter Type',
                         hintText: lang.S.of(context).enterType,
                         border: const OutlineInputBorder(),
                       ),
@@ -267,7 +271,9 @@ class _AddProductState extends State<AddProduct> {
                         return null;
                       },
                       onTap: () async {
-                        selectedBrand = await const BrandsList(isFromProductList: false,).launch(context);
+                        selectedBrand = await const BrandsList(
+                          isFromProductList: false,
+                        ).launch(context);
                         setState(() {
                           brandController.text = selectedBrand?.brandName ?? '';
                         });
@@ -275,9 +281,9 @@ class _AddProductState extends State<AddProduct> {
                       decoration: kInputDecoration.copyWith(
                         suffixIcon: const Icon(Icons.keyboard_arrow_down),
                         floatingLabelBehavior: FloatingLabelBehavior.always,
-                       // labelText: 'Product Brand',
+                        // labelText: 'Product Brand',
                         labelText: lang.S.of(context).productBrand,
-                       // hintText: 'Select a brand',
+                        // hintText: 'Select a brand',
                         hintText: lang.S.of(context).selectABrand,
                         border: const OutlineInputBorder(),
                       ),
@@ -310,7 +316,7 @@ class _AddProductState extends State<AddProduct> {
                               if (codeList.contains(value)) {
                                 EasyLoading.showError(
                                   lang.S.of(context).thisProductAlreadyAdded,
-                                   // 'This Product Already added!'
+                                  // 'This Product Already added!'
                                 );
                                 productCodeController.clear();
                               } else {
@@ -334,53 +340,53 @@ class _AddProductState extends State<AddProduct> {
                         child: Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: GestureDetector(
-                            onTap: ()async {
+                            onTap: () async {
                               await showDialog(
-                              context: context,
-                              useSafeArea: true,
-                              builder: (context1) {
-                                MobileScannerController controller = MobileScannerController(
-                                  torchEnabled: false,
-                                  returnImage: false,
-                                );
-                                return Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadiusDirectional.circular(6.0),
-                                  ),
-                                  child: Column(
-                                    children: [
-                                      AppBar(
-                                        backgroundColor: Colors.transparent,
-                                        iconTheme: const IconThemeData(color: Colors.white),
-                                        leading: IconButton(
-                                          icon: const Icon(Icons.arrow_back),
-                                          onPressed: () {
-                                            Navigator.pop(context1);
-                                          },
-                                        ),
-                                      ),
-                                      Expanded(
-                                        child: MobileScanner(
-                                          fit: BoxFit.contain,
-                                          controller: controller,
-                                          onDetect: (capture) {
-                                            final List<Barcode> barcodes = capture.barcodes;
-
-                                            if (barcodes.isNotEmpty) {
-                                              final Barcode barcode = barcodes.first;
-                                              debugPrint('Barcode found! ${barcode.rawValue}');
-                                              // productCode = barcode.rawValue!;
-                                              productCodeController.text = barcode.rawValue!;
-                                              // globalKey.currentState!.save();
+                                context: context,
+                                useSafeArea: true,
+                                builder: (context1) {
+                                  MobileScannerController controller = MobileScannerController(
+                                    torchEnabled: false,
+                                    returnImage: false,
+                                  );
+                                  return Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadiusDirectional.circular(6.0),
+                                    ),
+                                    child: Column(
+                                      children: [
+                                        AppBar(
+                                          backgroundColor: Colors.transparent,
+                                          iconTheme: const IconThemeData(color: Colors.white),
+                                          leading: IconButton(
+                                            icon: const Icon(Icons.arrow_back),
+                                            onPressed: () {
                                               Navigator.pop(context1);
-                                            }
-                                          },
+                                            },
+                                          ),
                                         ),
-                                      ),
-                                    ],
-                                  ),
-                                );
-                              },
+                                        Expanded(
+                                          child: MobileScanner(
+                                            fit: BoxFit.contain,
+                                            controller: controller,
+                                            onDetect: (capture) {
+                                              final List<Barcode> barcodes = capture.barcodes;
+
+                                              if (barcodes.isNotEmpty) {
+                                                final Barcode barcode = barcodes.first;
+                                                debugPrint('Barcode found! ${barcode.rawValue}');
+                                                // productCode = barcode.rawValue!;
+                                                productCodeController.text = barcode.rawValue!;
+                                                // globalKey.currentState!.save();
+                                                Navigator.pop(context1);
+                                              }
+                                            },
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  );
+                                },
                               );
                             },
                             child: Container(
@@ -421,8 +427,8 @@ class _AddProductState extends State<AddProduct> {
                             decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).stock,
-                             // hintText: 'Enter stock',
-                              hintText:lang.S.of(context).enterStock,
+                              // hintText: 'Enter stock',
+                              hintText: lang.S.of(context).enterStock,
                               border: const OutlineInputBorder(),
                             ),
                           ),
@@ -438,7 +444,9 @@ class _AddProductState extends State<AddProduct> {
                               return null;
                             },
                             onTap: () async {
-                              selectedUnit = await const UnitList(isFromProductList: false,).launch(context);
+                              selectedUnit = await const UnitList(
+                                isFromProductList: false,
+                              ).launch(context);
                               setState(() {
                                 productUnitController.text = selectedUnit?.unitName ?? '';
                               });
@@ -448,7 +456,7 @@ class _AddProductState extends State<AddProduct> {
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               //labelText: 'Product Unit',
                               labelText: lang.S.of(context).productUnit,
-                             // hintText: 'Select Product Unit',
+                              // hintText: 'Select Product Unit',
                               hintText: lang.S.of(context).selectProductUnit,
                               border: const OutlineInputBorder(),
                             ),
@@ -479,7 +487,7 @@ class _AddProductState extends State<AddProduct> {
                             decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).purchasePrice,
-                             // hintText: 'Enter Purchase price',
+                              // hintText: 'Enter Purchase price',
                               hintText: lang.S.of(context).enterPurchasePrice,
                               border: const OutlineInputBorder(),
                             ),
@@ -736,9 +744,9 @@ class _AddProductState extends State<AddProduct> {
                         bool result = await InternetConnectionChecker().hasConnection;
                         if (result) {
                           ProductRepo product = ProductRepo();
-                          EasyLoading.show(status:
-                          lang.S.of(context).adding,
-                          //'Adding..'
+                          EasyLoading.show(
+                            status: lang.S.of(context).adding,
+                            //'Adding..'
                           );
                           await product.addProduct(
                             ref: ref,
@@ -764,9 +772,9 @@ class _AddProductState extends State<AddProduct> {
                           );
                         } else {
                           try {
-                            EasyLoading.show(status:
-                                lang.S.of(context).loading,
-                           // 'Loading...',
+                            EasyLoading.show(
+                                status: lang.S.of(context).loading,
+                                // 'Loading...',
                                 dismissOnTap: false);
                             Future.delayed(const Duration(milliseconds: 100), () {
                               const Home().launch(context, isNewTask: true);

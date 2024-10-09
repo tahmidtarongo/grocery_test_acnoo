@@ -1,5 +1,3 @@
-
-
 class CategoryModel {
   CategoryModel({
     this.id,
@@ -60,7 +58,6 @@ class CategoryModel {
     return map;
   }
 }
-
 
 class GetCategoryAndVariationModel {
   GetCategoryAndVariationModel({required this.categoryName, required this.variations});

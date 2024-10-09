@@ -5,6 +5,7 @@ import 'package:mobile_pos/Screens/Products/update_product.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:mobile_pos/currency.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
+
 class ProductDetails extends StatefulWidget {
   const ProductDetails({
     Key? key,
@@ -23,8 +24,8 @@ class _ProductDetailsState extends State<ProductDetails> {
         backgroundColor: kWhite,
         surfaceTintColor: kWhite,
         title: Text(
-         lang.S.of(context).productDetails,
-         //'Product Details',
+          lang.S.of(context).productDetails,
+          //'Product Details',
           style: GoogleFonts.poppins(
             color: kTitleColor,
           ),
@@ -45,7 +46,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                     ),
                     Text(
                       lang.S.of(context).edit,
-                     // 'Edit',
+                      // 'Edit',
                       style: gTextStyle.copyWith(fontSize: 13, color: kMainColor),
                     )
                   ],
@@ -70,7 +71,9 @@ class _ProductDetailsState extends State<ProductDetails> {
                   height: 290,
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5), color: const Color(0xffFEF0F1), image: const DecorationImage(fit: BoxFit.cover, image: NetworkImage('https://tinyurl.com/3tme92c2'))),
+                      borderRadius: BorderRadius.circular(5),
+                      color: const Color(0xffFEF0F1),
+                      image: const DecorationImage(fit: BoxFit.cover, image: NetworkImage('https://tinyurl.com/3tme92c2'))),
                 ),
                 const SizedBox(
                   height: 20,
@@ -104,8 +107,8 @@ class _ProductDetailsState extends State<ProductDetails> {
                   height: 20,
                 ),
                 Text(
-                 lang.S.of(context).details,
-                 // 'Details',
+                  lang.S.of(context).details,
+                  // 'Details',
                   style: gTextStyle.copyWith(fontWeight: FontWeight.bold, color: kTitleColor),
                 ),
                 const SizedBox(
@@ -148,7 +151,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                             ),
                             Text(
                               lang.S.of(context).wholeSalePrice,
-                            //  'Wholesale price',
+                              //  'Wholesale price',
                               style: gTextStyle.copyWith(color: kTitleColor, fontSize: 16),
                             ),
                             Text(

@@ -131,12 +131,14 @@ class _UnitListState extends State<UnitList> {
                                               Row(
                                                 children: [
                                                   IconButton(
-                                                     visualDensity:const VisualDensity(horizontal: -4),
+                                                      visualDensity: const VisualDensity(horizontal: -4),
                                                       onPressed: () {
                                                         Navigator.push(
                                                             context,
                                                             MaterialPageRoute(
-                                                              builder: (context) =>  AddUnits(unit: data[i],),
+                                                              builder: (context) => AddUnits(
+                                                                unit: data[i],
+                                                              ),
                                                             ));
                                                       },
                                                       icon: const Icon(Icons.edit)),
@@ -165,11 +167,11 @@ class _UnitListState extends State<UnitList> {
                                   )
                                 : Container();
                           })
-                      :  Padding(
+                      : Padding(
                           padding: EdgeInsets.all(20.0),
                           child: Text(
                             lang.S.of(context).noDataFound,
-                              //'No Data Found'
+                            //'No Data Found'
                           ),
                         );
                 }, error: (_, __) {

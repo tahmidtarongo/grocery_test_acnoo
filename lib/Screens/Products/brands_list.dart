@@ -131,12 +131,14 @@ class _BrandsListState extends State<BrandsList> {
                                                         Navigator.push(
                                                             context,
                                                             MaterialPageRoute(
-                                                              builder: (context) =>  AddBrands(brand: data[i],),
+                                                              builder: (context) => AddBrands(
+                                                                brand: data[i],
+                                                              ),
                                                             ));
                                                       },
                                                       icon: const Icon(Icons.edit)),
                                                   IconButton(
-                                                    visualDensity: const VisualDensity(horizontal: -4),
+                                                      visualDensity: const VisualDensity(horizontal: -4),
                                                       onPressed: () async {
                                                         bool confirmDelete = await showDeleteAlert(context: context, itemsName: 'brand');
                                                         if (confirmDelete) {
@@ -161,11 +163,11 @@ class _BrandsListState extends State<BrandsList> {
                                   )
                                 : Container();
                           })
-                      :  Padding(
+                      : Padding(
                           padding: EdgeInsets.all(20.0),
                           child: Text(
                             lang.S.of(context).noDataFound,
-                              //'No Data Found'
+                            //'No Data Found'
                           ),
                         );
                 }, error: (_, __) {

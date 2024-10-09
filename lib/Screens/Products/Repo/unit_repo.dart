@@ -77,7 +77,7 @@ class UnitsRepo {
         'Authorization': await getAuthToken(),
       }, body: {
         'unitName': name,
-        '_method':'put',
+        '_method': 'put',
       });
       final parsedData = jsonDecode(responseData.body);
 

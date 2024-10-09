@@ -57,7 +57,7 @@ class _CategoryListState extends State<CategoryList> {
                     child: AppTextField(
                       textFieldType: TextFieldType.NAME,
                       decoration: InputDecoration(
-                        border:  const OutlineInputBorder(),
+                        border: const OutlineInputBorder(),
                         //hintText: 'Search',
                         hintText: lang.S.of(context).search,
                         prefixIcon: Icon(
@@ -153,8 +153,8 @@ class _CategoryListState extends State<CategoryList> {
                                                         },
                                                         icon: const Icon(Icons.edit)),
                                                     IconButton(
-                                                      visualDensity: const VisualDensity(horizontal: -4),
-                                                       padding: EdgeInsets.zero,
+                                                        visualDensity: const VisualDensity(horizontal: -4),
+                                                        padding: EdgeInsets.zero,
                                                         onPressed: () async {
                                                           bool confirmDelete = await showDeleteAlert(context: context, itemsName: 'category');
                                                           if (confirmDelete) {
@@ -179,11 +179,11 @@ class _CategoryListState extends State<CategoryList> {
                                     )
                                   : Container();
                             })
-                        :  Padding(
+                        : Padding(
                             padding: const EdgeInsets.all(20.0),
                             child: Text(
                               lang.S.of(context).noDataFound,
-                                //'No Data Found'
+                              //'No Data Found'
                             ),
                           ),
                   );

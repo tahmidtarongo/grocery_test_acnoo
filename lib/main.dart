@@ -70,7 +70,7 @@ class MyApp extends StatelessWidget {
                   '/forgotPassword': (context) => const ForgotPassword(),
                   '/home': (context) => const Home(),
                   '/profile': (context) => const ProfileScreen(),
-                  '/AddProducts': (context) => AddProduct(),
+                  '/AddProducts': (context) => const AddProduct(),
                   '/UpdateProducts': (context) => const UpdateProduct(),
                   '/Products': (context) => const ProductList(),
                   '/salesCustomer': (context) => const SalesContact(),

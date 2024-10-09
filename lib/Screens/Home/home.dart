@@ -80,10 +80,9 @@ class _HomeState extends State<Home> {
         body: PageView(
           controller: pageController,
           onPageChanged: (v) {
-            print(v);
             tabIndex = v;
           },
-          children: [const HomeScreen(), const DashboardScreen(), AddProduct(), const Reports(), const SettingScreen()],
+          children: const [HomeScreen(), DashboardScreen(), AddProduct(), Reports(), SettingScreen()],
         ),
         bottomNavigationBar: CircleNavBar(
           activeIcons: [

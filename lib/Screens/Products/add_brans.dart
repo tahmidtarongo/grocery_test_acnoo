@@ -74,7 +74,7 @@ class _AddBrandsState extends State<AddBrands> {
                   child: TextFormField(
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                       // return 'Please enter a valid brand name';
+                        // return 'Please enter a valid brand name';
                         return lang.S.of(context).pleaseEnterAValidBrandName;
                       }
                       return null;
@@ -82,7 +82,7 @@ class _AddBrandsState extends State<AddBrands> {
                     controller: brandController,
                     decoration: InputDecoration(
                       border: const OutlineInputBorder(),
-                     // hintText: 'Enter a brand name',
+                      // hintText: 'Enter a brand name',
                       hintText: lang.S.of(context).enterABrandName,
                       floatingLabelBehavior: FloatingLabelBehavior.always,
                       labelText: lang.S.of(context).brandName,
@@ -97,7 +97,7 @@ class _AddBrandsState extends State<AddBrands> {
                       BrandsRepo brandRepo = BrandsRepo();
                       widget.brand == null
                           ? await brandRepo.addBrand(ref: ref, context: context, name: brandController.text)
-                          : await brandRepo.editBrand(ref: ref,id: widget.brand?.id??0, context: context, name: brandController.text);
+                          : await brandRepo.editBrand(ref: ref, id: widget.brand?.id ?? 0, context: context, name: brandController.text);
                     }
                   },
                   buttonTextColor: Colors.white,

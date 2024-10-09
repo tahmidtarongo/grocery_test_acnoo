@@ -22,9 +22,9 @@ import 'category_list_screen.dart';
 
 // ignore: must_be_immutable
 class UpdateProduct extends StatefulWidget {
-  const UpdateProduct({Key? key,  this.productModel}) : super(key: key);
+  const UpdateProduct({Key? key, this.productModel}) : super(key: key);
 
- final ProductModel ? productModel;
+  final ProductModel? productModel;
 
   @override
   // ignore: library_private_types_in_public_api
@@ -204,7 +204,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                       decoration: kInputDecoration.copyWith(
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         labelText: lang.S.of(context).productName,
-                       // hintText: 'Enter product Name',
+                        // hintText: 'Enter product Name',
                         hintText: lang.S.of(context).enterProductName,
                         border: const OutlineInputBorder(),
                       ),
@@ -225,18 +225,20 @@ class _UpdateProductState extends State<UpdateProduct> {
                         return null;
                       },
                       onTap: () async {
-                        data = await const CategoryList(isFromProductList: false,).launch(context);
+                        data = await const CategoryList(
+                          isFromProductList: false,
+                        ).launch(context);
                         setState(() {
                           categoryController.text = data.categoryName.categoryName ?? '';
                           selectedCategory = data.categoryName;
                         });
                       },
-                      decoration:  kInputDecoration.copyWith(
+                      decoration: kInputDecoration.copyWith(
                         suffixIcon: const Icon(Icons.keyboard_arrow_down),
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         //labelText: 'Product Category',
                         labelText: lang.S.of(context).productCategory,
-                       // hintText: 'Select Product Category',
+                        // hintText: 'Select Product Category',
                         hintText: lang.S.of(context).selectProductCategory,
                         border: const OutlineInputBorder(),
                       ),
@@ -279,7 +281,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).size,
                               //hintText: 'Enter Size',
-                              hintText:lang.S.of(context).enterSize,
+                              hintText: lang.S.of(context).enterSize,
                               border: const OutlineInputBorder(),
                             ),
                           ),
@@ -364,17 +366,19 @@ class _UpdateProductState extends State<UpdateProduct> {
                         return null;
                       },
                       onTap: () async {
-                        selectedBrand = await const BrandsList(isFromProductList: false,).launch(context);
+                        selectedBrand = await const BrandsList(
+                          isFromProductList: false,
+                        ).launch(context);
                         setState(() {
                           brandController.text = selectedBrand?.brandName ?? '';
                         });
                       },
-                      decoration:  kInputDecoration.copyWith(
+                      decoration: kInputDecoration.copyWith(
                         suffixIcon: const Icon(Icons.keyboard_arrow_down),
                         floatingLabelBehavior: FloatingLabelBehavior.always,
-                       // labelText: 'Product Brand',
+                        // labelText: 'Product Brand',
                         labelText: lang.S.of(context).productBrand,
-                       // hintText: 'Select a brand',
+                        // hintText: 'Select a brand',
                         hintText: lang.S.of(context).selectABrand,
                         border: const OutlineInputBorder(),
                       ),
@@ -433,7 +437,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                             controller: productStockController,
                             validator: (value) {
                               if (value == null || value.isEmpty) {
-                               // return 'Enter a valid stock';
+                                // return 'Enter a valid stock';
                                 return lang.S.of(context).enterAValidStock;
                               }
                               return null;
@@ -443,7 +447,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                             decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).stock,
-                             // hintText: 'Enter stock',
+                              // hintText: 'Enter stock',
                               hintText: lang.S.of(context).enterStock,
                               border: const OutlineInputBorder(),
                             ),
@@ -460,7 +464,9 @@ class _UpdateProductState extends State<UpdateProduct> {
                               return null;
                             },
                             onTap: () async {
-                              selectedUnit = await const UnitList(isFromProductList: false,).launch(context);
+                              selectedUnit = await const UnitList(
+                                isFromProductList: false,
+                              ).launch(context);
                               setState(() {
                                 productUnitController.text = selectedUnit?.unitName ?? '';
                               });
@@ -469,7 +475,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                               suffixIcon: const Icon(Icons.keyboard_arrow_down),
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               //labelText: 'Product Unit',
-                              labelText:lang.S.of(context).productUnit,
+                              labelText: lang.S.of(context).productUnit,
                               //hintText: 'Select Product Unit',
                               hintText: lang.S.of(context).selectProductUnit,
                               border: const OutlineInputBorder(),
@@ -549,7 +555,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                             decoration: kInputDecoration.copyWith(
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).wholeSalePrice,
-                             // hintText: 'Enter wholesale price',
+                              // hintText: 'Enter wholesale price',
                               hintText: lang.S.of(context).enterWholesalePrice,
                               border: const OutlineInputBorder(),
                             ),
@@ -567,7 +573,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                               floatingLabelBehavior: FloatingLabelBehavior.always,
                               labelText: lang.S.of(context).dealerPrice,
                               //hintText: 'Enter dealer price',
-                              hintText:lang.S.of(context).enterDealerPrice,
+                              hintText: lang.S.of(context).enterDealerPrice,
                               border: const OutlineInputBorder(),
                             ),
                           ),
@@ -587,7 +593,7 @@ class _UpdateProductState extends State<UpdateProduct> {
                           decoration: kInputDecoration.copyWith(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             labelText: lang.S.of(context).discount,
-                           // hintText: 'Enter discount',
+                            // hintText: 'Enter discount',
                             hintText: lang.S.of(context).enterDiscount,
                             border: const OutlineInputBorder(),
                           ),

@@ -18,7 +18,7 @@ import '../../Provider/profile_provider.dart';
 import '../../constant.dart';
 import '../../model/add_to_cart_model.dart';
 import '../../model/business_info_model.dart' as business;
-import '../../widget/no_data_found.dart';
+import '../../GlobalComponents/no_data_found.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -96,38 +96,88 @@ class _HomeScreenState extends State<HomeScreen> {
 
             ///______Drawer__________________________
             drawer: Drawer(
-              child: ListView(
-                padding: EdgeInsets.zero,
-                children: List.generate(
-                  drawerMenuList.length,
-                  (index) {
-                    return ListTile(
-                      onTap: () {
-                        if (checkPermission(item: drawerMenuList[index].route, visibility: details.user?.visibility)) {
-                          Navigator.of(context).pushNamed('/${drawerMenuList[index].route}');
-                        } else {
-                          EasyLoading.showError(
-                            lang.S.of(context).permissionNotGranted,
-                            // 'Permission not granted!'
-                          );
-                        }
-                      },
-                      leading: SvgPicture.asset(
-                        drawerMenuList[index].image,
-                        height: 25,
-                        width: 25,
-                      ),
-                      title: Text(drawerMenuList[index].title),
-                      trailing: const Icon(
-                        Icons.arrow_forward_ios,
-                        size: 18,
-                      ),
-                    );
-                  },
-                ),
-                // children: <Widget>[
+              child: Column(
+                children: [
+                  Container(
+                    height: 80,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                      color: kGreyTextColor.withOpacity(0.2),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                'images/logo.png',
+                                height: 35,
+                                width: 35,
+                                fit: BoxFit.cover,
+                              ),
+                              const SizedBox(width: 10),
+                              const Text(
+                                appsName,
+                                style: TextStyle(fontSize: 18),
+                              ),
+                            ],
+                          ),
+                        ),
+                        IconButton(
+                            onPressed: () {
+                              _scaffoldKey.currentState?.closeDrawer();
+                            },
+                            icon: const Icon(Icons.close))
+                      ],
+                    ),
+                  ),
+                  SingleChildScrollView(
+                    child: SizedBox(
+                      height: MediaQuery.of(context).size.height - (220),
+                      child: ListView(
+                        padding: EdgeInsets.zero,
+                        children: List.generate(
+                          drawerMenuList.length,
+                          (index) {
+                            return ListTile(
+                              onTap: () {
+                                if (drawerMenuList[index].route == 'Home') {
+                                  _scaffoldKey.currentState?.closeDrawer();
+                                  return;
+                                }
+                                if (checkPermission(item: drawerMenuList[index].route, visibility: details.user?.visibility)) {
+                                  Navigator.of(context).pushNamed('/${drawerMenuList[index].route}');
+                                } else {
+                                  EasyLoading.showError(
+                                    lang.S.of(context).permissionNotGranted,
+                                    // 'Permission not granted!'
+                                  );
+                                }
+                              },
+                              leading: SvgPicture.asset(
+                                drawerMenuList[index].image,
+                                height: 25,
+                                width: 25,
+                              ),
+                              title: Text(drawerMenuList[index].title),
+                              trailing: const Icon(
+                                Icons.arrow_forward_ios,
+                                size: 18,
+                              ),
+                            );
+                          },
+                        ),
+                        // children: <Widget>[
 
-                // ],
+                        // ],
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
 
@@ -549,7 +599,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                   ),
                                 )
-                              : const EmptyListWidget(title: 'No Product Found',),
+                              : const EmptyListWidget(
+                                  title: 'No Product Found',
+                                ),
                         ],
                       );
                     },
