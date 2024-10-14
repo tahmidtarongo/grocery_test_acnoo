@@ -3,38 +3,37 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
 import 'package:intl/intl.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
-import 'package:mobile_pos/Screens/Expense/Model/expanse_category.dart';
-import 'package:mobile_pos/Screens/Expense/expense_category_list.dart';
+import 'package:mobile_pos/Screens/Income/Model/income_category.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../constant.dart';
-import 'Repo/expanse_repo.dart';
+import 'Repo/income_repo.dart';
+import 'income_category_list.dart';
 
 // ignore: must_be_immutable
-class AddExpense extends StatefulWidget {
-  const AddExpense({
+class AddIncome extends StatefulWidget {
+  const AddIncome({
     Key? key,
   }) : super(key: key);
 
   @override
   // ignore: library_private_types_in_public_api
-  _AddExpenseState createState() => _AddExpenseState();
+  _AddIncomeState createState() => _AddIncomeState();
 }
 
-class _AddExpenseState extends State<AddExpense> {
-  ExpenseCategory? selectedCategory;
+class _AddIncomeState extends State<AddIncome> {
+  IncomeCategory? selectedCategory;
   final dateController = TextEditingController();
-  TextEditingController expanseForNameController = TextEditingController();
-  TextEditingController expanseAmountController = TextEditingController();
-  TextEditingController expanseNoteController = TextEditingController();
-  TextEditingController expanseRefController = TextEditingController();
+  TextEditingController incomeForNameController = TextEditingController();
+  TextEditingController incomeAmountController = TextEditingController();
+  TextEditingController incomeNoteController = TextEditingController();
+  TextEditingController incomeRefController = TextEditingController();
   List<String> paymentMethods = [
     //lang.S.of(context).cancel,
     'Cash',
@@ -101,7 +100,7 @@ class _AddExpenseState extends State<AddExpense> {
         appBar: AppBar(
           backgroundColor: Colors.white,
           title: Text(
-            lang.S.of(context).addExpense,
+            'Add Income',
             style: GoogleFonts.poppins(
               color: Colors.black,
             ),
@@ -127,7 +126,7 @@ class _AddExpenseState extends State<AddExpense> {
                               suffixIcon: const Icon(IconlyLight.calendar, color: kGreyTextColor),
                               // enabledBorder: const OutlineInputBorder(),
                               contentPadding: const EdgeInsets.all(20),
-                              labelText: lang.S.of(context).expenseDate,
+                              labelText: 'Income date',
                               hintText: lang.S.of(context).enterExpenseDate,
                             ),
                             child: Text(
@@ -148,7 +147,7 @@ class _AddExpenseState extends State<AddExpense> {
                         ),
                         child: GestureDetector(
                           onTap: () async {
-                            selectedCategory = await const ExpenseCategoryList().launch(context);
+                            selectedCategory = await const IncomeCategoryList().launch(context);
                             setState(() {});
                           },
                           child: Row(
@@ -169,7 +168,7 @@ class _AddExpenseState extends State<AddExpense> {
                       ///________Expense_for_______________________________________________
                       TextFormField(
                         showCursor: true,
-                        controller: expanseForNameController,
+                        controller: incomeForNameController,
                         validator: (value) {
                           if (value.isEmptyOrNull) {
                             //return 'Please Enter Name';
@@ -178,12 +177,12 @@ class _AddExpenseState extends State<AddExpense> {
                           return null;
                         },
                         onSaved: (value) {
-                          expanseForNameController.text = value!;
+                          incomeForNameController.text = value!;
                         },
                         decoration: kInputDecoration.copyWith(
                           floatingLabelBehavior: FloatingLabelBehavior.always,
                           // border: const OutlineInputBorder(),
-                          labelText: lang.S.of(context).expenseFor,
+                          labelText: 'Income for',
                           hintText: lang.S.of(context).enterName,
                         ),
                       ),
@@ -209,7 +208,7 @@ class _AddExpenseState extends State<AddExpense> {
                       ///_________________Amount_____________________________
                       TextFormField(
                         showCursor: true,
-                        controller: expanseAmountController,
+                        controller: incomeAmountController,
                         inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
                         validator: (value) {
                           if (value.isEmptyOrNull) {
@@ -219,7 +218,7 @@ class _AddExpenseState extends State<AddExpense> {
                           return null;
                         },
                         onSaved: (value) {
-                          expanseAmountController.text = value!;
+                          incomeAmountController.text = value!;
                         },
                         decoration: kInputDecoration.copyWith(
                           border: const OutlineInputBorder(),
@@ -238,12 +237,12 @@ class _AddExpenseState extends State<AddExpense> {
                       ///_______reference_________________________________
                       TextFormField(
                         showCursor: true,
-                        controller: expanseRefController,
+                        controller: incomeRefController,
                         validator: (value) {
                           return null;
                         },
                         onSaved: (value) {
-                          expanseRefController.text = value!;
+                          incomeRefController.text = value!;
                         },
                         decoration: kInputDecoration.copyWith(
                           border: const OutlineInputBorder(),
@@ -257,7 +256,7 @@ class _AddExpenseState extends State<AddExpense> {
                       ///_________note____________________________________________________
                       TextFormField(
                         showCursor: true,
-                        controller: expanseNoteController,
+                        controller: incomeNoteController,
                         validator: (value) {
                           if (value == null) {
                             //return 'please Inter Amount';
@@ -266,7 +265,7 @@ class _AddExpenseState extends State<AddExpense> {
                           return null;
                         },
                         onSaved: (value) {
-                          expanseNoteController.text = value!;
+                          incomeNoteController.text = value!;
                         },
                         decoration: kInputDecoration.copyWith(
                           border: const OutlineInputBorder(),
@@ -285,18 +284,18 @@ class _AddExpenseState extends State<AddExpense> {
                           if (validateAndSave()) {
                             if (selectedCategory != null) {
                               EasyLoading.show();
-                              ExpenseRepo repo = ExpenseRepo();
+                              IncomeRepo repo = IncomeRepo();
 
-                              await repo.createExpense(
+                              await repo.createIncome(
                                 ref: ref,
                                 context: context,
-                                amount: num.tryParse(expanseAmountController.text) ?? 0,
+                                amount: num.tryParse(incomeAmountController.text) ?? 0,
                                 expenseCategoryId: selectedCategory?.id ?? 0,
-                                expanseFor: expanseForNameController.text,
+                                expanseFor: incomeForNameController.text,
                                 paymentType: selectedPaymentType,
-                                referenceNo: expanseRefController.text,
+                                referenceNo: incomeRefController.text,
                                 expenseDate: selectedDate.toString(),
-                                note: expanseNoteController.text,
+                                note: incomeNoteController.text,
                               );
                             } else {
                               EasyLoading.showError(

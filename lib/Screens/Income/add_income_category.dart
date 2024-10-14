@@ -6,19 +6,20 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/Screens/Expense/Repo/expanse_category_repo.dart';
+import 'package:mobile_pos/Screens/Income/Repo/income_category_repo.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
-class AddExpenseCategory extends StatefulWidget {
-  const AddExpenseCategory({Key? key}) : super(key: key);
+class AddIncomeCategory extends StatefulWidget {
+  const AddIncomeCategory({Key? key}) : super(key: key);
 
   @override
   // ignore: library_private_types_in_public_api
-  _AddExpenseCategoryState createState() => _AddExpenseCategoryState();
+  _AddIncomeCategoryState createState() => _AddIncomeCategoryState();
 }
 
-class _AddExpenseCategoryState extends State<AddExpenseCategory> {
+class _AddIncomeCategoryState extends State<AddIncomeCategory> {
   bool showProgress = false;
 
   TextEditingController nameController = TextEditingController();
@@ -39,7 +40,7 @@ class _AddExpenseCategoryState extends State<AddExpenseCategory> {
                 image: AssetImage('images/x.png'),
               )),
           title: Text(
-            lang.S.of(context).addExpenseCat,
+            'Add Income Category',
             style: GoogleFonts.poppins(
               color: Colors.black,
               fontSize: 20.0,
@@ -69,14 +70,13 @@ class _AddExpenseCategoryState extends State<AddExpenseCategory> {
                     validator: (value) {
                       if (value?.trim().isEmptyOrNull ?? true) {
                         //return 'Enter expanse category name';
-                        return lang.S.of(context).enterExpanseCategoryName;
+                        return 'Enter income category name';
                       }
                       return null;
                     },
                     controller: nameController,
                     decoration: InputDecoration(
                       border: const OutlineInputBorder(),
-                      hintText: lang.S.of(context).fashions,
                       floatingLabelBehavior: FloatingLabelBehavior.always,
                       labelText: lang.S.of(context).categoryName,
                     ),
@@ -89,8 +89,8 @@ class _AddExpenseCategoryState extends State<AddExpenseCategory> {
                   onPressed: () async {
                     if (key.currentState?.validate() ?? false) {
                       EasyLoading.show();
-                      final categoryRepo = ExpanseCategoryRepo();
-                      await categoryRepo.addExpanseCategory(
+                      final incomeRepo = IncomeCategoryRepo();
+                      await incomeRepo.addIncomeCategory(
                         ref: ref,
                         context: context,
                         categoryName: nameController.text.trim(),

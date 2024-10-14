@@ -7,23 +7,24 @@ import 'package:nb_utils/nb_utils.dart';
 
 import '../../GlobalComponents/button_global.dart';
 import '../../constant.dart';
-import 'Providers/expense_category_proivder.dart';
+import 'Providers/income_category_provider.dart';
+import 'add_income_category.dart';
 
-class ExpenseCategoryList extends StatefulWidget {
-  const ExpenseCategoryList({Key? key, this.mainContext}) : super(key: key);
+class IncomeCategoryList extends StatefulWidget {
+  const IncomeCategoryList({Key? key, this.mainContext}) : super(key: key);
 
   final BuildContext? mainContext;
 
   @override
   // ignore: library_private_types_in_public_api
-  _ExpenseCategoryListState createState() => _ExpenseCategoryListState();
+  _IncomeCategoryListState createState() => _IncomeCategoryListState();
 }
 
-class _ExpenseCategoryListState extends State<ExpenseCategoryList> {
+class _IncomeCategoryListState extends State<IncomeCategoryList> {
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, ref, _) {
-      final data = ref.watch(expanseCategoryProvider);
+      final data = ref.watch(incomeCategoryProvider);
       return Scaffold(
         backgroundColor: kWhite,
         appBar: AppBar(
@@ -35,7 +36,7 @@ class _ExpenseCategoryListState extends State<ExpenseCategoryList> {
                 image: AssetImage('images/x.png'),
               )),
           title: Text(
-            lang.S.of(context).expenseCat,
+            'Income Categories',
             style: GoogleFonts.poppins(
               color: Colors.black,
               fontSize: 20.0,
@@ -74,7 +75,7 @@ class _ExpenseCategoryListState extends State<ExpenseCategoryList> {
                     flex: 1,
                     child: GestureDetector(
                       onTap: () {
-                        const AddExpenseCategory().launch(context);
+                        const AddIncomeCategory().launch(context);
                       },
                       child: Container(
                         padding: const EdgeInsets.only(left: 20.0, right: 20.0),

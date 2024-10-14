@@ -5,15 +5,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
-import 'package:mobile_pos/Screens/Expense/Model/expanse_category.dart';
-import 'package:mobile_pos/Screens/Expense/Providers/expense_category_proivder.dart';
+import 'package:mobile_pos/Screens/Income/Providers/income_category_provider.dart';
 
 import '../../../Const/api_config.dart';
 import '../../../Repository/constant_functions.dart';
+import '../Model/income_category.dart';
 
-class ExpanseCategoryRepo {
-  Future<List<ExpenseCategory>> fetchAllExpanseCategory() async {
-    final uri = Uri.parse('${APIConfig.url}/expense-categories');
+class IncomeCategoryRepo {
+  Future<List<IncomeCategory>> fetchAllIncomeCategory() async {
+    final uri = Uri.parse('${APIConfig.url}/income-categories');
 
     try {
       final response = await http.get(uri, headers: {
@@ -24,7 +24,7 @@ class ExpanseCategoryRepo {
       if (response.statusCode == 200) {
         final parsedData = jsonDecode(response.body) as Map<String, dynamic>;
         final categoryList = parsedData['data'] as List<dynamic>;
-        return categoryList.map((category) => ExpenseCategory.fromJson(category)).toList();
+        return categoryList.map((category) => IncomeCategory.fromJson(category)).toList();
       } else {
         // Handle specific error cases based on response codes
         throw Exception('Failed to fetch categories: ${response.statusCode}');
@@ -35,12 +35,12 @@ class ExpanseCategoryRepo {
     }
   }
 
-  Future<void> addExpanseCategory({
+  Future<void> addIncomeCategory({
     required WidgetRef ref,
     required BuildContext context,
     required String categoryName,
   }) async {
-    final uri = Uri.parse('${APIConfig.url}/expense-categories');
+    final uri = Uri.parse('${APIConfig.url}/income-categories');
 
     var responseData = await http.post(uri, headers: {
       "Accept": 'application/json',
@@ -56,7 +56,7 @@ class ExpanseCategoryRepo {
 
       if (responseData.statusCode == 200) {
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Added successful!')));
-        var data1 = ref.refresh(expanseCategoryProvider);
+        var data1 = ref.refresh(incomeCategoryProvider);
         Navigator.pop(context);
       } else {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Category creation failed: ${parsedData['message']}')));

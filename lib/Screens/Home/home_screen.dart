@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
     DrawerManuTile(title: 'Due List', image: 'assets/grocery/due_list.svg', route: 'Due List'),
     DrawerManuTile(title: 'Loss/Profit', image: 'assets/grocery/loss_profit.svg', route: 'Loss/Profit'),
     DrawerManuTile(title: 'Stocks', image: 'assets/grocery/stock.svg', route: "Stock"),
-    // DrawerManuTile(title: 'Ledger', image: 'assets/grocery/ledger.svg',route: ''),
+    DrawerManuTile(title: 'Income', image: 'assets/incomeReport.svg', route: 'Income'),
     DrawerManuTile(title: 'Expense', image: 'assets/grocery/expense.svg', route: 'Expense'),
     DrawerManuTile(title: 'Reports', image: 'assets/grocery/reports.svg', route: 'Reports'),
   ];
@@ -62,6 +62,8 @@ class _HomeScreenState extends State<HomeScreen> {
     } else if (item == 'Purchase List' && (visibility?.purchaseListPermission ?? true)) {
       return true;
     } else if (item == 'Loss/Profit' && (visibility?.lossProfitPermission ?? true)) {
+      return true;
+    }else if (item == 'Income' && (visibility?.addIncomePermission ?? true)) {
       return true;
     } else if (item == 'Expense' && (visibility?.addExpensePermission ?? true)) {
       return true;

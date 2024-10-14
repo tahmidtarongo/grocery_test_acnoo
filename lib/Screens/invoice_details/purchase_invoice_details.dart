@@ -228,14 +228,13 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                             style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
                           ),
                         ),
-
                         SizedBox(
                           width: (context.width() - (context.width() / 2.4 + 20)) / 3,
                           child: Text(
                             lang.S.of(context).unitPirce,
                             overflow: TextOverflow.ellipsis,
                             maxLines: 1,
-                            textAlign:TextAlign.center,
+                            textAlign: TextAlign.center,
                             style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
                           ),
                         ),
@@ -244,7 +243,7 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                           child: Text(
                             lang.S.of(context).quantity,
                             maxLines: 1,
-                            textAlign:TextAlign.center,
+                            textAlign: TextAlign.center,
                             overflow: TextOverflow.ellipsis,
                             style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
                           ),
@@ -255,7 +254,7 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                             lang.S.of(context).totalPrice,
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
-                            textAlign:TextAlign.center,
+                            textAlign: TextAlign.center,
                             style: kTextStyle.copyWith(color: kTitleColor, fontWeight: FontWeight.bold),
                           ),
                         ),
@@ -292,7 +291,7 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                                   child: Text(
                                     '$currency ${widget.transitionModel.details![i].productPurchasePrice}',
                                     maxLines: 1,
-                                    textAlign:TextAlign.center,
+                                    textAlign: TextAlign.center,
                                     style: kTextStyle.copyWith(color: kGreyTextColor),
                                   ),
                                 ),
@@ -301,7 +300,7 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                                   child: Text(
                                     widget.transitionModel.details![i].quantities.toString(),
                                     maxLines: 1,
-                                    textAlign:TextAlign.center,
+                                    textAlign: TextAlign.center,
                                     style: kTextStyle.copyWith(color: kGreyTextColor),
                                   ),
                                 ),
@@ -310,7 +309,7 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                                   child: Text(
                                     '$currency ${(widget.transitionModel.details![i].productPurchasePrice ?? 0) * (widget.transitionModel.details![i].quantities ?? 0)}',
                                     maxLines: 1,
-                                    textAlign:TextAlign.center,
+                                    textAlign: TextAlign.center,
                                     style: kTextStyle.copyWith(color: kTitleColor),
                                   ),
                                 ),
@@ -323,6 +322,7 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                     thickness: 1.0,
                     color: kGreyTextColor.withOpacity(0.1),
                   ),
+
                   ///___________________________________________________
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -512,9 +512,10 @@ class _PurchaseInvoiceDetailsState extends State<PurchaseInvoiceDetails> {
                         Radius.circular(30),
                       ),
                     ),
-                    child:  Center(
+                    child: Center(
                       child: Text(
                         lang.S.of(context).cancel,
+
                         ///'Cancel',
                         style: const TextStyle(
                           fontSize: 18,

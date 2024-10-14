@@ -23,6 +23,7 @@ import 'package:mobile_pos/Screens/stock_list/stock_list.dart';
 import 'package:provider/provider.dart' as pro;
 import 'package:shurjopay/utilities/functions.dart';
 import 'Screens/Due Calculation/due_calculation_contact_screen.dart';
+import 'Screens/Income/income_list.dart';
 import 'Screens/Loss_Profit/loss_profit_screen.dart';
 import 'Screens/Products/update_product.dart';
 import 'Screens/Purchase List/purchase_list_screen.dart';
@@ -82,6 +83,7 @@ class MyApp extends StatelessWidget {
                   '/Stock': (context) => const StockList(isFromReport: false),
                   '/Purchase': (context) => const PurchaseContacts(),
                   '/Reports': (context) => const Reports(),
+                  '/Income': (context) => const IncomeList(),
                   '/Due List': (context) => const DueCalculationContactScreen(),
                   '/PaymentOptions': (context) => const PaymentOptions(),
                   '/Sales List': (context) => const SalesListScreen(),

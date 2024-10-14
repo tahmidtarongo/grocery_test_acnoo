@@ -127,6 +127,7 @@ class User {
 class Visibility {
   Visibility({
     this.addExpensePermission,
+    this.addIncomePermission,
     this.dueListPermission,
     this.lossProfitPermission,
     this.partiesPermission,
@@ -142,6 +143,7 @@ class Visibility {
 
   Visibility.fromJson(dynamic json) {
     addExpensePermission = json['addExpensePermission'];
+    addIncomePermission = json['addIncomePermission'] ?? false;
     dueListPermission = json['dueListPermission'];
     lossProfitPermission = json['lossProfitPermission'];
     partiesPermission = json['partiesPermission'];
@@ -155,6 +157,7 @@ class Visibility {
     stockPermission = json['stockPermission'];
   }
   bool? addExpensePermission;
+  bool? addIncomePermission;
   bool? dueListPermission;
   bool? lossProfitPermission;
   bool? partiesPermission;

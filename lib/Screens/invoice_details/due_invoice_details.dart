@@ -239,10 +239,10 @@ class _DueInvoiceDetailsState extends State<DueInvoiceDetails> {
                         Radius.circular(30),
                       ),
                     ),
-                    child:  Center(
+                    child: Center(
                       child: Text(
                         lang.S.of(context).cancel,
-                       // 'Cancel',
+                        // 'Cancel',
                         style: const TextStyle(
                           fontSize: 18,
                           color: Colors.white,

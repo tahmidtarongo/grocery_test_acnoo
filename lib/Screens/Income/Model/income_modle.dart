@@ -1,48 +1,48 @@
-class Expense {
-  Expense({
+class Income {
+  Income({
     this.id,
     this.account,
     this.amount,
-    this.expenseCategoryId,
+    this.incomeCategoryId,
     this.userId,
     this.businessId,
-    this.expanseFor,
+    this.incomeFor,
     this.paymentType,
     this.referenceNo,
     this.note,
-    this.expenseDate,
+    this.incomeDate,
     this.createdAt,
     this.updatedAt,
     this.category,
   });
 
-  Expense.fromJson(dynamic json) {
+  Income.fromJson(dynamic json) {
     id = json['id'];
     account = json['account'];
-    amount = json['amount'];
-    expenseCategoryId = json['expense_category_id'];
+    amount = json['amount'] as num;
+    incomeCategoryId = json['income_category_id'];
     userId = json['user_id'];
     businessId = json['business_id'];
-    expanseFor = json['expanseFor'];
+    incomeFor = json['incomeFor'];
     paymentType = json['paymentType'];
     referenceNo = json['referenceNo'];
     note = json['note'];
-    expenseDate = json['expenseDate'];
+    incomeDate = json['incomeDate'];
     createdAt = json['created_at'];
     updatedAt = json['updated_at'];
     category = json['category'] != null ? Category.fromJson(json['category']) : null;
   }
   num? id;
-  dynamic account;
+  num? account;
   num? amount;
-  num? expenseCategoryId;
+  num? incomeCategoryId;
   num? userId;
   num? businessId;
-  String? expanseFor;
+  String? incomeFor;
   String? paymentType;
   String? referenceNo;
   String? note;
-  String? expenseDate;
+  String? incomeDate;
   String? createdAt;
   String? updatedAt;
   Category? category;
@@ -52,14 +52,14 @@ class Expense {
     map['id'] = id;
     map['account'] = account;
     map['amount'] = amount;
-    map['expense_category_id'] = expenseCategoryId;
+    map['expense_category_id'] = incomeCategoryId;
     map['user_id'] = userId;
     map['business_id'] = businessId;
-    map['expanseFor'] = expanseFor;
+    map['expanseFor'] = incomeFor;
     map['paymentType'] = paymentType;
     map['referenceNo'] = referenceNo;
     map['note'] = note;
-    map['expenseDate'] = expenseDate;
+    map['incomeDate'] = incomeDate;
     map['created_at'] = createdAt;
     map['updated_at'] = updatedAt;
     if (category != null) {
