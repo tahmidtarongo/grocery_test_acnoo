@@ -28,7 +28,10 @@ import 'Model/category_model.dart';
 class AddProduct extends StatefulWidget {
   const AddProduct({
     Key? key,
+    required this.fromHome,
   }) : super(key: key);
+
+  final bool fromHome;
 
   @override
   // ignore: library_private_types_in_public_api
@@ -59,35 +62,34 @@ class _AddProductState extends State<AddProduct> {
   TextEditingController typeController = TextEditingController();
   TextEditingController capacityController = TextEditingController();
 
+  @override
+  void dispose() {
+    // Dispose of each controller to release resources
+    nameController.dispose();
+    categoryController.dispose();
+    brandController.dispose();
+    productUnitController.dispose();
+    productStockController.dispose();
+    salePriceController.dispose();
+    discountPriceController.dispose();
+    purchasePriceController.dispose();
+    productCodeController.dispose();
+    wholeSalePriceController.dispose();
+    dealerPriceController.dispose();
+    manufacturerController.dispose();
+    sizeController.dispose();
+    colorController.dispose();
+    weightController.dispose();
+    typeController.dispose();
+    capacityController.dispose();
+
+    super.dispose();
+  }
+
   final ImagePicker _picker = ImagePicker();
   XFile? pickedImage;
   List<String> codeList = [];
   String promoCodeHint = 'Enter Product Code';
-
-  // Future<void> scanBarcodeNormal() async {
-  //   String barcodeScanRes;
-  //   try {
-  //     barcodeScanRes = await FlutterBarcodeScanner.scanBarcode('#ff6666', 'Cancel', true, ScanMode.BARCODE);
-  //   } on PlatformException {
-  //     barcodeScanRes =lang.S.of(context).failedToGetPlatformVersion;
-  //     //'Failed to get platform version.';
-  //   }
-  //   if (!mounted) return;
-  //   if (codeList.contains(barcodeScanRes)) {
-  //     EasyLoading.showError(
-  //       lang.S.of(context).thisProductAlreadyAdded,
-  //        // 'This Product Already added!'
-  //     );
-  //   } else {
-  //     if (barcodeScanRes != '-1') {
-  //       setState(() {
-  //         productCodeController.text = barcodeScanRes;
-  //         promoCodeHint = barcodeScanRes;
-  //       });
-  //     }
-  //   }
-  // }
-
   GlobalKey<FormState> key = GlobalKey();
   GetCategoryAndVariationModel data = GetCategoryAndVariationModel(variations: [], categoryName: CategoryModel());
 
@@ -644,9 +646,7 @@ class _AddProductState extends State<AddProduct> {
                                               ],
                                             ),
                                           ),
-                                          const SizedBox(
-                                            width: 40.0,
-                                          ),
+                                          const SizedBox(width: 40.0),
                                           GestureDetector(
                                             onTap: () async {
                                               pickedImage = await _picker.pickImage(source: ImageSource.camera);
@@ -749,6 +749,7 @@ class _AddProductState extends State<AddProduct> {
                             //'Adding..'
                           );
                           await product.addProduct(
+                            fromHome: widget.fromHome,
                             ref: ref,
                             context: context,
                             productName: nameController.text,
@@ -770,6 +771,29 @@ class _AddProductState extends State<AddProduct> {
                             productWholeSalePrice: wholeSalePriceController.text.isEmptyOrNull ? null : wholeSalePriceController.text,
                             image: pickedImage == null ? null : File(pickedImage!.path),
                           );
+
+                          if (widget.fromHome) {
+                            setState(() {
+                              nameController.clear();
+                              productCodeController.clear();
+                              productStockController.clear();
+                              salePriceController.clear();
+                              purchasePriceController.clear();
+                              colorController.clear();
+                              sizeController.clear();
+                              typeController.clear();
+                              weightController.clear();
+                              capacityController.clear();
+                              dealerPriceController.clear();
+                              discountPriceController.clear();
+                              manufacturerController.clear();
+                              wholeSalePriceController.clear();
+                              selectedCategory = null;
+                              selectedBrand = null;
+                              selectedUnit = null;
+                              pickedImage = null;
+                            });
+                          }
                         } else {
                           try {
                             EasyLoading.show(
@@ -788,6 +812,7 @@ class _AddProductState extends State<AddProduct> {
                     },
                     buttonTextColor: Colors.white,
                   ),
+                  const SizedBox(height: 20),
                 ],
               ),
             ),

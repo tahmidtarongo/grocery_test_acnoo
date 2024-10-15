@@ -83,8 +83,7 @@ class _ReportsState extends State<Reports> {
                 },
                 iconPath: 'assets/stock.svg',
                 //title: 'Stock Report'
-                title: lang.S.of(context).stockReport
-            ),
+                title: lang.S.of(context).stockReport),
             const SizedBox(height: 16),
 
             ///_______________Loss/Profit________________________________________________________________
@@ -94,22 +93,21 @@ class _ReportsState extends State<Reports> {
                 },
                 iconPath: 'assets/lossprofit.svg',
                 //title: 'Loss/Profit Report'
-                title: lang.S.of(context).lossProfitReport
-            ),
+                title: lang.S.of(context).lossProfitReport),
             const SizedBox(
               height: 16,
             ),
 
             ///_______________Income_report________________________________________________________________
-            // ReportCard(
-            //     pressed: () {
-            //       Navigator.push(context, MaterialPageRoute(builder: (context) => const IncomeReport()));
-            //     },
-            //     iconPath: 'assets/incomeReport.svg',
-            //     title: 'Income Report'),
-            // const SizedBox(
-            //   height: 16,
-            // ),
+            ReportCard(
+                pressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const IncomeReport()));
+                },
+                iconPath: 'assets/incomeReport.svg',
+                title: 'Income Report'),
+            const SizedBox(
+              height: 16,
+            ),
 
             ///__________________Expense Report____________________________________________________________
             ReportCard(
@@ -118,8 +116,7 @@ class _ReportsState extends State<Reports> {
                 },
                 iconPath: 'assets/expenseReport.svg',
                 //title: 'Expense Report'
-                title: lang.S.of(context).expenseReport
-            ),
+                title: lang.S.of(context).expenseReport),
           ],
         ),
       ),

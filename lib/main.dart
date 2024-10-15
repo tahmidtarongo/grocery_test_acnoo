@@ -13,7 +13,7 @@ import 'package:mobile_pos/Screens/Payment/payment_options.dart';
 import 'package:mobile_pos/Screens/Products/add_product.dart';
 import 'package:mobile_pos/Screens/Products/product_list_screen.dart';
 import 'package:mobile_pos/Screens/Profile/profile_screen.dart';
-import 'package:mobile_pos/Screens/Report/reports.dart';
+import 'package:mobile_pos/Screens/Report/reports_screen.dart';
 import 'package:mobile_pos/Screens/Sales/add_discount.dart';
 import 'package:mobile_pos/Screens/Sales/add_promo_code.dart';
 import 'package:mobile_pos/Screens/Sales/sales_contact.dart';
@@ -71,7 +71,7 @@ class MyApp extends StatelessWidget {
                   '/forgotPassword': (context) => const ForgotPassword(),
                   '/home': (context) => const Home(),
                   '/profile': (context) => const ProfileScreen(),
-                  '/AddProducts': (context) => const AddProduct(),
+                  '/AddProducts': (context) => const AddProduct(fromHome: false),
                   '/UpdateProducts': (context) => const UpdateProduct(),
                   '/Products': (context) => const ProductList(),
                   '/salesCustomer': (context) => const SalesContact(),

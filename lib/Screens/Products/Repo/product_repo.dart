@@ -33,6 +33,7 @@ class ProductRepo {
   }
 
   Future<void> addProduct({
+    required bool fromHome,
     required WidgetRef ref,
     required BuildContext context,
     required String productName,
@@ -92,7 +93,9 @@ class ProductRepo {
       ref.refresh(productProvider(null));
       ref.refresh(productProvider(num.tryParse(categoryId)));
 
-      Navigator.pop(context);
+      if(!fromHome){
+        Navigator.pop(context);
+      }
     } else {
       EasyLoading.dismiss();
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Product creation failed: ${parsedData['message']}')));

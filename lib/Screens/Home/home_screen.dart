@@ -63,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
       return true;
     } else if (item == 'Loss/Profit' && (visibility?.lossProfitPermission ?? true)) {
       return true;
-    }else if (item == 'Income' && (visibility?.addIncomePermission ?? true)) {
+    } else if (item == 'Income' && (visibility?.addIncomePermission ?? true)) {
       return true;
     } else if (item == 'Expense' && (visibility?.addExpensePermission ?? true)) {
       return true;
@@ -354,11 +354,16 @@ class _HomeScreenState extends State<HomeScreen> {
                                               image: DecorationImage(fit: BoxFit.cover, image: AssetImage(noProductImageUrl)),
                                             ),
                                           ),
-                                          Text(
-                                            "All",
-                                            style: TextStyle(
-                                              color: selectedCategoryId == null ? kMainColor : null,
-                                              fontWeight: selectedCategoryId == null ? FontWeight.bold : null,
+                                          SizedBox(
+                                            width: 70,
+                                            child: Center(
+                                              child: Text(
+                                                "All",
+                                                style: TextStyle(
+                                                  color: selectedCategoryId == null ? kMainColor : null,
+                                                  fontWeight: selectedCategoryId == null ? FontWeight.bold : null,
+                                                ),
+                                              ),
                                             ),
                                           ),
                                         ],
@@ -382,6 +387,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               });
                                             },
                                             child: Column(
+                                              crossAxisAlignment: CrossAxisAlignment.center,
                                               children: [
                                                 data[index].icon != null
                                                     ? Container(
@@ -403,11 +409,18 @@ class _HomeScreenState extends State<HomeScreen> {
                                                           image: DecorationImage(fit: BoxFit.cover, image: AssetImage(noProductImageUrl)),
                                                         ),
                                                       ),
-                                                Text(
-                                                  data[index].categoryName.toString(),
-                                                  style: TextStyle(
-                                                    color: selectedCategoryId == data[index].id ? kMainColor : null,
-                                                    fontWeight: selectedCategoryId == data[index].id ? FontWeight.bold : null,
+                                                SizedBox(
+                                                  width: 70,
+                                                  child: Center(
+                                                    child: Text(
+                                                      data[index].categoryName.toString(),
+                                                      maxLines: 2,
+                                                      overflow: TextOverflow.ellipsis,
+                                                      style: TextStyle(
+                                                        color: selectedCategoryId == data[index].id ? kMainColor : null,
+                                                        fontWeight: selectedCategoryId == data[index].id ? FontWeight.bold : null,
+                                                      ),
+                                                    ),
                                                   ),
                                                 ),
                                               ],
@@ -503,10 +516,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     width: MediaQuery.of(context).size.width,
                                     child: GridView.builder(
                                       // gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 3,childAspectRatio: 2,crossAxisSpacing: 0.4,mainAxisExtent: 20,mainAxisSpacing: 30),
-                                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                                        crossAxisCount: 3,
-                                        childAspectRatio: 0.7,
-                                      ),
+                                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, childAspectRatio: 0.7),
                                       itemCount: productsList.length,
                                       physics: const NeverScrollableScrollPhysics(),
                                       shrinkWrap: true,

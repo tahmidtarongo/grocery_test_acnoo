@@ -6,7 +6,7 @@ import 'package:iconly/iconly.dart';
 import 'package:mobile_pos/Screens/DashBoard/dashboard.dart';
 import 'package:mobile_pos/Screens/Home/home_screen.dart';
 import 'package:mobile_pos/Screens/Products/add_product.dart';
-import 'package:mobile_pos/Screens/Report/reports.dart';
+import 'package:mobile_pos/Screens/Report/reports_screen.dart';
 import 'package:mobile_pos/Screens/Settings/settings_screen.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
@@ -82,7 +82,7 @@ class _HomeState extends State<Home> {
           onPageChanged: (v) {
             tabIndex = v;
           },
-          children: const [HomeScreen(), DashboardScreen(), AddProduct(), Reports(), SettingScreen()],
+          children: const [HomeScreen(), DashboardScreen(), AddProduct(fromHome: true,), Reports(), SettingScreen()],
         ),
         bottomNavigationBar: CircleNavBar(
           activeIcons: [
