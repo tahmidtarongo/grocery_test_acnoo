@@ -8,7 +8,6 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:mobile_pos/GlobalComponents/button_global.dart';
 import 'package:mobile_pos/Screens/Products/Model/brands_model.dart' as brand;
 import 'package:mobile_pos/Screens/Products/Model/unit_model.dart' as unit;
@@ -741,8 +740,7 @@ class _AddProductState extends State<AddProduct> {
                     buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
                     onPressed: () async {
                       if (key.currentState!.validate()) {
-                        bool result = await InternetConnectionChecker().hasConnection;
-                        if (result) {
+
                           ProductRepo product = ProductRepo();
                           EasyLoading.show(
                             status: lang.S.of(context).adding,
@@ -794,20 +792,6 @@ class _AddProductState extends State<AddProduct> {
                               pickedImage = null;
                             });
                           }
-                        } else {
-                          try {
-                            EasyLoading.show(
-                                status: lang.S.of(context).loading,
-                                // 'Loading...',
-                                dismissOnTap: false);
-                            Future.delayed(const Duration(milliseconds: 100), () {
-                              const Home().launch(context, isNewTask: true);
-                            });
-                          } catch (e) {
-                            EasyLoading.dismiss();
-                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
-                          }
-                        }
                       }
                     },
                     buttonTextColor: Colors.white,

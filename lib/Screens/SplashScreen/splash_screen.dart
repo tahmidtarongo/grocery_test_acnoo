@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:mobile_pos/Screens/SplashScreen/on_board.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
@@ -47,8 +46,8 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   checkUser() async {
-    bool result = await InternetConnectionChecker().hasConnection;
-    if (result) {
+    // bool result = await InternetConnectionChecker().hasConnection;
+    if (true) {
       await PurchaseModel().isActiveBuyer().then((value) {
         if (!value) {
           showDialog(

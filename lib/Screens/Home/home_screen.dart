@@ -444,7 +444,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   ///________Search_____________________________________
                   product.when(
                     data: (products) {
-                      List<ProductModel> productsList = products;
+                      List<ProductModel> productsList =
+                      products.where((element) => element.productName!.toLowerCase().contains(productSearchController.text.toLowerCase())).toList();
                       return Column(
                         children: [
                           ///________Search___________________________________
@@ -454,19 +455,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               controller: productSearchController,
                               decoration: const InputDecoration(border: OutlineInputBorder(), hintText: 'Search here....', suffixIcon: Icon(IconlyLight.search)),
                               onChanged: (value) {
-                                productsList.clear();
-                                if (!value.isEmptyOrNull) {
-                                  productsList.add(products.first);
-                                  // for (var element in products) {
-                                  //   if (element.productName!.toLowerCase().contains(value.toLowerCase())) {
-                                  //     productsList.add(element);
-                                  //   }
-                                  // }
-                                } else {
-                                  productsList.addAll(products);
-                                }
                                 setState(() {
-                                  productsList;
+
                                 });
                               },
                             ),
