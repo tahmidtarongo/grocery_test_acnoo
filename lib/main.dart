@@ -16,7 +16,7 @@ import 'package:mobile_pos/Screens/Profile/profile_screen.dart';
 import 'package:mobile_pos/Screens/Report/reports_screen.dart';
 import 'package:mobile_pos/Screens/Sales/add_discount.dart';
 import 'package:mobile_pos/Screens/Sales/add_promo_code.dart';
-import 'package:mobile_pos/Screens/Sales/sales_contact.dart';
+import 'package:mobile_pos/Screens/Sales/customer_screen_for_sales.dart';
 import 'package:mobile_pos/Screens/SplashScreen/on_board.dart';
 import 'package:mobile_pos/Screens/SplashScreen/splash_screen.dart';
 import 'package:mobile_pos/Screens/stock_list/stock_list.dart';
@@ -74,10 +74,10 @@ class MyApp extends StatelessWidget {
                   '/AddProducts': (context) => const AddProduct(fromHome: false),
                   '/UpdateProducts': (context) => const UpdateProduct(),
                   '/Products': (context) => const ProductList(),
-                  '/salesCustomer': (context) => const SalesContact(),
+                  '/salesCustomer': (context) => const CustomerScreenSales(),
                   '/addPromoCode': (context) => const AddPromoCode(),
                   '/addDiscount': (context) => const AddDiscount(),
-                  '/Sales': (context) => const SalesContact(),
+                  '/Sales': (context) => const CustomerScreenSales(),
                   '/Parties': (context) => const CustomerList(),
                   '/Expense': (context) => const ExpenseList(),
                   '/Stock': (context) => const StockList(isFromReport: false),

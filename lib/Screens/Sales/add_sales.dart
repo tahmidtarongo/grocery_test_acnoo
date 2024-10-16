@@ -8,7 +8,7 @@ import 'package:iconly/iconly.dart';
 import 'package:mobile_pos/Provider/add_to_cart.dart';
 import 'package:mobile_pos/Provider/profile_provider.dart';
 import 'package:mobile_pos/Screens/Sales/Repo/sales_repo.dart';
-import 'package:mobile_pos/Screens/Sales/sales_contact.dart';
+import 'package:mobile_pos/Screens/Sales/customer_screen_for_sales.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
@@ -179,7 +179,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                           selectedCustomer = await Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const SalesContact(),
+                                builder: (context) => const CustomerScreenSales(),
                               ));
 
                           setState(() {});

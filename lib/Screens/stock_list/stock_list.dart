@@ -5,6 +5,7 @@ import 'package:mobile_pos/Screens/Products/Model/product_model.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:mobile_pos/invoice_constant.dart';
 import '../../Provider/product_provider.dart';
+import '../../constant.dart' as c;
 import '../../currency.dart';
 
 class StockList extends StatefulWidget {
@@ -20,8 +21,6 @@ class _StockListState extends State<StockList> {
   String productSearch = '';
   @override
   Widget build(BuildContext context) {
-    num totalStock = 0;
-    double totalSalePrice = 0;
     double totalParPrice = 0;
     return Consumer(builder: (context, ref, __) {
       final providerData = ref.watch(productProvider(null));
@@ -30,8 +29,6 @@ class _StockListState extends State<StockList> {
         for (var element in product) {
           if (element.productName!.toLowerCase().contains(productSearch.toLowerCase().trim())) {
             showableProducts.add(element);
-            totalStock += (element.productStock ?? 0);
-            totalSalePrice += (element.productSalePrice ?? 0) * (element.productStock ?? 0);
             totalParPrice += (element.productPurchasePrice ?? 0) * (element.productStock ?? 0);
           }
         }
@@ -51,12 +48,9 @@ class _StockListState extends State<StockList> {
             child: product.isNotEmpty
                 ? Column(
                     children: [
-                      const SizedBox(
-                        height: 10,
-                      ),
                       Container(
                         height: 50,
-                        color: const Color(0xffFEF0F1),
+                        color: c.kMainColor.withOpacity(0.2),
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 16),
                           child: Row(
@@ -178,7 +172,7 @@ class _StockListState extends State<StockList> {
             )),
           ),
           bottomNavigationBar: Container(
-            color: const Color(0xffFEF0F1),
+            color: c.kMainColor.withOpacity(0.2),
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
               child: Row(

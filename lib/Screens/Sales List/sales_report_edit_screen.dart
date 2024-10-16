@@ -106,7 +106,7 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, consumerRef, __) {
-      final providerData = consumerRef.watch(cartNotifier);
+      final providerData = consumerRef.watch(salesEditCartProvider);
       final personalData = consumerRef.watch(businessInfoProvider);
       final productList = consumerRef.watch(productProvider(null));
 
@@ -154,6 +154,7 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
       return personalData.when(data: (data) {
         // invoice = data.invoiceCounter!.toInt();
         return Scaffold(
+          backgroundColor: Colors.white,
           appBar: AppBar(
             backgroundColor: Colors.white,
             title: Text(
@@ -223,15 +224,15 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                   Container(
                     decoration: BoxDecoration(
                       borderRadius: const BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
-                      border: Border.all(width: 1, color: const Color(0xffEAEFFA)),
+                      border: Border.all(width: 1, color: kMainColor.withOpacity(0.1)),
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
                             width: double.infinity,
-                            decoration: const BoxDecoration(
-                              color: Color(0xffEAEFFA),
+                            decoration: BoxDecoration(
+                              color: kMainColor.withOpacity(0.1),
                               borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
                             ),
                             child: Padding(
@@ -404,7 +405,8 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                       children: [
                         Container(
                           padding: const EdgeInsets.all(10),
-                          decoration: const BoxDecoration(color: Color(0xffEAEFFA), borderRadius: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10))),
+                          decoration:
+                              BoxDecoration(color: kMainColor.withOpacity(0.1), borderRadius: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10))),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -426,8 +428,8 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                               Text(
-                                 lang.S.of(context).vat,
+                              Text(
+                                lang.S.of(context).vat,
                                 //'VAT',
                                 style: TextStyle(fontSize: 16),
                               ),
@@ -561,7 +563,7 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                                         });
                                         EasyLoading.showError(
                                           lang.S.of(context).enterAValidDiscount,
-                                            //'Enter a valid Discount'
+                                          //'Enter a valid Discount'
                                         );
                                       }
                                     }
@@ -732,7 +734,7 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                           onChanged: (value) {
                             setState(() {});
                           },
-                          decoration:  InputDecoration(
+                          decoration: InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             //labelText: 'Description',
                             labelText: lang.S.of(context).description,
@@ -747,7 +749,7 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                         height: 60,
                         width: 100,
                         decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), color: Colors.grey.shade200),
-                        child:  Center(
+                        child: Center(
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
@@ -794,10 +796,7 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                           onTap: () async {
                             if (providerData.cartItemList.isNotEmpty) {
                               try {
-                                EasyLoading.show(status:
-                                    lang.S.of(context).loading,
-                                //'Loading...',
-                                    dismissOnTap: false);
+                                EasyLoading.show(status: lang.S.of(context).loading, dismissOnTap: false);
                                 List<CartSaleProducts> selectedProductList = [];
 
                                 for (var element in providerData.cartItemList) {
@@ -834,10 +833,7 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
                               }
                             } else {
-                              EasyLoading.showError(
-                                lang.S.of(context).addProductFirst
-                                  //'Add product first'
-                              );
+                              EasyLoading.showError(lang.S.of(context).addProductFirst);
                             }
                           },
                           child: Container(

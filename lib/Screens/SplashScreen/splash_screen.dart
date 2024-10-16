@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:mobile_pos/Screens/SplashScreen/on_board.dart';
 import 'package:mobile_pos/constant.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
@@ -18,6 +17,7 @@ import '../../Repository/API/business_info_repo.dart';
 import '../../currency.dart';
 import '../Authentication/Repo/licnese_repo.dart';
 import '../Home/home.dart';
+import '../internet checker/Internet_check_provider/util/network_observer_provider.dart';
 import '../language/language_provider.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -47,8 +47,9 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   checkUser() async {
-    bool result = await InternetConnectionChecker().hasConnection;
-    if (result) {
+    // bool result = await InternetConnectionChecker().hasConnection;
+    var connectivityResult = await Connectivity().checkConnectivity();
+    if (connectivityResult.first == ConnectivityResult.wifi || connectivityResult.first == ConnectivityResult.mobile) {
       await PurchaseModel().isActiveBuyer().then((value) {
         if (!value) {
           showDialog(
@@ -79,19 +80,72 @@ class _SplashScreenState extends State<SplashScreen> {
       showDialog(
         context: context,
         builder: (BuildContext context) {
-          return AlertDialog(
-            title: const Text('No Internet Connection'),
-            content: const Text('Please check your internet connection.'),
-            actions: [
-              TextButton(
-                child: const Text('Retry'),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                  // _checkConnectivity();
-                  checkUser();
-                },
+          return Scaffold(
+            body: Center(
+              child: Container(
+                margin: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(20.0),
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.9), // Add slight transparency
+                  borderRadius: BorderRadius.circular(24.0), // Increase border radius
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.3),
+                      spreadRadius: 5,
+                      blurRadius: 10,
+                      offset: const Offset(0, 4),
+                    ),
+                  ],
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    AnimatedSwitcher(
+                      duration: const Duration(milliseconds: 500),
+                      transitionBuilder: (child, animation) => FadeTransition(
+                        opacity: animation,
+                        child: child,
+                      ),
+                      child: const Icon(
+                        Icons.wifi_off,
+                        key: ValueKey<int>(1), // For animation
+                        size: 70.0,
+                        color: Colors.red,
+                      ),
+                    ),
+                    const SizedBox(height: 16.0),
+                    const Text(
+                      'No Wi-Fi Connection',
+                      style: TextStyle(
+                        fontSize: 22.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                    ),
+                    const SizedBox(height: 12.0),
+                    const Text(
+                      'Please check your internet connection and try again.',
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        color: Colors.grey,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(height: 24.0),
+                    ElevatedButton(
+                      style: const ButtonStyle(backgroundColor: WidgetStatePropertyAll(kMainColor)),
+                      onPressed: () {
+                        checkUser();
+                      },
+                      child: const Text(
+                        'Retry',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ],
+            ),
           );
         },
       );
@@ -268,37 +322,39 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
-        backgroundColor: kMainColor,
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const Spacer(),
-            Container(
-              height: 230,
-              width: 230,
-              decoration: const BoxDecoration(image: DecorationImage(image: AssetImage(splashLogo))),
-            ),
-            const Spacer(),
-            Column(
-              children: [
-                Center(
-                  child: Text(
-                    lang.S.of(context).powerdedByAcnoo,
-                    style: GoogleFonts.poppins(color: Colors.white, fontWeight: FontWeight.normal, fontSize: 20.0),
+      child: ProviderNetworkObserver(
+        child: Scaffold(
+          backgroundColor: kMainColor,
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const Spacer(),
+              Container(
+                height: 230,
+                width: 230,
+                decoration: const BoxDecoration(image: DecorationImage(image: AssetImage(splashLogo))),
+              ),
+              const Spacer(),
+              Column(
+                children: [
+                  Center(
+                    child: Text(
+                      'Powered By $companyName',
+                      style: GoogleFonts.poppins(color: Colors.white, fontWeight: FontWeight.normal, fontSize: 20.0),
+                    ),
                   ),
-                ),
-                Center(
-                  child: Text(
-                    'V $appVersion',
-                    style: GoogleFonts.poppins(color: Colors.white, fontWeight: FontWeight.normal, fontSize: 15.0),
+                  Center(
+                    child: Text(
+                      'V $appVersion',
+                      style: GoogleFonts.poppins(color: Colors.white, fontWeight: FontWeight.normal, fontSize: 15.0),
+                    ),
                   ),
-                ),
-                const SizedBox(height: 10),
-              ],
-            ),
-          ],
+                  const SizedBox(height: 10),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -11,6 +11,7 @@ import 'package:nb_utils/nb_utils.dart';
 
 import '../../Repository/API/register_repo.dart';
 import '../../constant.dart';
+import '../internet checker/Internet_check_provider/util/network_observer_provider.dart';
 import 'login_form.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -49,174 +50,176 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Consumer(builder: (context, ref, child) {
-          return Center(
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset('images/logoandname.png'),
-                  const SizedBox(
-                    height: 30.0,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Form(
-                      key: globalKey,
-                      child: Column(
-                        children: [
-                          const SizedBox(height: 20),
-                          TextFormField(
-                            keyboardType: TextInputType.emailAddress,
-                            decoration: InputDecoration(
-                              border: const OutlineInputBorder(),
-                              labelText: lang.S.of(context).emailText,
-                              hintText: lang.S.of(context).enterYourEmailAddress,
-                            ),
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                               // return 'Email can\'n be empty';
-                                return lang.S.of(context).emailCannotBeEmpty;
-                              } else if (!value.contains('@')) {
-                                //return 'Please enter a valid email';
-                                return lang.S.of(context).pleaseEnterAValidEmail;
-                              }
-                              return null;
-                            },
-                            onSaved: (value) {
-                              email = value!;
-                            },
-                          ),
-                          const SizedBox(height: 20),
-                          TextFormField(
-                            keyboardType: TextInputType.text,
-                            obscureText: showPass1,
-                            decoration: InputDecoration(
-                              border: const OutlineInputBorder(),
-                              labelText: lang.S.of(context).password,
-                              hintText: lang.S.of(context).pleaseEnterAPassword,
-                              suffixIcon: IconButton(
-                                onPressed: () {
-                                  setState(() {
-                                    showPass1 = !showPass1;
-                                  });
-                                },
-                                icon: Icon(showPass1 ? Icons.visibility_off : Icons.visibility),
-                              ),
-                            ),
-                            onChanged: (value) {
-                              givenPassword = value;
-                            },
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                //return 'Password can\'t be empty';
-                                return lang.S.of(context).passwordCannotBeEmpty;
-                              } else if (value.length < 4) {
-                                //return 'Please enter a bigger password';
-                                return lang.S.of(context).pleaseEnterABiggerPassword;
-                              } else if (value.length < 4) {
-                                //return 'Please enter a bigger password';
-                                return lang.S.of(context).pleaseEnterABiggerPassword;
-                              }
-                              return null;
-                            },
-                            onSaved: (value) {
-                              password = value!;
-                            },
-                          ),
-                          const SizedBox(height: 20),
-                          TextFormField(
-                            keyboardType: TextInputType.emailAddress,
-                            obscureText: showPass2,
-                            decoration: InputDecoration(
-                              border: const OutlineInputBorder(),
-                              labelText: lang.S.of(context).confirmPass,
-                              hintText: lang.S.of(context).pleaseEnterAConfirmPassword,
-                              suffixIcon: IconButton(
-                                onPressed: () {
-                                  setState(() {
-                                    showPass2 = !showPass2;
-                                  });
-                                },
-                                icon: Icon(showPass2 ? Icons.visibility_off : Icons.visibility),
-                              ),
-                            ),
-                            onChanged: (value) {
-                              givenPassword2 = value;
-                            },
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                                //return 'Password can\'t be empty';
-                                return lang.S.of(context).passwordCannotBeEmpty;
-                              } else if (value.length < 4) {
-                               // return 'Please enter a bigger password';
-                                return lang.S.of(context).pleaseEnterABiggerPassword;
-                              } else if (givenPassword != givenPassword2) {
-                                //return 'Password Not mach';
-                                return lang.S.of(context).passwordsDoNotMatch;
-                              }
-                              return null;
-                            },
-                          ),
-                        ],
-                      ),
+    return ProviderNetworkObserver(
+      child: SafeArea(
+        child: Scaffold(
+          body: Consumer(builder: (context, ref, child) {
+            return Center(
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset('images/logoandname.png'),
+                    const SizedBox(
+                      height: 30.0,
                     ),
-                  ),
-                  ButtonGlobalWithoutIcon(
-                    buttontext: lang.S.of(context).register,
-                    buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
-                    onPressed: () async {
-                      if (validateAndSave()) {
-                        RegisterRepo reg = RegisterRepo();
-                        if (await reg.registerRepo(email: email, context: context, password: password, confirmPassword: password))
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const ProfileSetup(),
-                              ));
-                        // auth.signUp(context);
-                      }
-                    },
-                    buttonTextColor: Colors.white,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        lang.S.of(context).haveAcc,
-                        style: GoogleFonts.poppins(color: kGreyTextColor, fontSize: 15.0),
-                      ),
-                      TextButton(
-                        onPressed: () {
-                          const LoginForm(
-                            isEmailLogin: true,
-                          ).launch(context);
-                          // Navigator.pushNamed(context, '/loginForm');
-                        },
-                        child: Text(
-                          lang.S.of(context).logIn,
-                          style: GoogleFonts.poppins(
-                            color: kMainColor,
-                            fontSize: 15.0,
-                            fontWeight: FontWeight.bold,
-                          ),
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Form(
+                        key: globalKey,
+                        child: Column(
+                          children: [
+                            const SizedBox(height: 20),
+                            TextFormField(
+                              keyboardType: TextInputType.emailAddress,
+                              decoration: InputDecoration(
+                                border: const OutlineInputBorder(),
+                                labelText: lang.S.of(context).emailText,
+                                hintText: lang.S.of(context).enterYourEmailAddress,
+                              ),
+                              validator: (value) {
+                                if (value == null || value.isEmpty) {
+                                 // return 'Email can\'n be empty';
+                                  return lang.S.of(context).emailCannotBeEmpty;
+                                } else if (!value.contains('@')) {
+                                  //return 'Please enter a valid email';
+                                  return lang.S.of(context).pleaseEnterAValidEmail;
+                                }
+                                return null;
+                              },
+                              onSaved: (value) {
+                                email = value!;
+                              },
+                            ),
+                            const SizedBox(height: 20),
+                            TextFormField(
+                              keyboardType: TextInputType.text,
+                              obscureText: showPass1,
+                              decoration: InputDecoration(
+                                border: const OutlineInputBorder(),
+                                labelText: lang.S.of(context).password,
+                                hintText: lang.S.of(context).pleaseEnterAPassword,
+                                suffixIcon: IconButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      showPass1 = !showPass1;
+                                    });
+                                  },
+                                  icon: Icon(showPass1 ? Icons.visibility_off : Icons.visibility),
+                                ),
+                              ),
+                              onChanged: (value) {
+                                givenPassword = value;
+                              },
+                              validator: (value) {
+                                if (value == null || value.isEmpty) {
+                                  //return 'Password can\'t be empty';
+                                  return lang.S.of(context).passwordCannotBeEmpty;
+                                } else if (value.length < 4) {
+                                  //return 'Please enter a bigger password';
+                                  return lang.S.of(context).pleaseEnterABiggerPassword;
+                                } else if (value.length < 4) {
+                                  //return 'Please enter a bigger password';
+                                  return lang.S.of(context).pleaseEnterABiggerPassword;
+                                }
+                                return null;
+                              },
+                              onSaved: (value) {
+                                password = value!;
+                              },
+                            ),
+                            const SizedBox(height: 20),
+                            TextFormField(
+                              keyboardType: TextInputType.emailAddress,
+                              obscureText: showPass2,
+                              decoration: InputDecoration(
+                                border: const OutlineInputBorder(),
+                                labelText: lang.S.of(context).confirmPass,
+                                hintText: lang.S.of(context).pleaseEnterAConfirmPassword,
+                                suffixIcon: IconButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      showPass2 = !showPass2;
+                                    });
+                                  },
+                                  icon: Icon(showPass2 ? Icons.visibility_off : Icons.visibility),
+                                ),
+                              ),
+                              onChanged: (value) {
+                                givenPassword2 = value;
+                              },
+                              validator: (value) {
+                                if (value == null || value.isEmpty) {
+                                  //return 'Password can\'t be empty';
+                                  return lang.S.of(context).passwordCannotBeEmpty;
+                                } else if (value.length < 4) {
+                                 // return 'Please enter a bigger password';
+                                  return lang.S.of(context).pleaseEnterABiggerPassword;
+                                } else if (givenPassword != givenPassword2) {
+                                  //return 'Password Not mach';
+                                  return lang.S.of(context).passwordsDoNotMatch;
+                                }
+                                return null;
+                              },
+                            ),
+                          ],
                         ),
                       ),
-                    ],
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      const PhoneAuth().launch(context);
-                    },
-                    child: Text(lang.S.of(context).loginWithPhone),
-                  ),
-                ],
+                    ),
+                    ButtonGlobalWithoutIcon(
+                      buttontext: lang.S.of(context).register,
+                      buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
+                      onPressed: () async {
+                        if (validateAndSave()) {
+                          RegisterRepo reg = RegisterRepo();
+                          if (await reg.registerRepo(email: email, context: context, password: password, confirmPassword: password))
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const ProfileSetup(),
+                                ));
+                          // auth.signUp(context);
+                        }
+                      },
+                      buttonTextColor: Colors.white,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          lang.S.of(context).haveAcc,
+                          style: GoogleFonts.poppins(color: kGreyTextColor, fontSize: 15.0),
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            const LoginForm(
+                              isEmailLogin: true,
+                            ).launch(context);
+                            // Navigator.pushNamed(context, '/loginForm');
+                          },
+                          child: Text(
+                            lang.S.of(context).logIn,
+                            style: GoogleFonts.poppins(
+                              color: kMainColor,
+                              fontSize: 15.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        const PhoneAuth().launch(context);
+                      },
+                      child: Text(lang.S.of(context).loginWithPhone),
+                    ),
+                  ],
+                ),
               ),
-            ),
-          );
-        }),
+            );
+          }),
+        ),
       ),
     );
   }

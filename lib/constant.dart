@@ -16,11 +16,12 @@ bool isPrintEnable = false;
 List<String> paymentsTypeList = ['Cash', 'Card', 'Check', 'Mobile Pay', 'Due'];
 bool isExpiringInFiveDays = false;
 bool isExpiringInOneDays = false;
-const String appVersion = '1.0';
 String paypalClientId = '';
 String paypalClientSecret = '';
 const bool sandbox = true;
 String noProductImageUrl = 'images/no_product_image.png';
+
+///_______________Purchase_Code_______________________________
 String purchaseCode = '3e873705-9a73-4a00-81f9-1f2fbef74e66';
 
 ///---------------update information---------------
@@ -30,7 +31,11 @@ const String onboard1 = 'images/onbord1.png';
 const String onboard2 = 'images/onbord2.png';
 const String onboard3 = 'images/onbord3.png';
 const String logo = 'images/logo.png';
+
+///______________Names____________________________
 const String appsName = 'Grocery Shop';
+const String companyName = 'Acnoo';
+const String appVersion = '1.0';
 
 const kButtonDecoration = BoxDecoration(
   borderRadius: BorderRadius.all(

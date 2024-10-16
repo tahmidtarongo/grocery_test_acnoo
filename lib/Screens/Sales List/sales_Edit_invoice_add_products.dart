@@ -48,11 +48,13 @@ class _EditSaleInvoiceSaleProductsState extends State<EditSaleInvoiceSaleProduct
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, ref, __) {
-      final providerData = ref.watch(cartNotifier);
+      final providerData = ref.watch(salesEditCartProvider);
       final productList = ref.watch(productProvider(null));
 
       return Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
+
           title: Text(
             lang.S.of(context).addItems,
             style: GoogleFonts.poppins(
@@ -66,11 +68,10 @@ class _EditSaleInvoiceSaleProductsState extends State<EditSaleInvoiceSaleProduct
           elevation: 0.0,
         ),
         body: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.only(left: 20.0,right: 20,bottom: 20),
           child: SingleChildScrollView(
             child: Column(
               children: [
-                const SizedBox(height: 20.0),
                 Row(
                   children: [
                     Expanded(
