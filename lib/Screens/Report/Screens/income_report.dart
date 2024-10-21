@@ -37,7 +37,8 @@ class _IncomeReportState extends State<IncomeReport> {
         backgroundColor: kWhite,
         appBar: AppBar(
           title: Text(
-            'Income Report',
+            lang.S.of(context).incomeReport,
+            //'Income Report',
             style: GoogleFonts.poppins(
               color: Colors.black,
               fontSize: 20.0,
@@ -63,10 +64,11 @@ class _IncomeReportState extends State<IncomeReport> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const SizedBox(
+                       SizedBox(
                         width: 130,
                         child: Text(
-                          'Income For',
+                          lang.S.of(context).incomeFor,
+                         // 'Income For',
                         ),
                       ),
                       SizedBox(
@@ -177,8 +179,9 @@ class _IncomeReportState extends State<IncomeReport> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
-                  'Total Income',
+                 Text(
+                   lang.S.of(context).totalIncome,
+                  //'Total Income',
                 ),
                 Text('$currency$totalExpense')
               ],

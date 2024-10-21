@@ -22,21 +22,29 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Custom": MessageLookupByLibrary.simpleMessage("Pasgemaak"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Kliëntbesonderhede"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "Sun": MessageLookupByLibrary.simpleMessage("Son"),
+        "addACustomer": MessageLookupByLibrary.simpleMessage(
+            "Voeg asseblief \'n Kliënt by"),
         "addAPurchase": MessageLookupByLibrary.simpleMessage(
             "Voeg asseblief \'n Aankoop by"),
         "addBrand": MessageLookupByLibrary.simpleMessage("Voeg Handelsmerk by"),
         "addCategory":
             MessageLookupByLibrary.simpleMessage("Voeg Kategorie By"),
         "addContact": MessageLookupByLibrary.simpleMessage("Voeg Kontak Toe"),
-        "addCustomer": MessageLookupByLibrary.simpleMessage(
-            "Voeg asseblief \'n Kliënt by"),
+        "addCustomer": MessageLookupByLibrary.simpleMessage("Voeg Kliënt by"),
         "addDelivery":
             MessageLookupByLibrary.simpleMessage("Voeg Aflewering by"),
+        "addDiscount": MessageLookupByLibrary.simpleMessage("Voeg Afslag by"),
         "addExpense": MessageLookupByLibrary.simpleMessage("Voeg Uitgawe Toe"),
         "addExpenseCat":
             MessageLookupByLibrary.simpleMessage("Voeg Uitgawe Kategorie Toe"),
+        "addIncome": MessageLookupByLibrary.simpleMessage("Voeg Inkomste by"),
+        "addIncomeCategory":
+            MessageLookupByLibrary.simpleMessage("Voeg Inkomskategorie by"),
         "addItems": MessageLookupByLibrary.simpleMessage("Voeg Items by"),
         "addNewAddress":
             MessageLookupByLibrary.simpleMessage("Voeg Nuwe Adres by"),
@@ -49,10 +57,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "Voeg asseblief \'n Produk by"),
         "addProductFirst":
             MessageLookupByLibrary.simpleMessage("Voeg eers \'n produk by"),
+        "addPromoCode":
+            MessageLookupByLibrary.simpleMessage("Voeg Promokode by"),
         "addPurchase": MessageLookupByLibrary.simpleMessage("Voeg Aankoop by"),
         "addSale": MessageLookupByLibrary.simpleMessage(
             "Voeg asseblief \'n Verkoop by"),
         "addSales": MessageLookupByLibrary.simpleMessage("Voeg Verkope by"),
+        "addToCart": MessageLookupByLibrary.simpleMessage("Voeg by mandjie"),
         "addUnit": MessageLookupByLibrary.simpleMessage("Voeg Eenheid by"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Voeg Gebruikersrol By"),
@@ -65,6 +76,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Alle besigheidsoplossings"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
             "POSpro is \'n volledige besigheidsoplossing met voorraad, rekening, verkope, uitgawes en verlies/wins."),
+        "allTime": MessageLookupByLibrary.simpleMessage("Altyd"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Reeds Toegevoeg"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Het jy al \'n rekening? "),
@@ -81,9 +93,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "areYouSure": MessageLookupByLibrary.simpleMessage("Is jy seker?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "Is jy seker jy wil hierdie party verwyder?"),
+        "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
+            "Is jy seker jy wil dit verwyder?"),
         "backToHome": MessageLookupByLibrary.simpleMessage("Terug Na Huis"),
         "balance": MessageLookupByLibrary.simpleMessage("Balans"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("Bangladesj"),
+        "bank": MessageLookupByLibrary.simpleMessage("Bank"),
+        "barcodeFound":
+            MessageLookupByLibrary.simpleMessage("Streep kode gevind"),
         "billTO": MessageLookupByLibrary.simpleMessage("Betaal aan"),
         "brand": MessageLookupByLibrary.simpleMessage("Handelsmerk"),
         "brandName": MessageLookupByLibrary.simpleMessage("Handelsmerknaam"),
@@ -96,7 +113,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "call": MessageLookupByLibrary.simpleMessage("Bel"),
         "camera": MessageLookupByLibrary.simpleMessage("Kamera"),
         "cancel": MessageLookupByLibrary.simpleMessage("Kanselleer"),
+        "cancelAllProduct":
+            MessageLookupByLibrary.simpleMessage("Kanselleer Alle Produkte"),
         "capacity": MessageLookupByLibrary.simpleMessage("Kapasiteit"),
+        "card": MessageLookupByLibrary.simpleMessage("Kaart"),
         "cash": MessageLookupByLibrary.simpleMessage("Kontant"),
         "categories": MessageLookupByLibrary.simpleMessage("Kategorieë"),
         "category": MessageLookupByLibrary.simpleMessage("Kategorie"),
@@ -113,6 +133,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
             "Funksies is die belangrike deel wat POSpro van tradisionele oplossings onderskei."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
+        "clearAll": MessageLookupByLibrary.simpleMessage("Maak alles skoon"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Klik om te verbind"),
         "close": MessageLookupByLibrary.simpleMessage("Maak Toe"),
@@ -144,6 +165,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "continueButton": MessageLookupByLibrary.simpleMessage("Gaan voort"),
         "continueE": MessageLookupByLibrary.simpleMessage("Gaan voort"),
         "cost": MessageLookupByLibrary.simpleMessage("Koste"),
+        "couldNotFetchProducts":
+            MessageLookupByLibrary.simpleMessage("Kon nie produkte haal nie"),
+        "couldNotFetchTheCategories": MessageLookupByLibrary.simpleMessage(
+            "Kon nie die kategorieë haal nie"),
         "country": MessageLookupByLibrary.simpleMessage("Land"),
         "create": MessageLookupByLibrary.simpleMessage("Skep"),
         "createAFreeAccount":
@@ -153,6 +178,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Skep \'n Nuwe Wagwoord"),
         "currency": MessageLookupByLibrary.simpleMessage("Geldeenheid"),
+        "currentYear": MessageLookupByLibrary.simpleMessage("Huidige jaar"),
         "customInvoiceBranding":
             MessageLookupByLibrary.simpleMessage("Pasgemaakte Faktuur Merk"),
         "customerDue": MessageLookupByLibrary.simpleMessage("Kliëntskuld"),
@@ -168,9 +194,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "date": MessageLookupByLibrary.simpleMessage("Datum"),
         "dates": MessageLookupByLibrary.simpleMessage("Datum:"),
         "days": MessageLookupByLibrary.simpleMessage("dae"),
+        "daysLeft": MessageLookupByLibrary.simpleMessage("Dae oor"),
         "dealer": MessageLookupByLibrary.simpleMessage("Handelaar"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage("Handelaarsprys"),
         "delete": MessageLookupByLibrary.simpleMessage("Verwyder"),
+        "deleteConfirmation":
+            MessageLookupByLibrary.simpleMessage("Verwyder Bevestiging"),
         "deleting": MessageLookupByLibrary.simpleMessage("Verwyder...."),
         "deliveryAddress":
             MessageLookupByLibrary.simpleMessage("Afleweringsadres"),
@@ -189,6 +218,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Wil jy die app verlaat?"),
         "donNotHaveAnAccount": MessageLookupByLibrary.simpleMessage(
             "Het jy nie \'n rekening nie?"),
+        "done": MessageLookupByLibrary.simpleMessage("Gedaan"),
         "due": MessageLookupByLibrary.simpleMessage("Uitstaande"),
         "dueAmount":
             MessageLookupByLibrary.simpleMessage("Uitstaande Bedrag: "),
@@ -245,6 +275,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Voer uitgawedatum in"),
         "enterFullAddress":
             MessageLookupByLibrary.simpleMessage("Voer Volledige Adres in"),
+        "enterIncomeCategoryName": MessageLookupByLibrary.simpleMessage(
+            "Voer inkomskategorie naam in"),
         "enterManufacturerName":
             MessageLookupByLibrary.simpleMessage("Voer vervaardiger naam in"),
         "enterName": MessageLookupByLibrary.simpleMessage("Voer Naam in"),
@@ -264,6 +296,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterSize": MessageLookupByLibrary.simpleMessage("Voer Grootte in"),
         "enterStock": MessageLookupByLibrary.simpleMessage("Voer voorraad in"),
         "enterType": MessageLookupByLibrary.simpleMessage("Voer Tipe in"),
+        "enterUnitQuantity":
+            MessageLookupByLibrary.simpleMessage("Voer eenheid hoeveelheid in"),
         "enterUserTitle":
             MessageLookupByLibrary.simpleMessage("Voer Gebruikerstitel in"),
         "enterValidOTP":
@@ -301,6 +335,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Gratis Lewenslange Opgradering"),
         "freePack": MessageLookupByLibrary.simpleMessage("Gratis Pakket"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Gratis Plan"),
+        "fri": MessageLookupByLibrary.simpleMessage("Vr"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Van Datum"),
         "fullName": MessageLookupByLibrary.simpleMessage("Volle Naam"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("Volledig Betaal"),
@@ -317,6 +352,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("Huis"),
         "image": MessageLookupByLibrary.simpleMessage("Beeld"),
         "income": MessageLookupByLibrary.simpleMessage("Inkomste"),
+        "incomeCategories":
+            MessageLookupByLibrary.simpleMessage("Inkomskategorieë"),
+        "incomeFor": MessageLookupByLibrary.simpleMessage("Inkomste Vir"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("Inkomsteverslag"),
         "instagram": MessageLookupByLibrary.simpleMessage("Instagram"),
         "instrucation": MessageLookupByLibrary.simpleMessage("Instruksie"),
@@ -324,11 +362,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "invoice": MessageLookupByLibrary.simpleMessage("Faktuur"),
         "invoiceViewr": MessageLookupByLibrary.simpleMessage("Faktuurkyker"),
         "itemAdded": MessageLookupByLibrary.simpleMessage("Item Bygevoeg"),
+        "itemDetails":
+            MessageLookupByLibrary.simpleMessage("Item Besonderhede"),
+        "items": MessageLookupByLibrary.simpleMessage("Items"),
+        "itemsFor": MessageLookupByLibrary.simpleMessage("items Vir"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("Items Verkoop"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("E-pos"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("Wagwoord"),
         "language": MessageLookupByLibrary.simpleMessage("taal"),
+        "last30Days": MessageLookupByLibrary.simpleMessage("Laaste 30 Dae"),
+        "last7Days": MessageLookupByLibrary.simpleMessage("Laaste 7 Dae"),
         "lastName": MessageLookupByLibrary.simpleMessage("Van"),
+        "lastYear": MessageLookupByLibrary.simpleMessage("Laaste Jaar"),
         "link": MessageLookupByLibrary.simpleMessage("Skakel"),
         "linkedIN": MessageLookupByLibrary.simpleMessage("LinkedIN"),
         "loading": MessageLookupByLibrary.simpleMessage("Laai"),
@@ -344,6 +389,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Natoque aliquet et, cur eget. Tellus sapien odio aliq."),
         "loremIpsumDolorSit": MessageLookupByLibrary.simpleMessage(
             "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."),
+        "loremIpsumDolorSitAmetConsecteturAdipiscingElitMaurisCras":
+            MessageLookupByLibrary.simpleMessage(
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cras"),
         "loremIpsumDolorSitAmetConsecteturElitInterdumCons":
             MessageLookupByLibrary.simpleMessage(
                 "Lorem ipsum dolor sit amet, consectetur elit. Interdum cons."),
@@ -359,6 +407,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "masterCard": MessageLookupByLibrary.simpleMessage("Meesterkaart"),
         "messege": MessageLookupByLibrary.simpleMessage("Boodskap"),
         "mobile": MessageLookupByLibrary.simpleMessage("Mobiel:"),
+        "mobilePayment":
+            MessageLookupByLibrary.simpleMessage("Mobiele Betaling"),
+        "mon": MessageLookupByLibrary.simpleMessage("Ma"),
+        "monthly": MessageLookupByLibrary.simpleMessage("Maandeliks"),
         "moreInfo": MessageLookupByLibrary.simpleMessage("Meer Inligting"),
         "mrp": MessageLookupByLibrary.simpleMessage("MRP"),
         "name": MessageLookupByLibrary.simpleMessage("Naam"),
@@ -384,9 +436,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Geen Verskaffer Beskikbaar"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("Geen Transaksie"),
+        "notActiveUser":
+            MessageLookupByLibrary.simpleMessage("Nie Aktiewe Gebruiker"),
         "notFound": MessageLookupByLibrary.simpleMessage("Nie Gevind Nie"),
         "note": MessageLookupByLibrary.simpleMessage("Nota"),
         "notification": MessageLookupByLibrary.simpleMessage("Kennisgewing"),
+        "oK": MessageLookupByLibrary.simpleMessage("OK"),
         "off": MessageLookupByLibrary.simpleMessage("Af"),
         "on": MessageLookupByLibrary.simpleMessage("Aan"),
         "openingBalance": MessageLookupByLibrary.simpleMessage("Beginbalans"),
@@ -431,6 +486,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pickEndDate": MessageLookupByLibrary.simpleMessage("Kies Einddatum"),
         "pickStartDate":
             MessageLookupByLibrary.simpleMessage("Kies Begindatum"),
+        "plan": MessageLookupByLibrary.simpleMessage("Plan"),
         "pleaseAddQuantity": MessageLookupByLibrary.simpleMessage(
             "Voeg asseblief hoeveelheid by"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
@@ -465,6 +521,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Voer asseblief \'n Bedrag in"),
         "pleaseEnterName":
             MessageLookupByLibrary.simpleMessage("Voer asseblief \'n Naam in"),
+        "pleaseEnterSalesPrice": MessageLookupByLibrary.simpleMessage(
+            "Voer asseblief verkoopprys in"),
         "pleaseEnterTheOTP":
             MessageLookupByLibrary.simpleMessage("Tik asseblief die OTP in"),
         "pleaseEnterUnitName": MessageLookupByLibrary.simpleMessage(
@@ -480,6 +538,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Kies asseblief \'n kategorie"),
         "pleaseSelectAExpenseCategory": MessageLookupByLibrary.simpleMessage(
             "Kies asseblief \'n uitgawe kategorie"),
+        "pleaseUseTheValidPurchaseCodeToUseTheApp":
+            MessageLookupByLibrary.simpleMessage(
+                "Gebruik asseblief die geldige aankoopkode om die app te gebruik"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Aangedryf deur Acnoo"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
@@ -489,6 +550,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Vorige Uitstaande"),
         "previousPayAmount":
             MessageLookupByLibrary.simpleMessage("Vorige Betaalbedrag"),
+        "priceMustBeGreaterThan":
+            MessageLookupByLibrary.simpleMessage("Prys moet groter wees as"),
         "print": MessageLookupByLibrary.simpleMessage("Druk"),
         "printing": MessageLookupByLibrary.simpleMessage("Drukopsie"),
         "product": MessageLookupByLibrary.simpleMessage("Produk"),
@@ -527,7 +590,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchased": MessageLookupByLibrary.simpleMessage("Aangekoop"),
         "qty": MessageLookupByLibrary.simpleMessage("Hoeveelheid"),
         "quantity": MessageLookupByLibrary.simpleMessage("Hoeveelheid"),
+        "quantityExceedsAvailableStock": MessageLookupByLibrary.simpleMessage(
+            "Hoeveelheid oorskry beskikbare voorraad"),
+        "quantityMustBeGreaterThan": MessageLookupByLibrary.simpleMessage(
+            "Hoeveelheid moet groter wees as"),
         "quickOverview": MessageLookupByLibrary.simpleMessage("Vinnige Oorsig"),
+        "receivedAmount":
+            MessageLookupByLibrary.simpleMessage("Ontvangen Bedrag"),
         "recentTransaction":
             MessageLookupByLibrary.simpleMessage("Onlangse Transaksies"),
         "recivethePin":
@@ -536,6 +605,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("Registreer"),
         "registerTitle": MessageLookupByLibrary.simpleMessage(
             "Ons moet jou telefoon registreer sonder om te begin!"),
+        "relatedDataWillBeDeletedAlso": MessageLookupByLibrary.simpleMessage(
+            "Verwante data sal ook verwyder word"),
         "remainingDue":
             MessageLookupByLibrary.simpleMessage("Oorblywende Verskuldig"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("Onthou my"),
@@ -544,6 +615,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "reports": MessageLookupByLibrary.simpleMessage("Verslae"),
         "resendIn": MessageLookupByLibrary.simpleMessage("Stuur OTP weer in"),
         "resendOTP": MessageLookupByLibrary.simpleMessage("Stuur OTP weer"),
+        "resendOTPIn":
+            MessageLookupByLibrary.simpleMessage("Stuur OTP weer in"),
         "reset": MessageLookupByLibrary.simpleMessage(
             "Herstel wagwoord deur jou e-pos of telefoonnommer te gebruik"),
         "resetPassword": MessageLookupByLibrary.simpleMessage(
@@ -561,19 +634,29 @@ class MessageLookup extends MessageLookupByLibrary {
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("Verkope Besonderhede"),
         "salesList": MessageLookupByLibrary.simpleMessage("Verkooplys"),
+        "salesPrice": MessageLookupByLibrary.simpleMessage("Verkoopprys"),
         "salesPurchaseOverview":
             MessageLookupByLibrary.simpleMessage("Verkoop- & Aankoopoorsig"),
         "salesReport": MessageLookupByLibrary.simpleMessage("Verkope Verslag"),
+        "sat": MessageLookupByLibrary.simpleMessage("Sat"),
         "save": MessageLookupByLibrary.simpleMessage("Stoor"),
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("Stoor en Publiseer"),
+        "scanProductQRCode":
+            MessageLookupByLibrary.simpleMessage("Skandeer produk QR-kode"),
         "search": MessageLookupByLibrary.simpleMessage("Soek"),
         "searchH": MessageLookupByLibrary.simpleMessage("Soek Hier...."),
+        "searchHere": MessageLookupByLibrary.simpleMessage("Soek hier"),
+        "seconds": MessageLookupByLibrary.simpleMessage("sekondes"),
         "seeAllPromoCode":
             MessageLookupByLibrary.simpleMessage("Sien alle promokodes"),
         "select": MessageLookupByLibrary.simpleMessage("Kies"),
         "selectABrand":
             MessageLookupByLibrary.simpleMessage("Kies \'n Handelsmerk"),
+        "selectABusinessCategory": MessageLookupByLibrary.simpleMessage(
+            "Kies \'n Besigheidskategorie"),
+        "selectACategory":
+            MessageLookupByLibrary.simpleMessage("Kies \'n kategorie"),
         "selectAInvoice":
             MessageLookupByLibrary.simpleMessage("Kies \'n faktuur"),
         "selectBusinessCategory":
@@ -628,6 +711,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("Voorraad"),
         "stockList": MessageLookupByLibrary.simpleMessage("Voorraadlys"),
         "stockReport": MessageLookupByLibrary.simpleMessage("Voorraadverslag"),
+        "stockS": MessageLookupByLibrary.simpleMessage("Voorraad"),
         "stockValue": MessageLookupByLibrary.simpleMessage("Voorraadwaarde"),
         "stocks": MessageLookupByLibrary.simpleMessage("Voorraad: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Subtotaal"),
@@ -638,14 +722,21 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("suksesvol betaal"),
         "supplerPay": MessageLookupByLibrary.simpleMessage("Verskaffer Betaal"),
         "supplier": MessageLookupByLibrary.simpleMessage("Verskaffer"),
+        "supplierDetails":
+            MessageLookupByLibrary.simpleMessage("Verskafferbesonderhede"),
         "supplierName": MessageLookupByLibrary.simpleMessage("Verskaffer Naam"),
         "thakYouForYourPurchase":
             MessageLookupByLibrary.simpleMessage("Dankie vir jou aankoop"),
         "thankYouForYourDuePayment": MessageLookupByLibrary.simpleMessage(
             "Dankie vir jou uitstaande betaling"),
+        "thisMonth": MessageLookupByLibrary.simpleMessage("Hierdie Maand"),
         "thisProductAlreadyAdded": MessageLookupByLibrary.simpleMessage(
             "Hierdie Produk is reeds bygevoeg!"),
+        "thisWeek": MessageLookupByLibrary.simpleMessage("Hierdie Week"),
+        "thisYear": MessageLookupByLibrary.simpleMessage("Hierdie Jaar"),
+        "thurs": MessageLookupByLibrary.simpleMessage("Do"),
         "toDate": MessageLookupByLibrary.simpleMessage("Tot Datum"),
+        "toDay": MessageLookupByLibrary.simpleMessage("Vandag"),
         "todaySummary":
             MessageLookupByLibrary.simpleMessage("Vandag se Opsomming"),
         "total": MessageLookupByLibrary.simpleMessage("Totaal"),
@@ -670,11 +761,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "totall": MessageLookupByLibrary.simpleMessage("Totaal:"),
         "transactions": MessageLookupByLibrary.simpleMessage("Transaksies"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("Probeer Weer"),
+        "tues": MessageLookupByLibrary.simpleMessage("Di"),
         "twitter": MessageLookupByLibrary.simpleMessage("Twitter"),
         "type": MessageLookupByLibrary.simpleMessage("Tipe"),
         "unPaid": MessageLookupByLibrary.simpleMessage("Onbetaal"),
         "unitName": MessageLookupByLibrary.simpleMessage("Eenheidsnaam"),
         "unitPirce": MessageLookupByLibrary.simpleMessage("Eenheidsprys"),
+        "unitPrice": MessageLookupByLibrary.simpleMessage("Eenheidsprys"),
         "units": MessageLookupByLibrary.simpleMessage("Eenhede"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Onbeperk"),
         "unlimitedUsage":
@@ -701,6 +794,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Gebruikersrol Besonderhede"),
         "userTitle": MessageLookupByLibrary.simpleMessage("Gebruikerstitel"),
         "vat": MessageLookupByLibrary.simpleMessage("BTW"),
+        "vatDoesNOtApply": MessageLookupByLibrary.simpleMessage("BTW geld nie"),
         "verification": MessageLookupByLibrary.simpleMessage("Verifikasie"),
         "verify": MessageLookupByLibrary.simpleMessage("Verifieer"),
         "verifyYourEmail":
@@ -712,6 +806,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ons het \'n bevestigings-e-pos gestuur na"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Ons het \'n OTP na jou foonnommer gestuur"),
+        "wed": MessageLookupByLibrary.simpleMessage("Wo"),
+        "weekly": MessageLookupByLibrary.simpleMessage("Weekliks"),
         "weight": MessageLookupByLibrary.simpleMessage("Gewig"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welkom terug!"),
         "whatNew": MessageLookupByLibrary.simpleMessage("Wat is Nuut"),
@@ -722,9 +818,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Sal binnekort bygevoeg word"),
         "writeYourMessageHere":
             MessageLookupByLibrary.simpleMessage("Skryf u boodskap hier"),
+        "yearly": MessageLookupByLibrary.simpleMessage("Jaarliks"),
         "yes": MessageLookupByLibrary.simpleMessage("Ja"),
         "youCanNotPayMoreThenDue": MessageLookupByLibrary.simpleMessage(
             "Jy kan nie meer as die verskuldigde bedrag betaal nie"),
+        "youCanNowResendTheOTP": MessageLookupByLibrary.simpleMessage(
+            "Jy kan nou die OTP weer stuur"),
         "youHaveToGivePermission":
             MessageLookupByLibrary.simpleMessage("Jy moet toestemming gee"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("Jy gebruik "),

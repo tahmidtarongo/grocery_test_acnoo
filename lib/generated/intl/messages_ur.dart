@@ -22,19 +22,28 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Custom": MessageLookupByLibrary.simpleMessage("حسب ضرورت"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("کسٹمر کی تفصیلات"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "Sun": MessageLookupByLibrary.simpleMessage("اتوار"),
+        "addACustomer": MessageLookupByLibrary.simpleMessage(
+            "برائے مہربانی ایک کسٹمر شامل کریں"),
         "addAPurchase": MessageLookupByLibrary.simpleMessage(
             "برائے مہربانی ایک خریداری شامل کریں"),
         "addBrand": MessageLookupByLibrary.simpleMessage("برانڈ شامل کریں"),
         "addCategory": MessageLookupByLibrary.simpleMessage("زمرہ شامل کریں"),
         "addContact": MessageLookupByLibrary.simpleMessage("رابطہ شامل کریں"),
-        "addCustomer": MessageLookupByLibrary.simpleMessage(
-            "برائے مہربانی ایک کسٹمر شامل کریں"),
+        "addCustomer": MessageLookupByLibrary.simpleMessage("کسٹمر شامل کریں"),
         "addDelivery": MessageLookupByLibrary.simpleMessage("ترسیل شامل کریں"),
+        "addDiscount":
+            MessageLookupByLibrary.simpleMessage("ڈسکاؤنٹ شامل کریں"),
         "addExpense": MessageLookupByLibrary.simpleMessage("اخراج شامل کریں"),
         "addExpenseCat":
             MessageLookupByLibrary.simpleMessage("اخراج کیٹیگری شامل کریں"),
+        "addIncome": MessageLookupByLibrary.simpleMessage("آمدنی شامل کریں"),
+        "addIncomeCategory":
+            MessageLookupByLibrary.simpleMessage("آمدنی کا زمرہ شامل کریں"),
         "addItems": MessageLookupByLibrary.simpleMessage("آئٹمز شامل کریں"),
         "addNewAddress":
             MessageLookupByLibrary.simpleMessage("نیا پتہ شامل کریں"),
@@ -47,11 +56,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "برائے مہربانی ایک مصنوعہ شامل کریں"),
         "addProductFirst":
             MessageLookupByLibrary.simpleMessage("پہلے پروڈکٹ شامل کریں"),
+        "addPromoCode":
+            MessageLookupByLibrary.simpleMessage("پرومو کوڈ شامل کریں"),
         "addPurchase":
             MessageLookupByLibrary.simpleMessage("خریداری شامل کریں"),
         "addSale": MessageLookupByLibrary.simpleMessage(
             "برائے مہربانی ایک فروخت شامل کریں"),
         "addSales": MessageLookupByLibrary.simpleMessage("فروخت شامل کریں"),
+        "addToCart": MessageLookupByLibrary.simpleMessage("کارٹ میں شامل کریں"),
         "addUnit": MessageLookupByLibrary.simpleMessage("یونٹ شامل کریں"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("صارف کی رول شامل کریں"),
@@ -63,6 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تمام کاروباری حل"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
             "سیلز پرو ایک مکمل کاروباری حل ہے جس میں اسٹاک، اکاؤنٹ، سیلز، اخراجات اور نقصان منافع شامل ہیں۔"),
+        "allTime": MessageLookupByLibrary.simpleMessage("ہمیشہ"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("پہلے ہی شامل ہے"),
         "alreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage(
             "کیا آپ کے پاس پہلے سے ہی اکاؤنٹ ہے؟"),
@@ -80,9 +93,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("کیا آپ کو یقین ہے؟"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "کیا آپ اس پارٹی کو حذف کرنا چاہتے ہیں؟"),
+        "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
+            "کیا آپ واقعی یہ حذف کرنا چاہتے ہیں؟"),
         "backToHome": MessageLookupByLibrary.simpleMessage("واپس گھر آئیں"),
         "balance": MessageLookupByLibrary.simpleMessage("بیلنس"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("بنگلہ دیش"),
+        "bank": MessageLookupByLibrary.simpleMessage("بینک"),
+        "barcodeFound": MessageLookupByLibrary.simpleMessage("بارکوڈ ملا"),
         "billTO":
             MessageLookupByLibrary.simpleMessage("بل کرنے والے کی طرف سے"),
         "brand": MessageLookupByLibrary.simpleMessage("برانڈ"),
@@ -96,7 +113,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "call": MessageLookupByLibrary.simpleMessage("کال کریں"),
         "camera": MessageLookupByLibrary.simpleMessage("کیمرہ"),
         "cancel": MessageLookupByLibrary.simpleMessage("منسوخ کریں"),
+        "cancelAllProduct":
+            MessageLookupByLibrary.simpleMessage("تمام مصنوعات منسوخ کریں"),
         "capacity": MessageLookupByLibrary.simpleMessage("کمیت"),
+        "card": MessageLookupByLibrary.simpleMessage("کارڈ"),
         "cash": MessageLookupByLibrary.simpleMessage("نقد"),
         "categories": MessageLookupByLibrary.simpleMessage("زمرے"),
         "category": MessageLookupByLibrary.simpleMessage("زمرہ"),
@@ -113,6 +133,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
             "خصوصیات وہ اہم حصہ ہیں جو سیلز پرو کو روایتی حل سے مختلف بناتی ہیں۔"),
         "clarence": MessageLookupByLibrary.simpleMessage("کلیرنس"),
+        "clearAll": MessageLookupByLibrary.simpleMessage("سب صاف کریں"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("کنیکٹ کرنے کے لئے کلک کریں"),
         "close": MessageLookupByLibrary.simpleMessage("بند کریں"),
@@ -143,6 +164,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "continueButton": MessageLookupByLibrary.simpleMessage("جاری رکھیں"),
         "continueE": MessageLookupByLibrary.simpleMessage("جاری رکھیں"),
         "cost": MessageLookupByLibrary.simpleMessage("قیمت"),
+        "couldNotFetchProducts":
+            MessageLookupByLibrary.simpleMessage("مصنوعات حاصل نہیں کر سکا"),
+        "couldNotFetchTheCategories":
+            MessageLookupByLibrary.simpleMessage("زمرہ جات حاصل نہیں کر سکا"),
         "country": MessageLookupByLibrary.simpleMessage("ملک"),
         "create": MessageLookupByLibrary.simpleMessage("تخلیق کریں"),
         "createAFreeAccount":
@@ -151,6 +176,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("نیا پاس ورڈ بنائیں"),
         "currency": MessageLookupByLibrary.simpleMessage("کرنسی"),
+        "currentYear": MessageLookupByLibrary.simpleMessage("موجودہ سال"),
         "customInvoiceBranding":
             MessageLookupByLibrary.simpleMessage("حسب ضرورت بل برانڈنگ"),
         "customerDue":
@@ -167,9 +193,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "date": MessageLookupByLibrary.simpleMessage("تاریخ"),
         "dates": MessageLookupByLibrary.simpleMessage("تاریخ:"),
         "days": MessageLookupByLibrary.simpleMessage("دن"),
+        "daysLeft": MessageLookupByLibrary.simpleMessage("دن باقی ہیں"),
         "dealer": MessageLookupByLibrary.simpleMessage("ڈیلر"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage("ڈیلر قیمت"),
         "delete": MessageLookupByLibrary.simpleMessage("حذف کریں"),
+        "deleteConfirmation":
+            MessageLookupByLibrary.simpleMessage("حذف کی تصدیق"),
         "deleting": MessageLookupByLibrary.simpleMessage("حذف کر رہا ہے...."),
         "deliveryAddress": MessageLookupByLibrary.simpleMessage("ترسیل کا پتہ"),
         "deliveryCharge": MessageLookupByLibrary.simpleMessage("ترسیل کی فیس"),
@@ -185,6 +214,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "کیا آپ ایپ چھوڑنا چاہتے ہیں؟"),
         "donNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("کیا آپ کا اکاؤنٹ نہیں ہے؟"),
+        "done": MessageLookupByLibrary.simpleMessage("ہو گیا"),
         "due": MessageLookupByLibrary.simpleMessage("باقی"),
         "dueAmount": MessageLookupByLibrary.simpleMessage("باقی رقم: "),
         "dueCollection": MessageLookupByLibrary.simpleMessage("واجب وصولی"),
@@ -239,6 +269,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("خرچ کی تاریخ درج کریں"),
         "enterFullAddress":
             MessageLookupByLibrary.simpleMessage("پورا پتہ دیں"),
+        "enterIncomeCategoryName": MessageLookupByLibrary.simpleMessage(
+            "آمدنی کے زمرے کا نام درج کریں"),
         "enterManufacturerName":
             MessageLookupByLibrary.simpleMessage("مینوفیکچرر کا نام درج کریں"),
         "enterName": MessageLookupByLibrary.simpleMessage("نام درج کریں"),
@@ -257,6 +289,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterSize": MessageLookupByLibrary.simpleMessage("سائز درج کریں"),
         "enterStock": MessageLookupByLibrary.simpleMessage("اسٹاک درج کریں"),
         "enterType": MessageLookupByLibrary.simpleMessage("قسم درج کریں"),
+        "enterUnitQuantity":
+            MessageLookupByLibrary.simpleMessage("یونٹ کی مقدار درج کریں"),
         "enterUserTitle":
             MessageLookupByLibrary.simpleMessage("صارف کا عنوان درج کریں"),
         "enterValidOTP":
@@ -294,6 +328,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("مفت عمر بھر کی اپ ڈیٹ"),
         "freePack": MessageLookupByLibrary.simpleMessage("مفت پیکیج"),
         "freePlan": MessageLookupByLibrary.simpleMessage("مفت پلان"),
+        "fri": MessageLookupByLibrary.simpleMessage("جمعہ"),
         "fromDate": MessageLookupByLibrary.simpleMessage("تاریخ سے"),
         "fullName": MessageLookupByLibrary.simpleMessage("مکمل نام"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("مکمل ادا کیا گیا"),
@@ -310,6 +345,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("گھر"),
         "image": MessageLookupByLibrary.simpleMessage("تصویر"),
         "income": MessageLookupByLibrary.simpleMessage("آمدنی"),
+        "incomeCategories":
+            MessageLookupByLibrary.simpleMessage("آمدنی کے زمرے"),
+        "incomeFor": MessageLookupByLibrary.simpleMessage("آمدنی کے لیے"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("آمدنی کی رپورٹ"),
         "instagram": MessageLookupByLibrary.simpleMessage("انسٹاگرام"),
         "instrucation": MessageLookupByLibrary.simpleMessage("ہدایت"),
@@ -317,11 +355,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "invoice": MessageLookupByLibrary.simpleMessage("انوائس"),
         "invoiceViewr": MessageLookupByLibrary.simpleMessage("انوائس ویوور"),
         "itemAdded": MessageLookupByLibrary.simpleMessage("آئٹم شامل ہوگئی"),
+        "itemDetails": MessageLookupByLibrary.simpleMessage("آئٹم کی تفصیلات"),
+        "items": MessageLookupByLibrary.simpleMessage("آئٹمز"),
+        "itemsFor": MessageLookupByLibrary.simpleMessage("آئٹمز برائے"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("اشیاء کی فروخت"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("ای میل"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("پاس ورڈ"),
         "language": MessageLookupByLibrary.simpleMessage("زبان"),
+        "last30Days": MessageLookupByLibrary.simpleMessage("گزشتہ 30 دن"),
+        "last7Days": MessageLookupByLibrary.simpleMessage("گزشتہ 7 دن"),
         "lastName": MessageLookupByLibrary.simpleMessage("آخری نام"),
+        "lastYear": MessageLookupByLibrary.simpleMessage("پچھلا سال"),
         "link": MessageLookupByLibrary.simpleMessage("لنک"),
         "linkedIN": MessageLookupByLibrary.simpleMessage("لنکڈ ان"),
         "loading": MessageLookupByLibrary.simpleMessage("لوڈ ہو رہا ہے"),
@@ -337,6 +381,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Natoque aliquet et, cur eget. Tellus sapien odio aliq."),
         "loremIpsumDolorSit": MessageLookupByLibrary.simpleMessage(
             "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."),
+        "loremIpsumDolorSitAmetConsecteturAdipiscingElitMaurisCras":
+            MessageLookupByLibrary.simpleMessage(
+                "لوریم ایپسوم ڈولر سٹ ایٹ امیٹ، کنسیٹیچر ایڈپیسسکنگ ایلیٹ۔ موریس کراس"),
         "loremIpsumDolorSitAmetConsecteturElitInterdumCons":
             MessageLookupByLibrary.simpleMessage(
                 "Lorem ipsum dolor sit amet, consectetur elit. Interdum cons."),
@@ -352,6 +399,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "masterCard": MessageLookupByLibrary.simpleMessage("ماسٹر کارڈ"),
         "messege": MessageLookupByLibrary.simpleMessage("پیغام"),
         "mobile": MessageLookupByLibrary.simpleMessage("موبائل:"),
+        "mobilePayment": MessageLookupByLibrary.simpleMessage("موبائل ادائیگی"),
+        "mon": MessageLookupByLibrary.simpleMessage("پیر"),
+        "monthly": MessageLookupByLibrary.simpleMessage("ماہانہ"),
         "moreInfo": MessageLookupByLibrary.simpleMessage("مزید معلومات"),
         "mrp": MessageLookupByLibrary.simpleMessage("میعار قیمت"),
         "name": MessageLookupByLibrary.simpleMessage("نام"),
@@ -376,9 +426,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("کوئی سپلائر دستیاب نہیں ہے"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("کوئی معاملہ نہیں"),
+        "notActiveUser": MessageLookupByLibrary.simpleMessage("غیر فعال صارف"),
         "notFound": MessageLookupByLibrary.simpleMessage("مل نہیں سکا"),
         "note": MessageLookupByLibrary.simpleMessage("نوٹ"),
         "notification": MessageLookupByLibrary.simpleMessage("اطلاع"),
+        "oK": MessageLookupByLibrary.simpleMessage("ٹھیک ہے"),
         "off": MessageLookupByLibrary.simpleMessage("آف"),
         "on": MessageLookupByLibrary.simpleMessage("آن"),
         "openingBalance": MessageLookupByLibrary.simpleMessage("آغازی توازن"),
@@ -424,6 +476,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("اختتامی تاریخ منتخب کریں"),
         "pickStartDate": MessageLookupByLibrary.simpleMessage(
             "شروع ہونے کی تاریخ منتخب کریں"),
+        "plan": MessageLookupByLibrary.simpleMessage("پلان"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("براہ کرم مقدار شامل کریں"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
@@ -458,6 +511,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("براہ کرم رقم درج کریں"),
         "pleaseEnterName":
             MessageLookupByLibrary.simpleMessage("براہ کرم نام درج کریں"),
+        "pleaseEnterSalesPrice": MessageLookupByLibrary.simpleMessage(
+            "براہ کرم سیلز کی قیمت درج کریں"),
         "pleaseEnterTheOTP":
             MessageLookupByLibrary.simpleMessage("براہ کرم OTP درج کریں"),
         "pleaseEnterUnitName": MessageLookupByLibrary.simpleMessage(
@@ -473,6 +528,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "براہ کرم ایک زمرہ منتخب کریں"),
         "pleaseSelectAExpenseCategory": MessageLookupByLibrary.simpleMessage(
             "براہ کرم ایک خرچ کا زمرہ منتخب کریں"),
+        "pleaseUseTheValidPurchaseCodeToUseTheApp":
+            MessageLookupByLibrary.simpleMessage(
+                "براہ کرم ایپ استعمال کرنے کے لیے درست خریداری کا کوڈ استعمال کریں"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("آکنو کی طرف سے طاقت دی گئی"),
         "premiumCustomerSupport":
@@ -481,6 +539,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "previousDue": MessageLookupByLibrary.simpleMessage("پچھلا باقی"),
         "previousPayAmount":
             MessageLookupByLibrary.simpleMessage("پچھلی ادائیگی کی رقم"),
+        "priceMustBeGreaterThan":
+            MessageLookupByLibrary.simpleMessage("قیمت اس سے زیادہ ہونی چاہئے"),
         "print": MessageLookupByLibrary.simpleMessage("پرنٹ کریں"),
         "printing": MessageLookupByLibrary.simpleMessage("پرنٹنگ کا آپشن"),
         "product": MessageLookupByLibrary.simpleMessage("مصنوعات"),
@@ -520,7 +580,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchased": MessageLookupByLibrary.simpleMessage("خریداری"),
         "qty": MessageLookupByLibrary.simpleMessage("مقدار"),
         "quantity": MessageLookupByLibrary.simpleMessage("مقدار"),
+        "quantityExceedsAvailableStock": MessageLookupByLibrary.simpleMessage(
+            "مقدار دستیاب اسٹاک سے زیادہ ہے"),
+        "quantityMustBeGreaterThan": MessageLookupByLibrary.simpleMessage(
+            "مقدار اس سے زیادہ ہونی چاہئے"),
         "quickOverview": MessageLookupByLibrary.simpleMessage("مختصر جائزہ"),
+        "receivedAmount": MessageLookupByLibrary.simpleMessage("موصولہ رقم"),
         "recentTransaction":
             MessageLookupByLibrary.simpleMessage("حالیہ لین دین"),
         "recivethePin":
@@ -529,6 +594,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("رجسٹر کریں"),
         "registerTitle": MessageLookupByLibrary.simpleMessage(
             "ہمیں آغاز کرنے کے لئے آپ کا فون رجسٹر کرنا ضروری ہے!"),
+        "relatedDataWillBeDeletedAlso": MessageLookupByLibrary.simpleMessage(
+            "متعلقہ ڈیٹا بھی حذف کیا جائے گا"),
         "remainingDue": MessageLookupByLibrary.simpleMessage("باقی رقم"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("مجھے یاد رکھیں"),
         "rememberMeLater":
@@ -536,6 +603,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "reports": MessageLookupByLibrary.simpleMessage("رپورٹس"),
         "resendIn": MessageLookupByLibrary.simpleMessage("OTP دوبارہ بھیجیں"),
         "resendOTP": MessageLookupByLibrary.simpleMessage("دوبارہ OTP بھیجیں"),
+        "resendOTPIn":
+            MessageLookupByLibrary.simpleMessage("OTP دوبارہ بھیجیں"),
         "reset": MessageLookupByLibrary.simpleMessage(
             "اپنی ای میل یا فون نمبر کا استعمال کرکے پاس ورڈ دوبارہ سیٹ کریں"),
         "resetPassword": MessageLookupByLibrary.simpleMessage(
@@ -552,19 +621,29 @@ class MessageLookup extends MessageLookupByLibrary {
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("فروخت کی تفصیلات"),
         "salesList": MessageLookupByLibrary.simpleMessage("فروخت کی فہرست"),
+        "salesPrice": MessageLookupByLibrary.simpleMessage("سیلز کی قیمت"),
         "salesPurchaseOverview":
             MessageLookupByLibrary.simpleMessage("سیلز اور خریداری کا جائزہ"),
         "salesReport": MessageLookupByLibrary.simpleMessage("فروخت کی رپورٹ"),
+        "sat": MessageLookupByLibrary.simpleMessage("ہفتہ"),
         "save": MessageLookupByLibrary.simpleMessage("محفوظ کریں"),
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("محفوظ کریں اور شائع کریں"),
+        "scanProductQRCode":
+            MessageLookupByLibrary.simpleMessage("مصنوعات کا QR کوڈ سکین کریں"),
         "search": MessageLookupByLibrary.simpleMessage("تلاش کریں"),
         "searchH": MessageLookupByLibrary.simpleMessage("یہاں تلاش کریں...."),
+        "searchHere": MessageLookupByLibrary.simpleMessage("یہاں تلاش کریں"),
+        "seconds": MessageLookupByLibrary.simpleMessage("سیکنڈ"),
         "seeAllPromoCode":
             MessageLookupByLibrary.simpleMessage("تمام پرومو کوڈ دیکھیں"),
         "select": MessageLookupByLibrary.simpleMessage("منتخب کریں"),
         "selectABrand":
             MessageLookupByLibrary.simpleMessage("برانڈ منتخب کریں"),
+        "selectABusinessCategory": MessageLookupByLibrary.simpleMessage(
+            "ایک کاروباری زمرہ منتخب کریں"),
+        "selectACategory":
+            MessageLookupByLibrary.simpleMessage("ایک زمرہ منتخب کریں"),
         "selectAInvoice":
             MessageLookupByLibrary.simpleMessage("ایک انوائس منتخب کریں"),
         "selectBusinessCategory":
@@ -619,6 +698,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("اسٹاک"),
         "stockList": MessageLookupByLibrary.simpleMessage("اسٹاک کی فہرست"),
         "stockReport": MessageLookupByLibrary.simpleMessage("اسٹاک رپورٹ"),
+        "stockS": MessageLookupByLibrary.simpleMessage("اسٹاک"),
         "stockValue": MessageLookupByLibrary.simpleMessage("اسٹاک کی قیمت"),
         "stocks": MessageLookupByLibrary.simpleMessage("اسٹاک: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("ذیلی کل"),
@@ -629,14 +709,21 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("کامیابی سے ادائیگی"),
         "supplerPay": MessageLookupByLibrary.simpleMessage("سپلائر کی ادائیگی"),
         "supplier": MessageLookupByLibrary.simpleMessage("سپلائر"),
+        "supplierDetails":
+            MessageLookupByLibrary.simpleMessage("سپلائر کی تفصیلات"),
         "supplierName": MessageLookupByLibrary.simpleMessage("سپلائر کا نام"),
         "thakYouForYourPurchase":
             MessageLookupByLibrary.simpleMessage("آپ کے خریداری کا شکریہ"),
         "thankYouForYourDuePayment": MessageLookupByLibrary.simpleMessage(
             "آپ کی باقی رقم کی ادائیگی کا شکریہ"),
+        "thisMonth": MessageLookupByLibrary.simpleMessage("اس مہینے"),
         "thisProductAlreadyAdded": MessageLookupByLibrary.simpleMessage(
             "یہ پروڈکٹ پہلے ہی شامل کی جاچکی ہے!"),
+        "thisWeek": MessageLookupByLibrary.simpleMessage("اس ہفتے"),
+        "thisYear": MessageLookupByLibrary.simpleMessage("اس سال"),
+        "thurs": MessageLookupByLibrary.simpleMessage("جمعرات"),
         "toDate": MessageLookupByLibrary.simpleMessage("تاریخ تک"),
+        "toDay": MessageLookupByLibrary.simpleMessage("آج"),
         "todaySummary": MessageLookupByLibrary.simpleMessage("آج کا خلاصہ"),
         "total": MessageLookupByLibrary.simpleMessage("کل"),
         "totalAmount": MessageLookupByLibrary.simpleMessage("کل رقم"),
@@ -658,11 +745,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "totall": MessageLookupByLibrary.simpleMessage("کل:"),
         "transactions": MessageLookupByLibrary.simpleMessage("لین دین"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("دوبارہ کوشش کریں"),
+        "tues": MessageLookupByLibrary.simpleMessage("منگل"),
         "twitter": MessageLookupByLibrary.simpleMessage("ٹویٹر"),
         "type": MessageLookupByLibrary.simpleMessage("قسم"),
         "unPaid": MessageLookupByLibrary.simpleMessage("ادا نہیں کیا گیا"),
         "unitName": MessageLookupByLibrary.simpleMessage("یونٹ کا نام"),
         "unitPirce": MessageLookupByLibrary.simpleMessage("یونٹ قیمت"),
+        "unitPrice": MessageLookupByLibrary.simpleMessage("فی یونٹ قیمت"),
         "units": MessageLookupByLibrary.simpleMessage("یونٹس"),
         "unlimited": MessageLookupByLibrary.simpleMessage("لامحدود"),
         "unlimitedUsage":
@@ -690,6 +779,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("صارف کے کردار کی تفصیلات"),
         "userTitle": MessageLookupByLibrary.simpleMessage("صارف کا عنوان"),
         "vat": MessageLookupByLibrary.simpleMessage("VAT"),
+        "vatDoesNOtApply":
+            MessageLookupByLibrary.simpleMessage("ویٹ لاگو نہیں ہوتا"),
         "verification": MessageLookupByLibrary.simpleMessage("تصدیق"),
         "verify": MessageLookupByLibrary.simpleMessage("تصدیق کریں"),
         "verifyYourEmail":
@@ -702,6 +793,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "ہم نے تصدیقی ای میل بھیج دی ہے"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "ہم نے آپ کے فون نمبر پر ایک OTP بھیجا ہے"),
+        "wed": MessageLookupByLibrary.simpleMessage("بدھ"),
+        "weekly": MessageLookupByLibrary.simpleMessage("ہفتہ وار"),
         "weight": MessageLookupByLibrary.simpleMessage("وزن"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("خوش آمدید!"),
         "whatNew": MessageLookupByLibrary.simpleMessage("نئی کیا ہے"),
@@ -712,9 +805,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("جلد شامل کیا جائے گا"),
         "writeYourMessageHere":
             MessageLookupByLibrary.simpleMessage("اپنا پیغام یہاں لکھیں"),
+        "yearly": MessageLookupByLibrary.simpleMessage("سالانہ"),
         "yes": MessageLookupByLibrary.simpleMessage("جی ہاں"),
         "youCanNotPayMoreThenDue": MessageLookupByLibrary.simpleMessage(
             "آپ واجب الادا سے زیادہ نہیں ادا کرسکتے"),
+        "youCanNowResendTheOTP": MessageLookupByLibrary.simpleMessage(
+            "آپ اب OTP دوبارہ بھیج سکتے ہیں"),
         "youHaveToGivePermission":
             MessageLookupByLibrary.simpleMessage("آپ کو اجازت دینی ہوگی"),
         "youRUsing":

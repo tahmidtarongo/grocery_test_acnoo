@@ -42,7 +42,8 @@ class SuccessScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Text(
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cras",
+                  lang.S.of(context).loremIpsumDolorSitAmetConsecteturAdipiscingElitMaurisCras,
+                  //"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cras",
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.center,

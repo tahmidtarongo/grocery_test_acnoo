@@ -222,7 +222,7 @@ class _SignInState extends State<SignIn> {
                       LogInRepo repo = LogInRepo();
                       if (await repo.logIn(email: emailController.text, password: passwordController.text, context: context)) {
                         _saveUserCredentials();
-                        EasyLoading.showSuccess('Done');
+                        EasyLoading.showSuccess(lang.S.of(context).done);
                       } else {
                         isClicked = false;
                       }

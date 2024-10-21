@@ -429,7 +429,7 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                                Text(
                                  lang.S.of(context).vat,
                                 //'VAT',
-                                style: TextStyle(fontSize: 16),
+                                style: const TextStyle(fontSize: 16),
                               ),
                               Row(
                                 children: [

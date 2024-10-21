@@ -93,7 +93,8 @@ class _PurchaseProductsState extends State<PurchaseProducts> {
                           decoration: InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             labelText: lang.S.of(context).productCode,
-                            hintText: productCode == '0000' || productCode == '-1' ? 'Scan product QR code' : productCode,
+                           // hintText: productCode == '0000' || productCode == '-1' ? 'Scan product QR code' : productCode,
+                            hintText: productCode == '0000' || productCode == '-1' ? lang.S.of(context).scanProductQRCode : productCode,
                             border: const OutlineInputBorder(),
                           ),
                         ),
@@ -138,7 +139,8 @@ class _PurchaseProductsState extends State<PurchaseProducts> {
 
                                             if (barcodes.isNotEmpty) {
                                               final Barcode barcode = barcodes.first;
-                                              debugPrint('Barcode found! ${barcode.rawValue}');
+                                              //debugPrint('Barcode found! ${barcode.rawValue}');
+                                              debugPrint('${lang.S.of(context).barcodeFound}! ${barcode.rawValue}');
 
                                                 setState(() {
                                                   productCode = barcode.rawValue!;

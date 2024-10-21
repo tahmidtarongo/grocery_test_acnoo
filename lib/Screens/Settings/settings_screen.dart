@@ -428,7 +428,7 @@ class _SettingScreenState extends State<SettingScreen> {
                     Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: Text(
-                        'POSPro V-$appVersion',
+                        '${lang.S.of(context).POSProV}-$appVersion',
                         style: GoogleFonts.poppins(
                           color: kGreyTextColor,
                           fontSize: 16.0,
@@ -537,7 +537,7 @@ class _NoticationSettingsState extends State<NoticationSettings> {
                 onChanged: (val) {
                   setState(() {
                     notify = val;
-                    val ? notificationText = '${lang.S.of(context).on}' : notificationText = '${lang.S.of(context).off}';
+                    val ? notificationText = lang.S.of(context).on : notificationText = lang.S.of(context).off;
                   });
                 },
               ),

@@ -28,19 +28,19 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  List<DrawerManuTile> drawerMenuList = [
-    DrawerManuTile(title: 'Home', image: 'assets/grocery/home.svg', route: 'Home'),
-    DrawerManuTile(title: 'Sales List', image: 'assets/grocery/sales_list.svg', route: 'Sales List'),
-    DrawerManuTile(title: 'Parties', image: 'assets/grocery/parties.svg', route: 'Parties'),
-    DrawerManuTile(title: 'Items', image: 'assets/grocery/items.svg', route: 'Products'),
-    DrawerManuTile(title: 'Purchase', image: 'assets/grocery/purchase.svg', route: 'Purchase'),
-    DrawerManuTile(title: 'Purchase List', image: 'assets/grocery/sales_list.svg', route: 'Purchase List'), // Assuming you intended to use 'sales_list.svg' here
-    DrawerManuTile(title: 'Due List', image: 'assets/grocery/due_list.svg', route: 'Due List'),
-    DrawerManuTile(title: 'Loss/Profit', image: 'assets/grocery/loss_profit.svg', route: 'Loss/Profit'),
-    DrawerManuTile(title: 'Stocks', image: 'assets/grocery/stock.svg', route: "Stock"),
-    DrawerManuTile(title: 'Income', image: 'assets/incomeReport.svg', route: 'Income'),
-    DrawerManuTile(title: 'Expense', image: 'assets/grocery/expense.svg', route: 'Expense'),
-    DrawerManuTile(title: 'Reports', image: 'assets/grocery/reports.svg', route: 'Reports'),
+  List<DrawerManuTile> get drawerMenuList => [
+    DrawerManuTile(title: lang.S.current.home, image: 'assets/grocery/home.svg', route: 'Home'),
+    DrawerManuTile(title: lang.S.current.salesList, image: 'assets/grocery/sales_list.svg', route: 'Sales List'),
+    DrawerManuTile(title: lang.S.current.parties, image: 'assets/grocery/parties.svg', route: 'Parties'),
+    DrawerManuTile(title: lang.S.current.items, image: 'assets/grocery/items.svg', route: 'Products'),
+    DrawerManuTile(title: lang.S.current.purchase, image: 'assets/grocery/purchase.svg', route: 'Purchase'),
+    DrawerManuTile(title: lang.S.current.purchaseList, image: 'assets/grocery/sales_list.svg', route: 'Purchase List'), // Assuming you intended to use 'sales_list.svg' here
+    DrawerManuTile(title: lang.S.current.dueList, image: 'assets/grocery/due_list.svg', route: 'Due List'),
+    DrawerManuTile(title: lang.S.current.lossProfit, image: 'assets/grocery/loss_profit.svg', route: 'Loss/Profit'),
+    DrawerManuTile(title: lang.S.current.stock, image: 'assets/grocery/stock.svg', route: "Stock"),
+    DrawerManuTile(title: lang.S.current.income, image: 'assets/incomeReport.svg', route: 'Income'),
+    DrawerManuTile(title: lang.S.current.expense, image: 'assets/grocery/expense.svg', route: 'Expense'),
+    DrawerManuTile(title: lang.S.current.reports, image: 'assets/grocery/reports.svg', route: 'Reports'),
   ];
   bool checkPermission({required String item, required business.Visibility? visibility}) {
     if (item == 'Sales' && (visibility?.salePermission ?? true)) {
@@ -234,7 +234,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Padding(
                           padding: const EdgeInsets.only(left: 15, right: 15, top: 5, bottom: 5),
                           child: Text(
-                            "${details.enrolledPlan?.plan?.subscriptionName ?? ''} Plan",
+                            "${details.enrolledPlan?.plan?.subscriptionName ?? ''} ${lang.S.of(context).plan}",
                             style: GoogleFonts.poppins(color: Colors.white, fontSize: 14),
                           ),
                         ),
@@ -323,9 +323,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
 
                           ///______category_______________________________
-                          const Text(
-                            'Categories',
-                            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                           Text(
+                             lang.S.of(context).categories,
+                            //'Categories',
+                            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                           ),
                           const SizedBox(height: 10),
                           SizedBox(
@@ -358,7 +359,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                             width: 70,
                                             child: Center(
                                               child: Text(
-                                                "All",
+                                                lang.S.of(context).all,
+                                               // "All",
                                                 style: TextStyle(
                                                   color: selectedCategoryId == null ? kMainColor : null,
                                                   fontWeight: selectedCategoryId == null ? FontWeight.bold : null,
@@ -432,7 +434,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ],
                                 );
                               },
-                              error: (error, stackTrace) => const Text('Could not fetch the categories'),
+                              //error: (error, stackTrace) => const Text('Could not fetch the categories'),
+                              error: (error, stackTrace) =>  Text(lang.S.of(context).couldNotFetchTheCategories),
                               loading: () => const CircularProgressIndicator(),
                             ),
                           ),
@@ -453,7 +456,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             padding: const EdgeInsets.all(10.0),
                             child: TextFormField(
                               controller: productSearchController,
-                              decoration: const InputDecoration(border: OutlineInputBorder(), hintText: 'Search here....', suffixIcon: Icon(IconlyLight.search)),
+                              decoration:  InputDecoration(border: const OutlineInputBorder(), hintText: '${lang.S.of(context).searchHere}....', suffixIcon: const Icon(IconlyLight.search)),
                               onChanged: (value) {
                                 setState(() {
 
@@ -469,9 +472,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                 RichText(
                                   text: TextSpan(
                                     children: <TextSpan>[
-                                      TextSpan(text: '${productsList.length} All', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.black)),
+                                      TextSpan(text: '${productsList.length} ${lang.S.of(context).all}', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.black)),
                                       TextSpan(
-                                          text: ' items For',
+                                         // text: ' items For',
+                                          text: lang.S.of(context).itemsFor,
                                           style: TextStyle(
                                             fontSize: 16,
                                             color: Colors.grey.shade600,
@@ -601,13 +605,15 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                   ),
                                 )
-                              : const EmptyListWidget(
-                                  title: 'No Product Found',
+                              :  EmptyListWidget(
+                                  //title: 'No Product Found',
+                                  title: lang.S.of(context).noProductFound,
                                 ),
                         ],
                       );
                     },
-                    error: (error, stackTrace) => const Text('Could not fetch products'),
+                    //error: (error, stackTrace) => const Text('Could not fetch products'),
+                    error: (error, stackTrace) =>  Text(lang.S.of(context).couldNotFetchTheCategories),
                     loading: () => const CircularProgressIndicator(),
                   ),
 
@@ -691,9 +697,10 @@ class _ItemDetailsModalState extends State<ItemDetailsModal> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text(
-                  'Item Details',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                 Text(
+                   lang.S.of(context).itemDetails,
+                  //'Item Details',
+                  style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
                 GestureDetector(
                   onTap: () {
@@ -716,7 +723,8 @@ class _ItemDetailsModalState extends State<ItemDetailsModal> {
                   widget.product.productName ?? '',
                   style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
-                const Text('Unit price'),
+                 //Text('Unit price'),
+                 Text(lang.S.of(context).unitPirce),
               ],
             ),
             Row(
@@ -738,8 +746,10 @@ class _ItemDetailsModalState extends State<ItemDetailsModal> {
                     controller: quantityController,
                     inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
                     decoration: InputDecoration(
-                      labelText: 'Quantity',
-                      hintText: 'Enter unit quantity',
+                      //labelText: 'Quantity',
+                      labelText: lang.S.of(context).quantity,
+                      //hintText: 'Enter unit quantity',
+                      hintText: lang.S.of(context).enterUnitQuantity,
                       border: const OutlineInputBorder(),
                       suffixIcon: (widget.product.unitName.isEmptyOrNull)
                           ? null
@@ -757,10 +767,12 @@ class _ItemDetailsModalState extends State<ItemDetailsModal> {
                     validator: (value) {
                       final quantity = num.tryParse(value ?? '') ?? 0;
                       if (quantity <= 0) {
-                        return 'Quantity must be greater than 0';
+                        //return 'Quantity must be greater than 0';
+                        return '${lang.S.of(context).quantityMustBeGreaterThan} 0';
                       }
                       if (quantity > (widget.product.stock ?? 0)) {
-                        return 'Quantity exceeds available stock';
+                       // return 'Quantity exceeds available stock';
+                        return lang.S.of(context).quantityExceedsAvailableStock;
                       }
                       return null;
                     },
@@ -773,16 +785,19 @@ class _ItemDetailsModalState extends State<ItemDetailsModal> {
             TextFormField(
               controller: priceController,
               inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
-              decoration: const InputDecoration(
-                labelText: 'Sales Price',
-                hintText: 'Please enter sales price',
-                border: OutlineInputBorder(),
+              decoration:  InputDecoration(
+                //labelText: 'Sales Price',
+                labelText: lang.S.of(context).salesPrice,
+                //hintText: 'Please enter sales price',
+                hintText: lang.S.of(context).pleaseEnterSalesPrice,
+                border: const OutlineInputBorder(),
               ),
               keyboardType: TextInputType.number,
               validator: (value) {
                 final price = num.tryParse(value ?? '') ?? 0;
                 if (price <= 0) {
-                  return 'Price must be greater than 0';
+                 // return 'Price must be greater than 0';
+                  return '${lang.S.of(context).priceMustBeGreaterThan} 0';
                 }
                 return null;
               },
@@ -800,7 +815,7 @@ class _ItemDetailsModalState extends State<ItemDetailsModal> {
                   ),
                 ),
                 child: Text(
-                  'Add to Cart - Total: $currency ${(num.tryParse(quantityController.text) ?? 1) * (num.tryParse(priceController.text) ?? 0)}',
+                  '${lang.S.of(context).addToCart} - ${lang.S.of(context).total}: $currency ${(num.tryParse(quantityController.text) ?? 1) * (num.tryParse(priceController.text) ?? 0)}',
                   style: const TextStyle(fontSize: 16, color: Colors.white),
                 ),
                 onPressed: () {

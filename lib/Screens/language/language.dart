@@ -29,7 +29,7 @@ class _SelectLanguageState extends State<SelectLanguage> {
     'Italian',
     'German',
     'Vietnamese',
-    'Русский',
+    'Russian',
     'Indonesian',
     'Korean',
     'Serbian',
@@ -102,10 +102,10 @@ class _SelectLanguageState extends State<SelectLanguage> {
 
             // Update the state and navigate synchronously
             setState(() {
-              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Home()));
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) => const Home()));
             });
           },
-
           buttonTextColor: Colors.white),
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -132,7 +132,8 @@ class _SelectLanguageState extends State<SelectLanguage> {
         child: Column(
           children: [
             ListView.builder(
-              padding: const EdgeInsets.only(left: 10.0, right: 10.0, bottom: 10),
+              padding:
+                  const EdgeInsets.only(left: 10.0, right: 10.0, bottom: 10),
               itemCount: languageList.length,
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
@@ -146,27 +147,63 @@ class _SelectLanguageState extends State<SelectLanguage> {
                           setState(() {
                             selectedLanguage = languageList[index];
                             selectedLanguage == 'English'
-                                ? context.read<LanguageChangeProvider>().changeLocale("en")
+                                ? context
+                                    .read<LanguageChangeProvider>()
+                                    .changeLocale("en")
                                 : selectedLanguage == 'Chinese'
-                                    ? context.read<LanguageChangeProvider>().changeLocale("zh")
+                                    ? context
+                                        .read<LanguageChangeProvider>()
+                                        .changeLocale("zh")
                                     : selectedLanguage == 'Hindi'
-                                        ? context.read<LanguageChangeProvider>().changeLocale("hi")
+                                        ? context
+                                            .read<LanguageChangeProvider>()
+                                            .changeLocale("hi")
                                         : selectedLanguage == 'French'
-                                            ? context.read<LanguageChangeProvider>().changeLocale("fr")
+                                            ? context
+                                                .read<LanguageChangeProvider>()
+                                                .changeLocale("fr")
                                             : selectedLanguage == 'Spanish'
-                                                ? context.read<LanguageChangeProvider>().changeLocale("es")
+                                                ? context
+                                                    .read<
+                                                        LanguageChangeProvider>()
+                                                    .changeLocale("es")
                                                 : selectedLanguage == 'Japanese'
-                                                    ? context.read<LanguageChangeProvider>().changeLocale("ja")
-                                                    : selectedLanguage == 'Arabic'
-                                                        ? context.read<LanguageChangeProvider>().changeLocale("ar")
-                                                        : selectedLanguage == 'Romanian'
-                                                            ? context.read<LanguageChangeProvider>().changeLocale("ro")
-                                                            : selectedLanguage == 'Italian'
-                                                                ? context.read<LanguageChangeProvider>().changeLocale("it")
-                                                                : selectedLanguage == 'German'
-                                                                    ? context.read<LanguageChangeProvider>().changeLocale("de")
-                                                                    : selectedLanguage == 'Vietnamese'
-                                                                        ? context.read<LanguageChangeProvider>().changeLocale("vi")
+                                                    ? context
+                                                        .read<
+                                                            LanguageChangeProvider>()
+                                                        .changeLocale("ja")
+                                                    : selectedLanguage ==
+                                                            'Arabic'
+                                                        ? context
+                                                            .read<
+                                                                LanguageChangeProvider>()
+                                                            .changeLocale("ar")
+                                                        : selectedLanguage ==
+                                                                'Romanian'
+                                                            ? context
+                                                                .read<
+                                                                    LanguageChangeProvider>()
+                                                                .changeLocale(
+                                                                    "ro")
+                                                            : selectedLanguage ==
+                                                                    'Italian'
+                                                                ? context
+                                                                    .read<
+                                                                        LanguageChangeProvider>()
+                                                                    .changeLocale(
+                                                                        "it")
+                                                                : selectedLanguage ==
+                                                                        'German'
+                                                                    ? context
+                                                                        .read<
+                                                                            LanguageChangeProvider>()
+                                                                        .changeLocale(
+                                                                            "de")
+                                                                    : selectedLanguage ==
+                                                                            'Vietnamese'
+                                                                        ? context
+                                                                            .read<LanguageChangeProvider>()
+                                                                            .changeLocale("vi")
                                                                         : selectedLanguage == 'Русский'
                                                                             ? context.read<LanguageChangeProvider>().changeLocale("ru")
                                                                             : selectedLanguage == 'Indonesian'
@@ -192,61 +229,28 @@ class _SelectLanguageState extends State<SelectLanguage> {
                                                                                                                     : selectedLanguage == 'Hungarian'
                                                                                                                         ? context.read<LanguageChangeProvider>().changeLocale("hu")
                                                                                                                         : selectedLanguage == 'Hebrew'
-                                                                                                                            ? context
-                                                                                                                                .read<LanguageChangeProvider>()
-                                                                                                                                .changeLocale("he")
+                                                                                                                            ? context.read<LanguageChangeProvider>().changeLocale("he")
                                                                                                                             : selectedLanguage == 'Thai'
-                                                                                                                                ? context
-                                                                                                                                    .read<LanguageChangeProvider>()
-                                                                                                                                    .changeLocale("th")
+                                                                                                                                ? context.read<LanguageChangeProvider>().changeLocale("th")
                                                                                                                                 : selectedLanguage == 'Dutch'
-                                                                                                                                    ? context
-                                                                                                                                        .read<LanguageChangeProvider>()
-                                                                                                                                        .changeLocale("nl")
+                                                                                                                                    ? context.read<LanguageChangeProvider>().changeLocale("nl")
                                                                                                                                     : selectedLanguage == 'Finland'
-                                                                                                                                        ? context
-                                                                                                                                            .read<LanguageChangeProvider>()
-                                                                                                                                            .changeLocale("fi")
+                                                                                                                                        ? context.read<LanguageChangeProvider>().changeLocale("fi")
                                                                                                                                         : selectedLanguage == 'Greek'
-                                                                                                                                            ? context
-                                                                                                                                                .read<LanguageChangeProvider>()
-                                                                                                                                                .changeLocale("el")
+                                                                                                                                            ? context.read<LanguageChangeProvider>().changeLocale("el")
                                                                                                                                             : selectedLanguage == 'Khmer'
-                                                                                                                                                ? context
-                                                                                                                                                    .read<LanguageChangeProvider>()
-                                                                                                                                                    .changeLocale("km")
+                                                                                                                                                ? context.read<LanguageChangeProvider>().changeLocale("km")
                                                                                                                                                 : selectedLanguage == 'Bosnian'
-                                                                                                                                                    ? context
-                                                                                                                                                        .read<
-                                                                                                                                                            LanguageChangeProvider>()
-                                                                                                                                                        .changeLocale("bs")
+                                                                                                                                                    ? context.read<LanguageChangeProvider>().changeLocale("bs")
                                                                                                                                                     : selectedLanguage == 'Bangla'
-                                                                                                                                                        ? context
-                                                                                                                                                            .read<
-                                                                                                                                                                LanguageChangeProvider>()
-                                                                                                                                                            .changeLocale("bn")
-                                                                                                                                                        : selectedLanguage ==
-                                                                                                                                                                'Swahili'
-                                                                                                                                                            ? context
-                                                                                                                                                                .read<
-                                                                                                                                                                    LanguageChangeProvider>()
-                                                                                                                                                                .changeLocale("sw")
-                                                                                                                                                            : selectedLanguage ==
-                                                                                                                                                                    'Slovak'
-                                                                                                                                                                ? context
-                                                                                                                                                                    .read<
-                                                                                                                                                                        LanguageChangeProvider>()
-                                                                                                                                                                    .changeLocale(
-                                                                                                                                                                        "sk")
-                                                                                                                                                                : selectedLanguage ==
-                                                                                                                                                                        'Sinhala'
-                                                                                                                                                                    ? context
-                                                                                                                                                                        .read<
-                                                                                                                                                                            LanguageChangeProvider>()
-                                                                                                                                                                        .changeLocale(
-                                                                                                                                                                            "si")
-                                                                                                                                                                    : selectedLanguage ==
-                                                                                                                                                                            'Urdu'
+                                                                                                                                                        ? context.read<LanguageChangeProvider>().changeLocale("bn")
+                                                                                                                                                        : selectedLanguage == 'Swahili'
+                                                                                                                                                            ? context.read<LanguageChangeProvider>().changeLocale("sw")
+                                                                                                                                                            : selectedLanguage == 'Slovak'
+                                                                                                                                                                ? context.read<LanguageChangeProvider>().changeLocale("sk")
+                                                                                                                                                                : selectedLanguage == 'Sinhala'
+                                                                                                                                                                    ? context.read<LanguageChangeProvider>().changeLocale("si")
+                                                                                                                                                                    : selectedLanguage == 'Urdu'
                                                                                                                                                                         ? context.read<LanguageChangeProvider>().changeLocale("ur")
                                                                                                                                                                         : selectedLanguage == 'Kannada'
                                                                                                                                                                             ? context.read<LanguageChangeProvider>().changeLocale("kn")
@@ -277,12 +281,17 @@ class _SelectLanguageState extends State<SelectLanguage> {
                                                                                                                                                                                                                             : context.read<LanguageChangeProvider>().changeLocale("en");
                           });
                         },
-                        contentPadding: const EdgeInsets.only(left: 10, right: 10.0),
+                        contentPadding:
+                            const EdgeInsets.only(left: 10, right: 10.0),
                         horizontalTitleGap: 10,
                         title: Text(languageList[index]),
                         trailing: Icon(
-                          selectedLanguage == languageList[index] ? Icons.radio_button_checked_outlined : Icons.circle_outlined,
-                          color: selectedLanguage == languageList[index] ? kMainColor : Colors.grey,
+                          selectedLanguage == languageList[index]
+                              ? Icons.radio_button_checked_outlined
+                              : Icons.circle_outlined,
+                          color: selectedLanguage == languageList[index]
+                              ? kMainColor
+                              : Colors.grey,
                         ),
                       ),
                     );

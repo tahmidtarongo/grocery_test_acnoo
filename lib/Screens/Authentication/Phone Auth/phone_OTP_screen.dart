@@ -188,7 +188,7 @@ class _OTPVerifyState extends State<OTPVerify> {
                                    //'Resend OTP in '
                                ),
                               Text(
-                                '${_start.toString()} seconds',
+                                '${_start.toString()} ${lang.S.of(context).seconds}',
                                 style: const TextStyle(color: Colors.grey),
                               ),
                             ],

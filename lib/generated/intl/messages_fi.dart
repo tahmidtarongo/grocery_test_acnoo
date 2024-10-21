@@ -24,17 +24,23 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("asiakkaan tiedot"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "addACustomer":
+            MessageLookupByLibrary.simpleMessage("Ole hyvä ja lisää asiakas"),
         "addAPurchase":
             MessageLookupByLibrary.simpleMessage("Ole hyvä ja lisää ostos"),
         "addBrand": MessageLookupByLibrary.simpleMessage("Lisää tuotemerkki"),
         "addCategory": MessageLookupByLibrary.simpleMessage("Lisää kategoria"),
         "addContact": MessageLookupByLibrary.simpleMessage("Lisää yhteystieto"),
-        "addCustomer":
-            MessageLookupByLibrary.simpleMessage("Ole hyvä ja lisää asiakas"),
+        "addCustomer": MessageLookupByLibrary.simpleMessage("Lisää asiakas"),
         "addDelivery": MessageLookupByLibrary.simpleMessage("Lisää toimitus"),
+        "addDiscount": MessageLookupByLibrary.simpleMessage("Lisää alennus"),
         "addExpense": MessageLookupByLibrary.simpleMessage("Lisää kuluja"),
         "addExpenseCat":
             MessageLookupByLibrary.simpleMessage("Lisää kululuokka"),
+        "addIncome": MessageLookupByLibrary.simpleMessage("Lisää tulo"),
+        "addIncomeCategory":
+            MessageLookupByLibrary.simpleMessage("Lisää tulokategoria"),
         "addItems": MessageLookupByLibrary.simpleMessage("Lisää kohteita"),
         "addNewAddress":
             MessageLookupByLibrary.simpleMessage("Lisää uusi osoite"),
@@ -47,10 +53,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ole hyvä ja lisää tuote"),
         "addProductFirst":
             MessageLookupByLibrary.simpleMessage("Lisää tuote ensin"),
+        "addPromoCode":
+            MessageLookupByLibrary.simpleMessage("Lisää alennuskoodi"),
         "addPurchase": MessageLookupByLibrary.simpleMessage("Lisää osto"),
         "addSale":
             MessageLookupByLibrary.simpleMessage("Ole hyvä ja lisää myynti"),
         "addSales": MessageLookupByLibrary.simpleMessage("Lisää myynti"),
+        "addToCart": MessageLookupByLibrary.simpleMessage("Lisää ostoskoriin"),
         "addUnit": MessageLookupByLibrary.simpleMessage("Lisää yksikkö"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Lisää käyttäjärooli"),
@@ -63,6 +72,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Kaikki liiketoimintaratkaisut"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
             "PosPro on täydellinen liiketoimintaratkaisu varaston, tilien, myynnin, kulujen ja voiton/tappion osalta."),
+        "allTime": MessageLookupByLibrary.simpleMessage("Kaiken aikaa"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Jo lisätty"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Onko sinulla jo tili?"),
@@ -79,9 +89,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "areYouSure": MessageLookupByLibrary.simpleMessage("Oletko varma?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "Oletko varma, että haluat poistaa tämän osapuolen?"),
+        "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
+            "Oletko varma, että haluat poistaa tämän"),
         "backToHome": MessageLookupByLibrary.simpleMessage("Takaisin kotiin"),
         "balance": MessageLookupByLibrary.simpleMessage("Saldo"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("Bangladesh"),
+        "bank": MessageLookupByLibrary.simpleMessage("Pankki"),
+        "barcodeFound":
+            MessageLookupByLibrary.simpleMessage("Viivakoodi löydetty"),
         "billTO": MessageLookupByLibrary.simpleMessage("Laskutettava"),
         "brand": MessageLookupByLibrary.simpleMessage("Merkki"),
         "brandName": MessageLookupByLibrary.simpleMessage("Tuotenimi"),
@@ -95,7 +110,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "call": MessageLookupByLibrary.simpleMessage("Soita"),
         "camera": MessageLookupByLibrary.simpleMessage("Kamera"),
         "cancel": MessageLookupByLibrary.simpleMessage("Peruuttaa"),
+        "cancelAllProduct":
+            MessageLookupByLibrary.simpleMessage("Peruuta kaikki tuotteet"),
         "capacity": MessageLookupByLibrary.simpleMessage("Kapasiteetti"),
+        "card": MessageLookupByLibrary.simpleMessage("Kortti"),
         "cash": MessageLookupByLibrary.simpleMessage("Käteinen"),
         "categories": MessageLookupByLibrary.simpleMessage("Kategoriat"),
         "category": MessageLookupByLibrary.simpleMessage("Kategoria"),
@@ -113,6 +131,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
             "Ominaisuudet ovat tärkeä osa, joka erottaa PosPron perinteisistä ratkaisuista."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
+        "clearAll": MessageLookupByLibrary.simpleMessage("Tyhjennä kaikki"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Yhdistä napsauttamalla"),
         "close": MessageLookupByLibrary.simpleMessage("kiinni"),
@@ -143,6 +162,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "continueButton": MessageLookupByLibrary.simpleMessage("Jatkaa"),
         "continueE": MessageLookupByLibrary.simpleMessage("Jatka"),
         "cost": MessageLookupByLibrary.simpleMessage("Kustannus"),
+        "couldNotFetchProducts":
+            MessageLookupByLibrary.simpleMessage("Tuotteita ei voitu noutaa"),
+        "couldNotFetchTheCategories": MessageLookupByLibrary.simpleMessage(
+            "Kategorioita ei voitu noutaa"),
         "country": MessageLookupByLibrary.simpleMessage("Maa"),
         "create": MessageLookupByLibrary.simpleMessage("Luo"),
         "createAFreeAccount":
@@ -151,6 +174,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Luo uusi salasana"),
         "currency": MessageLookupByLibrary.simpleMessage("Valuutta"),
+        "currentYear": MessageLookupByLibrary.simpleMessage("Nykyinen vuosi"),
         "customInvoiceBranding": MessageLookupByLibrary.simpleMessage(
             "Mukautettu laskujen brändäys"),
         "customerDue": MessageLookupByLibrary.simpleMessage("Asiakasvelat"),
@@ -166,10 +190,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "date": MessageLookupByLibrary.simpleMessage("Päivämäärä"),
         "dates": MessageLookupByLibrary.simpleMessage("Päivämäärä:"),
         "days": MessageLookupByLibrary.simpleMessage("päivää"),
+        "daysLeft": MessageLookupByLibrary.simpleMessage("Päiviä jäljellä"),
         "dealer": MessageLookupByLibrary.simpleMessage("Jakaja"),
         "dealerPrice":
             MessageLookupByLibrary.simpleMessage("Jälleenmyyjän hinta"),
         "delete": MessageLookupByLibrary.simpleMessage("Poista"),
+        "deleteConfirmation":
+            MessageLookupByLibrary.simpleMessage("Poiston vahvistus"),
         "deleting": MessageLookupByLibrary.simpleMessage("Poistetaan...."),
         "deliveryAddress":
             MessageLookupByLibrary.simpleMessage("Toimitusosoite"),
@@ -186,6 +213,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Haluatko poistua sovelluksesta?"),
         "donNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Ei tiliä?"),
+        "done": MessageLookupByLibrary.simpleMessage("Valmis"),
         "due": MessageLookupByLibrary.simpleMessage("Erääntynyt"),
         "dueAmount": MessageLookupByLibrary.simpleMessage("Erääntyvä summa: "),
         "dueCollection":
@@ -242,6 +270,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Syötä kulun päivämäärä"),
         "enterFullAddress":
             MessageLookupByLibrary.simpleMessage("Syötä koko osoite"),
+        "enterIncomeCategoryName":
+            MessageLookupByLibrary.simpleMessage("Syötä tulokategorian nimi"),
         "enterManufacturerName":
             MessageLookupByLibrary.simpleMessage("Syötä valmistajan nimi"),
         "enterName": MessageLookupByLibrary.simpleMessage("Syötä nimi"),
@@ -260,6 +290,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterSize": MessageLookupByLibrary.simpleMessage("Syötä koko"),
         "enterStock": MessageLookupByLibrary.simpleMessage("Syötä varasto"),
         "enterType": MessageLookupByLibrary.simpleMessage("Syötä tyyppi"),
+        "enterUnitQuantity":
+            MessageLookupByLibrary.simpleMessage("Syötä yksikkömäärä"),
         "enterUserTitle":
             MessageLookupByLibrary.simpleMessage("Syötä käyttäjän titteli"),
         "enterValidOTP":
@@ -298,6 +330,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "freePack": MessageLookupByLibrary.simpleMessage("Ilmainen paketti"),
         "freePlan":
             MessageLookupByLibrary.simpleMessage("Ilmainen suunnitelma"),
+        "fri": MessageLookupByLibrary.simpleMessage("Pe"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Päivämäärästä"),
         "fullName": MessageLookupByLibrary.simpleMessage("Koko nimi"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("Kokonaan maksettu"),
@@ -314,6 +347,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("Koti"),
         "image": MessageLookupByLibrary.simpleMessage("Kuva"),
         "income": MessageLookupByLibrary.simpleMessage("Tulot"),
+        "incomeCategories": MessageLookupByLibrary.simpleMessage("Tulot"),
+        "incomeFor": MessageLookupByLibrary.simpleMessage("Tulot varten"),
         "incomeReport":
             MessageLookupByLibrary.simpleMessage("Tulojen raportti"),
         "instagram": MessageLookupByLibrary.simpleMessage("Instagram"),
@@ -322,11 +357,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "invoice": MessageLookupByLibrary.simpleMessage("Lasku"),
         "invoiceViewr": MessageLookupByLibrary.simpleMessage("Laskun katselu"),
         "itemAdded": MessageLookupByLibrary.simpleMessage("Kohde lisätty"),
+        "itemDetails": MessageLookupByLibrary.simpleMessage("Tuotteen tiedot"),
+        "items": MessageLookupByLibrary.simpleMessage("Tuotteet"),
+        "itemsFor": MessageLookupByLibrary.simpleMessage("tuotteet varten"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("Tuotemyynti"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("Sähköposti"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("Salasana"),
         "language": MessageLookupByLibrary.simpleMessage("Kieli"),
+        "last30Days":
+            MessageLookupByLibrary.simpleMessage("Viimeiset 30 päivää"),
+        "last7Days": MessageLookupByLibrary.simpleMessage("Viimeiset 7 päivää"),
         "lastName": MessageLookupByLibrary.simpleMessage("Sukunimi"),
+        "lastYear": MessageLookupByLibrary.simpleMessage("Viime vuosi"),
         "link": MessageLookupByLibrary.simpleMessage("Linkki"),
         "linkedIN": MessageLookupByLibrary.simpleMessage("LinkedIn"),
         "loading": MessageLookupByLibrary.simpleMessage("Ladataan"),
@@ -342,6 +384,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Natoque aliquet et, cur eget. Tellus sapien odio aliq."),
         "loremIpsumDolorSit": MessageLookupByLibrary.simpleMessage(
             "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."),
+        "loremIpsumDolorSitAmetConsecteturAdipiscingElitMaurisCras":
+            MessageLookupByLibrary.simpleMessage(
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cras"),
         "loremIpsumDolorSitAmetConsecteturElitInterdumCons":
             MessageLookupByLibrary.simpleMessage(
                 "Lorem ipsum dolor sit amet, consectetur elit. Interdum cons."),
@@ -357,6 +402,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "masterCard": MessageLookupByLibrary.simpleMessage("MasterCard"),
         "messege": MessageLookupByLibrary.simpleMessage("Viesti"),
         "mobile": MessageLookupByLibrary.simpleMessage("mobiili:"),
+        "mobilePayment": MessageLookupByLibrary.simpleMessage("Mobiilimaksu"),
+        "mon": MessageLookupByLibrary.simpleMessage("Ma"),
+        "monthly": MessageLookupByLibrary.simpleMessage("Kuukausittain"),
         "moreInfo": MessageLookupByLibrary.simpleMessage("Lisätietoja"),
         "mrp": MessageLookupByLibrary.simpleMessage("MRP"),
         "name": MessageLookupByLibrary.simpleMessage("Nimi"),
@@ -381,9 +429,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "noSupplier": MessageLookupByLibrary.simpleMessage(
             "Toimittajaa ei ole saatavilla"),
         "noTransaction": MessageLookupByLibrary.simpleMessage("Ei tapahtumia"),
+        "notActiveUser":
+            MessageLookupByLibrary.simpleMessage("Ei aktiivinen käyttäjä"),
         "notFound": MessageLookupByLibrary.simpleMessage("Ei löytynyt"),
         "note": MessageLookupByLibrary.simpleMessage("Huomautus"),
         "notification": MessageLookupByLibrary.simpleMessage("Ilmoitus"),
+        "oK": MessageLookupByLibrary.simpleMessage("OK"),
         "off": MessageLookupByLibrary.simpleMessage("Pois"),
         "on": MessageLookupByLibrary.simpleMessage("Päällä"),
         "openingBalance": MessageLookupByLibrary.simpleMessage("Avaussaldo"),
@@ -430,6 +481,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Valitse loppupäivämäärä"),
         "pickStartDate":
             MessageLookupByLibrary.simpleMessage("Valitse aloituspäivämäärä"),
+        "plan": MessageLookupByLibrary.simpleMessage("Suunnitelma"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("Lisää määrä"),
         "pleaseConnectThePrinterFirst":
@@ -463,6 +515,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "pleaseEnterAmount":
             MessageLookupByLibrary.simpleMessage("Syötä summa"),
         "pleaseEnterName": MessageLookupByLibrary.simpleMessage("Syötä nimi"),
+        "pleaseEnterSalesPrice": MessageLookupByLibrary.simpleMessage(
+            "Ole hyvä ja syötä myyntihinta"),
         "pleaseEnterTheOTP": MessageLookupByLibrary.simpleMessage("Syötä OTP"),
         "pleaseEnterUnitName":
             MessageLookupByLibrary.simpleMessage("Syötä yksikön nimi"),
@@ -477,6 +531,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Valitse kategoria"),
         "pleaseSelectAExpenseCategory":
             MessageLookupByLibrary.simpleMessage("Valitse kulukategoria"),
+        "pleaseUseTheValidPurchaseCodeToUseTheApp":
+            MessageLookupByLibrary.simpleMessage(
+                "Ole hyvä ja käytä voimassa olevaa ostopäiväystä käyttääksesi sovellusta"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Powered By Acnoo"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
@@ -487,6 +544,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Edellinen eräpäivä"),
         "previousPayAmount":
             MessageLookupByLibrary.simpleMessage("Edellinen palkkasumma"),
+        "priceMustBeGreaterThan": MessageLookupByLibrary.simpleMessage(
+            "Hinnan on oltava suurempi kuin"),
         "print": MessageLookupByLibrary.simpleMessage("Tulosta"),
         "printing": MessageLookupByLibrary.simpleMessage("Tulostusvaihtoehto"),
         "product": MessageLookupByLibrary.simpleMessage("Tuote"),
@@ -524,8 +583,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchased": MessageLookupByLibrary.simpleMessage("Ostettu"),
         "qty": MessageLookupByLibrary.simpleMessage("Määrä"),
         "quantity": MessageLookupByLibrary.simpleMessage("Määrä"),
+        "quantityExceedsAvailableStock": MessageLookupByLibrary.simpleMessage(
+            "Määrä ylittää saatavilla olevan varaston"),
+        "quantityMustBeGreaterThan": MessageLookupByLibrary.simpleMessage(
+            "Määrän on oltava suurempi kuin"),
         "quickOverview":
             MessageLookupByLibrary.simpleMessage("Nopea yleiskatsaus"),
+        "receivedAmount": MessageLookupByLibrary.simpleMessage("Saadut määrät"),
         "recentTransaction":
             MessageLookupByLibrary.simpleMessage("Viimeaikaiset tapahtumat"),
         "recivethePin":
@@ -534,6 +598,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("Rekisteröidy"),
         "registerTitle": MessageLookupByLibrary.simpleMessage(
             "Meidän on rekisteröitävä puhelimesi aloittamatta!"),
+        "relatedDataWillBeDeletedAlso": MessageLookupByLibrary.simpleMessage(
+            "Liittyvät tiedot poistetaan myös"),
         "remainingDue":
             MessageLookupByLibrary.simpleMessage("Jäljellä oleva velka"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("Muista minut"),
@@ -543,6 +609,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "resendIn":
             MessageLookupByLibrary.simpleMessage("Lähetä OTP uudelleen "),
         "resendOTP":
+            MessageLookupByLibrary.simpleMessage("Lähetä OTP uudelleen"),
+        "resendOTPIn":
             MessageLookupByLibrary.simpleMessage("Lähetä OTP uudelleen"),
         "reset": MessageLookupByLibrary.simpleMessage(
             "Nollaa salasana sähköpostin tai puhelinnumeron avulla"),
@@ -559,19 +627,29 @@ class MessageLookup extends MessageLookupByLibrary {
         "salesBy": MessageLookupByLibrary.simpleMessage("Myyty:"),
         "salesDetails": MessageLookupByLibrary.simpleMessage("Myynnin tiedot"),
         "salesList": MessageLookupByLibrary.simpleMessage("Myyntilista"),
+        "salesPrice": MessageLookupByLibrary.simpleMessage("Myyntihinta"),
         "salesPurchaseOverview": MessageLookupByLibrary.simpleMessage(
             "Myynnin ja oston yleiskatsaus"),
         "salesReport": MessageLookupByLibrary.simpleMessage("Myyntiraportti"),
+        "sat": MessageLookupByLibrary.simpleMessage("La"),
         "save": MessageLookupByLibrary.simpleMessage("Tallentaa"),
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("Tallenna ja julkaise"),
+        "scanProductQRCode":
+            MessageLookupByLibrary.simpleMessage("Skannaa tuotteen QR-koodi"),
         "search": MessageLookupByLibrary.simpleMessage("Hae"),
         "searchH": MessageLookupByLibrary.simpleMessage("Hae täältä...."),
+        "searchHere": MessageLookupByLibrary.simpleMessage("Etsi täältä"),
+        "seconds": MessageLookupByLibrary.simpleMessage("sekunnit"),
         "seeAllPromoCode":
             MessageLookupByLibrary.simpleMessage("Näytä kaikki promokoodit"),
         "select": MessageLookupByLibrary.simpleMessage("Valitse"),
         "selectABrand":
             MessageLookupByLibrary.simpleMessage("Valitse tuotemerkki"),
+        "selectABusinessCategory": MessageLookupByLibrary.simpleMessage(
+            "Valitse liiketoimintakategoria"),
+        "selectACategory":
+            MessageLookupByLibrary.simpleMessage("Valitse kategoria"),
         "selectAInvoice": MessageLookupByLibrary.simpleMessage("Valitse lasku"),
         "selectBusinessCategory": MessageLookupByLibrary.simpleMessage(
             "Valitse liiketoimintakategoria"),
@@ -626,6 +704,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("Stock"),
         "stockList": MessageLookupByLibrary.simpleMessage("Osakeluettelo"),
         "stockReport": MessageLookupByLibrary.simpleMessage("Varastoraportti"),
+        "stockS": MessageLookupByLibrary.simpleMessage("Varastot"),
         "stockValue": MessageLookupByLibrary.simpleMessage("Varaston arvo"),
         "stocks": MessageLookupByLibrary.simpleMessage("Varastot: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Välisumma"),
@@ -636,15 +715,22 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Maksettu onnistuneesti"),
         "supplerPay": MessageLookupByLibrary.simpleMessage("Toimittaja maksaa"),
         "supplier": MessageLookupByLibrary.simpleMessage("Toimittaja"),
+        "supplierDetails":
+            MessageLookupByLibrary.simpleMessage("Toimittajan tiedot"),
         "supplierName":
             MessageLookupByLibrary.simpleMessage("Toimittajan nimi"),
         "thakYouForYourPurchase":
             MessageLookupByLibrary.simpleMessage("Kiitos ostoksestasi"),
         "thankYouForYourDuePayment": MessageLookupByLibrary.simpleMessage(
             "Kiitos erääntyneestä maksusta"),
+        "thisMonth": MessageLookupByLibrary.simpleMessage("Tässä kuussa"),
         "thisProductAlreadyAdded":
             MessageLookupByLibrary.simpleMessage("Tämä tuote on jo lisätty!"),
+        "thisWeek": MessageLookupByLibrary.simpleMessage("Tällä viikolla"),
+        "thisYear": MessageLookupByLibrary.simpleMessage("Tänä vuonna"),
+        "thurs": MessageLookupByLibrary.simpleMessage("To"),
         "toDate": MessageLookupByLibrary.simpleMessage("Tähän mennessä"),
+        "toDay": MessageLookupByLibrary.simpleMessage("Tänään"),
         "todaySummary":
             MessageLookupByLibrary.simpleMessage("Päivän yhteenveto"),
         "total": MessageLookupByLibrary.simpleMessage("Kaikki yhteensä"),
@@ -673,11 +759,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "totall": MessageLookupByLibrary.simpleMessage("Yhteensä:"),
         "transactions": MessageLookupByLibrary.simpleMessage("Tapahtumat"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("Yritä uudelleen"),
+        "tues": MessageLookupByLibrary.simpleMessage("Ti"),
         "twitter": MessageLookupByLibrary.simpleMessage("Twitter"),
         "type": MessageLookupByLibrary.simpleMessage("Tyyppi"),
         "unPaid": MessageLookupByLibrary.simpleMessage("Palkaton"),
         "unitName": MessageLookupByLibrary.simpleMessage("Yksikön nimi"),
         "unitPirce": MessageLookupByLibrary.simpleMessage("Yksikköhinta"),
+        "unitPrice": MessageLookupByLibrary.simpleMessage("Yksikköhinta"),
         "units": MessageLookupByLibrary.simpleMessage("Yksiköt"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Rajoittamaton"),
         "unlimitedUsage":
@@ -704,6 +792,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Käyttäjäroolin tiedot"),
         "userTitle": MessageLookupByLibrary.simpleMessage("Käyttäjän titteli"),
         "vat": MessageLookupByLibrary.simpleMessage("ALV"),
+        "vatDoesNOtApply": MessageLookupByLibrary.simpleMessage("ALV ei koske"),
         "verification": MessageLookupByLibrary.simpleMessage("Varmistus"),
         "verify": MessageLookupByLibrary.simpleMessage("Vahvista"),
         "verifyYourEmail":
@@ -717,6 +806,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Olemme lähettäneet vahvistusviestin osoitteeseen"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Olemme lähettäneet OTP puhelinnumeroosi"),
+        "wed": MessageLookupByLibrary.simpleMessage("Ke"),
+        "weekly": MessageLookupByLibrary.simpleMessage("Viikoittain"),
         "weight": MessageLookupByLibrary.simpleMessage("Paino"),
         "welcomeBack":
             MessageLookupByLibrary.simpleMessage("Tervetuloa takaisin!"),
@@ -727,9 +818,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Lisätään pian"),
         "writeYourMessageHere":
             MessageLookupByLibrary.simpleMessage("Kirjoita viestisi tähän"),
+        "yearly": MessageLookupByLibrary.simpleMessage("Vuosittain"),
         "yes": MessageLookupByLibrary.simpleMessage("Kyllä"),
         "youCanNotPayMoreThenDue": MessageLookupByLibrary.simpleMessage(
             "Et voi maksaa enemmän kuin velkaa"),
+        "youCanNowResendTheOTP": MessageLookupByLibrary.simpleMessage(
+            "Voit nyt lähettää OTP:n uudelleen"),
         "youHaveToGivePermission":
             MessageLookupByLibrary.simpleMessage("Sinun on annettava lupa"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("Käytät "),

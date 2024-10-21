@@ -53,8 +53,10 @@ class _SplashScreenState extends State<SplashScreen> {
           showDialog(
             context: context,
             builder: (context) => AlertDialog(
-              title: const Text("Not Active User"),
-              content: const Text("Please use the valid purchase code to use the app."),
+             // title: const Text("Not Active User"),
+              title:  Text(lang.S.of(context).notActiveUser),
+              //content: const Text("Please use the valid purchase code to use the app."),
+              content:  Text("${lang.S.of(context).pleaseUseTheValidPurchaseCodeToUseTheApp}."),
               actions: [
                 TextButton(
                   onPressed: () {
@@ -65,7 +67,8 @@ class _SplashScreenState extends State<SplashScreen> {
                       exit(0);
                     }
                   },
-                  child: const Text("OK"),
+                  //child: const Text("OK"),
+                  child:  Text(lang.S.of(context).oK),
                 ),
               ],
             ),
@@ -138,7 +141,7 @@ class _SplashScreenState extends State<SplashScreen> {
                                             ? context.read<LanguageChangeProvider>().changeLocale("de")
                                             : selectedLanguage == 'Vietnamese'
                                                 ? context.read<LanguageChangeProvider>().changeLocale("vi")
-                                                : selectedLanguage == 'Русский'
+                                                : selectedLanguage == 'Russian'
                                                     ? context.read<LanguageChangeProvider>().changeLocale("ru")
                                                     : selectedLanguage == 'Indonesian'
                                                         ? context.read<LanguageChangeProvider>().changeLocale("id")
@@ -245,6 +248,7 @@ class _SplashScreenState extends State<SplashScreen> {
                                                                                                                                                                                                 ? context.read<LanguageChangeProvider>().changeLocale("ne")
                                                                                                                                                                                                 : selectedLanguage == 'Burmese'
                                                                                                                                                                                                     ? context.read<LanguageChangeProvider>().changeLocale("my")
+        :selectedLanguage == 'Fijian'?context.read<LanguageChangeProvider>().changeLocale("fj")
                                                                                                                                                                                                     : context.read<LanguageChangeProvider>().changeLocale("en");
   }
 

@@ -22,8 +22,12 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Custom": MessageLookupByLibrary.simpleMessage("அமைப்பு"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("வாடிக்கையாளர் விபரங்கள்"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "addACustomer": MessageLookupByLibrary.simpleMessage(
+            "தயவுசெய்து ஒரு வாடிக்கையாளரைச் சேர்க்கவும்"),
         "addAPurchase": MessageLookupByLibrary.simpleMessage(
             "தயவுசெய்து வாங்கலைச் சேர்க்கவும்"),
         "addBrand":
@@ -32,14 +36,20 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("வகையைச் சேர்க்கவும்"),
         "addContact":
             MessageLookupByLibrary.simpleMessage("தொடர்பைச் சேர்க்கவும்"),
-        "addCustomer": MessageLookupByLibrary.simpleMessage(
-            "தயவுசெய்து ஒரு வாடிக்கையாளரைச் சேர்க்கவும்"),
+        "addCustomer":
+            MessageLookupByLibrary.simpleMessage("வாடிக்கையாளர் சேர்க்கவும்"),
         "addDelivery":
             MessageLookupByLibrary.simpleMessage("விநியோகம் சேர்க்கவும்"),
+        "addDiscount":
+            MessageLookupByLibrary.simpleMessage("விலையின்மையைச் சேர்க்கவும்"),
         "addExpense":
             MessageLookupByLibrary.simpleMessage("செலவைச் சேர்க்கவும்"),
         "addExpenseCat":
             MessageLookupByLibrary.simpleMessage("செலவு வகையைச் சேர்க்கவும்"),
+        "addIncome":
+            MessageLookupByLibrary.simpleMessage("வருமானம் சேர்க்கவும்"),
+        "addIncomeCategory":
+            MessageLookupByLibrary.simpleMessage("வருமான வகையைச் சேர்க்கவும்"),
         "addItems":
             MessageLookupByLibrary.simpleMessage("பொருட்களைச் சேர்க்கவும்"),
         "addNewAddress":
@@ -53,12 +63,16 @@ class MessageLookup extends MessageLookupByLibrary {
             "தயவுசெய்து பொருளைச் சேர்க்கவும்"),
         "addProductFirst":
             MessageLookupByLibrary.simpleMessage("முதல் பொருளைச் சேர்க்கவும்"),
+        "addPromoCode": MessageLookupByLibrary.simpleMessage(
+            "ப்ரோமோ குறியீட்டைச் சேர்க்கவும்"),
         "addPurchase":
             MessageLookupByLibrary.simpleMessage("வாங்கியதைச் சேர்க்கவும்"),
         "addSale": MessageLookupByLibrary.simpleMessage(
             "தயவுசெய்து விற்பனையைச் சேர்க்கவும்"),
         "addSales":
             MessageLookupByLibrary.simpleMessage("விற்பனையைச் சேர்க்கவும்"),
+        "addToCart":
+            MessageLookupByLibrary.simpleMessage("கார்ட்டுக்கு சேர்க்கவும்"),
         "addUnit":
             MessageLookupByLibrary.simpleMessage("அலகுவாட்டைச் சேர்க்கவும்"),
         "addUserRole":
@@ -72,6 +86,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("அனைத்து வணிக தீர்வுகள்"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
             "விநியோகம் ப்ரோ மொத்த வணிக தீர்வு உடையவை ஆகும் மற்றும் பங்கு, கணக்கு, விற்பனை, செலவு மற்றும் குழந்தை / லாபம்."),
+        "allTime": MessageLookupByLibrary.simpleMessage("எல்லா காலத்திலும்"),
         "alreadyAdded":
             MessageLookupByLibrary.simpleMessage("ஏற்கனவே சேர்க்கப்பட்டது"),
         "alreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage(
@@ -89,10 +104,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "areYouSure": MessageLookupByLibrary.simpleMessage("நீங்கள் உறுதியா?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "இந்த பாகத்தை நீக்க விரும்புகிறீர்களா?"),
+        "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
+            "இதனை அழிக்க நீங்கள் உறுதியாக உள்ளீர்களா?"),
         "backToHome":
             MessageLookupByLibrary.simpleMessage("முகப்புக்கு திரும்பு"),
         "balance": MessageLookupByLibrary.simpleMessage("மிச்சம்"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("பங்களாதேஷ்"),
+        "bank": MessageLookupByLibrary.simpleMessage("வங்கி"),
+        "barcodeFound": MessageLookupByLibrary.simpleMessage(
+            "பார்கோடு கண்டுபிடிக்கப்பட்டது"),
         "billTO": MessageLookupByLibrary.simpleMessage("பில் அனுப்புவர்"),
         "brand": MessageLookupByLibrary.simpleMessage("பிராண்ட்"),
         "brandName": MessageLookupByLibrary.simpleMessage("பிராண்டின் பெயர்"),
@@ -105,7 +125,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "call": MessageLookupByLibrary.simpleMessage("அழை"),
         "camera": MessageLookupByLibrary.simpleMessage("கேமரா"),
         "cancel": MessageLookupByLibrary.simpleMessage("ரத்துசெய்"),
+        "cancelAllProduct": MessageLookupByLibrary.simpleMessage(
+            "எல்லா தயாரிப்புகளையும் ரத்து செய்யவும்"),
         "capacity": MessageLookupByLibrary.simpleMessage("பரிமாணம்"),
+        "card": MessageLookupByLibrary.simpleMessage("கூட்டை"),
         "cash": MessageLookupByLibrary.simpleMessage("பணம்"),
         "categories": MessageLookupByLibrary.simpleMessage("பிரிவுகள்"),
         "category": MessageLookupByLibrary.simpleMessage("வகை"),
@@ -123,6 +146,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
             "அம்சங்கள் பரமிப்பு திராவிக திருத்தங்களிலிருந்து விதிக்கப்பட்டுள்ளன."),
         "clarence": MessageLookupByLibrary.simpleMessage("கிளேரன்ஸ்"),
+        "clearAll":
+            MessageLookupByLibrary.simpleMessage("எல்லாவற்றையும் அழிக்கவும்"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("இணைக்க கிளிக் செய்க"),
         "close": MessageLookupByLibrary.simpleMessage("மூடு"),
@@ -156,6 +181,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "continueButton": MessageLookupByLibrary.simpleMessage("தொடர்க"),
         "continueE": MessageLookupByLibrary.simpleMessage("தொடருங்கள்"),
         "cost": MessageLookupByLibrary.simpleMessage("செலவு"),
+        "couldNotFetchProducts": MessageLookupByLibrary.simpleMessage(
+            "தயாரிப்புகளை எடுக்க முடியவில்லை"),
+        "couldNotFetchTheCategories":
+            MessageLookupByLibrary.simpleMessage("வகைகளை எடுக்க முடியவில்லை"),
         "country": MessageLookupByLibrary.simpleMessage("நாடு"),
         "create": MessageLookupByLibrary.simpleMessage("உருவாக்கவும்"),
         "createAFreeAccount": MessageLookupByLibrary.simpleMessage(
@@ -165,6 +194,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword": MessageLookupByLibrary.simpleMessage(
             "புதிய கடவுச்சொல்லை உருவாக்கவும்"),
         "currency": MessageLookupByLibrary.simpleMessage("நாணயம்"),
+        "currentYear": MessageLookupByLibrary.simpleMessage("நிகழும் வருடம்"),
         "customInvoiceBranding": MessageLookupByLibrary.simpleMessage(
             "தனிப்பயனாக்கப்பட்ட பில் மார்கிங்"),
         "customerDue":
@@ -183,10 +213,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "date": MessageLookupByLibrary.simpleMessage("தேதி"),
         "dates": MessageLookupByLibrary.simpleMessage("தேதிகள்:"),
         "days": MessageLookupByLibrary.simpleMessage("நாட்கள்"),
+        "daysLeft": MessageLookupByLibrary.simpleMessage("மிச்ச நாட்கள்"),
         "dealer": MessageLookupByLibrary.simpleMessage("விற்பனையாளர்"),
         "dealerPrice":
             MessageLookupByLibrary.simpleMessage("விற்பனையாளர் விலை"),
         "delete": MessageLookupByLibrary.simpleMessage("நீக்கு"),
+        "deleteConfirmation":
+            MessageLookupByLibrary.simpleMessage("அழிக்கும் உறுதிப்படுத்தல்"),
         "deleting":
             MessageLookupByLibrary.simpleMessage("அழிக்கப்படுகிறது...."),
         "deliveryAddress":
@@ -206,6 +239,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "ஆப்பை வெளியேற்ற விரும்புகிறீர்களா?"),
         "donNotHaveAnAccount": MessageLookupByLibrary.simpleMessage(
             "கணக்குக் கொண்டு இருப்பதில்லை?"),
+        "done": MessageLookupByLibrary.simpleMessage("செய்யப்பட்டது"),
         "due": MessageLookupByLibrary.simpleMessage("நிலுவை"),
         "dueAmount": MessageLookupByLibrary.simpleMessage("நிலுவை தொகை: "),
         "dueCollection": MessageLookupByLibrary.simpleMessage("கடன் வசூல்"),
@@ -263,6 +297,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("செலவு தேதியை உள்ளிடவும்"),
         "enterFullAddress":
             MessageLookupByLibrary.simpleMessage("முழு முகவரியை உள்ளிடவும்"),
+        "enterIncomeCategoryName":
+            MessageLookupByLibrary.simpleMessage("வருமான வகை பெயரை உள்ளிடவும்"),
         "enterManufacturerName": MessageLookupByLibrary.simpleMessage(
             "தயாரிப்பாளர் பெயரை உள்ளிடவும்"),
         "enterName": MessageLookupByLibrary.simpleMessage("பெயரை உள்ளிடவும்"),
@@ -285,6 +321,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterStock":
             MessageLookupByLibrary.simpleMessage("சரக்கைக் குறிப்பிடவும்"),
         "enterType": MessageLookupByLibrary.simpleMessage("வகையை உள்ளிடவும்"),
+        "enterUnitQuantity":
+            MessageLookupByLibrary.simpleMessage("அலகு அளவை உள்ளிடவும்"),
         "enterUserTitle":
             MessageLookupByLibrary.simpleMessage("பயனர் தலைப்பை உள்ளிடவும்"),
         "enterValidOTP":
@@ -321,6 +359,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "சாதாரணமாகச் சொந்தமாகுமாறு மாற்றங்களை இலகுவாகக் பெறுங்கள்"),
         "freePack": MessageLookupByLibrary.simpleMessage("இலவச தொகுதி"),
         "freePlan": MessageLookupByLibrary.simpleMessage("இலவச திட்டம்"),
+        "fri": MessageLookupByLibrary.simpleMessage("வெள்ளி"),
         "fromDate": MessageLookupByLibrary.simpleMessage("முதல் தேதி"),
         "fullName": MessageLookupByLibrary.simpleMessage("முழு பெயர்"),
         "fullyPaid":
@@ -339,6 +378,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("முகப்பு"),
         "image": MessageLookupByLibrary.simpleMessage("படம்"),
         "income": MessageLookupByLibrary.simpleMessage("வருமானம்"),
+        "incomeCategories":
+            MessageLookupByLibrary.simpleMessage("வருமான வகைகள்"),
+        "incomeFor": MessageLookupByLibrary.simpleMessage("வருமானம்"),
         "incomeReport":
             MessageLookupByLibrary.simpleMessage("வருமானப் பொறுப்பு"),
         "instagram": MessageLookupByLibrary.simpleMessage("இன்ஸ்டாகிராம்"),
@@ -348,11 +390,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "invoiceViewr": MessageLookupByLibrary.simpleMessage("விலைப்பரிசோதகம்"),
         "itemAdded":
             MessageLookupByLibrary.simpleMessage("பொருள் சேர்க்கப்பட்டது"),
+        "itemDetails": MessageLookupByLibrary.simpleMessage("பொருள் விவரங்கள்"),
+        "items": MessageLookupByLibrary.simpleMessage("பொருட்கள்"),
+        "itemsFor": MessageLookupByLibrary.simpleMessage("பொருட்கள்"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("பொருட்கள் விற்பனை"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("மின்னஞ்சல்"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("கடவுச்சொல்"),
         "language": MessageLookupByLibrary.simpleMessage("மொழி"),
+        "last30Days": MessageLookupByLibrary.simpleMessage("கடந்த 30 நாட்கள்"),
+        "last7Days": MessageLookupByLibrary.simpleMessage("கடந்த 7 நாட்கள்"),
         "lastName": MessageLookupByLibrary.simpleMessage("கடைசி பெயர்"),
+        "lastYear": MessageLookupByLibrary.simpleMessage("கடந்த வருடம்"),
         "link": MessageLookupByLibrary.simpleMessage("இணைப்பு"),
         "linkedIN": MessageLookupByLibrary.simpleMessage("லிங்க்டின்"),
         "loading": MessageLookupByLibrary.simpleMessage("ஏற்றுகிறது"),
@@ -368,6 +416,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Natoque aliquet et, cur eget. Tellus sapien odio aliq."),
         "loremIpsumDolorSit": MessageLookupByLibrary.simpleMessage(
             "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."),
+        "loremIpsumDolorSitAmetConsecteturAdipiscingElitMaurisCras":
+            MessageLookupByLibrary.simpleMessage(
+                "லோரேம் இப்சம் டொலோர் சிட் அமெத், கன்செக்டெர் அடிப்பிஸ்கிங் எலிட். மௌரிஸ் கிராஸ்"),
         "loremIpsumDolorSitAmetConsecteturElitInterdumCons":
             MessageLookupByLibrary.simpleMessage(
                 "Lorem ipsum dolor sit amet, consectetur elit. Interdum cons."),
@@ -383,6 +434,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "masterCard": MessageLookupByLibrary.simpleMessage("மாஸ்டர் கார்டு"),
         "messege": MessageLookupByLibrary.simpleMessage("செய்தி"),
         "mobile": MessageLookupByLibrary.simpleMessage("மொபைல்:"),
+        "mobilePayment":
+            MessageLookupByLibrary.simpleMessage("மொபைல் செலுத்துதல்"),
+        "mon": MessageLookupByLibrary.simpleMessage("திங்கள்"),
+        "monthly": MessageLookupByLibrary.simpleMessage("மாதாந்திர"),
         "moreInfo": MessageLookupByLibrary.simpleMessage("மேலும் தகவல்"),
         "mrp": MessageLookupByLibrary.simpleMessage("MRP"),
         "name": MessageLookupByLibrary.simpleMessage("பெயர்"),
@@ -408,10 +463,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("விற்பனையாளர் கிடைக்கவில்லை"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("பரிவர்த்தனை இல்லை"),
+        "notActiveUser":
+            MessageLookupByLibrary.simpleMessage("செயல்பாட்டில் இல்லாத பயனர்"),
         "notFound":
             MessageLookupByLibrary.simpleMessage("கண்டுபிடிக்கப்படவில்லை"),
         "note": MessageLookupByLibrary.simpleMessage("குறிப்பு"),
         "notification": MessageLookupByLibrary.simpleMessage("அறிவிப்பு"),
+        "oK": MessageLookupByLibrary.simpleMessage("சரி"),
         "off": MessageLookupByLibrary.simpleMessage("ஆப்"),
         "on": MessageLookupByLibrary.simpleMessage("ஆன்"),
         "openingBalance": MessageLookupByLibrary.simpleMessage("திறன் பொருள்"),
@@ -459,6 +517,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "முடிவுத் தேதியைத் தேர்ந்தெடுக்கவும்"),
         "pickStartDate": MessageLookupByLibrary.simpleMessage(
             "தொடக்க தேதியைத் தேர்ந்தெடுக்கவும்"),
+        "plan": MessageLookupByLibrary.simpleMessage("திட்டம்"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("அளவைக் கூட்டவும்"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
@@ -493,6 +552,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("தொகையை உள்ளிடவும்"),
         "pleaseEnterName":
             MessageLookupByLibrary.simpleMessage("பெயரை உள்ளிடவும்"),
+        "pleaseEnterSalesPrice":
+            MessageLookupByLibrary.simpleMessage("விற்பனை விலையை உள்ளிடவும்"),
         "pleaseEnterTheOTP":
             MessageLookupByLibrary.simpleMessage("OTP ஐ உள்ளிடவும்"),
         "pleaseEnterUnitName":
@@ -508,6 +569,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "ஒரு வகையைத் தேர்ந்தெடுக்கவும்"),
         "pleaseSelectAExpenseCategory": MessageLookupByLibrary.simpleMessage(
             "ஒரு செலவுப் பிரிவை தேர்ந்தெடுக்கவும்"),
+        "pleaseUseTheValidPurchaseCodeToUseTheApp":
+            MessageLookupByLibrary.simpleMessage(
+                "அப்பிளிக்கேஷனைப் பயன்படுத்த சரியான வாங்கும் குறியீட்டை பயன்படுத்தவும்"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("அக்னூ விரிவுருக்கப்பட்டது"),
         "premiumCustomerSupport":
@@ -517,6 +581,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "previousDue": MessageLookupByLibrary.simpleMessage("முந்தைய பாதிப்பு"),
         "previousPayAmount":
             MessageLookupByLibrary.simpleMessage("முந்தைய செலுத்தல் தொகை"),
+        "priceMustBeGreaterThan": MessageLookupByLibrary.simpleMessage(
+            "விலை அதிகமாக இருக்க வேண்டும்"),
         "print": MessageLookupByLibrary.simpleMessage("அச்சிடு"),
         "printing":
             MessageLookupByLibrary.simpleMessage("அச்சுப்பின் விருப்பம்"),
@@ -558,8 +624,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchased": MessageLookupByLibrary.simpleMessage("வாங்கப்பட்டது"),
         "qty": MessageLookupByLibrary.simpleMessage("அளவு"),
         "quantity": MessageLookupByLibrary.simpleMessage("அளவு"),
+        "quantityExceedsAvailableStock": MessageLookupByLibrary.simpleMessage(
+            "அளவு கிடைக்குதலுக்குப் பாரம்பரியத்திற்கு அதிகமாகும்"),
+        "quantityMustBeGreaterThan": MessageLookupByLibrary.simpleMessage(
+            "அளவு அதிகமாக இருக்க வேண்டும்"),
         "quickOverview":
             MessageLookupByLibrary.simpleMessage("விரைவு கண்ணோட்டம்"),
+        "receivedAmount":
+            MessageLookupByLibrary.simpleMessage("பெறப்பட்ட தொகை"),
         "recentTransaction":
             MessageLookupByLibrary.simpleMessage("சமீபத்திய பரிவர்த்தனைகள்"),
         "recivethePin": MessageLookupByLibrary.simpleMessage("முகவரியை பெறுக"),
@@ -567,6 +639,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("பதிவுபெறுக"),
         "registerTitle": MessageLookupByLibrary.simpleMessage(
             "தொலைபேசியைப் பதிவு செய்வதற்கான முதன்முதலில் நமது தேவையை பதிவு செய்ய வேண்டும்!"),
+        "relatedDataWillBeDeletedAlso": MessageLookupByLibrary.simpleMessage(
+            "அறிக்கையை அழிக்கவும் தொடர்புடைய தரவுகள் அழிக்கப்படும்"),
         "remainingDue": MessageLookupByLibrary.simpleMessage(
             "மீதியை விட்டுவிட்டு செலுத்தும்"),
         "rememberMe": MessageLookupByLibrary.simpleMessage(
@@ -577,6 +651,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "resendIn":
             MessageLookupByLibrary.simpleMessage("OTP மறுதொடர்ந்து அனுப்பவும்"),
         "resendOTP":
+            MessageLookupByLibrary.simpleMessage("OTP ஐ மீண்டும் அனுப்பவும்"),
+        "resendOTPIn":
             MessageLookupByLibrary.simpleMessage("OTP ஐ மீண்டும் அனுப்பவும்"),
         "reset": MessageLookupByLibrary.simpleMessage(
             "மின்னஞ்சல் அல்லது தொலைபேசி எண்ணை பயன்படுத்தி கடவுச்சொல்லை மீட்டமைக்கவும்"),
@@ -596,19 +672,29 @@ class MessageLookup extends MessageLookupByLibrary {
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("விற்பனை விவரங்கள்"),
         "salesList": MessageLookupByLibrary.simpleMessage("விற்பனைப் பட்டியல்"),
+        "salesPrice": MessageLookupByLibrary.simpleMessage("விற்பனை விலை"),
         "salesPurchaseOverview": MessageLookupByLibrary.simpleMessage(
             "விற்பனை மற்றும் வாங்குதல் கண்ணோட்டம்"),
         "salesReport": MessageLookupByLibrary.simpleMessage("விற்பனை அறிக்கை"),
+        "sat": MessageLookupByLibrary.simpleMessage("சனிக்கிழமை"),
         "save": MessageLookupByLibrary.simpleMessage("சேமி"),
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("சேமி மற்றும் வெளியிடு"),
+        "scanProductQRCode": MessageLookupByLibrary.simpleMessage(
+            "பொருளின் QR குறியீட்டை ஸ்கேன் செய்யவும்"),
         "search": MessageLookupByLibrary.simpleMessage("தேடு"),
         "searchH": MessageLookupByLibrary.simpleMessage("இங்கே தேடவும்...."),
+        "searchHere": MessageLookupByLibrary.simpleMessage("இங்கு தேடுங்கள்"),
+        "seconds": MessageLookupByLibrary.simpleMessage("நிமிடங்கள்"),
         "seeAllPromoCode": MessageLookupByLibrary.simpleMessage(
             "அனைத்து விளம்பர குறியீடுகளையும் பார்க்கவும்"),
         "select": MessageLookupByLibrary.simpleMessage("தேர்ந்தெடுக்கவும்"),
         "selectABrand": MessageLookupByLibrary.simpleMessage(
             "ஒரு பிராண்டைத் தேர்ந்தெடுக்கவும்"),
+        "selectABusinessCategory": MessageLookupByLibrary.simpleMessage(
+            "ஒரு வணிக வகையைத் தேர்ந்தெடுக்கவும்"),
+        "selectACategory": MessageLookupByLibrary.simpleMessage(
+            "ஒரு வகையைத் தேர்ந்தெடுக்கவும்"),
         "selectAInvoice": MessageLookupByLibrary.simpleMessage(
             "ஒரு பில்லைக் தேர்ந்தெடுக்கவும்"),
         "selectBusinessCategory": MessageLookupByLibrary.simpleMessage(
@@ -666,6 +752,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("பங்கு"),
         "stockList": MessageLookupByLibrary.simpleMessage("பங்கு பட்டியல்"),
         "stockReport": MessageLookupByLibrary.simpleMessage("சரக்கு அறிக்கை"),
+        "stockS": MessageLookupByLibrary.simpleMessage("சேமிப்பு"),
         "stockValue": MessageLookupByLibrary.simpleMessage("சரக்கு மதிப்பு"),
         "stocks": MessageLookupByLibrary.simpleMessage("சரக்குகள்: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("துணை மொத்தம்"),
@@ -677,15 +764,22 @@ class MessageLookup extends MessageLookupByLibrary {
         "supplerPay":
             MessageLookupByLibrary.simpleMessage("வழங்குநருக்கு செலுத்துக"),
         "supplier": MessageLookupByLibrary.simpleMessage("சப்ளையர்"),
+        "supplierDetails":
+            MessageLookupByLibrary.simpleMessage("சப்ளையர் விவரங்கள்"),
         "supplierName":
             MessageLookupByLibrary.simpleMessage("விற்பனையாளரின் பெயர்"),
         "thakYouForYourPurchase": MessageLookupByLibrary.simpleMessage(
             "உங்கள் வாங்குதல் காரணமாக நன்றி"),
         "thankYouForYourDuePayment":
             MessageLookupByLibrary.simpleMessage("உங்கள் செலுத்தலாக நன்றி"),
+        "thisMonth": MessageLookupByLibrary.simpleMessage("இந்த மாதம்"),
         "thisProductAlreadyAdded": MessageLookupByLibrary.simpleMessage(
             "இந்த பொருள் ஏற்கனவே சேர்க்கப்பட்டுள்ளது!"),
+        "thisWeek": MessageLookupByLibrary.simpleMessage("இந்த வாரம்"),
+        "thisYear": MessageLookupByLibrary.simpleMessage("இந்த வருடம்"),
+        "thurs": MessageLookupByLibrary.simpleMessage("வியாழன்"),
         "toDate": MessageLookupByLibrary.simpleMessage("கடைசி தேதி"),
+        "toDay": MessageLookupByLibrary.simpleMessage("இன்று"),
         "todaySummary":
             MessageLookupByLibrary.simpleMessage("இன்றைய சுருக்கம்"),
         "total": MessageLookupByLibrary.simpleMessage("மொத்தம்"),
@@ -710,12 +804,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "transactions": MessageLookupByLibrary.simpleMessage("பரிவர்த்தனைகள்"),
         "tryAgain":
             MessageLookupByLibrary.simpleMessage("மீண்டும் முயற்சி செய்க"),
+        "tues": MessageLookupByLibrary.simpleMessage("செவ்வாய்"),
         "twitter": MessageLookupByLibrary.simpleMessage("ட்விட்டர்"),
         "type": MessageLookupByLibrary.simpleMessage("வகை"),
         "unPaid": MessageLookupByLibrary.simpleMessage("பணம் செலுத்தாதது"),
         "unitName": MessageLookupByLibrary.simpleMessage("அலகு பெயர்"),
         "unitPirce":
             MessageLookupByLibrary.simpleMessage("ஒருங்கிணைக்கான விலை"),
+        "unitPrice": MessageLookupByLibrary.simpleMessage("ஒரு அலகின் விலை"),
         "units": MessageLookupByLibrary.simpleMessage("அலகுகள்"),
         "unlimited": MessageLookupByLibrary.simpleMessage("வரம்புள்ள"),
         "unlimitedUsage":
@@ -746,6 +842,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("பயனர் வகை விவரங்கள்"),
         "userTitle": MessageLookupByLibrary.simpleMessage("பயனர் தலைப்பு"),
         "vat": MessageLookupByLibrary.simpleMessage("VAT"),
+        "vatDoesNOtApply":
+            MessageLookupByLibrary.simpleMessage("VAT விண்ணப்பிக்காது"),
         "verification": MessageLookupByLibrary.simpleMessage("உறுதிப்படுத்தல்"),
         "verify": MessageLookupByLibrary.simpleMessage("சரிபார்க்கவும்"),
         "verifyYourEmail": MessageLookupByLibrary.simpleMessage(
@@ -759,6 +857,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "நாங்கள் உங்களுக்கு உறுதிப்படுத்தும் மின்னஞ்சலை அனுப்பினோம்"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "உங்கள் தொலைபேசி எண்ணிற்கு OTP அனுப்பப்பட்டது"),
+        "wed": MessageLookupByLibrary.simpleMessage("புதன்"),
+        "weekly": MessageLookupByLibrary.simpleMessage("தினசரி"),
         "weight": MessageLookupByLibrary.simpleMessage("எடை"),
         "welcomeBack":
             MessageLookupByLibrary.simpleMessage("மீண்டும் வரவேற்கிறோம்!"),
@@ -771,9 +871,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "அடுத்த சில நேரங்களில் சேர்க்கப்படும்"),
         "writeYourMessageHere": MessageLookupByLibrary.simpleMessage(
             "உங்கள் செய்தியை இங்கே எழுதுங்கள்"),
+        "yearly": MessageLookupByLibrary.simpleMessage("வருடாந்திர"),
         "yes": MessageLookupByLibrary.simpleMessage("ஆம்"),
         "youCanNotPayMoreThenDue": MessageLookupByLibrary.simpleMessage(
             "முடிவுகளை விட அதிகமாக பணம் செலுத்த முடியாது"),
+        "youCanNowResendTheOTP": MessageLookupByLibrary.simpleMessage(
+            "இப்போது OTP ஐ மீண்டும் அனுப்பலாம்"),
         "youHaveToGivePermission": MessageLookupByLibrary.simpleMessage(
             "நீங்கள் அனுமதியை அளிக்க வேண்டும்"),
         "youRUsing": MessageLookupByLibrary.simpleMessage(

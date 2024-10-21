@@ -375,7 +375,8 @@ class _AddProductState extends State<AddProduct> {
 
                                               if (barcodes.isNotEmpty) {
                                                 final Barcode barcode = barcodes.first;
-                                                debugPrint('Barcode found! ${barcode.rawValue}');
+                                                //debugPrint('Barcode found! ${barcode.rawValue}');
+                                                debugPrint('${lang.S.of(context).barcodeFound}! ${barcode.rawValue}');
                                                 // productCode = barcode.rawValue!;
                                                 productCodeController.text = barcode.rawValue!;
                                                 // globalKey.currentState!.save();

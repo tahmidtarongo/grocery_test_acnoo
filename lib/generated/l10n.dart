@@ -1321,10 +1321,10 @@ class S {
   }
 
   /// `Please Add A Customer`
-  String get addCustomer {
+  String get addACustomer {
     return Intl.message(
       'Please Add A Customer',
-      name: 'addCustomer',
+      name: 'addACustomer',
       desc: '',
       args: [],
     );
@@ -4975,6 +4975,696 @@ class S {
     return Intl.message(
       'Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.',
       name: 'loremIpsumDolorSit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `seconds`
+  String get seconds {
+    return Intl.message(
+      'seconds',
+      name: 'seconds',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Done`
+  String get done {
+    return Intl.message(
+      'Done',
+      name: 'done',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You can now resend the OTP`
+  String get youCanNowResendTheOTP {
+    return Intl.message(
+      'You can now resend the OTP',
+      name: 'youCanNowResendTheOTP',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Resend OTP in`
+  String get resendOTPIn {
+    return Intl.message(
+      'Resend OTP in',
+      name: 'resendOTPIn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select a Business Category`
+  String get selectABusinessCategory {
+    return Intl.message(
+      'Select a Business Category',
+      name: 'selectABusinessCategory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cras`
+  String get loremIpsumDolorSitAmetConsecteturAdipiscingElitMaurisCras {
+    return Intl.message(
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cras',
+      name: 'loremIpsumDolorSitAmetConsecteturAdipiscingElitMaurisCras',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Supplier Details`
+  String get supplierDetails {
+    return Intl.message(
+      'Supplier Details',
+      name: 'supplierDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Weekly`
+  String get weekly {
+    return Intl.message(
+      'Weekly',
+      name: 'weekly',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monthly`
+  String get monthly {
+    return Intl.message(
+      'Monthly',
+      name: 'monthly',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yearly`
+  String get yearly {
+    return Intl.message(
+      'Yearly',
+      name: 'yearly',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sat`
+  String get sat {
+    return Intl.message(
+      'Sat',
+      name: 'sat',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sun`
+  String get Sun {
+    return Intl.message(
+      'Sun',
+      name: 'Sun',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mon`
+  String get mon {
+    return Intl.message(
+      'Mon',
+      name: 'mon',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tues`
+  String get tues {
+    return Intl.message(
+      'Tues',
+      name: 'tues',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wed`
+  String get wed {
+    return Intl.message(
+      'Wed',
+      name: 'wed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Thurs`
+  String get thurs {
+    return Intl.message(
+      'Thurs',
+      name: 'thurs',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fri`
+  String get fri {
+    return Intl.message(
+      'Fri',
+      name: 'fri',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bank`
+  String get bank {
+    return Intl.message(
+      'Bank',
+      name: 'bank',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Card`
+  String get card {
+    return Intl.message(
+      'Card',
+      name: 'card',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mobile Payment`
+  String get mobilePayment {
+    return Intl.message(
+      'Mobile Payment',
+      name: 'mobilePayment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select a category`
+  String get selectACategory {
+    return Intl.message(
+      'Select a category',
+      name: 'selectACategory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Items`
+  String get items {
+    return Intl.message(
+      'Items',
+      name: 'items',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stocks`
+  String get stockS {
+    return Intl.message(
+      'Stocks',
+      name: 'stockS',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Plan`
+  String get plan {
+    return Intl.message(
+      'Plan',
+      name: 'plan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Could not fetch the categories`
+  String get couldNotFetchTheCategories {
+    return Intl.message(
+      'Could not fetch the categories',
+      name: 'couldNotFetchTheCategories',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search here`
+  String get searchHere {
+    return Intl.message(
+      'Search here',
+      name: 'searchHere',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `items For`
+  String get itemsFor {
+    return Intl.message(
+      'items For',
+      name: 'itemsFor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Could not fetch products`
+  String get couldNotFetchProducts {
+    return Intl.message(
+      'Could not fetch products',
+      name: 'couldNotFetchProducts',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Item Details`
+  String get itemDetails {
+    return Intl.message(
+      'Item Details',
+      name: 'itemDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unit price`
+  String get unitPrice {
+    return Intl.message(
+      'Unit price',
+      name: 'unitPrice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter unit quantity`
+  String get enterUnitQuantity {
+    return Intl.message(
+      'Enter unit quantity',
+      name: 'enterUnitQuantity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Quantity must be greater than`
+  String get quantityMustBeGreaterThan {
+    return Intl.message(
+      'Quantity must be greater than',
+      name: 'quantityMustBeGreaterThan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Quantity exceeds available stock`
+  String get quantityExceedsAvailableStock {
+    return Intl.message(
+      'Quantity exceeds available stock',
+      name: 'quantityExceedsAvailableStock',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sales Price`
+  String get salesPrice {
+    return Intl.message(
+      'Sales Price',
+      name: 'salesPrice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter sales price`
+  String get pleaseEnterSalesPrice {
+    return Intl.message(
+      'Please enter sales price',
+      name: 'pleaseEnterSalesPrice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Price must be greater than`
+  String get priceMustBeGreaterThan {
+    return Intl.message(
+      'Price must be greater than',
+      name: 'priceMustBeGreaterThan',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add to Cart`
+  String get addToCart {
+    return Intl.message(
+      'Add to Cart',
+      name: 'addToCart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Income Category`
+  String get addIncomeCategory {
+    return Intl.message(
+      'Add Income Category',
+      name: 'addIncomeCategory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter income category name`
+  String get enterIncomeCategoryName {
+    return Intl.message(
+      'Enter income category name',
+      name: 'enterIncomeCategoryName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Income Categories`
+  String get incomeCategories {
+    return Intl.message(
+      'Income Categories',
+      name: 'incomeCategories',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Income For`
+  String get incomeFor {
+    return Intl.message(
+      'Income For',
+      name: 'incomeFor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Income`
+  String get addIncome {
+    return Intl.message(
+      'Add Income',
+      name: 'addIncome',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Promo Code`
+  String get addPromoCode {
+    return Intl.message(
+      'Add Promo Code',
+      name: 'addPromoCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Discount`
+  String get addDiscount {
+    return Intl.message(
+      'Add Discount',
+      name: 'addDiscount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cancel All Product`
+  String get cancelAllProduct {
+    return Intl.message(
+      'Cancel All Product',
+      name: 'cancelAllProduct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Vat Doesn't Apply`
+  String get vatDoesNOtApply {
+    return Intl.message(
+      'Vat Doesn\'t Apply',
+      name: 'vatDoesNOtApply',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delete Confirmation`
+  String get deleteConfirmation {
+    return Intl.message(
+      'Delete Confirmation',
+      name: 'deleteConfirmation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Are you sure you want to delete this`
+  String get areYouSureYouWantToDeleteThis {
+    return Intl.message(
+      'Are you sure you want to delete this',
+      name: 'areYouSureYouWantToDeleteThis',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Related data will be deleted also`
+  String get relatedDataWillBeDeletedAlso {
+    return Intl.message(
+      'Related data will be deleted also',
+      name: 'relatedDataWillBeDeletedAlso',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Barcode found`
+  String get barcodeFound {
+    return Intl.message(
+      'Barcode found',
+      name: 'barcodeFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Last 7 Days`
+  String get last7Days {
+    return Intl.message(
+      'Last 7 Days',
+      name: 'last7Days',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Last 30 Days`
+  String get last30Days {
+    return Intl.message(
+      'Last 30 Days',
+      name: 'last30Days',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Current year`
+  String get currentYear {
+    return Intl.message(
+      'Current year',
+      name: 'currentYear',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Last Year`
+  String get lastYear {
+    return Intl.message(
+      'Last Year',
+      name: 'lastYear',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Scan product QR code`
+  String get scanProductQRCode {
+    return Intl.message(
+      'Scan product QR code',
+      name: 'scanProductQRCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ToDay`
+  String get toDay {
+    return Intl.message(
+      'ToDay',
+      name: 'toDay',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This Week`
+  String get thisWeek {
+    return Intl.message(
+      'This Week',
+      name: 'thisWeek',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This Month`
+  String get thisMonth {
+    return Intl.message(
+      'This Month',
+      name: 'thisMonth',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This Year`
+  String get thisYear {
+    return Intl.message(
+      'This Year',
+      name: 'thisYear',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All Time`
+  String get allTime {
+    return Intl.message(
+      'All Time',
+      name: 'allTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Custom`
+  String get Custom {
+    return Intl.message(
+      'Custom',
+      name: 'Custom',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Clear All`
+  String get clearAll {
+    return Intl.message(
+      'Clear All',
+      name: 'clearAll',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Customer`
+  String get addCustomer {
+    return Intl.message(
+      'Add Customer',
+      name: 'addCustomer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Received Amount`
+  String get receivedAmount {
+    return Intl.message(
+      'Received Amount',
+      name: 'receivedAmount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `POSPro V`
+  String get POSProV {
+    return Intl.message(
+      'POSPro V',
+      name: 'POSProV',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Not Active User`
+  String get notActiveUser {
+    return Intl.message(
+      'Not Active User',
+      name: 'notActiveUser',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please use the valid purchase code to use the app`
+  String get pleaseUseTheValidPurchaseCodeToUseTheApp {
+    return Intl.message(
+      'Please use the valid purchase code to use the app',
+      name: 'pleaseUseTheValidPurchaseCodeToUseTheApp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `OK`
+  String get oK {
+    return Intl.message(
+      'OK',
+      name: 'oK',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Days Left`
+  String get daysLeft {
+    return Intl.message(
+      'Days Left',
+      name: 'daysLeft',
       desc: '',
       args: [],
     );

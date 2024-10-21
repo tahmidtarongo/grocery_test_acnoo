@@ -34,26 +34,40 @@ class _AddIncomeState extends State<AddIncome> {
   TextEditingController incomeAmountController = TextEditingController();
   TextEditingController incomeNoteController = TextEditingController();
   TextEditingController incomeRefController = TextEditingController();
-  List<String> paymentMethods = [
-    //lang.S.of(context).cancel,
-    'Cash',
-    'Bank',
-    'Card',
-    'Mobile Payment',
-    'Due',
-  ];
 
-  String selectedPaymentType = 'Cash';
+
+  Map<String,dynamic> get paymentMethods =>
+      {
+        //lang.S.of(context).cancel,
+        "Cash" :  lang.S.current.cash,
+        "Bank" : lang.S.current.bank,
+        //'Bank',
+        "Card": lang.S.current.card,
+        //'Card',
+        "Mobile Payment": lang.S.current.mobilePayment,
+        //'Mobile Payment',
+        "Due":lang.S.current.due,
+        //'Due',
+      };
+
+  late String selectedPaymentType = paymentMethods.entries.first.key;
 
   DropdownButton<String> getPaymentMethods() {
-    List<DropdownMenuItem<String>> dropDownItems = [];
-    for (String des in paymentMethods) {
-      var item = DropdownMenuItem(
-        value: des,
-        child: Text(des),
-      );
-      dropDownItems.add(item);
-    }
+    List<DropdownMenuItem<String>> dropDownItems = [
+      ...paymentMethods.entries.map((e){
+        return DropdownMenuItem(
+          value: e.key,
+          child: Text(e.value),
+        );
+      })
+    ];
+    // for (String des in paymentMethods) {
+    //   var item = DropdownMenuItem(
+    //     value: des,
+    //     child: Text(des),
+    //   );
+    //   dropDownItems.add(item);
+    // }
     return DropdownButton(
       items: dropDownItems,
       value: selectedPaymentType,
@@ -64,7 +78,6 @@ class _AddIncomeState extends State<AddIncome> {
       },
     );
   }
-
   @override
   void initState() {
     super.initState();

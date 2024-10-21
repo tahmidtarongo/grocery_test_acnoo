@@ -149,7 +149,8 @@ class _ProfileSetupState extends State<ProfileSetup> {
                     }
                   }
                 } else {
-                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Select a Business Category')));
+                  //ScaffoldMessenger.of(context).showSnackBar( SnackBar(content: Text('Select a Business Category')));
+                  ScaffoldMessenger.of(context).showSnackBar( SnackBar(content: Text(lang.S.of(context).selectABusinessCategory)));
                 }
 
                 // Navigator.pushNamed(context, '/otp');

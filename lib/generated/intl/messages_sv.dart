@@ -22,20 +22,28 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Custom": MessageLookupByLibrary.simpleMessage("Anpassad"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Kunduppgifter"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "Sun": MessageLookupByLibrary.simpleMessage("Sön"),
+        "addACustomer":
+            MessageLookupByLibrary.simpleMessage("Lägg till en kund"),
         "addAPurchase":
             MessageLookupByLibrary.simpleMessage("Lägg till ett inköp"),
         "addBrand": MessageLookupByLibrary.simpleMessage("Lägg till varumärke"),
         "addCategory":
             MessageLookupByLibrary.simpleMessage("Lägg till kategori"),
         "addContact": MessageLookupByLibrary.simpleMessage("Lägg till kontakt"),
-        "addCustomer":
-            MessageLookupByLibrary.simpleMessage("Lägg till en kund"),
+        "addCustomer": MessageLookupByLibrary.simpleMessage("Lägg till kund"),
         "addDelivery": MessageLookupByLibrary.simpleMessage("Pridať doručenie"),
+        "addDiscount": MessageLookupByLibrary.simpleMessage("Lägg till rabatt"),
         "addExpense": MessageLookupByLibrary.simpleMessage("Lägg till kostnad"),
         "addExpenseCat":
             MessageLookupByLibrary.simpleMessage("Lägg till kostnadskategori"),
+        "addIncome": MessageLookupByLibrary.simpleMessage("Lägg till inkomst"),
+        "addIncomeCategory":
+            MessageLookupByLibrary.simpleMessage("Lägg till inkomstkategori"),
         "addItems": MessageLookupByLibrary.simpleMessage("Lägg till produkter"),
         "addNewAddress":
             MessageLookupByLibrary.simpleMessage("Pridať novú adresu"),
@@ -48,11 +56,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Lägg till en produkt"),
         "addProductFirst":
             MessageLookupByLibrary.simpleMessage("Lägg till produkt först"),
+        "addPromoCode":
+            MessageLookupByLibrary.simpleMessage("Lägg till kampanjkod"),
         "addPurchase": MessageLookupByLibrary.simpleMessage("Lägg till inköp"),
         "addSale":
             MessageLookupByLibrary.simpleMessage("Lägg till en försäljning"),
         "addSales":
             MessageLookupByLibrary.simpleMessage("Lägg till försäljning"),
+        "addToCart":
+            MessageLookupByLibrary.simpleMessage("Lägg till i kundvagn"),
         "addUnit": MessageLookupByLibrary.simpleMessage("Lägg till enhet"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("Lagd till i kundvagnen"),
@@ -63,6 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Všetky obchodné riešenia"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
             "PosPro je kompletné podnikateľské riešenie so skladom, účtami, predajmi, výdavkami a ziskom/stratou."),
+        "allTime": MessageLookupByLibrary.simpleMessage("All tid"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Redan tillagt"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Har du redan ett konto?"),
@@ -77,8 +90,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "areYouSure": MessageLookupByLibrary.simpleMessage("Är du säker?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "Är du säker på att du vill ta bort den här parten?"),
+        "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
+            "Är du säker på att du vill radera detta?"),
         "balance": MessageLookupByLibrary.simpleMessage("Balans"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("Bangladéš"),
+        "bank": MessageLookupByLibrary.simpleMessage("Bank"),
+        "barcodeFound":
+            MessageLookupByLibrary.simpleMessage("Streckkod hittad"),
         "billTO": MessageLookupByLibrary.simpleMessage("Fakturovať"),
         "brand": MessageLookupByLibrary.simpleMessage("Märke"),
         "brandName": MessageLookupByLibrary.simpleMessage("Varumärkesnamn"),
@@ -90,7 +108,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "call": MessageLookupByLibrary.simpleMessage("Volanie"),
         "camera": MessageLookupByLibrary.simpleMessage("Kamera"),
         "cancel": MessageLookupByLibrary.simpleMessage("Avbryt"),
+        "cancelAllProduct":
+            MessageLookupByLibrary.simpleMessage("Avboka alla produkter"),
         "capacity": MessageLookupByLibrary.simpleMessage("Kapacita"),
+        "card": MessageLookupByLibrary.simpleMessage("Kort"),
         "cash": MessageLookupByLibrary.simpleMessage("Hotovosť"),
         "category": MessageLookupByLibrary.simpleMessage("Kategori"),
         "categoryName": MessageLookupByLibrary.simpleMessage("Kategorinamn"),
@@ -104,6 +125,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
             "Funkcie sú dôležitou časťou, ktorá robí z aplikácie PosPro niečo iné ako tradičné riešenia."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
+        "clearAll": MessageLookupByLibrary.simpleMessage("Rensa allt"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Klicka för att ansluta"),
         "close": MessageLookupByLibrary.simpleMessage("Stäng"),
@@ -133,6 +155,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "continueButton": MessageLookupByLibrary.simpleMessage("Fortsätt"),
         "continueE": MessageLookupByLibrary.simpleMessage("Fortsätt"),
         "cost": MessageLookupByLibrary.simpleMessage("Kostnad"),
+        "couldNotFetchProducts":
+            MessageLookupByLibrary.simpleMessage("Kunde inte hämta produkter"),
+        "couldNotFetchTheCategories": MessageLookupByLibrary.simpleMessage(
+            "Kunde inte hämta kategorierna"),
         "country": MessageLookupByLibrary.simpleMessage("Krajina"),
         "create": MessageLookupByLibrary.simpleMessage("Skapa"),
         "createAFreeAccount":
@@ -142,6 +168,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Skapa nytt lösenord"),
         "currency": MessageLookupByLibrary.simpleMessage("Valuta"),
+        "currentYear": MessageLookupByLibrary.simpleMessage("Nuvarande år"),
         "customInvoiceBranding":
             MessageLookupByLibrary.simpleMessage("Anpassad fakturabrand"),
         "customerDue": MessageLookupByLibrary.simpleMessage("Kundens skuld"),
@@ -158,10 +185,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "date": MessageLookupByLibrary.simpleMessage("Datum"),
         "dates": MessageLookupByLibrary.simpleMessage("Datum:"),
         "days": MessageLookupByLibrary.simpleMessage("dagar"),
+        "daysLeft": MessageLookupByLibrary.simpleMessage("Dagar kvar"),
         "dealer": MessageLookupByLibrary.simpleMessage("Återförsäljare"),
         "dealerPrice":
             MessageLookupByLibrary.simpleMessage("Återförsäljarpris"),
         "delete": MessageLookupByLibrary.simpleMessage("Odstrániť"),
+        "deleteConfirmation":
+            MessageLookupByLibrary.simpleMessage("Radera bekräftelse"),
         "deleting": MessageLookupByLibrary.simpleMessage("Raderar...."),
         "deliveryAddress":
             MessageLookupByLibrary.simpleMessage("Doručovacia adresa"),
@@ -179,6 +209,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Vill du avsluta appen?"),
         "donNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Har du inget konto?"),
+        "done": MessageLookupByLibrary.simpleMessage("Färdig"),
         "due": MessageLookupByLibrary.simpleMessage("Skuld"),
         "dueAmount": MessageLookupByLibrary.simpleMessage("Skuldbelopp: "),
         "dueCollection": MessageLookupByLibrary.simpleMessage(
@@ -232,6 +263,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Zadajte dátum výdavku"),
         "enterFullAddress":
             MessageLookupByLibrary.simpleMessage("Zadajte plnú adresu"),
+        "enterIncomeCategoryName": MessageLookupByLibrary.simpleMessage(
+            "Ange namn på inkomstkategori"),
         "enterManufacturerName":
             MessageLookupByLibrary.simpleMessage("Ange tillverkarens namn"),
         "enterName": MessageLookupByLibrary.simpleMessage("Zadajte meno"),
@@ -250,6 +283,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterSize": MessageLookupByLibrary.simpleMessage("Ange storlek"),
         "enterStock": MessageLookupByLibrary.simpleMessage("Ange lager"),
         "enterType": MessageLookupByLibrary.simpleMessage("Ange typ"),
+        "enterUnitQuantity":
+            MessageLookupByLibrary.simpleMessage("Ange enhetskvantitet"),
         "enterUserTitle":
             MessageLookupByLibrary.simpleMessage("Ange användartitel"),
         "enterValidOTP":
@@ -288,6 +323,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Gratis livstidsuppdatering"),
         "freePack": MessageLookupByLibrary.simpleMessage("Gratis paket"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Gratis plan"),
+        "fri": MessageLookupByLibrary.simpleMessage("Fre"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Från datum"),
         "fullName": MessageLookupByLibrary.simpleMessage("Fullständigt namn"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("Helt betalt"),
@@ -303,17 +339,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("Domov"),
         "image": MessageLookupByLibrary.simpleMessage("Obrázok"),
         "income": MessageLookupByLibrary.simpleMessage("Inkomst"),
+        "incomeCategories":
+            MessageLookupByLibrary.simpleMessage("Inkomstkategorier"),
+        "incomeFor": MessageLookupByLibrary.simpleMessage("Inkomst för"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("Inkomstrapport"),
         "instagram": MessageLookupByLibrary.simpleMessage("Instagram"),
         "inv": MessageLookupByLibrary.simpleMessage("Fakturanr."),
         "invoice": MessageLookupByLibrary.simpleMessage("Faktura"),
         "itemAdded": MessageLookupByLibrary.simpleMessage("Produkt tillagd"),
+        "itemDetails": MessageLookupByLibrary.simpleMessage("Objektdetaljer"),
+        "items": MessageLookupByLibrary.simpleMessage("Objekt"),
+        "itemsFor": MessageLookupByLibrary.simpleMessage("objekt för"),
         "itemsSales":
             MessageLookupByLibrary.simpleMessage("Artikelförsäljning"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("E-post"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("Lösenord"),
         "language": MessageLookupByLibrary.simpleMessage("Språk"),
+        "last30Days":
+            MessageLookupByLibrary.simpleMessage("Senaste 30 dagarna"),
+        "last7Days": MessageLookupByLibrary.simpleMessage("Senaste 7 dagarna"),
         "lastName": MessageLookupByLibrary.simpleMessage("Priezvisko"),
+        "lastYear": MessageLookupByLibrary.simpleMessage("Förra året"),
         "link": MessageLookupByLibrary.simpleMessage("Länk"),
         "linkedIN": MessageLookupByLibrary.simpleMessage("LinkedIN"),
         "loading": MessageLookupByLibrary.simpleMessage("Laddar"),
@@ -329,6 +375,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Natoque aliquet et, cur eget. Tellus sapien odio aliq."),
         "loremIpsumDolorSit": MessageLookupByLibrary.simpleMessage(
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan vulputate tellus scelerisque odio consectetur tincidunt semper."),
+        "loremIpsumDolorSitAmetConsecteturAdipiscingElitMaurisCras":
+            MessageLookupByLibrary.simpleMessage(
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cras"),
         "loremIpsumDolorSitAmetConsecteturElitInterdumCons":
             MessageLookupByLibrary.simpleMessage(
                 "Lorem ipsum dolor sit amet, consectetur elit. Interdum cons."),
@@ -343,6 +392,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "manufacturer": MessageLookupByLibrary.simpleMessage("Tillverkare"),
         "masterCard": MessageLookupByLibrary.simpleMessage("MasterCard"),
         "mobile": MessageLookupByLibrary.simpleMessage("Mobil:"),
+        "mobilePayment":
+            MessageLookupByLibrary.simpleMessage("Mobil betalning"),
+        "mon": MessageLookupByLibrary.simpleMessage("Mån"),
+        "monthly": MessageLookupByLibrary.simpleMessage("Månatligen"),
         "moreInfo": MessageLookupByLibrary.simpleMessage("Mer information"),
         "mrp": MessageLookupByLibrary.simpleMessage("MRP"),
         "name": MessageLookupByLibrary.simpleMessage("Namn"),
@@ -364,9 +417,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ingen leverantör tillgänglig"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("Ingen transaktion"),
+        "notActiveUser":
+            MessageLookupByLibrary.simpleMessage("Inte aktiv användare"),
         "notFound": MessageLookupByLibrary.simpleMessage("Inte hittad"),
         "note": MessageLookupByLibrary.simpleMessage("Anteckning"),
         "notification": MessageLookupByLibrary.simpleMessage("Notifikácia"),
+        "oK": MessageLookupByLibrary.simpleMessage("OK"),
         "off": MessageLookupByLibrary.simpleMessage("Av"),
         "on": MessageLookupByLibrary.simpleMessage("På"),
         "openingBalance":
@@ -413,6 +469,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pickEndDate": MessageLookupByLibrary.simpleMessage("Välj slutdatum"),
         "pickStartDate":
             MessageLookupByLibrary.simpleMessage("Välj startdatum"),
+        "plan": MessageLookupByLibrary.simpleMessage("Plan"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("Lägg till kvantitet"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
@@ -444,6 +501,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "pleaseEnterAmount":
             MessageLookupByLibrary.simpleMessage("Ange belopp"),
         "pleaseEnterName": MessageLookupByLibrary.simpleMessage("Ange namn"),
+        "pleaseEnterSalesPrice":
+            MessageLookupByLibrary.simpleMessage("Ange försäljningspris"),
         "pleaseEnterTheOTP":
             MessageLookupByLibrary.simpleMessage("Prosím, zadajte OTP"),
         "pleaseEnterUnitName":
@@ -459,12 +518,17 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Välj en kategori"),
         "pleaseSelectAExpenseCategory":
             MessageLookupByLibrary.simpleMessage("Välj en utgiftskategori"),
+        "pleaseUseTheValidPurchaseCodeToUseTheApp":
+            MessageLookupByLibrary.simpleMessage(
+                "Använd den giltiga köpkoden för att använda appen"),
         "premiumCustomerSupport":
             MessageLookupByLibrary.simpleMessage("Android & iOS appstöd"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Premiumplan"),
         "previousDue": MessageLookupByLibrary.simpleMessage("Tidigare skuld"),
         "previousPayAmount":
             MessageLookupByLibrary.simpleMessage("Tidigare betalningsbelopp"),
+        "priceMustBeGreaterThan":
+            MessageLookupByLibrary.simpleMessage("Priset måste vara större än"),
         "print": MessageLookupByLibrary.simpleMessage("Tlačiť"),
         "printing": MessageLookupByLibrary.simpleMessage("Utskriftsalternativ"),
         "product": MessageLookupByLibrary.simpleMessage("Produkt"),
@@ -500,13 +564,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchased": MessageLookupByLibrary.simpleMessage("Köpt"),
         "qty": MessageLookupByLibrary.simpleMessage("Antal"),
         "quantity": MessageLookupByLibrary.simpleMessage("Antal"),
+        "quantityExceedsAvailableStock": MessageLookupByLibrary.simpleMessage(
+            "Kvantiteten överstiger tillgängligt lager"),
+        "quantityMustBeGreaterThan": MessageLookupByLibrary.simpleMessage(
+            "Kvantiteten måste vara större än"),
         "quickOverview": MessageLookupByLibrary.simpleMessage("Snabb översikt"),
+        "receivedAmount":
+            MessageLookupByLibrary.simpleMessage("Mottaget belopp"),
         "recentTransaction":
             MessageLookupByLibrary.simpleMessage("Senaste transaktioner"),
         "referenceNo": MessageLookupByLibrary.simpleMessage("Referensnummer"),
         "register": MessageLookupByLibrary.simpleMessage("Registrera"),
         "registerTitle": MessageLookupByLibrary.simpleMessage(
             "Vi behöver registrera ditt telefonnummer innan vi kan börja!"),
+        "relatedDataWillBeDeletedAlso": MessageLookupByLibrary.simpleMessage(
+            "Relaterade data kommer också att raderas"),
         "remainingDue":
             MessageLookupByLibrary.simpleMessage("Zostávajúca suma"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("Kom ihåg mig"),
@@ -516,6 +588,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "resendIn":
             MessageLookupByLibrary.simpleMessage("Znova odoslať OTP za"),
         "resendOTP": MessageLookupByLibrary.simpleMessage("Skicka OTP igen"),
+        "resendOTPIn":
+            MessageLookupByLibrary.simpleMessage("Skicka OTP på nytt om"),
         "reset": MessageLookupByLibrary.simpleMessage(
             "Återställ lösenord med din e-post eller telefonnummer"),
         "resetPassword": MessageLookupByLibrary.simpleMessage(
@@ -531,17 +605,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("Försäljningsdetaljer"),
         "salesList": MessageLookupByLibrary.simpleMessage("Försäljningslista"),
+        "salesPrice": MessageLookupByLibrary.simpleMessage("Försäljningspris"),
         "salesPurchaseOverview": MessageLookupByLibrary.simpleMessage(
             "Försäljnings- och inköpsöversikt"),
         "salesReport":
             MessageLookupByLibrary.simpleMessage("Försäljningsrapport"),
+        "sat": MessageLookupByLibrary.simpleMessage("Lör"),
         "save": MessageLookupByLibrary.simpleMessage("Spara"),
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("Spara och publicera"),
+        "scanProductQRCode":
+            MessageLookupByLibrary.simpleMessage("Skanna produktens QR-kod"),
         "search": MessageLookupByLibrary.simpleMessage("Sök"),
         "searchH": MessageLookupByLibrary.simpleMessage("Sök här...."),
+        "searchHere": MessageLookupByLibrary.simpleMessage("Sök här"),
+        "seconds": MessageLookupByLibrary.simpleMessage("sekunder"),
         "select": MessageLookupByLibrary.simpleMessage("Välj"),
         "selectABrand": MessageLookupByLibrary.simpleMessage("Välj ett märke"),
+        "selectABusinessCategory":
+            MessageLookupByLibrary.simpleMessage("Välj en affärskategori"),
+        "selectACategory":
+            MessageLookupByLibrary.simpleMessage("Välj en kategori"),
         "selectAInvoice":
             MessageLookupByLibrary.simpleMessage("Välj en faktura"),
         "selectBusinessCategory":
@@ -594,6 +678,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("Lager"),
         "stockList": MessageLookupByLibrary.simpleMessage("Lagerlista"),
         "stockReport": MessageLookupByLibrary.simpleMessage("Lagerrapport"),
+        "stockS": MessageLookupByLibrary.simpleMessage("Lager"),
         "stockValue": MessageLookupByLibrary.simpleMessage("Lager värde"),
         "stocks": MessageLookupByLibrary.simpleMessage("Lager: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Delsumma"),
@@ -604,12 +689,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "supplerPay":
             MessageLookupByLibrary.simpleMessage("Leverantörens betalning"),
         "supplier": MessageLookupByLibrary.simpleMessage("Leverantör"),
+        "supplierDetails":
+            MessageLookupByLibrary.simpleMessage("Leverantörsdetaljer"),
         "supplierName": MessageLookupByLibrary.simpleMessage("Leverantörsnamn"),
         "thankYouForYourDuePayment": MessageLookupByLibrary.simpleMessage(
             "Ďakujeme za vašu splatnú platbu"),
+        "thisMonth": MessageLookupByLibrary.simpleMessage("Denna månad"),
         "thisProductAlreadyAdded": MessageLookupByLibrary.simpleMessage(
             "Denna produkt är redan tillagd!"),
+        "thisWeek": MessageLookupByLibrary.simpleMessage("Denna vecka"),
+        "thisYear": MessageLookupByLibrary.simpleMessage("Detta år"),
+        "thurs": MessageLookupByLibrary.simpleMessage("Tor"),
         "toDate": MessageLookupByLibrary.simpleMessage("Till datum"),
+        "toDay": MessageLookupByLibrary.simpleMessage("Idag"),
         "todaySummary":
             MessageLookupByLibrary.simpleMessage("Dagens sammanfattning"),
         "total": MessageLookupByLibrary.simpleMessage("Totalt"),
@@ -636,10 +728,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "totall": MessageLookupByLibrary.simpleMessage("Totalt:"),
         "transactions": MessageLookupByLibrary.simpleMessage("Transaktioner"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("Försök igen"),
+        "tues": MessageLookupByLibrary.simpleMessage("Tis"),
         "twitter": MessageLookupByLibrary.simpleMessage("Twitter"),
         "type": MessageLookupByLibrary.simpleMessage("Typ"),
         "unPaid": MessageLookupByLibrary.simpleMessage("Obetalt"),
         "unitName": MessageLookupByLibrary.simpleMessage("Enhetenhet"),
+        "unitPrice": MessageLookupByLibrary.simpleMessage("Enhetspris"),
         "units": MessageLookupByLibrary.simpleMessage("Enheter"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Obegränsad"),
         "unlimitedUsage":
@@ -667,6 +761,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Användarrolls detaljer"),
         "userTitle": MessageLookupByLibrary.simpleMessage("Användartitel"),
         "vat": MessageLookupByLibrary.simpleMessage("Moms"),
+        "vatDoesNOtApply":
+            MessageLookupByLibrary.simpleMessage("Moms gäller inte"),
         "verification": MessageLookupByLibrary.simpleMessage("Verifiering"),
         "verify": MessageLookupByLibrary.simpleMessage("Overiť"),
         "verifyYourEmail":
@@ -678,6 +774,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Vi har skickat ett bekräftelsemail till"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Poslali sme OTP na vaše telefónne číslo"),
+        "wed": MessageLookupByLibrary.simpleMessage("Ons"),
+        "weekly": MessageLookupByLibrary.simpleMessage("Veckovis"),
         "weight": MessageLookupByLibrary.simpleMessage("Hmotnosť"),
         "welcomeBack":
             MessageLookupByLibrary.simpleMessage("Välkommen tillbaka!"),
@@ -686,9 +784,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "wholesaler": MessageLookupByLibrary.simpleMessage("Grossist"),
         "willBeAddedSoon": MessageLookupByLibrary.simpleMessage(
             "Kommer snart att läggas till"),
+        "yearly": MessageLookupByLibrary.simpleMessage("Årligen"),
         "yes": MessageLookupByLibrary.simpleMessage("Ja"),
         "youCanNotPayMoreThenDue": MessageLookupByLibrary.simpleMessage(
             "Du kan inte betala mer än förfallet belopp"),
+        "youCanNowResendTheOTP": MessageLookupByLibrary.simpleMessage(
+            "Du kan nu skicka OTP på nytt"),
         "youHaveToGivePermission":
             MessageLookupByLibrary.simpleMessage("Du måste ge tillstånd"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("Du använder "),

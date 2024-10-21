@@ -20,9 +20,13 @@ class _PurchaseListState extends State<PurchaseList> {
   DropdownButton<String> getCategory() {
     List<String> dropDownItems = [
       'Last 7 Days',
+      //lang.S.current.last7Days,
       'Last 30 Days',
+      //lang.S.current.last30Days,
       'Current year',
+      //lang.S.current.currentYear,
       'Last Year',
+      //lang.S.current.lastYear
     ];
     return DropdownButton(
       items: dropDownItems.map<DropdownMenuItem<String>>((String value) {

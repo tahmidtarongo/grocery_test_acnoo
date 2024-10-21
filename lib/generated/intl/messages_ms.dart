@@ -22,21 +22,29 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Custom": MessageLookupByLibrary.simpleMessage("Tersuai"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("butiran pelanggan"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "Sun": MessageLookupByLibrary.simpleMessage("Ahad"),
+        "addACustomer":
+            MessageLookupByLibrary.simpleMessage("Sila Tambah Pelanggan"),
         "addAPurchase":
             MessageLookupByLibrary.simpleMessage("Sila Tambah Pembelian"),
         "addBrand": MessageLookupByLibrary.simpleMessage("Tambah Jenama"),
         "addCategory": MessageLookupByLibrary.simpleMessage("Tambah Kategori"),
         "addContact": MessageLookupByLibrary.simpleMessage("Tambah Kenalan"),
-        "addCustomer":
-            MessageLookupByLibrary.simpleMessage("Sila Tambah Pelanggan"),
+        "addCustomer": MessageLookupByLibrary.simpleMessage("Tambah Pelanggan"),
         "addDelivery":
             MessageLookupByLibrary.simpleMessage("Tambah Penghantaran"),
+        "addDiscount": MessageLookupByLibrary.simpleMessage("Tambah Diskaun"),
         "addExpense":
             MessageLookupByLibrary.simpleMessage("Tambah Perbelanjaan"),
         "addExpenseCat": MessageLookupByLibrary.simpleMessage(
             "Tambah Kategori Perbelanjaan"),
+        "addIncome": MessageLookupByLibrary.simpleMessage("Tambah Pendapatan"),
+        "addIncomeCategory":
+            MessageLookupByLibrary.simpleMessage("Tambah Kategori Pendapatan"),
         "addItems": MessageLookupByLibrary.simpleMessage("Tambah Item"),
         "addNewAddress":
             MessageLookupByLibrary.simpleMessage("Tambah Alamat Baru"),
@@ -49,9 +57,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Sila Tambah Produk"),
         "addProductFirst": MessageLookupByLibrary.simpleMessage(
             "Tambah produk terlebih dahulu"),
+        "addPromoCode":
+            MessageLookupByLibrary.simpleMessage("Tambah Kod Promo"),
         "addPurchase": MessageLookupByLibrary.simpleMessage("Tambah Belian"),
         "addSale": MessageLookupByLibrary.simpleMessage("Sila Tambah Jualan"),
         "addSales": MessageLookupByLibrary.simpleMessage("Tambah Jualan"),
+        "addToCart": MessageLookupByLibrary.simpleMessage("Tambah ke Troli"),
         "addUnit": MessageLookupByLibrary.simpleMessage("Tambah Unit"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Tambah Peranan Pengguna"),
@@ -64,6 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Semua penyelesaian perniagaan"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
             "PosPro adalah penyelesaian perniagaan lengkap dengan stok, akaun, jualan, perbelanjaan & rugi/laba."),
+        "allTime": MessageLookupByLibrary.simpleMessage("Sepanjang Masa"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Sudah Ditambah"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Sudah mempunyai akaun?"),
@@ -81,10 +93,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Adakah anda pasti?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "Adakah anda pasti mahu memadam pihak ini?"),
+        "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
+            "Adakah anda pasti mahu memadam ini"),
         "backToHome":
             MessageLookupByLibrary.simpleMessage("Kembali ke Laman Utama"),
         "balance": MessageLookupByLibrary.simpleMessage("Baki"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("Bangladesh"),
+        "bank": MessageLookupByLibrary.simpleMessage("Bank"),
+        "barcodeFound": MessageLookupByLibrary.simpleMessage("Kod Bar Ditemui"),
         "billTO": MessageLookupByLibrary.simpleMessage("Bil Kepada"),
         "brand": MessageLookupByLibrary.simpleMessage("Jenama"),
         "brandName": MessageLookupByLibrary.simpleMessage("Jenama"),
@@ -98,7 +114,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "call": MessageLookupByLibrary.simpleMessage("Panggilan"),
         "camera": MessageLookupByLibrary.simpleMessage("Kamera"),
         "cancel": MessageLookupByLibrary.simpleMessage("Batal"),
+        "cancelAllProduct":
+            MessageLookupByLibrary.simpleMessage("Batalkan Semua Produk"),
         "capacity": MessageLookupByLibrary.simpleMessage("Kapasiti"),
+        "card": MessageLookupByLibrary.simpleMessage("Kad"),
         "cash": MessageLookupByLibrary.simpleMessage("Tunai"),
         "categories": MessageLookupByLibrary.simpleMessage("Kategori"),
         "category": MessageLookupByLibrary.simpleMessage("Kategori"),
@@ -115,6 +134,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
             "Ciri-ciri adalah bahagian penting yang menjadikan PosPro berbeza daripada penyelesaian tradisional."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
+        "clearAll": MessageLookupByLibrary.simpleMessage("Padam Semua"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Klik untuk menyambung"),
         "close": MessageLookupByLibrary.simpleMessage("tutup"),
@@ -147,6 +167,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "continueButton": MessageLookupByLibrary.simpleMessage("teruskan"),
         "continueE": MessageLookupByLibrary.simpleMessage("Teruskan"),
         "cost": MessageLookupByLibrary.simpleMessage("Kos"),
+        "couldNotFetchProducts": MessageLookupByLibrary.simpleMessage(
+            "Tidak dapat mengambil produk"),
+        "couldNotFetchTheCategories": MessageLookupByLibrary.simpleMessage(
+            "Tidak dapat mengambil kategori"),
         "country": MessageLookupByLibrary.simpleMessage("Negara"),
         "create": MessageLookupByLibrary.simpleMessage("Cipta"),
         "createAFreeAccount":
@@ -155,6 +179,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Buat Kata Laluan Baru"),
         "currency": MessageLookupByLibrary.simpleMessage("mata wang"),
+        "currentYear": MessageLookupByLibrary.simpleMessage("Tahun Semasa"),
         "customInvoiceBranding":
             MessageLookupByLibrary.simpleMessage("Penjenamaan Invois Kustom"),
         "customerDue": MessageLookupByLibrary.simpleMessage("Hutang Pelanggan"),
@@ -171,9 +196,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "date": MessageLookupByLibrary.simpleMessage("Tarikh"),
         "dates": MessageLookupByLibrary.simpleMessage("Tarikh:"),
         "days": MessageLookupByLibrary.simpleMessage("hari"),
+        "daysLeft": MessageLookupByLibrary.simpleMessage("Hari Baki"),
         "dealer": MessageLookupByLibrary.simpleMessage("Peniaga"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage("Harga peniaga"),
         "delete": MessageLookupByLibrary.simpleMessage("Padam"),
+        "deleteConfirmation":
+            MessageLookupByLibrary.simpleMessage("Penghapusan Pengesahan"),
         "deleting": MessageLookupByLibrary.simpleMessage("Memadam...."),
         "deliveryAddress":
             MessageLookupByLibrary.simpleMessage("Alamat Penghantaran"),
@@ -191,6 +219,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Adakah anda mahu keluar dari aplikasi?"),
         "donNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Tiada akaun?"),
+        "done": MessageLookupByLibrary.simpleMessage("Selesai"),
         "due": MessageLookupByLibrary.simpleMessage("Kerana"),
         "dueAmount":
             MessageLookupByLibrary.simpleMessage("Jumlah Tertunggak: "),
@@ -248,6 +277,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Masukkan tarikh perbelanjaan"),
         "enterFullAddress":
             MessageLookupByLibrary.simpleMessage("Masukkan Alamat Penuh"),
+        "enterIncomeCategoryName": MessageLookupByLibrary.simpleMessage(
+            "Masukkan nama kategori pendapatan"),
         "enterManufacturerName":
             MessageLookupByLibrary.simpleMessage("Masukkan nama pengeluar"),
         "enterName": MessageLookupByLibrary.simpleMessage("Masukkan Nama"),
@@ -267,6 +298,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterSize": MessageLookupByLibrary.simpleMessage("Masukkan Saiz"),
         "enterStock": MessageLookupByLibrary.simpleMessage("Masukkan stok"),
         "enterType": MessageLookupByLibrary.simpleMessage("Masukkan Jenis"),
+        "enterUnitQuantity":
+            MessageLookupByLibrary.simpleMessage("Masukkan kuantiti unit"),
         "enterUserTitle":
             MessageLookupByLibrary.simpleMessage("Masukkan Tajuk Pengguna"),
         "enterValidOTP":
@@ -307,6 +340,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Kemas Kini Percuma Sepanjang Hayat"),
         "freePack": MessageLookupByLibrary.simpleMessage("Pakej Percuma"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Pelan Percuma"),
+        "fri": MessageLookupByLibrary.simpleMessage("Jumaat"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Dari tarikh"),
         "fullName": MessageLookupByLibrary.simpleMessage("Nama Penuh"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("Dibayar Penuh"),
@@ -324,6 +358,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("Laman Utama"),
         "image": MessageLookupByLibrary.simpleMessage("Gambar"),
         "income": MessageLookupByLibrary.simpleMessage("Pendapatan"),
+        "incomeCategories":
+            MessageLookupByLibrary.simpleMessage("Kategori Pendapatan"),
+        "incomeFor": MessageLookupByLibrary.simpleMessage("Pendapatan Untuk"),
         "incomeReport":
             MessageLookupByLibrary.simpleMessage("Laporan Pendapatan"),
         "instagram": MessageLookupByLibrary.simpleMessage("Instagram"),
@@ -332,11 +369,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "invoice": MessageLookupByLibrary.simpleMessage("Invois"),
         "invoiceViewr": MessageLookupByLibrary.simpleMessage("Papar Invois"),
         "itemAdded": MessageLookupByLibrary.simpleMessage("Item Ditambah"),
+        "itemDetails": MessageLookupByLibrary.simpleMessage("Butiran Barang"),
+        "items": MessageLookupByLibrary.simpleMessage("Barangan"),
+        "itemsFor": MessageLookupByLibrary.simpleMessage("Barang untuk"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("Jualan item"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("Emel"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("Kata laluan"),
         "language": MessageLookupByLibrary.simpleMessage("bahasa"),
+        "last30Days": MessageLookupByLibrary.simpleMessage("30 Hari Terakhir"),
+        "last7Days": MessageLookupByLibrary.simpleMessage("7 Hari Terakhir"),
         "lastName": MessageLookupByLibrary.simpleMessage("Nama Terakhir"),
+        "lastYear": MessageLookupByLibrary.simpleMessage("Tahun Lalu"),
         "link": MessageLookupByLibrary.simpleMessage("Pautan"),
         "linkedIN": MessageLookupByLibrary.simpleMessage("LinkedIn"),
         "loading": MessageLookupByLibrary.simpleMessage("Memuatkan"),
@@ -352,6 +395,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Natoque aliquet et, cur eget. Tellus sapien odio aliq."),
         "loremIpsumDolorSit": MessageLookupByLibrary.simpleMessage(
             "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."),
+        "loremIpsumDolorSitAmetConsecteturAdipiscingElitMaurisCras":
+            MessageLookupByLibrary.simpleMessage(
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cras"),
         "loremIpsumDolorSitAmetConsecteturElitInterdumCons":
             MessageLookupByLibrary.simpleMessage(
                 "Lorem ipsum dolor sit amet, consectetur elit. Interdum cons."),
@@ -368,6 +414,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "masterCard": MessageLookupByLibrary.simpleMessage("Kad Master"),
         "messege": MessageLookupByLibrary.simpleMessage("Mesej"),
         "mobile": MessageLookupByLibrary.simpleMessage("Mudah alih:"),
+        "mobilePayment":
+            MessageLookupByLibrary.simpleMessage("Pembayaran Mudah Alih"),
+        "mon": MessageLookupByLibrary.simpleMessage("Isnin"),
+        "monthly": MessageLookupByLibrary.simpleMessage("Bulanan"),
         "moreInfo": MessageLookupByLibrary.simpleMessage("Maklumat Lanjut"),
         "mrp": MessageLookupByLibrary.simpleMessage("MRP"),
         "name": MessageLookupByLibrary.simpleMessage("Nama"),
@@ -393,9 +443,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Tiada Pembekal Tersedia"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("Tiada urus niaga"),
+        "notActiveUser":
+            MessageLookupByLibrary.simpleMessage("Pengguna Tidak Aktif"),
         "notFound": MessageLookupByLibrary.simpleMessage("Tidak Ditemui"),
         "note": MessageLookupByLibrary.simpleMessage("Catatan"),
         "notification": MessageLookupByLibrary.simpleMessage("Pemberitahuan"),
+        "oK": MessageLookupByLibrary.simpleMessage("OK"),
         "off": MessageLookupByLibrary.simpleMessage("Mati"),
         "on": MessageLookupByLibrary.simpleMessage("Hidup"),
         "openingBalance":
@@ -446,6 +499,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Pilih Tarikh Tamat"),
         "pickStartDate":
             MessageLookupByLibrary.simpleMessage("Pilih Tarikh Mula"),
+        "plan": MessageLookupByLibrary.simpleMessage("Rancangan"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("Sila tambah kuantiti"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
@@ -480,6 +534,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Sila Masukkan Jumlah"),
         "pleaseEnterName":
             MessageLookupByLibrary.simpleMessage("Sila Masukkan Nama"),
+        "pleaseEnterSalesPrice":
+            MessageLookupByLibrary.simpleMessage("Sila masukkan harga jualan"),
         "pleaseEnterTheOTP":
             MessageLookupByLibrary.simpleMessage("Sila masukkan OTP"),
         "pleaseEnterUnitName":
@@ -494,6 +550,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Sila pilih kategori"),
         "pleaseSelectAExpenseCategory": MessageLookupByLibrary.simpleMessage(
             "Sila pilih kategori perbelanjaan"),
+        "pleaseUseTheValidPurchaseCodeToUseTheApp":
+            MessageLookupByLibrary.simpleMessage(
+                "Sila gunakan kod pembelian sah untuk menggunakan aplikasi"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Dikuasakan oleh Acnoo"),
         "premiumCustomerSupport":
@@ -503,6 +562,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Terakhir Sebelumnya"),
         "previousPayAmount":
             MessageLookupByLibrary.simpleMessage("Amaun Gaji Sebelumnya"),
+        "priceMustBeGreaterThan": MessageLookupByLibrary.simpleMessage(
+            "Harga mesti lebih besar daripada"),
         "print": MessageLookupByLibrary.simpleMessage("Cetak"),
         "printing": MessageLookupByLibrary.simpleMessage("Pilihan Percetakan"),
         "product": MessageLookupByLibrary.simpleMessage("produk"),
@@ -543,8 +604,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchased": MessageLookupByLibrary.simpleMessage("Pembelian"),
         "qty": MessageLookupByLibrary.simpleMessage("Kuantiti"),
         "quantity": MessageLookupByLibrary.simpleMessage("Kuantiti"),
+        "quantityExceedsAvailableStock": MessageLookupByLibrary.simpleMessage(
+            "Kuantiti melebihi stok tersedia"),
+        "quantityMustBeGreaterThan": MessageLookupByLibrary.simpleMessage(
+            "Kuantiti mesti lebih besar daripada"),
         "quickOverview":
             MessageLookupByLibrary.simpleMessage("Gambaran Keseluruhan Pantas"),
+        "receivedAmount":
+            MessageLookupByLibrary.simpleMessage("Jumlah Diterima"),
         "recentTransaction":
             MessageLookupByLibrary.simpleMessage("Transaksi Terkini"),
         "recivethePin": MessageLookupByLibrary.simpleMessage("Terima PIN"),
@@ -552,6 +619,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("Daftar"),
         "registerTitle": MessageLookupByLibrary.simpleMessage(
             "Kami perlu mendaftar telefon anda tanpa bermula!"),
+        "relatedDataWillBeDeletedAlso": MessageLookupByLibrary.simpleMessage(
+            "Data yang berkaitan juga akan dipadam"),
         "remainingDue": MessageLookupByLibrary.simpleMessage("Baki Tertunggak"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("Ingat saya"),
         "rememberMeLater":
@@ -560,6 +629,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "resendIn":
             MessageLookupByLibrary.simpleMessage("Hantar semula OTP dalam "),
         "resendOTP": MessageLookupByLibrary.simpleMessage("Hantar semula OTP"),
+        "resendOTPIn":
+            MessageLookupByLibrary.simpleMessage("Hantar semula OTP dalam"),
         "reset": MessageLookupByLibrary.simpleMessage(
             "Tetapkan semula kata laluan menggunakan email atau nombor telefon anda"),
         "resetPassword": MessageLookupByLibrary.simpleMessage(
@@ -575,18 +646,28 @@ class MessageLookup extends MessageLookupByLibrary {
         "salesBy": MessageLookupByLibrary.simpleMessage("Dijual oleh:"),
         "salesDetails": MessageLookupByLibrary.simpleMessage("Butiran Jualan"),
         "salesList": MessageLookupByLibrary.simpleMessage("Senarai Jualan"),
+        "salesPrice": MessageLookupByLibrary.simpleMessage("Harga Jualan"),
         "salesPurchaseOverview": MessageLookupByLibrary.simpleMessage(
             "Gambaran Keseluruhan Jualan & Pembelian"),
         "salesReport": MessageLookupByLibrary.simpleMessage("Laporan jualan"),
+        "sat": MessageLookupByLibrary.simpleMessage("Sabtu"),
         "save": MessageLookupByLibrary.simpleMessage("Jimat"),
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("Simpan dan Terbitkan"),
+        "scanProductQRCode":
+            MessageLookupByLibrary.simpleMessage("Imbas kod QR produk"),
         "search": MessageLookupByLibrary.simpleMessage("Cari"),
         "searchH": MessageLookupByLibrary.simpleMessage("Carian Di Sini...."),
+        "searchHere": MessageLookupByLibrary.simpleMessage("Cari di sini"),
+        "seconds": MessageLookupByLibrary.simpleMessage("Saat"),
         "seeAllPromoCode":
             MessageLookupByLibrary.simpleMessage("Lihat semua kod promo"),
         "select": MessageLookupByLibrary.simpleMessage("Pilih"),
         "selectABrand": MessageLookupByLibrary.simpleMessage("Pilih Jenama"),
+        "selectABusinessCategory":
+            MessageLookupByLibrary.simpleMessage("Pilih Kategori Perniagaan"),
+        "selectACategory":
+            MessageLookupByLibrary.simpleMessage("Pilih Kategori"),
         "selectAInvoice": MessageLookupByLibrary.simpleMessage("Pilih invois"),
         "selectBusinessCategory":
             MessageLookupByLibrary.simpleMessage("Pilih Kategori Perniagaan"),
@@ -642,6 +723,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("Stok"),
         "stockList": MessageLookupByLibrary.simpleMessage("Senarai Stok"),
         "stockReport": MessageLookupByLibrary.simpleMessage("Laporan Stok"),
+        "stockS": MessageLookupByLibrary.simpleMessage("Stok"),
         "stockValue": MessageLookupByLibrary.simpleMessage("Nilai Stok"),
         "stocks": MessageLookupByLibrary.simpleMessage("Stok: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Jumlah kecil"),
@@ -652,14 +734,21 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("berjaya dibayar"),
         "supplerPay": MessageLookupByLibrary.simpleMessage("Bayaran Pembekal"),
         "supplier": MessageLookupByLibrary.simpleMessage("Pembekal"),
+        "supplierDetails":
+            MessageLookupByLibrary.simpleMessage("Butiran Pembekal"),
         "supplierName": MessageLookupByLibrary.simpleMessage("Nama Pembekal"),
         "thakYouForYourPurchase": MessageLookupByLibrary.simpleMessage(
             "Terima kasih atas pembelian anda"),
         "thankYouForYourDuePayment": MessageLookupByLibrary.simpleMessage(
             "Terima kasih atas pembayaran yang tertunggak"),
+        "thisMonth": MessageLookupByLibrary.simpleMessage("Bulan Ini"),
         "thisProductAlreadyAdded":
             MessageLookupByLibrary.simpleMessage("Produk ini sudah ditambah!"),
+        "thisWeek": MessageLookupByLibrary.simpleMessage("Minggu Ini"),
+        "thisYear": MessageLookupByLibrary.simpleMessage("Tahun Ini"),
+        "thurs": MessageLookupByLibrary.simpleMessage("Khamis"),
         "toDate": MessageLookupByLibrary.simpleMessage("Sehingga Kini"),
+        "toDay": MessageLookupByLibrary.simpleMessage("Hari Ini"),
         "todaySummary":
             MessageLookupByLibrary.simpleMessage("Rumusan Hari Ini"),
         "total": MessageLookupByLibrary.simpleMessage("Jumlah"),
@@ -688,11 +777,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "totall": MessageLookupByLibrary.simpleMessage("Jumlah:"),
         "transactions": MessageLookupByLibrary.simpleMessage("Transaksi"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("Cuba lagi"),
+        "tues": MessageLookupByLibrary.simpleMessage("Selasa"),
         "twitter": MessageLookupByLibrary.simpleMessage("Twitter"),
         "type": MessageLookupByLibrary.simpleMessage("Jenis"),
         "unPaid": MessageLookupByLibrary.simpleMessage("Tidak Berbayar"),
         "unitName": MessageLookupByLibrary.simpleMessage("Nama unit"),
         "unitPirce": MessageLookupByLibrary.simpleMessage("Harga Unit"),
+        "unitPrice": MessageLookupByLibrary.simpleMessage("Harga seunit"),
         "units": MessageLookupByLibrary.simpleMessage("Unit"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Tidak terhad"),
         "unlimitedUsage":
@@ -723,6 +814,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Butiran Peranan Pengguna"),
         "userTitle": MessageLookupByLibrary.simpleMessage("Tajuk Pengguna"),
         "vat": MessageLookupByLibrary.simpleMessage("VAT"),
+        "vatDoesNOtApply":
+            MessageLookupByLibrary.simpleMessage("Cukai Tidak Berkenaan"),
         "verification": MessageLookupByLibrary.simpleMessage("Pengesahan"),
         "verify": MessageLookupByLibrary.simpleMessage("Sahkan"),
         "verifyYourEmail":
@@ -735,6 +828,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Kami telah menghantar emel pengesahan ke"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Kami telah menghantar OTP ke nombor telefon anda"),
+        "wed": MessageLookupByLibrary.simpleMessage("Rabu"),
+        "weekly": MessageLookupByLibrary.simpleMessage("Mingguan"),
         "weight": MessageLookupByLibrary.simpleMessage("Berat"),
         "welcomeBack":
             MessageLookupByLibrary.simpleMessage("Selamat datang kembali!"),
@@ -745,9 +840,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "Akan Ditambah Tidak Lama Lagi"),
         "writeYourMessageHere":
             MessageLookupByLibrary.simpleMessage("Tulis mesej anda di sini"),
+        "yearly": MessageLookupByLibrary.simpleMessage("Tahunan"),
         "yes": MessageLookupByLibrary.simpleMessage("Ya"),
         "youCanNotPayMoreThenDue": MessageLookupByLibrary.simpleMessage(
             "Anda tidak boleh membayar lebih dari jumlah hutang"),
+        "youCanNowResendTheOTP": MessageLookupByLibrary.simpleMessage(
+            "Anda kini boleh menghantar semula OTP"),
         "youHaveToGivePermission": MessageLookupByLibrary.simpleMessage(
             "Anda Perlu Memberi Kebenaran"),
         "youRUsing":

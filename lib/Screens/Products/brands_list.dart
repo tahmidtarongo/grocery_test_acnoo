@@ -164,7 +164,7 @@ class _BrandsListState extends State<BrandsList> {
                                 : Container();
                           })
                       : Padding(
-                          padding: EdgeInsets.all(20.0),
+                          padding: const EdgeInsets.all(20.0),
                           child: Text(
                             lang.S.of(context).noDataFound,
                             //'No Data Found'

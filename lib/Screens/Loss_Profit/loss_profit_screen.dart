@@ -41,7 +41,7 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
         appBar: AppBar(
           backgroundColor: Colors.white,
           title: Text(
-            (widget.fromReport ?? false) ? 'Loss/Profit Report' : lang.S.of(context).lp,
+            (widget.fromReport ?? false) ? lang.S.of(context).lossProfitReport : lang.S.of(context).lp,
             style: GoogleFonts.poppins(
               color: Colors.black,
             ),
