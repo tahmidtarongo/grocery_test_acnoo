@@ -22,7 +22,7 @@ const bool sandbox = true;
 String noProductImageUrl = 'images/no_product_image.png';
 
 ///_______________Purchase_Code_______________________________
-String purchaseCode = '3e873705-9a73-4a00-81f9-1f2fbef74e66';
+String purchaseCode = 'Please enter your purchase code';
 
 ///---------------update information---------------
 
