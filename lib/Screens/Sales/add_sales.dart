@@ -353,8 +353,8 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                     ),
                                     const SizedBox(width: 10),
                                     IconButton(
-                                      onPressed: () async{
-                                       await showModalBottomSheet(
+                                      onPressed: () async {
+                                        await showModalBottomSheet(
                                           context: context,
                                           isScrollControlled: true,
                                           shape: const RoundedRectangleBorder(
@@ -368,6 +368,10 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                           ),
                                         );
 
+                                        setState(() {
+                                          vatPercentageEditingController.text = ((vatAmount * 100) / cartProviderData.getTotalAmount()).toStringAsFixed(2);
+                                          discountPercentageEditingController.text = ((discountAmount * 100) / cartProviderData.getTotalAmount()).toStringAsFixed(2);
+                                        });
                                       },
                                       icon: const Icon(IconlyLight.edit_square),
                                     )

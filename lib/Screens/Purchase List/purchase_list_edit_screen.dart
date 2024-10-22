@@ -227,7 +227,7 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                       children: [
                         Container(
                           width: double.infinity,
-                          decoration:  BoxDecoration(
+                          decoration: BoxDecoration(
                             color: kMainColor.withOpacity(0.1),
                             borderRadius: const BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
                           ),
@@ -303,9 +303,9 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                     onTap: () {
                       EditPurchaseInvoiceSaleProducts(
                         catName: null,
-                        customerModel: party.Party(type:
-                            lang.S.of(context).retailer,
-                        //'Retailer'
+                        customerModel: party.Party(
+                          type: lang.S.of(context).retailer,
+                          //'Retailer'
                         ),
                         purchaseTransaction: widget.transitionModel,
                       ).launch(context);
@@ -331,7 +331,8 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                       children: [
                         Container(
                           padding: const EdgeInsets.all(10),
-                          decoration:  BoxDecoration(color: kMainColor.withOpacity(0.1), borderRadius: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10))),
+                          decoration:
+                              BoxDecoration(color: kMainColor.withOpacity(0.1), borderRadius: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10))),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -376,7 +377,7 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                                         });
                                         EasyLoading.showError(
                                           lang.S.of(context).enterAValidDiscount,
-                                            //'Enter a valid Discount'
+                                          //'Enter a valid Discount'
                                         );
                                       }
                                     }
@@ -533,7 +534,7 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                           onChanged: (value) {
                             setState(() {});
                           },
-                          decoration:  InputDecoration(
+                          decoration: InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             //labelText: 'Description',
                             labelText: lang.S.of(context).description,
@@ -548,7 +549,7 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                           height: 60,
                           width: 100,
                           decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), color: Colors.grey.shade200),
-                          child:  Center(
+                          child: Center(
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
@@ -594,9 +595,9 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                           onTap: () async {
                             if (providerData.cartItemPurchaseList.isNotEmpty) {
                               try {
-                                EasyLoading.show(status:
-                                    lang.S.of(context).loading,
-                                //'Loading...',
+                                EasyLoading.show(
+                                    status: lang.S.of(context).loading,
+                                    //'Loading...',
                                     dismissOnTap: false);
                                 List<CartProducts> selectedProductList = [];
 
@@ -639,8 +640,9 @@ class _PurchaseListEditScreenState extends State<PurchaseListEditScreen> {
                                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
                               }
                             } else {
-                              EasyLoading.showError(lang.S.of(context).addProductFirst,
-                                  //'Add product first'
+                              EasyLoading.showError(
+                                lang.S.of(context).addProductFirst,
+                                //'Add product first'
                               );
                             }
                           },

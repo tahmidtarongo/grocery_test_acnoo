@@ -47,7 +47,7 @@ class CartNotifier extends ChangeNotifier {
       controllers.add(TextEditingController());
       focus.add(FocusNode());
     }
-    notifyListeners();
+    // notifyListeners();
   }
 
   addToCartRiverPodForEdit(List<ProductModel> cartItem) {

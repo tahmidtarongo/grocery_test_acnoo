@@ -37,7 +37,8 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
     paidAmount = (widget.transitionModel.paidAmount ?? 0);
     discountAmount = widget.transitionModel.discountAmount!;
     discountAmountEditingController.text = widget.transitionModel.discountAmount.toString();
-    discountPercentageEditingController.text = ((discountAmount * 100) / (widget.transitionModel.totalAmount ?? 0 + (widget.transitionModel.discountAmount??0))).toStringAsFixed(2);
+    discountPercentageEditingController.text =
+        ((discountAmount * 100) / (widget.transitionModel.totalAmount ?? 0 + (widget.transitionModel.discountAmount ?? 0))).toStringAsFixed(2);
     paymentType = widget.transitionModel.paymentType;
     discountText.text = discountAmount.toString();
     paidText.text = paidAmount.toString();
@@ -301,7 +302,10 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                                             GestureDetector(
                                               onTap: () {
                                                 providerData.quantityDecrease(index);
-
+                                                setState(() {
+                                                  vatPercentageEditingController.text = ((vatAmount * 100) / providerData.getTotalAmount()).toStringAsFixed(2);
+                                                  discountPercentageEditingController.text = ((discountAmount * 100) / providerData.getTotalAmount()).toStringAsFixed(2);
+                                                });
                                               },
                                               child: Container(
                                                 height: 20,
@@ -330,6 +334,10 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                                             GestureDetector(
                                               onTap: () {
                                                 providerData.quantityIncrease(index);
+                                                setState(() {
+                                                  vatPercentageEditingController.text = ((vatAmount * 100) / providerData.getTotalAmount()).toStringAsFixed(2);
+                                                  discountPercentageEditingController.text = ((discountAmount * 100) / providerData.getTotalAmount()).toStringAsFixed(2);
+                                                });
                                               },
                                               child: Container(
                                                 height: 20,
@@ -362,6 +370,10 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                                           }
 
                                           providerData.deleteToCart(index);
+                                          setState(() {
+                                            vatPercentageEditingController.text = ((vatAmount * 100) / providerData.getTotalAmount()).toStringAsFixed(2);
+                                            discountPercentageEditingController.text = ((discountAmount * 100) / providerData.getTotalAmount()).toStringAsFixed(2);
+                                          });
                                         },
                                         child: Container(
                                           padding: const EdgeInsets.all(4),
@@ -385,11 +397,15 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
 
                   ///_______Add_Button__________________________________________________
                   GestureDetector(
-                    onTap: () {
-                      EditSaleInvoiceSaleProducts(
+                    onTap: () async {
+                      await EditSaleInvoiceSaleProducts(
                         catName: null,
                         salesInfo: widget.transitionModel,
                       ).launch(context);
+                      setState(() {
+                        vatPercentageEditingController.text = ((vatAmount * 100) / providerData.getTotalAmount()).toStringAsFixed(2);
+                        discountPercentageEditingController.text = ((discountAmount * 100) / providerData.getTotalAmount()).toStringAsFixed(2);
+                      });
                     },
                     child: Container(
                       height: 50,
@@ -680,6 +696,7 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                             ],
                           ),
                         ),
+
                         ///____________Previous paid Amount___________________________
                         Padding(
                           padding: const EdgeInsets.all(10.0),
