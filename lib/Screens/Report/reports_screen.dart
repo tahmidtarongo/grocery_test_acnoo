@@ -11,6 +11,7 @@ import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
 import '../Loss_Profit/loss_profit_screen.dart';
+import '../internet checker/Internet_check_provider/util/network_observer_provider.dart';
 import '../stock_list/stock_list.dart';
 
 class Reports extends StatefulWidget {
@@ -24,101 +25,102 @@ class Reports extends StatefulWidget {
 class _ReportsState extends State<Reports> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: kWhite,
-      appBar: AppBar(
-        title: Text(
-          lang.S.of(context).reports,
-          style: GoogleFonts.poppins(
-            color: Colors.black,
-            fontSize: 20.0,
+    return ProviderNetworkObserver(
+      child: Scaffold(
+        backgroundColor: kWhite,
+        appBar: AppBar(
+          title: Text(
+            lang.S.of(context).reports,
+            style: GoogleFonts.poppins(
+              color: Colors.black,
+              fontSize: 20.0,
+            ),
           ),
+          iconTheme: const IconThemeData(color: Colors.black),
+          centerTitle: true,
+          backgroundColor: Colors.white,
+          elevation: 0.0,
         ),
-        iconTheme: const IconThemeData(color: Colors.black),
-        centerTitle: true,
-        backgroundColor: Colors.white,
-        elevation: 0.0,
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            ReportCard(
-                pressed: () {
-                  const SalesReportScreen().launch(context);
-                },
-                iconPath: 'assets/salesReport.svg',
-                title: lang.S.of(context).salesReport),
-            const SizedBox(
-              height: 16,
-            ),
-            ReportCard(
-                pressed: () {
-                  const PurchaseReportScreen().launch(context);
-                },
-                iconPath: 'assets/purchaseReport.svg',
-                title: lang.S.of(context).purchaseReport),
-            const SizedBox(
-              height: 16,
-            ),
-            ReportCard(
-                pressed: () {
-                  const DueReportScreen().launch(context);
-                },
-                iconPath: 'assets/duereport.svg',
-                title: lang.S.of(context).dueReport),
-            const SizedBox(
-              height: 16,
-            ),
-
-            ///_______________Stock_report________________________________________________________________
-            ReportCard(
-                pressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const StockList(
-                                isFromReport: true,
-                              )));
-                },
-                iconPath: 'assets/stock.svg',
-                //title: 'Stock Report'
-                title: lang.S.of(context).stockReport),
-            const SizedBox(height: 16),
-
-            ///_______________Loss/Profit________________________________________________________________
-            ReportCard(
-                pressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => const LossProfitScreen()));
-                },
-                iconPath: 'assets/lossprofit.svg',
-                //title: 'Loss/Profit Report'
-                title: lang.S.of(context).lossProfitReport),
-            const SizedBox(
-              height: 16,
-            ),
-
-            ///_______________Income_report________________________________________________________________
-            ReportCard(
-                pressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => const IncomeReport()));
-                },
-                iconPath: 'assets/incomeReport.svg',
-                //title: 'Income Report'),
-                title: lang.S.of(context).incomeReport),
-            const SizedBox(
-              height: 16,
-            ),
-
-            ///__________________Expense Report____________________________________________________________
-            ReportCard(
-                pressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => const ExpenseReport()));
-                },
-                iconPath: 'assets/expenseReport.svg',
-                //title: 'Expense Report'
-                title: lang.S.of(context).expenseReport),
-          ],
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              ReportCard(
+                  pressed: () {
+                    const SalesReportScreen().launch(context);
+                  },
+                  iconPath: 'assets/salesReport.svg',
+                  title: lang.S.of(context).salesReport),
+              const SizedBox(
+                height: 16,
+              ),
+              ReportCard(
+                  pressed: () {
+                    const PurchaseReportScreen().launch(context);
+                  },
+                  iconPath: 'assets/purchaseReport.svg',
+                  title: lang.S.of(context).purchaseReport),
+              const SizedBox(
+                height: 16,
+              ),
+              ReportCard(
+                  pressed: () {
+                    const DueReportScreen().launch(context);
+                  },
+                  iconPath: 'assets/duereport.svg',
+                  title: lang.S.of(context).dueReport),
+              const SizedBox(
+                height: 16,
+              ),
+      
+              ///_______________Stock_report________________________________________________________________
+              ReportCard(
+                  pressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const StockList(
+                                  isFromReport: true,
+                                )));
+                  },
+                  iconPath: 'assets/stock.svg',
+                  //title: 'Stock Report'
+                  title: lang.S.of(context).stockReport),
+              const SizedBox(height: 16),
+      
+              ///_______________Loss/Profit________________________________________________________________
+              ReportCard(
+                  pressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const LossProfitScreen()));
+                  },
+                  iconPath: 'assets/lossprofit.svg',
+                  //title: 'Loss/Profit Report'
+                  title: lang.S.of(context).lossProfitReport),
+              const SizedBox(
+                height: 16,
+              ),
+      
+              ///_______________Income_report________________________________________________________________
+              ReportCard(
+                  pressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const IncomeReport()));
+                  },
+                  iconPath: 'assets/incomeReport.svg',
+                  title: 'Income Report'),
+              const SizedBox(
+                height: 16,
+              ),
+      
+              ///__________________Expense Report____________________________________________________________
+              ReportCard(
+                  pressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const ExpenseReport()));
+                  },
+                  iconPath: 'assets/expenseReport.svg',
+                  //title: 'Expense Report'
+                  title: lang.S.of(context).expenseReport),
+            ],
+          ),
         ),
       ),
     );

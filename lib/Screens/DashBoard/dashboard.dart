@@ -67,9 +67,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
           appBar: AppBar(
             backgroundColor: kWhite,
             surfaceTintColor: kWhite,
-            title:  Text(
+            title: Text(
               lang.S.of(context).dashboard,
-                //'Dashboard'
+              //'Dashboard'
             ),
             actions: [
               Padding(
@@ -97,7 +97,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       children: [
                         Text(
                           lang.S.of(context).salesPurchaseOverview,
-                         //'Sales & Purchase Overview',
+                          //'Sales & Purchase Overview',
                           style: gTextStyle.copyWith(fontWeight: FontWeight.bold, color: kTitleColor),
                         ),
                         const SizedBox(
@@ -115,15 +115,16 @@ class _DashboardScreenState extends State<DashboardScreen> {
                               width: 5,
                             ),
                             RichText(
-                                text:  TextSpan(text:
-                                    lang.S.of(context).sales,
-                                //'Sales',
-                                    style: const TextStyle(color: kTitleColor), children: const [
-                              // TextSpan(
-                              //     text: '$currency 500',
-                              //     style: gTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor)
-                              // ),
-                            ])),
+                                text: TextSpan(
+                                    text: lang.S.of(context).sales,
+                                    //'Sales',
+                                    style: const TextStyle(color: kTitleColor),
+                                    children: const [
+                                  // TextSpan(
+                                  //     text: '$currency 500',
+                                  //     style: gTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor)
+                                  // ),
+                                ])),
                             const SizedBox(
                               width: 20,
                             ),
@@ -136,16 +137,17 @@ class _DashboardScreenState extends State<DashboardScreen> {
                               width: 5,
                             ),
                             RichText(
-                                text:  TextSpan(text:
-                                    lang.S.of(context).purchase,
+                                text: TextSpan(
+                                    text: lang.S.of(context).purchase,
 
-                                //'Purchase',
-                                    style: const TextStyle(color: kTitleColor), children: const [
-                              // TextSpan(
-                              //     text: '$currency 300',
-                              //     style: gTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor)
-                              // ),
-                            ])),
+                                    //'Purchase',
+                                    style: const TextStyle(color: kTitleColor),
+                                    children: const [
+                                  // TextSpan(
+                                  //     text: '$currency 300',
+                                  //     style: gTextStyle.copyWith(fontWeight: FontWeight.bold,color: kTitleColor)
+                                  // ),
+                                ])),
                           ],
                         ),
                         const SizedBox(
@@ -156,8 +158,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             width: double.infinity,
                             child: DashboardChart(
                               model: dashboard,
-                            )
-                        ),
+                            )),
                       ],
                     ),
                   ),
@@ -166,19 +167,21 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   ),
                   Row(
                     children: [
-                      Expanded(child: GlobalContainer(
-                          title:
-                              lang.S.of(context).totalItems,
-                          //'Total Items'
-                           image: 'assets/totalItem.svg', subtitle: dashboard.data?.totalItems.toString() ?? '0')),
+                      Expanded(
+                          child: GlobalContainer(
+                              title: lang.S.of(context).totalItems,
+                              //'Total Items'
+                              image: 'assets/totalItem.svg',
+                              subtitle: dashboard.data?.totalItems.toString() ?? '0')),
                       const SizedBox(
                         width: 12,
                       ),
-                      Expanded(child: GlobalContainer(
-                          title:
-                              lang.S.of(context).totalCategories,
-                          //'Total Categories',
-                          image: 'assets/purchaseLisst.svg', subtitle: dashboard.data?.totalCategories.toString() ?? '0'))
+                      Expanded(
+                          child: GlobalContainer(
+                              title: lang.S.of(context).totalCategories,
+                              //'Total Categories',
+                              image: 'assets/purchaseLisst.svg',
+                              subtitle: dashboard.data?.totalCategories.toString() ?? '0'))
                     ],
                   ),
                   const SizedBox(
@@ -195,17 +198,20 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   Row(
                     children: [
                       Expanded(
-                          child: GlobalContainer(title:
-                              lang.S.of(context).totalIncome,
-                          //'Total Income',
-                              image: 'assets/totalIncome.svg', subtitle: '$currency ${dashboard.data?.totalIncome.toString() ?? '0'}')),
+                          child: GlobalContainer(
+                              title: lang.S.of(context).totalIncome,
+                              //'Total Income',
+                              image: 'assets/totalIncome.svg',
+                              subtitle: '$currency ${dashboard.data?.totalIncome.toString() ?? '0'}')),
                       const SizedBox(
                         width: 12,
                       ),
-                      Expanded(child: GlobalContainer(title:
-                          lang.S.of(context).totalExpense,
-                      //'Total Expense',
-                          image: 'assets/expense.svg', subtitle: '$currency ${dashboard.data?.totalExpense.toString() ?? '0'}'))
+                      Expanded(
+                          child: GlobalContainer(
+                              title: lang.S.of(context).totalExpense,
+                              //'Total Expense',
+                              image: 'assets/expense.svg',
+                              subtitle: '$currency ${dashboard.data?.totalExpense.toString() ?? '0'}'))
                     ],
                   ),
                   const SizedBox(
@@ -213,17 +219,21 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   ),
                   Row(
                     children: [
-                      Expanded(child: GlobalContainer(title:
-                          lang.S.of(context).customerDue,
-                      //'Customer Due',
-                          image: 'assets/duelist.svg', subtitle: '$currency ${dashboard.data?.totalDue.toString() ?? '0'}')),
+                      Expanded(
+                          child: GlobalContainer(
+                              title: lang.S.of(context).customerDue,
+                              //'Customer Due',
+                              image: 'assets/duelist.svg',
+                              subtitle: '$currency ${dashboard.data?.totalDue.toString() ?? '0'}')),
                       const SizedBox(
                         width: 12,
                       ),
-                      Expanded(child: GlobalContainer(title:
-                          lang.S.of(context).stockValue,
-                      //'Stock Value',
-                          image: 'assets/stock.svg', subtitle: dashboard.data?.stockValue.toString() ?? '0'))
+                      Expanded(
+                          child: GlobalContainer(
+                              title: lang.S.of(context).stockValue,
+                              //'Stock Value',
+                              image: 'assets/stock.svg',
+                              subtitle: dashboard.data?.stockValue.toString() ?? '0'))
                     ],
                   ),
                   const SizedBox(height: 20),
@@ -238,17 +248,20 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   Row(
                     children: [
                       Expanded(
-                          child: GlobalContainer(title:
-                              lang.S.of(context).totalProfit,
-                          //'Total Profit',
-                              image: 'assets/lossprofit.svg', subtitle: '$currency ${dashboard.data?.totalProfit.toString() ?? '0'}')),
+                          child: GlobalContainer(
+                              title: lang.S.of(context).totalProfit,
+                              //'Total Profit',
+                              image: 'assets/lossprofit.svg',
+                              subtitle: '$currency ${dashboard.data?.totalProfit.toString() ?? '0'}')),
                       const SizedBox(
                         width: 12,
                       ),
-                      Expanded(child: GlobalContainer(title:
-                          lang.S.of(context).totalLoss,
-                      //'Toatal Loss',
-                          image: 'assets/expense.svg', subtitle: '$currency ${dashboard.data?.totalLoss.toString() ?? '0'}'))
+                      Expanded(
+                          child: GlobalContainer(
+                              title: lang.S.of(context).totalLoss,
+                              //'Toatal Loss',
+                              image: 'assets/expense.svg',
+                              subtitle: '$currency ${dashboard.data?.totalLoss.toString() ?? '0'}'))
                     ],
                   ),
                 ],

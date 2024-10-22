@@ -16,12 +16,13 @@ bool isPrintEnable = false;
 List<String> paymentsTypeList = ['Cash', 'Card', 'Check', 'Mobile Pay', 'Due'];
 bool isExpiringInFiveDays = false;
 bool isExpiringInOneDays = false;
-const String appVersion = '1.0';
 String paypalClientId = '';
 String paypalClientSecret = '';
 const bool sandbox = true;
 String noProductImageUrl = 'images/no_product_image.png';
-String purchaseCode = '3e873705-9a73-4a00-81f9-1f2fbef74e66';
+
+///_______________Purchase_Code_______________________________
+String purchaseCode = 'Please enter your purchase code';
 
 ///---------------update information---------------
 
@@ -30,7 +31,11 @@ const String onboard1 = 'images/onbord1.png';
 const String onboard2 = 'images/onbord2.png';
 const String onboard3 = 'images/onbord3.png';
 const String logo = 'images/logo.png';
+
+///______________Names____________________________
 const String appsName = 'Grocery Shop';
+const String companyName = 'Acnoo';
+const String appVersion = '1.0';
 
 const kButtonDecoration = BoxDecoration(
   borderRadius: BorderRadius.all(
@@ -84,6 +89,58 @@ bool newSelect = false;
 
 ///--------------------subscription dilog-----------------------
 
+
+///__________Language________________________________
+Map<String, String> languageMap = {
+  'English': 'en',
+  'Chinese': 'zh',
+  'Hindi': 'hi',
+  'French': 'fr',
+  'Spanish': 'es',
+  'Japanese': 'ja',
+  'Arabic': 'ar',
+  'Romanian': 'ro',
+  'Italian': 'it',
+  'German': 'de',
+  'Vietnamese': 'vi',
+  'Русский': 'ru',
+  'Indonesian': 'id',
+  'Korean': 'ko',
+  'Serbian': 'sr',
+  'Polish': 'pl',
+  'Persian': 'fa',
+  'Ukrainian': 'uk',
+  'Malay': 'ms',
+  'Lao': 'lo',
+  'Turkish': 'tr',
+  'Portuguese': 'pt',
+  'Hungarian': 'hu',
+  'Hebrew': 'he',
+  'Thai': 'th',
+  'Dutch': 'nl',
+  'Finland': 'fi',
+  'Greek': 'el',
+  'Khmer': 'km',
+  'Bosnian': 'bs',
+  'Bangla': 'bn',
+  'Swahili': 'sw',
+  'Slovak': 'sk',
+  'Sinhala': 'si',
+  'Urdu': 'ur',
+  'Kannada': 'kn',
+  'Marathi': 'mr',
+  'Tamil': 'ta',
+  'Afrikans': 'af',
+  'Czech': 'cs',
+  'Swedish': 'sv',
+  'Albanian': 'sq',
+  'Danish': 'da',
+  'Azerbaijani': 'az',
+  'Kazakh': 'kk',
+  'Crotian': 'hr',
+  'Nepali': 'ne',
+  'Burmese': 'my',
+};
 //______________________________________________Back_Button__________________
 class Back extends StatelessWidget {
   final VoidCallback onPressed;

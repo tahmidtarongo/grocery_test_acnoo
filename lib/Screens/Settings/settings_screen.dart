@@ -360,12 +360,18 @@ class _SettingScreenState extends State<SettingScreen> {
                       fontSize: 16.0,
                     ),
                   ),
-                  onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const SelectLanguage(),
-                    ),
-                  ),
+                  onTap: () async {
+                    final prefs = await SharedPreferences.getInstance();
+                    final data = prefs.getString('lang');
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SelectLanguage(
+                          alreadySelectedLanguage: data,
+                        ),
+                      ),
+                    );
+                  },
                   leading: SvgPicture.asset(
                     'assets/language.svg',
                     height: 36,
@@ -428,7 +434,7 @@ class _SettingScreenState extends State<SettingScreen> {
                     Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: Text(
-                        '${lang.S.of(context).POSProV}-$appVersion',
+                        '$appsName V-$appVersion',
                         style: GoogleFonts.poppins(
                           color: kGreyTextColor,
                           fontSize: 16.0,

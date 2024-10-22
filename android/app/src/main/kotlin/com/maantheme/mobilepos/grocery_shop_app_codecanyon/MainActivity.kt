@@ -1,4 +1,4 @@
-package com.maantheme.mobilepos.grocery_shop_app_codecanyon
+package com.acnoo.groceryshop
 
 import io.flutter.embedding.android.FlutterActivity
 

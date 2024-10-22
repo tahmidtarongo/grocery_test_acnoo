@@ -17,6 +17,7 @@ import '../../Repository/API/business_info_repo.dart';
 import '../../currency.dart';
 import '../Authentication/Repo/licnese_repo.dart';
 import '../Home/home.dart';
+import '../internet checker/Internet_check_provider/util/network_observer_provider.dart';
 import '../language/language_provider.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -47,16 +48,15 @@ class _SplashScreenState extends State<SplashScreen> {
 
   checkUser() async {
     // bool result = await InternetConnectionChecker().hasConnection;
-    if (true) {
+    var connectivityResult = await Connectivity().checkConnectivity();
+    if (connectivityResult.first == ConnectivityResult.wifi || connectivityResult.first == ConnectivityResult.mobile) {
       await PurchaseModel().isActiveBuyer().then((value) {
         if (!value) {
           showDialog(
             context: context,
             builder: (context) => AlertDialog(
-             // title: const Text("Not Active User"),
-              title:  Text(lang.S.of(context).notActiveUser),
-              //content: const Text("Please use the valid purchase code to use the app."),
-              content:  Text("${lang.S.of(context).pleaseUseTheValidPurchaseCodeToUseTheApp}."),
+              title: const Text("Not Active User"),
+              content: const Text("Please use the valid purchase code to use the app."),
               actions: [
                 TextButton(
                   onPressed: () {
@@ -67,8 +67,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       exit(0);
                     }
                   },
-                  //child: const Text("OK"),
-                  child:  Text(lang.S.of(context).oK),
+                  child: const Text("OK"),
                 ),
               ],
             ),
@@ -81,19 +80,72 @@ class _SplashScreenState extends State<SplashScreen> {
       showDialog(
         context: context,
         builder: (BuildContext context) {
-          return AlertDialog(
-            title: const Text('No Internet Connection'),
-            content: const Text('Please check your internet connection.'),
-            actions: [
-              TextButton(
-                child: const Text('Retry'),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                  // _checkConnectivity();
-                  checkUser();
-                },
+          return Scaffold(
+            body: Center(
+              child: Container(
+                margin: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(20.0),
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.9), // Add slight transparency
+                  borderRadius: BorderRadius.circular(24.0), // Increase border radius
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.3),
+                      spreadRadius: 5,
+                      blurRadius: 10,
+                      offset: const Offset(0, 4),
+                    ),
+                  ],
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    AnimatedSwitcher(
+                      duration: const Duration(milliseconds: 500),
+                      transitionBuilder: (child, animation) => FadeTransition(
+                        opacity: animation,
+                        child: child,
+                      ),
+                      child: const Icon(
+                        Icons.wifi_off,
+                        key: ValueKey<int>(1), // For animation
+                        size: 70.0,
+                        color: Colors.red,
+                      ),
+                    ),
+                    const SizedBox(height: 16.0),
+                    const Text(
+                      'No Wi-Fi Connection',
+                      style: TextStyle(
+                        fontSize: 22.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                    ),
+                    const SizedBox(height: 12.0),
+                    const Text(
+                      'Please check your internet connection and try again.',
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        color: Colors.grey,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(height: 24.0),
+                    ElevatedButton(
+                      style: const ButtonStyle(backgroundColor: WidgetStatePropertyAll(kMainColor)),
+                      onPressed: () {
+                        checkUser();
+                      },
+                      child: const Text(
+                        'Retry',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ],
+            ),
           );
         },
       );
@@ -106,6 +158,7 @@ class _SplashScreenState extends State<SplashScreen> {
     // init();
     getPermission();
     getCurrency();
+    setLanguage();
 
     checkUser();
   }
@@ -119,137 +172,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void setLanguage() async {
     final prefs = await SharedPreferences.getInstance();
     String selectedLanguage = prefs.getString('lang') ?? 'English';
-    selectedLanguage == 'English'
-        ? context.read<LanguageChangeProvider>().changeLocale("en")
-        : selectedLanguage == 'Chinese'
-            ? context.read<LanguageChangeProvider>().changeLocale("zh")
-            : selectedLanguage == 'Hindi'
-                ? context.read<LanguageChangeProvider>().changeLocale("hi")
-                : selectedLanguage == 'French'
-                    ? context.read<LanguageChangeProvider>().changeLocale("fr")
-                    : selectedLanguage == 'Spanish'
-                        ? context.read<LanguageChangeProvider>().changeLocale("es")
-                        : selectedLanguage == 'Japanese'
-                            ? context.read<LanguageChangeProvider>().changeLocale("ja")
-                            : selectedLanguage == 'Arabic'
-                                ? context.read<LanguageChangeProvider>().changeLocale("ar")
-                                : selectedLanguage == 'Romanian'
-                                    ? context.read<LanguageChangeProvider>().changeLocale("ro")
-                                    : selectedLanguage == 'Italian'
-                                        ? context.read<LanguageChangeProvider>().changeLocale("it")
-                                        : selectedLanguage == 'German'
-                                            ? context.read<LanguageChangeProvider>().changeLocale("de")
-                                            : selectedLanguage == 'Vietnamese'
-                                                ? context.read<LanguageChangeProvider>().changeLocale("vi")
-                                                : selectedLanguage == 'Russian'
-                                                    ? context.read<LanguageChangeProvider>().changeLocale("ru")
-                                                    : selectedLanguage == 'Indonesian'
-                                                        ? context.read<LanguageChangeProvider>().changeLocale("id")
-                                                        : selectedLanguage == 'Korean'
-                                                            ? context.read<LanguageChangeProvider>().changeLocale("ko")
-                                                            : selectedLanguage == 'Serbian'
-                                                                ? context.read<LanguageChangeProvider>().changeLocale("sr")
-                                                                : selectedLanguage == 'Polish'
-                                                                    ? context.read<LanguageChangeProvider>().changeLocale("pl")
-                                                                    : selectedLanguage == 'Persian'
-                                                                        ? context.read<LanguageChangeProvider>().changeLocale("fa")
-                                                                        : selectedLanguage == 'Ukrainian'
-                                                                            ? context.read<LanguageChangeProvider>().changeLocale("uk")
-                                                                            : selectedLanguage == 'Malay'
-                                                                                ? context.read<LanguageChangeProvider>().changeLocale("ms")
-                                                                                : selectedLanguage == 'Lao'
-                                                                                    ? context.read<LanguageChangeProvider>().changeLocale("lo")
-                                                                                    : selectedLanguage == 'Turkish'
-                                                                                        ? context.read<LanguageChangeProvider>().changeLocale("tr")
-                                                                                        : selectedLanguage == 'Portuguese'
-                                                                                            ? context.read<LanguageChangeProvider>().changeLocale("pt")
-                                                                                            : selectedLanguage == 'Hungarian'
-                                                                                                ? context.read<LanguageChangeProvider>().changeLocale("hu")
-                                                                                                : selectedLanguage == 'Hebrew'
-                                                                                                    ? context.read<LanguageChangeProvider>().changeLocale("he")
-                                                                                                    : selectedLanguage == 'Thai'
-                                                                                                        ? context.read<LanguageChangeProvider>().changeLocale("th")
-                                                                                                        : selectedLanguage == 'Dutch'
-                                                                                                            ? context.read<LanguageChangeProvider>().changeLocale("nl")
-                                                                                                            : selectedLanguage == 'Finland'
-                                                                                                                ? context.read<LanguageChangeProvider>().changeLocale("fi")
-                                                                                                                : selectedLanguage == 'Greek'
-                                                                                                                    ? context.read<LanguageChangeProvider>().changeLocale("el")
-                                                                                                                    : selectedLanguage == 'Khmer'
-                                                                                                                        ? context.read<LanguageChangeProvider>().changeLocale("km")
-                                                                                                                        : selectedLanguage == 'Bosnian'
-                                                                                                                            ? context
-                                                                                                                                .read<LanguageChangeProvider>()
-                                                                                                                                .changeLocale("bs")
-                                                                                                                            : selectedLanguage == 'Bangla'
-                                                                                                                                ? context
-                                                                                                                                    .read<LanguageChangeProvider>()
-                                                                                                                                    .changeLocale("bn")
-                                                                                                                                : selectedLanguage == 'Swahili'
-                                                                                                                                    ? context
-                                                                                                                                        .read<LanguageChangeProvider>()
-                                                                                                                                        .changeLocale("sw")
-                                                                                                                                    : selectedLanguage == 'Slovak'
-                                                                                                                                        ? context
-                                                                                                                                            .read<LanguageChangeProvider>()
-                                                                                                                                            .changeLocale("sk")
-                                                                                                                                        : selectedLanguage == 'Sinhala'
-                                                                                                                                            ? context
-                                                                                                                                                .read<LanguageChangeProvider>()
-                                                                                                                                                .changeLocale("si")
-                                                                                                                                            : selectedLanguage == 'Urdu'
-                                                                                                                                                ? context
-                                                                                                                                                    .read<LanguageChangeProvider>()
-                                                                                                                                                    .changeLocale("ur")
-                                                                                                                                                : selectedLanguage == 'Kannada'
-                                                                                                                                                    ? context
-                                                                                                                                                        .read<
-                                                                                                                                                            LanguageChangeProvider>()
-                                                                                                                                                        .changeLocale("kn")
-                                                                                                                                                    : selectedLanguage == 'Marathi'
-                                                                                                                                                        ? context
-                                                                                                                                                            .read<
-                                                                                                                                                                LanguageChangeProvider>()
-                                                                                                                                                            .changeLocale("mr")
-                                                                                                                                                        : selectedLanguage ==
-                                                                                                                                                                'Tamil'
-                                                                                                                                                            ? context
-                                                                                                                                                                .read<
-                                                                                                                                                                    LanguageChangeProvider>()
-                                                                                                                                                                .changeLocale("ta")
-                                                                                                                                                            : selectedLanguage ==
-                                                                                                                                                                    'Afrikans'
-                                                                                                                                                                ? context
-                                                                                                                                                                    .read<
-                                                                                                                                                                        LanguageChangeProvider>()
-                                                                                                                                                                    .changeLocale(
-                                                                                                                                                                        "af")
-                                                                                                                                                                : selectedLanguage ==
-                                                                                                                                                                        'Czech'
-                                                                                                                                                                    ? context
-                                                                                                                                                                        .read<
-                                                                                                                                                                            LanguageChangeProvider>()
-                                                                                                                                                                        .changeLocale(
-                                                                                                                                                                            "cs")
-                                                                                                                                                                    : selectedLanguage ==
-                                                                                                                                                                            'Swedish'
-                                                                                                                                                                        ? context.read<LanguageChangeProvider>().changeLocale("sv")
-                                                                                                                                                                        : selectedLanguage == 'Albanian'
-                                                                                                                                                                            ? context.read<LanguageChangeProvider>().changeLocale("sq")
-                                                                                                                                                                            : selectedLanguage == 'Danish'
-                                                                                                                                                                                ? context.read<LanguageChangeProvider>().changeLocale("da")
-                                                                                                                                                                                : selectedLanguage == 'Azerbaijani'
-                                                                                                                                                                                    ? context.read<LanguageChangeProvider>().changeLocale("az")
-                                                                                                                                                                                    : selectedLanguage == 'Kazakh'
-                                                                                                                                                                                        ? context.read<LanguageChangeProvider>().changeLocale("kk")
-                                                                                                                                                                                        : selectedLanguage == 'Crotian'
-                                                                                                                                                                                            ? context.read<LanguageChangeProvider>().changeLocale("hr")
-                                                                                                                                                                                            : selectedLanguage == 'Nepali'
-                                                                                                                                                                                                ? context.read<LanguageChangeProvider>().changeLocale("ne")
-                                                                                                                                                                                                : selectedLanguage == 'Burmese'
-                                                                                                                                                                                                    ? context.read<LanguageChangeProvider>().changeLocale("my")
-        :selectedLanguage == 'Fijian'?context.read<LanguageChangeProvider>().changeLocale("fj")
-                                                                                                                                                                                                    : context.read<LanguageChangeProvider>().changeLocale("en");
+    context.read<LanguageChangeProvider>().changeLocale(languageMap[selectedLanguage]!);
   }
 
   Future<void> nextPage() async {
@@ -271,37 +194,39 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
-        backgroundColor: kMainColor,
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const Spacer(),
-            Container(
-              height: 230,
-              width: 230,
-              decoration: const BoxDecoration(image: DecorationImage(image: AssetImage(splashLogo))),
-            ),
-            const Spacer(),
-            Column(
-              children: [
-                Center(
-                  child: Text(
-                    lang.S.of(context).powerdedByAcnoo,
-                    style: GoogleFonts.poppins(color: Colors.white, fontWeight: FontWeight.normal, fontSize: 20.0),
+      child: ProviderNetworkObserver(
+        child: Scaffold(
+          backgroundColor: kMainColor,
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const Spacer(),
+              Container(
+                height: 230,
+                width: 230,
+                decoration: const BoxDecoration(image: DecorationImage(image: AssetImage(splashLogo))),
+              ),
+              const Spacer(),
+              Column(
+                children: [
+                  Center(
+                    child: Text(
+                      'Powered By $companyName',
+                      style: GoogleFonts.poppins(color: Colors.white, fontWeight: FontWeight.normal, fontSize: 20.0),
+                    ),
                   ),
-                ),
-                Center(
-                  child: Text(
-                    'V $appVersion',
-                    style: GoogleFonts.poppins(color: Colors.white, fontWeight: FontWeight.normal, fontSize: 15.0),
+                  Center(
+                    child: Text(
+                      'V $appVersion',
+                      style: GoogleFonts.poppins(color: Colors.white, fontWeight: FontWeight.normal, fontSize: 15.0),
+                    ),
                   ),
-                ),
-                const SizedBox(height: 10),
-              ],
-            ),
-          ],
+                  const SizedBox(height: 10),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

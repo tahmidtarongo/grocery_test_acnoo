@@ -15,6 +15,7 @@ import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../constant.dart';
+import '../internet checker/Internet_check_provider/util/network_observer_provider.dart';
 import 'Repo/expanse_repo.dart';
 
 // ignore: must_be_immutable
@@ -35,38 +36,26 @@ class _AddExpenseState extends State<AddExpense> {
   TextEditingController expanseAmountController = TextEditingController();
   TextEditingController expanseNoteController = TextEditingController();
   TextEditingController expanseRefController = TextEditingController();
-  Map<String,dynamic> get paymentMethods =>
-      {
-        //lang.S.of(context).cancel,
-        "Cash" :  lang.S.current.cash,
-        "Bank" : lang.S.current.bank,
-        //'Bank',
-       "Card": lang.S.current.card,
-        //'Card',
-       "Mobile Payment": lang.S.current.mobilePayment,
-        //'Mobile Payment',
-        "Due":lang.S.current.due,
-        //'Due',
-      };
+  List<String> paymentMethods = [
+    //lang.S.of(context).cancel,
+    'Cash',
+    'Bank',
+    'Card',
+    'Mobile Payment',
+    'Due',
+  ];
 
-  late String selectedPaymentType = paymentMethods.entries.first.key;
+  String selectedPaymentType = 'Cash';
 
   DropdownButton<String> getPaymentMethods() {
-    List<DropdownMenuItem<String>> dropDownItems = [
-      ...paymentMethods.entries.map((e){
-        return DropdownMenuItem(
-          value: e.key,
-          child: Text(e.value),
-        );
-      })
-    ];
-    // for (String des in paymentMethods) {
-    //   var item = DropdownMenuItem(
-    //     value: des,
-    //     child: Text(des),
-    //   );
-    //   dropDownItems.add(item);
-    // }
+    List<DropdownMenuItem<String>> dropDownItems = [];
+    for (String des in paymentMethods) {
+      var item = DropdownMenuItem(
+        value: des,
+        child: Text(des),
+      );
+      dropDownItems.add(item);
+    }
     return DropdownButton(
       items: dropDownItems,
       value: selectedPaymentType,
@@ -107,226 +96,228 @@ class _AddExpenseState extends State<AddExpense> {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer(builder: (context, ref, __) {
-      return Scaffold(
-        backgroundColor: Colors.white,
-        appBar: AppBar(
+    return ProviderNetworkObserver(
+      child: Consumer(builder: (context, ref, __) {
+        return Scaffold(
           backgroundColor: Colors.white,
-          title: Text(
-            lang.S.of(context).addExpense,
-            style: GoogleFonts.poppins(
-              color: Colors.black,
+          appBar: AppBar(
+            backgroundColor: Colors.white,
+            title: Text(
+              lang.S.of(context).addExpense,
+              style: GoogleFonts.poppins(
+                color: Colors.black,
+              ),
             ),
+            centerTitle: true,
+            iconTheme: const IconThemeData(color: Colors.black),
+            elevation: 0.0,
           ),
-          centerTitle: true,
-          iconTheme: const IconThemeData(color: Colors.black),
-          elevation: 0.0,
-        ),
-        body: SingleChildScrollView(
-          child: SizedBox(
-            width: context.width(),
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Form(
-                  key: formKey,
-                  child: Column(
-                    children: [
-                      ///_______date________________________________
-                      FormField(
-                        builder: (FormFieldState<dynamic> field) {
-                          return InputDecorator(
-                            decoration: kInputDecoration.copyWith(
-                              suffixIcon: const Icon(IconlyLight.calendar, color: kGreyTextColor),
-                              // enabledBorder: const OutlineInputBorder(),
-                              contentPadding: const EdgeInsets.all(20),
-                              labelText: lang.S.of(context).expenseDate,
-                              hintText: lang.S.of(context).enterExpenseDate,
-                            ),
-                            child: Text(
-                              '${DateFormat.d().format(selectedDate)} ${DateFormat.MMM().format(selectedDate)} ${DateFormat.y().format(selectedDate)}',
-                            ),
-                          );
-                        },
-                      ).onTap(() => _selectDate(context)),
-                      const SizedBox(height: 20),
-
-                      ///_________category_______________________________________________
-                      Container(
-                        height: 60.0,
-                        width: MediaQuery.of(context).size.width,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5.0),
-                          border: Border.all(color: kGreyTextColor),
-                        ),
-                        child: GestureDetector(
-                          onTap: () async {
-                            selectedCategory = await const ExpenseCategoryList().launch(context);
-                            setState(() {});
-                          },
-                          child: Row(
-                            children: [
-                              const SizedBox(width: 10.0),
-                              Text(selectedCategory?.categoryName ?? lang.S.of(context).selectACategory),
-                              const Spacer(),
-                              const Icon(Icons.keyboard_arrow_down),
-                              const SizedBox(
-                                width: 10.0,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-
-                      ///________Expense_for_______________________________________________
-                      TextFormField(
-                        showCursor: true,
-                        controller: expanseForNameController,
-                        validator: (value) {
-                          if (value.isEmptyOrNull) {
-                            //return 'Please Enter Name';
-                            return lang.S.of(context).pleaseEnterName;
-                          }
-                          return null;
-                        },
-                        onSaved: (value) {
-                          expanseForNameController.text = value!;
-                        },
-                        decoration: kInputDecoration.copyWith(
-                          floatingLabelBehavior: FloatingLabelBehavior.always,
-                          // border: const OutlineInputBorder(),
-                          labelText: lang.S.of(context).expenseFor,
-                          hintText: lang.S.of(context).enterName,
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-
-                      ///________PaymentType__________________________________
-                      FormField(
-                        builder: (FormFieldState<dynamic> field) {
-                          return InputDecorator(
-                            decoration: kInputDecoration.copyWith(
+          body: SingleChildScrollView(
+            child: SizedBox(
+              width: context.width(),
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Form(
+                    key: formKey,
+                    child: Column(
+                      children: [
+                        ///_______date________________________________
+                        FormField(
+                          builder: (FormFieldState<dynamic> field) {
+                            return InputDecorator(
+                              decoration: kInputDecoration.copyWith(
+                                suffixIcon: const Icon(IconlyLight.calendar, color: kGreyTextColor),
                                 // enabledBorder: const OutlineInputBorder(),
-                                contentPadding: const EdgeInsets.all(8.0),
-                                floatingLabelBehavior: FloatingLabelBehavior.always,
-                                labelText: lang.S.of(context).paymentTypes),
-                            child: DropdownButtonHideUnderline(
-                              child: getPaymentMethods(),
-                            ),
-                          );
-                        },
-                      ),
-                      const SizedBox(height: 20),
+                                contentPadding: const EdgeInsets.all(20),
+                                labelText: lang.S.of(context).expenseDate,
+                                hintText: lang.S.of(context).enterExpenseDate,
+                              ),
+                              child: Text(
+                                '${DateFormat.d().format(selectedDate)} ${DateFormat.MMM().format(selectedDate)} ${DateFormat.y().format(selectedDate)}',
+                              ),
+                            );
+                          },
+                        ).onTap(() => _selectDate(context)),
+                        const SizedBox(height: 20),
 
-                      ///_________________Amount_____________________________
-                      TextFormField(
-                        showCursor: true,
-                        controller: expanseAmountController,
-                        inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
-                        validator: (value) {
-                          if (value.isEmptyOrNull) {
-                            //return 'Please Enter Amount';
-                            return lang.S.of(context).pleaseEnterAmount;
-                          }
-                          return null;
-                        },
-                        onSaved: (value) {
-                          expanseAmountController.text = value!;
-                        },
-                        decoration: kInputDecoration.copyWith(
-                          border: const OutlineInputBorder(),
-                          errorBorder: const OutlineInputBorder(
-                            borderSide: BorderSide(color: Colors.red),
+                        ///_________category_______________________________________________
+                        Container(
+                          height: 60.0,
+                          width: MediaQuery.of(context).size.width,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5.0),
+                            border: Border.all(color: kGreyTextColor),
                           ),
-                          labelText: lang.S.of(context).amount,
-                          floatingLabelBehavior: FloatingLabelBehavior.always,
-                          hintText: lang.S.of(context).enterAmount,
+                          child: GestureDetector(
+                            onTap: () async {
+                              selectedCategory = await const ExpenseCategoryList().launch(context);
+                              setState(() {});
+                            },
+                            child: Row(
+                              children: [
+                                const SizedBox(width: 10.0),
+                                Text(selectedCategory?.categoryName ?? 'Select a category'),
+                                const Spacer(),
+                                const Icon(Icons.keyboard_arrow_down),
+                                const SizedBox(
+                                  width: 10.0,
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
-                        keyboardType: TextInputType.number,
-                      ),
+                        const SizedBox(height: 20),
 
-                      const SizedBox(height: 20),
-
-                      ///_______reference_________________________________
-                      TextFormField(
-                        showCursor: true,
-                        controller: expanseRefController,
-                        validator: (value) {
-                          return null;
-                        },
-                        onSaved: (value) {
-                          expanseRefController.text = value!;
-                        },
-                        decoration: kInputDecoration.copyWith(
-                          border: const OutlineInputBorder(),
-                          labelText: lang.S.of(context).referenceNo,
-                          floatingLabelBehavior: FloatingLabelBehavior.always,
-                          hintText: lang.S.of(context).enterRefNumber,
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-
-                      ///_________note____________________________________________________
-                      TextFormField(
-                        showCursor: true,
-                        controller: expanseNoteController,
-                        validator: (value) {
-                          if (value == null) {
-                            //return 'please Inter Amount';
-                            return lang.S.of(context).pleaseEnterAmount;
-                          }
-                          return null;
-                        },
-                        onSaved: (value) {
-                          expanseNoteController.text = value!;
-                        },
-                        decoration: kInputDecoration.copyWith(
-                          border: const OutlineInputBorder(),
-                          labelText: lang.S.of(context).note,
-                          //hintText: 'Enter Note',
-                          hintText: lang.S.of(context).enterNote,
-                        ),
-                      ),
-                      const SizedBox(height: 20),
-
-                      ///_______button_________________________________
-                      ButtonGlobal(
-                        buttontext: lang.S.of(context).continueButton,
-                        buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
-                        onPressed: () async {
-                          if (validateAndSave()) {
-                            if (selectedCategory != null) {
-                              EasyLoading.show();
-                              ExpenseRepo repo = ExpenseRepo();
-
-                              await repo.createExpense(
-                                ref: ref,
-                                context: context,
-                                amount: num.tryParse(expanseAmountController.text) ?? 0,
-                                expenseCategoryId: selectedCategory?.id ?? 0,
-                                expanseFor: expanseForNameController.text,
-                                paymentType: selectedPaymentType,
-                                referenceNo: expanseRefController.text,
-                                expenseDate: selectedDate.toString(),
-                                note: expanseNoteController.text,
-                              );
-                            } else {
-                              EasyLoading.showError(
-                                lang.S.of(context).pleaseSelectAExpenseCategory,
-                                //'Please select a expense category'
-                              );
+                        ///________Expense_for_______________________________________________
+                        TextFormField(
+                          showCursor: true,
+                          controller: expanseForNameController,
+                          validator: (value) {
+                            if (value.isEmptyOrNull) {
+                              //return 'Please Enter Name';
+                              return lang.S.of(context).pleaseEnterName;
                             }
-                          }
-                        },
-                        iconWidget: Icons.arrow_forward,
-                        iconColor: Colors.white,
-                      ),
-                    ],
-                  )),
+                            return null;
+                          },
+                          onSaved: (value) {
+                            expanseForNameController.text = value!;
+                          },
+                          decoration: kInputDecoration.copyWith(
+                            floatingLabelBehavior: FloatingLabelBehavior.always,
+                            // border: const OutlineInputBorder(),
+                            labelText: lang.S.of(context).expenseFor,
+                            hintText: lang.S.of(context).enterName,
+                          ),
+                        ),
+                        const SizedBox(height: 20),
+
+                        ///________PaymentType__________________________________
+                        FormField(
+                          builder: (FormFieldState<dynamic> field) {
+                            return InputDecorator(
+                              decoration: kInputDecoration.copyWith(
+                                  // enabledBorder: const OutlineInputBorder(),
+                                  contentPadding: const EdgeInsets.all(8.0),
+                                  floatingLabelBehavior: FloatingLabelBehavior.always,
+                                  labelText: lang.S.of(context).paymentTypes),
+                              child: DropdownButtonHideUnderline(
+                                child: getPaymentMethods(),
+                              ),
+                            );
+                          },
+                        ),
+                        const SizedBox(height: 20),
+
+                        ///_________________Amount_____________________________
+                        TextFormField(
+                          showCursor: true,
+                          controller: expanseAmountController,
+                          inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
+                          validator: (value) {
+                            if (value.isEmptyOrNull) {
+                              //return 'Please Enter Amount';
+                              return lang.S.of(context).pleaseEnterAmount;
+                            }
+                            return null;
+                          },
+                          onSaved: (value) {
+                            expanseAmountController.text = value!;
+                          },
+                          decoration: kInputDecoration.copyWith(
+                            border: const OutlineInputBorder(),
+                            errorBorder: const OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.red),
+                            ),
+                            labelText: lang.S.of(context).amount,
+                            floatingLabelBehavior: FloatingLabelBehavior.always,
+                            hintText: lang.S.of(context).enterAmount,
+                          ),
+                          keyboardType: TextInputType.number,
+                        ),
+
+                        const SizedBox(height: 20),
+
+                        ///_______reference_________________________________
+                        TextFormField(
+                          showCursor: true,
+                          controller: expanseRefController,
+                          validator: (value) {
+                            return null;
+                          },
+                          onSaved: (value) {
+                            expanseRefController.text = value!;
+                          },
+                          decoration: kInputDecoration.copyWith(
+                            border: const OutlineInputBorder(),
+                            labelText: lang.S.of(context).referenceNo,
+                            floatingLabelBehavior: FloatingLabelBehavior.always,
+                            hintText: lang.S.of(context).enterRefNumber,
+                          ),
+                        ),
+                        const SizedBox(height: 20),
+
+                        ///_________note____________________________________________________
+                        TextFormField(
+                          showCursor: true,
+                          controller: expanseNoteController,
+                          validator: (value) {
+                            if (value == null) {
+                              //return 'please Inter Amount';
+                              return lang.S.of(context).pleaseEnterAmount;
+                            }
+                            return null;
+                          },
+                          onSaved: (value) {
+                            expanseNoteController.text = value!;
+                          },
+                          decoration: kInputDecoration.copyWith(
+                            border: const OutlineInputBorder(),
+                            labelText: lang.S.of(context).note,
+                            //hintText: 'Enter Note',
+                            hintText: lang.S.of(context).enterNote,
+                          ),
+                        ),
+                        const SizedBox(height: 20),
+
+                        ///_______button_________________________________
+                        ButtonGlobal(
+                          buttontext: lang.S.of(context).continueButton,
+                          buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
+                          onPressed: () async {
+                            if (validateAndSave()) {
+                              if (selectedCategory != null) {
+                                EasyLoading.show();
+                                ExpenseRepo repo = ExpenseRepo();
+
+                                await repo.createExpense(
+                                  ref: ref,
+                                  context: context,
+                                  amount: num.tryParse(expanseAmountController.text) ?? 0,
+                                  expenseCategoryId: selectedCategory?.id ?? 0,
+                                  expanseFor: expanseForNameController.text,
+                                  paymentType: selectedPaymentType,
+                                  referenceNo: expanseRefController.text,
+                                  expenseDate: selectedDate.toString(),
+                                  note: expanseNoteController.text,
+                                );
+                              } else {
+                                EasyLoading.showError(
+                                  lang.S.of(context).pleaseSelectAExpenseCategory,
+                                  //'Please select a expense category'
+                                );
+                              }
+                            }
+                          },
+                          iconWidget: Icons.arrow_forward,
+                          iconColor: Colors.white,
+                        ),
+                      ],
+                    )),
+              ),
             ),
           ),
-        ),
-      );
-    });
+        );
+      }),
+    );
   }
 }

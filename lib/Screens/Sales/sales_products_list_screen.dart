@@ -63,181 +63,95 @@ class _SaleProductsListState extends State<SaleProductsList> {
           centerTitle: true,
           backgroundColor: Colors.white,
           elevation: 0.0,
-          // actions: [
-          //   PopupMenuButton(
-          //     itemBuilder: (BuildContext bc) => [
-          //       const PopupMenuItem(value: "/addPromoCode", child: Text('Add Promo Code')),
-          //       const PopupMenuItem(value: "clear", child: Text('Cancel All Product')),
-          //       const PopupMenuItem(value: "/settings", child: Text('Vat Doesn\'t Apply')),
-          //     ],
-          //     onSelected: (value) {
-          //       value == 'clear'
-          //           ? {
-          //               providerData.clearCart(),
-          //               providerData.clearDiscount(),
-          //               const HomeScreen().launch(context, isNewTask: true)
-          //             }
-          //           : Navigator.pushNamed(context, '$value');
-          //     },
-          //   ),
-          // ],
         ),
         body: Padding(
           padding: const EdgeInsets.all(20.0),
           child: SingleChildScrollView(
             child: Column(
               children: [
-                // Container(
-                //   height: 60.0,
-                //   width: MediaQuery.of(context).size.width,
-                //   decoration: BoxDecoration(
-                //     color: kMainColor,
-                //     borderRadius: BorderRadius.circular(10.0),
-                //   ),
-                //   child: GestureDetector(
-                //     onTap: () {
-                //       // ignore: missing_required_param
-                //       providerData.getTotalAmount() <= 0
-                //           ? EasyLoading.showError('Cart Is Empty')
-                //           : SalesDetails(
-                //               customerName: widget.customerModel!.customerName,
-                //             ).launch(context);
-                //     },
-                //     child: Row(
-                //       children: [
-                //         Expanded(
-                //           flex: 1,
-                //           child: Stack(
-                //             alignment: Alignment.center,
-                //             children: [
-                //               const Image(
-                //                 image: AssetImage('images/selected.png'),
-                //               ),
-                //               Text(
-                //                 items.toString(),
-                //                 style: GoogleFonts.poppins(
-                //                   fontSize: 15.0,
-                //                   color: Colors.white,
-                //                 ),
-                //               ),
-                //             ],
-                //           ),
-                //         ),
-                //         Expanded(
-                //           flex: 2,
-                //           child: Center(
-                //             child: Text(
-                //               providerData.getTotalAmount() <= 0
-                //                   ? 'Cart is empty'
-                //                   : 'Total: $currency${providerData.getTotalAmount().toString()}',
-                //               style: GoogleFonts.poppins(
-                //                 color: Colors.white,
-                //                 fontSize: 16.0,
-                //               ),
-                //             ),
-                //           ),
-                //         ),
-                //         const Expanded(
-                //           flex: 1,
-                //           child: Icon(
-                //             Icons.arrow_forward,
-                //             color: Colors.white,
-                //           ),
-                //         ),
-                //       ],
-                //     ),
-                //   ),
-                // ),
-                // const SizedBox(height: 20.0),
                 Row(
                   children: [
                     Expanded(
                       flex: 3,
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: AppTextField(
-                          controller: codeController,
-                          textFieldType: TextFieldType.NAME,
-                          onChanged: (value) {
-                            setState(() {
-                              productCode = value;
-                            });
-                          },
-                          decoration: InputDecoration(
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
-                            labelText: lang.S.of(context).productCode,
-                            hintText: productCode == '0000' || productCode == '-1' ? lang.S.of(context).scanProductQRCode : productCode,
-                            border: const OutlineInputBorder(),
-                          ),
+                      child: AppTextField(
+                        controller: codeController,
+                        textFieldType: TextFieldType.NAME,
+                        onChanged: (value) {
+                          setState(() {
+                            productCode = value;
+                          });
+                        },
+                        decoration: InputDecoration(
+                          floatingLabelBehavior: FloatingLabelBehavior.always,
+                          labelText: lang.S.of(context).productCode,
+                          hintText: productCode == '0000' || productCode == '-1' ? 'Scan product QR code' : productCode,
+                          border: const OutlineInputBorder(),
                         ),
                       ),
                     ),
                     Expanded(
                       flex: 1,
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: GestureDetector(
-                          onTap: () async {
-                            await showDialog(
-                              context: context,
-                              useSafeArea: true,
-                              builder: (context1) {
-                                MobileScannerController controller = MobileScannerController(
-                                  torchEnabled: false,
-                                  returnImage: false,
-                                );
-                                return Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadiusDirectional.circular(6.0),
-                                  ),
-                                  child: Column(
-                                    children: [
-                                      AppBar(
-                                        backgroundColor: Colors.transparent,
-                                        iconTheme: const IconThemeData(color: Colors.white),
-                                        leading: IconButton(
-                                          icon: const Icon(Icons.arrow_back),
-                                          onPressed: () {
-                                            Navigator.pop(context1);
-                                          },
-                                        ),
+                      child: GestureDetector(
+                        onTap: () async {
+                          await showDialog(
+                            context: context,
+                            useSafeArea: true,
+                            builder: (context1) {
+                              MobileScannerController controller = MobileScannerController(
+                                torchEnabled: false,
+                                returnImage: false,
+                              );
+                              return Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadiusDirectional.circular(6.0),
+                                ),
+                                child: Column(
+                                  children: [
+                                    AppBar(
+                                      backgroundColor: Colors.transparent,
+                                      iconTheme: const IconThemeData(color: Colors.white),
+                                      leading: IconButton(
+                                        icon: const Icon(Icons.arrow_back),
+                                        onPressed: () {
+                                          Navigator.pop(context1);
+                                        },
                                       ),
-                                      Expanded(
-                                        child: MobileScanner(
-                                          fit: BoxFit.contain,
-                                          controller: controller,
-                                          onDetect: (capture) {
-                                            final List<Barcode> barcodes = capture.barcodes;
+                                    ),
+                                    Expanded(
+                                      child: MobileScanner(
+                                        fit: BoxFit.contain,
+                                        controller: controller,
+                                        onDetect: (capture) {
+                                          final List<Barcode> barcodes = capture.barcodes;
 
-                                            if (barcodes.isNotEmpty) {
-                                              final Barcode barcode = barcodes.first;
-                                              debugPrint('${lang.S.of(context).barcodeFound}! ${barcode.rawValue}');
-                                              setState(() {
-                                                productCode = barcode.rawValue!;
-                                                codeController.text = productCode;
-                                              });
-                                              Navigator.pop(context1);
-                                            }
-                                          },
-                                        ),
+                                          if (barcodes.isNotEmpty) {
+                                            final Barcode barcode = barcodes.first;
+                                            debugPrint('Barcode found! ${barcode.rawValue}');
+                                            setState(() {
+                                              productCode = barcode.rawValue!;
+                                              codeController.text = productCode;
+                                            });
+                                            Navigator.pop(context1);
+                                          }
+                                        },
                                       ),
-                                    ],
-                                  ),
-                                );
-                              },
-                            );
-                          },
-                          child: Container(
-                            height: 60.0,
-                            width: 100.0,
-                            padding: const EdgeInsets.all(5.0),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8.0),
-                              border: Border.all(color: kGreyTextColor),
-                            ),
-                            child: const Image(
-                              image: AssetImage('images/barcode.png'),
-                            ),
+                                    ),
+                                  ],
+                                ),
+                              );
+                            },
+                          );
+                        },
+                        child: Container(
+                          height: 60.0,
+                          width: 100.0,
+                          padding: const EdgeInsets.all(5.0),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8.0),
+                            border: Border.all(color: kGreyTextColor),
+                          ),
+                          child: const Image(
+                            image: AssetImage('images/barcode.png'),
                           ),
                         ),
                       ),
@@ -269,7 +183,7 @@ class _SaleProductsListState extends State<SaleProductsList> {
                         return GestureDetector(
                           onTap: () async {
                             if ((products[i].productStock ?? 0) <= 0) {
-                              EasyLoading.showError(lang.S.of(context).outOfStock);
+                              EasyLoading.showError('Out of stock');
                             } else {
                               if (widget.customerModel == null) {
                                 sentProductPrice = products[i].productSalePrice.toString();
@@ -369,16 +283,14 @@ class _ProductCardState extends State<ProductCard> {
             Padding(
               padding: const EdgeInsets.all(4.0),
               child: Container(
-                height: 50,
-                width: 50,
+                height: 60,
+                width: 60,
                 decoration: widget.productImage == null
                     ? BoxDecoration(
                         image: DecorationImage(image: AssetImage(noProductImageUrl), fit: BoxFit.cover),
-                        borderRadius: BorderRadius.circular(90.0),
                       )
                     : BoxDecoration(
                         image: DecorationImage(image: NetworkImage("${APIConfig.domain}${widget.productImage}"), fit: BoxFit.cover),
-                        borderRadius: BorderRadius.circular(90.0),
                       ),
               ),
             ),
@@ -406,14 +318,6 @@ class _ProductCardState extends State<ProductCard> {
                           color: Colors.black,
                         ),
                       ),
-                      // const SizedBox(width: 5),
-                      // Text(
-                      //   ' X $quantity',
-                      //   style: GoogleFonts.jost(
-                      //     fontSize: 14.0,
-                      //     color: Colors.grey.shade500,
-                      //   ),
-                      // ).visible(quantity != 0),
                     ],
                   ),
                   Text(

@@ -46,8 +46,7 @@ dependencies:
   currency_picker: ^2.0.16
   path_provider: ^2.0.14
   provider: ^6.0.5
-  http:
-  internet_connection_checker_plus: ^2.5.2
+  http: ^1.2.2
   flutter_pdfview: ^1.3.1
   iconly: ^1.0.1
   intl_utils: ^2.5.0

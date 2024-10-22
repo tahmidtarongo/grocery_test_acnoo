@@ -49,7 +49,6 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
     super.initState();
   }
 
-
   num giveStock({required num id}) {
     for (var element in widget.purchaseTransaction.details!) {
       if (element.productId == id) {
@@ -66,6 +65,7 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
       final productList = ref.watch(productProvider(null));
 
       return Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
           title: Text(
             lang.S.of(context).salesDetails,
@@ -80,13 +80,10 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
           elevation: 0.0,
         ),
         body: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.only(left: 20.0,right: 20,bottom: 20),
           child: SingleChildScrollView(
             child: Column(
               children: [
-                const SizedBox(
-                  height: 20.0,
-                ),
                 Row(
                   children: [
                     Expanded(
@@ -115,7 +112,7 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: GestureDetector(
-                          onTap: ()async {
+                          onTap: () async {
                             await showDialog(
                               context: context,
                               useSafeArea: true,
@@ -405,7 +402,7 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
                                               } else {
                                                 EasyLoading.showError(
                                                   lang.S.of(context).pleaseAddQuantity,
-                                                    //'Please add quantity'
+                                                  //'Please add quantity'
                                                 );
                                               }
                                             },
@@ -426,31 +423,6 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
                                     ),
                                   ));
                                 });
-                            // if (products[i].productStock.toInt() <= 0) {
-                            //   EasyLoading.showError('Out of stock');
-                            // } else {
-                            //   if (widget.customerModel!.type.contains('Retailer')) {
-                            //     sentProductPrice = products[i].productSalePrice;
-                            //   } else if (widget.customerModel!.type.contains('Dealer')) {
-                            //     sentProductPrice = products[i].productDealerPrice;
-                            //   } else if (widget.customerModel!.type.contains('Wholesaler')) {
-                            //     sentProductPrice = products[i].productWholeSalePrice;
-                            //   } else if (widget.customerModel!.type.contains('Supplier')) {
-                            //     sentProductPrice = products[i].productPurchasePrice;
-                            //   }
-                            //
-                            //   AddToCartModel cartItem = AddToCartModel(
-                            //     productName: products[i].productName,
-                            //     subTotal: sentProductPrice,
-                            //     productId: products[i].productCode,
-                            //     productBrandName: products[i].brandName,
-                            //     stock: int.parse(products[i].productStock),
-                            //   );
-                            //   providerData.addToCartRiverPod(cartItem);
-                            //
-                            //   EasyLoading.showSuccess('Added To Cart');
-                            //   Navigator.pop(context);
-                            // }
                           },
                           child: ProductCard(
                             productTitle: products[i].productName.toString(),
@@ -506,16 +478,14 @@ class _ProductCardState extends State<ProductCard> {
             Padding(
               padding: const EdgeInsets.all(4.0),
               child: Container(
-                height: 50,
-                width: 50,
+                height: 60,
+                width: 60,
                 decoration: widget.productImage == null
                     ? BoxDecoration(
                         image: DecorationImage(image: AssetImage(noProductImageUrl), fit: BoxFit.cover),
-                        borderRadius: BorderRadius.circular(90.0),
                       )
                     : BoxDecoration(
                         image: DecorationImage(image: NetworkImage("${APIConfig.domain}${widget.productImage}"), fit: BoxFit.cover),
-                        borderRadius: BorderRadius.circular(90.0),
                       ),
               ),
             ),

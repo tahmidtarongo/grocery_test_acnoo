@@ -36,6 +36,9 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
     transitionModel = widget.transitionModel;
     paidAmount = (widget.transitionModel.paidAmount ?? 0);
     discountAmount = widget.transitionModel.discountAmount!;
+    discountAmountEditingController.text = widget.transitionModel.discountAmount.toString();
+    discountPercentageEditingController.text =
+        ((discountAmount * 100) / (widget.transitionModel.totalAmount ?? 0 + (widget.transitionModel.discountAmount ?? 0))).toStringAsFixed(2);
     paymentType = widget.transitionModel.paymentType;
     discountText.text = discountAmount.toString();
     paidText.text = paidAmount.toString();
@@ -91,6 +94,9 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
   TextEditingController vatPercentageEditingController = TextEditingController();
   TextEditingController vatAmountEditingController = TextEditingController();
 
+  TextEditingController discountPercentageEditingController = TextEditingController();
+  TextEditingController discountAmountEditingController = TextEditingController();
+
   num vatAmount = 0;
 
   late SalesTransaction transitionModel = SalesTransaction(
@@ -106,7 +112,7 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, consumerRef, __) {
-      final providerData = consumerRef.watch(cartNotifier);
+      final providerData = consumerRef.watch(salesEditCartProvider);
       final personalData = consumerRef.watch(businessInfoProvider);
       final productList = consumerRef.watch(productProvider(null));
 
@@ -154,6 +160,7 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
       return personalData.when(data: (data) {
         // invoice = data.invoiceCounter!.toInt();
         return Scaffold(
+          backgroundColor: Colors.white,
           appBar: AppBar(
             backgroundColor: Colors.white,
             title: Text(
@@ -223,15 +230,15 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                   Container(
                     decoration: BoxDecoration(
                       borderRadius: const BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
-                      border: Border.all(width: 1, color: const Color(0xffEAEFFA)),
+                      border: Border.all(width: 1, color: kMainColor.withOpacity(0.1)),
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
                             width: double.infinity,
-                            decoration: const BoxDecoration(
-                              color: Color(0xffEAEFFA),
+                            decoration: BoxDecoration(
+                              color: kMainColor.withOpacity(0.1),
                               borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
                             ),
                             child: Padding(
@@ -295,6 +302,10 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                                             GestureDetector(
                                               onTap: () {
                                                 providerData.quantityDecrease(index);
+                                                setState(() {
+                                                  vatPercentageEditingController.text = ((vatAmount * 100) / providerData.getTotalAmount()).toStringAsFixed(2);
+                                                  discountPercentageEditingController.text = ((discountAmount * 100) / providerData.getTotalAmount()).toStringAsFixed(2);
+                                                });
                                               },
                                               child: Container(
                                                 height: 20,
@@ -323,6 +334,10 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                                             GestureDetector(
                                               onTap: () {
                                                 providerData.quantityIncrease(index);
+                                                setState(() {
+                                                  vatPercentageEditingController.text = ((vatAmount * 100) / providerData.getTotalAmount()).toStringAsFixed(2);
+                                                  discountPercentageEditingController.text = ((discountAmount * 100) / providerData.getTotalAmount()).toStringAsFixed(2);
+                                                });
                                               },
                                               child: Container(
                                                 height: 20,
@@ -355,6 +370,10 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                                           }
 
                                           providerData.deleteToCart(index);
+                                          setState(() {
+                                            vatPercentageEditingController.text = ((vatAmount * 100) / providerData.getTotalAmount()).toStringAsFixed(2);
+                                            discountPercentageEditingController.text = ((discountAmount * 100) / providerData.getTotalAmount()).toStringAsFixed(2);
+                                          });
                                         },
                                         child: Container(
                                           padding: const EdgeInsets.all(4),
@@ -378,11 +397,15 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
 
                   ///_______Add_Button__________________________________________________
                   GestureDetector(
-                    onTap: () {
-                      EditSaleInvoiceSaleProducts(
+                    onTap: () async {
+                      await EditSaleInvoiceSaleProducts(
                         catName: null,
                         salesInfo: widget.transitionModel,
                       ).launch(context);
+                      setState(() {
+                        vatPercentageEditingController.text = ((vatAmount * 100) / providerData.getTotalAmount()).toStringAsFixed(2);
+                        discountPercentageEditingController.text = ((discountAmount * 100) / providerData.getTotalAmount()).toStringAsFixed(2);
+                      });
                     },
                     child: Container(
                       height: 50,
@@ -404,7 +427,8 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                       children: [
                         Container(
                           padding: const EdgeInsets.all(10),
-                          decoration: const BoxDecoration(color: Color(0xffEAEFFA), borderRadius: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10))),
+                          decoration:
+                              BoxDecoration(color: kMainColor.withOpacity(0.1), borderRadius: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10))),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -426,8 +450,8 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                               Text(
-                                 lang.S.of(context).vat,
+                              Text(
+                                lang.S.of(context).vat,
                                 //'VAT',
                                 style: const TextStyle(fontSize: 16),
                               ),
@@ -530,9 +554,9 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                           ),
                         ),
 
-                        ///___Discount____________________________________________
+                        ///_______Discount__________________________________________
                         Padding(
-                          padding: const EdgeInsets.only(left: 10.0, right: 10, bottom: 10),
+                          padding: const EdgeInsets.all(10.0),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -540,42 +564,122 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                                 lang.S.of(context).discount,
                                 style: const TextStyle(fontSize: 16),
                               ),
-                              SizedBox(
-                                width: context.width() / 4,
-                                child: TextField(
-                                  controller: discountText,
-                                  onChanged: (value) {
-                                    if (value == '') {
-                                      setState(() {
-                                        discountAmount = 0;
-                                      });
-                                    } else {
-                                      if (value.toInt() <= providerData.getTotalAmount()) {
-                                        setState(() {
-                                          discountAmount = double.parse(value);
-                                        });
-                                      } else {
-                                        discountText.clear();
-                                        setState(() {
-                                          discountAmount = 0;
-                                        });
-                                        EasyLoading.showError(
-                                          lang.S.of(context).enterAValidDiscount,
-                                            //'Enter a valid Discount'
-                                        );
-                                      }
-                                    }
-                                  },
-                                  textAlign: TextAlign.right,
-                                  decoration: const InputDecoration(
-                                    hintText: '0',
+                              Row(
+                                children: [
+                                  SizedBox(
+                                    width: context.width() / 4,
+                                    height: 40.0,
+                                    child: Center(
+                                      child: AppTextField(
+                                        inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
+                                        controller: discountPercentageEditingController,
+                                        onChanged: (value) {
+                                          if (value == '') {
+                                            setState(() {
+                                              discountAmountEditingController.text = 0.toString();
+                                              discountAmount = 0;
+                                            });
+                                          } else {
+                                            if (value.toDouble() > 100) {
+                                              EasyLoading.showError(lang.S.of(context).enterAValidDiscount);
+                                              setState(() {
+                                                discountAmount = 0;
+                                                discountAmountEditingController.clear();
+                                                discountPercentageEditingController.clear();
+                                              });
+                                            } else {
+                                              setState(() {
+                                                discountAmount = (value.toDouble() / 100) * providerData.getTotalAmount().toDouble();
+                                                discountAmountEditingController.text = discountAmount.toStringAsFixed(2);
+                                              });
+                                            }
+                                          }
+                                        },
+                                        textAlign: TextAlign.right,
+                                        decoration: InputDecoration(
+                                          contentPadding: const EdgeInsets.only(right: 6.0),
+                                          hintText: '0',
+                                          border: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: Color(0xFFff5f00))),
+                                          enabledBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: Color(0xFFff5f00))),
+                                          disabledBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: Color(0xFFff5f00))),
+                                          focusedBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: Color(0xFFff5f00))),
+                                          prefixIconConstraints: const BoxConstraints(maxWidth: 30.0, minWidth: 30.0),
+                                          prefixIcon: Container(
+                                            padding: const EdgeInsets.only(top: 8.0, left: 8.0),
+                                            height: 40,
+                                            decoration: const BoxDecoration(
+                                                color: Color(0xFFff5f00), borderRadius: BorderRadius.only(topLeft: Radius.circular(4.0), bottomLeft: Radius.circular(4.0))),
+                                            child: const Text(
+                                              '%',
+                                              style: TextStyle(fontSize: 18.0, color: Colors.white),
+                                            ),
+                                          ),
+                                        ),
+                                        textFieldType: TextFieldType.PHONE,
+                                      ),
+                                    ),
                                   ),
-                                  keyboardType: TextInputType.number,
-                                ),
+                                  const SizedBox(width: 4.0),
+                                  SizedBox(
+                                    width: context.width() / 4,
+                                    height: 40.0,
+                                    child: Center(
+                                      child: AppTextField(
+                                        inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
+                                        controller: discountAmountEditingController,
+                                        onChanged: (value) {
+                                          if (value == '') {
+                                            setState(() {
+                                              discountAmount = 0;
+                                              discountPercentageEditingController.clear();
+                                            });
+                                          } else {
+                                            if (value.toDouble() > providerData.getTotalAmount()) {
+                                              EasyLoading.showError(lang.S.of(context).enterAValidDiscount);
+                                              setState(() {
+                                                discountAmount = 0;
+                                                discountAmountEditingController.clear();
+                                                discountPercentageEditingController.clear();
+                                              });
+                                            } else {
+                                              setState(() {
+                                                discountAmount = double.parse(value);
+                                                discountPercentageEditingController.text = ((discountAmount * 100) / providerData.getTotalAmount()).toStringAsFixed(2);
+                                              });
+                                            }
+                                          }
+                                        },
+                                        textAlign: TextAlign.right,
+                                        decoration: InputDecoration(
+                                          contentPadding: const EdgeInsets.only(right: 6.0),
+                                          hintText: '0',
+                                          border: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: kMainColor)),
+                                          enabledBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: kMainColor)),
+                                          disabledBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: kMainColor)),
+                                          focusedBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: kMainColor)),
+                                          prefixIconConstraints: const BoxConstraints(maxWidth: 30.0, minWidth: 30.0),
+                                          prefixIcon: Container(
+                                            alignment: Alignment.center,
+                                            height: 40,
+                                            decoration: const BoxDecoration(
+                                                color: kMainColor, borderRadius: BorderRadius.only(topLeft: Radius.circular(4.0), bottomLeft: Radius.circular(4.0))),
+                                            child: Text(
+                                              currency,
+                                              style: const TextStyle(fontSize: 14.0, color: Colors.white),
+                                            ),
+                                          ),
+                                        ),
+                                        textFieldType: TextFieldType.PHONE,
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
                         ),
+
+                        ///________Total__________________________________
                         Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: Row(
@@ -592,6 +696,8 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                             ],
                           ),
                         ),
+
+                        ///____________Previous paid Amount___________________________
                         Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: Row(
@@ -732,7 +838,7 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                           onChanged: (value) {
                             setState(() {});
                           },
-                          decoration:  InputDecoration(
+                          decoration: InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             //labelText: 'Description',
                             labelText: lang.S.of(context).description,
@@ -747,7 +853,7 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                         height: 60,
                         width: 100,
                         decoration: BoxDecoration(borderRadius: const BorderRadius.all(Radius.circular(10)), color: Colors.grey.shade200),
-                        child:  Center(
+                        child: Center(
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
@@ -794,10 +900,7 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                           onTap: () async {
                             if (providerData.cartItemList.isNotEmpty) {
                               try {
-                                EasyLoading.show(status:
-                                    lang.S.of(context).loading,
-                                //'Loading...',
-                                    dismissOnTap: false);
+                                EasyLoading.show(status: lang.S.of(context).loading, dismissOnTap: false);
                                 List<CartSaleProducts> selectedProductList = [];
 
                                 for (var element in providerData.cartItemList) {
@@ -834,10 +937,7 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.toString())));
                               }
                             } else {
-                              EasyLoading.showError(
-                                lang.S.of(context).addProductFirst
-                                  //'Add product first'
-                              );
+                              EasyLoading.showError(lang.S.of(context).addProductFirst);
                             }
                           },
                           child: Container(

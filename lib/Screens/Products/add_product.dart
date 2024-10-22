@@ -787,10 +787,14 @@ class _AddProductState extends State<AddProduct> {
                               discountPriceController.clear();
                               manufacturerController.clear();
                               wholeSalePriceController.clear();
+                              categoryController.clear();
+                              brandController.clear();
+                              productUnitController.clear();
                               selectedCategory = null;
                               selectedBrand = null;
                               selectedUnit = null;
                               pickedImage = null;
+                              promoCodeHint = 'Enter Product Code';
                             });
                           }
                       }

@@ -7,6 +7,7 @@ import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
 import '../../constant.dart';
+import '../internet checker/Internet_check_provider/util/network_observer_provider.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -19,61 +20,63 @@ class SignInScreen extends StatefulWidget {
 class _SignInScreenState extends State<SignInScreen> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: Colors.white,
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            const Image(
-              image: AssetImage('images/logoandname.png'),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Center(
-                child: Text(
-                  lang.S.of(context).createAcc,
-                  style: GoogleFonts.poppins(color: Colors.black, fontWeight: FontWeight.normal, fontSize: 20.0),
-                ),
+    return ProviderNetworkObserver(
+      child: SafeArea(
+        child: Scaffold(
+          backgroundColor: Colors.white,
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              const Image(
+                image: AssetImage('images/logoandname.png'),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Center(
-                child: ButtonGlobalWithoutIcon(
-                  buttontext: lang.S.of(context).logIn,
-                  buttonTextColor: Colors.white,
-                  buttonDecoration: kButtonDecoration.copyWith(
-                    color: kMainColor,
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Center(
+                  child: Text(
+                    lang.S.of(context).createAcc,
+                    style: GoogleFonts.poppins(color: Colors.black, fontWeight: FontWeight.normal, fontSize: 20.0),
                   ),
-                  onPressed: () {
-                    const LoginForm(
-                      isEmailLogin: true,
-                    ).launch(context);
-                    // Navigator.pushNamed(context, '/loginForm');
-                  },
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 10.0, right: 10.0),
-              child: Center(
-                child: ButtonGlobalWithoutIcon(
-                  buttontext: lang.S.of(context).register,
-                  buttonTextColor: Colors.white,
-                  buttonDecoration: kButtonDecoration.copyWith(
-                    color: const Color(0xFF19AAF8),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Center(
+                  child: ButtonGlobalWithoutIcon(
+                    buttontext: lang.S.of(context).logIn,
+                    buttonTextColor: Colors.white,
+                    buttonDecoration: kButtonDecoration.copyWith(
+                      color: kMainColor,
+                    ),
+                    onPressed: () {
+                      const LoginForm(
+                        isEmailLogin: true,
+                      ).launch(context);
+                      // Navigator.pushNamed(context, '/loginForm');
+                    },
                   ),
-                  onPressed: () {
-                    const PhoneAuth().launch(context);
-                    // const RegisterScreen().launch(context);
-                    // Navigator.pushNamed(context, '/signup');
-                  },
                 ),
               ),
-            ),
-          ],
+              Padding(
+                padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                child: Center(
+                  child: ButtonGlobalWithoutIcon(
+                    buttontext: lang.S.of(context).register,
+                    buttonTextColor: Colors.white,
+                    buttonDecoration: kButtonDecoration.copyWith(
+                      color: const Color(0xFF19AAF8),
+                    ),
+                    onPressed: () {
+                      const PhoneAuth().launch(context);
+                      // const RegisterScreen().launch(context);
+                      // Navigator.pushNamed(context, '/signup');
+                    },
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

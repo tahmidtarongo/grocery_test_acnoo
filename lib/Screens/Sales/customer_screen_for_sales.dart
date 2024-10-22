@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/Const/api_config.dart';
-import 'package:mobile_pos/Provider/add_to_cart.dart';
 import 'package:mobile_pos/Screens/Customers/add_customer.dart';
-import 'package:mobile_pos/Screens/Sales/add_sales.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
 
@@ -12,15 +10,15 @@ import '../../constant.dart';
 import '../../currency.dart';
 import '../Customers/Provider/customer_provider.dart';
 
-class SalesContact extends StatefulWidget {
-  const SalesContact({Key? key}) : super(key: key);
+class CustomerScreenSales extends StatefulWidget {
+  const CustomerScreenSales({Key? key}) : super(key: key);
 
   @override
   // ignore: library_private_types_in_public_api
-  _SalesContactState createState() => _SalesContactState();
+  _CustomerScreenSalesState createState() => _CustomerScreenSalesState();
 }
 
-class _SalesContactState extends State<SalesContact> {
+class _CustomerScreenSalesState extends State<CustomerScreenSales> {
   Color color = Colors.black26;
   String searchCustomer = '';
 
@@ -28,7 +26,6 @@ class _SalesContactState extends State<SalesContact> {
   Widget build(BuildContext context) {
     return Consumer(builder: (context, ref, __) {
       final providerData = ref.watch(partiesProvider);
-      final cart = ref.watch(cartNotifier);
       return Scaffold(
         backgroundColor: kWhite,
         resizeToAvoidBottomInset: true,
@@ -227,7 +224,7 @@ class _SalesContactState extends State<SalesContact> {
                     )
                   : GestureDetector(
                       onTap: () {
-                        Navigator.pop(context,null);
+                        Navigator.pop(context, null);
                       },
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),

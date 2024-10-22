@@ -17,6 +17,7 @@ import 'package:nb_utils/nb_utils.dart';
 
 import '../../Provider/add_to_cart.dart';
 import '../../Provider/add_to_cart_purchase.dart';
+import '../Purchase List/purchase_edit_invoice_add_productes.dart';
 
 // ignore: must_be_immutable
 class PurchaseProducts extends StatefulWidget {
@@ -47,7 +48,6 @@ class _PurchaseProductsState extends State<PurchaseProducts> {
     super.initState();
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, ref, __) {
@@ -69,13 +69,14 @@ class _PurchaseProductsState extends State<PurchaseProducts> {
           elevation: 0.0,
         ),
         body: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.only(
+            left: 20.0,
+            right: 20,
+            bottom: 20,
+          ),
           child: SingleChildScrollView(
             child: Column(
               children: [
-                const SizedBox(
-                  height: 20.0,
-                ),
                 Row(
                   children: [
                     Expanded(
@@ -105,7 +106,7 @@ class _PurchaseProductsState extends State<PurchaseProducts> {
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: GestureDetector(
-                          onTap: ()async {
+                          onTap: () async {
                             await showDialog(
                               context: context,
                               useSafeArea: true,
@@ -142,10 +143,10 @@ class _PurchaseProductsState extends State<PurchaseProducts> {
                                               //debugPrint('Barcode found! ${barcode.rawValue}');
                                               debugPrint('${lang.S.of(context).barcodeFound}! ${barcode.rawValue}');
 
-                                                setState(() {
-                                                  productCode = barcode.rawValue!;
-                                                  codeController.text = productCode;
-                                                });
+                                              setState(() {
+                                                productCode = barcode.rawValue!;
+                                                codeController.text = productCode;
+                                              });
 
                                               Navigator.pop(context1);
                                             }
@@ -307,7 +308,7 @@ class _PurchaseProductsState extends State<PurchaseProducts> {
                                                   decoration: InputDecoration(
                                                     floatingLabelBehavior: FloatingLabelBehavior.always,
                                                     labelText: lang.S.of(context).quantity,
-                                                   // hintText: 'Enter quantity',
+                                                    // hintText: 'Enter quantity',
                                                     hintText: lang.S.of(context).enterQuantity,
                                                     border: const OutlineInputBorder(),
                                                   ),
@@ -403,7 +404,7 @@ class _PurchaseProductsState extends State<PurchaseProducts> {
                                               } else {
                                                 EasyLoading.showError(
                                                   lang.S.of(context).pleaseAddQuantity,
-                                                   // 'Please add quantity'
+                                                  // 'Please add quantity'
                                                 );
                                               }
                                             },
@@ -447,101 +448,101 @@ class _PurchaseProductsState extends State<PurchaseProducts> {
     });
   }
 }
-
-// ignore: must_be_immutable
-class ProductCard extends StatefulWidget {
-  ProductCard({Key? key, required this.productTitle, required this.productDescription, required this.stock, required this.productImage}) : super(key: key);
-
-  // final Product product;
-  String productTitle, productDescription, stock;
-  String? productImage;
-
-  @override
-  State<ProductCard> createState() => _ProductCardState();
-}
-
-class _ProductCardState extends State<ProductCard> {
-  num quantity = 0;
-
-  @override
-  Widget build(BuildContext context) {
-    return Consumer(builder: (context, ref, __) {
-      final providerData = ref.watch(cartNotifier);
-      for (var element in providerData.cartItemList) {
-        if (element.productName == widget.productTitle) {
-          quantity = element.quantity;
-        }
-      }
-      return Padding(
-        padding: const EdgeInsets.all(5.0),
-        child: Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(4.0),
-              child: Container(
-                height: 50,
-                width: 50,
-                decoration: widget.productImage == null
-                    ? BoxDecoration(
-                        image: DecorationImage(image: AssetImage(noProductImageUrl), fit: BoxFit.cover),
-                        borderRadius: BorderRadius.circular(90.0),
-                      )
-                    : BoxDecoration(
-                        image: DecorationImage(image: NetworkImage("${APIConfig.domain}${widget.productImage}"), fit: BoxFit.cover),
-                        borderRadius: BorderRadius.circular(90.0),
-                      ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 10.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Row(
-                    children: [
-                      Text(
-                        widget.productTitle,
-                        style: GoogleFonts.jost(
-                          fontSize: 20.0,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Text(
-                    widget.productDescription,
-                    style: GoogleFonts.jost(
-                      fontSize: 15.0,
-                      color: kGreyTextColor,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const Spacer(),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Text(
-                  lang.S.of(context).stock,
-                  style: GoogleFonts.jost(
-                    fontSize: 18.0,
-                    color: Colors.black,
-                  ),
-                ),
-                Text(
-                  widget.stock,
-                  style: GoogleFonts.jost(
-                    fontSize: 16.0,
-                    color: Colors.grey,
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      );
-    });
-  }
-}
+//
+// // ignore: must_be_immutable
+// class ProductCard extends StatefulWidget {
+//   ProductCard({Key? key, required this.productTitle, required this.productDescription, required this.stock, required this.productImage}) : super(key: key);
+//
+//   // final Product product;
+//   String productTitle, productDescription, stock;
+//   String? productImage;
+//
+//   @override
+//   State<ProductCard> createState() => _ProductCardState();
+// }
+//
+// class _ProductCardState extends State<ProductCard> {
+//   num quantity = 0;
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Consumer(builder: (context, ref, __) {
+//       final providerData = ref.watch(cartNotifier);
+//       for (var element in providerData.cartItemList) {
+//         if (element.productName == widget.productTitle) {
+//           quantity = element.quantity;
+//         }
+//       }
+//       return Padding(
+//         padding: const EdgeInsets.all(5.0),
+//         child: Row(
+//           children: [
+//             Padding(
+//               padding: const EdgeInsets.all(4.0),
+//               child: Container(
+//                 height: 50,
+//                 width: 50,
+//                 decoration: widget.productImage == null
+//                     ? BoxDecoration(
+//                         image: DecorationImage(image: AssetImage(noProductImageUrl), fit: BoxFit.cover),
+//                         borderRadius: BorderRadius.circular(90.0),
+//                       )
+//                     : BoxDecoration(
+//                         image: DecorationImage(image: NetworkImage("${APIConfig.domain}${widget.productImage}"), fit: BoxFit.cover),
+//                         borderRadius: BorderRadius.circular(90.0),
+//                       ),
+//               ),
+//             ),
+//             Padding(
+//               padding: const EdgeInsets.only(left: 10.0),
+//               child: Column(
+//                 crossAxisAlignment: CrossAxisAlignment.start,
+//                 mainAxisSize: MainAxisSize.min,
+//                 children: [
+//                   Row(
+//                     children: [
+//                       Text(
+//                         widget.productTitle,
+//                         style: GoogleFonts.jost(
+//                           fontSize: 20.0,
+//                           color: Colors.black,
+//                         ),
+//                       ),
+//                     ],
+//                   ),
+//                   Text(
+//                     widget.productDescription,
+//                     style: GoogleFonts.jost(
+//                       fontSize: 15.0,
+//                       color: kGreyTextColor,
+//                     ),
+//                   ),
+//                 ],
+//               ),
+//             ),
+//             const Spacer(),
+//             Column(
+//               crossAxisAlignment: CrossAxisAlignment.end,
+//               children: [
+//                 Text(
+//                   lang.S.of(context).stock,
+//                   style: GoogleFonts.jost(
+//                     fontSize: 18.0,
+//                     color: Colors.black,
+//                   ),
+//                 ),
+//                 Text(
+//                   widget.stock,
+//                   style: GoogleFonts.jost(
+//                     fontSize: 16.0,
+//                     color: Colors.grey,
+//                   ),
+//                 ),
+//               ],
+//             ),
+//           ],
+//         ),
+//       );
+//     });
+//   }
+// }
