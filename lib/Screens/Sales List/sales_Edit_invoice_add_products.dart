@@ -90,7 +90,7 @@ class _EditSaleInvoiceSaleProductsState extends State<EditSaleInvoiceSaleProduct
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             //labelText: 'Product Code',
                             labelText: lang.S.of(context).productCode,
-                            hintText: productCode == '0000' || productCode == '-1' ? 'Scan product QR code' : productCode,
+                            hintText: productCode == '0000' || productCode == '-1' ? lang.S.of(context).scanProductQRCode : productCode,
                             border: const OutlineInputBorder(),
                           ),
                         ),
@@ -135,7 +135,7 @@ class _EditSaleInvoiceSaleProductsState extends State<EditSaleInvoiceSaleProduct
 
                                             if (barcodes.isNotEmpty) {
                                               final Barcode barcode = barcodes.first;
-                                              debugPrint('Barcode found! ${barcode.rawValue}');
+                                              debugPrint('${lang.S.of(context).barcodeFound}! ${barcode.rawValue}');
                                               setState(() {
                                                 productCode = barcode.rawValue!;
                                                 codeController.text = productCode;
@@ -188,7 +188,7 @@ class _EditSaleInvoiceSaleProductsState extends State<EditSaleInvoiceSaleProduct
                         return GestureDetector(
                           onTap: () async {
                             if ((products[i].productStock ?? 0) <= 0) {
-                              EasyLoading.showError('Out of stock');
+                              EasyLoading.showError(lang.S.of(context).outOfStock);
                             } else {
                               if (widget.salesInfo.party!.type!.contains('Retailer')) {
                                 sentProductPrice = products[i].productSalePrice.toString();

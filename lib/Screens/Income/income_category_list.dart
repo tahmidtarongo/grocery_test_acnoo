@@ -36,7 +36,8 @@ class _IncomeCategoryListState extends State<IncomeCategoryList> {
                 image: AssetImage('images/x.png'),
               )),
           title: Text(
-            'Income Categories',
+            lang.S.of(context).incomeCategories,
+           // 'Income Categories',
             style: GoogleFonts.poppins(
               color: Colors.black,
               fontSize: 20.0,

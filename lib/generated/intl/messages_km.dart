@@ -22,18 +22,28 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Custom": MessageLookupByLibrary.simpleMessage("ធម្មតា"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("ព័ត៌មានលំអិតរបស់អតិថិជន"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "Sun": MessageLookupByLibrary.simpleMessage("ថ្ងៃអាទិត្យ"),
+        "addACustomer":
+            MessageLookupByLibrary.simpleMessage("សូមបន្ថែមអតិថិជន"),
         "addAPurchase": MessageLookupByLibrary.simpleMessage("សូមបន្ថែមការទិញ"),
         "addBrand": MessageLookupByLibrary.simpleMessage("បន្ថែមម៉ាក"),
         "addCategory": MessageLookupByLibrary.simpleMessage("បន្ថែមប្រភេទ"),
         "addContact": MessageLookupByLibrary.simpleMessage("បន្ថែមទំនាក់ទំនង"),
-        "addCustomer": MessageLookupByLibrary.simpleMessage("សូមបន្ថែមអតិថិជន"),
+        "addCustomer": MessageLookupByLibrary.simpleMessage("បន្ថែមអតិថិជន"),
         "addDelivery":
             MessageLookupByLibrary.simpleMessage("បញ្ចូលការដឹកជញ្ជូនថ្មី"),
+        "addDiscount":
+            MessageLookupByLibrary.simpleMessage("បន្ថែមការបញ្ចុះតម្លៃ"),
         "addExpense": MessageLookupByLibrary.simpleMessage("បន្ថែមការចំណាយ"),
         "addExpenseCat":
             MessageLookupByLibrary.simpleMessage("បន្ថែមប្រភេទការចំណាយ"),
+        "addIncome": MessageLookupByLibrary.simpleMessage("បន្ថែមចំណូល"),
+        "addIncomeCategory":
+            MessageLookupByLibrary.simpleMessage("បន្ថែមប្រភេទចំណូល"),
         "addItems": MessageLookupByLibrary.simpleMessage("បន្ថែមធាតុ"),
         "addNewAddress":
             MessageLookupByLibrary.simpleMessage("បញ្ចូលអាសយដ្ឋានថ្មី"),
@@ -46,9 +56,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("សូមបន្ថែមផលិតផលមួយ។"),
         "addProductFirst":
             MessageLookupByLibrary.simpleMessage("បន្ថែមផលិតផលជាលើកដំបូង"),
+        "addPromoCode":
+            MessageLookupByLibrary.simpleMessage("បន្ថែមកូដផ្សព្វផ្សាយ"),
         "addPurchase": MessageLookupByLibrary.simpleMessage("បន្ថែមការទិញ"),
         "addSale": MessageLookupByLibrary.simpleMessage("សូមបន្ថែមការលក់"),
         "addSales": MessageLookupByLibrary.simpleMessage("បន្ថែមការលក់"),
+        "addToCart": MessageLookupByLibrary.simpleMessage("បន្ថែមទៅកន្ត្រក"),
         "addUnit": MessageLookupByLibrary.simpleMessage("បន្ថែមឯកតា"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("បន្ថែមតួនាទីអ្នកប្រើប្រាស់"),
@@ -61,6 +74,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "ដែល​ជា​ការ​ដោះ​ស្រាយ​អាជីវកម្ម​ទាំងអស់"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
             "កម្មវិធី PosPro គឺជា​កម្មវិធី​ពិសេស​អាជីវកម្ម​ពេញលេញ​ដែលមាន​ស្តុក​សារ​គ្រឿង​សម្រាប់​ការ​ធ្វើ​កិច្ច​ការ​ គណនេយ្យ​ការ​លក់​ ចំណាយ & ចំណេញ/ការ​បញ្ចូល។"),
+        "allTime": MessageLookupByLibrary.simpleMessage("ពេលវេលាទាំងអស់"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("បានបន្ថែមរួចហើយ"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("មានគណនីរួចហើយ?"),
@@ -75,9 +89,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "areYouSure": MessageLookupByLibrary.simpleMessage("តើអ្នកប្រាកដថា?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "តើអ្នកប្រាកដថាអ្នកចង់លុបភាគីនេះទេ?"),
+        "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
+            "តើអ្នកមានសុចរិតថាអ្នកចង់លុបវានេះទេ?"),
         "backToHome": MessageLookupByLibrary.simpleMessage("ត្រលប់ទៅផ្ទះគេ"),
         "balance": MessageLookupByLibrary.simpleMessage("មូលបត្រ"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("បង់ក្លាដែស"),
+        "bank": MessageLookupByLibrary.simpleMessage("ធនាគារ"),
+        "barcodeFound":
+            MessageLookupByLibrary.simpleMessage("អ៊ីនស្កេនស្វែងរកបាន"),
         "billTO": MessageLookupByLibrary.simpleMessage("វិក្កយបត្រទៅ"),
         "brand": MessageLookupByLibrary.simpleMessage("ម៉ាក"),
         "brandName": MessageLookupByLibrary.simpleMessage("ឈ្មោះ​យីហោ"),
@@ -89,7 +108,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "call": MessageLookupByLibrary.simpleMessage("ហៅ"),
         "camera": MessageLookupByLibrary.simpleMessage("កាមេរ៉ា"),
         "cancel": MessageLookupByLibrary.simpleMessage("បោះបង់"),
+        "cancelAllProduct":
+            MessageLookupByLibrary.simpleMessage("បោះបង់ផលិតផលទាំងអស់"),
         "capacity": MessageLookupByLibrary.simpleMessage("មាត់កម្រិត"),
+        "card": MessageLookupByLibrary.simpleMessage("កាត"),
         "cash": MessageLookupByLibrary.simpleMessage("សាច់ប្រាក់"),
         "categories": MessageLookupByLibrary.simpleMessage("ប្រភេទ"),
         "category": MessageLookupByLibrary.simpleMessage("ប្រភេទ"),
@@ -107,6 +129,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
             "លក្ខណៈពិសេសជា​ផ្នែក​សំខាន់​ដែលធ្វើ​ឲ្យ​កម្មវិធី PosPro ខូចចិត្តនៃ​ការដំណោះស្រាយ​ប្រចាំ​នៅពី​ដំណាក់​កាល​ចាស់ៗ។"),
         "clarence": MessageLookupByLibrary.simpleMessage("ឃ្លានិង"),
+        "clearAll": MessageLookupByLibrary.simpleMessage("សម្អាតទាំងអស់"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("ចុចដើម្បីភ្ជាប់"),
         "close": MessageLookupByLibrary.simpleMessage("បិទ"),
@@ -134,6 +157,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "continueButton": MessageLookupByLibrary.simpleMessage("បន្ត"),
         "continueE": MessageLookupByLibrary.simpleMessage("បន្ត"),
         "cost": MessageLookupByLibrary.simpleMessage("ចំណាយ"),
+        "couldNotFetchProducts":
+            MessageLookupByLibrary.simpleMessage("មិនអាចទាញយកផលិតផលបានទេ"),
+        "couldNotFetchTheCategories":
+            MessageLookupByLibrary.simpleMessage("មិនអាចទាញយកប្រភេទបានទេ"),
         "country": MessageLookupByLibrary.simpleMessage("ប្រទេស"),
         "create": MessageLookupByLibrary.simpleMessage("បង្កើត"),
         "createAFreeAccount":
@@ -143,6 +170,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("បង្កើតពាក្យសម្ងាត់ថ្មី"),
         "currency": MessageLookupByLibrary.simpleMessage("រូបិយប័ណ្ណ"),
+        "currentYear": MessageLookupByLibrary.simpleMessage("ឆ្នាំបច្ចុប្បន្ន"),
         "customInvoiceBranding": MessageLookupByLibrary.simpleMessage(
             "ការប្រកាសផ្ទាល់ខ្លួនលើវិក័យប័ត្រ"),
         "customerDue":
@@ -159,9 +187,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "date": MessageLookupByLibrary.simpleMessage("កាលបរិច្ឆេទ"),
         "dates": MessageLookupByLibrary.simpleMessage("កាលបរិច្ឆេទ:"),
         "days": MessageLookupByLibrary.simpleMessage("ថ្ងៃ"),
+        "daysLeft": MessageLookupByLibrary.simpleMessage("ថ្ងៃនៅសល់"),
         "dealer": MessageLookupByLibrary.simpleMessage("ឈ្មួញ"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage("តម្លៃអ្នកចែកបៀ"),
         "delete": MessageLookupByLibrary.simpleMessage("លុប"),
+        "deleteConfirmation":
+            MessageLookupByLibrary.simpleMessage("ការបញ្ជាក់ការលុប"),
         "deleting": MessageLookupByLibrary.simpleMessage("កំពុងលុប...."),
         "deliveryAddress":
             MessageLookupByLibrary.simpleMessage("អាសយដ្ឋានការដឹកជញ្ជូន"),
@@ -178,6 +209,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("តើអ្នកចង់ចេញពីកម្មវិធីទេ?"),
         "donNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("មិនមានគណនីទេ?"),
+        "done": MessageLookupByLibrary.simpleMessage("បានធ្វើរួច"),
         "due": MessageLookupByLibrary.simpleMessage("ដល់កំណត់"),
         "dueAmount":
             MessageLookupByLibrary.simpleMessage("ចំនួនទឹកប្រាក់ដែលត្រូវបង់៖ "),
@@ -231,6 +263,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("បញ្ចូលកាលបរិច្ឆេទចំណាយ"),
         "enterFullAddress":
             MessageLookupByLibrary.simpleMessage("បញ្ចូលអាសយដ្ឋានពេញរបស់អ្នក"),
+        "enterIncomeCategoryName":
+            MessageLookupByLibrary.simpleMessage("បញ្ចូលឈ្មោះប្រភេទចំណូល"),
         "enterManufacturerName":
             MessageLookupByLibrary.simpleMessage("បញ្ចូលឈ្មោះផលិតករ"),
         "enterName": MessageLookupByLibrary.simpleMessage("បញ្ចូលឈ្មោះ"),
@@ -248,6 +282,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterSize": MessageLookupByLibrary.simpleMessage("បញ្ចូលទំហំ"),
         "enterStock": MessageLookupByLibrary.simpleMessage("បញ្ចូលសារជាត"),
         "enterType": MessageLookupByLibrary.simpleMessage("បញ្ចូលប្រភេទ"),
+        "enterUnitQuantity":
+            MessageLookupByLibrary.simpleMessage("បញ្ចូលបរិមាណឯកតា"),
         "enterUserTitle":
             MessageLookupByLibrary.simpleMessage("បញ្ចូលចំណងជើងអ្នកប្រើ"),
         "enterValidOTP":
@@ -284,6 +320,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "អាប់ដេតឥតគិតថ្លៃជារៀងរាល់ជីវិត"),
         "freePack": MessageLookupByLibrary.simpleMessage("កញ្ចប់ឥតគិតថ្លៃ"),
         "freePlan": MessageLookupByLibrary.simpleMessage("ផែនការឥតគិតថ្លៃ"),
+        "fri": MessageLookupByLibrary.simpleMessage("ថ្ងៃសុក្រិត"),
         "fromDate": MessageLookupByLibrary.simpleMessage("ពីកាលបរិច្ឆេទ"),
         "fullName": MessageLookupByLibrary.simpleMessage("ឈ្មោះពេញ"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("បង់ពេញ"),
@@ -299,16 +336,25 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("ទំព័រដើម"),
         "image": MessageLookupByLibrary.simpleMessage("រូបភាព"),
         "income": MessageLookupByLibrary.simpleMessage("ចំណូល"),
+        "incomeCategories": MessageLookupByLibrary.simpleMessage("ប្រភេទចំណូល"),
+        "incomeFor": MessageLookupByLibrary.simpleMessage("ចំណូលសម្រាប់"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("របាយការណ៍ចំណូល"),
         "instagram": MessageLookupByLibrary.simpleMessage("Instagram"),
         "inv": MessageLookupByLibrary.simpleMessage("Inv No."),
         "invoice": MessageLookupByLibrary.simpleMessage("វិក្កយបត្រ"),
         "itemAdded": MessageLookupByLibrary.simpleMessage("ធាតុត្រូវបានបន្ថែម"),
+        "itemDetails":
+            MessageLookupByLibrary.simpleMessage("ព័ត៌មានអំពីសម្ភារៈ"),
+        "items": MessageLookupByLibrary.simpleMessage("របស់"),
+        "itemsFor": MessageLookupByLibrary.simpleMessage("របស់សម្រាប់"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("ការលក់វត្ថុ"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("អ៊ីមែល"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("ពាក្យសម្ងាត់"),
         "language": MessageLookupByLibrary.simpleMessage("ភាសា"),
+        "last30Days": MessageLookupByLibrary.simpleMessage("៣០ ថ្ងៃចុងក្រោយ"),
+        "last7Days": MessageLookupByLibrary.simpleMessage("៧ ថ្ងៃចុងក្រោយ"),
         "lastName": MessageLookupByLibrary.simpleMessage("នាមត្រកូល"),
+        "lastYear": MessageLookupByLibrary.simpleMessage("ឆ្នាំមុន"),
         "link": MessageLookupByLibrary.simpleMessage("តំណភ្ជាប់"),
         "linkedIN": MessageLookupByLibrary.simpleMessage("LinkedIn"),
         "loading": MessageLookupByLibrary.simpleMessage("កំពុងផ្ទុក"),
@@ -324,6 +370,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Natoque aliquet et, cur eget. Tellus sapien odio aliq."),
         "loremIpsumDolorSit": MessageLookupByLibrary.simpleMessage(
             "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."),
+        "loremIpsumDolorSitAmetConsecteturAdipiscingElitMaurisCras":
+            MessageLookupByLibrary.simpleMessage(
+                "លូរ៉េម អ៊ីបស៊ុំព ដុល្ល័រ ស៊ីត អាម៉េត, គន់តេគទ័រអាដីភីស៊ុង្ក អេលីត។ ម៉ូរីស ក្រាស"),
         "loremIpsumDolorSitAmetConsecteturElitInterdumCons":
             MessageLookupByLibrary.simpleMessage(
                 "Lorem ipsum dolor sit amet, consectetur elit. Interdum cons."),
@@ -338,6 +387,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "manufacturer": MessageLookupByLibrary.simpleMessage("ក្រុមហ៊ុនផលិត"),
         "masterCard": MessageLookupByLibrary.simpleMessage("កាតឥណព្យបុគ្គល"),
         "mobile": MessageLookupByLibrary.simpleMessage("ទូរស័ព្ទចល័ត:"),
+        "mobilePayment":
+            MessageLookupByLibrary.simpleMessage("ការទូទាត់ទូរស័ព្ទចល័ត"),
+        "mon": MessageLookupByLibrary.simpleMessage("ថ្ងៃច័ន្ទ"),
+        "monthly": MessageLookupByLibrary.simpleMessage("ប្រចាំខែ"),
         "moreInfo": MessageLookupByLibrary.simpleMessage("ព័​ត៍​មាន​បន្ថែម"),
         "mrp": MessageLookupByLibrary.simpleMessage("MRP"),
         "name": MessageLookupByLibrary.simpleMessage("ឈ្មោះ"),
@@ -360,9 +413,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("មិនមានអ្នកផ្គត់ផ្គង់ទេ។"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("គ្មានប្រតិបត្តិការ"),
+        "notActiveUser":
+            MessageLookupByLibrary.simpleMessage("អ្នកប្រើមិនសកម្ម"),
         "notFound": MessageLookupByLibrary.simpleMessage("មិនឃើញ"),
         "note": MessageLookupByLibrary.simpleMessage("ចំណាំ"),
         "notification": MessageLookupByLibrary.simpleMessage("ការជូនដំណឹង"),
+        "oK": MessageLookupByLibrary.simpleMessage("យល់ព្រម"),
         "off": MessageLookupByLibrary.simpleMessage("បិទ"),
         "on": MessageLookupByLibrary.simpleMessage("បើក"),
         "openingBalance": MessageLookupByLibrary.simpleMessage("ការបើកសមតុល្យ"),
@@ -410,6 +466,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ជ្រើសកាលបរិច្ឆេទបញ្ចប់"),
         "pickStartDate":
             MessageLookupByLibrary.simpleMessage("ជ្រើសកាលបរិច្ឆេទចាប់ផ្តើម"),
+        "plan": MessageLookupByLibrary.simpleMessage("គម្រោង"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("សូមបន្ថែមបរិមាណ"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
@@ -442,6 +499,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("សូមបញ្ចូលចំនួន"),
         "pleaseEnterName":
             MessageLookupByLibrary.simpleMessage("សូមបញ្ចូលឈ្មោះ"),
+        "pleaseEnterSalesPrice":
+            MessageLookupByLibrary.simpleMessage("សូមបញ្ចូលតម្លៃលក់"),
         "pleaseEnterTheOTP":
             MessageLookupByLibrary.simpleMessage("សូមបញ្ចូល OTP"),
         "pleaseEnterUnitName":
@@ -457,12 +516,17 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("សូមជ្រើសប្រភេទមួយ"),
         "pleaseSelectAExpenseCategory":
             MessageLookupByLibrary.simpleMessage("សូមជ្រើសប្រភេទចំណាយ"),
+        "pleaseUseTheValidPurchaseCodeToUseTheApp":
+            MessageLookupByLibrary.simpleMessage(
+                "សូមប្រើកូដទិញដែលមានសុពលភាពដើម្បីប្រើកម្មវិធី"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "ការគាំទ្រអំពីកម្មវិធី Android និង iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("គម្រោងពិសេស"),
         "previousDue": MessageLookupByLibrary.simpleMessage("ផុតកំណត់មុន"),
         "previousPayAmount":
             MessageLookupByLibrary.simpleMessage("ចំនួនទឹកប្រាក់បង់មុន។"),
+        "priceMustBeGreaterThan":
+            MessageLookupByLibrary.simpleMessage("តម្លៃត្រូវតែធំបន្ទាប់ពី"),
         "print": MessageLookupByLibrary.simpleMessage("បោះពុម្ព"),
         "printing": MessageLookupByLibrary.simpleMessage("ជម្រើសបោះពុម្ព"),
         "product": MessageLookupByLibrary.simpleMessage("ផលិតផល"),
@@ -500,14 +564,22 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchased": MessageLookupByLibrary.simpleMessage("ទិញ"),
         "qty": MessageLookupByLibrary.simpleMessage("បរិមាណ"),
         "quantity": MessageLookupByLibrary.simpleMessage("បរិមាណ"),
+        "quantityExceedsAvailableStock":
+            MessageLookupByLibrary.simpleMessage("បរិមាណលើសស្តុកដែលមាន"),
+        "quantityMustBeGreaterThan":
+            MessageLookupByLibrary.simpleMessage("បរិមាណត្រូវតែធំបន្ទាប់ពី"),
         "quickOverview":
             MessageLookupByLibrary.simpleMessage("សង្ខេបយ៉ាងឆាប់រហ័ស"),
+        "receivedAmount":
+            MessageLookupByLibrary.simpleMessage("ប្រាក់ដែលទទួលបាន"),
         "recentTransaction":
             MessageLookupByLibrary.simpleMessage("ប្រតិបត្តិការថ្មីៗ"),
         "referenceNo": MessageLookupByLibrary.simpleMessage("លេខ​យោង"),
         "register": MessageLookupByLibrary.simpleMessage("ចុះឈ្មោះ"),
         "registerTitle": MessageLookupByLibrary.simpleMessage(
             "យើងត្រូវចុះឈ្មោះទូរស័ព្ទរបស់អ្នកដោយមិនចាំបាច់ចាប់ផ្តើម!"),
+        "relatedDataWillBeDeletedAlso": MessageLookupByLibrary.simpleMessage(
+            "ទិន្នន័យដែលទាក់ទងនឹងនឹងត្រូវបានលុបផងដែរ"),
         "remainingDue": MessageLookupByLibrary.simpleMessage("នៅសល់ត្រូវបង់"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("ចងចាំខ្ញុំ"),
         "rememberMeLater":
@@ -516,6 +588,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resendIn":
             MessageLookupByLibrary.simpleMessage("ផ្ញើ OTP ម្តងទៀតនៅក្នុង"),
         "resendOTP": MessageLookupByLibrary.simpleMessage("ផ្ញើម្តងទៀត OTP"),
+        "resendOTPIn": MessageLookupByLibrary.simpleMessage("ផ្ញើ OTP នៅក្នុង"),
         "reset": MessageLookupByLibrary.simpleMessage(
             "កំណត់ពាក្យសម្ងាត់ឡើងវិញដោយប្រើអ៊ីមែលឬលេខទូរស័ព្ទរបស់អ្នក"),
         "resetPassword": MessageLookupByLibrary.simpleMessage(
@@ -532,18 +605,28 @@ class MessageLookup extends MessageLookupByLibrary {
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("ព័ត៌មានលម្អិតអំពីការលក់"),
         "salesList": MessageLookupByLibrary.simpleMessage("បញ្ជីការលក់"),
+        "salesPrice": MessageLookupByLibrary.simpleMessage("តម្លៃលក់"),
         "salesPurchaseOverview":
             MessageLookupByLibrary.simpleMessage("សង្ខេបការលក់ និងការទិញ"),
         "salesReport": MessageLookupByLibrary.simpleMessage("របាយការណ៍លក់"),
+        "sat": MessageLookupByLibrary.simpleMessage("សៅរ៍"),
         "save": MessageLookupByLibrary.simpleMessage("រក្សាទុក"),
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("រក្សាទុក និងបោះពុម្ព"),
+        "scanProductQRCode":
+            MessageLookupByLibrary.simpleMessage("អ៊ីនស្កេនកូដ QR ផលិតផល"),
         "search": MessageLookupByLibrary.simpleMessage("ស្វែងរក"),
         "searchH": MessageLookupByLibrary.simpleMessage("ស្វែងរកនៅទីនេះ...."),
+        "searchHere": MessageLookupByLibrary.simpleMessage("ស្វែងរកនៅនេះ"),
+        "seconds": MessageLookupByLibrary.simpleMessage("វិនាទី"),
         "seeAllPromoCode": MessageLookupByLibrary.simpleMessage(
             "មើលកូដ​ផ្នែក​បន្លាស់ទី​ទាំងអស់"),
         "select": MessageLookupByLibrary.simpleMessage("ជ្រើសរើស"),
         "selectABrand": MessageLookupByLibrary.simpleMessage("ជ្រើសម៉ាកមួយ"),
+        "selectABusinessCategory":
+            MessageLookupByLibrary.simpleMessage("ជ្រើសរើសប្រភេទអាជីវកម្ម"),
+        "selectACategory":
+            MessageLookupByLibrary.simpleMessage("ជ្រើសរើសប្រភេទ"),
         "selectAInvoice":
             MessageLookupByLibrary.simpleMessage("ជ្រើសវិក្កយបត្រ"),
         "selectBusinessCategory":
@@ -600,6 +683,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("ភាគហ៊ុន"),
         "stockList": MessageLookupByLibrary.simpleMessage("បញ្ជីភាគហ៊ុន"),
         "stockReport": MessageLookupByLibrary.simpleMessage("របាយការណ៍សារជាត"),
+        "stockS": MessageLookupByLibrary.simpleMessage("ស្តុក"),
         "stockValue": MessageLookupByLibrary.simpleMessage("តម្លៃសារជាត"),
         "stocks": MessageLookupByLibrary.simpleMessage("សារជាត៖"),
         "subTotal": MessageLookupByLibrary.simpleMessage("សរុបរង"),
@@ -611,13 +695,20 @@ class MessageLookup extends MessageLookupByLibrary {
         "supplerPay":
             MessageLookupByLibrary.simpleMessage("អ្នកផ្គត់ផ្គង់បង់ប្រាក់"),
         "supplier": MessageLookupByLibrary.simpleMessage("អ្នកផ្គត់ផ្គង់"),
+        "supplierDetails":
+            MessageLookupByLibrary.simpleMessage("ព័ត៌មានអ្នកផ្គត់ផ្គង់"),
         "supplierName":
             MessageLookupByLibrary.simpleMessage("ឈ្មោះ​ក្រុមហ៊ុន​ផ្គត់ផ្គង់"),
         "thankYouForYourDuePayment": MessageLookupByLibrary.simpleMessage(
             "សូមអរគុណចំពោះការបង់ប្រាក់នៅពេលរឺបញ្ជាក់"),
+        "thisMonth": MessageLookupByLibrary.simpleMessage("ខែនេះ"),
         "thisProductAlreadyAdded":
             MessageLookupByLibrary.simpleMessage("ផលិតផលនេះបានបន្ថែមរួចហើយ!"),
+        "thisWeek": MessageLookupByLibrary.simpleMessage("សប្តាហ៍នេះ"),
+        "thisYear": MessageLookupByLibrary.simpleMessage("ឆ្នាំនេះ"),
+        "thurs": MessageLookupByLibrary.simpleMessage("ថ្ងៃព្រហស្បតិ៍"),
         "toDate": MessageLookupByLibrary.simpleMessage("ដល់កាលបរិច្ឆេទ"),
+        "toDay": MessageLookupByLibrary.simpleMessage("ថ្ងៃនេះ"),
         "todaySummary": MessageLookupByLibrary.simpleMessage("សង្ខេបថ្ងៃនេះ"),
         "total": MessageLookupByLibrary.simpleMessage("សរុប"),
         "totalAmount": MessageLookupByLibrary.simpleMessage("ចំនួន​សរុប"),
@@ -640,10 +731,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "totall": MessageLookupByLibrary.simpleMessage("សរុប:"),
         "transactions": MessageLookupByLibrary.simpleMessage("ប្រតិបត្តិការ"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("ព្យាយាម​ម្តង​ទៀត"),
+        "tues": MessageLookupByLibrary.simpleMessage("ថ្ងៃអង្គារ"),
         "twitter": MessageLookupByLibrary.simpleMessage("Twitter"),
         "type": MessageLookupByLibrary.simpleMessage("ប្រភេទ"),
         "unPaid": MessageLookupByLibrary.simpleMessage("មិនបង់ប្រាក់"),
         "unitName": MessageLookupByLibrary.simpleMessage("ឈ្មោះអង្គភាព"),
+        "unitPrice": MessageLookupByLibrary.simpleMessage("តម្លៃឯកតា"),
         "units": MessageLookupByLibrary.simpleMessage("ឯកតា"),
         "unlimited": MessageLookupByLibrary.simpleMessage("គ្មានដែនកំណត់"),
         "unlimitedUsage": MessageLookupByLibrary.simpleMessage(
@@ -675,6 +768,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ព័ត៌មានលម្អិតតួនាទីអ្នកប្រើ"),
         "userTitle": MessageLookupByLibrary.simpleMessage("ចំណងជើងអ្នកប្រើ"),
         "vat": MessageLookupByLibrary.simpleMessage("VAT"),
+        "vatDoesNOtApply":
+            MessageLookupByLibrary.simpleMessage("វ៉ាតមិនអនុវត្តន៍"),
         "verification": MessageLookupByLibrary.simpleMessage("ការបញ្ជាក់"),
         "verify": MessageLookupByLibrary.simpleMessage("ផ្ទៀងផ្ទាត់"),
         "verifyYourEmail":
@@ -687,6 +782,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("យើងបានផ្ញើអ៊ីមែលបញ្ជាក់ទៅ"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "យើងបានផ្ញើ OTP ទៅលេខទូរស័ព្ទរបស់អ្នក"),
+        "wed": MessageLookupByLibrary.simpleMessage("ថ្ងៃពុធ"),
+        "weekly": MessageLookupByLibrary.simpleMessage("ប្រចាំសប្តាហ៍"),
         "weight": MessageLookupByLibrary.simpleMessage("ទំងន់"),
         "welcomeBack":
             MessageLookupByLibrary.simpleMessage("សូមស្វាគមន៍ត្រលប់មកវិញ!"),
@@ -697,9 +794,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("នឹងត្រូវបានបន្ថែមជិតៗនេះ"),
         "writeYourMessageHere":
             MessageLookupByLibrary.simpleMessage("សរសេរសាររបស់អ្នកនៅទីនេះ"),
+        "yearly": MessageLookupByLibrary.simpleMessage("ប្រចាំឆ្នាំ"),
         "yes": MessageLookupByLibrary.simpleMessage("ចាស"),
         "youCanNotPayMoreThenDue": MessageLookupByLibrary.simpleMessage(
             "អ្នកមិនអាចបង់លើសពីប្រាក់កំណត់បានទេ"),
+        "youCanNowResendTheOTP": MessageLookupByLibrary.simpleMessage(
+            "អ្នកអាចផ្ញើ OTP ឡើងវិញបានឥឡូវនេះ"),
         "youHaveToGivePermission":
             MessageLookupByLibrary.simpleMessage("អ្នកត្រូវតែផ្តល់សិទ្ធិ"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("អ្នកកំពុងប្រើ "),

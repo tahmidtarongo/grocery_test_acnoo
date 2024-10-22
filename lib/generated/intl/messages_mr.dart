@@ -22,19 +22,26 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Custom": MessageLookupByLibrary.simpleMessage("कस्टम"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("ग्राहकाची माहिती"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "addACustomer":
+            MessageLookupByLibrary.simpleMessage("कृपया ग्राहक जोडा"),
         "addAPurchase":
             MessageLookupByLibrary.simpleMessage("कृपया खरेदी जोडा"),
         "addBrand": MessageLookupByLibrary.simpleMessage("ब्रँड जोडा"),
         "addCategory": MessageLookupByLibrary.simpleMessage("श्रेणी जोडा"),
         "addContact": MessageLookupByLibrary.simpleMessage("संपर्क जोडा"),
-        "addCustomer":
-            MessageLookupByLibrary.simpleMessage("कृपया ग्राहक जोडा"),
+        "addCustomer": MessageLookupByLibrary.simpleMessage("ग्राहक जोडा"),
         "addDelivery": MessageLookupByLibrary.simpleMessage("पोहचवणी जोडा"),
+        "addDiscount": MessageLookupByLibrary.simpleMessage("सवलत जोडा"),
         "addExpense": MessageLookupByLibrary.simpleMessage("खर्च जोडा"),
         "addExpenseCat":
             MessageLookupByLibrary.simpleMessage("खर्च श्रेणी जोडा"),
+        "addIncome": MessageLookupByLibrary.simpleMessage("उत्पन्न जोडा"),
+        "addIncomeCategory":
+            MessageLookupByLibrary.simpleMessage("उत्पन्न श्रेणी जोडा"),
         "addItems": MessageLookupByLibrary.simpleMessage("वस्तू जोडा"),
         "addNewAddress":
             MessageLookupByLibrary.simpleMessage("नवीन पत्ता जोडा"),
@@ -46,9 +53,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "addProduct": MessageLookupByLibrary.simpleMessage("कृपया उत्पाद जोडा"),
         "addProductFirst":
             MessageLookupByLibrary.simpleMessage("प्रथम उत्पादन जोडा"),
+        "addPromoCode":
+            MessageLookupByLibrary.simpleMessage("प्रमोशन कोड जोडा"),
         "addPurchase": MessageLookupByLibrary.simpleMessage("खरेदी जोडा"),
         "addSale": MessageLookupByLibrary.simpleMessage("कृपया विक्री जोडा"),
         "addSales": MessageLookupByLibrary.simpleMessage("विक्री जोडा"),
+        "addToCart": MessageLookupByLibrary.simpleMessage("कार्टमध्ये जोडा"),
         "addUnit": MessageLookupByLibrary.simpleMessage("एकक जोडा"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("वापरकर्ता भूमिका जोडा"),
@@ -60,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("सर्व व्यवसायिक सोयीस"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
             "सेल्स प्रो एक पूर्ण व्यवसाय सोयीस आहे ज्यामध्ये स्टॉक, खाते, विक्री, खर्च आणि नुकसान / मुनाफा असतात."),
+        "allTime": MessageLookupByLibrary.simpleMessage("सर्व वेळ"),
         "alreadyAdded":
             MessageLookupByLibrary.simpleMessage("आधीपासूनच जोडले गेले आहे"),
         "alreadyHaveAnAccount":
@@ -78,10 +89,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("तुम्हाला खात्री आहे का?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "तुम्हाला हा पक्ष हटवायचा आहे का?"),
+        "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
+            "तुम्हाला हे रद्द करायचं आहे का?"),
         "backToHome":
             MessageLookupByLibrary.simpleMessage("मुख्यपृष्ठाकडे परत जा"),
         "balance": MessageLookupByLibrary.simpleMessage("शिल्लक"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("बांग्लादेश"),
+        "bank": MessageLookupByLibrary.simpleMessage("बँक"),
+        "barcodeFound": MessageLookupByLibrary.simpleMessage("बारकोड सापडला"),
         "billTO": MessageLookupByLibrary.simpleMessage("बिल ते"),
         "brand": MessageLookupByLibrary.simpleMessage("ब्रँड"),
         "brandName": MessageLookupByLibrary.simpleMessage("ब्रँडचं नाव"),
@@ -94,7 +109,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "call": MessageLookupByLibrary.simpleMessage("कॉल करा"),
         "camera": MessageLookupByLibrary.simpleMessage("कॅमेरा"),
         "cancel": MessageLookupByLibrary.simpleMessage("रद्द करा"),
+        "cancelAllProduct":
+            MessageLookupByLibrary.simpleMessage("सर्व उत्पादने रद्द करा"),
         "capacity": MessageLookupByLibrary.simpleMessage("क्षमता"),
+        "card": MessageLookupByLibrary.simpleMessage("कार्ड"),
         "cash": MessageLookupByLibrary.simpleMessage("नगद"),
         "categories": MessageLookupByLibrary.simpleMessage("वर्गवार"),
         "category": MessageLookupByLibrary.simpleMessage("श्रेणी"),
@@ -109,6 +127,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
             "सुविधा त्याच्या महत्त्वाच्या भाग आहेत, ज्यामुळे सेल्स प्रो विशेषणीय तात्पर्य देतं."),
         "clarence": MessageLookupByLibrary.simpleMessage("क्लॅरन्स"),
+        "clearAll": MessageLookupByLibrary.simpleMessage("सर्व रद्द करा"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("कनेक्ट करण्यासाठी क्लिक करा"),
         "close": MessageLookupByLibrary.simpleMessage("बंद करा"),
@@ -140,6 +159,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "continueButton": MessageLookupByLibrary.simpleMessage("सुरु ठेवा"),
         "continueE": MessageLookupByLibrary.simpleMessage("सुरू ठेवा"),
         "cost": MessageLookupByLibrary.simpleMessage("खर्च"),
+        "couldNotFetchProducts":
+            MessageLookupByLibrary.simpleMessage("उत्पादने आणता आल्या नाहीत"),
+        "couldNotFetchTheCategories":
+            MessageLookupByLibrary.simpleMessage("श्रेण्या आणता आल्या नाहीत"),
         "country": MessageLookupByLibrary.simpleMessage("देश"),
         "create": MessageLookupByLibrary.simpleMessage("तयार करा"),
         "createAFreeAccount":
@@ -149,6 +172,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("नवीन पासवर्ड तयार करा"),
         "currency": MessageLookupByLibrary.simpleMessage("मुद्रा"),
+        "currentYear": MessageLookupByLibrary.simpleMessage("सध्याचा वर्ष"),
         "customInvoiceBranding":
             MessageLookupByLibrary.simpleMessage("कस्टम चालान ब्रँडिंग"),
         "customerDue": MessageLookupByLibrary.simpleMessage("ग्राहकाचे देणे"),
@@ -164,9 +188,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "date": MessageLookupByLibrary.simpleMessage("तारीख"),
         "dates": MessageLookupByLibrary.simpleMessage("तारीख:"),
         "days": MessageLookupByLibrary.simpleMessage("दिवस"),
+        "daysLeft": MessageLookupByLibrary.simpleMessage("उरलेले दिवस"),
         "dealer": MessageLookupByLibrary.simpleMessage("व्यापारी"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage("व्यापारी किंमत"),
         "delete": MessageLookupByLibrary.simpleMessage("काढून टाका"),
+        "deleteConfirmation":
+            MessageLookupByLibrary.simpleMessage("रद्द करण्याची पुष्टी"),
         "deleting": MessageLookupByLibrary.simpleMessage("हटवित आहे...."),
         "deliveryAddress":
             MessageLookupByLibrary.simpleMessage("पोहचवणीचा पत्ता"),
@@ -183,6 +210,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "तुम्हाला अॅप्स बाहेर पडायचे आहे का?"),
         "donNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("तुम्हाला खाते नाही का?"),
+        "done": MessageLookupByLibrary.simpleMessage("झालं"),
         "due": MessageLookupByLibrary.simpleMessage("बाकी"),
         "dueAmount": MessageLookupByLibrary.simpleMessage("बाकी रक्कम: "),
         "dueCollection": MessageLookupByLibrary.simpleMessage("देय संग्रह"),
@@ -239,6 +267,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("खर्च तारीख प्रविष्ट करा"),
         "enterFullAddress":
             MessageLookupByLibrary.simpleMessage("पूर्ण पत्ता प्रविष्ट करा"),
+        "enterIncomeCategoryName": MessageLookupByLibrary.simpleMessage(
+            "उत्पन्न श्रेणीचे नाव प्रविष्ट करा"),
         "enterManufacturerName":
             MessageLookupByLibrary.simpleMessage("निर्माता नाव प्रविष्ट करा"),
         "enterName": MessageLookupByLibrary.simpleMessage("नाव प्रविष्ट करा"),
@@ -260,6 +290,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("स्टॉक प्रविष्ट करा"),
         "enterType":
             MessageLookupByLibrary.simpleMessage("प्रकार प्रविष्ट करा"),
+        "enterUnitQuantity":
+            MessageLookupByLibrary.simpleMessage("युनिट प्रमाण प्रविष्ट करा"),
         "enterUserTitle": MessageLookupByLibrary.simpleMessage(
             "वापरकर्ता शीर्षक प्रविष्ट करा"),
         "enterValidOTP":
@@ -296,6 +328,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("आयुष्यभर विनामूल्य अद्यतने"),
         "freePack": MessageLookupByLibrary.simpleMessage("विनामूल्य पॅक"),
         "freePlan": MessageLookupByLibrary.simpleMessage("विनामूल्य प्लॅन"),
+        "fri": MessageLookupByLibrary.simpleMessage("शुक्रवार"),
         "fromDate": MessageLookupByLibrary.simpleMessage("तारखेपासून"),
         "fullName": MessageLookupByLibrary.simpleMessage("पूर्ण नाव"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("पूर्णपणे भरलेले"),
@@ -312,6 +345,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("होम"),
         "image": MessageLookupByLibrary.simpleMessage("प्रतिमा"),
         "income": MessageLookupByLibrary.simpleMessage("उत्पन्न"),
+        "incomeCategories":
+            MessageLookupByLibrary.simpleMessage("उत्पन्न श्रेणी"),
+        "incomeFor": MessageLookupByLibrary.simpleMessage("उत्पन्न साठी"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("उत्पन्न रिपोर्ट"),
         "instagram": MessageLookupByLibrary.simpleMessage("इंस्टाग्राम"),
         "instrucation": MessageLookupByLibrary.simpleMessage("निर्देश"),
@@ -319,11 +355,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "invoice": MessageLookupByLibrary.simpleMessage("चलन"),
         "invoiceViewr": MessageLookupByLibrary.simpleMessage("चलन व्ह्यूअर"),
         "itemAdded": MessageLookupByLibrary.simpleMessage("वस्तू जोडली गेली"),
+        "itemDetails": MessageLookupByLibrary.simpleMessage("आइटम माहिती"),
+        "items": MessageLookupByLibrary.simpleMessage("आइटम"),
+        "itemsFor": MessageLookupByLibrary.simpleMessage("आइटम साठी"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("वस्तू विक्री"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("ईमेल"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("पासवर्ड"),
         "language": MessageLookupByLibrary.simpleMessage("भाषा"),
+        "last30Days":
+            MessageLookupByLibrary.simpleMessage("गेल्या 30 दिवसांमध्ये"),
+        "last7Days":
+            MessageLookupByLibrary.simpleMessage("गेल्या 7 दिवसांमध्ये"),
         "lastName": MessageLookupByLibrary.simpleMessage("आडनाव"),
+        "lastYear": MessageLookupByLibrary.simpleMessage("गेल्या वर्षी"),
         "link": MessageLookupByLibrary.simpleMessage("लिंक"),
         "linkedIN": MessageLookupByLibrary.simpleMessage("लिंक्डइन"),
         "loading": MessageLookupByLibrary.simpleMessage("लोड होत आहे"),
@@ -339,6 +383,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Natoque aliquet et, cur eget. Tellus sapien odio aliq."),
         "loremIpsumDolorSit": MessageLookupByLibrary.simpleMessage(
             "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."),
+        "loremIpsumDolorSitAmetConsecteturAdipiscingElitMaurisCras":
+            MessageLookupByLibrary.simpleMessage(
+                "लोरम इप्सम डोलर सिट अमेट, कोंसेटेटर अदिपिस्किंग एलिट. मॉरिस क्रास"),
         "loremIpsumDolorSitAmetConsecteturElitInterdumCons":
             MessageLookupByLibrary.simpleMessage(
                 "Lorem ipsum dolor sit amet, consectetur elit. Interdum cons."),
@@ -353,6 +400,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "masterCard": MessageLookupByLibrary.simpleMessage("मास्टर कार्ड"),
         "messege": MessageLookupByLibrary.simpleMessage("संदेश"),
         "mobile": MessageLookupByLibrary.simpleMessage("मोबाइल:"),
+        "mobilePayment": MessageLookupByLibrary.simpleMessage("मोबाईल पेमेंट"),
+        "mon": MessageLookupByLibrary.simpleMessage("सोमवार"),
+        "monthly": MessageLookupByLibrary.simpleMessage("मासिक"),
         "moreInfo": MessageLookupByLibrary.simpleMessage("अधिक माहिती"),
         "mrp": MessageLookupByLibrary.simpleMessage("एमआरपी"),
         "name": MessageLookupByLibrary.simpleMessage("नाव"),
@@ -378,9 +428,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "कोणताही आपूर्तीदार उपलब्ध नाही"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("कोणताही व्यवहार नाही"),
+        "notActiveUser":
+            MessageLookupByLibrary.simpleMessage("सक्रिय वापरकर्ता नाही"),
         "notFound": MessageLookupByLibrary.simpleMessage("सापडले नाही"),
         "note": MessageLookupByLibrary.simpleMessage("टीप"),
         "notification": MessageLookupByLibrary.simpleMessage("सूचना"),
+        "oK": MessageLookupByLibrary.simpleMessage("ठीक आहे"),
         "off": MessageLookupByLibrary.simpleMessage("ऑफ"),
         "on": MessageLookupByLibrary.simpleMessage("ऑन"),
         "openingBalance":
@@ -424,6 +477,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("अखेरची तारीख निवडा"),
         "pickStartDate":
             MessageLookupByLibrary.simpleMessage("सुरूवात तारीख निवडा"),
+        "plan": MessageLookupByLibrary.simpleMessage("योजना"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("कृपया प्रमाण जोडा"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
@@ -458,6 +512,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("कृपया रक्कम प्रविष्ट करा"),
         "pleaseEnterName":
             MessageLookupByLibrary.simpleMessage("कृपया नाव प्रविष्ट करा"),
+        "pleaseEnterSalesPrice": MessageLookupByLibrary.simpleMessage(
+            "कृपया विक्री किंमत प्रविष्ट करा"),
         "pleaseEnterTheOTP":
             MessageLookupByLibrary.simpleMessage("कृपया OTP प्रविष्ट करा"),
         "pleaseEnterUnitName": MessageLookupByLibrary.simpleMessage(
@@ -473,6 +529,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("कृपया एक श्रेणी निवडा"),
         "pleaseSelectAExpenseCategory":
             MessageLookupByLibrary.simpleMessage("कृपया एक खर्च श्रेणी निवडा"),
+        "pleaseUseTheValidPurchaseCodeToUseTheApp":
+            MessageLookupByLibrary.simpleMessage(
+                "अ‍ॅप वापरण्यासाठी कृपया वैध खरेदी कोड वापरा"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("द्वारा संचालित Acnoo"),
         "premiumCustomerSupport":
@@ -481,6 +540,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "previousDue": MessageLookupByLibrary.simpleMessage("मागील बाकी"),
         "previousPayAmount":
             MessageLookupByLibrary.simpleMessage("मागील पैसे रक्कम"),
+        "priceMustBeGreaterThan":
+            MessageLookupByLibrary.simpleMessage("किंमत जास्त असावी"),
         "print": MessageLookupByLibrary.simpleMessage("प्रिंट करा"),
         "printing": MessageLookupByLibrary.simpleMessage("प्रिंटिंग पर्याय"),
         "product": MessageLookupByLibrary.simpleMessage("उत्पाद"),
@@ -515,7 +576,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchased": MessageLookupByLibrary.simpleMessage("खरेदी केले"),
         "qty": MessageLookupByLibrary.simpleMessage("प्रमाण"),
         "quantity": MessageLookupByLibrary.simpleMessage("प्रमाण"),
+        "quantityExceedsAvailableStock": MessageLookupByLibrary.simpleMessage(
+            "प्रमाण उपलब्ध स्टॉक्सपेक्षा जास्त आहे"),
+        "quantityMustBeGreaterThan":
+            MessageLookupByLibrary.simpleMessage("प्रमाण जास्त असावे"),
         "quickOverview": MessageLookupByLibrary.simpleMessage("जलद आढावा"),
+        "receivedAmount": MessageLookupByLibrary.simpleMessage("प्राप्त रक्कम"),
         "recentTransaction":
             MessageLookupByLibrary.simpleMessage("अलीकडील व्यवहार"),
         "recivethePin": MessageLookupByLibrary.simpleMessage("पिन प्राप्त करा"),
@@ -523,6 +589,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("नोंदणी करा"),
         "registerTitle": MessageLookupByLibrary.simpleMessage(
             "आपल्याला सुरू करण्यासाठी आपला फोन नोंदणी करावा आवश्यक आहे!"),
+        "relatedDataWillBeDeletedAlso": MessageLookupByLibrary.simpleMessage(
+            "संबंधित माहितीही रद्द केली जाईल"),
         "remainingDue": MessageLookupByLibrary.simpleMessage("शिल्लक देयक"),
         "rememberMe":
             MessageLookupByLibrary.simpleMessage("माझ्या लक्षात ठेवा"),
@@ -531,6 +599,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "reports": MessageLookupByLibrary.simpleMessage("अहवाल"),
         "resendIn": MessageLookupByLibrary.simpleMessage("OTP पुन्हा पाठवा"),
         "resendOTP": MessageLookupByLibrary.simpleMessage("OTP पुनः पाठवा"),
+        "resendOTPIn":
+            MessageLookupByLibrary.simpleMessage("OTP पुन्हा पाठविण्यासाठी"),
         "reset": MessageLookupByLibrary.simpleMessage(
             "ईमेल किंवा फोन नंबर वापरून पासवर्ड रीसेट करा"),
         "resetPassword": MessageLookupByLibrary.simpleMessage(
@@ -547,18 +617,28 @@ class MessageLookup extends MessageLookupByLibrary {
         "salesBy": MessageLookupByLibrary.simpleMessage("विक्री केली: "),
         "salesDetails": MessageLookupByLibrary.simpleMessage("विक्री तपशील"),
         "salesList": MessageLookupByLibrary.simpleMessage("विक्री यादी"),
+        "salesPrice": MessageLookupByLibrary.simpleMessage("विक्री किंमत"),
         "salesPurchaseOverview":
             MessageLookupByLibrary.simpleMessage("विक्री आणि खरेदीचे आढावा"),
         "salesReport": MessageLookupByLibrary.simpleMessage("विक्री अहवाल"),
+        "sat": MessageLookupByLibrary.simpleMessage("शनि"),
         "save": MessageLookupByLibrary.simpleMessage("सेव्ह करा"),
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("सेव्ह आणि प्रकाशित करा"),
+        "scanProductQRCode":
+            MessageLookupByLibrary.simpleMessage("उत्पादन QR कोड स्कॅन करा"),
         "search": MessageLookupByLibrary.simpleMessage("शोधा"),
         "searchH": MessageLookupByLibrary.simpleMessage("येथे शोधा...."),
+        "searchHere": MessageLookupByLibrary.simpleMessage("इथे शोधा"),
+        "seconds": MessageLookupByLibrary.simpleMessage("सेकंद"),
         "seeAllPromoCode":
             MessageLookupByLibrary.simpleMessage("सर्व प्रोमो कोड पहा"),
         "select": MessageLookupByLibrary.simpleMessage("निवडा"),
         "selectABrand": MessageLookupByLibrary.simpleMessage("एक ब्रँड निवडा"),
+        "selectABusinessCategory":
+            MessageLookupByLibrary.simpleMessage("व्यवसाय श्रेणी निवडा"),
+        "selectACategory":
+            MessageLookupByLibrary.simpleMessage("एक श्रेणी निवडा"),
         "selectAInvoice": MessageLookupByLibrary.simpleMessage("एक चलन निवडा"),
         "selectBusinessCategory":
             MessageLookupByLibrary.simpleMessage("व्यवसाय श्रेणी निवडा"),
@@ -609,6 +689,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("स्टॉक"),
         "stockList": MessageLookupByLibrary.simpleMessage("स्टॉक यादी"),
         "stockReport": MessageLookupByLibrary.simpleMessage("स्टॉक रिपोर्ट"),
+        "stockS": MessageLookupByLibrary.simpleMessage("स्टॉक्स"),
         "stockValue": MessageLookupByLibrary.simpleMessage("स्टॉकची किंमत"),
         "stocks": MessageLookupByLibrary.simpleMessage("स्टॉक: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("उपयुक्त एकूण"),
@@ -619,15 +700,22 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("यशस्वीपणे पैसे दिले"),
         "supplerPay": MessageLookupByLibrary.simpleMessage("पुरवठादाराचे देय"),
         "supplier": MessageLookupByLibrary.simpleMessage("आपूर्तीदार"),
+        "supplierDetails":
+            MessageLookupByLibrary.simpleMessage("पुरवठादार माहिती"),
         "supplierName":
             MessageLookupByLibrary.simpleMessage("आपूर्तीदाराचं नाव"),
         "thakYouForYourPurchase":
             MessageLookupByLibrary.simpleMessage("तुमच्या खरेदीसाठी धन्यवाद"),
         "thankYouForYourDuePayment":
             MessageLookupByLibrary.simpleMessage("तुमच्या देयकासाठी धन्यवाद"),
+        "thisMonth": MessageLookupByLibrary.simpleMessage("या महिन्यात"),
         "thisProductAlreadyAdded":
             MessageLookupByLibrary.simpleMessage("हे उत्पादन आधीच जोडले आहे!"),
+        "thisWeek": MessageLookupByLibrary.simpleMessage("या आठवड्यात"),
+        "thisYear": MessageLookupByLibrary.simpleMessage("या वर्षी"),
+        "thurs": MessageLookupByLibrary.simpleMessage("गुरुवार"),
         "toDate": MessageLookupByLibrary.simpleMessage("तारखेपर्यंत"),
+        "toDay": MessageLookupByLibrary.simpleMessage("आज"),
         "todaySummary": MessageLookupByLibrary.simpleMessage("आजचा सारांश"),
         "total": MessageLookupByLibrary.simpleMessage("एकूण"),
         "totalAmount": MessageLookupByLibrary.simpleMessage("एकूण रक्कम"),
@@ -650,11 +738,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "totall": MessageLookupByLibrary.simpleMessage("एकूण:"),
         "transactions": MessageLookupByLibrary.simpleMessage("लेनदेन"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("पुन्हा प्रयत्न करा"),
+        "tues": MessageLookupByLibrary.simpleMessage("मंगळवार"),
         "twitter": MessageLookupByLibrary.simpleMessage("ट्विटर"),
         "type": MessageLookupByLibrary.simpleMessage("प्रकार"),
         "unPaid": MessageLookupByLibrary.simpleMessage("बक्षीश न दिलेले"),
         "unitName": MessageLookupByLibrary.simpleMessage("एककाचं नाव"),
         "unitPirce": MessageLookupByLibrary.simpleMessage("एकक मूल्य"),
+        "unitPrice": MessageLookupByLibrary.simpleMessage("युनिट किंमत"),
         "units": MessageLookupByLibrary.simpleMessage("एकके"),
         "unlimited": MessageLookupByLibrary.simpleMessage("अमर्यादित"),
         "unlimitedUsage":
@@ -682,6 +772,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("वापरकर्ता भूमिका तपशील"),
         "userTitle": MessageLookupByLibrary.simpleMessage("वापरकर्ता शीर्षक"),
         "vat": MessageLookupByLibrary.simpleMessage("VAT"),
+        "vatDoesNOtApply":
+            MessageLookupByLibrary.simpleMessage("वॅट लागू होत नाही"),
         "verification": MessageLookupByLibrary.simpleMessage("सत्यापन"),
         "verify": MessageLookupByLibrary.simpleMessage("सत्यापित करा"),
         "verifyYourEmail":
@@ -694,6 +786,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "आम्ही तुमच्या ईमेल पत्त्यावर पुष्टीकरण ईमेल पाठवले आहे"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "आम्ही तुमच्या फोन नंबरवर OTP पाठवला आहे"),
+        "wed": MessageLookupByLibrary.simpleMessage("बुधवार"),
+        "weekly": MessageLookupByLibrary.simpleMessage("आठवड्याचा"),
         "weight": MessageLookupByLibrary.simpleMessage("वजन"),
         "welcomeBack":
             MessageLookupByLibrary.simpleMessage("पुन्हा स्वागत आहे!"),
@@ -704,9 +798,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("लवकरच जोडले जाईल"),
         "writeYourMessageHere":
             MessageLookupByLibrary.simpleMessage("तुमचे संदेश येथे लिहा"),
+        "yearly": MessageLookupByLibrary.simpleMessage("वार्षिक"),
         "yes": MessageLookupByLibrary.simpleMessage("होय"),
         "youCanNotPayMoreThenDue": MessageLookupByLibrary.simpleMessage(
             "तुम्ही देय रक्कमपेक्षा जास्त पैसे देऊ शकत नाही"),
+        "youCanNowResendTheOTP": MessageLookupByLibrary.simpleMessage(
+            "आपण आता OTP पुन्हा पाठवू शकता"),
         "youHaveToGivePermission": MessageLookupByLibrary.simpleMessage(
             "तुम्हाला परवानगी द्यावी लागेल"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("तुम्ही वापरत आहात "),

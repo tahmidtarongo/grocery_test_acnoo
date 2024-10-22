@@ -17,23 +17,30 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> {
-  List<String> timeList = [
-    'Weekly',
-    'Monthly',
-    'Yearly',
-  ];
-  String selectedTimeList = 'Weekly';
+
+  Map<String,dynamic> get timeList =>
+      {
+        "Weekly" : lang.S.current.weekly,
+        //'Weekly',
+        'Monthly' :  lang.S.current.monthly,
+        //'Monthly',
+        "Yearly":  lang.S.current.yearly,
+        //'Yearly',
+      };
+  late String selectedTimeList = timeList.entries.first.key;
+
   DropdownButton<String> getTime(WidgetRef ref) {
-    List<DropdownMenuItem<String>> itemList = [];
-    for (var des in timeList) {
-      var item = DropdownMenuItem(
-          value: des,
-          child: Text(
-            des,
-            style: const TextStyle(color: kGreyTextColor, fontSize: 14, fontWeight: FontWeight.w500),
-          ));
-      itemList.add(item);
-    }
+    List<DropdownMenuItem<String>> itemList = [
+      ...timeList.entries.map((e) {
+        return DropdownMenuItem(
+            value: e.key,
+            child: Text(
+              e.value,
+              style: const TextStyle(color: kGreyTextColor, fontSize: 14, fontWeight: FontWeight.w500),
+            ));
+      })
+    ];
+
     return DropdownButton(
         icon: const Icon(
           Icons.keyboard_arrow_down,

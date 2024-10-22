@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
-
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 class TestNumericAxisChart extends StatefulWidget {
   const TestNumericAxisChart({Key? key}) : super(key: key);
 
@@ -9,14 +9,14 @@ class TestNumericAxisChart extends StatefulWidget {
 }
 
 class _TestNumericAxisChartState extends State<TestNumericAxisChart> {
-  final List<ChartData> chartData = [
-    ChartData('Sat', 20000, 15000),
-    ChartData('Sun', 10000, 25000),
-    ChartData('Mon', 5000, 5000),
-    ChartData('Tues', 45000, 35000),
-    ChartData('Wed', 25000, 30000),
-    ChartData('Thurs', 20000, 10000),
-    ChartData('Fri', 25000, 20000),
+   List<ChartData> get chartData => [
+    ChartData(lang.S.current.sat, 20000, 15000),
+    ChartData(lang.S.current.Sun, 10000, 25000),
+    ChartData(lang.S.current.mon, 5000, 5000),
+    ChartData(lang.S.current.tues, 45000, 35000),
+    ChartData(lang.S.current.wed, 25000, 30000),
+    ChartData(lang.S.current.thurs, 20000, 10000),
+    ChartData(lang.S.current.fri, 25000, 20000),
   ];
 
   @override

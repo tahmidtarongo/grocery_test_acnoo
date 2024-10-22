@@ -91,7 +91,7 @@ class _CustomerDetailsState extends State<CustomerDetails> {
           surfaceTintColor: kWhite,
           backgroundColor: Colors.white,
           title: Text(
-            widget.party.type != 'Supplier' ? lang.S.of(context).CustomerDetails : " Supplier Details",
+            widget.party.type != 'Supplier' ? lang.S.of(context).CustomerDetails : lang.S.of(context).supplierDetails,
             style: GoogleFonts.poppins(
               color: Colors.black,
             ),

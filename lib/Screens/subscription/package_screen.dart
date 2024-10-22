@@ -131,7 +131,7 @@ class _PackageScreenState extends State<PackageScreen> {
                                           style: const TextStyle(fontSize: 14),
                                         ),
                                         Text(
-                                          '${info.enrolledPlan?.plan?.subscriptionName} Package',
+                                          '${info.enrolledPlan?.plan?.subscriptionName} ${lang.S.of(context).package}',
                                           overflow: TextOverflow.ellipsis,
                                           maxLines: 1,
                                           style: const TextStyle(
@@ -156,7 +156,7 @@ class _PackageScreenState extends State<PackageScreen> {
                                   ),
                                   child: Center(
                                       child: Text(
-                                        '${(DateTime.parse(info.subscriptionDate ?? '').difference(DateTime.now()).inDays.abs() - (info.enrolledPlan?.duration ?? 0)).abs()} \nDays Left',
+                                        '${(DateTime.parse(info.subscriptionDate ?? '').difference(DateTime.now()).inDays.abs() - (info.enrolledPlan?.duration ?? 0)).abs()} \n${lang.S.of(context).daysLeft}',
                                         textAlign: TextAlign.center,
                                         style: const TextStyle(fontSize: 12, color: Colors.white),
                                       )),

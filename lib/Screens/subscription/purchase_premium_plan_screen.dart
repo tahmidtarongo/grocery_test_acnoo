@@ -261,7 +261,7 @@ class _PurchasePremiumPlanScreenState extends State<PurchasePremiumPlanScreen> {
                                                     style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                                                   ),
                                                   Text(
-                                                    '${data[index].duration} days',
+                                                    '${data[index].duration} ${lang.S.of(context).days}',
                                                     textAlign: TextAlign.center,
                                                     style: const TextStyle(
                                                       fontSize: 13,

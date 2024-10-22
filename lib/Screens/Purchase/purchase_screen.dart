@@ -58,10 +58,16 @@ class _PurchaseScreenState extends State<PurchaseScreen> {
           actions: [
             PopupMenuButton(
               itemBuilder: (BuildContext bc) => [
-                const PopupMenuItem(value: "/addPromoCode", child: Text('Add Promo Code')),
-                const PopupMenuItem(value: "/addDiscount", child: Text('Add Discount')),
-                const PopupMenuItem(value: "/settings", child: Text('Cancel All Product')),
-                const PopupMenuItem(value: "/settings", child: Text('Vat Doesn\'t Apply')),
+                // const PopupMenuItem(value: "/addPromoCode", child: Text('Add Promo Code')),
+                // const PopupMenuItem(value: "/addDiscount", child: Text('Add Discount')),
+                // const PopupMenuItem(value: "/settings", child: Text('Cancel All Product')),
+                // const PopupMenuItem(value: "/settings", child: Text('Vat Doesn\'t Apply')),
+
+                 PopupMenuItem(value: "/addPromoCode", child: Text(lang.S.of(context).addPromoCode)),
+                 PopupMenuItem(value: "/addDiscount", child: Text(lang.S.of(context).addDiscount)),
+                 PopupMenuItem(value: "/settings", child: Text(lang.S.of(context).cancelAllProduct)),
+                 PopupMenuItem(value: "/settings", child: Text(lang.S.of(context).vatDoesNOtApply)),
+
               ],
               onSelected: (value) {
                 Navigator.pushNamed(context, '$value');

@@ -117,7 +117,8 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                         cartProviderData.clearCart();
                         Navigator.pop(context);
                       },
-                      child: const Text('Clear All'),
+                      //child: const Text('Clear All'),
+                      child:  Text(lang.S.of(context).clearAll),
                     ),
                   ];
                 },
@@ -157,8 +158,9 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                             Text(
                               selectedCustomer?.phone ?? '',
                             ),
-                            const Text(
-                              'Previous Due',
+                             Text(
+                               lang.S.of(context).previousDue,
+                              //'Previous Due',
                             ),
                           ],
                         ),
@@ -187,9 +189,10 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                           setState(() {});
                         },
                         leading: const Icon(IconlyBold.add_user, color: kMainColor, size: 26),
-                        title: const Text(
-                          'Add Customer',
-                          style: TextStyle(color: kMainColor),
+                        title:  Text(
+                          lang.S.of(context).addCustomer,
+                          //'Add Customer',
+                          style: const TextStyle(color: kMainColor),
                         ),
                         shape: const Border(bottom: BorderSide(width: 1, color: kBorderColor), top: BorderSide(width: 1, color: kBorderColor)),
                         trailing: const Icon(
@@ -289,9 +292,9 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                   onPressed: () {
                                     Navigator.pop(context);
                                   },
-                                  child: const Text(
-                                    '+ Add Items',
-                                    style: TextStyle(fontSize: 16, color: kMainColor),
+                                  child:  Text(
+                                    '+ ${lang.S.of(context).addItems}',
+                                    style: const TextStyle(fontSize: 16, color: kMainColor),
                                   )),
                             ],
                           ),
@@ -682,9 +685,10 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                     });
                                   },
                                 ),
-                                const Text(
-                                  'Received Amount',
-                                  style: TextStyle(fontSize: 16),
+                                 Text(
+                                   lang.S.of(context).receivedAmount,
+                                  //'Received Amount',
+                                  style: const TextStyle(fontSize: 16),
                                 ),
                               ],
                             ),

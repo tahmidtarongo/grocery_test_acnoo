@@ -40,7 +40,8 @@ class _AddIncomeCategoryState extends State<AddIncomeCategory> {
                 image: AssetImage('images/x.png'),
               )),
           title: Text(
-            'Add Income Category',
+            lang.S.of(context).addIncomeCategory,
+            //'Add Income Category',
             style: GoogleFonts.poppins(
               color: Colors.black,
               fontSize: 20.0,
@@ -70,7 +71,8 @@ class _AddIncomeCategoryState extends State<AddIncomeCategory> {
                     validator: (value) {
                       if (value?.trim().isEmptyOrNull ?? true) {
                         //return 'Enter expanse category name';
-                        return 'Enter income category name';
+                        //return 'Enter income category name';
+                        return lang.S.of(context).enterIncomeCategoryName;
                       }
                       return null;
                     },

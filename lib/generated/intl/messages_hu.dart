@@ -24,6 +24,9 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Vásárló adatai"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "addACustomer": MessageLookupByLibrary.simpleMessage(
+            "Kérjük, adjon hozzá egy ügyfelet"),
         "addAPurchase": MessageLookupByLibrary.simpleMessage(
             "Kérjük, adjon hozzá egy vásárlást"),
         "addBrand": MessageLookupByLibrary.simpleMessage("Márka hozzáadása"),
@@ -31,14 +34,20 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Kategória hozzáadása"),
         "addContact":
             MessageLookupByLibrary.simpleMessage("Kapcsolat hozzáadása"),
-        "addCustomer": MessageLookupByLibrary.simpleMessage(
-            "Kérjük, adjon hozzá egy ügyfelet"),
+        "addCustomer":
+            MessageLookupByLibrary.simpleMessage("Vásárló hozzáadása"),
         "addDelivery":
             MessageLookupByLibrary.simpleMessage("Szállítás hozzáadása"),
+        "addDiscount":
+            MessageLookupByLibrary.simpleMessage("Kedvezmény hozzáadása"),
         "addExpense":
             MessageLookupByLibrary.simpleMessage("Költség hozzáadása"),
         "addExpenseCat":
             MessageLookupByLibrary.simpleMessage("Költségkategória hozzáadása"),
+        "addIncome":
+            MessageLookupByLibrary.simpleMessage("Jövedelem hozzáadása"),
+        "addIncomeCategory": MessageLookupByLibrary.simpleMessage(
+            "Jövedelemkategória hozzáadása"),
         "addItems": MessageLookupByLibrary.simpleMessage("Elemek hozzáadása"),
         "addNewAddress":
             MessageLookupByLibrary.simpleMessage("Új cím hozzáadása"),
@@ -52,12 +61,16 @@ class MessageLookup extends MessageLookupByLibrary {
             "Kérjük, adjon hozzá egy terméket"),
         "addProductFirst": MessageLookupByLibrary.simpleMessage(
             "Először adjon hozzá terméket"),
+        "addPromoCode":
+            MessageLookupByLibrary.simpleMessage("Promóciós kód hozzáadása"),
         "addPurchase":
             MessageLookupByLibrary.simpleMessage("Vásárlás hozzáadása"),
         "addSale":
             MessageLookupByLibrary.simpleMessage("Adjon hozzá egy akciót"),
         "addSales":
             MessageLookupByLibrary.simpleMessage("Értékesítés hozzáadása"),
+        "addToCart":
+            MessageLookupByLibrary.simpleMessage("Hozzáadás a kosárhoz"),
         "addUnit": MessageLookupByLibrary.simpleMessage("Egység hozzáadása"),
         "addUserRole": MessageLookupByLibrary.simpleMessage(
             "Felhasználói Szerep Hozzáadása"),
@@ -69,6 +82,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Minden üzleti megoldás"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
             "A PosPro egy teljes üzleti megoldás raktárkészlettel, számlával, értékesítéssel, költséggel és veszteség/nyereség számítással."),
+        "allTime": MessageLookupByLibrary.simpleMessage("Minden idő"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Már hozzáadva"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Már van fiókja?"),
@@ -83,10 +97,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "areYouSure": MessageLookupByLibrary.simpleMessage("Biztos benne?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "Biztos benne, hogy törölni akarja ezt a partnert?"),
+        "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
+            "Biztos benne, hogy törölni szeretné ezt?"),
         "backToHome":
             MessageLookupByLibrary.simpleMessage("Vissza a Főoldalra"),
         "balance": MessageLookupByLibrary.simpleMessage("Egyenleg"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("Banglades"),
+        "bank": MessageLookupByLibrary.simpleMessage("Bank"),
+        "barcodeFound":
+            MessageLookupByLibrary.simpleMessage("Vonalkód találva"),
         "billTO": MessageLookupByLibrary.simpleMessage("Számlázás címe"),
         "brand": MessageLookupByLibrary.simpleMessage("Márka"),
         "brandName": MessageLookupByLibrary.simpleMessage("Márkanév"),
@@ -99,7 +118,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "call": MessageLookupByLibrary.simpleMessage("Hívás"),
         "camera": MessageLookupByLibrary.simpleMessage("Kamera"),
         "cancel": MessageLookupByLibrary.simpleMessage("Megszünteti"),
+        "cancelAllProduct":
+            MessageLookupByLibrary.simpleMessage("Minden termék törlése"),
         "capacity": MessageLookupByLibrary.simpleMessage("Kapacitás"),
+        "card": MessageLookupByLibrary.simpleMessage("Kártya"),
         "cash": MessageLookupByLibrary.simpleMessage("Készpénz"),
         "categories": MessageLookupByLibrary.simpleMessage("Kategóriák"),
         "category": MessageLookupByLibrary.simpleMessage("Kategória"),
@@ -117,6 +139,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
             "A funkciók fontos részét képezik annak, hogy a PosPro más legyen, mint a hagyományos megoldások."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
+        "clearAll": MessageLookupByLibrary.simpleMessage("Összes törlése"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Kattintson a csatlakozáshoz"),
         "close": MessageLookupByLibrary.simpleMessage("Bezárás"),
@@ -148,6 +171,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "continueButton": MessageLookupByLibrary.simpleMessage("Folytatni"),
         "continueE": MessageLookupByLibrary.simpleMessage("Folytatás"),
         "cost": MessageLookupByLibrary.simpleMessage("Költség"),
+        "couldNotFetchProducts": MessageLookupByLibrary.simpleMessage(
+            "Nem sikerült a termékek betöltése"),
+        "couldNotFetchTheCategories": MessageLookupByLibrary.simpleMessage(
+            "Nem sikerült a kategóriák betöltése"),
         "country": MessageLookupByLibrary.simpleMessage("Ország"),
         "create": MessageLookupByLibrary.simpleMessage("Létrehozás"),
         "createAFreeAccount": MessageLookupByLibrary.simpleMessage(
@@ -157,6 +184,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Új jelszó létrehozása"),
         "currency": MessageLookupByLibrary.simpleMessage("Valuta"),
+        "currentYear": MessageLookupByLibrary.simpleMessage("Jelenlegi év"),
         "customInvoiceBranding": MessageLookupByLibrary.simpleMessage(
             "Személyre szabott számlamárkázás"),
         "customerDue": MessageLookupByLibrary.simpleMessage("Ügyfél tartozás"),
@@ -172,9 +200,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "date": MessageLookupByLibrary.simpleMessage("Dátum"),
         "dates": MessageLookupByLibrary.simpleMessage("Dátum:"),
         "days": MessageLookupByLibrary.simpleMessage("nap"),
+        "daysLeft": MessageLookupByLibrary.simpleMessage("Hátralévő napok"),
         "dealer": MessageLookupByLibrary.simpleMessage("Kereskedő"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage("Kereskedői ár"),
         "delete": MessageLookupByLibrary.simpleMessage("Törlés"),
+        "deleteConfirmation":
+            MessageLookupByLibrary.simpleMessage("Törlés megerősítése"),
         "deleting": MessageLookupByLibrary.simpleMessage("Törlés...."),
         "deliveryAddress":
             MessageLookupByLibrary.simpleMessage("Szállítási cím"),
@@ -192,6 +223,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ki akar lépni az alkalmazásból?"),
         "donNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Nincs fiókja?"),
+        "done": MessageLookupByLibrary.simpleMessage("Kész"),
         "due": MessageLookupByLibrary.simpleMessage("Esedékes"),
         "dueAmount": MessageLookupByLibrary.simpleMessage("Esedékes összeg: "),
         "dueCollection":
@@ -247,6 +279,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Adja meg a költség dátumát"),
         "enterFullAddress":
             MessageLookupByLibrary.simpleMessage("Adja meg a teljes címet"),
+        "enterIncomeCategoryName": MessageLookupByLibrary.simpleMessage(
+            "Adja meg a jövedelemkategória nevét"),
         "enterManufacturerName":
             MessageLookupByLibrary.simpleMessage("Adja meg a gyártó nevét"),
         "enterName": MessageLookupByLibrary.simpleMessage("Adja meg a nevet"),
@@ -268,6 +302,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterStock":
             MessageLookupByLibrary.simpleMessage("Adja meg a készletet"),
         "enterType": MessageLookupByLibrary.simpleMessage("Adja meg a típust"),
+        "enterUnitQuantity": MessageLookupByLibrary.simpleMessage(
+            "Adja meg az egységek mennyiségét"),
         "enterUserTitle": MessageLookupByLibrary.simpleMessage(
             "Adja meg a felhasználói címet"),
         "enterValidOTP":
@@ -305,6 +341,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ingyenes Élethosszig Tartó Frissítés"),
         "freePack": MessageLookupByLibrary.simpleMessage("Ingyenes csomag"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Ingyenes terv"),
+        "fri": MessageLookupByLibrary.simpleMessage("Péntek"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Dátumtól"),
         "fullName": MessageLookupByLibrary.simpleMessage("Teljes név"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("Teljesen kifizetve"),
@@ -320,18 +357,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("Kezdőlap"),
         "image": MessageLookupByLibrary.simpleMessage("Kép"),
         "income": MessageLookupByLibrary.simpleMessage("Bevétel"),
+        "incomeCategories":
+            MessageLookupByLibrary.simpleMessage("Jövedelemkategóriák"),
+        "incomeFor": MessageLookupByLibrary.simpleMessage("Jövedelem"),
         "incomeReport":
             MessageLookupByLibrary.simpleMessage("Bevételi jelentés"),
         "instagram": MessageLookupByLibrary.simpleMessage("Instagram"),
         "inv": MessageLookupByLibrary.simpleMessage("számlaszám"),
         "invoice": MessageLookupByLibrary.simpleMessage("Számla"),
         "itemAdded": MessageLookupByLibrary.simpleMessage("Elem hozzáadva"),
+        "itemDetails": MessageLookupByLibrary.simpleMessage("Tétel részletei"),
+        "items": MessageLookupByLibrary.simpleMessage("Tételek"),
+        "itemsFor": MessageLookupByLibrary.simpleMessage("tételek"),
         "itemsSales":
             MessageLookupByLibrary.simpleMessage("Termékek értékesítése"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("Jelszó"),
         "language": MessageLookupByLibrary.simpleMessage("nyelv"),
+        "last30Days": MessageLookupByLibrary.simpleMessage("Utolsó 30 nap"),
+        "last7Days": MessageLookupByLibrary.simpleMessage("Utolsó 7 nap"),
         "lastName": MessageLookupByLibrary.simpleMessage("Vezetéknév"),
+        "lastYear": MessageLookupByLibrary.simpleMessage("Tavaly"),
         "link": MessageLookupByLibrary.simpleMessage("Link"),
         "linkedIN": MessageLookupByLibrary.simpleMessage("LinkedIn"),
         "loading": MessageLookupByLibrary.simpleMessage("Betöltés"),
@@ -347,6 +393,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Natoque aliquet et, cur eget. Tellus sapien odio aliq."),
         "loremIpsumDolorSit": MessageLookupByLibrary.simpleMessage(
             "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."),
+        "loremIpsumDolorSitAmetConsecteturAdipiscingElitMaurisCras":
+            MessageLookupByLibrary.simpleMessage(
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cras"),
         "loremIpsumDolorSitAmetConsecteturElitInterdumCons":
             MessageLookupByLibrary.simpleMessage(
                 "Lorem ipsum dolor sit amet, consectetur elit. Interdum cons."),
@@ -362,6 +411,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "manufacturer": MessageLookupByLibrary.simpleMessage("Gyártó"),
         "masterCard": MessageLookupByLibrary.simpleMessage("MasterCard"),
         "mobile": MessageLookupByLibrary.simpleMessage("Mobil:"),
+        "mobilePayment": MessageLookupByLibrary.simpleMessage("Mobilfizetés"),
+        "mon": MessageLookupByLibrary.simpleMessage("Hétfő"),
+        "monthly": MessageLookupByLibrary.simpleMessage("Havonta"),
         "moreInfo": MessageLookupByLibrary.simpleMessage("Több információ"),
         "mrp": MessageLookupByLibrary.simpleMessage("MRP"),
         "name": MessageLookupByLibrary.simpleMessage("Név"),
@@ -384,9 +436,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Nincs elérhető szállító"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("Nincs tranzakció"),
+        "notActiveUser":
+            MessageLookupByLibrary.simpleMessage("Nem aktív felhasználó"),
         "notFound": MessageLookupByLibrary.simpleMessage("Nem található"),
         "note": MessageLookupByLibrary.simpleMessage("jegyzet"),
         "notification": MessageLookupByLibrary.simpleMessage("Értesítés"),
+        "oK": MessageLookupByLibrary.simpleMessage("Rendben"),
         "off": MessageLookupByLibrary.simpleMessage("Ki"),
         "on": MessageLookupByLibrary.simpleMessage("Be"),
         "openingBalance":
@@ -435,6 +490,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Válassza ki a befejezési dátumot"),
         "pickStartDate": MessageLookupByLibrary.simpleMessage(
             "Válassza ki a kezdési dátumot"),
+        "plan": MessageLookupByLibrary.simpleMessage("Terv"),
         "pleaseAddQuantity": MessageLookupByLibrary.simpleMessage(
             "Kérjük, adjon hozzá mennyiséget"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
@@ -467,6 +523,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Kérjük, adja meg az összeget"),
         "pleaseEnterName":
             MessageLookupByLibrary.simpleMessage("Kérjük, adja meg a nevet"),
+        "pleaseEnterSalesPrice": MessageLookupByLibrary.simpleMessage(
+            "Kérjük, adja meg az eladási árat"),
         "pleaseEnterTheOTP":
             MessageLookupByLibrary.simpleMessage("Kérjük, adja meg az OTP-t"),
         "pleaseEnterUnitName": MessageLookupByLibrary.simpleMessage(
@@ -482,12 +540,17 @@ class MessageLookup extends MessageLookupByLibrary {
             "Kérjük, válasszon ki egy kategóriát"),
         "pleaseSelectAExpenseCategory": MessageLookupByLibrary.simpleMessage(
             "Kérjük, válasszon ki egy költségkategóriát"),
+        "pleaseUseTheValidPurchaseCodeToUseTheApp":
+            MessageLookupByLibrary.simpleMessage(
+                "Kérjük, használja az érvényes vásárlási kódot az alkalmazás használatához"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "Android és iOS alkalmazás támogatás"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Prémium csomag"),
         "previousDue": MessageLookupByLibrary.simpleMessage("Előző esedékes"),
         "previousPayAmount":
             MessageLookupByLibrary.simpleMessage("Előző fizetési összeg"),
+        "priceMustBeGreaterThan": MessageLookupByLibrary.simpleMessage(
+            "Az árnak nagyobbnak kell lennie, mint"),
         "print": MessageLookupByLibrary.simpleMessage("Nyomtatás"),
         "printing":
             MessageLookupByLibrary.simpleMessage("Nyomtatási lehetőség"),
@@ -528,14 +591,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchased": MessageLookupByLibrary.simpleMessage("Vásárolt"),
         "qty": MessageLookupByLibrary.simpleMessage("Menny."),
         "quantity": MessageLookupByLibrary.simpleMessage("Mennyiség"),
+        "quantityExceedsAvailableStock": MessageLookupByLibrary.simpleMessage(
+            "A mennyiség meghaladja a rendelkezésre álló készletet"),
+        "quantityMustBeGreaterThan": MessageLookupByLibrary.simpleMessage(
+            "A mennyiségnek nagyobbnak kell lennie, mint"),
         "quickOverview":
             MessageLookupByLibrary.simpleMessage("Gyors áttekintés"),
+        "receivedAmount": MessageLookupByLibrary.simpleMessage("Kapott összeg"),
         "recentTransaction":
             MessageLookupByLibrary.simpleMessage("Legutóbbi tranzakciók"),
         "referenceNo": MessageLookupByLibrary.simpleMessage("Referenciaszám"),
         "register": MessageLookupByLibrary.simpleMessage("Regisztráció"),
         "registerTitle": MessageLookupByLibrary.simpleMessage(
             "Regisztrálnunk kell telefonját anélkül, hogy elkezdenénk!"),
+        "relatedDataWillBeDeletedAlso": MessageLookupByLibrary.simpleMessage(
+            "Kapcsolódó adatok is törlésre kerülnek"),
         "remainingDue":
             MessageLookupByLibrary.simpleMessage("Hátralévő esedékesség"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("Emlékezz rám"),
@@ -545,6 +615,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resendIn": MessageLookupByLibrary.simpleMessage("Újraküldés OTP itt"),
         "resendOTP":
             MessageLookupByLibrary.simpleMessage("Küldje újra az OTP-t"),
+        "resendOTPIn": MessageLookupByLibrary.simpleMessage("OTP újraküldése"),
         "reset": MessageLookupByLibrary.simpleMessage(
             "Állítsa vissza a jelszót e-mail vagy telefonszám használatával"),
         "resetPassword": MessageLookupByLibrary.simpleMessage(
@@ -561,20 +632,30 @@ class MessageLookup extends MessageLookupByLibrary {
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("Értékesítési részletek"),
         "salesList": MessageLookupByLibrary.simpleMessage("Eladási lista"),
+        "salesPrice": MessageLookupByLibrary.simpleMessage("Eladási ár"),
         "salesPurchaseOverview": MessageLookupByLibrary.simpleMessage(
             "Eladási és vásárlási áttekintés"),
         "salesReport":
             MessageLookupByLibrary.simpleMessage("Értékesítési jelentés"),
+        "sat": MessageLookupByLibrary.simpleMessage("Szo"),
         "save": MessageLookupByLibrary.simpleMessage("Megment"),
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("Mentés és közzététel"),
+        "scanProductQRCode": MessageLookupByLibrary.simpleMessage(
+            "Termék QR kódjának beolvasása"),
         "search": MessageLookupByLibrary.simpleMessage("Keresés"),
         "searchH": MessageLookupByLibrary.simpleMessage("Keresés itt...."),
+        "searchHere": MessageLookupByLibrary.simpleMessage("Keressen itt"),
+        "seconds": MessageLookupByLibrary.simpleMessage("másodpercek"),
         "seeAllPromoCode": MessageLookupByLibrary.simpleMessage(
             "Összes promóciós kód megtekintése"),
         "select": MessageLookupByLibrary.simpleMessage("Válassza ki"),
         "selectABrand":
             MessageLookupByLibrary.simpleMessage("Válasszon egy márkát"),
+        "selectABusinessCategory": MessageLookupByLibrary.simpleMessage(
+            "Válasszon egy üzleti kategóriát"),
+        "selectACategory":
+            MessageLookupByLibrary.simpleMessage("Válasszon egy kategóriát"),
         "selectAInvoice":
             MessageLookupByLibrary.simpleMessage("Válasszon egy számlát"),
         "selectBusinessCategory": MessageLookupByLibrary.simpleMessage(
@@ -631,6 +712,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("Készlet"),
         "stockList": MessageLookupByLibrary.simpleMessage("Részvénylista"),
         "stockReport": MessageLookupByLibrary.simpleMessage("Készletjelentés"),
+        "stockS": MessageLookupByLibrary.simpleMessage("Készletek"),
         "stockValue": MessageLookupByLibrary.simpleMessage("Készlet érték"),
         "stocks": MessageLookupByLibrary.simpleMessage("Készletek: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Részösszeg"),
@@ -642,12 +724,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "supplerPay":
             MessageLookupByLibrary.simpleMessage("Beszállító fizetés"),
         "supplier": MessageLookupByLibrary.simpleMessage("Támogató"),
+        "supplierDetails":
+            MessageLookupByLibrary.simpleMessage("Szállító részletei"),
         "supplierName": MessageLookupByLibrary.simpleMessage("Szállító neve"),
         "thankYouForYourDuePayment": MessageLookupByLibrary.simpleMessage(
             "Köszönjük a befizetett összeget"),
+        "thisMonth": MessageLookupByLibrary.simpleMessage("E hónapban"),
         "thisProductAlreadyAdded":
             MessageLookupByLibrary.simpleMessage("Ez a termék már hozzáadva!"),
+        "thisWeek": MessageLookupByLibrary.simpleMessage("Ezen a héten"),
+        "thisYear": MessageLookupByLibrary.simpleMessage("Ebben az évben"),
+        "thurs": MessageLookupByLibrary.simpleMessage("Csütörtök"),
         "toDate": MessageLookupByLibrary.simpleMessage("Randizni"),
+        "toDay": MessageLookupByLibrary.simpleMessage("Ma"),
         "todaySummary":
             MessageLookupByLibrary.simpleMessage("Napi összefoglaló"),
         "total": MessageLookupByLibrary.simpleMessage("Teljes"),
@@ -673,10 +762,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "totall": MessageLookupByLibrary.simpleMessage("Összesen:"),
         "transactions": MessageLookupByLibrary.simpleMessage("Tranzakciók"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("Próbáld újra"),
+        "tues": MessageLookupByLibrary.simpleMessage("Kedd"),
         "twitter": MessageLookupByLibrary.simpleMessage("Twitter"),
         "type": MessageLookupByLibrary.simpleMessage("Típus"),
         "unPaid": MessageLookupByLibrary.simpleMessage("Kifizetetlen"),
         "unitName": MessageLookupByLibrary.simpleMessage("Az egység neve"),
+        "unitPrice": MessageLookupByLibrary.simpleMessage("Egységár"),
         "units": MessageLookupByLibrary.simpleMessage("Egységek"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Korlátlan"),
         "unlimitedUsage":
@@ -704,6 +795,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Felhasználói szerep részletei"),
         "userTitle": MessageLookupByLibrary.simpleMessage("Felhasználói cím"),
         "vat": MessageLookupByLibrary.simpleMessage("ÁFA"),
+        "vatDoesNOtApply":
+            MessageLookupByLibrary.simpleMessage("Az ÁFA nem vonatkozik rá"),
         "verification": MessageLookupByLibrary.simpleMessage("Ellenőrzés"),
         "verify": MessageLookupByLibrary.simpleMessage("Ellenőrzés"),
         "verifyYourEmail":
@@ -716,6 +809,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Megerősítő e-mailt küldtünk"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Elküldtük az OTP-t a telefonszámára"),
+        "wed": MessageLookupByLibrary.simpleMessage("Szerda"),
+        "weekly": MessageLookupByLibrary.simpleMessage("Hetente"),
         "weight": MessageLookupByLibrary.simpleMessage("Súly"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Üdv újra!"),
         "whatNew": MessageLookupByLibrary.simpleMessage("Mi újság"),
@@ -726,9 +821,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Hamarosan hozzáadva"),
         "writeYourMessageHere":
             MessageLookupByLibrary.simpleMessage("Írja meg üzenetét itt"),
+        "yearly": MessageLookupByLibrary.simpleMessage("Évente"),
         "yes": MessageLookupByLibrary.simpleMessage("Igen"),
         "youCanNotPayMoreThenDue": MessageLookupByLibrary.simpleMessage(
             "Nem fizethet többet a tartozásnál"),
+        "youCanNowResendTheOTP": MessageLookupByLibrary.simpleMessage(
+            "Most már újra elküldheti az OTP-t"),
         "youHaveToGivePermission":
             MessageLookupByLibrary.simpleMessage("Engedélyt kell adnia"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("Ön használ "),

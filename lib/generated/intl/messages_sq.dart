@@ -24,17 +24,23 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Detajet e Klientit"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "addACustomer":
+            MessageLookupByLibrary.simpleMessage("Ju lutemi shtoni një klient"),
         "addAPurchase":
             MessageLookupByLibrary.simpleMessage("Ju lutemi shtoni një Blerje"),
         "addBrand": MessageLookupByLibrary.simpleMessage("Shto Brend"),
         "addCategory": MessageLookupByLibrary.simpleMessage("Shto Kategori"),
         "addContact": MessageLookupByLibrary.simpleMessage("Shto Kontakt"),
-        "addCustomer":
-            MessageLookupByLibrary.simpleMessage("Ju lutemi shtoni një klient"),
+        "addCustomer": MessageLookupByLibrary.simpleMessage("Shto Klient"),
         "addDelivery": MessageLookupByLibrary.simpleMessage("Shto Dorëzim"),
+        "addDiscount": MessageLookupByLibrary.simpleMessage("Shto Zbritje"),
         "addExpense": MessageLookupByLibrary.simpleMessage("Shto Shpenzim"),
         "addExpenseCat":
             MessageLookupByLibrary.simpleMessage("Shto Kategori Shpenzimesh"),
+        "addIncome": MessageLookupByLibrary.simpleMessage("Shto Të Ardhura"),
+        "addIncomeCategory":
+            MessageLookupByLibrary.simpleMessage("Shto Kategori Të Ardhurash"),
         "addItems": MessageLookupByLibrary.simpleMessage("Shto Artikuj"),
         "addNewAddress":
             MessageLookupByLibrary.simpleMessage("Shtoni Adresë të Re"),
@@ -47,10 +53,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ju lutemi shtoni një Produkt"),
         "addProductFirst":
             MessageLookupByLibrary.simpleMessage("Shto produktin së pari"),
+        "addPromoCode":
+            MessageLookupByLibrary.simpleMessage("Shto Kodin Promo"),
         "addPurchase": MessageLookupByLibrary.simpleMessage("Shto Blerje"),
         "addSale":
             MessageLookupByLibrary.simpleMessage("Ju lutemi shtoni një Shitje"),
         "addSales": MessageLookupByLibrary.simpleMessage("Shto Shitje"),
+        "addToCart": MessageLookupByLibrary.simpleMessage("Shto në Shportë"),
         "addUnit": MessageLookupByLibrary.simpleMessage("Shto Njësi"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Shto Rolin e Përdoruesit"),
@@ -63,6 +72,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Të Gjitha Zgjidhjet Biznesore"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
             "PosPro është një zgjidhje e plotë për biznesin me stoqe, llogari, shitje, shpenzime dhe humbje/profit."),
+        "allTime": MessageLookupByLibrary.simpleMessage("Gjithë Koha"),
         "alreadyAdded":
             MessageLookupByLibrary.simpleMessage("Tashmë është shtuar"),
         "alreadyHaveAnAccount":
@@ -78,10 +88,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "areYouSure": MessageLookupByLibrary.simpleMessage("A jeni të sigurt?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "A jeni të sigurt që dëshironi të fshini këtë palë?"),
+        "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
+            "A jeni i sigurt që dëshironi të fshini këtë?"),
         "backToHome":
             MessageLookupByLibrary.simpleMessage("Mbrapsht në Shtëpi"),
         "balance": MessageLookupByLibrary.simpleMessage("Bilanci"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("Bangladesh"),
+        "bank": MessageLookupByLibrary.simpleMessage("Bankë"),
+        "barcodeFound":
+            MessageLookupByLibrary.simpleMessage("Kodi i barkodit u gjet"),
         "billTO": MessageLookupByLibrary.simpleMessage("Fatura për"),
         "brand": MessageLookupByLibrary.simpleMessage("Marka"),
         "brandName": MessageLookupByLibrary.simpleMessage("Emri i Brendit"),
@@ -95,7 +110,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "call": MessageLookupByLibrary.simpleMessage("Thirr"),
         "camera": MessageLookupByLibrary.simpleMessage("Kamera"),
         "cancel": MessageLookupByLibrary.simpleMessage("Anulo"),
+        "cancelAllProduct":
+            MessageLookupByLibrary.simpleMessage("Anulo Të Gjitha Produktet"),
         "capacity": MessageLookupByLibrary.simpleMessage("Kapaciteti"),
+        "card": MessageLookupByLibrary.simpleMessage("Kartë"),
         "cash": MessageLookupByLibrary.simpleMessage("Gjendje"),
         "categories": MessageLookupByLibrary.simpleMessage("Kategoritë"),
         "category": MessageLookupByLibrary.simpleMessage("Kategoria"),
@@ -114,6 +132,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
             "Veçoritë janë pjesa e rëndësishme që bën PosPro të ndryshme nga zgjidhjet tradicionale."),
         "clarence": MessageLookupByLibrary.simpleMessage("Klerensi"),
+        "clearAll": MessageLookupByLibrary.simpleMessage("Pastro të Gjitha"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Klikoni për të lidhur"),
         "close": MessageLookupByLibrary.simpleMessage("Mbyll"),
@@ -144,6 +163,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "continueButton": MessageLookupByLibrary.simpleMessage("Vazhdo"),
         "continueE": MessageLookupByLibrary.simpleMessage("Vazhdo"),
         "cost": MessageLookupByLibrary.simpleMessage("Kosto"),
+        "couldNotFetchProducts": MessageLookupByLibrary.simpleMessage(
+            "Nuk mund të merrni produktet"),
+        "couldNotFetchTheCategories": MessageLookupByLibrary.simpleMessage(
+            "Nuk mund të merrni kategoritë"),
         "country": MessageLookupByLibrary.simpleMessage("Shteti"),
         "create": MessageLookupByLibrary.simpleMessage("Krijo"),
         "createAFreeAccount":
@@ -153,6 +176,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Krijo një fjalëkalim të ri"),
         "currency": MessageLookupByLibrary.simpleMessage("Monedha"),
+        "currentYear": MessageLookupByLibrary.simpleMessage("Viti aktual"),
         "customInvoiceBranding": MessageLookupByLibrary.simpleMessage(
             "Markimi i Personalizuar i Fakturave"),
         "customerDue":
@@ -169,10 +193,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "date": MessageLookupByLibrary.simpleMessage("Data"),
         "dates": MessageLookupByLibrary.simpleMessage("Data:"),
         "days": MessageLookupByLibrary.simpleMessage("ditë"),
+        "daysLeft": MessageLookupByLibrary.simpleMessage("Ditët e Lëna"),
         "dealer": MessageLookupByLibrary.simpleMessage("Shitës"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage(
             "Çmimi i Shitjes për Shitësin"),
         "delete": MessageLookupByLibrary.simpleMessage("Fshij"),
+        "deleteConfirmation":
+            MessageLookupByLibrary.simpleMessage("Konfirmimi i Fshirjes"),
         "deleting": MessageLookupByLibrary.simpleMessage("Fshirja...."),
         "deliveryAddress":
             MessageLookupByLibrary.simpleMessage("Adresa e Dorëzimit"),
@@ -190,6 +217,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "A dëshironi të dilni nga aplikacioni?"),
         "donNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Nuk keni një llogari?"),
+        "done": MessageLookupByLibrary.simpleMessage("Përfunduar"),
         "due": MessageLookupByLibrary.simpleMessage("Borxh"),
         "dueAmount": MessageLookupByLibrary.simpleMessage("Shuma e Borxhit: "),
         "dueCollection":
@@ -243,6 +271,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Shkruani datën e shpenzimit"),
         "enterFullAddress": MessageLookupByLibrary.simpleMessage(
             "Shkruani adresën tuaj të plotë"),
+        "enterIncomeCategoryName": MessageLookupByLibrary.simpleMessage(
+            "Shkruani emrin e kategorisë së të ardhurave"),
         "enterManufacturerName":
             MessageLookupByLibrary.simpleMessage("Futni emrin e prodhuesit"),
         "enterName": MessageLookupByLibrary.simpleMessage("Shkruani Emrin"),
@@ -261,6 +291,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterSize": MessageLookupByLibrary.simpleMessage("Fut Madhësinë"),
         "enterStock": MessageLookupByLibrary.simpleMessage("Fut Stokun"),
         "enterType": MessageLookupByLibrary.simpleMessage("Fut Tipin"),
+        "enterUnitQuantity":
+            MessageLookupByLibrary.simpleMessage("Shkruani sasinë për njësi"),
         "enterUserTitle":
             MessageLookupByLibrary.simpleMessage("Fut Titullin e Përdoruesit"),
         "enterValidOTP":
@@ -300,6 +332,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Përditësim i Lirë për Jetë"),
         "freePack": MessageLookupByLibrary.simpleMessage("Paketën e Lirë"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Paketa e Lirë"),
+        "fri": MessageLookupByLibrary.simpleMessage("Prem"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Nga data"),
         "fullName": MessageLookupByLibrary.simpleMessage("Emri i Plotë"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("Paguar Plotësisht"),
@@ -317,6 +350,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("Kryefaqja"),
         "image": MessageLookupByLibrary.simpleMessage("Imazhi"),
         "income": MessageLookupByLibrary.simpleMessage("Të Ardhurat"),
+        "incomeCategories":
+            MessageLookupByLibrary.simpleMessage("Kategoritë e Të Ardhurave"),
+        "incomeFor": MessageLookupByLibrary.simpleMessage("Të Ardhurat Për"),
         "incomeReport":
             MessageLookupByLibrary.simpleMessage("Raporti i Të Ardhurave"),
         "instagram": MessageLookupByLibrary.simpleMessage("Instagram"),
@@ -324,12 +360,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "invoice": MessageLookupByLibrary.simpleMessage("Fatura"),
         "itemAdded":
             MessageLookupByLibrary.simpleMessage("Artikulli është Shtuar"),
+        "itemDetails":
+            MessageLookupByLibrary.simpleMessage("Detajet e Artikujve"),
+        "items": MessageLookupByLibrary.simpleMessage("Artikuj"),
+        "itemsFor": MessageLookupByLibrary.simpleMessage("artikuj për"),
         "itemsSales":
             MessageLookupByLibrary.simpleMessage("Shitjet e Artikujve"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("Email"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("Fjalëkalimi"),
         "language": MessageLookupByLibrary.simpleMessage("gjuha"),
+        "last30Days": MessageLookupByLibrary.simpleMessage("30 Ditët e Fundit"),
+        "last7Days": MessageLookupByLibrary.simpleMessage("7 Ditët e Fundit"),
         "lastName": MessageLookupByLibrary.simpleMessage("Mbiemri"),
+        "lastYear": MessageLookupByLibrary.simpleMessage("Viti i kaluar"),
         "link": MessageLookupByLibrary.simpleMessage("Lidh"),
         "linkedIN": MessageLookupByLibrary.simpleMessage("LinkedIn"),
         "loading": MessageLookupByLibrary.simpleMessage("Ngarkim"),
@@ -344,6 +387,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Natoque aliquet et, cur eget. Tellus sapien odio aliq."),
         "loremIpsumDolorSit": MessageLookupByLibrary.simpleMessage(
             "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."),
+        "loremIpsumDolorSitAmetConsecteturAdipiscingElitMaurisCras":
+            MessageLookupByLibrary.simpleMessage(
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cras"),
         "loremIpsumDolorSitAmetConsecteturElitInterdumCons":
             MessageLookupByLibrary.simpleMessage(
                 "Lorem ipsum dolor sit amet, consectetur elit. Interdum cons."),
@@ -358,6 +404,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "manufacturer": MessageLookupByLibrary.simpleMessage("Prodhuesi"),
         "masterCard": MessageLookupByLibrary.simpleMessage("Karta Master"),
         "mobile": MessageLookupByLibrary.simpleMessage("Celular:"),
+        "mobilePayment": MessageLookupByLibrary.simpleMessage("Pagesë Mobile"),
+        "mon": MessageLookupByLibrary.simpleMessage("Hën"),
+        "monthly": MessageLookupByLibrary.simpleMessage("Mujore"),
         "moreInfo":
             MessageLookupByLibrary.simpleMessage("Më shumë informacion"),
         "mrp": MessageLookupByLibrary.simpleMessage(
@@ -385,9 +434,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "Nuk ka Furnizues të disponueshëm"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("Nuk ka transaksion"),
+        "notActiveUser":
+            MessageLookupByLibrary.simpleMessage("Kompania e Pasaktive"),
         "notFound": MessageLookupByLibrary.simpleMessage("Nuk u Gjet"),
         "note": MessageLookupByLibrary.simpleMessage("Shënim"),
         "notification": MessageLookupByLibrary.simpleMessage("Njoftim"),
+        "oK": MessageLookupByLibrary.simpleMessage("OK"),
         "off": MessageLookupByLibrary.simpleMessage("Jashtë"),
         "on": MessageLookupByLibrary.simpleMessage("Në"),
         "openingBalance": MessageLookupByLibrary.simpleMessage("Bilanci Hapës"),
@@ -437,6 +489,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Zgjidh Datën e Mbarimit"),
         "pickStartDate":
             MessageLookupByLibrary.simpleMessage("Zgjidh Datën e Fillimit"),
+        "plan": MessageLookupByLibrary.simpleMessage("Plan"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("Ju lutemi shtoni sasinë"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
@@ -469,6 +522,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ju lutemi Futni Shumën"),
         "pleaseEnterName":
             MessageLookupByLibrary.simpleMessage("Ju lutemi Futni Emrin"),
+        "pleaseEnterSalesPrice": MessageLookupByLibrary.simpleMessage(
+            "Ju lutemi shkruani çmimin e shitjes"),
         "pleaseEnterTheOTP":
             MessageLookupByLibrary.simpleMessage("Ju lutem, vendosni OTP-në"),
         "pleaseEnterUnitName": MessageLookupByLibrary.simpleMessage(
@@ -484,6 +539,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ju lutemi zgjidhni një kategori"),
         "pleaseSelectAExpenseCategory": MessageLookupByLibrary.simpleMessage(
             "Ju lutemi zgjidhni një kategori shpenzimesh"),
+        "pleaseUseTheValidPurchaseCodeToUseTheApp":
+            MessageLookupByLibrary.simpleMessage(
+                "Ju lutemi përdorni kodin e vlefshëm të blerjes për të përdorur aplikacionin"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "Mbështetje për Aplikacionet Android & iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Paketa Premium"),
@@ -491,6 +549,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Borxhi i mëparshëm"),
         "previousPayAmount":
             MessageLookupByLibrary.simpleMessage("Shuma e Pagesës Paraprake"),
+        "priceMustBeGreaterThan": MessageLookupByLibrary.simpleMessage(
+            "Çmimi duhet të jetë më i madh se"),
         "print": MessageLookupByLibrary.simpleMessage("Printo"),
         "printing": MessageLookupByLibrary.simpleMessage("Opsioni i Printimit"),
         "product": MessageLookupByLibrary.simpleMessage("Produkt"),
@@ -535,14 +595,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchased": MessageLookupByLibrary.simpleMessage("E Blerë"),
         "qty": MessageLookupByLibrary.simpleMessage("Sasi"),
         "quantity": MessageLookupByLibrary.simpleMessage("Sasia"),
+        "quantityExceedsAvailableStock": MessageLookupByLibrary.simpleMessage(
+            "Sasia tejkalon stokun e disponueshëm"),
+        "quantityMustBeGreaterThan": MessageLookupByLibrary.simpleMessage(
+            "Sasia duhet të jetë më e madhe se"),
         "quickOverview":
             MessageLookupByLibrary.simpleMessage("Përmbledhja e Shpejtë"),
+        "receivedAmount": MessageLookupByLibrary.simpleMessage("Shuma e Marrë"),
         "recentTransaction":
             MessageLookupByLibrary.simpleMessage("Transaksionet e Fundit"),
         "referenceNo": MessageLookupByLibrary.simpleMessage("Numri Referencës"),
         "register": MessageLookupByLibrary.simpleMessage("Regjistrohu"),
         "registerTitle": MessageLookupByLibrary.simpleMessage(
             "Nevojiten të regjistrojmë numrin tuaj të telefonit përpara se të filloni!"),
+        "relatedDataWillBeDeletedAlso": MessageLookupByLibrary.simpleMessage(
+            "Të dhënat e lidhura do të fshihen gjithashtu"),
         "remainingDue":
             MessageLookupByLibrary.simpleMessage("Detyrimi i Mbetur"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("Më mbaj mend"),
@@ -551,6 +618,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "reports": MessageLookupByLibrary.simpleMessage("Raportet"),
         "resendIn": MessageLookupByLibrary.simpleMessage("Riposhtoni OTP në"),
         "resendOTP": MessageLookupByLibrary.simpleMessage("Dërgo përsëri OTP"),
+        "resendOTPIn":
+            MessageLookupByLibrary.simpleMessage("Ri-dërgo OTP-në në"),
         "reset": MessageLookupByLibrary.simpleMessage(
             "Rivendos fjalëkalimin duke përdorur emailin ose numrin e telefonit tuaj"),
         "resetPassword": MessageLookupByLibrary.simpleMessage(
@@ -566,20 +635,30 @@ class MessageLookup extends MessageLookupByLibrary {
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("Detajet e Shitjeve"),
         "salesList": MessageLookupByLibrary.simpleMessage("Lista e Shitjeve"),
+        "salesPrice": MessageLookupByLibrary.simpleMessage("Çmimi i Shitjes"),
         "salesPurchaseOverview": MessageLookupByLibrary.simpleMessage(
             "Përmbledhja e Shitjeve dhe Blerjeve"),
         "salesReport":
             MessageLookupByLibrary.simpleMessage("Raporti i Shitjeve"),
+        "sat": MessageLookupByLibrary.simpleMessage("Die"),
         "save": MessageLookupByLibrary.simpleMessage("Ruaj"),
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("Ruaj dhe Publiko"),
+        "scanProductQRCode":
+            MessageLookupByLibrary.simpleMessage("Skano QR kodin e produktit"),
         "search": MessageLookupByLibrary.simpleMessage("Kërko"),
         "searchH": MessageLookupByLibrary.simpleMessage("Kërko Këtu...."),
+        "searchHere": MessageLookupByLibrary.simpleMessage("Kërko këtu"),
+        "seconds": MessageLookupByLibrary.simpleMessage("sekonda"),
         "seeAllPromoCode": MessageLookupByLibrary.simpleMessage(
             "Shihni të gjitha kodet promocionale"),
         "select": MessageLookupByLibrary.simpleMessage("Zgjidh"),
         "selectABrand":
             MessageLookupByLibrary.simpleMessage("Zgjidh një markë"),
+        "selectABusinessCategory": MessageLookupByLibrary.simpleMessage(
+            "Zgjidhni një Kategori Biznesi"),
+        "selectACategory":
+            MessageLookupByLibrary.simpleMessage("Zgjidhni një kategori"),
         "selectAInvoice":
             MessageLookupByLibrary.simpleMessage("Zgjidh një faturë"),
         "selectBusinessCategory": MessageLookupByLibrary.simpleMessage(
@@ -635,6 +714,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("Stoku"),
         "stockList": MessageLookupByLibrary.simpleMessage("Lista e Stoqeve"),
         "stockReport": MessageLookupByLibrary.simpleMessage("Raporti i Stokut"),
+        "stockS": MessageLookupByLibrary.simpleMessage("Stoqe"),
         "stockValue": MessageLookupByLibrary.simpleMessage("Vlera e Stokut"),
         "stocks": MessageLookupByLibrary.simpleMessage("Stok: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Nëntotali"),
@@ -645,13 +725,20 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("paguat me sukses"),
         "supplerPay": MessageLookupByLibrary.simpleMessage("Furnizuesi Paguan"),
         "supplier": MessageLookupByLibrary.simpleMessage("Furnizues"),
+        "supplierDetails":
+            MessageLookupByLibrary.simpleMessage("Detajet e Furnizuesit"),
         "supplierName":
             MessageLookupByLibrary.simpleMessage("Emri i Furnizuesit"),
         "thankYouForYourDuePayment": MessageLookupByLibrary.simpleMessage(
             "Ju faleminderit për pagesën tuaj të detyrueshme"),
+        "thisMonth": MessageLookupByLibrary.simpleMessage("Këtë Muaj"),
         "thisProductAlreadyAdded": MessageLookupByLibrary.simpleMessage(
             "Ky Produkt është Shtuar Tashmë!"),
+        "thisWeek": MessageLookupByLibrary.simpleMessage("Këto Javë"),
+        "thisYear": MessageLookupByLibrary.simpleMessage("Këtë Vit"),
+        "thurs": MessageLookupByLibrary.simpleMessage("Enj"),
         "toDate": MessageLookupByLibrary.simpleMessage("Deri në datë"),
+        "toDay": MessageLookupByLibrary.simpleMessage("Sot"),
         "todaySummary":
             MessageLookupByLibrary.simpleMessage("Përmbledhja e Sotme"),
         "total": MessageLookupByLibrary.simpleMessage("Totali"),
@@ -681,10 +768,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "totall": MessageLookupByLibrary.simpleMessage("Totali:"),
         "transactions": MessageLookupByLibrary.simpleMessage("Transaksionet"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("Provo përsëri"),
+        "tues": MessageLookupByLibrary.simpleMessage("Mar"),
         "twitter": MessageLookupByLibrary.simpleMessage("Twitter"),
         "type": MessageLookupByLibrary.simpleMessage("Lloji"),
         "unPaid": MessageLookupByLibrary.simpleMessage("Jo paguar"),
         "unitName": MessageLookupByLibrary.simpleMessage("Emri i Njësisë"),
+        "unitPrice": MessageLookupByLibrary.simpleMessage("Çmimi për njësi"),
         "units": MessageLookupByLibrary.simpleMessage("Njësitë"),
         "unlimited": MessageLookupByLibrary.simpleMessage("E pa kufizuar"),
         "unlimitedUsage":
@@ -713,6 +802,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "userTitle":
             MessageLookupByLibrary.simpleMessage("Titulli i Përdoruesit"),
         "vat": MessageLookupByLibrary.simpleMessage("TVSH"),
+        "vatDoesNOtApply":
+            MessageLookupByLibrary.simpleMessage("TVSH nuk zbatohet"),
         "verification": MessageLookupByLibrary.simpleMessage("Verifikimi"),
         "verify": MessageLookupByLibrary.simpleMessage("Verifikoni"),
         "verifyYourEmail":
@@ -725,6 +816,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ne kemi dërguar një email konfirmimi në"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Kemi dërguar një OTP në numrin tuaj të telefonit"),
+        "wed": MessageLookupByLibrary.simpleMessage("Mër"),
+        "weekly": MessageLookupByLibrary.simpleMessage("Javore"),
         "weight": MessageLookupByLibrary.simpleMessage("Pesha"),
         "welcomeBack":
             MessageLookupByLibrary.simpleMessage("Mirë se erdhët përsëri!"),
@@ -736,9 +829,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Do të Shtohet Shpejt"),
         "writeYourMessageHere":
             MessageLookupByLibrary.simpleMessage("Shkruani mesazhin tuaj këtu"),
+        "yearly": MessageLookupByLibrary.simpleMessage("Vjetore"),
         "yes": MessageLookupByLibrary.simpleMessage("Po"),
         "youCanNotPayMoreThenDue": MessageLookupByLibrary.simpleMessage(
             "Nuk mund të paguani më shumë se sa është detyrimi"),
+        "youCanNowResendTheOTP": MessageLookupByLibrary.simpleMessage(
+            "Tani mund të ri-dërgoni OTP-në"),
         "youHaveToGivePermission":
             MessageLookupByLibrary.simpleMessage("Duhet të Jepni Leje"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("Po përdorni "),

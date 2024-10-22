@@ -22,20 +22,28 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Custom": MessageLookupByLibrary.simpleMessage("Personalizado"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Detalles del cliente"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "addACustomer": MessageLookupByLibrary.simpleMessage(
+            "Por favor agregue un cliente"),
         "addAPurchase": MessageLookupByLibrary.simpleMessage(
             "Por favor agregue una compra"),
         "addBrand": MessageLookupByLibrary.simpleMessage("Agregar marca"),
         "addCategory":
             MessageLookupByLibrary.simpleMessage("Agregar categoría"),
         "addContact": MessageLookupByLibrary.simpleMessage("Agregar contacto"),
-        "addCustomer": MessageLookupByLibrary.simpleMessage(
-            "Por favor agregue un cliente"),
+        "addCustomer": MessageLookupByLibrary.simpleMessage("Agregar cliente"),
         "addDelivery": MessageLookupByLibrary.simpleMessage("Agregar entrega"),
+        "addDiscount":
+            MessageLookupByLibrary.simpleMessage("Agregar descuento"),
         "addExpense": MessageLookupByLibrary.simpleMessage("Agregar gasto"),
         "addExpenseCat":
             MessageLookupByLibrary.simpleMessage("Agregar categoría de gastos"),
+        "addIncome": MessageLookupByLibrary.simpleMessage("Agregar ingresos"),
+        "addIncomeCategory": MessageLookupByLibrary.simpleMessage(
+            "Agregar categoría de ingresos"),
         "addItems": MessageLookupByLibrary.simpleMessage("Añadir elementos"),
         "addNewAddress":
             MessageLookupByLibrary.simpleMessage("Agregar nueva dirección"),
@@ -48,10 +56,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Agregue un producto"),
         "addProductFirst":
             MessageLookupByLibrary.simpleMessage("Agrega un producto primero"),
+        "addPromoCode":
+            MessageLookupByLibrary.simpleMessage("Agregar código promocional"),
         "addPurchase": MessageLookupByLibrary.simpleMessage("Añadir Compra"),
         "addSale":
             MessageLookupByLibrary.simpleMessage("Por favor agregue una venta"),
         "addSales": MessageLookupByLibrary.simpleMessage("Añadir Ventas"),
+        "addToCart": MessageLookupByLibrary.simpleMessage("Agregar al carrito"),
         "addUnit": MessageLookupByLibrary.simpleMessage("Añadir Unidad"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Agregar Rol de Usuario"),
@@ -64,6 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Todas las soluciones comerciales"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
             "POSpro es una solución comercial completa con inventario, cuentas, ventas, gastos y pérdidas/ganancias."),
+        "allTime": MessageLookupByLibrary.simpleMessage("Todo el tiempo"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Ya agregado"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("¿Ya tienes una cuenta?"),
@@ -78,10 +90,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "areYouSure": MessageLookupByLibrary.simpleMessage("¿Estás seguro?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "¿Estás seguro de que deseas eliminar a esta parte?"),
+        "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
+            "¿Está seguro de que desea eliminar esto?"),
         "backToHome": MessageLookupByLibrary.simpleMessage(
             "Volver a la Página Principal"),
         "balance": MessageLookupByLibrary.simpleMessage("Saldo"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("Bangladesh"),
+        "bank": MessageLookupByLibrary.simpleMessage("Banco"),
+        "barcodeFound":
+            MessageLookupByLibrary.simpleMessage("Código de barras encontrado"),
         "billTO": MessageLookupByLibrary.simpleMessage("Facturar a"),
         "brand": MessageLookupByLibrary.simpleMessage("Marca"),
         "brandName": MessageLookupByLibrary.simpleMessage("Nombre de la marca"),
@@ -95,7 +112,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "call": MessageLookupByLibrary.simpleMessage("Llamar"),
         "camera": MessageLookupByLibrary.simpleMessage("Cámara"),
         "cancel": MessageLookupByLibrary.simpleMessage("Cancelar"),
+        "cancelAllProduct": MessageLookupByLibrary.simpleMessage(
+            "Cancelar todos los productos"),
         "capacity": MessageLookupByLibrary.simpleMessage("Capacidad"),
+        "card": MessageLookupByLibrary.simpleMessage("Tarjeta"),
         "cash": MessageLookupByLibrary.simpleMessage("Efectivo"),
         "categories": MessageLookupByLibrary.simpleMessage("Categorías"),
         "category": MessageLookupByLibrary.simpleMessage("Categoría"),
@@ -114,6 +134,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
             "Las funciones son la parte importante que hace que POSpro sea diferente de las soluciones tradicionales."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
+        "clearAll": MessageLookupByLibrary.simpleMessage("Limpiar todo"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Haga clic para conectar"),
         "close": MessageLookupByLibrary.simpleMessage("Cerca"),
@@ -143,6 +164,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "continueButton": MessageLookupByLibrary.simpleMessage("Continuar"),
         "continueE": MessageLookupByLibrary.simpleMessage("Continuar"),
         "cost": MessageLookupByLibrary.simpleMessage("Costo"),
+        "couldNotFetchProducts": MessageLookupByLibrary.simpleMessage(
+            "No se pudieron obtener productos"),
+        "couldNotFetchTheCategories": MessageLookupByLibrary.simpleMessage(
+            "No se pudieron obtener las categorías"),
         "country": MessageLookupByLibrary.simpleMessage("País"),
         "create": MessageLookupByLibrary.simpleMessage("Crear"),
         "createAFreeAccount":
@@ -152,6 +177,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Crear una nueva contraseña"),
         "currency": MessageLookupByLibrary.simpleMessage("Divisa"),
+        "currentYear": MessageLookupByLibrary.simpleMessage("Año actual"),
         "customInvoiceBranding": MessageLookupByLibrary.simpleMessage(
             "Marca personalizada en facturas"),
         "customerDue":
@@ -169,10 +195,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "date": MessageLookupByLibrary.simpleMessage("Fecha"),
         "dates": MessageLookupByLibrary.simpleMessage("Fecha:"),
         "days": MessageLookupByLibrary.simpleMessage("días"),
+        "daysLeft": MessageLookupByLibrary.simpleMessage("Días restantes"),
         "dealer": MessageLookupByLibrary.simpleMessage("Distribuidor"),
         "dealerPrice":
             MessageLookupByLibrary.simpleMessage("A precio de concesionario"),
         "delete": MessageLookupByLibrary.simpleMessage("Eliminar"),
+        "deleteConfirmation":
+            MessageLookupByLibrary.simpleMessage("Confirmación de eliminación"),
         "deleting": MessageLookupByLibrary.simpleMessage("Eliminando...."),
         "deliveryAddress":
             MessageLookupByLibrary.simpleMessage("Dirección de entrega"),
@@ -190,6 +219,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "¿Deseas salir de la aplicación?"),
         "donNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("¿No tienes una cuenta?"),
+        "done": MessageLookupByLibrary.simpleMessage("Hecho"),
         "due": MessageLookupByLibrary.simpleMessage("Pendiente"),
         "dueAmount": MessageLookupByLibrary.simpleMessage("Cantidad debida: "),
         "dueCollection":
@@ -247,6 +277,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ingrese la fecha del gasto"),
         "enterFullAddress": MessageLookupByLibrary.simpleMessage(
             "Ingrese la dirección completa"),
+        "enterIncomeCategoryName": MessageLookupByLibrary.simpleMessage(
+            "Ingrese el nombre de la categoría de ingresos"),
         "enterManufacturerName": MessageLookupByLibrary.simpleMessage(
             "Introduce el nombre del fabricante"),
         "enterName": MessageLookupByLibrary.simpleMessage("Ingrese el nombre"),
@@ -268,6 +300,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterStock":
             MessageLookupByLibrary.simpleMessage("Introduce el stock"),
         "enterType": MessageLookupByLibrary.simpleMessage("Introduce el tipo"),
+        "enterUnitQuantity": MessageLookupByLibrary.simpleMessage(
+            "Ingrese la cantidad por unidad"),
         "enterUserTitle": MessageLookupByLibrary.simpleMessage(
             "Introduce el título del usuario"),
         "enterValidOTP":
@@ -307,6 +341,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Actualización gratuita de por vida"),
         "freePack": MessageLookupByLibrary.simpleMessage("Paquete Gratis"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Plan Gratis"),
+        "fri": MessageLookupByLibrary.simpleMessage("Vie"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Partir de la fecha"),
         "fullName": MessageLookupByLibrary.simpleMessage("Nombre completo"),
         "fullyPaid":
@@ -325,19 +360,29 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("Inicio"),
         "image": MessageLookupByLibrary.simpleMessage("Imagen"),
         "income": MessageLookupByLibrary.simpleMessage("Ingresos"),
+        "incomeCategories":
+            MessageLookupByLibrary.simpleMessage("Categorías de ingresos"),
+        "incomeFor": MessageLookupByLibrary.simpleMessage("Ingresos para"),
         "incomeReport":
             MessageLookupByLibrary.simpleMessage("Informe de ingresos"),
         "instagram": MessageLookupByLibrary.simpleMessage("Instagram"),
         "inv": MessageLookupByLibrary.simpleMessage("Núm. de factura"),
         "invoice": MessageLookupByLibrary.simpleMessage("Factura"),
         "itemAdded": MessageLookupByLibrary.simpleMessage("Artículo agregado"),
+        "itemDetails":
+            MessageLookupByLibrary.simpleMessage("Detalles del artículo"),
+        "items": MessageLookupByLibrary.simpleMessage("Artículos"),
+        "itemsFor": MessageLookupByLibrary.simpleMessage("artículos para"),
         "itemsSales":
             MessageLookupByLibrary.simpleMessage("Ventas de artículos"),
         "lableEmail":
             MessageLookupByLibrary.simpleMessage("Correo electrónico"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("Contraseña"),
         "language": MessageLookupByLibrary.simpleMessage("idioma"),
+        "last30Days": MessageLookupByLibrary.simpleMessage("Últimos 30 días"),
+        "last7Days": MessageLookupByLibrary.simpleMessage("Últimos 7 días"),
         "lastName": MessageLookupByLibrary.simpleMessage("Apellido"),
+        "lastYear": MessageLookupByLibrary.simpleMessage("Último año"),
         "link": MessageLookupByLibrary.simpleMessage("Enlace"),
         "linkedIN": MessageLookupByLibrary.simpleMessage("LinkedIn"),
         "loading": MessageLookupByLibrary.simpleMessage("Cargando"),
@@ -353,6 +398,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Natoque aliquet et, cur eget. Tellus sapien odio aliq."),
         "loremIpsumDolorSit": MessageLookupByLibrary.simpleMessage(
             "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."),
+        "loremIpsumDolorSitAmetConsecteturAdipiscingElitMaurisCras":
+            MessageLookupByLibrary.simpleMessage(
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cras"),
         "loremIpsumDolorSitAmetConsecteturElitInterdumCons":
             MessageLookupByLibrary.simpleMessage(
                 "Lorem ipsum dolor sit amet, consectetur elit. Interdum cons."),
@@ -369,6 +417,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "manufacturer": MessageLookupByLibrary.simpleMessage("Fabricante"),
         "masterCard": MessageLookupByLibrary.simpleMessage("MasterCard"),
         "mobile": MessageLookupByLibrary.simpleMessage("Móvil:"),
+        "mobilePayment": MessageLookupByLibrary.simpleMessage("Pago móvil"),
+        "mon": MessageLookupByLibrary.simpleMessage("Lun"),
+        "monthly": MessageLookupByLibrary.simpleMessage("Mensual"),
         "moreInfo": MessageLookupByLibrary.simpleMessage("Más información"),
         "mrp": MessageLookupByLibrary.simpleMessage("PVL"),
         "name": MessageLookupByLibrary.simpleMessage("Nombre"),
@@ -394,9 +445,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ningún proveedor disponible"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("Sin transacción"),
+        "notActiveUser":
+            MessageLookupByLibrary.simpleMessage("Usuario no activo"),
         "notFound": MessageLookupByLibrary.simpleMessage("No encontrado"),
         "note": MessageLookupByLibrary.simpleMessage("Nota"),
         "notification": MessageLookupByLibrary.simpleMessage("Notificación"),
+        "oK": MessageLookupByLibrary.simpleMessage("Aceptar"),
         "off": MessageLookupByLibrary.simpleMessage("Apagar"),
         "on": MessageLookupByLibrary.simpleMessage("Encendido"),
         "openingBalance":
@@ -445,6 +499,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Seleccionar fecha de fin"),
         "pickStartDate":
             MessageLookupByLibrary.simpleMessage("Seleccionar fecha de inicio"),
+        "plan": MessageLookupByLibrary.simpleMessage("Plan"),
         "pleaseAddQuantity": MessageLookupByLibrary.simpleMessage(
             "Por favor, añade la cantidad"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
@@ -477,6 +532,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Por favor, introduce la cantidad"),
         "pleaseEnterName": MessageLookupByLibrary.simpleMessage(
             "Por favor, introduce el nombre"),
+        "pleaseEnterSalesPrice": MessageLookupByLibrary.simpleMessage(
+            "Por favor ingrese el precio de venta"),
         "pleaseEnterTheOTP":
             MessageLookupByLibrary.simpleMessage("Por favor, ingresa el OTP"),
         "pleaseEnterUnitName": MessageLookupByLibrary.simpleMessage(
@@ -492,6 +549,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Por favor, selecciona una categoría"),
         "pleaseSelectAExpenseCategory": MessageLookupByLibrary.simpleMessage(
             "Por favor, selecciona una categoría de gasto"),
+        "pleaseUseTheValidPurchaseCodeToUseTheApp":
+            MessageLookupByLibrary.simpleMessage(
+                "Por favor, use el código de compra válido para usar la aplicación"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "Soporte para aplicaciones Android e iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Plan Premium"),
@@ -499,6 +559,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Vencimiento anterior"),
         "previousPayAmount":
             MessageLookupByLibrary.simpleMessage("Cantidad de pago anterior"),
+        "priceMustBeGreaterThan": MessageLookupByLibrary.simpleMessage(
+            "El precio debe ser mayor que"),
         "print": MessageLookupByLibrary.simpleMessage("Imprimir"),
         "printing": MessageLookupByLibrary.simpleMessage("Opción de impresión"),
         "product": MessageLookupByLibrary.simpleMessage("Producto"),
@@ -545,7 +607,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchased": MessageLookupByLibrary.simpleMessage("Comprado"),
         "qty": MessageLookupByLibrary.simpleMessage("Cantidad"),
         "quantity": MessageLookupByLibrary.simpleMessage("Cantidad"),
+        "quantityExceedsAvailableStock": MessageLookupByLibrary.simpleMessage(
+            "La cantidad excede el stock disponible"),
+        "quantityMustBeGreaterThan": MessageLookupByLibrary.simpleMessage(
+            "La cantidad debe ser mayor que"),
         "quickOverview": MessageLookupByLibrary.simpleMessage("Resumen rápido"),
+        "receivedAmount":
+            MessageLookupByLibrary.simpleMessage("Monto recibido"),
         "recentTransaction":
             MessageLookupByLibrary.simpleMessage("Transacciones Recientes"),
         "referenceNo":
@@ -553,6 +621,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("Registro"),
         "registerTitle": MessageLookupByLibrary.simpleMessage(
             "¡Necesitamos registrar su teléfono sin comenzar!"),
+        "relatedDataWillBeDeletedAlso": MessageLookupByLibrary.simpleMessage(
+            "Los datos relacionados también serán eliminados"),
         "remainingDue": MessageLookupByLibrary.simpleMessage("Saldo pendiente"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("Recuérdame"),
         "rememberMeLater":
@@ -560,6 +630,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "reports": MessageLookupByLibrary.simpleMessage("Informes"),
         "resendIn": MessageLookupByLibrary.simpleMessage("Reenviar OTP en "),
         "resendOTP": MessageLookupByLibrary.simpleMessage("Reenviar OTP"),
+        "resendOTPIn": MessageLookupByLibrary.simpleMessage("Reenviar OTP en"),
         "reset": MessageLookupByLibrary.simpleMessage(
             "Restablecer la contraseña usando tu correo electrónico o número de teléfono"),
         "resetPassword": MessageLookupByLibrary.simpleMessage(
@@ -576,20 +647,30 @@ class MessageLookup extends MessageLookupByLibrary {
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("Detalles de Ventas"),
         "salesList": MessageLookupByLibrary.simpleMessage("Lista de ventas"),
+        "salesPrice": MessageLookupByLibrary.simpleMessage("Precio de venta"),
         "salesPurchaseOverview":
             MessageLookupByLibrary.simpleMessage("Resumen de ventas y compras"),
         "salesReport":
             MessageLookupByLibrary.simpleMessage("Reporte de ventas"),
+        "sat": MessageLookupByLibrary.simpleMessage("Sáb"),
         "save": MessageLookupByLibrary.simpleMessage("Guardar"),
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("Guardar y publicar"),
+        "scanProductQRCode": MessageLookupByLibrary.simpleMessage(
+            "Escanear el código QR del producto"),
         "search": MessageLookupByLibrary.simpleMessage("Buscar"),
         "searchH": MessageLookupByLibrary.simpleMessage("Buscar aquí...."),
+        "searchHere": MessageLookupByLibrary.simpleMessage("Buscar aquí"),
+        "seconds": MessageLookupByLibrary.simpleMessage("segundos"),
         "seeAllPromoCode": MessageLookupByLibrary.simpleMessage(
             "Ver todos los códigos de promoción"),
         "select": MessageLookupByLibrary.simpleMessage("Seleccionar"),
         "selectABrand":
             MessageLookupByLibrary.simpleMessage("Selecciona una marca"),
+        "selectABusinessCategory": MessageLookupByLibrary.simpleMessage(
+            "Seleccionar una categoría de negocio"),
+        "selectACategory":
+            MessageLookupByLibrary.simpleMessage("Seleccionar una categoría"),
         "selectAInvoice":
             MessageLookupByLibrary.simpleMessage("Selecciona una factura"),
         "selectBusinessCategory": MessageLookupByLibrary.simpleMessage(
@@ -646,6 +727,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("Existencias"),
         "stockList": MessageLookupByLibrary.simpleMessage("Lista común"),
         "stockReport": MessageLookupByLibrary.simpleMessage("Informe de stock"),
+        "stockS": MessageLookupByLibrary.simpleMessage("Existencias"),
         "stockValue": MessageLookupByLibrary.simpleMessage("Valor del stock"),
         "stocks": MessageLookupByLibrary.simpleMessage("Stock: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Subtotal"),
@@ -657,13 +739,20 @@ class MessageLookup extends MessageLookupByLibrary {
         "supplerPay":
             MessageLookupByLibrary.simpleMessage("Pago del proveedor"),
         "supplier": MessageLookupByLibrary.simpleMessage("Proveedor"),
+        "supplierDetails":
+            MessageLookupByLibrary.simpleMessage("Detalles del proveedor"),
         "supplierName":
             MessageLookupByLibrary.simpleMessage("Nombre del proveedor"),
         "thankYouForYourDuePayment": MessageLookupByLibrary.simpleMessage(
             "Gracias por su pago pendiente"),
+        "thisMonth": MessageLookupByLibrary.simpleMessage("Este mes"),
         "thisProductAlreadyAdded": MessageLookupByLibrary.simpleMessage(
             "¡Este producto ya está añadido!"),
+        "thisWeek": MessageLookupByLibrary.simpleMessage("Esta semana"),
+        "thisYear": MessageLookupByLibrary.simpleMessage("Este año"),
+        "thurs": MessageLookupByLibrary.simpleMessage("Jue"),
         "toDate": MessageLookupByLibrary.simpleMessage("Hasta la fecha"),
+        "toDay": MessageLookupByLibrary.simpleMessage("Hoy"),
         "todaySummary": MessageLookupByLibrary.simpleMessage("Resumen del día"),
         "total": MessageLookupByLibrary.simpleMessage("Total"),
         "totalAmount": MessageLookupByLibrary.simpleMessage("Cantidad total"),
@@ -688,10 +777,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "totall": MessageLookupByLibrary.simpleMessage("Total:"),
         "transactions": MessageLookupByLibrary.simpleMessage("Transacciones"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("Intentar otra vez"),
+        "tues": MessageLookupByLibrary.simpleMessage("Mar"),
         "twitter": MessageLookupByLibrary.simpleMessage("Twitter"),
         "type": MessageLookupByLibrary.simpleMessage("Tipo"),
         "unPaid": MessageLookupByLibrary.simpleMessage("No pagado"),
         "unitName": MessageLookupByLibrary.simpleMessage("Nombre de la unidad"),
+        "unitPrice": MessageLookupByLibrary.simpleMessage("Precio unitario"),
         "units": MessageLookupByLibrary.simpleMessage("Unidades"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Ilimitado"),
         "unlimitedUsage": MessageLookupByLibrary.simpleMessage("Uso ilimitado"),
@@ -718,6 +809,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Detalles del rol del usuario"),
         "userTitle": MessageLookupByLibrary.simpleMessage("Título del usuario"),
         "vat": MessageLookupByLibrary.simpleMessage("IVA"),
+        "vatDoesNOtApply":
+            MessageLookupByLibrary.simpleMessage("El IVA no se aplica"),
         "verification": MessageLookupByLibrary.simpleMessage("Verificación"),
         "verify": MessageLookupByLibrary.simpleMessage("Verificar"),
         "verifyYourEmail": MessageLookupByLibrary.simpleMessage(
@@ -731,6 +824,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Hemos enviado un correo electrónico de confirmación a"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Hemos enviado un OTP a tu número de teléfono"),
+        "wed": MessageLookupByLibrary.simpleMessage("Mié"),
+        "weekly": MessageLookupByLibrary.simpleMessage("Semanal"),
         "weight": MessageLookupByLibrary.simpleMessage("Peso"),
         "welcomeBack":
             MessageLookupByLibrary.simpleMessage("¡Bienvenido de nuevo!"),
@@ -742,9 +837,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Se añadirá pronto"),
         "writeYourMessageHere":
             MessageLookupByLibrary.simpleMessage("Escriba su mensaje aquí"),
+        "yearly": MessageLookupByLibrary.simpleMessage("Anual"),
         "yes": MessageLookupByLibrary.simpleMessage("Sí"),
         "youCanNotPayMoreThenDue": MessageLookupByLibrary.simpleMessage(
             "No puedes pagar más de lo adeudado"),
+        "youCanNowResendTheOTP": MessageLookupByLibrary.simpleMessage(
+            "Ahora puedes reenviar el OTP"),
         "youHaveToGivePermission":
             MessageLookupByLibrary.simpleMessage("Debes otorgar permiso"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("Tu estas usando "),

@@ -22,20 +22,28 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Custom": MessageLookupByLibrary.simpleMessage("Personalizat"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Detalii Client"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "addACustomer": MessageLookupByLibrary.simpleMessage(
+            "Vă rugăm să adăugați un client"),
         "addAPurchase": MessageLookupByLibrary.simpleMessage(
             "Vă rugăm să adăugați o achiziție"),
         "addBrand": MessageLookupByLibrary.simpleMessage("Adăugați o marcă"),
         "addCategory": MessageLookupByLibrary.simpleMessage("Adaugă categorie"),
         "addContact": MessageLookupByLibrary.simpleMessage("Adaugă contact"),
-        "addCustomer": MessageLookupByLibrary.simpleMessage(
-            "Vă rugăm să adăugați un client"),
+        "addCustomer": MessageLookupByLibrary.simpleMessage("Adăugați client"),
         "addDelivery": MessageLookupByLibrary.simpleMessage("Adaugă livrare"),
+        "addDiscount":
+            MessageLookupByLibrary.simpleMessage("Adăugați discount"),
         "addExpense":
             MessageLookupByLibrary.simpleMessage("Adăugați cheltuieli"),
         "addExpenseCat": MessageLookupByLibrary.simpleMessage(
             "Adăugați o categorie de cheltuieli"),
+        "addIncome": MessageLookupByLibrary.simpleMessage("Adăugați venit"),
+        "addIncomeCategory":
+            MessageLookupByLibrary.simpleMessage("Adăugați categorie de venit"),
         "addItems": MessageLookupByLibrary.simpleMessage("Adăugați articole"),
         "addNewAddress":
             MessageLookupByLibrary.simpleMessage("Adaugă adresă nouă"),
@@ -48,11 +56,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "Vă rugăm să adăugați un produs"),
         "addProductFirst":
             MessageLookupByLibrary.simpleMessage("Adaugă mai întâi produsul"),
+        "addPromoCode":
+            MessageLookupByLibrary.simpleMessage("Adăugați cod promoțional"),
         "addPurchase":
             MessageLookupByLibrary.simpleMessage("Adăugați Cumpărare"),
         "addSale": MessageLookupByLibrary.simpleMessage(
             "Vă rugăm să adăugați o reducere"),
         "addSales": MessageLookupByLibrary.simpleMessage("Adăugați vânzări"),
+        "addToCart": MessageLookupByLibrary.simpleMessage("Adăugați în coș"),
         "addUnit": MessageLookupByLibrary.simpleMessage("Adăugați o unitate"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Adaugă Rol Utilizator"),
@@ -64,6 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Toate soluțiile pentru afaceri"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
             "PosPro este o soluție completă pentru afaceri, cu gestionarea stocului, contabilitate, vânzări, cheltuieli și pierderi/profit."),
+        "allTime": MessageLookupByLibrary.simpleMessage("Tot timpul"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Deja adaugat"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Ai deja un cont?"),
@@ -80,10 +92,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "areYouSure": MessageLookupByLibrary.simpleMessage("Ești sigur?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "Ești sigur că dorești să ștergi acest partener?"),
+        "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
+            "Sunteți sigur că doriți să ștergeți asta?"),
         "backToHome":
             MessageLookupByLibrary.simpleMessage("Înapoi la Pagina Principală"),
         "balance": MessageLookupByLibrary.simpleMessage("Sold"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("Bangladesh"),
+        "bank": MessageLookupByLibrary.simpleMessage("Bancă"),
+        "barcodeFound":
+            MessageLookupByLibrary.simpleMessage("Codul de bare a fost găsit"),
         "billTO": MessageLookupByLibrary.simpleMessage("Facturați la"),
         "brand": MessageLookupByLibrary.simpleMessage("Marcă"),
         "brandName": MessageLookupByLibrary.simpleMessage("Nume de marcă"),
@@ -97,7 +114,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "call": MessageLookupByLibrary.simpleMessage("Apel"),
         "camera": MessageLookupByLibrary.simpleMessage("aparat foto"),
         "cancel": MessageLookupByLibrary.simpleMessage("Anulare"),
+        "cancelAllProduct":
+            MessageLookupByLibrary.simpleMessage("Anulați toate produsele"),
         "capacity": MessageLookupByLibrary.simpleMessage("Capacitate"),
+        "card": MessageLookupByLibrary.simpleMessage("Card"),
         "cash": MessageLookupByLibrary.simpleMessage("Numerar"),
         "categories": MessageLookupByLibrary.simpleMessage("Categorii"),
         "category": MessageLookupByLibrary.simpleMessage("Categorie"),
@@ -115,6 +135,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
             "Funcționalitățile sunt partea importantă care diferențiază PosPro de soluțiile tradiționale."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
+        "clearAll": MessageLookupByLibrary.simpleMessage("Ștergeți tot"),
         "clickToConnect": MessageLookupByLibrary.simpleMessage(
             "Faceți clic pentru a vă conecta"),
         "close": MessageLookupByLibrary.simpleMessage("Închide"),
@@ -148,6 +169,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "continueButton": MessageLookupByLibrary.simpleMessage("Continua"),
         "continueE": MessageLookupByLibrary.simpleMessage("Continuă"),
         "cost": MessageLookupByLibrary.simpleMessage("Cost"),
+        "couldNotFetchProducts": MessageLookupByLibrary.simpleMessage(
+            "Nu s-au putut obține produsele"),
+        "couldNotFetchTheCategories": MessageLookupByLibrary.simpleMessage(
+            "Nu s-au putut obține categoriile"),
         "country": MessageLookupByLibrary.simpleMessage("Țară"),
         "create": MessageLookupByLibrary.simpleMessage("Creează"),
         "createAFreeAccount":
@@ -157,6 +182,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("Creează o parolă nouă"),
         "currency": MessageLookupByLibrary.simpleMessage("Valută"),
+        "currentYear": MessageLookupByLibrary.simpleMessage("Anul curent"),
         "customInvoiceBranding": MessageLookupByLibrary.simpleMessage(
             "Branding personalizat al facturilor"),
         "customerDue":
@@ -174,9 +200,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "date": MessageLookupByLibrary.simpleMessage("Data"),
         "dates": MessageLookupByLibrary.simpleMessage("Data:"),
         "days": MessageLookupByLibrary.simpleMessage("zile"),
+        "daysLeft": MessageLookupByLibrary.simpleMessage("Zile rămase"),
         "dealer": MessageLookupByLibrary.simpleMessage("Dealer"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage("Preț de dealer"),
         "delete": MessageLookupByLibrary.simpleMessage("Șterge"),
+        "deleteConfirmation":
+            MessageLookupByLibrary.simpleMessage("Confirmați ștergerea"),
         "deleting": MessageLookupByLibrary.simpleMessage("Ștergere...."),
         "deliveryAddress":
             MessageLookupByLibrary.simpleMessage("Adresă de livrare"),
@@ -194,6 +223,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Vrei să închizi aplicația?"),
         "donNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Nu ai un cont?"),
+        "done": MessageLookupByLibrary.simpleMessage("Finalizat"),
         "due": MessageLookupByLibrary.simpleMessage("Datorită"),
         "dueAmount": MessageLookupByLibrary.simpleMessage("Suma datorata: "),
         "dueCollection":
@@ -250,6 +280,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Introduceți data cheltuielii"),
         "enterFullAddress":
             MessageLookupByLibrary.simpleMessage("Introduceți adresa completă"),
+        "enterIncomeCategoryName": MessageLookupByLibrary.simpleMessage(
+            "Introduceți numele categoriei de venit"),
         "enterManufacturerName": MessageLookupByLibrary.simpleMessage(
             "Introdu numele fabricantului"),
         "enterName": MessageLookupByLibrary.simpleMessage("Introduceți numele"),
@@ -269,6 +301,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterSize": MessageLookupByLibrary.simpleMessage("Introdu mărimea"),
         "enterStock": MessageLookupByLibrary.simpleMessage("Introdu stocul"),
         "enterType": MessageLookupByLibrary.simpleMessage("Introdu tipul"),
+        "enterUnitQuantity": MessageLookupByLibrary.simpleMessage(
+            "Introduceți cantitatea unitară"),
         "enterUserTitle": MessageLookupByLibrary.simpleMessage(
             "Introdu titlul utilizatorului"),
         "enterValidOTP":
@@ -308,6 +342,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Actualizare gratuită pe viață"),
         "freePack": MessageLookupByLibrary.simpleMessage("Pachet gratuit"),
         "freePlan": MessageLookupByLibrary.simpleMessage("Plan gratuit"),
+        "fri": MessageLookupByLibrary.simpleMessage("Vin"),
         "fromDate": MessageLookupByLibrary.simpleMessage("Din data"),
         "fullName": MessageLookupByLibrary.simpleMessage("Nume complet"),
         "fullyPaid":
@@ -323,6 +358,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("Acasă"),
         "image": MessageLookupByLibrary.simpleMessage("Imagine"),
         "income": MessageLookupByLibrary.simpleMessage("Venit"),
+        "incomeCategories":
+            MessageLookupByLibrary.simpleMessage("Categorii de venit"),
+        "incomeFor": MessageLookupByLibrary.simpleMessage("Venit pentru"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("Raport venituri"),
         "instagram": MessageLookupByLibrary.simpleMessage("Instagram"),
         "instrucation": MessageLookupByLibrary.simpleMessage("Instrucțiuni"),
@@ -331,11 +369,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "invoiceViewr":
             MessageLookupByLibrary.simpleMessage("Vizualizator factură"),
         "itemAdded": MessageLookupByLibrary.simpleMessage("Articol adăugat"),
+        "itemDetails": MessageLookupByLibrary.simpleMessage("Detalii articol"),
+        "items": MessageLookupByLibrary.simpleMessage("Articole"),
+        "itemsFor": MessageLookupByLibrary.simpleMessage("articole pentru"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("Vânzări articole"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("Email"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("Parolă"),
         "language": MessageLookupByLibrary.simpleMessage("limba"),
+        "last30Days":
+            MessageLookupByLibrary.simpleMessage("Ultimele 30 de zile"),
+        "last7Days": MessageLookupByLibrary.simpleMessage("Ultimele 7 zile"),
         "lastName": MessageLookupByLibrary.simpleMessage("Nume de familie"),
+        "lastYear": MessageLookupByLibrary.simpleMessage("Anul trecut"),
         "link": MessageLookupByLibrary.simpleMessage("Link"),
         "linkedIN": MessageLookupByLibrary.simpleMessage("LinkedIn"),
         "loading": MessageLookupByLibrary.simpleMessage("Se încarcă"),
@@ -351,6 +396,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Natoque aliquet et, cur eget. Tellus sapien odio aliq."),
         "loremIpsumDolorSit": MessageLookupByLibrary.simpleMessage(
             "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."),
+        "loremIpsumDolorSitAmetConsecteturAdipiscingElitMaurisCras":
+            MessageLookupByLibrary.simpleMessage(
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cras"),
         "loremIpsumDolorSitAmetConsecteturElitInterdumCons":
             MessageLookupByLibrary.simpleMessage(
                 "Lorem ipsum dolor sit amet, consectetur elit. Interdum cons."),
@@ -366,6 +414,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "masterCard": MessageLookupByLibrary.simpleMessage("MasterCard"),
         "messege": MessageLookupByLibrary.simpleMessage("Mesaj"),
         "mobile": MessageLookupByLibrary.simpleMessage("Mobil:"),
+        "mobilePayment": MessageLookupByLibrary.simpleMessage("Plată mobilă"),
+        "mon": MessageLookupByLibrary.simpleMessage("Lun"),
+        "monthly": MessageLookupByLibrary.simpleMessage("Lunar"),
         "moreInfo":
             MessageLookupByLibrary.simpleMessage("Mai multe informatii"),
         "mrp": MessageLookupByLibrary.simpleMessage("MRP"),
@@ -392,9 +443,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Niciun furnizor disponibile"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("Fără tranzacție"),
+        "notActiveUser":
+            MessageLookupByLibrary.simpleMessage("Utilizator inactiv"),
         "notFound": MessageLookupByLibrary.simpleMessage("Nu a fost găsit"),
         "note": MessageLookupByLibrary.simpleMessage("Notă"),
         "notification": MessageLookupByLibrary.simpleMessage("Notificare"),
+        "oK": MessageLookupByLibrary.simpleMessage("OK"),
         "off": MessageLookupByLibrary.simpleMessage("Dezactivat"),
         "on": MessageLookupByLibrary.simpleMessage("Activat"),
         "openingBalance":
@@ -441,6 +495,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Alege data sfârșitului"),
         "pickStartDate":
             MessageLookupByLibrary.simpleMessage("Alege data începerii"),
+        "plan": MessageLookupByLibrary.simpleMessage("Plan"),
         "pleaseAddQuantity": MessageLookupByLibrary.simpleMessage(
             "Te rugăm să adaugi cantitatea"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
@@ -475,6 +530,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Te rugăm să introduci suma"),
         "pleaseEnterName": MessageLookupByLibrary.simpleMessage(
             "Te rugăm să introduci numele"),
+        "pleaseEnterSalesPrice": MessageLookupByLibrary.simpleMessage(
+            "Vă rugăm să introduceți prețul de vânzare"),
         "pleaseEnterTheOTP":
             MessageLookupByLibrary.simpleMessage("Vă rugăm să introduceți OTP"),
         "pleaseEnterUnitName": MessageLookupByLibrary.simpleMessage(
@@ -490,6 +547,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Te rugăm să selectezi o categorie"),
         "pleaseSelectAExpenseCategory": MessageLookupByLibrary.simpleMessage(
             "Te rugăm să selectezi o categorie de cheltuieli"),
+        "pleaseUseTheValidPurchaseCodeToUseTheApp":
+            MessageLookupByLibrary.simpleMessage(
+                "Vă rugăm să folosiți codul de achiziție valid pentru a utiliza aplicația"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Furnizat de Acnoo"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
@@ -499,6 +559,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Datorită anterioară"),
         "previousPayAmount":
             MessageLookupByLibrary.simpleMessage("Suma de plată anterioară"),
+        "priceMustBeGreaterThan": MessageLookupByLibrary.simpleMessage(
+            "Prețul trebuie să fie mai mare decât"),
         "print": MessageLookupByLibrary.simpleMessage("Imprimă"),
         "printing":
             MessageLookupByLibrary.simpleMessage("Opțiune de imprimare"),
@@ -541,8 +603,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchased": MessageLookupByLibrary.simpleMessage("Achiziționat"),
         "qty": MessageLookupByLibrary.simpleMessage("Cantitate"),
         "quantity": MessageLookupByLibrary.simpleMessage("Cantitate"),
+        "quantityExceedsAvailableStock": MessageLookupByLibrary.simpleMessage(
+            "Cantitatea depășește stocul disponibil"),
+        "quantityMustBeGreaterThan": MessageLookupByLibrary.simpleMessage(
+            "Cantitatea trebuie să fie mai mare decât"),
         "quickOverview":
             MessageLookupByLibrary.simpleMessage("Prezentare generală rapidă"),
+        "receivedAmount": MessageLookupByLibrary.simpleMessage("Sumă primită"),
         "recentTransaction":
             MessageLookupByLibrary.simpleMessage("tranzactii recente"),
         "recivethePin":
@@ -552,6 +619,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("Inregistreaza-te"),
         "registerTitle": MessageLookupByLibrary.simpleMessage(
             "Trebuie să vă înregistrăm telefonul fără a începe!"),
+        "relatedDataWillBeDeletedAlso": MessageLookupByLibrary.simpleMessage(
+            "Datele aferente vor fi șterse de asemenea"),
         "remainingDue": MessageLookupByLibrary.simpleMessage("Rămân de plată"),
         "rememberMe":
             MessageLookupByLibrary.simpleMessage("Amintește-ți de mine"),
@@ -560,6 +629,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "reports": MessageLookupByLibrary.simpleMessage("Rapoarte"),
         "resendIn": MessageLookupByLibrary.simpleMessage("Retrimite OTP în "),
         "resendOTP": MessageLookupByLibrary.simpleMessage("Retrimite OTP-ul"),
+        "resendOTPIn":
+            MessageLookupByLibrary.simpleMessage("Retrimiteți OTP-ul în"),
         "reset": MessageLookupByLibrary.simpleMessage(
             "Resetează parola folosind adresa ta de email sau numărul de telefon"),
         "resetPassword": MessageLookupByLibrary.simpleMessage(
@@ -577,20 +648,30 @@ class MessageLookup extends MessageLookupByLibrary {
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("Detalii de vânzări"),
         "salesList": MessageLookupByLibrary.simpleMessage("Lista vânzărilor"),
+        "salesPrice": MessageLookupByLibrary.simpleMessage("Preț de vânzare"),
         "salesPurchaseOverview": MessageLookupByLibrary.simpleMessage(
             "Prezentare generală a vânzărilor și achizițiilor"),
         "salesReport":
             MessageLookupByLibrary.simpleMessage("Raport de vânzări"),
+        "sat": MessageLookupByLibrary.simpleMessage("Sâm"),
         "save": MessageLookupByLibrary.simpleMessage("Salvați"),
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("Salvați și publicați"),
+        "scanProductQRCode": MessageLookupByLibrary.simpleMessage(
+            "Scanați codul QR al produsului"),
         "search": MessageLookupByLibrary.simpleMessage("Căutare"),
         "searchH": MessageLookupByLibrary.simpleMessage("Caută aici...."),
+        "searchHere": MessageLookupByLibrary.simpleMessage("Căutați aici"),
+        "seconds": MessageLookupByLibrary.simpleMessage("secunde"),
         "seeAllPromoCode": MessageLookupByLibrary.simpleMessage(
             "Vedeți toate codurile promoționale"),
         "select": MessageLookupByLibrary.simpleMessage("Selectați"),
         "selectABrand":
             MessageLookupByLibrary.simpleMessage("Selectează o marcă"),
+        "selectABusinessCategory": MessageLookupByLibrary.simpleMessage(
+            "Selectați o categorie de afaceri"),
+        "selectACategory":
+            MessageLookupByLibrary.simpleMessage("Selectați o categorie"),
         "selectAInvoice":
             MessageLookupByLibrary.simpleMessage("Selectează o factură"),
         "selectBusinessCategory": MessageLookupByLibrary.simpleMessage(
@@ -647,6 +728,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("Stoc"),
         "stockList": MessageLookupByLibrary.simpleMessage("Lista stocurilor"),
         "stockReport": MessageLookupByLibrary.simpleMessage("Raport stoc"),
+        "stockS": MessageLookupByLibrary.simpleMessage("Stocuri"),
         "stockValue": MessageLookupByLibrary.simpleMessage("Valoarea stocului"),
         "stocks": MessageLookupByLibrary.simpleMessage("Stoc: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Subtotal"),
@@ -658,15 +740,22 @@ class MessageLookup extends MessageLookupByLibrary {
         "supplerPay":
             MessageLookupByLibrary.simpleMessage("Plata furnizorului"),
         "supplier": MessageLookupByLibrary.simpleMessage("Furnizor"),
+        "supplierDetails":
+            MessageLookupByLibrary.simpleMessage("Detalii furnizor"),
         "supplierName":
             MessageLookupByLibrary.simpleMessage("numele furnizorului"),
         "thakYouForYourPurchase": MessageLookupByLibrary.simpleMessage(
             "Vă mulțumim pentru achiziție"),
         "thankYouForYourDuePayment": MessageLookupByLibrary.simpleMessage(
             "Vă mulțumim pentru plata datorată"),
+        "thisMonth": MessageLookupByLibrary.simpleMessage("Această lună"),
         "thisProductAlreadyAdded": MessageLookupByLibrary.simpleMessage(
             "Acest produs a fost deja adăugat!"),
+        "thisWeek": MessageLookupByLibrary.simpleMessage("Această săptămână"),
+        "thisYear": MessageLookupByLibrary.simpleMessage("Anul acesta"),
+        "thurs": MessageLookupByLibrary.simpleMessage("Joi"),
         "toDate": MessageLookupByLibrary.simpleMessage("Până în prezent"),
+        "toDay": MessageLookupByLibrary.simpleMessage("Astăzi"),
         "todaySummary": MessageLookupByLibrary.simpleMessage("Rezumatul zilei"),
         "total": MessageLookupByLibrary.simpleMessage("Total"),
         "totalAmount": MessageLookupByLibrary.simpleMessage("Valoare totală"),
@@ -691,11 +780,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "totall": MessageLookupByLibrary.simpleMessage("Total:"),
         "transactions": MessageLookupByLibrary.simpleMessage("Tranzacții"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("Încearcă din nou"),
+        "tues": MessageLookupByLibrary.simpleMessage("Mar"),
         "twitter": MessageLookupByLibrary.simpleMessage("Twitter"),
         "type": MessageLookupByLibrary.simpleMessage("Tip"),
         "unPaid": MessageLookupByLibrary.simpleMessage("Neplătit"),
         "unitName": MessageLookupByLibrary.simpleMessage("Numele unității"),
         "unitPirce": MessageLookupByLibrary.simpleMessage("Preț unitar"),
+        "unitPrice": MessageLookupByLibrary.simpleMessage("Preț unitar"),
         "units": MessageLookupByLibrary.simpleMessage("Unități"),
         "unlimited": MessageLookupByLibrary.simpleMessage("Nelimitat"),
         "unlimitedUsage":
@@ -724,6 +815,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Detalii rol utilizator"),
         "userTitle": MessageLookupByLibrary.simpleMessage("Titlu utilizator"),
         "vat": MessageLookupByLibrary.simpleMessage("TVA"),
+        "vatDoesNOtApply":
+            MessageLookupByLibrary.simpleMessage("TVA-ul nu se aplică"),
         "verification": MessageLookupByLibrary.simpleMessage("Verificare"),
         "verify": MessageLookupByLibrary.simpleMessage("Verificați"),
         "verifyYourEmail":
@@ -736,6 +829,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Am trimis un email de confirmare la"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Am trimis un OTP la numărul dumneavoastră de telefon"),
+        "wed": MessageLookupByLibrary.simpleMessage("Mie"),
+        "weekly": MessageLookupByLibrary.simpleMessage("Săptămânal"),
         "weight": MessageLookupByLibrary.simpleMessage("Greutate"),
         "welcomeBack":
             MessageLookupByLibrary.simpleMessage("Bun venit înapoi!"),
@@ -747,9 +842,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Vor fi adăugate în curând"),
         "writeYourMessageHere":
             MessageLookupByLibrary.simpleMessage("Scrieți mesajul dvs. aici"),
+        "yearly": MessageLookupByLibrary.simpleMessage("Anual"),
         "yes": MessageLookupByLibrary.simpleMessage("Da"),
         "youCanNotPayMoreThenDue": MessageLookupByLibrary.simpleMessage(
             "Nu poți plăti mai mult decât suma datorată"),
+        "youCanNowResendTheOTP": MessageLookupByLibrary.simpleMessage(
+            "Puteți acum să retrimiteți OTP-ul"),
         "youHaveToGivePermission": MessageLookupByLibrary.simpleMessage(
             "Trebuie să acorzi permisiunea"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("Folosesti "),

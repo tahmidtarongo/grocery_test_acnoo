@@ -22,18 +22,27 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Custom": MessageLookupByLibrary.simpleMessage("กำหนดเอง"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("รายละเอียดลูกค้า"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "Sun": MessageLookupByLibrary.simpleMessage("อาทิตย์"),
+        "addACustomer":
+            MessageLookupByLibrary.simpleMessage("กรุณาเพิ่มลูกค้า"),
         "addAPurchase":
             MessageLookupByLibrary.simpleMessage("กรุณาเพิ่มการสั่งซื้อ"),
         "addBrand": MessageLookupByLibrary.simpleMessage("เพิ่มแบรนด์"),
         "addCategory": MessageLookupByLibrary.simpleMessage("เพิ่มหมวดหมู่"),
         "addContact": MessageLookupByLibrary.simpleMessage("เพิ่มผู้ติดต่อ"),
-        "addCustomer": MessageLookupByLibrary.simpleMessage("กรุณาเพิ่มลูกค้า"),
+        "addCustomer": MessageLookupByLibrary.simpleMessage("เพิ่มลูกค้า"),
         "addDelivery": MessageLookupByLibrary.simpleMessage("เพิ่มการจัดส่ง"),
+        "addDiscount": MessageLookupByLibrary.simpleMessage("เพิ่มส่วนลด"),
         "addExpense": MessageLookupByLibrary.simpleMessage("เพิ่มค่าใช้จ่าย"),
         "addExpenseCat":
             MessageLookupByLibrary.simpleMessage("เพิ่มหมวดหมู่ค่าใช้จ่าย"),
+        "addIncome": MessageLookupByLibrary.simpleMessage("เพิ่มรายได้"),
+        "addIncomeCategory":
+            MessageLookupByLibrary.simpleMessage("เพิ่มหมวดหมู่รายได้"),
         "addItems": MessageLookupByLibrary.simpleMessage("เพิ่มรายการ"),
         "addNewAddress":
             MessageLookupByLibrary.simpleMessage("เพิ่มที่อยู่ใหม่"),
@@ -45,9 +54,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "addProduct": MessageLookupByLibrary.simpleMessage("กรุณาเพิ่มสินค้า"),
         "addProductFirst":
             MessageLookupByLibrary.simpleMessage("เพิ่มสินค้าก่อน"),
+        "addPromoCode":
+            MessageLookupByLibrary.simpleMessage("เพิ่มรหัสโปรโมชัน"),
         "addPurchase": MessageLookupByLibrary.simpleMessage("เพิ่มการซื้อ"),
         "addSale": MessageLookupByLibrary.simpleMessage("กรุณาเพิ่มการขาย"),
         "addSales": MessageLookupByLibrary.simpleMessage("เพิ่มยอดขาย"),
+        "addToCart": MessageLookupByLibrary.simpleMessage("เพิ่มลงในตะกร้า"),
         "addUnit": MessageLookupByLibrary.simpleMessage("เพิ่มหน่วย"),
         "addUserRole": MessageLookupByLibrary.simpleMessage("เพิ่มบทบาทผู้ใช้"),
         "addedToCart": MessageLookupByLibrary.simpleMessage("เพิ่มลงในตะกร้า"),
@@ -58,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("สิ่งที่ PosPro มีให้ทั้งหมด"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
             "PosPro เป็นสิ่งที่สมบูรณ์แบบสำหรับธุรกิจด้วยคลังสินค้า บัญชี การขาย ค่าใช้จ่ายและขาดทุน / กำไร"),
+        "allTime": MessageLookupByLibrary.simpleMessage("ตลอดเวลา"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("เพิ่มแล้ว"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("มีบัญชีอยู่แล้ว?"),
@@ -74,9 +87,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "areYouSure": MessageLookupByLibrary.simpleMessage("คุณแน่ใจหรือไม่?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "คุณแน่ใจหรือไม่ว่าต้องการลบพรรคนี้?"),
+        "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
+            "คุณแน่ใจหรือว่าต้องการลบสิ่งนี้"),
         "backToHome": MessageLookupByLibrary.simpleMessage("กลับสู่หน้าหลัก"),
         "balance": MessageLookupByLibrary.simpleMessage("ยอดคงเหลือ"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("บังกลาเทศ"),
+        "bank": MessageLookupByLibrary.simpleMessage("ธนาคาร"),
+        "barcodeFound": MessageLookupByLibrary.simpleMessage("พบบาร์โค้ด"),
         "billTO": MessageLookupByLibrary.simpleMessage("วางบิลไปยัง"),
         "brand": MessageLookupByLibrary.simpleMessage("แบรนด์"),
         "brandName": MessageLookupByLibrary.simpleMessage("ชื่อแบรนด์"),
@@ -88,7 +105,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "call": MessageLookupByLibrary.simpleMessage("โทร"),
         "camera": MessageLookupByLibrary.simpleMessage("กล้อง"),
         "cancel": MessageLookupByLibrary.simpleMessage("ยกเลิก"),
+        "cancelAllProduct":
+            MessageLookupByLibrary.simpleMessage("ยกเลิกผลิตภัณฑ์ทั้งหมด"),
         "capacity": MessageLookupByLibrary.simpleMessage("ความจุ"),
+        "card": MessageLookupByLibrary.simpleMessage("บัตร"),
         "cash": MessageLookupByLibrary.simpleMessage("เงินสด"),
         "categories": MessageLookupByLibrary.simpleMessage("หมวดหมู่"),
         "category": MessageLookupByLibrary.simpleMessage("หมวดหมู่"),
@@ -104,6 +124,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
             "คุณสมบัติเป็นส่วนสำคัญที่ทำให้ PosPro แตกต่างจากแบบแผนดั้งเดิม"),
         "clarence": MessageLookupByLibrary.simpleMessage("คลาร์เรนซ์"),
+        "clearAll": MessageLookupByLibrary.simpleMessage("ล้างทั้งหมด"),
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("คลิกเพื่อเชื่อมต่อ"),
         "close": MessageLookupByLibrary.simpleMessage("ปิด"),
@@ -132,6 +153,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "continueButton": MessageLookupByLibrary.simpleMessage("ดำเนินการต่อ"),
         "continueE": MessageLookupByLibrary.simpleMessage("ดำเนินการต่อ"),
         "cost": MessageLookupByLibrary.simpleMessage("ต้นทุน"),
+        "couldNotFetchProducts":
+            MessageLookupByLibrary.simpleMessage("ไม่สามารถดึงผลิตภัณฑ์ได้"),
+        "couldNotFetchTheCategories":
+            MessageLookupByLibrary.simpleMessage("ไม่สามารถดึงหมวดหมู่ได้"),
         "country": MessageLookupByLibrary.simpleMessage("ประเทศ"),
         "create": MessageLookupByLibrary.simpleMessage("สร้าง"),
         "createAFreeAccount":
@@ -140,6 +165,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "createNewPassword":
             MessageLookupByLibrary.simpleMessage("สร้างรหัสผ่านใหม่"),
         "currency": MessageLookupByLibrary.simpleMessage("สกุลเงิน"),
+        "currentYear": MessageLookupByLibrary.simpleMessage("ปีปัจจุบัน"),
         "customInvoiceBranding": MessageLookupByLibrary.simpleMessage(
             "การสร้างแบรนด์ใบแจ้งหนี้แบบกำหนดเอง"),
         "customerDue": MessageLookupByLibrary.simpleMessage("หนี้ลูกค้า"),
@@ -155,10 +181,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "date": MessageLookupByLibrary.simpleMessage("วันที่"),
         "dates": MessageLookupByLibrary.simpleMessage("วันที่:"),
         "days": MessageLookupByLibrary.simpleMessage("วัน"),
+        "daysLeft": MessageLookupByLibrary.simpleMessage("วันที่เหลือ"),
         "dealer": MessageLookupByLibrary.simpleMessage("ตัวแทนจำหน่าย"),
         "dealerPrice":
             MessageLookupByLibrary.simpleMessage("ราคาตัวแทนจำหน่าย"),
         "delete": MessageLookupByLibrary.simpleMessage("ลบ"),
+        "deleteConfirmation":
+            MessageLookupByLibrary.simpleMessage("การยืนยันการลบ"),
         "deleting": MessageLookupByLibrary.simpleMessage("กำลังลบ...."),
         "deliveryAddress":
             MessageLookupByLibrary.simpleMessage("ที่อยู่สำหรับจัดส่ง"),
@@ -175,6 +204,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("คุณต้องการออกจากแอปหรือไม่?"),
         "donNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("ยังไม่มีบัญชีใช่ไหม?"),
+        "done": MessageLookupByLibrary.simpleMessage("เสร็จสิ้น"),
         "due": MessageLookupByLibrary.simpleMessage("เนื่องจาก"),
         "dueAmount":
             MessageLookupByLibrary.simpleMessage("จำนวนเงินที่ต้องชำระ: "),
@@ -230,6 +260,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ป้อนวันที่ค่าใช้จ่าย"),
         "enterFullAddress":
             MessageLookupByLibrary.simpleMessage("ป้อนที่อยู่เต็ม"),
+        "enterIncomeCategoryName":
+            MessageLookupByLibrary.simpleMessage("ป้อนชื่อหมวดหมู่รายได้"),
         "enterManufacturerName":
             MessageLookupByLibrary.simpleMessage("กรอกชื่อผู้ผลิต"),
         "enterName": MessageLookupByLibrary.simpleMessage("ป้อนชื่อ"),
@@ -248,6 +280,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterSize": MessageLookupByLibrary.simpleMessage("กรอกขนาด"),
         "enterStock": MessageLookupByLibrary.simpleMessage("กรอกสต๊อก"),
         "enterType": MessageLookupByLibrary.simpleMessage("กรอกประเภท"),
+        "enterUnitQuantity":
+            MessageLookupByLibrary.simpleMessage("ป้อนจำนวนหน่วย"),
         "enterUserTitle":
             MessageLookupByLibrary.simpleMessage("กรอกชื่อผู้ใช้"),
         "enterValidOTP":
@@ -283,6 +317,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("อัปเดตฟรีตลอดชีพ"),
         "freePack": MessageLookupByLibrary.simpleMessage("แพ็คเกจฟรี"),
         "freePlan": MessageLookupByLibrary.simpleMessage("แผนฟรี"),
+        "fri": MessageLookupByLibrary.simpleMessage("ศุกร์"),
         "fromDate": MessageLookupByLibrary.simpleMessage("จากวันที่"),
         "fullName": MessageLookupByLibrary.simpleMessage("ชื่อเต็ม"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("ชำระเต็มจำนวน"),
@@ -296,6 +331,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "home": MessageLookupByLibrary.simpleMessage("หน้าหลัก"),
         "image": MessageLookupByLibrary.simpleMessage("รูปภาพ"),
         "income": MessageLookupByLibrary.simpleMessage("รายได้"),
+        "incomeCategories":
+            MessageLookupByLibrary.simpleMessage("หมวดหมู่รายได้"),
+        "incomeFor": MessageLookupByLibrary.simpleMessage("รายได้สำหรับ"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("รายงานรายได้"),
         "instagram": MessageLookupByLibrary.simpleMessage("Instagram"),
         "instrucation": MessageLookupByLibrary.simpleMessage("คำแนะนำ"),
@@ -303,11 +341,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "invoice": MessageLookupByLibrary.simpleMessage("ใบแจ้งหนี้"),
         "invoiceViewr": MessageLookupByLibrary.simpleMessage("ตัวดูใบแจ้งหนี้"),
         "itemAdded": MessageLookupByLibrary.simpleMessage("เพิ่มรายการแล้ว"),
+        "itemDetails": MessageLookupByLibrary.simpleMessage("รายละเอียดรายการ"),
+        "items": MessageLookupByLibrary.simpleMessage("รายการ"),
+        "itemsFor": MessageLookupByLibrary.simpleMessage("รายการสำหรับ"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("ยอดขายสินค้"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("อีเมล"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("รหัสผ่าน"),
         "language": MessageLookupByLibrary.simpleMessage("ภาษา"),
+        "last30Days": MessageLookupByLibrary.simpleMessage("30 วันที่ผ่านมา"),
+        "last7Days": MessageLookupByLibrary.simpleMessage("7 วันที่ผ่านมา"),
         "lastName": MessageLookupByLibrary.simpleMessage("นามสกุล"),
+        "lastYear": MessageLookupByLibrary.simpleMessage("ปีที่แล้ว"),
         "link": MessageLookupByLibrary.simpleMessage("ลิงก์"),
         "linkedIN": MessageLookupByLibrary.simpleMessage("LinkedIn"),
         "loading": MessageLookupByLibrary.simpleMessage("กำลังโหลด"),
@@ -323,6 +367,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Natoque aliquet et, cur eget. Tellus sapien odio aliq."),
         "loremIpsumDolorSit": MessageLookupByLibrary.simpleMessage(
             "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper."),
+        "loremIpsumDolorSitAmetConsecteturAdipiscingElitMaurisCras":
+            MessageLookupByLibrary.simpleMessage(
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cras"),
         "loremIpsumDolorSitAmetConsecteturElitInterdumCons":
             MessageLookupByLibrary.simpleMessage(
                 "Lorem ipsum dolor sit amet, consectetur elit. Interdum cons."),
@@ -338,6 +385,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "masterCard": MessageLookupByLibrary.simpleMessage("บัตรมาสเตอร์การ์ด"),
         "messege": MessageLookupByLibrary.simpleMessage("ข้อความ"),
         "mobile": MessageLookupByLibrary.simpleMessage("มือถือ:"),
+        "mobilePayment":
+            MessageLookupByLibrary.simpleMessage("การชำระเงินผ่านมือถือ"),
+        "mon": MessageLookupByLibrary.simpleMessage("จันทร์"),
+        "monthly": MessageLookupByLibrary.simpleMessage("รายเดือน"),
         "moreInfo": MessageLookupByLibrary.simpleMessage("ข้อมูลเพิ่มเติม"),
         "mrp": MessageLookupByLibrary.simpleMessage("MRP"),
         "name": MessageLookupByLibrary.simpleMessage("ชื่อ"),
@@ -358,9 +409,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "noRoleFound": MessageLookupByLibrary.simpleMessage("ไม่พบบทบาทผู้ใช้"),
         "noSupplier": MessageLookupByLibrary.simpleMessage("ไม่มีซัพพลายเออร์"),
         "noTransaction": MessageLookupByLibrary.simpleMessage("ไม่มีธุรกรรม"),
+        "notActiveUser":
+            MessageLookupByLibrary.simpleMessage("ผู้ใช้ที่ไม่ใช้งาน"),
         "notFound": MessageLookupByLibrary.simpleMessage("ไม่พบ"),
         "note": MessageLookupByLibrary.simpleMessage("บันทึก"),
         "notification": MessageLookupByLibrary.simpleMessage("การแจ้งเตือน"),
+        "oK": MessageLookupByLibrary.simpleMessage("ตกลง"),
         "off": MessageLookupByLibrary.simpleMessage("ปิด"),
         "on": MessageLookupByLibrary.simpleMessage("เปิด"),
         "openingBalance":
@@ -411,6 +465,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("เลือกวันที่สิ้นสุด"),
         "pickStartDate":
             MessageLookupByLibrary.simpleMessage("เลือกวันที่เริ่มต้น"),
+        "plan": MessageLookupByLibrary.simpleMessage("แผน"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("กรุณาเพิ่มจำนวน"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
@@ -445,6 +500,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("กรุณากรอกจำนวนเงิน"),
         "pleaseEnterName":
             MessageLookupByLibrary.simpleMessage("กรุณากรอกชื่อ"),
+        "pleaseEnterSalesPrice":
+            MessageLookupByLibrary.simpleMessage("กรุณาป้อนราคาขาย"),
         "pleaseEnterTheOTP":
             MessageLookupByLibrary.simpleMessage("กรุณากรอก OTP"),
         "pleaseEnterUnitName":
@@ -460,6 +517,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("กรุณาเลือกหมวดหมู่"),
         "pleaseSelectAExpenseCategory": MessageLookupByLibrary.simpleMessage(
             "กรุณาเลือกหมวดหมู่ค่าใช้จ่าย"),
+        "pleaseUseTheValidPurchaseCodeToUseTheApp":
+            MessageLookupByLibrary.simpleMessage(
+                "กรุณาใช้รหัสการซื้อที่ถูกต้องเพื่อใช้แอป"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("ขับเคลื่อนโดย Acnoo"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
@@ -468,6 +528,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "previousDue": MessageLookupByLibrary.simpleMessage("ก่อนครบกำหนด"),
         "previousPayAmount":
             MessageLookupByLibrary.simpleMessage("จำนวนเงินที่ชำระก่อนหน้า"),
+        "priceMustBeGreaterThan":
+            MessageLookupByLibrary.simpleMessage("ราคาต้องมากกว่า"),
         "print": MessageLookupByLibrary.simpleMessage("พิมพ์"),
         "printing": MessageLookupByLibrary.simpleMessage("ตัวเลือกการพิมพ์"),
         "product": MessageLookupByLibrary.simpleMessage("ผลิตภัณฑ์"),
@@ -505,7 +567,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchased": MessageLookupByLibrary.simpleMessage("ซื้อ"),
         "qty": MessageLookupByLibrary.simpleMessage("จำนวน"),
         "quantity": MessageLookupByLibrary.simpleMessage("ปริมาณ"),
+        "quantityExceedsAvailableStock":
+            MessageLookupByLibrary.simpleMessage("จำนวนเกินจากสต๊อกที่มี"),
+        "quantityMustBeGreaterThan":
+            MessageLookupByLibrary.simpleMessage("จำนวนต้องมากกว่า"),
         "quickOverview": MessageLookupByLibrary.simpleMessage("ภาพรวมด่วน"),
+        "receivedAmount":
+            MessageLookupByLibrary.simpleMessage("จำนวนที่ได้รับ"),
         "recentTransaction":
             MessageLookupByLibrary.simpleMessage("การทำธุรกรรมล่าสุด"),
         "recivethePin": MessageLookupByLibrary.simpleMessage("ได้รับรหัสผ่าน"),
@@ -513,6 +581,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("ลงทะเบียน"),
         "registerTitle": MessageLookupByLibrary.simpleMessage(
             "เราจำเป็นต้องลงทะเบียนโทรศัพท์ของคุณโดยไม่ต้องเริ่มต้น!"),
+        "relatedDataWillBeDeletedAlso": MessageLookupByLibrary.simpleMessage(
+            "ข้อมูลที่เกี่ยวข้องจะถูกลบด้วย"),
         "remainingDue": MessageLookupByLibrary.simpleMessage("ยอดคงค้าง"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("จดจำฉัน"),
         "rememberMeLater":
@@ -521,6 +591,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resendIn": MessageLookupByLibrary.simpleMessage("ส่ง OTP อีกครั้งใน"),
         "resendOTP":
             MessageLookupByLibrary.simpleMessage("ส่งรหัส OTP อีกครั้ง"),
+        "resendOTPIn": MessageLookupByLibrary.simpleMessage("ส่ง OTP ใหม่ใน"),
         "reset": MessageLookupByLibrary.simpleMessage(
             "รีเซ็ตรหัสผ่านโดยใช้ อีเมลหรือหมายเลขโทรศัพท์ของคุณ"),
         "resetPassword": MessageLookupByLibrary.simpleMessage(
@@ -536,18 +607,28 @@ class MessageLookup extends MessageLookupByLibrary {
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("รายละเอียดการขาย"),
         "salesList": MessageLookupByLibrary.simpleMessage("รายการขาย"),
+        "salesPrice": MessageLookupByLibrary.simpleMessage("ราคาขาย"),
         "salesPurchaseOverview":
             MessageLookupByLibrary.simpleMessage("ภาพรวมการขายและการซื้อ"),
         "salesReport": MessageLookupByLibrary.simpleMessage("รายงานการขาย"),
+        "sat": MessageLookupByLibrary.simpleMessage("เสาร์"),
         "save": MessageLookupByLibrary.simpleMessage("บันทึก"),
         "saveNPublish":
             MessageLookupByLibrary.simpleMessage("บันทึกและเผยแพร่"),
+        "scanProductQRCode":
+            MessageLookupByLibrary.simpleMessage("สแกน QR โค้ดผลิตภัณฑ์"),
         "search": MessageLookupByLibrary.simpleMessage("ค้นหา"),
         "searchH": MessageLookupByLibrary.simpleMessage("ค้นหาที่นี่...."),
+        "searchHere": MessageLookupByLibrary.simpleMessage("ค้นหาที่นี่"),
+        "seconds": MessageLookupByLibrary.simpleMessage("วินาที"),
         "seeAllPromoCode":
             MessageLookupByLibrary.simpleMessage("ดูรหัสโปรโมชั่นทั้งหมด"),
         "select": MessageLookupByLibrary.simpleMessage("เลือก"),
         "selectABrand": MessageLookupByLibrary.simpleMessage("เลือกแบรนด์"),
+        "selectABusinessCategory":
+            MessageLookupByLibrary.simpleMessage("เลือกหมวดหมู่ธุรกิจ"),
+        "selectACategory":
+            MessageLookupByLibrary.simpleMessage("เลือกหมวดหมู่"),
         "selectAInvoice":
             MessageLookupByLibrary.simpleMessage("เลือกใบแจ้งหนี้"),
         "selectBusinessCategory":
@@ -598,6 +679,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "stock": MessageLookupByLibrary.simpleMessage("คลังสินค้า"),
         "stockList": MessageLookupByLibrary.simpleMessage("รายการสต็อก"),
         "stockReport": MessageLookupByLibrary.simpleMessage("รายงานสต๊อก"),
+        "stockS": MessageLookupByLibrary.simpleMessage("สต๊อก"),
         "stockValue": MessageLookupByLibrary.simpleMessage("มูลค่าสินค้า"),
         "stocks": MessageLookupByLibrary.simpleMessage("สต๊อก: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("ยอดรวมย่อย"),
@@ -609,14 +691,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "supplerPay":
             MessageLookupByLibrary.simpleMessage("ซัพพลายเออร์ชำระเงิน"),
         "supplier": MessageLookupByLibrary.simpleMessage("ผู้จัดหา"),
+        "supplierDetails":
+            MessageLookupByLibrary.simpleMessage("รายละเอียดผู้จัดจำหน่าย"),
         "supplierName": MessageLookupByLibrary.simpleMessage("ชื่อผู้ผลิต"),
         "thakYouForYourPurchase":
             MessageLookupByLibrary.simpleMessage("ขอบคุณสำหรับการซื้อของคุณ"),
         "thankYouForYourDuePayment": MessageLookupByLibrary.simpleMessage(
             "ขอบคุณสำหรับการชำระเงินค่าใช้จ่ายที่ครบกำหนด"),
+        "thisMonth": MessageLookupByLibrary.simpleMessage("เดือนนี้"),
         "thisProductAlreadyAdded":
             MessageLookupByLibrary.simpleMessage("สินค้านี้ได้ถูกเพิ่มแล้ว!"),
+        "thisWeek": MessageLookupByLibrary.simpleMessage("สัปดาห์นี้"),
+        "thisYear": MessageLookupByLibrary.simpleMessage("ปีนี้"),
+        "thurs": MessageLookupByLibrary.simpleMessage("พฤหัสบดี"),
         "toDate": MessageLookupByLibrary.simpleMessage("ถึงวันที่"),
+        "toDay": MessageLookupByLibrary.simpleMessage("วันนี้"),
         "todaySummary": MessageLookupByLibrary.simpleMessage("สรุปวันนี้"),
         "total": MessageLookupByLibrary.simpleMessage("ทั้งหมด"),
         "totalAmount": MessageLookupByLibrary.simpleMessage("จำนวนเงินทั้งหมด"),
@@ -642,11 +731,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "totall": MessageLookupByLibrary.simpleMessage("รวม:"),
         "transactions": MessageLookupByLibrary.simpleMessage("ธุรกรรม"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("ลองอีกครั้ง"),
+        "tues": MessageLookupByLibrary.simpleMessage("อังคาร"),
         "twitter": MessageLookupByLibrary.simpleMessage("Twitter"),
         "type": MessageLookupByLibrary.simpleMessage("ประเภท"),
         "unPaid": MessageLookupByLibrary.simpleMessage("ค้างชำระ"),
         "unitName": MessageLookupByLibrary.simpleMessage("ชื่อหน่วย"),
         "unitPirce": MessageLookupByLibrary.simpleMessage("ราคาต่อหน่วย"),
+        "unitPrice": MessageLookupByLibrary.simpleMessage("ราคาต่อหน่วย"),
         "units": MessageLookupByLibrary.simpleMessage("หน่วย"),
         "unlimited": MessageLookupByLibrary.simpleMessage("ไม่ จำกัด"),
         "unlimitedUsage":
@@ -673,6 +764,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("รายละเอียดบทบาทผู้ใช้"),
         "userTitle": MessageLookupByLibrary.simpleMessage("ชื่อผู้ใช้"),
         "vat": MessageLookupByLibrary.simpleMessage("VAT"),
+        "vatDoesNOtApply":
+            MessageLookupByLibrary.simpleMessage("VAT ไม่สามารถใช้ได้"),
         "verification": MessageLookupByLibrary.simpleMessage("การตรวจสอบ"),
         "verify": MessageLookupByLibrary.simpleMessage("ตรวจสอบ"),
         "verifyYourEmail":
@@ -685,6 +778,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("เราส่งอีเมลยืนยันไปที่"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "เราได้ส่ง OTP ไปยังหมายเลขโทรศัพท์ของคุณ"),
+        "wed": MessageLookupByLibrary.simpleMessage("พุธ"),
+        "weekly": MessageLookupByLibrary.simpleMessage("รายสัปดาห์"),
         "weight": MessageLookupByLibrary.simpleMessage("น้ำหนัก"),
         "welcomeBack":
             MessageLookupByLibrary.simpleMessage("ยินดีต้อนรับกลับ!"),
@@ -695,9 +790,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("จะถูกเพิ่มเร็วๆ นี้"),
         "writeYourMessageHere":
             MessageLookupByLibrary.simpleMessage("เขียนข้อความของคุณที่นี่"),
+        "yearly": MessageLookupByLibrary.simpleMessage("รายปี"),
         "yes": MessageLookupByLibrary.simpleMessage("ใช่"),
         "youCanNotPayMoreThenDue": MessageLookupByLibrary.simpleMessage(
             "คุณไม่สามารถชำระมากกว่าที่ค้างชำระได้"),
+        "youCanNowResendTheOTP": MessageLookupByLibrary.simpleMessage(
+            "คุณสามารถส่ง OTP ใหม่ได้แล้ว"),
         "youHaveToGivePermission":
             MessageLookupByLibrary.simpleMessage("คุณต้องให้สิทธิ์"),
         "youRUsing": MessageLookupByLibrary.simpleMessage("คุณกำลังใช้ "),

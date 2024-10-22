@@ -30,8 +30,8 @@ class _DueReportScreenState extends State<DueReportScreen> {
   DateTime toDate = DateTime.now();
   double totalReceiveDue = 0;
   double totalPaidDue = 0;
-  List<String> timeLimit = ['ToDay', 'This Week', 'This Month', 'This Year', 'All Time', 'Custom'];
-  String? dropdownValue = 'This Month';
+  // List<String> timeLimit = ['ToDay', 'This Week', 'This Month', 'This Year', 'All Time', 'Custom'];
+  // String? dropdownValue = 'This Month';
 
   void changeDate({required DateTime from}) {
     setState(() {
@@ -45,6 +45,21 @@ class _DueReportScreenState extends State<DueReportScreen> {
 
   @override
   Widget build(BuildContext context) {
+    List<String> timeLimit = [
+      lang.S.of(context).toDay,
+      //'ToDay',
+      lang.S.of(context).thisWeek,
+      //'This Week',
+    lang.S.of(context).thisMonth,
+      //'This Month',
+      lang.S.of(context).thisYear,
+      //'This Year',
+    lang.S.of(context).allTime,
+     // 'All Time',
+      lang.S.of(context).Custom,
+      //'Custom'
+    ];
+   late String? dropdownValue =timeLimit.first ;
     totalReceiveDue = 0;
     totalPaidDue = 0;
     return Scaffold(

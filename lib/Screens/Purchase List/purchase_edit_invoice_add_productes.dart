@@ -101,7 +101,7 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
                           decoration: InputDecoration(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             labelText: lang.S.of(context).productCode,
-                            hintText: productCode == '0000' || productCode == '-1' ? 'Scan product QR code' : productCode,
+                            hintText: productCode == '0000' || productCode == '-1' ? lang.S.of(context).scanProductQRCode : productCode,
                             border: const OutlineInputBorder(),
                           ),
                         ),
@@ -146,7 +146,7 @@ class _EditPurchaseInvoiceSaleProductsState extends State<EditPurchaseInvoiceSal
 
                                             if (barcodes.isNotEmpty) {
                                               final Barcode barcode = barcodes.first;
-                                              debugPrint('Barcode found! ${barcode.rawValue}');
+                                              debugPrint('${lang.S.of(context1).barcodeFound}! ${barcode.rawValue}');
                                               setState(() {
                                                 productCode = barcode.rawValue!;
                                                 codeController.text = productCode;

@@ -156,7 +156,8 @@ class _VerifyEmailState extends State<VerifyEmail> {
                 Padding(
                   padding: const EdgeInsets.only(top: 11, bottom: 11),
                   child: Text(
-                    _isButtonEnabled ? 'You can now resend the OTP.' : 'Resend OTP in $_start seconds',
+                   // _isButtonEnabled ? 'You can now resend the OTP.' : 'Resend OTP in $_start seconds',
+                    _isButtonEnabled ? '${lang.S.of(context).youCanNowResendTheOTP}.' : '${lang.S.of(context).resendOTPIn} $_start ${lang.S.of(context).seconds}',
                     // style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                 ),
