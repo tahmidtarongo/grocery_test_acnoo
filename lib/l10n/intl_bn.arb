@@ -571,6 +571,29 @@
   "notActiveUser": "সক্রিয় ব্যবহারকারী নন",
   "pleaseUseTheValidPurchaseCodeToUseTheApp": "অ্যাপটি ব্যবহার করতে বৈধ ক্রয় কোড ব্যবহার করুন",
   "oK": "ঠিক আছে",
-  "daysLeft": "অবশিষ্ট দিন"
+  "daysLeft": "অবশিষ্ট দিন",
+
+  "groceryShop": "মুদির দোকান",
+  "fashion": "ফ্যাশন",
+  "electronics": "ইলেকট্রনিক্স",
+  "computer": "কম্পিউটার",
+  "gadgets": "গ্যাজেটস",
+  "watches": "ঘড়ি",
+  "cloths": "পোশাক",
+  "check": "চেক করুন",
+  "mobilePay": "মোবাইল পেমেন্ট",
+  "jan": "জানু",
+  "feb": "ফেব",
+  "mar": "মার্চ",
+  "apr": "এপ্রি",
+  "may": "মে",
+  "jun": "জুন",
+  "jul": "জুলাই",
+  "aug": "আগস্ট",
+  "sep": "সেপ্টে",
+  "oct": "অক্টো",
+  "nov": "নভে",
+  "dec": "ডিসে"
+
 
 }

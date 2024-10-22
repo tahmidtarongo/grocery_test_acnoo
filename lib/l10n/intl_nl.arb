@@ -561,6 +561,30 @@
   "notActiveUser": "Geen Actieve Gebruiker",
   "pleaseUseTheValidPurchaseCodeToUseTheApp": "Gebruik de geldige aankoopcode om de app te gebruiken",
   "oK": "OK",
-  "daysLeft": "Dagen Over"
+  "daysLeft": "Dagen Over",
+
+
+  "groceryShop": "Boodschappenwinkel",
+  "fashion": "Mode",
+  "electronics": "Elektronica",
+  "computer": "Computer",
+  "gadgets": "Gadgets",
+  "watches": "Horloges",
+  "cloths": "Kleding",
+  "check": "Controleer",
+  "mobilePay": "Mobiele Betaling",
+  "jan": "Jan",
+  "feb": "Feb",
+  "mar": "Maa",
+  "apr": "Apr",
+  "may": "Mei",
+  "jun": "Jun",
+  "jul": "Jul",
+  "aug": "Aug",
+  "sep": "Sep",
+  "oct": "Okt",
+  "nov": "Nov",
+  "dec": "Dec"
+
 
 }

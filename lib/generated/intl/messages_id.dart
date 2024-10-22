@@ -95,12 +95,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "Pembaruan baru tersedia\nHarap perbarui aplikasi Anda"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
         "apply": MessageLookupByLibrary.simpleMessage("Terapkan"),
+        "apr": MessageLookupByLibrary.simpleMessage("Apr"),
         "areYouSure":
             MessageLookupByLibrary.simpleMessage("Apakah Anda yakin?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "Apakah Anda yakin ingin menghapus pihak ini?"),
         "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
             "Anda yakin ingin menghapus ini?"),
+        "aug": MessageLookupByLibrary.simpleMessage("Agu"),
         "backToHome":
             MessageLookupByLibrary.simpleMessage("Kembali ke Beranda"),
         "balance": MessageLookupByLibrary.simpleMessage("Saldo"),
@@ -130,6 +132,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "categoryName": MessageLookupByLibrary.simpleMessage("Nama Kategori"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("Ganti kata sandi"),
+        "check": MessageLookupByLibrary.simpleMessage("Periksa"),
         "checkEmail": MessageLookupByLibrary.simpleMessage("Periksa Email"),
         "chooseCustomer":
             MessageLookupByLibrary.simpleMessage("Pilih Pelanggan"),
@@ -143,6 +146,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Klik untuk terhubung"),
         "close": MessageLookupByLibrary.simpleMessage("Menutup"),
+        "cloths": MessageLookupByLibrary.simpleMessage("Pakaian"),
         "collectDue": MessageLookupByLibrary.simpleMessage("Kumpulkan Karena"),
         "collectDues":
             MessageLookupByLibrary.simpleMessage("Harap Kumpulkan Hutang"),
@@ -152,6 +156,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "comingSoon": MessageLookupByLibrary.simpleMessage("Segera Hadir"),
         "companyAddress":
             MessageLookupByLibrary.simpleMessage("Alamat perusahaan"),
+        "computer": MessageLookupByLibrary.simpleMessage("Komputer"),
         "confirmDelete":
             MessageLookupByLibrary.simpleMessage("Konfirmasi Penghapusan"),
         "confirmPass": MessageLookupByLibrary.simpleMessage("konfirmasi sandi"),
@@ -204,6 +209,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "daysLeft": MessageLookupByLibrary.simpleMessage("Hari Tersisa"),
         "dealer": MessageLookupByLibrary.simpleMessage("Pedagang"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage("Harga dealer"),
+        "dec": MessageLookupByLibrary.simpleMessage("Des"),
         "delete": MessageLookupByLibrary.simpleMessage("Hapus"),
         "deleteConfirmation":
             MessageLookupByLibrary.simpleMessage("Konfirmasi Penghapusan"),
@@ -246,6 +252,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Edit Faktur Penjualan"),
         "editSocailMedia":
             MessageLookupByLibrary.simpleMessage("Edit Media Sosial"),
+        "electronics": MessageLookupByLibrary.simpleMessage("Elektronik"),
         "email": MessageLookupByLibrary.simpleMessage("Alamat email"),
         "emailCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("Email tidak boleh kosong"),
@@ -331,7 +338,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Gagal mendapatkan versi platform."),
+        "fashion": MessageLookupByLibrary.simpleMessage("Fashion"),
         "fashions": MessageLookupByLibrary.simpleMessage("Mode"),
+        "feb": MessageLookupByLibrary.simpleMessage("Feb"),
         "field": MessageLookupByLibrary.simpleMessage("Kolom"),
         "firstName": MessageLookupByLibrary.simpleMessage("Nama Depan"),
         "folder": MessageLookupByLibrary.simpleMessage(
@@ -348,10 +357,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "fromDate": MessageLookupByLibrary.simpleMessage("Dari tanggal"),
         "fullName": MessageLookupByLibrary.simpleMessage("Nama Lengkap"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("Dibayar Penuh"),
+        "gadgets": MessageLookupByLibrary.simpleMessage("Gadget"),
         "gallery": MessageLookupByLibrary.simpleMessage("Galeri"),
         "gotEmail":
             MessageLookupByLibrary.simpleMessage("Anda Telah Mendapat Email"),
         "gotIt": MessageLookupByLibrary.simpleMessage("Mengerti"),
+        "groceryShop": MessageLookupByLibrary.simpleMessage("Toko Sembako"),
         "guest": MessageLookupByLibrary.simpleMessage("Tamu"),
         "haveAcc": MessageLookupByLibrary.simpleMessage("Sudah memiliki akun?"),
         "hintEmail":
@@ -376,6 +387,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "items": MessageLookupByLibrary.simpleMessage("Item"),
         "itemsFor": MessageLookupByLibrary.simpleMessage("item untuk"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("Penjualan Barang"),
+        "jan": MessageLookupByLibrary.simpleMessage("Jan"),
+        "jul": MessageLookupByLibrary.simpleMessage("Jul"),
+        "jun": MessageLookupByLibrary.simpleMessage("Jun"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("Email"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("Kata Sandi"),
         "language": MessageLookupByLibrary.simpleMessage("bahasa"),
@@ -414,9 +428,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "lp": MessageLookupByLibrary.simpleMessage("Rugi/Laba"),
         "lpDetails": MessageLookupByLibrary.simpleMessage("Rincian Rugi/Laba"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("Pabrikan"),
+        "mar": MessageLookupByLibrary.simpleMessage("Mar"),
         "masterCard": MessageLookupByLibrary.simpleMessage("Kartu Master"),
+        "may": MessageLookupByLibrary.simpleMessage("Mei"),
         "messege": MessageLookupByLibrary.simpleMessage("Pesan"),
         "mobile": MessageLookupByLibrary.simpleMessage("Seluler:"),
+        "mobilePay": MessageLookupByLibrary.simpleMessage("Pembayaran Seluler"),
         "mobilePayment":
             MessageLookupByLibrary.simpleMessage("Pembayaran Seluler"),
         "mon": MessageLookupByLibrary.simpleMessage("Sen"),
@@ -451,7 +468,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "notFound": MessageLookupByLibrary.simpleMessage("Tidak Ditemukan"),
         "note": MessageLookupByLibrary.simpleMessage("Catatan"),
         "notification": MessageLookupByLibrary.simpleMessage("Pemberitahuan"),
+        "nov": MessageLookupByLibrary.simpleMessage("Nov"),
         "oK": MessageLookupByLibrary.simpleMessage("OK"),
+        "oct": MessageLookupByLibrary.simpleMessage("Okt"),
         "off": MessageLookupByLibrary.simpleMessage("Mati"),
         "on": MessageLookupByLibrary.simpleMessage("Hidup"),
         "openingBalance": MessageLookupByLibrary.simpleMessage("Saldo awal"),
@@ -696,6 +715,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendSms": MessageLookupByLibrary.simpleMessage("Kirim SMS"),
         "sendYourEmail":
             MessageLookupByLibrary.simpleMessage("Kirim Email Anda"),
+        "sep": MessageLookupByLibrary.simpleMessage("Sep"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "Perbarui profil Anda untuk menghubungkan dokter Anda dengan kesan yang lebih baik"),
         "setUpNewPassword":
@@ -824,6 +844,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "viewAll": MessageLookupByLibrary.simpleMessage("Lihat semua"),
         "walkInCustomer":
             MessageLookupByLibrary.simpleMessage("Pelanggan Langsung"),
+        "watches": MessageLookupByLibrary.simpleMessage("Jam Tangan"),
         "weHaveSentAConfirmationEmailTo": MessageLookupByLibrary.simpleMessage(
             "Kami telah mengirim email konfirmasi ke"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(

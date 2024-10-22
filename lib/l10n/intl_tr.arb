@@ -562,6 +562,30 @@
   "notActiveUser": "Aktif Kullanıcı Değil",
   "pleaseUseTheValidPurchaseCodeToUseTheApp": "Lütfen uygulamayı kullanmak için geçerli satın alma kodunu kullanın",
   "oK": "Tamam",
-  "daysLeft": "Kalan Gün"
+  "daysLeft": "Kalan Gün",
+
+
+  "groceryShop": "Market",
+  "fashion": "Moda",
+  "electronics": "Elektronik",
+  "computer": "Bilgisayar",
+  "gadgets": "Aletler",
+  "watches": "Saatler",
+  "cloths": "Giysiler",
+  "check": "Kontrol Et",
+  "mobilePay": "Mobil Ödeme",
+  "jan": "Oca",
+  "feb": "Şub",
+  "mar": "Mar",
+  "apr": "Nis",
+  "may": "May",
+  "jun": "Haz",
+  "jul": "Tem",
+  "aug": "Ağu",
+  "sep": "Eyl",
+  "oct": "Eki",
+  "nov": "Kas",
+  "dec": "Ara"
+
 
 }

@@ -86,11 +86,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "Uusi päivitys saatavilla\nPäivitä sovelluksesi"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
         "apply": MessageLookupByLibrary.simpleMessage("Käytä"),
+        "apr": MessageLookupByLibrary.simpleMessage("Huhti"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("Oletko varma?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "Oletko varma, että haluat poistaa tämän osapuolen?"),
         "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
             "Oletko varma, että haluat poistaa tämän"),
+        "aug": MessageLookupByLibrary.simpleMessage("Elo"),
         "backToHome": MessageLookupByLibrary.simpleMessage("Takaisin kotiin"),
         "balance": MessageLookupByLibrary.simpleMessage("Saldo"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("Bangladesh"),
@@ -120,6 +122,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "categoryName": MessageLookupByLibrary.simpleMessage("Kategorian nimi"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("Vaihda salasana"),
+        "check": MessageLookupByLibrary.simpleMessage("Tarkistaa"),
         "checkEmail":
             MessageLookupByLibrary.simpleMessage("Tarkista sähköposti"),
         "chooseCustomer":
@@ -135,6 +138,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Yhdistä napsauttamalla"),
         "close": MessageLookupByLibrary.simpleMessage("kiinni"),
+        "cloths": MessageLookupByLibrary.simpleMessage("Vaatteet"),
         "collectDue": MessageLookupByLibrary.simpleMessage("Kerää Eräpäivä"),
         "collectDues":
             MessageLookupByLibrary.simpleMessage("Ole hyvä ja kerää Erämaksu"),
@@ -142,6 +146,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "color": MessageLookupByLibrary.simpleMessage("Väri"),
         "comingSoon": MessageLookupByLibrary.simpleMessage("Tulee pian"),
         "companyAddress": MessageLookupByLibrary.simpleMessage("yritys osoite"),
+        "computer": MessageLookupByLibrary.simpleMessage("Tietokone"),
         "confirmDelete":
             MessageLookupByLibrary.simpleMessage("Vahvista poistaminen"),
         "confirmPass":
@@ -194,6 +199,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "dealer": MessageLookupByLibrary.simpleMessage("Jakaja"),
         "dealerPrice":
             MessageLookupByLibrary.simpleMessage("Jälleenmyyjän hinta"),
+        "dec": MessageLookupByLibrary.simpleMessage("Joulu"),
         "delete": MessageLookupByLibrary.simpleMessage("Poista"),
         "deleteConfirmation":
             MessageLookupByLibrary.simpleMessage("Poiston vahvistus"),
@@ -234,6 +240,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Muokkaa myyntilaskua"),
         "editSocailMedia":
             MessageLookupByLibrary.simpleMessage("Muokkaa sosiaalista mediaa"),
+        "electronics": MessageLookupByLibrary.simpleMessage("Elektroniikka"),
         "email": MessageLookupByLibrary.simpleMessage("Sähköpostiosoite"),
         "emailCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Sähköposti ei voi olla tyhjää"),
@@ -316,7 +323,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Alustan version hakeminen epäonnistui."),
+        "fashion": MessageLookupByLibrary.simpleMessage("Muoti"),
         "fashions": MessageLookupByLibrary.simpleMessage("Muoti"),
+        "feb": MessageLookupByLibrary.simpleMessage("Helmi"),
         "field": MessageLookupByLibrary.simpleMessage("Kenttä"),
         "firstName": MessageLookupByLibrary.simpleMessage("Etunimi"),
         "folder": MessageLookupByLibrary.simpleMessage(
@@ -334,10 +343,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "fromDate": MessageLookupByLibrary.simpleMessage("Päivämäärästä"),
         "fullName": MessageLookupByLibrary.simpleMessage("Koko nimi"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("Kokonaan maksettu"),
+        "gadgets": MessageLookupByLibrary.simpleMessage("Gadgets"),
         "gallery": MessageLookupByLibrary.simpleMessage("Galleria"),
         "gotEmail":
             MessageLookupByLibrary.simpleMessage("Sinulla on sähköposti"),
         "gotIt": MessageLookupByLibrary.simpleMessage("Selvä"),
+        "groceryShop": MessageLookupByLibrary.simpleMessage("Ruokakauppa"),
         "guest": MessageLookupByLibrary.simpleMessage("Vieras"),
         "haveAcc":
             MessageLookupByLibrary.simpleMessage("Onko sinulla jo tili?"),
@@ -361,6 +372,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "items": MessageLookupByLibrary.simpleMessage("Tuotteet"),
         "itemsFor": MessageLookupByLibrary.simpleMessage("tuotteet varten"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("Tuotemyynti"),
+        "jan": MessageLookupByLibrary.simpleMessage("Tammi"),
+        "jul": MessageLookupByLibrary.simpleMessage("Heinä"),
+        "jun": MessageLookupByLibrary.simpleMessage("Kesä"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("Sähköposti"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("Salasana"),
         "language": MessageLookupByLibrary.simpleMessage("Kieli"),
@@ -399,9 +413,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "lpDetails":
             MessageLookupByLibrary.simpleMessage("Tappio/voittotiedot"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("Valmistaja"),
+        "mar": MessageLookupByLibrary.simpleMessage("Maalis"),
         "masterCard": MessageLookupByLibrary.simpleMessage("MasterCard"),
+        "may": MessageLookupByLibrary.simpleMessage("Touko"),
         "messege": MessageLookupByLibrary.simpleMessage("Viesti"),
         "mobile": MessageLookupByLibrary.simpleMessage("mobiili:"),
+        "mobilePay": MessageLookupByLibrary.simpleMessage("Mobiilimaksu"),
         "mobilePayment": MessageLookupByLibrary.simpleMessage("Mobiilimaksu"),
         "mon": MessageLookupByLibrary.simpleMessage("Ma"),
         "monthly": MessageLookupByLibrary.simpleMessage("Kuukausittain"),
@@ -434,7 +451,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "notFound": MessageLookupByLibrary.simpleMessage("Ei löytynyt"),
         "note": MessageLookupByLibrary.simpleMessage("Huomautus"),
         "notification": MessageLookupByLibrary.simpleMessage("Ilmoitus"),
+        "nov": MessageLookupByLibrary.simpleMessage("Marras"),
         "oK": MessageLookupByLibrary.simpleMessage("OK"),
+        "oct": MessageLookupByLibrary.simpleMessage("Loka"),
         "off": MessageLookupByLibrary.simpleMessage("Pois"),
         "on": MessageLookupByLibrary.simpleMessage("Päällä"),
         "openingBalance": MessageLookupByLibrary.simpleMessage("Avaussaldo"),
@@ -674,6 +693,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendSms": MessageLookupByLibrary.simpleMessage("Lähetä SMS"),
         "sendYourEmail":
             MessageLookupByLibrary.simpleMessage("Lähetä sähköpostisi"),
+        "sep": MessageLookupByLibrary.simpleMessage("Syys"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "Päivitä profiilisi saadaksesi paremman vaikutelman lääkärillesi"),
         "setUpNewPassword":
@@ -802,6 +822,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "viewAll": MessageLookupByLibrary.simpleMessage("Näytä kaikki"),
         "walkInCustomer":
             MessageLookupByLibrary.simpleMessage("Kävelevä asiakas"),
+        "watches": MessageLookupByLibrary.simpleMessage("Kellot"),
         "weHaveSentAConfirmationEmailTo": MessageLookupByLibrary.simpleMessage(
             "Olemme lähettäneet vahvistusviestin osoitteeseen"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(

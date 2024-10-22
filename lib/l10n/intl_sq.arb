@@ -567,6 +567,30 @@
   "notActiveUser": "Kompania e Pasaktive",
   "pleaseUseTheValidPurchaseCodeToUseTheApp": "Ju lutemi përdorni kodin e vlefshëm të blerjes për të përdorur aplikacionin",
   "oK": "OK",
-  "daysLeft": "Ditët e Lëna"
+  "daysLeft": "Ditët e Lëna",
+
+
+  "groceryShop": "Dyqani i ushqimeve",
+  "fashion": "Modë",
+  "electronics": "Elektronikë",
+  "computer": "Kompjuter",
+  "gadgets": "Gadgets",
+  "watches": "Ora",
+  "cloths": "Rrobat",
+  "check": "Kontrollo",
+  "mobilePay": "Pagesë mobile",
+  "jan": "Jan",
+  "feb": "Shk",
+  "mar": "Mar",
+  "apr": "Pri",
+  "may": "Maj",
+  "jun": "Qer",
+  "jul": "Kor",
+  "aug": "Gsh",
+  "sep": "Sht",
+  "oct": "Tet",
+  "nov": "Nën",
+  "dec": "Dhj"
+
 
 }

@@ -562,7 +562,31 @@
   "notActiveUser": "Utilizator inactiv",
   "pleaseUseTheValidPurchaseCodeToUseTheApp": "Vă rugăm să folosiți codul de achiziție valid pentru a utiliza aplicația",
   "oK": "OK",
-  "daysLeft": "Zile rămase"
+  "daysLeft": "Zile rămase",
+
+
+  "groceryShop": "Magazin de produse alimentare",
+  "fashion": "Modă",
+  "electronics": "Electronice",
+  "computer": "Computer",
+  "gadgets": "Gadgeturi",
+  "watches": "Ceasuri",
+  "cloths": "Îmbrăcăminte",
+  "check": "Verificare",
+  "mobilePay": "Plată mobilă",
+  "jan": "Ian",
+  "feb": "Feb",
+  "mar": "Mar",
+  "apr": "Apr",
+  "may": "Mai",
+  "jun": "Iun",
+  "jul": "Iul",
+  "aug": "Aug",
+  "sep": "Sep",
+  "oct": "Oct",
+  "nov": "Nov",
+  "dec": "Dec"
+
 
 
 }

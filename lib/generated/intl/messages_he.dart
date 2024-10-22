@@ -77,11 +77,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "קיימת עדכון חדש זמין\nאנא עדכן את האפליקציה שלך"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("אפל ווטש"),
         "apply": MessageLookupByLibrary.simpleMessage("החל"),
+        "apr": MessageLookupByLibrary.simpleMessage("אפר"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("האם אתה בטוח?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "האם אתה בטוח שברצונך למחוק את הצד?"),
         "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
             "האם אתה בטוח שברצונך למחוק את זה"),
+        "aug": MessageLookupByLibrary.simpleMessage("אוג"),
         "backToHome": MessageLookupByLibrary.simpleMessage("חזרה לדף הבית"),
         "balance": MessageLookupByLibrary.simpleMessage("יתרה"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("בנגלדש"),
@@ -107,6 +109,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "category": MessageLookupByLibrary.simpleMessage("קטגוריה"),
         "categoryName": MessageLookupByLibrary.simpleMessage("שם קטגוריה"),
         "changePassword": MessageLookupByLibrary.simpleMessage("שנה סיסמא"),
+        "check": MessageLookupByLibrary.simpleMessage("בדוק"),
         "checkEmail":
             MessageLookupByLibrary.simpleMessage("בדוק דואר אלקטרוני"),
         "chooseCustomer": MessageLookupByLibrary.simpleMessage("בחר לקוח"),
@@ -120,12 +123,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("לחץ כדי להתחבר"),
         "close": MessageLookupByLibrary.simpleMessage("סגור"),
+        "cloths": MessageLookupByLibrary.simpleMessage("בגדים"),
         "collectDue": MessageLookupByLibrary.simpleMessage("איסוף בתשלום"),
         "collectDues": MessageLookupByLibrary.simpleMessage("נא לאסוף חובה"),
         "collectedBy": MessageLookupByLibrary.simpleMessage("אסוף על ידי:"),
         "color": MessageLookupByLibrary.simpleMessage("צבע"),
         "comingSoon": MessageLookupByLibrary.simpleMessage("בקרוב"),
         "companyAddress": MessageLookupByLibrary.simpleMessage("כתובת החברה"),
+        "computer": MessageLookupByLibrary.simpleMessage("מחשב"),
         "confirmDelete": MessageLookupByLibrary.simpleMessage("אשר מחיקה"),
         "confirmPass": MessageLookupByLibrary.simpleMessage("אשר סיסמה"),
         "confirmPassword": MessageLookupByLibrary.simpleMessage("אשר סיסמה"),
@@ -173,6 +178,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "daysLeft": MessageLookupByLibrary.simpleMessage("ימים שנותרו"),
         "dealer": MessageLookupByLibrary.simpleMessage("סוֹחֵר"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage("מחיר סוחר"),
+        "dec": MessageLookupByLibrary.simpleMessage("דצמ"),
         "delete": MessageLookupByLibrary.simpleMessage("מחק"),
         "deleteConfirmation":
             MessageLookupByLibrary.simpleMessage("אישור מחיקה"),
@@ -209,6 +215,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ערוך חשבונית מכירה"),
         "editSocailMedia":
             MessageLookupByLibrary.simpleMessage("ערוך מדיה חברתית"),
+        "electronics": MessageLookupByLibrary.simpleMessage("אלקטרוניקה"),
         "email": MessageLookupByLibrary.simpleMessage("כתובת דוא\"ל"),
         "emailCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("האימייל לא יכול להיות ריק"),
@@ -284,7 +291,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "facebook": MessageLookupByLibrary.simpleMessage("פייסבוק"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "כישלון בקבלת גרסת הפלטפורמה."),
+        "fashion": MessageLookupByLibrary.simpleMessage("אופנה"),
         "fashions": MessageLookupByLibrary.simpleMessage("אופנה"),
+        "feb": MessageLookupByLibrary.simpleMessage("פבר"),
         "field": MessageLookupByLibrary.simpleMessage("שדה"),
         "firstName": MessageLookupByLibrary.simpleMessage("שם פרטי"),
         "folder": MessageLookupByLibrary.simpleMessage(
@@ -301,9 +310,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "fromDate": MessageLookupByLibrary.simpleMessage("מתאריך"),
         "fullName": MessageLookupByLibrary.simpleMessage("שם מלא"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("שולם במלואו"),
+        "gadgets": MessageLookupByLibrary.simpleMessage("גאדג\'טים"),
         "gallery": MessageLookupByLibrary.simpleMessage("גלריה"),
         "gotEmail": MessageLookupByLibrary.simpleMessage("יש לך אימייל"),
         "gotIt": MessageLookupByLibrary.simpleMessage("הבנתי"),
+        "groceryShop": MessageLookupByLibrary.simpleMessage("חנות מכולת"),
         "guest": MessageLookupByLibrary.simpleMessage("אורח"),
         "haveAcc": MessageLookupByLibrary.simpleMessage("כבר יש לך חשבון?"),
         "hintEmail": MessageLookupByLibrary.simpleMessage("הזן כתובת אימייל"),
@@ -325,6 +336,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "items": MessageLookupByLibrary.simpleMessage("פריטים"),
         "itemsFor": MessageLookupByLibrary.simpleMessage("פריטים ל"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("מכירות פריטים"),
+        "jan": MessageLookupByLibrary.simpleMessage("ינו"),
+        "jul": MessageLookupByLibrary.simpleMessage("יול"),
+        "jun": MessageLookupByLibrary.simpleMessage("יונ"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("אימייל"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("סיסמה"),
         "language": MessageLookupByLibrary.simpleMessage("שפה"),
@@ -361,9 +375,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "lp": MessageLookupByLibrary.simpleMessage("הפסד/רווח"),
         "lpDetails": MessageLookupByLibrary.simpleMessage("פרטי הפסד/רווח"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("יַצרָן"),
+        "mar": MessageLookupByLibrary.simpleMessage("מרץ"),
         "masterCard": MessageLookupByLibrary.simpleMessage("כרטיס מאסטר"),
+        "may": MessageLookupByLibrary.simpleMessage("מאי"),
         "messege": MessageLookupByLibrary.simpleMessage("הודעה"),
         "mobile": MessageLookupByLibrary.simpleMessage("נייד:"),
+        "mobilePay": MessageLookupByLibrary.simpleMessage("תשלום נייד"),
         "mobilePayment": MessageLookupByLibrary.simpleMessage("תשלום נייד"),
         "mon": MessageLookupByLibrary.simpleMessage("שני"),
         "monthly": MessageLookupByLibrary.simpleMessage("חודשי"),
@@ -390,7 +407,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "notFound": MessageLookupByLibrary.simpleMessage("לא נמצא"),
         "note": MessageLookupByLibrary.simpleMessage("הערה"),
         "notification": MessageLookupByLibrary.simpleMessage("התראה"),
+        "nov": MessageLookupByLibrary.simpleMessage("נוב"),
         "oK": MessageLookupByLibrary.simpleMessage("אוקי"),
+        "oct": MessageLookupByLibrary.simpleMessage("אוקט"),
         "off": MessageLookupByLibrary.simpleMessage("כבוי"),
         "on": MessageLookupByLibrary.simpleMessage("דולק"),
         "openingBalance": MessageLookupByLibrary.simpleMessage("מאזן פתיחה"),
@@ -609,6 +628,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendSms": MessageLookupByLibrary.simpleMessage("שלח SMS"),
         "sendYourEmail":
             MessageLookupByLibrary.simpleMessage("שלח את האימייל שלך"),
+        "sep": MessageLookupByLibrary.simpleMessage("ספט"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "עדכן את הפרופיל שלך כדי לחבר את הרופא שלך עם רושם טוב יותר"),
         "setUpNewPassword":
@@ -721,6 +741,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "verityEmail": MessageLookupByLibrary.simpleMessage("אמת אימייל"),
         "viewAll": MessageLookupByLibrary.simpleMessage("צפה בהכל"),
         "walkInCustomer": MessageLookupByLibrary.simpleMessage("לקוח מזדמן"),
+        "watches": MessageLookupByLibrary.simpleMessage("שעונים"),
         "weHaveSentAConfirmationEmailTo":
             MessageLookupByLibrary.simpleMessage("שלחנו אימייל אישור ל"),
         "weSentAnOTPInYourPhoneNumber":

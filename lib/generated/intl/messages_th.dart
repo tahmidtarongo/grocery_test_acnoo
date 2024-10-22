@@ -84,11 +84,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "มีการอัปเดตใหม่\nโปรดอัปเดตแอปของคุณ"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
         "apply": MessageLookupByLibrary.simpleMessage("นำไปใช้"),
+        "apr": MessageLookupByLibrary.simpleMessage("เม.ย."),
         "areYouSure": MessageLookupByLibrary.simpleMessage("คุณแน่ใจหรือไม่?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "คุณแน่ใจหรือไม่ว่าต้องการลบพรรคนี้?"),
         "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
             "คุณแน่ใจหรือว่าต้องการลบสิ่งนี้"),
+        "aug": MessageLookupByLibrary.simpleMessage("ส.ค."),
         "backToHome": MessageLookupByLibrary.simpleMessage("กลับสู่หน้าหลัก"),
         "balance": MessageLookupByLibrary.simpleMessage("ยอดคงเหลือ"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("บังกลาเทศ"),
@@ -115,6 +117,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "categoryName": MessageLookupByLibrary.simpleMessage("ชื่อหมวดหมู่"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("เปลี่ยนรหัสผ่าน"),
+        "check": MessageLookupByLibrary.simpleMessage("ตรวจสอบ"),
         "checkEmail": MessageLookupByLibrary.simpleMessage("ตรวจสอบอีเมล์"),
         "chooseCustomer": MessageLookupByLibrary.simpleMessage("เลือกลูกค้า"),
         "chooseSupplier":
@@ -128,6 +131,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("คลิกเพื่อเชื่อมต่อ"),
         "close": MessageLookupByLibrary.simpleMessage("ปิด"),
+        "cloths": MessageLookupByLibrary.simpleMessage("เสื้อผ้า"),
         "collectDue": MessageLookupByLibrary.simpleMessage("รวบรวมครบกำหนด"),
         "collectDues": MessageLookupByLibrary.simpleMessage("กรุณารวบรวม Due"),
         "collectedBy": MessageLookupByLibrary.simpleMessage("เก็บโดย:"),
@@ -135,6 +139,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "comingSoon": MessageLookupByLibrary.simpleMessage("เร็วๆ นี้"),
         "companyAddress":
             MessageLookupByLibrary.simpleMessage("ที่อยู่ บริษัท"),
+        "computer": MessageLookupByLibrary.simpleMessage("คอมพิวเตอร์"),
         "confirmDelete": MessageLookupByLibrary.simpleMessage("ยืนยันการลบ"),
         "confirmPass": MessageLookupByLibrary.simpleMessage("ยืนยันรหัสผ่าน"),
         "confirmPassword":
@@ -185,6 +190,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "dealer": MessageLookupByLibrary.simpleMessage("ตัวแทนจำหน่าย"),
         "dealerPrice":
             MessageLookupByLibrary.simpleMessage("ราคาตัวแทนจำหน่าย"),
+        "dec": MessageLookupByLibrary.simpleMessage("ธ.ค."),
         "delete": MessageLookupByLibrary.simpleMessage("ลบ"),
         "deleteConfirmation":
             MessageLookupByLibrary.simpleMessage("การยืนยันการลบ"),
@@ -225,6 +231,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("แก้ไขใบกำกับการขาย"),
         "editSocailMedia":
             MessageLookupByLibrary.simpleMessage("แก้ไขสื่อสังคม"),
+        "electronics":
+            MessageLookupByLibrary.simpleMessage("อุปกรณ์อิเล็กทรอนิกส์"),
         "email": MessageLookupByLibrary.simpleMessage("ที่อยู่อีเมล"),
         "emailCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("อีเมลต้องไม่ว่างเปล่า"),
@@ -305,7 +313,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "ไม่สามารถดึงเวอร์ชันของแพลตฟอร์มได้"),
+        "fashion": MessageLookupByLibrary.simpleMessage("แฟชั่น"),
         "fashions": MessageLookupByLibrary.simpleMessage("แฟชั่น"),
+        "feb": MessageLookupByLibrary.simpleMessage("ก.พ."),
         "field": MessageLookupByLibrary.simpleMessage("ฟิลด์"),
         "firstName": MessageLookupByLibrary.simpleMessage("ชื่อ"),
         "folder": MessageLookupByLibrary.simpleMessage(
@@ -321,9 +331,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "fromDate": MessageLookupByLibrary.simpleMessage("จากวันที่"),
         "fullName": MessageLookupByLibrary.simpleMessage("ชื่อเต็ม"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("ชำระเต็มจำนวน"),
+        "gadgets": MessageLookupByLibrary.simpleMessage("แกดเจ็ต"),
         "gallery": MessageLookupByLibrary.simpleMessage("แกลลอรี่"),
         "gotEmail": MessageLookupByLibrary.simpleMessage("คุณได้รับอีเมล"),
         "gotIt": MessageLookupByLibrary.simpleMessage("เข้าใจแล้ว"),
+        "groceryShop": MessageLookupByLibrary.simpleMessage("ร้านขายของชำ"),
         "guest": MessageLookupByLibrary.simpleMessage("แขก"),
         "haveAcc": MessageLookupByLibrary.simpleMessage("มีบัญชีอยู่แล้ว?"),
         "hintEmail": MessageLookupByLibrary.simpleMessage("กรอกที่อยู่อีเมล"),
@@ -345,6 +357,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "items": MessageLookupByLibrary.simpleMessage("รายการ"),
         "itemsFor": MessageLookupByLibrary.simpleMessage("รายการสำหรับ"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("ยอดขายสินค้"),
+        "jan": MessageLookupByLibrary.simpleMessage("ม.ค."),
+        "jul": MessageLookupByLibrary.simpleMessage("ก.ค."),
+        "jun": MessageLookupByLibrary.simpleMessage("มิ.ย."),
         "lableEmail": MessageLookupByLibrary.simpleMessage("อีเมล"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("รหัสผ่าน"),
         "language": MessageLookupByLibrary.simpleMessage("ภาษา"),
@@ -382,9 +397,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "lpDetails":
             MessageLookupByLibrary.simpleMessage("รายละเอียดการขาดทุน/กำไร"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("ผู้ผลิต"),
+        "mar": MessageLookupByLibrary.simpleMessage("มี.ค."),
         "masterCard": MessageLookupByLibrary.simpleMessage("บัตรมาสเตอร์การ์ด"),
+        "may": MessageLookupByLibrary.simpleMessage("พ.ค."),
         "messege": MessageLookupByLibrary.simpleMessage("ข้อความ"),
         "mobile": MessageLookupByLibrary.simpleMessage("มือถือ:"),
+        "mobilePay": MessageLookupByLibrary.simpleMessage("ชำระเงินผ่านมือถือ"),
         "mobilePayment":
             MessageLookupByLibrary.simpleMessage("การชำระเงินผ่านมือถือ"),
         "mon": MessageLookupByLibrary.simpleMessage("จันทร์"),
@@ -414,7 +432,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "notFound": MessageLookupByLibrary.simpleMessage("ไม่พบ"),
         "note": MessageLookupByLibrary.simpleMessage("บันทึก"),
         "notification": MessageLookupByLibrary.simpleMessage("การแจ้งเตือน"),
+        "nov": MessageLookupByLibrary.simpleMessage("พ.ย."),
         "oK": MessageLookupByLibrary.simpleMessage("ตกลง"),
+        "oct": MessageLookupByLibrary.simpleMessage("ต.ค."),
         "off": MessageLookupByLibrary.simpleMessage("ปิด"),
         "on": MessageLookupByLibrary.simpleMessage("เปิด"),
         "openingBalance":
@@ -651,6 +671,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendSMS": MessageLookupByLibrary.simpleMessage("ส่ง SMS"),
         "sendSms": MessageLookupByLibrary.simpleMessage("ส่ง SMS"),
         "sendYourEmail": MessageLookupByLibrary.simpleMessage("ส่งอีเมลของคุณ"),
+        "sep": MessageLookupByLibrary.simpleMessage("ก.ย."),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "อัปเดตโปรไฟล์ของคุณเพื่อเชื่อมต่อแพทย์ของคุณด้วยความประทับใจที่ดีขึ้น"),
         "setUpNewPassword":
@@ -774,6 +795,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "viewAll": MessageLookupByLibrary.simpleMessage("ดูทั้งหมด"),
         "walkInCustomer":
             MessageLookupByLibrary.simpleMessage("ลูกค้าเดินเข้ามา"),
+        "watches": MessageLookupByLibrary.simpleMessage("นาฬิกา"),
         "weHaveSentAConfirmationEmailTo":
             MessageLookupByLibrary.simpleMessage("เราส่งอีเมลยืนยันไปที่"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(

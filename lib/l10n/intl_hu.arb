@@ -569,6 +569,30 @@
   "notActiveUser": "Nem aktív felhasználó",
   "pleaseUseTheValidPurchaseCodeToUseTheApp": "Kérjük, használja az érvényes vásárlási kódot az alkalmazás használatához",
   "oK": "Rendben",
-  "daysLeft": "Hátralévő napok"
+  "daysLeft": "Hátralévő napok",
+
+
+  "groceryShop": "Élelmiszerbolt",
+  "fashion": "Divat",
+  "electronics": "Elektronika",
+  "computer": "Számítógép",
+  "gadgets": "Kütyük",
+  "watches": "Órák",
+  "cloths": "Ruházat",
+  "check": "Ellenőrzés",
+  "mobilePay": "Mobilfizetés",
+  "jan": "Jan",
+  "feb": "Feb",
+  "mar": "Márc",
+  "apr": "Ápr",
+  "may": "Máj",
+  "jun": "Jún",
+  "jul": "Júl",
+  "aug": "Aug",
+  "sep": "Szept",
+  "oct": "Okt",
+  "nov": "Nov",
+  "dec": "Dec"
+
 
 }

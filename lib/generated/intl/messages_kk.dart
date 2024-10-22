@@ -82,12 +82,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "Жаңа жаңарту қол жетімді\nПриложениеңізді жаңартыңыз"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
         "apply": MessageLookupByLibrary.simpleMessage("Қолдану"),
+        "apr": MessageLookupByLibrary.simpleMessage("Сәу"),
         "areYouSure":
             MessageLookupByLibrary.simpleMessage("Сіз сенімдісіз бе?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "Бұл тарапты жойғыңыз келетініне сенімдісіз бе?"),
         "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
             "Сіз оны жойғыңыз келетініне сенімдісіз бе"),
+        "aug": MessageLookupByLibrary.simpleMessage("Там"),
         "backToHome": MessageLookupByLibrary.simpleMessage("Басты бетке оралу"),
         "balance": MessageLookupByLibrary.simpleMessage("Теңгерім"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("Бангладеш"),
@@ -116,6 +118,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "categoryName": MessageLookupByLibrary.simpleMessage("Категория аты"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("Құпия сөзді өзгерту"),
+        "check": MessageLookupByLibrary.simpleMessage("Тексеріңіз"),
         "checkEmail":
             MessageLookupByLibrary.simpleMessage("Электрондық поштаны тексеру"),
         "chooseCustomer":
@@ -131,6 +134,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Байлану үшін басыңыз"),
         "close": MessageLookupByLibrary.simpleMessage("Жабу"),
+        "cloths": MessageLookupByLibrary.simpleMessage("Киім"),
         "collectDue": MessageLookupByLibrary.simpleMessage("Төлемді топтау"),
         "collectDues": MessageLookupByLibrary.simpleMessage("Төлемді топтаңыз"),
         "collectedBy": MessageLookupByLibrary.simpleMessage("Жиналған:"),
@@ -138,6 +142,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "comingSoon": MessageLookupByLibrary.simpleMessage("Жақында келеді"),
         "companyAddress":
             MessageLookupByLibrary.simpleMessage("Компания мекенжайы"),
+        "computer": MessageLookupByLibrary.simpleMessage("Компьютер"),
         "confirmDelete": MessageLookupByLibrary.simpleMessage("Жоюды растау"),
         "confirmPass":
             MessageLookupByLibrary.simpleMessage("Құпия сөзді растау"),
@@ -188,6 +193,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "daysLeft": MessageLookupByLibrary.simpleMessage("Қалған күндер"),
         "dealer": MessageLookupByLibrary.simpleMessage("Дилер"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage("Дилер алу бағасы"),
+        "dec": MessageLookupByLibrary.simpleMessage("Жел"),
         "delete": MessageLookupByLibrary.simpleMessage("Жою"),
         "deleteConfirmation":
             MessageLookupByLibrary.simpleMessage("Жоюды растау"),
@@ -229,6 +235,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Сатып алу счетін өңдеу"),
         "editSocailMedia": MessageLookupByLibrary.simpleMessage(
             "Әлеуметтік медианы редакциялау"),
+        "electronics": MessageLookupByLibrary.simpleMessage("Электроника"),
         "email":
             MessageLookupByLibrary.simpleMessage("Электрондық пошта мекенжайы"),
         "emailCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
@@ -316,7 +323,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Платформа нұсқасын алу сәтсіз аяқталды."),
+        "fashion": MessageLookupByLibrary.simpleMessage("Сән"),
         "fashions": MessageLookupByLibrary.simpleMessage("Модалар"),
+        "feb": MessageLookupByLibrary.simpleMessage("Ақп"),
         "field": MessageLookupByLibrary.simpleMessage("Алаң"),
         "firstName": MessageLookupByLibrary.simpleMessage("Аты"),
         "folder": MessageLookupByLibrary.simpleMessage(
@@ -333,9 +342,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "fromDate": MessageLookupByLibrary.simpleMessage("Басталу күні"),
         "fullName": MessageLookupByLibrary.simpleMessage("Толық аты-жөні"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("Толық төленді"),
+        "gadgets": MessageLookupByLibrary.simpleMessage("Құрылғылар"),
         "gallery": MessageLookupByLibrary.simpleMessage("Галерея"),
         "gotEmail": MessageLookupByLibrary.simpleMessage("Сізге хат келді"),
         "gotIt": MessageLookupByLibrary.simpleMessage("Түсінікті"),
+        "groceryShop": MessageLookupByLibrary.simpleMessage("Дүкен"),
         "guest": MessageLookupByLibrary.simpleMessage("Қонақ"),
         "haveAcc": MessageLookupByLibrary.simpleMessage("Аккаунтыңыз бар ма?"),
         "hintEmail": MessageLookupByLibrary.simpleMessage(
@@ -360,6 +371,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "items": MessageLookupByLibrary.simpleMessage("Тауарлар"),
         "itemsFor": MessageLookupByLibrary.simpleMessage("тауарлар үшін"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("Өнімдер сатылымы"),
+        "jan": MessageLookupByLibrary.simpleMessage("Қаң"),
+        "jul": MessageLookupByLibrary.simpleMessage("Шіл"),
+        "jun": MessageLookupByLibrary.simpleMessage("Маус"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("Электрондық пошта"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("Пароль"),
         "language": MessageLookupByLibrary.simpleMessage("Тіл"),
@@ -398,9 +412,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Зиян/Кеңес Толығырақ"),
         "manufacturer":
             MessageLookupByLibrary.simpleMessage("Өнімнің шығарушысы"),
+        "mar": MessageLookupByLibrary.simpleMessage("Наур"),
         "masterCard": MessageLookupByLibrary.simpleMessage("MasterCard"),
+        "may": MessageLookupByLibrary.simpleMessage("Мам"),
         "messege": MessageLookupByLibrary.simpleMessage("Хабарлама"),
         "mobile": MessageLookupByLibrary.simpleMessage("Мобиль:"),
+        "mobilePay": MessageLookupByLibrary.simpleMessage("Мобильді төлем"),
         "mobilePayment": MessageLookupByLibrary.simpleMessage("Мобильді төлем"),
         "mon": MessageLookupByLibrary.simpleMessage("Дүйсенбі"),
         "monthly": MessageLookupByLibrary.simpleMessage("Айына"),
@@ -431,7 +448,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "notFound": MessageLookupByLibrary.simpleMessage("Табылмады"),
         "note": MessageLookupByLibrary.simpleMessage("Ескертпе"),
         "notification": MessageLookupByLibrary.simpleMessage("Хабарлама"),
+        "nov": MessageLookupByLibrary.simpleMessage("Қара"),
         "oK": MessageLookupByLibrary.simpleMessage("ОК"),
+        "oct": MessageLookupByLibrary.simpleMessage("Қаз"),
         "off": MessageLookupByLibrary.simpleMessage("Өшірілген"),
         "on": MessageLookupByLibrary.simpleMessage("Қосулы"),
         "openingBalance": MessageLookupByLibrary.simpleMessage("Ашылу балансы"),
@@ -673,6 +692,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendSms": MessageLookupByLibrary.simpleMessage("SMS жіберу"),
         "sendYourEmail": MessageLookupByLibrary.simpleMessage(
             "Сіздің электрондық поштаңызды жіберу"),
+        "sep": MessageLookupByLibrary.simpleMessage("Қыр"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "Дәрігеріңізге жету үшін профиліңізді жаңартыңыз"),
         "setUpNewPassword":
@@ -797,6 +817,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Электрондық поштаны растау"),
         "viewAll": MessageLookupByLibrary.simpleMessage("Барлығын қарау"),
         "walkInCustomer": MessageLookupByLibrary.simpleMessage("Келуші клиент"),
+        "watches": MessageLookupByLibrary.simpleMessage("Сағаттар"),
         "weHaveSentAConfirmationEmailTo":
             MessageLookupByLibrary.simpleMessage("Біз растау хат жібердік"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(

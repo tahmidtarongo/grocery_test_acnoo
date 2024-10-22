@@ -562,6 +562,31 @@
   "notActiveUser": "Ei aktiivinen käyttäjä",
   "pleaseUseTheValidPurchaseCodeToUseTheApp": "Ole hyvä ja käytä voimassa olevaa ostopäiväystä käyttääksesi sovellusta",
   "oK": "OK",
-  "daysLeft": "Päiviä jäljellä"
+  "daysLeft": "Päiviä jäljellä",
+
+
+
+  "groceryShop": "Ruokakauppa",
+  "fashion": "Muoti",
+  "electronics": "Elektroniikka",
+  "computer": "Tietokone",
+  "gadgets": "Gadgets",
+  "watches": "Kellot",
+  "cloths": "Vaatteet",
+  "check": "Tarkistaa",
+  "mobilePay": "Mobiilimaksu",
+  "jan": "Tammi",
+  "feb": "Helmi",
+  "mar": "Maalis",
+  "apr": "Huhti",
+  "may": "Touko",
+  "jun": "Kesä",
+  "jul": "Heinä",
+  "aug": "Elo",
+  "sep": "Syys",
+  "oct": "Loka",
+  "nov": "Marras",
+  "dec": "Joulu"
+
 
 }

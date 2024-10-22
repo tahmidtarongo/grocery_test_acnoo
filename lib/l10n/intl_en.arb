@@ -98,9 +98,12 @@
   "home" : "Home",
   "sales" : "Sales",
   "setting" : "Setting",
+
+
+
+
   "purchaseNow" : "Purchase Now",
   "paymentMethods" : "Payment Methods",
-
   "update": "Update",
   "continueButton": "Continue",
   "name": "Name",
@@ -199,6 +202,13 @@
   "inv": "Inv No.",
   "supplierName": "Supplier Name",
   "itemAdded": "Item Added",
+
+
+
+
+
+
+
   "addItems": "Add Items",
   "subTotal": "Sub Total",
   "returnAmount": "Return Amount",
@@ -270,8 +280,6 @@
   "editPhone": "Edit Phone Number ?",
   "createAcc": "Create a Free Account",
   "congratulation": "Congratulations",
-
-
   "signUp": "Sign Up",
   "amarSonarBangla" : "Amar sonar bangla",
   "signIn" : "Sign in",
@@ -296,6 +304,13 @@
   "fullName": "Full Name",
   "enterYourFullName": "Enter your full name",
   "nameCanNotBeEmpty": "name can'n be empty",
+
+
+
+
+
+
+
   "alreadyHaveAnAccount": "Already have an account? ",
   "createNewPassword": "Create New Password",
   "setUpNewPassword": "Set Up New Password",
@@ -398,6 +413,12 @@
   "pleaseAddQuantity": "Please add quantity",
   "willBeAddedSoon": "Will be Added Soon",
   "addedToCart": "Added To Cart",
+
+
+
+
+
+
   "connectYourPrinter": "Connect Your printer",
   "customerPay": "Customer Pay",
   "supplerPay": "Suppler Pay",
@@ -470,10 +491,6 @@
   "appleWatch": "Apple Watch",
   "deleting": "Deleting....",
   "brand": "Brand",
-
-
-
-
   "dueCollection": "Due collection",
   "noTransaction": "No Transaction",
   "updating": "Updating...",
@@ -486,31 +503,19 @@
   "purchaseBy": "Purchase By:",
   "salesBy": "Sales By:",
   "days": "days",
-
-
-
-
   "details": "Details",
   "weSentAnOTPInYourPhoneNumber": "We sent an OTP in your phone number",
   "pleaseEnterTheOTP": "Please enter the OTP",
   "enterAValidOTP": "Enter a valid OTP",
   "verify": "Verify",
   "resendIn": "Resend OTP in ",
-
-
-
   "freeLifetimeUpdate": "Free Lifetime Update",
   "android": "Android & iOS App Support",
   "premiumCustomerSupport": "Android & iOS App Support",
   "customInvoiceBranding": "Custom Invoice Branding",
   "unlimitedUsage": "Unlimited Usage",
   "freeDataBackup": "Free Data Backup",
-
-
   "loremIpsumDolorSit": "Lorem ipsum dolor sit amet, consectetur adi piscing elit. Accumsan vulputate tellus scele risque odio con sectetur tincidunt semper.",
-
-
-
   "seconds": "seconds",
   "done": "Done",
   "youCanNowResendTheOTP": "You can now resend the OTP",
@@ -520,6 +525,13 @@
   "supplierDetails": "Supplier Details",
   "weekly": "Weekly",
   "monthly": "Monthly",
+
+
+
+
+
+
+
   "yearly": "Yearly",
   "sat": "Sat",
   "Sun": "Sun",
@@ -557,10 +569,6 @@
   "addDiscount": "Add Discount",
   "cancelAllProduct": "Cancel All Product",
   "vatDoesNOtApply": "Vat Doesn't Apply",
-
-
-
-
   "deleteConfirmation": "Delete Confirmation",
   "areYouSureYouWantToDeleteThis": "Are you sure you want to delete this",
   "relatedDataWillBeDeletedAlso": "Related data will be deleted also",
@@ -583,6 +591,27 @@
   "notActiveUser": "Not Active User",
   "pleaseUseTheValidPurchaseCodeToUseTheApp": "Please use the valid purchase code to use the app",
   "oK": "OK",
-  "daysLeft": "Days Left"
+  "daysLeft": "Days Left",
+  "groceryShop": "Grocery Shop",
+  "fashion": "Fashion",
+  "electronics": "Electronics",
+  "computer": "Computer",
+  "gadgets": "Gadgets",
+  "watches": "Watches",
+  "cloths": "Cloths",
+  "check": "Check",
+  "mobilePay": "Mobile Pay",
+  "jan": "Jan",
+  "feb": "Feb",
+  "mar": "Mar",
+  "apr": "Apr",
+  "may": "May",
+  "jun": "Jun",
+  "jul": "Jul",
+  "aug": "Aug",
+  "sep": "Sep",
+  "oct": "Oct",
+  "nov": "Nov",
+  "dec": "Dec"
 
 }

@@ -553,7 +553,30 @@
   "notActiveUser": "Inte aktiv användare",
   "pleaseUseTheValidPurchaseCodeToUseTheApp": "Använd den giltiga köpkoden för att använda appen",
   "oK": "OK",
-  "daysLeft": "Dagar kvar"
+  "daysLeft": "Dagar kvar",
+
+  "groceryShop": "Livsmedelsbutik",
+  "fashion": "Mode",
+  "electronics": "Elektronik",
+  "computer": "Dator",
+  "gadgets": "Prylar",
+  "watches": "Klockor",
+  "cloths": "Kläder",
+  "check": "Kontrollera",
+  "mobilePay": "Mobilbetalning",
+  "jan": "Jan",
+  "feb": "Feb",
+  "mar": "Mar",
+  "apr": "Apr",
+  "may": "Maj",
+  "jun": "Jun",
+  "jul": "Jul",
+  "aug": "Aug",
+  "sep": "Sep",
+  "oct": "Okt",
+  "nov": "Nov",
+  "dec": "Dec"
+
 
 
 }

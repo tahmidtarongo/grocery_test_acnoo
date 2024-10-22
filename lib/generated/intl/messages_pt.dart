@@ -88,11 +88,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "Suporte para Apps Android e iOS"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
         "apply": MessageLookupByLibrary.simpleMessage("Aplicar"),
+        "apr": MessageLookupByLibrary.simpleMessage("Abr"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("Tem certeza?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "Tem certeza de que deseja excluir esta parte?"),
         "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
             "Você tem certeza de que deseja excluir isto?"),
+        "aug": MessageLookupByLibrary.simpleMessage("Ago"),
         "backToHome": MessageLookupByLibrary.simpleMessage(
             "Voltar para a Página Inicial"),
         "balance": MessageLookupByLibrary.simpleMessage("Saldo"),
@@ -124,6 +126,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Nome da Categoria"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("Alterar a senha"),
+        "check": MessageLookupByLibrary.simpleMessage("Verificar"),
         "checkEmail": MessageLookupByLibrary.simpleMessage("Verificar email"),
         "chooseCustomer":
             MessageLookupByLibrary.simpleMessage("Escolha um cliente"),
@@ -138,6 +141,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Clique para conectar"),
         "close": MessageLookupByLibrary.simpleMessage("Fechar"),
+        "cloths": MessageLookupByLibrary.simpleMessage("Roupas"),
         "collectDue": MessageLookupByLibrary.simpleMessage("Cobrar devido"),
         "collectDues":
             MessageLookupByLibrary.simpleMessage("Por favor, colete um devido"),
@@ -146,6 +150,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "comingSoon": MessageLookupByLibrary.simpleMessage("Em Breve"),
         "companyAddress":
             MessageLookupByLibrary.simpleMessage("Endereço da companhia"),
+        "computer": MessageLookupByLibrary.simpleMessage("Computador"),
         "confirmDelete":
             MessageLookupByLibrary.simpleMessage("Confirmar Exclusão"),
         "confirmPass":
@@ -199,6 +204,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "dealer": MessageLookupByLibrary.simpleMessage("Distribuidor"),
         "dealerPrice":
             MessageLookupByLibrary.simpleMessage("preço do revendedor"),
+        "dec": MessageLookupByLibrary.simpleMessage("Dez"),
         "delete": MessageLookupByLibrary.simpleMessage("Deletar"),
         "deleteConfirmation":
             MessageLookupByLibrary.simpleMessage("Confirmação de Exclusão"),
@@ -238,6 +244,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Editar fatura de compra"),
         "editSalesInvoice":
             MessageLookupByLibrary.simpleMessage("Editar fatura de venda"),
+        "electronics": MessageLookupByLibrary.simpleMessage("Eletrônicos"),
         "email": MessageLookupByLibrary.simpleMessage("Endereço de email"),
         "emailCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "O e-mail não pode estar vazio"),
@@ -323,7 +330,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Falha ao obter a versão da plataforma."),
+        "fashion": MessageLookupByLibrary.simpleMessage("Moda"),
         "fashions": MessageLookupByLibrary.simpleMessage("Moda"),
+        "feb": MessageLookupByLibrary.simpleMessage("Fev"),
         "field": MessageLookupByLibrary.simpleMessage("Campo"),
         "firstName": MessageLookupByLibrary.simpleMessage("Primeiro Nome"),
         "folder": MessageLookupByLibrary.simpleMessage(
@@ -340,9 +349,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "fromDate": MessageLookupByLibrary.simpleMessage("Da data"),
         "fullName": MessageLookupByLibrary.simpleMessage("Nome Completo"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("Totalmente pago"),
+        "gadgets": MessageLookupByLibrary.simpleMessage("Gadgets"),
         "gallery": MessageLookupByLibrary.simpleMessage("Galeria"),
         "gotEmail": MessageLookupByLibrary.simpleMessage("Você tem um e-mail"),
         "gotIt": MessageLookupByLibrary.simpleMessage("Entendi"),
+        "groceryShop": MessageLookupByLibrary.simpleMessage("Mercado"),
         "guest": MessageLookupByLibrary.simpleMessage("Convidado"),
         "haveAcc": MessageLookupByLibrary.simpleMessage("já tem uma conta?"),
         "hintEmail":
@@ -364,6 +375,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "items": MessageLookupByLibrary.simpleMessage("Itens"),
         "itemsFor": MessageLookupByLibrary.simpleMessage("itens para"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("Vendas de Itens"),
+        "jan": MessageLookupByLibrary.simpleMessage("Jan"),
+        "jul": MessageLookupByLibrary.simpleMessage("Jul"),
+        "jun": MessageLookupByLibrary.simpleMessage("Jun"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("Senha"),
         "language": MessageLookupByLibrary.simpleMessage("linguagem"),
@@ -401,8 +415,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "lpDetails":
             MessageLookupByLibrary.simpleMessage("Detalhes de perda/lucro"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("Fabricante"),
+        "mar": MessageLookupByLibrary.simpleMessage("Mar"),
         "masterCard": MessageLookupByLibrary.simpleMessage("Mastercard"),
+        "may": MessageLookupByLibrary.simpleMessage("Mai"),
         "mobile": MessageLookupByLibrary.simpleMessage("Móvel:"),
+        "mobilePay": MessageLookupByLibrary.simpleMessage("Pagamento Móvel"),
         "mobilePayment":
             MessageLookupByLibrary.simpleMessage("Pagamento Móvel"),
         "mon": MessageLookupByLibrary.simpleMessage("Seg"),
@@ -437,7 +454,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "notFound": MessageLookupByLibrary.simpleMessage("Não Encontrado"),
         "note": MessageLookupByLibrary.simpleMessage("Observação"),
         "notification": MessageLookupByLibrary.simpleMessage("Notificação"),
+        "nov": MessageLookupByLibrary.simpleMessage("Nov"),
         "oK": MessageLookupByLibrary.simpleMessage("OK"),
+        "oct": MessageLookupByLibrary.simpleMessage("Out"),
         "off": MessageLookupByLibrary.simpleMessage("Desativado"),
         "on": MessageLookupByLibrary.simpleMessage("Ativado"),
         "openingBalance": MessageLookupByLibrary.simpleMessage("Saldo inicial"),
@@ -685,6 +704,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendSms": MessageLookupByLibrary.simpleMessage("Enviar SMS"),
         "sendYourEmail":
             MessageLookupByLibrary.simpleMessage("Enviar seu Email"),
+        "sep": MessageLookupByLibrary.simpleMessage("Set"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "Atualize seu perfil para conectar seu médico com uma melhor impressão"),
         "setUpNewPassword":
@@ -806,6 +826,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "viewAll": MessageLookupByLibrary.simpleMessage("Ver tudo"),
         "walkInCustomer":
             MessageLookupByLibrary.simpleMessage("Cliente que Chegou"),
+        "watches": MessageLookupByLibrary.simpleMessage("Relógios"),
         "weHaveSentAConfirmationEmailTo": MessageLookupByLibrary.simpleMessage(
             "Enviamos um e-mail de confirmação para"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(

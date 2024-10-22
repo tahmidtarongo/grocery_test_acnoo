@@ -563,7 +563,31 @@
   "notActiveUser": "활성 사용자가 아닙니다",
   "pleaseUseTheValidPurchaseCodeToUseTheApp": "앱을 사용하려면 유효한 구매 코드를 사용하세요",
   "oK": "확인",
-  "daysLeft": "남은 일수"
+  "daysLeft": "남은 일수",
+
+
+  "groceryShop": "식료품점",
+  "fashion": "패션",
+  "electronics": "전자제품",
+  "computer": "컴퓨터",
+  "gadgets": "가젯",
+  "watches": "시계",
+  "cloths": "의류",
+  "check": "확인",
+  "mobilePay": "모바일 결제",
+  "jan": "1월",
+  "feb": "2월",
+  "mar": "3월",
+  "apr": "4월",
+  "may": "5월",
+  "jun": "6월",
+  "jul": "7월",
+  "aug": "8월",
+  "sep": "9월",
+  "oct": "10월",
+  "nov": "11월",
+  "dec": "12월"
+
 
 
 }

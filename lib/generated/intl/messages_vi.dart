@@ -88,12 +88,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "Có phiên bản cập nhật mới\nVui lòng cập nhật ứng dụng của bạn"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
         "apply": MessageLookupByLibrary.simpleMessage("Áp dụng"),
+        "apr": MessageLookupByLibrary.simpleMessage("Tháng 4"),
         "areYouSure":
             MessageLookupByLibrary.simpleMessage("Bạn có chắc không?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "Bạn có chắc chắn muốn xóa bên này không?"),
         "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
             "Bạn có chắc chắn muốn xóa không"),
+        "aug": MessageLookupByLibrary.simpleMessage("Tháng 8"),
         "backToHome":
             MessageLookupByLibrary.simpleMessage("Quay Lại Trang Chủ"),
         "balance": MessageLookupByLibrary.simpleMessage("Số dư"),
@@ -121,6 +123,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "category": MessageLookupByLibrary.simpleMessage("Danh mục"),
         "categoryName": MessageLookupByLibrary.simpleMessage("Tên danh mục"),
         "changePassword": MessageLookupByLibrary.simpleMessage("Đổi mật khẩu"),
+        "check": MessageLookupByLibrary.simpleMessage("Kiểm tra"),
         "checkEmail": MessageLookupByLibrary.simpleMessage("Kiểm tra email"),
         "chooseCustomer":
             MessageLookupByLibrary.simpleMessage("Chọn một khách hàng"),
@@ -135,6 +138,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Bấm để kết nối"),
         "close": MessageLookupByLibrary.simpleMessage("Đóng"),
+        "cloths": MessageLookupByLibrary.simpleMessage("Quần áo"),
         "collectDue": MessageLookupByLibrary.simpleMessage("thu tiền đến hạn"),
         "collectDues":
             MessageLookupByLibrary.simpleMessage("Vui lòng thu tiền đến hạn"),
@@ -143,6 +147,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "comingSoon": MessageLookupByLibrary.simpleMessage("Sắp có"),
         "companyAddress":
             MessageLookupByLibrary.simpleMessage("địa chỉ công ty"),
+        "computer": MessageLookupByLibrary.simpleMessage("Máy tính"),
         "confirmDelete": MessageLookupByLibrary.simpleMessage("Xác nhận xóa"),
         "confirmPass":
             MessageLookupByLibrary.simpleMessage("Xác nhận mật khẩu"),
@@ -196,6 +201,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "daysLeft": MessageLookupByLibrary.simpleMessage("Còn lại số ngày"),
         "dealer": MessageLookupByLibrary.simpleMessage("Người buôn bán"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage("Giá đại lý"),
+        "dec": MessageLookupByLibrary.simpleMessage("Tháng 12"),
         "delete": MessageLookupByLibrary.simpleMessage("Xóa"),
         "deleteConfirmation":
             MessageLookupByLibrary.simpleMessage("Xác nhận xóa"),
@@ -234,6 +240,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Chỉnh sửa hóa đơn bán hàng"),
         "editSocailMedia":
             MessageLookupByLibrary.simpleMessage("Chỉnh sửa Mạng xã hội"),
+        "electronics": MessageLookupByLibrary.simpleMessage("Điện tử"),
         "email": MessageLookupByLibrary.simpleMessage("Địa chỉ email"),
         "emailCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("Email không được để trống"),
@@ -316,7 +323,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Không lấy được phiên bản nền tảng."),
+        "fashion": MessageLookupByLibrary.simpleMessage("Thời trang"),
         "fashions": MessageLookupByLibrary.simpleMessage("Thời trang"),
+        "feb": MessageLookupByLibrary.simpleMessage("Tháng 2"),
         "field": MessageLookupByLibrary.simpleMessage("Trường"),
         "firstName": MessageLookupByLibrary.simpleMessage("Tên"),
         "folder": MessageLookupByLibrary.simpleMessage(
@@ -332,9 +341,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "fromDate": MessageLookupByLibrary.simpleMessage("Từ ngày"),
         "fullName": MessageLookupByLibrary.simpleMessage("Họ và tên"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("Thanh toán đầy đủ"),
+        "gadgets": MessageLookupByLibrary.simpleMessage("Thiết bị"),
         "gallery": MessageLookupByLibrary.simpleMessage("Phòng trưng bày"),
         "gotEmail": MessageLookupByLibrary.simpleMessage("Bạn đã có một email"),
         "gotIt": MessageLookupByLibrary.simpleMessage("Đã hiểu"),
+        "groceryShop": MessageLookupByLibrary.simpleMessage("Cửa hàng tạp hóa"),
         "guest": MessageLookupByLibrary.simpleMessage("Khách"),
         "haveAcc": MessageLookupByLibrary.simpleMessage(
             "Bạn co săn san để tạo một tai khoản?"),
@@ -361,6 +372,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "itemsFor": MessageLookupByLibrary.simpleMessage("Mặt hàng cho"),
         "itemsSales":
             MessageLookupByLibrary.simpleMessage("Doanh thu mặt hàng"),
+        "jan": MessageLookupByLibrary.simpleMessage("Tháng 1"),
+        "jul": MessageLookupByLibrary.simpleMessage("Tháng 7"),
+        "jun": MessageLookupByLibrary.simpleMessage("Tháng 6"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("Email"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("Mật khẩu"),
         "language": MessageLookupByLibrary.simpleMessage("ngôn ngữ"),
@@ -397,9 +411,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "lp": MessageLookupByLibrary.simpleMessage("Mất lợi nhuận"),
         "lpDetails": MessageLookupByLibrary.simpleMessage("Chi tiết Lỗ/Lãi"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("nhà chế tạo"),
+        "mar": MessageLookupByLibrary.simpleMessage("Tháng 3"),
         "masterCard": MessageLookupByLibrary.simpleMessage("Thẻ MasterCard"),
+        "may": MessageLookupByLibrary.simpleMessage("Tháng 5"),
         "messege": MessageLookupByLibrary.simpleMessage("Tin nhắn"),
         "mobile": MessageLookupByLibrary.simpleMessage("di động:"),
+        "mobilePay": MessageLookupByLibrary.simpleMessage("Thanh toán di động"),
         "mobilePayment":
             MessageLookupByLibrary.simpleMessage("Thanh toán di động"),
         "mon": MessageLookupByLibrary.simpleMessage("Thứ Hai"),
@@ -433,7 +450,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "notFound": MessageLookupByLibrary.simpleMessage("Không tìm thấy"),
         "note": MessageLookupByLibrary.simpleMessage("Ghi chú"),
         "notification": MessageLookupByLibrary.simpleMessage("Thông báo"),
+        "nov": MessageLookupByLibrary.simpleMessage("Tháng 11"),
         "oK": MessageLookupByLibrary.simpleMessage("OK"),
+        "oct": MessageLookupByLibrary.simpleMessage("Tháng 10"),
         "off": MessageLookupByLibrary.simpleMessage("Tắt"),
         "on": MessageLookupByLibrary.simpleMessage("Bật"),
         "openingBalance": MessageLookupByLibrary.simpleMessage("Số dư đầu kỳ"),
@@ -676,6 +695,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendSms": MessageLookupByLibrary.simpleMessage("Gửi tin nhắn SMS"),
         "sendYourEmail":
             MessageLookupByLibrary.simpleMessage("Gửi Email Của Bạn"),
+        "sep": MessageLookupByLibrary.simpleMessage("Tháng 9"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "Cập nhật hồ sơ của bạn để kết nối bác sĩ của bạn với ấn tượng tốt hơn"),
         "setUpNewPassword":
@@ -806,6 +826,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "viewAll": MessageLookupByLibrary.simpleMessage("Xem tất cả"),
         "walkInCustomer":
             MessageLookupByLibrary.simpleMessage("Khách hàng đến cửa hàng"),
+        "watches": MessageLookupByLibrary.simpleMessage("Đồng hồ"),
         "weHaveSentAConfirmationEmailTo": MessageLookupByLibrary.simpleMessage(
             "Chúng tôi đã gửi một email xác nhận đến"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(

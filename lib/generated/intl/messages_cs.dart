@@ -88,11 +88,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "Je k dispozici nová aktualizace\nProsím, proveďte aktualizaci aplikace"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
         "apply": MessageLookupByLibrary.simpleMessage("Použít"),
+        "apr": MessageLookupByLibrary.simpleMessage("Duben"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("Jste si jisti?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "Jste si jisti, že chcete smazat tuto stranu?"),
         "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
             "Jste si jisti, že to chcete smazat?"),
+        "aug": MessageLookupByLibrary.simpleMessage("Srpen"),
         "backToHome":
             MessageLookupByLibrary.simpleMessage("Zpět na domovskou stránku"),
         "balance": MessageLookupByLibrary.simpleMessage("Zůstatek"),
@@ -122,6 +124,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "category": MessageLookupByLibrary.simpleMessage("Kategorie"),
         "categoryName": MessageLookupByLibrary.simpleMessage("Název kategorie"),
         "changePassword": MessageLookupByLibrary.simpleMessage("Změnit heslo"),
+        "check": MessageLookupByLibrary.simpleMessage("Zkontrolovat"),
         "checkEmail":
             MessageLookupByLibrary.simpleMessage("Zkontrolovat email"),
         "chooseCustomer":
@@ -137,6 +140,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Kliknutím se připojte"),
         "close": MessageLookupByLibrary.simpleMessage("Zavřít"),
+        "cloths": MessageLookupByLibrary.simpleMessage("Oblečení"),
         "collectDue": MessageLookupByLibrary.simpleMessage("Vybrat dluh"),
         "collectDues":
             MessageLookupByLibrary.simpleMessage("Prosím vybírejte dluhy"),
@@ -146,6 +150,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Brzy bude k dispozici"),
         "companyAddress":
             MessageLookupByLibrary.simpleMessage("Adresa společnosti"),
+        "computer": MessageLookupByLibrary.simpleMessage("Počítač"),
         "confirmDelete":
             MessageLookupByLibrary.simpleMessage("Potvrdit smazání"),
         "confirmPass": MessageLookupByLibrary.simpleMessage("Potvrďte heslo"),
@@ -197,6 +202,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "daysLeft": MessageLookupByLibrary.simpleMessage("Zbývající dny"),
         "dealer": MessageLookupByLibrary.simpleMessage("Prodejce"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage("Cena prodejce"),
+        "dec": MessageLookupByLibrary.simpleMessage("Prosinec"),
         "delete": MessageLookupByLibrary.simpleMessage("Smazat"),
         "deleteConfirmation":
             MessageLookupByLibrary.simpleMessage("Potvrzení smazání"),
@@ -236,6 +242,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Upravit prodejní fakturu"),
         "editSocailMedia":
             MessageLookupByLibrary.simpleMessage("Upravit sociální média"),
+        "electronics": MessageLookupByLibrary.simpleMessage("Elektronika"),
         "email": MessageLookupByLibrary.simpleMessage("Emailová adresa"),
         "emailCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("E-mail nemůže být prázdný"),
@@ -319,7 +326,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Nepodařilo se získat verzi platformy."),
+        "fashion": MessageLookupByLibrary.simpleMessage("Móda"),
         "fashions": MessageLookupByLibrary.simpleMessage("Móda"),
+        "feb": MessageLookupByLibrary.simpleMessage("Únor"),
         "field": MessageLookupByLibrary.simpleMessage("Pole"),
         "firstName": MessageLookupByLibrary.simpleMessage("Jméno"),
         "folder": MessageLookupByLibrary.simpleMessage(
@@ -336,9 +345,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "fromDate": MessageLookupByLibrary.simpleMessage("Od data"),
         "fullName": MessageLookupByLibrary.simpleMessage("Celé jméno"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("Plně zaplaceno"),
+        "gadgets": MessageLookupByLibrary.simpleMessage("Gadgety"),
         "gallery": MessageLookupByLibrary.simpleMessage("Galerie"),
         "gotEmail": MessageLookupByLibrary.simpleMessage("Obdrželi jste email"),
         "gotIt": MessageLookupByLibrary.simpleMessage("Rozumím"),
+        "groceryShop":
+            MessageLookupByLibrary.simpleMessage("Obchod s potravinami"),
         "guest": MessageLookupByLibrary.simpleMessage("Host"),
         "haveAcc": MessageLookupByLibrary.simpleMessage("Už máte účet?"),
         "hintEmail":
@@ -362,6 +374,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "items": MessageLookupByLibrary.simpleMessage("Položky"),
         "itemsFor": MessageLookupByLibrary.simpleMessage("položky pro"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("Prodeje položek"),
+        "jan": MessageLookupByLibrary.simpleMessage("Leden"),
+        "jul": MessageLookupByLibrary.simpleMessage("Červenec"),
+        "jun": MessageLookupByLibrary.simpleMessage("Červen"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("Heslo"),
         "language": MessageLookupByLibrary.simpleMessage("Jazyk"),
@@ -399,9 +414,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "lpDetails":
             MessageLookupByLibrary.simpleMessage("Detaily o ztrátě/zisku"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("Výrobce"),
+        "mar": MessageLookupByLibrary.simpleMessage("Březen"),
         "masterCard": MessageLookupByLibrary.simpleMessage("MasterCard"),
+        "may": MessageLookupByLibrary.simpleMessage("Květen"),
         "messege": MessageLookupByLibrary.simpleMessage("Zpráva"),
         "mobile": MessageLookupByLibrary.simpleMessage("Mobil:"),
+        "mobilePay": MessageLookupByLibrary.simpleMessage("Mobilní platba"),
         "mobilePayment": MessageLookupByLibrary.simpleMessage("Mobilní platba"),
         "mon": MessageLookupByLibrary.simpleMessage("Po"),
         "monthly": MessageLookupByLibrary.simpleMessage("Měsíčně"),
@@ -435,7 +453,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "notFound": MessageLookupByLibrary.simpleMessage("Nenašlo se"),
         "note": MessageLookupByLibrary.simpleMessage("Poznámka"),
         "notification": MessageLookupByLibrary.simpleMessage("Oznámení"),
+        "nov": MessageLookupByLibrary.simpleMessage("Listopad"),
         "oK": MessageLookupByLibrary.simpleMessage("OK"),
+        "oct": MessageLookupByLibrary.simpleMessage("Říjen"),
         "off": MessageLookupByLibrary.simpleMessage("Vypnuto"),
         "on": MessageLookupByLibrary.simpleMessage("Zapnuto"),
         "openingBalance":
@@ -679,6 +699,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendSms": MessageLookupByLibrary.simpleMessage("Odeslat SMS"),
         "sendYourEmail":
             MessageLookupByLibrary.simpleMessage("Odeslat svůj email"),
+        "sep": MessageLookupByLibrary.simpleMessage("Září"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "Aktualizujte svůj profil pro lepší spojení s vaším lékařem"),
         "setUpNewPassword":
@@ -807,6 +828,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "viewAll": MessageLookupByLibrary.simpleMessage("Zobrazit vše"),
         "walkInCustomer": MessageLookupByLibrary.simpleMessage(
             "Zákazník, který přišel osobně"),
+        "watches": MessageLookupByLibrary.simpleMessage("Hodinky"),
         "weHaveSentAConfirmationEmailTo": MessageLookupByLibrary.simpleMessage(
             "Byl odeslán potvrzovací e-mail na"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(

@@ -561,6 +561,30 @@
   "notActiveUser": "Người dùng không hoạt động",
   "pleaseUseTheValidPurchaseCodeToUseTheApp": "Vui lòng sử dụng mã mua hàng hợp lệ để sử dụng ứng dụng",
   "oK": "OK",
-  "daysLeft": "Còn lại số ngày"
+  "daysLeft": "Còn lại số ngày",
+
+  "groceryShop": "Cửa hàng tạp hóa",
+  "fashion": "Thời trang",
+  "electronics": "Điện tử",
+  "computer": "Máy tính",
+  "gadgets": "Thiết bị",
+  "watches": "Đồng hồ",
+  "cloths": "Quần áo",
+  "check": "Kiểm tra",
+  "mobilePay": "Thanh toán di động",
+  "jan": "Tháng 1",
+  "feb": "Tháng 2",
+  "mar": "Tháng 3",
+  "apr": "Tháng 4",
+  "may": "Tháng 5",
+  "jun": "Tháng 6",
+  "jul": "Tháng 7",
+  "aug": "Tháng 8",
+  "sep": "Tháng 9",
+  "oct": "Tháng 10",
+  "nov": "Tháng 11",
+  "dec": "Tháng 12"
+
+
 
 }

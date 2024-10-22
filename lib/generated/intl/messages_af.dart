@@ -90,11 +90,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "Daar is \'n nuwe opdatering beskikbaar\nBlaai verby die opdatering"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Horlosie"),
         "apply": MessageLookupByLibrary.simpleMessage("Pas toe"),
+        "apr": MessageLookupByLibrary.simpleMessage("Apr"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("Is jy seker?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "Is jy seker jy wil hierdie party verwyder?"),
         "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
             "Is jy seker jy wil dit verwyder?"),
+        "aug": MessageLookupByLibrary.simpleMessage("Aug"),
         "backToHome": MessageLookupByLibrary.simpleMessage("Terug Na Huis"),
         "balance": MessageLookupByLibrary.simpleMessage("Balans"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("Bangladesj"),
@@ -123,6 +125,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "categoryName": MessageLookupByLibrary.simpleMessage("Kategorie Naam"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("Verander Wagwoord"),
+        "check": MessageLookupByLibrary.simpleMessage("Gaan na"),
         "checkEmail": MessageLookupByLibrary.simpleMessage("Kyk na E-pos"),
         "chooseCustomer":
             MessageLookupByLibrary.simpleMessage("Kies \'n Kliënt"),
@@ -137,6 +140,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Klik om te verbind"),
         "close": MessageLookupByLibrary.simpleMessage("Maak Toe"),
+        "cloths": MessageLookupByLibrary.simpleMessage("Klere"),
         "collectDue": MessageLookupByLibrary.simpleMessage("Innis Verkry"),
         "collectDues": MessageLookupByLibrary.simpleMessage(
             "Versamel asseblief \'n Uitstaande"),
@@ -146,6 +150,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Binnekort Beskikbaar"),
         "companyAddress":
             MessageLookupByLibrary.simpleMessage("Maatskappy Adres"),
+        "computer": MessageLookupByLibrary.simpleMessage("Rekenaar"),
         "confirmDelete":
             MessageLookupByLibrary.simpleMessage("Bevestig Verwydering"),
         "confirmPass":
@@ -197,6 +202,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "daysLeft": MessageLookupByLibrary.simpleMessage("Dae oor"),
         "dealer": MessageLookupByLibrary.simpleMessage("Handelaar"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage("Handelaarsprys"),
+        "dec": MessageLookupByLibrary.simpleMessage("Des"),
         "delete": MessageLookupByLibrary.simpleMessage("Verwyder"),
         "deleteConfirmation":
             MessageLookupByLibrary.simpleMessage("Verwyder Bevestiging"),
@@ -239,6 +245,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Wysig Verkope Faktuur"),
         "editSocailMedia":
             MessageLookupByLibrary.simpleMessage("Wysig Sosiale Media"),
+        "electronics": MessageLookupByLibrary.simpleMessage("Elektronika"),
         "email": MessageLookupByLibrary.simpleMessage("E-posadres"),
         "emailCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("E-pos kan nie leeg wees nie"),
@@ -322,7 +329,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Kon nie platformweergawe kry nie."),
+        "fashion": MessageLookupByLibrary.simpleMessage("Mode"),
         "fashions": MessageLookupByLibrary.simpleMessage("Mode"),
+        "feb": MessageLookupByLibrary.simpleMessage("Feb"),
         "field": MessageLookupByLibrary.simpleMessage("Veld"),
         "firstName": MessageLookupByLibrary.simpleMessage("Voornaam"),
         "folder": MessageLookupByLibrary.simpleMessage(
@@ -339,10 +348,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "fromDate": MessageLookupByLibrary.simpleMessage("Van Datum"),
         "fullName": MessageLookupByLibrary.simpleMessage("Volle Naam"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("Volledig Betaal"),
+        "gadgets": MessageLookupByLibrary.simpleMessage("Toestelle"),
         "gallery": MessageLookupByLibrary.simpleMessage("Galerie"),
         "gotEmail":
             MessageLookupByLibrary.simpleMessage("Jy het \'n E-pos ontvang"),
         "gotIt": MessageLookupByLibrary.simpleMessage("Verstaan"),
+        "groceryShop":
+            MessageLookupByLibrary.simpleMessage("Kruidenierswinkel"),
         "guest": MessageLookupByLibrary.simpleMessage("Gas"),
         "haveAcc":
             MessageLookupByLibrary.simpleMessage("Het reeds \'n rekening?"),
@@ -367,6 +379,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "items": MessageLookupByLibrary.simpleMessage("Items"),
         "itemsFor": MessageLookupByLibrary.simpleMessage("items Vir"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("Items Verkoop"),
+        "jan": MessageLookupByLibrary.simpleMessage("Jan"),
+        "jul": MessageLookupByLibrary.simpleMessage("Jul"),
+        "jun": MessageLookupByLibrary.simpleMessage("Jun"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("E-pos"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("Wagwoord"),
         "language": MessageLookupByLibrary.simpleMessage("taal"),
@@ -404,9 +419,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "lpDetails":
             MessageLookupByLibrary.simpleMessage("Verlies/Wins Besonderhede"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("Vervaardiger"),
+        "mar": MessageLookupByLibrary.simpleMessage("Mrt"),
         "masterCard": MessageLookupByLibrary.simpleMessage("Meesterkaart"),
+        "may": MessageLookupByLibrary.simpleMessage("Mei"),
         "messege": MessageLookupByLibrary.simpleMessage("Boodskap"),
         "mobile": MessageLookupByLibrary.simpleMessage("Mobiel:"),
+        "mobilePay": MessageLookupByLibrary.simpleMessage("Mobiele Betaling"),
         "mobilePayment":
             MessageLookupByLibrary.simpleMessage("Mobiele Betaling"),
         "mon": MessageLookupByLibrary.simpleMessage("Ma"),
@@ -441,7 +459,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "notFound": MessageLookupByLibrary.simpleMessage("Nie Gevind Nie"),
         "note": MessageLookupByLibrary.simpleMessage("Nota"),
         "notification": MessageLookupByLibrary.simpleMessage("Kennisgewing"),
+        "nov": MessageLookupByLibrary.simpleMessage("Nov"),
         "oK": MessageLookupByLibrary.simpleMessage("OK"),
+        "oct": MessageLookupByLibrary.simpleMessage("Okt"),
         "off": MessageLookupByLibrary.simpleMessage("Af"),
         "on": MessageLookupByLibrary.simpleMessage("Aan"),
         "openingBalance": MessageLookupByLibrary.simpleMessage("Beginbalans"),
@@ -681,6 +701,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendSMS": MessageLookupByLibrary.simpleMessage("Stuur SMS"),
         "sendSms": MessageLookupByLibrary.simpleMessage("Stuur SMS"),
         "sendYourEmail": MessageLookupByLibrary.simpleMessage("Stuur u E-pos"),
+        "sep": MessageLookupByLibrary.simpleMessage("Sep"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "Werk jou profiel op om beter indruk te maak wanneer jy met jou dokter kommunikeer"),
         "setUpNewPassword":
@@ -802,6 +823,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "verityEmail": MessageLookupByLibrary.simpleMessage("Bevestig E-pos"),
         "viewAll": MessageLookupByLibrary.simpleMessage("Vertoon Alles"),
         "walkInCustomer": MessageLookupByLibrary.simpleMessage("Inloop Kliënt"),
+        "watches": MessageLookupByLibrary.simpleMessage("Horlosies"),
         "weHaveSentAConfirmationEmailTo": MessageLookupByLibrary.simpleMessage(
             "Ons het \'n bevestigings-e-pos gestuur na"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(

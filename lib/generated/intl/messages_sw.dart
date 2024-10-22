@@ -90,11 +90,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "Sasisho jipya linapatikana\nTafadhali sasisha programu yako"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Saa ya Apple"),
         "apply": MessageLookupByLibrary.simpleMessage("Tumia"),
+        "apr": MessageLookupByLibrary.simpleMessage("Apr"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("Una uhakika?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "Una uhakika unataka kufuta mshiriki huyu?"),
         "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
             "Je, una uhakika unataka kufuta hii?"),
+        "aug": MessageLookupByLibrary.simpleMessage("Aug"),
         "backToHome": MessageLookupByLibrary.simpleMessage("Rudi Nyumbani"),
         "balance": MessageLookupByLibrary.simpleMessage("Salio"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("Bangladesh"),
@@ -124,6 +126,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "categoryName": MessageLookupByLibrary.simpleMessage("Jina la Jamii"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("Badilisha Nenosiri"),
+        "check": MessageLookupByLibrary.simpleMessage("Angalia"),
         "checkEmail":
             MessageLookupByLibrary.simpleMessage("Angalia Barua pepe"),
         "chooseCustomer": MessageLookupByLibrary.simpleMessage("Chagua Mteja"),
@@ -138,6 +141,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Bonyeza ili kuunganisha"),
         "close": MessageLookupByLibrary.simpleMessage("Funga"),
+        "cloths": MessageLookupByLibrary.simpleMessage("Mavazi"),
         "collectDue": MessageLookupByLibrary.simpleMessage("Kusanya Deni"),
         "collectDues":
             MessageLookupByLibrary.simpleMessage("Tafadhali Kusanya Deni"),
@@ -147,6 +151,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Inakuja Hivi Karibuni"),
         "companyAddress":
             MessageLookupByLibrary.simpleMessage("Anwani ya Kampuni"),
+        "computer": MessageLookupByLibrary.simpleMessage("Kompyuta"),
         "confirmDelete":
             MessageLookupByLibrary.simpleMessage("Thibitisha Kufuta"),
         "confirmPass":
@@ -200,6 +205,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "daysLeft": MessageLookupByLibrary.simpleMessage("Siku Zilizobaki"),
         "dealer": MessageLookupByLibrary.simpleMessage("Muuzaji"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage("Bei ya Muuzaji"),
+        "dec": MessageLookupByLibrary.simpleMessage("Des"),
         "delete": MessageLookupByLibrary.simpleMessage("Futa"),
         "deleteConfirmation":
             MessageLookupByLibrary.simpleMessage("Thibitisho la Kufuta"),
@@ -239,6 +245,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Hariri Hati ya Mauzo"),
         "editSocailMedia":
             MessageLookupByLibrary.simpleMessage("Hariri Mitandao ya Kijamii"),
+        "electronics": MessageLookupByLibrary.simpleMessage("Electronics"),
         "email": MessageLookupByLibrary.simpleMessage("Anwani ya Barua pepe"),
         "emailCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Barua pepe haiwezi kuwa tupu"),
@@ -321,7 +328,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Imeshindwa kupata toleo la jukwaa."),
+        "fashion": MessageLookupByLibrary.simpleMessage("Mitindo"),
         "fashions": MessageLookupByLibrary.simpleMessage("Mitindo"),
+        "feb": MessageLookupByLibrary.simpleMessage("Feb"),
         "field": MessageLookupByLibrary.simpleMessage("Shamba"),
         "firstName": MessageLookupByLibrary.simpleMessage("Jina la Kwanza"),
         "folder": MessageLookupByLibrary.simpleMessage(
@@ -338,9 +347,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "fromDate": MessageLookupByLibrary.simpleMessage("Tarehe ya Kuanzia"),
         "fullName": MessageLookupByLibrary.simpleMessage("Jina Kamili"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("Imelipwa Kabisa"),
+        "gadgets": MessageLookupByLibrary.simpleMessage("Vifaa"),
         "gallery": MessageLookupByLibrary.simpleMessage("Picha"),
         "gotEmail": MessageLookupByLibrary.simpleMessage("Umepokea Barua pepe"),
         "gotIt": MessageLookupByLibrary.simpleMessage("Nimeelewa"),
+        "groceryShop": MessageLookupByLibrary.simpleMessage("Duka la Vyakula"),
         "guest": MessageLookupByLibrary.simpleMessage("Mgeni"),
         "haveAcc": MessageLookupByLibrary.simpleMessage("Tayari una akaunti?"),
         "hintEmail":
@@ -365,6 +376,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "items": MessageLookupByLibrary.simpleMessage("Vitu"),
         "itemsFor": MessageLookupByLibrary.simpleMessage("vitu kwa ajili ya"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("Mauzo ya Bidhaa"),
+        "jan": MessageLookupByLibrary.simpleMessage("Jan"),
+        "jul": MessageLookupByLibrary.simpleMessage("Jul"),
+        "jun": MessageLookupByLibrary.simpleMessage("Jun"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("Barua pepe"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("Nenosiri"),
         "language": MessageLookupByLibrary.simpleMessage("Lugha"),
@@ -403,10 +417,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "lpDetails":
             MessageLookupByLibrary.simpleMessage("Maelezo ya Hasara/Faida"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("Mtengenezaji"),
+        "mar": MessageLookupByLibrary.simpleMessage("Mar"),
         "masterCard":
             MessageLookupByLibrary.simpleMessage("Kadi ya MasterCard"),
+        "may": MessageLookupByLibrary.simpleMessage("Mei"),
         "messege": MessageLookupByLibrary.simpleMessage("Ujumbe"),
         "mobile": MessageLookupByLibrary.simpleMessage("Simu:"),
+        "mobilePay": MessageLookupByLibrary.simpleMessage("Malipo ya Simu"),
         "mobilePayment": MessageLookupByLibrary.simpleMessage("Malipo ya Simu"),
         "mon": MessageLookupByLibrary.simpleMessage("Jumatatu"),
         "monthly": MessageLookupByLibrary.simpleMessage("Kila Mwezi"),
@@ -439,6 +456,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "notFound": MessageLookupByLibrary.simpleMessage("Haikupatikana"),
         "note": MessageLookupByLibrary.simpleMessage("Maelezo"),
         "notification": MessageLookupByLibrary.simpleMessage("Arifa"),
+        "nov": MessageLookupByLibrary.simpleMessage("Nov"),
+        "oct": MessageLookupByLibrary.simpleMessage("Okt"),
         "off": MessageLookupByLibrary.simpleMessage("Zima"),
         "on": MessageLookupByLibrary.simpleMessage("Washa"),
         "openingBalance":
@@ -689,6 +708,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendSms": MessageLookupByLibrary.simpleMessage("Tuma Ujumbe wa SMS"),
         "sendYourEmail":
             MessageLookupByLibrary.simpleMessage("Tuma Barua pepe yako"),
+        "sep": MessageLookupByLibrary.simpleMessage("Sep"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "Sasisha wasifu wako ili kuunganisha daktari wako na maelezo bora"),
         "setUpNewPassword":
@@ -813,6 +833,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Thibitisha Barua Pepe"),
         "viewAll": MessageLookupByLibrary.simpleMessage("Angalia Yote"),
         "walkInCustomer": MessageLookupByLibrary.simpleMessage("Mteja wa Kuja"),
+        "watches": MessageLookupByLibrary.simpleMessage("Saa"),
         "weHaveSentAConfirmationEmailTo": MessageLookupByLibrary.simpleMessage(
             "Tumetuma barua pepe ya uthibitisho kwa"),
         "wed": MessageLookupByLibrary.simpleMessage("Jumatano"),

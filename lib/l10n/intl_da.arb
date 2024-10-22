@@ -562,7 +562,31 @@
   "notActiveUser": "Ikke aktiv bruger",
   "pleaseUseTheValidPurchaseCodeToUseTheApp": "Brug venligst den gyldige kødekode for at bruge appen",
   "oK": "OK",
-  "daysLeft": "Dage tilbage"
+  "daysLeft": "Dage tilbage",
+
+  "groceryShop": "Dagligvarebutik",
+  "fashion": "Mode",
+  "electronics": "Elektronik",
+  "computer": "Computer",
+  "gadgets": "Gadgets",
+  "watches": "Ure",
+  "cloths": "Tøj",
+  "check": "Tjek",
+  "mobilePay": "Mobilbetaling",
+  "jan": "Jan",
+  "feb": "Feb",
+  "mar": "Mar",
+  "apr": "Apr",
+  "may": "Maj",
+  "jun": "Jun",
+  "jul": "Jul",
+  "aug": "Aug",
+  "sep": "Sep",
+  "oct": "Okt",
+  "nov": "Nov",
+  "dec": "Dec"
+
+
 
 
 

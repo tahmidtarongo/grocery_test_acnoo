@@ -562,7 +562,30 @@
   "notActiveUser": "Pengguna Tidak Aktif",
   "pleaseUseTheValidPurchaseCodeToUseTheApp": "Sila gunakan kod pembelian sah untuk menggunakan aplikasi",
   "oK": "OK",
-  "daysLeft": "Hari Baki"
+  "daysLeft": "Hari Baki",
+
+  "groceryShop": "Kedai Runcit",
+  "fashion": "Fesyen",
+  "electronics": "Elektronik",
+  "computer": "Komputer",
+  "gadgets": "Gajet",
+  "watches": "Jam Tangan",
+  "cloths": "Pakaian",
+  "check": "Semak",
+  "mobilePay": "Bayar Mudah Alih",
+  "jan": "Jan",
+  "feb": "Feb",
+  "mar": "Mac",
+  "apr": "Apr",
+  "may": "Mei",
+  "jun": "Jun",
+  "jul": "Jul",
+  "aug": "Ogos",
+  "sep": "Sep",
+  "oct": "Okt",
+  "nov": "Nov",
+  "dec": "Dis"
+
 
 
 }

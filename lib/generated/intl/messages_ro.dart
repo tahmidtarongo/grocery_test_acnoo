@@ -89,11 +89,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "Este disponibilă o actualizare nouă.\nVă rugăm să actualizați aplicația"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
         "apply": MessageLookupByLibrary.simpleMessage("Aplică"),
+        "apr": MessageLookupByLibrary.simpleMessage("Apr"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("Ești sigur?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "Ești sigur că dorești să ștergi acest partener?"),
         "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
             "Sunteți sigur că doriți să ștergeți asta?"),
+        "aug": MessageLookupByLibrary.simpleMessage("Aug"),
         "backToHome":
             MessageLookupByLibrary.simpleMessage("Înapoi la Pagina Principală"),
         "balance": MessageLookupByLibrary.simpleMessage("Sold"),
@@ -125,6 +127,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Numele categoriei"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("Schimbaţi parola"),
+        "check": MessageLookupByLibrary.simpleMessage("Verificare"),
         "checkEmail": MessageLookupByLibrary.simpleMessage("Verifica e-mail"),
         "chooseCustomer":
             MessageLookupByLibrary.simpleMessage("Alegeți un Client"),
@@ -139,6 +142,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "clickToConnect": MessageLookupByLibrary.simpleMessage(
             "Faceți clic pentru a vă conecta"),
         "close": MessageLookupByLibrary.simpleMessage("Închide"),
+        "cloths": MessageLookupByLibrary.simpleMessage("Îmbrăcăminte"),
         "collectDue":
             MessageLookupByLibrary.simpleMessage("Colectați datoriile"),
         "collectDues": MessageLookupByLibrary.simpleMessage(
@@ -148,6 +152,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "comingSoon": MessageLookupByLibrary.simpleMessage("În curând"),
         "companyAddress":
             MessageLookupByLibrary.simpleMessage("adresa companiei"),
+        "computer": MessageLookupByLibrary.simpleMessage("Computer"),
         "confirmDelete":
             MessageLookupByLibrary.simpleMessage("Confirmă ștergerea"),
         "confirmPass":
@@ -203,6 +208,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "daysLeft": MessageLookupByLibrary.simpleMessage("Zile rămase"),
         "dealer": MessageLookupByLibrary.simpleMessage("Dealer"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage("Preț de dealer"),
+        "dec": MessageLookupByLibrary.simpleMessage("Dec"),
         "delete": MessageLookupByLibrary.simpleMessage("Șterge"),
         "deleteConfirmation":
             MessageLookupByLibrary.simpleMessage("Confirmați ștergerea"),
@@ -243,6 +249,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Editați factura de vânzări"),
         "editSocailMedia":
             MessageLookupByLibrary.simpleMessage("Editare rețele sociale"),
+        "electronics": MessageLookupByLibrary.simpleMessage("Electronice"),
         "email": MessageLookupByLibrary.simpleMessage("Adresa de e-mail"),
         "emailCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("Email-ul nu poate fi gol"),
@@ -329,7 +336,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Eșec la obținerea versiunii platformei."),
+        "fashion": MessageLookupByLibrary.simpleMessage("Modă"),
         "fashions": MessageLookupByLibrary.simpleMessage("Modă"),
+        "feb": MessageLookupByLibrary.simpleMessage("Feb"),
         "field": MessageLookupByLibrary.simpleMessage("Câmp"),
         "firstName": MessageLookupByLibrary.simpleMessage("Prenume"),
         "folder": MessageLookupByLibrary.simpleMessage(
@@ -347,9 +356,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "fullName": MessageLookupByLibrary.simpleMessage("Nume complet"),
         "fullyPaid":
             MessageLookupByLibrary.simpleMessage("Plătit în întregime"),
+        "gadgets": MessageLookupByLibrary.simpleMessage("Gadgeturi"),
         "gallery": MessageLookupByLibrary.simpleMessage("Galerie"),
         "gotEmail": MessageLookupByLibrary.simpleMessage("Ai un Email"),
         "gotIt": MessageLookupByLibrary.simpleMessage("Am înțeles"),
+        "groceryShop": MessageLookupByLibrary.simpleMessage(
+            "Magazin de produse alimentare"),
         "guest": MessageLookupByLibrary.simpleMessage("Oaspete"),
         "haveAcc": MessageLookupByLibrary.simpleMessage("ai deja un cont?"),
         "hintEmail":
@@ -373,6 +385,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "items": MessageLookupByLibrary.simpleMessage("Articole"),
         "itemsFor": MessageLookupByLibrary.simpleMessage("articole pentru"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("Vânzări articole"),
+        "jan": MessageLookupByLibrary.simpleMessage("Ian"),
+        "jul": MessageLookupByLibrary.simpleMessage("Iul"),
+        "jun": MessageLookupByLibrary.simpleMessage("Iun"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("Email"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("Parolă"),
         "language": MessageLookupByLibrary.simpleMessage("limba"),
@@ -411,9 +426,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "lpDetails":
             MessageLookupByLibrary.simpleMessage("Detalii pierdere/profit"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("Producător"),
+        "mar": MessageLookupByLibrary.simpleMessage("Mar"),
         "masterCard": MessageLookupByLibrary.simpleMessage("MasterCard"),
+        "may": MessageLookupByLibrary.simpleMessage("Mai"),
         "messege": MessageLookupByLibrary.simpleMessage("Mesaj"),
         "mobile": MessageLookupByLibrary.simpleMessage("Mobil:"),
+        "mobilePay": MessageLookupByLibrary.simpleMessage("Plată mobilă"),
         "mobilePayment": MessageLookupByLibrary.simpleMessage("Plată mobilă"),
         "mon": MessageLookupByLibrary.simpleMessage("Lun"),
         "monthly": MessageLookupByLibrary.simpleMessage("Lunar"),
@@ -448,7 +466,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "notFound": MessageLookupByLibrary.simpleMessage("Nu a fost găsit"),
         "note": MessageLookupByLibrary.simpleMessage("Notă"),
         "notification": MessageLookupByLibrary.simpleMessage("Notificare"),
+        "nov": MessageLookupByLibrary.simpleMessage("Nov"),
         "oK": MessageLookupByLibrary.simpleMessage("OK"),
+        "oct": MessageLookupByLibrary.simpleMessage("Oct"),
         "off": MessageLookupByLibrary.simpleMessage("Dezactivat"),
         "on": MessageLookupByLibrary.simpleMessage("Activat"),
         "openingBalance":
@@ -698,6 +718,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendSms": MessageLookupByLibrary.simpleMessage("Trimite SMS"),
         "sendYourEmail":
             MessageLookupByLibrary.simpleMessage("Trimiteți-vă Emailul"),
+        "sep": MessageLookupByLibrary.simpleMessage("Sep"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "Actualizați-vă profilul pentru a vă conecta medicul cu o impresie mai bunăn"),
         "setUpNewPassword":
@@ -825,6 +846,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Verifică Email-ul"),
         "viewAll": MessageLookupByLibrary.simpleMessage("A vedea tot"),
         "walkInCustomer": MessageLookupByLibrary.simpleMessage("Client pe loc"),
+        "watches": MessageLookupByLibrary.simpleMessage("Ceasuri"),
         "weHaveSentAConfirmationEmailTo": MessageLookupByLibrary.simpleMessage(
             "Am trimis un email de confirmare la"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(

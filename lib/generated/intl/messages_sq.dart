@@ -85,11 +85,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "Mbështetje për Aplikacionet Android & iOS"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
         "apply": MessageLookupByLibrary.simpleMessage("Zbato"),
+        "apr": MessageLookupByLibrary.simpleMessage("Pri"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("A jeni të sigurt?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "A jeni të sigurt që dëshironi të fshini këtë palë?"),
         "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
             "A jeni i sigurt që dëshironi të fshini këtë?"),
+        "aug": MessageLookupByLibrary.simpleMessage("Gsh"),
         "backToHome":
             MessageLookupByLibrary.simpleMessage("Mbrapsht në Shtëpi"),
         "balance": MessageLookupByLibrary.simpleMessage("Bilanci"),
@@ -121,6 +123,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Emri i Kategorisë"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("Ndrysho Fjalëkalimin"),
+        "check": MessageLookupByLibrary.simpleMessage("Kontrollo"),
         "checkEmail":
             MessageLookupByLibrary.simpleMessage("Kontrolloni Email-in"),
         "chooseCustomer":
@@ -136,6 +139,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Klikoni për të lidhur"),
         "close": MessageLookupByLibrary.simpleMessage("Mbyll"),
+        "cloths": MessageLookupByLibrary.simpleMessage("Rrobat"),
         "collectDue": MessageLookupByLibrary.simpleMessage("Mbledh Borxhin"),
         "collectDues": MessageLookupByLibrary.simpleMessage(
             "Ju lutemi Mblidhni një Borxh"),
@@ -144,6 +148,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "comingSoon": MessageLookupByLibrary.simpleMessage("Do të Vjen Shpejt"),
         "companyAddress":
             MessageLookupByLibrary.simpleMessage("Adresa e Kompanisë"),
+        "computer": MessageLookupByLibrary.simpleMessage("Kompjuter"),
         "confirmDelete":
             MessageLookupByLibrary.simpleMessage("Konfirmo Fshirjen"),
         "confirmPass":
@@ -197,6 +202,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "dealer": MessageLookupByLibrary.simpleMessage("Shitës"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage(
             "Çmimi i Shitjes për Shitësin"),
+        "dec": MessageLookupByLibrary.simpleMessage("Dhj"),
         "delete": MessageLookupByLibrary.simpleMessage("Fshij"),
         "deleteConfirmation":
             MessageLookupByLibrary.simpleMessage("Konfirmimi i Fshirjes"),
@@ -235,6 +241,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Redakto Faturën e Blerjes"),
         "editSalesInvoice":
             MessageLookupByLibrary.simpleMessage("Redakto Faturën e Shitjeve"),
+        "electronics": MessageLookupByLibrary.simpleMessage("Elektronikë"),
         "email": MessageLookupByLibrary.simpleMessage("Adresa email"),
         "emailCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Emaili nuk mund të jetë bosh"),
@@ -319,7 +326,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Dështoi të merret versioni i platformës."),
+        "fashion": MessageLookupByLibrary.simpleMessage("Modë"),
         "fashions": MessageLookupByLibrary.simpleMessage("Moda"),
+        "feb": MessageLookupByLibrary.simpleMessage("Shk"),
         "field": MessageLookupByLibrary.simpleMessage("Fusha"),
         "firstName": MessageLookupByLibrary.simpleMessage("Emri i Parë"),
         "folder": MessageLookupByLibrary.simpleMessage(
@@ -336,10 +345,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "fromDate": MessageLookupByLibrary.simpleMessage("Nga data"),
         "fullName": MessageLookupByLibrary.simpleMessage("Emri i Plotë"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("Paguar Plotësisht"),
+        "gadgets": MessageLookupByLibrary.simpleMessage("Gadgets"),
         "gallery": MessageLookupByLibrary.simpleMessage("Galeri"),
         "gotEmail":
             MessageLookupByLibrary.simpleMessage("Keni marrë një email"),
         "gotIt": MessageLookupByLibrary.simpleMessage("E kuptoj"),
+        "groceryShop":
+            MessageLookupByLibrary.simpleMessage("Dyqani i ushqimeve"),
         "guest": MessageLookupByLibrary.simpleMessage("Pjesëmarrës"),
         "haveAcc":
             MessageLookupByLibrary.simpleMessage("Keni tashmë një llogari?"),
@@ -366,6 +378,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "itemsFor": MessageLookupByLibrary.simpleMessage("artikuj për"),
         "itemsSales":
             MessageLookupByLibrary.simpleMessage("Shitjet e Artikujve"),
+        "jan": MessageLookupByLibrary.simpleMessage("Jan"),
+        "jul": MessageLookupByLibrary.simpleMessage("Kor"),
+        "jun": MessageLookupByLibrary.simpleMessage("Qer"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("Email"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("Fjalëkalimi"),
         "language": MessageLookupByLibrary.simpleMessage("gjuha"),
@@ -402,8 +417,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "lpDetails":
             MessageLookupByLibrary.simpleMessage("Detajet e Humbjes/Mëfitimit"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("Prodhuesi"),
+        "mar": MessageLookupByLibrary.simpleMessage("Mar"),
         "masterCard": MessageLookupByLibrary.simpleMessage("Karta Master"),
+        "may": MessageLookupByLibrary.simpleMessage("Maj"),
         "mobile": MessageLookupByLibrary.simpleMessage("Celular:"),
+        "mobilePay": MessageLookupByLibrary.simpleMessage("Pagesë mobile"),
         "mobilePayment": MessageLookupByLibrary.simpleMessage("Pagesë Mobile"),
         "mon": MessageLookupByLibrary.simpleMessage("Hën"),
         "monthly": MessageLookupByLibrary.simpleMessage("Mujore"),
@@ -439,7 +457,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "notFound": MessageLookupByLibrary.simpleMessage("Nuk u Gjet"),
         "note": MessageLookupByLibrary.simpleMessage("Shënim"),
         "notification": MessageLookupByLibrary.simpleMessage("Njoftim"),
+        "nov": MessageLookupByLibrary.simpleMessage("Nën"),
         "oK": MessageLookupByLibrary.simpleMessage("OK"),
+        "oct": MessageLookupByLibrary.simpleMessage("Tet"),
         "off": MessageLookupByLibrary.simpleMessage("Jashtë"),
         "on": MessageLookupByLibrary.simpleMessage("Në"),
         "openingBalance": MessageLookupByLibrary.simpleMessage("Bilanci Hapës"),
@@ -685,6 +705,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendSms": MessageLookupByLibrary.simpleMessage("Dërgo SMS"),
         "sendYourEmail":
             MessageLookupByLibrary.simpleMessage("Dërgo Emailin Tuaj"),
+        "sep": MessageLookupByLibrary.simpleMessage("Sht"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "Përditëso profilin tënd për të ndërtuar një lidhje më të mirë me mjekun tënd"),
         "setUpNewPassword":
@@ -812,6 +833,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "viewAll": MessageLookupByLibrary.simpleMessage("Shiko të gjitha"),
         "walkInCustomer":
             MessageLookupByLibrary.simpleMessage("Klienti që Ka Ardhur"),
+        "watches": MessageLookupByLibrary.simpleMessage("Ora"),
         "weHaveSentAConfirmationEmailTo": MessageLookupByLibrary.simpleMessage(
             "Ne kemi dërguar një email konfirmimi në"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(

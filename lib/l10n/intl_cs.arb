@@ -562,7 +562,31 @@
   "notActiveUser": "Neaktivní uživatel",
   "pleaseUseTheValidPurchaseCodeToUseTheApp": "Použijte platný kód zakoupení pro použití aplikace",
   "oK": "OK",
-  "daysLeft": "Zbývající dny"
+  "daysLeft": "Zbývající dny",
+
+  "groceryShop": "Obchod s potravinami",
+  "fashion": "Móda",
+  "electronics": "Elektronika",
+  "computer": "Počítač",
+  "gadgets": "Gadgety",
+  "watches": "Hodinky",
+  "cloths": "Oblečení",
+  "check": "Zkontrolovat",
+  "mobilePay": "Mobilní platba",
+  "jan": "Leden",
+  "feb": "Únor",
+  "mar": "Březen",
+  "apr": "Duben",
+  "may": "Květen",
+  "jun": "Červen",
+  "jul": "Červenec",
+  "aug": "Srpen",
+  "sep": "Září",
+  "oct": "Říjen",
+  "nov": "Listopad",
+  "dec": "Prosinec"
+
+
 
 
 

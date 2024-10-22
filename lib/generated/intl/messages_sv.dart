@@ -87,11 +87,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Android & iOS appstöd"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Klocka"),
         "apply": MessageLookupByLibrary.simpleMessage("Aplikovať"),
+        "apr": MessageLookupByLibrary.simpleMessage("Apr"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("Är du säker?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "Är du säker på att du vill ta bort den här parten?"),
         "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
             "Är du säker på att du vill radera detta?"),
+        "aug": MessageLookupByLibrary.simpleMessage("Aug"),
         "balance": MessageLookupByLibrary.simpleMessage("Balans"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("Bangladéš"),
         "bank": MessageLookupByLibrary.simpleMessage("Bank"),
@@ -116,6 +118,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "category": MessageLookupByLibrary.simpleMessage("Kategori"),
         "categoryName": MessageLookupByLibrary.simpleMessage("Kategorinamn"),
         "changePassword": MessageLookupByLibrary.simpleMessage("Byt lösenord"),
+        "check": MessageLookupByLibrary.simpleMessage("Kontrollera"),
         "checkEmail": MessageLookupByLibrary.simpleMessage("Kolla e-posten"),
         "chooseCustomer": MessageLookupByLibrary.simpleMessage("Välj en kund"),
         "chooseSupplier":
@@ -129,6 +132,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Klicka för att ansluta"),
         "close": MessageLookupByLibrary.simpleMessage("Stäng"),
+        "cloths": MessageLookupByLibrary.simpleMessage("Kläder"),
         "collectDue": MessageLookupByLibrary.simpleMessage("Inkassera skuld"),
         "collectDues": MessageLookupByLibrary.simpleMessage(
             "Inkassera en förfallen betalning"),
@@ -137,6 +141,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "comingSoon": MessageLookupByLibrary.simpleMessage("Kommer snart"),
         "companyAddress":
             MessageLookupByLibrary.simpleMessage("Företagsadress"),
+        "computer": MessageLookupByLibrary.simpleMessage("Dator"),
         "confirmDelete":
             MessageLookupByLibrary.simpleMessage("Bekräfta borttagning"),
         "confirmPass":
@@ -189,6 +194,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "dealer": MessageLookupByLibrary.simpleMessage("Återförsäljare"),
         "dealerPrice":
             MessageLookupByLibrary.simpleMessage("Återförsäljarpris"),
+        "dec": MessageLookupByLibrary.simpleMessage("Dec"),
         "delete": MessageLookupByLibrary.simpleMessage("Odstrániť"),
         "deleteConfirmation":
             MessageLookupByLibrary.simpleMessage("Radera bekräftelse"),
@@ -228,6 +234,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Redigera inköpsfaktura"),
         "editSalesInvoice": MessageLookupByLibrary.simpleMessage(
             "Redigera försäljningsfaktura"),
+        "electronics": MessageLookupByLibrary.simpleMessage("Elektronik"),
         "email": MessageLookupByLibrary.simpleMessage("E-postadress"),
         "emailCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("E-post kan inte vara tomt"),
@@ -310,7 +317,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Misslyckades med att hämta plattformsversion."),
+        "fashion": MessageLookupByLibrary.simpleMessage("Mode"),
         "fashions": MessageLookupByLibrary.simpleMessage("Móda"),
+        "feb": MessageLookupByLibrary.simpleMessage("Feb"),
         "field": MessageLookupByLibrary.simpleMessage("Fält"),
         "firstName": MessageLookupByLibrary.simpleMessage("Krstné meno"),
         "folder": MessageLookupByLibrary.simpleMessage(
@@ -327,10 +336,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "fromDate": MessageLookupByLibrary.simpleMessage("Från datum"),
         "fullName": MessageLookupByLibrary.simpleMessage("Fullständigt namn"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("Helt betalt"),
+        "gadgets": MessageLookupByLibrary.simpleMessage("Prylar"),
         "gallery": MessageLookupByLibrary.simpleMessage("Galleri"),
         "gotEmail": MessageLookupByLibrary.simpleMessage(
             "Du har fått ett e-postmeddelande"),
         "gotIt": MessageLookupByLibrary.simpleMessage("Förstått"),
+        "groceryShop": MessageLookupByLibrary.simpleMessage("Livsmedelsbutik"),
         "guest": MessageLookupByLibrary.simpleMessage("Gäst"),
         "haveAcc":
             MessageLookupByLibrary.simpleMessage("Har du redan ett konto?"),
@@ -352,6 +363,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "itemsFor": MessageLookupByLibrary.simpleMessage("objekt för"),
         "itemsSales":
             MessageLookupByLibrary.simpleMessage("Artikelförsäljning"),
+        "jan": MessageLookupByLibrary.simpleMessage("Jan"),
+        "jul": MessageLookupByLibrary.simpleMessage("Jul"),
+        "jun": MessageLookupByLibrary.simpleMessage("Jun"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("E-post"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("Lösenord"),
         "language": MessageLookupByLibrary.simpleMessage("Språk"),
@@ -390,8 +404,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "lpDetails":
             MessageLookupByLibrary.simpleMessage("Förlust/Vinst Detaljer"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("Tillverkare"),
+        "mar": MessageLookupByLibrary.simpleMessage("Mar"),
         "masterCard": MessageLookupByLibrary.simpleMessage("MasterCard"),
+        "may": MessageLookupByLibrary.simpleMessage("Maj"),
         "mobile": MessageLookupByLibrary.simpleMessage("Mobil:"),
+        "mobilePay": MessageLookupByLibrary.simpleMessage("Mobilbetalning"),
         "mobilePayment":
             MessageLookupByLibrary.simpleMessage("Mobil betalning"),
         "mon": MessageLookupByLibrary.simpleMessage("Mån"),
@@ -422,7 +439,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "notFound": MessageLookupByLibrary.simpleMessage("Inte hittad"),
         "note": MessageLookupByLibrary.simpleMessage("Anteckning"),
         "notification": MessageLookupByLibrary.simpleMessage("Notifikácia"),
+        "nov": MessageLookupByLibrary.simpleMessage("Nov"),
         "oK": MessageLookupByLibrary.simpleMessage("OK"),
+        "oct": MessageLookupByLibrary.simpleMessage("Okt"),
         "off": MessageLookupByLibrary.simpleMessage("Av"),
         "on": MessageLookupByLibrary.simpleMessage("På"),
         "openingBalance":
@@ -648,6 +667,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Skicka återställningslänk"),
         "sendSMS": MessageLookupByLibrary.simpleMessage("Skicka SMS"),
         "sendSms": MessageLookupByLibrary.simpleMessage("Odoslať SMS"),
+        "sep": MessageLookupByLibrary.simpleMessage("Sep"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "Uppdatera din profil för att skapa ett bättre intryck hos din läkare"),
         "setUpNewPassword":
@@ -770,6 +790,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "verityEmail": MessageLookupByLibrary.simpleMessage("Verifiera e-post"),
         "viewAll": MessageLookupByLibrary.simpleMessage("Visa alla"),
         "walkInCustomer": MessageLookupByLibrary.simpleMessage("Ingångskund"),
+        "watches": MessageLookupByLibrary.simpleMessage("Klockor"),
         "weHaveSentAConfirmationEmailTo": MessageLookupByLibrary.simpleMessage(
             "Vi har skickat ett bekräftelsemail till"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(

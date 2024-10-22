@@ -566,7 +566,30 @@
   "notActiveUser": "Nicht aktiver Benutzer",
   "pleaseUseTheValidPurchaseCodeToUseTheApp": "Bitte verwenden Sie den gültigen Kaufcode, um die App zu nutzen",
   "oK": "OK",
-  "daysLeft": "Verbleibende Tage"
+  "daysLeft": "Verbleibende Tage",
+
+  "groceryShop": "Lebensmittelgeschäft",
+  "fashion": "Mode",
+  "electronics": "Elektronik",
+  "computer": "Computer",
+  "gadgets": "Geräte",
+  "watches": "Uhren",
+  "cloths": "Kleidung",
+  "check": "Überprüfen",
+  "mobilePay": "Mobile Zahlung",
+  "jan": "Jan",
+  "feb": "Feb",
+  "mar": "Mär",
+  "apr": "Apr",
+  "may": "Mai",
+  "jun": "Jun",
+  "jul": "Jul",
+  "aug": "Aug",
+  "sep": "Sep",
+  "oct": "Okt",
+  "nov": "Nov",
+  "dec": "Dez"
+
 
 
 }

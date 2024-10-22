@@ -85,12 +85,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "नवीन अपडेट उपलब्ध आहे\nकृपया आपले अ‍ॅप अपडेट करा"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("ऍपल वॉच"),
         "apply": MessageLookupByLibrary.simpleMessage("लागू करा"),
+        "apr": MessageLookupByLibrary.simpleMessage("एप्रिल"),
         "areYouSure":
             MessageLookupByLibrary.simpleMessage("तुम्हाला खात्री आहे का?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "तुम्हाला हा पक्ष हटवायचा आहे का?"),
         "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
             "तुम्हाला हे रद्द करायचं आहे का?"),
+        "aug": MessageLookupByLibrary.simpleMessage("ऑगस्ट"),
         "backToHome":
             MessageLookupByLibrary.simpleMessage("मुख्यपृष्ठाकडे परत जा"),
         "balance": MessageLookupByLibrary.simpleMessage("शिल्लक"),
@@ -118,6 +120,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "category": MessageLookupByLibrary.simpleMessage("श्रेणी"),
         "categoryName": MessageLookupByLibrary.simpleMessage("श्रेणीचे नाव"),
         "changePassword": MessageLookupByLibrary.simpleMessage("पासवर्ड बदला"),
+        "check": MessageLookupByLibrary.simpleMessage("तपासा"),
         "checkEmail": MessageLookupByLibrary.simpleMessage("ईमेल तपासा"),
         "chooseCustomer": MessageLookupByLibrary.simpleMessage("ग्राहक निवडा"),
         "chooseSupplier":
@@ -131,6 +134,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("कनेक्ट करण्यासाठी क्लिक करा"),
         "close": MessageLookupByLibrary.simpleMessage("बंद करा"),
+        "cloths": MessageLookupByLibrary.simpleMessage("कपडे"),
         "collectDue": MessageLookupByLibrary.simpleMessage("बाकी वसूल करा"),
         "collectDues":
             MessageLookupByLibrary.simpleMessage("कृपया बाकी वसूल करा"),
@@ -138,6 +142,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "color": MessageLookupByLibrary.simpleMessage("रंग"),
         "comingSoon": MessageLookupByLibrary.simpleMessage("लवकरच येत आहे"),
         "companyAddress": MessageLookupByLibrary.simpleMessage("कंपनीचा पत्ता"),
+        "computer": MessageLookupByLibrary.simpleMessage("कंप्यूटर"),
         "confirmDelete":
             MessageLookupByLibrary.simpleMessage("हटविण्याची पुष्टी करा"),
         "confirmPass":
@@ -191,6 +196,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "daysLeft": MessageLookupByLibrary.simpleMessage("उरलेले दिवस"),
         "dealer": MessageLookupByLibrary.simpleMessage("व्यापारी"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage("व्यापारी किंमत"),
+        "dec": MessageLookupByLibrary.simpleMessage("डिसेंबर"),
         "delete": MessageLookupByLibrary.simpleMessage("काढून टाका"),
         "deleteConfirmation":
             MessageLookupByLibrary.simpleMessage("रद्द करण्याची पुष्टी"),
@@ -229,6 +235,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("विक्री चलन संपादित करा"),
         "editSocailMedia":
             MessageLookupByLibrary.simpleMessage("सोशल मिडिया संपादित करा"),
+        "electronics": MessageLookupByLibrary.simpleMessage("इलेक्ट्रॉनिक्स"),
         "email": MessageLookupByLibrary.simpleMessage("ईमेल पत्ता"),
         "emailCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("ईमेल रिकामे राहू नये"),
@@ -315,7 +322,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "facebook": MessageLookupByLibrary.simpleMessage("फेसबुक"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "प्लॅटफॉर्म आवृत्ती मिळवण्यात अयशस्वी"),
+        "fashion": MessageLookupByLibrary.simpleMessage("फॅशन"),
         "fashions": MessageLookupByLibrary.simpleMessage("फॅशन"),
+        "feb": MessageLookupByLibrary.simpleMessage("फेब्रुवारी"),
         "field": MessageLookupByLibrary.simpleMessage("फील्ड"),
         "firstName": MessageLookupByLibrary.simpleMessage("पहिले नाव"),
         "folder": MessageLookupByLibrary.simpleMessage(
@@ -332,10 +341,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "fromDate": MessageLookupByLibrary.simpleMessage("तारखेपासून"),
         "fullName": MessageLookupByLibrary.simpleMessage("पूर्ण नाव"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("पूर्णपणे भरलेले"),
+        "gadgets": MessageLookupByLibrary.simpleMessage("गॅझेट्स"),
         "gallery": MessageLookupByLibrary.simpleMessage("गॅलरी"),
         "gotEmail":
             MessageLookupByLibrary.simpleMessage("तुम्हाला ईमेल मिळाले आहे"),
         "gotIt": MessageLookupByLibrary.simpleMessage("मिळाले"),
+        "groceryShop": MessageLookupByLibrary.simpleMessage("ग्रोसरी शॉप"),
         "guest": MessageLookupByLibrary.simpleMessage("अतिथी"),
         "haveAcc": MessageLookupByLibrary.simpleMessage("आधीपासून खाते आहे?"),
         "hintEmail":
@@ -359,6 +370,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "items": MessageLookupByLibrary.simpleMessage("आइटम"),
         "itemsFor": MessageLookupByLibrary.simpleMessage("आइटम साठी"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("वस्तू विक्री"),
+        "jan": MessageLookupByLibrary.simpleMessage("जानेवारी"),
+        "jul": MessageLookupByLibrary.simpleMessage("जुलै"),
+        "jun": MessageLookupByLibrary.simpleMessage("जून"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("ईमेल"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("पासवर्ड"),
         "language": MessageLookupByLibrary.simpleMessage("भाषा"),
@@ -397,9 +411,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "lp": MessageLookupByLibrary.simpleMessage("नुकसान/फायदा"),
         "lpDetails": MessageLookupByLibrary.simpleMessage("नुकसान/फायदा तपशील"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("निर्माता"),
+        "mar": MessageLookupByLibrary.simpleMessage("मार्च"),
         "masterCard": MessageLookupByLibrary.simpleMessage("मास्टर कार्ड"),
+        "may": MessageLookupByLibrary.simpleMessage("मे"),
         "messege": MessageLookupByLibrary.simpleMessage("संदेश"),
         "mobile": MessageLookupByLibrary.simpleMessage("मोबाइल:"),
+        "mobilePay": MessageLookupByLibrary.simpleMessage("मोबाइल पे"),
         "mobilePayment": MessageLookupByLibrary.simpleMessage("मोबाईल पेमेंट"),
         "mon": MessageLookupByLibrary.simpleMessage("सोमवार"),
         "monthly": MessageLookupByLibrary.simpleMessage("मासिक"),
@@ -433,7 +450,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "notFound": MessageLookupByLibrary.simpleMessage("सापडले नाही"),
         "note": MessageLookupByLibrary.simpleMessage("टीप"),
         "notification": MessageLookupByLibrary.simpleMessage("सूचना"),
+        "nov": MessageLookupByLibrary.simpleMessage("नोव्हेंबर"),
         "oK": MessageLookupByLibrary.simpleMessage("ठीक आहे"),
+        "oct": MessageLookupByLibrary.simpleMessage("ऑक्टोबर"),
         "off": MessageLookupByLibrary.simpleMessage("ऑफ"),
         "on": MessageLookupByLibrary.simpleMessage("ऑन"),
         "openingBalance":
@@ -661,6 +680,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendSms": MessageLookupByLibrary.simpleMessage("एसएमएस पाठवा"),
         "sendYourEmail":
             MessageLookupByLibrary.simpleMessage("तुमचा ईमेल पाठवा"),
+        "sep": MessageLookupByLibrary.simpleMessage("सप्टेंबर"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "आपल्या डॉक्टराशी संपर्क साधण्यासाठी आपली प्रोफाइल अद्यतनित करा"),
         "setUpNewPassword":
@@ -782,6 +802,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ईमेलची सत्यता तपासा"),
         "viewAll": MessageLookupByLibrary.simpleMessage("सर्व पहा"),
         "walkInCustomer": MessageLookupByLibrary.simpleMessage("वॉक-इन ग्राहक"),
+        "watches": MessageLookupByLibrary.simpleMessage("घड्याळे"),
         "weHaveSentAConfirmationEmailTo": MessageLookupByLibrary.simpleMessage(
             "आम्ही तुमच्या ईमेल पत्त्यावर पुष्टीकरण ईमेल पाठवले आहे"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(

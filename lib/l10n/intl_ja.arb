@@ -566,7 +566,31 @@
   "notActiveUser": "非アクティブユーザー",
   "pleaseUseTheValidPurchaseCodeToUseTheApp": "アプリを使用するには有効な購入コードを使用してください",
   "oK": "わかりました",
-  "daysLeft": "残り日数"
+  "daysLeft": "残り日数",
+
+
+  "groceryShop": "食料品店",
+  "fashion": "ファッション",
+  "electronics": "エレクトロニクス",
+  "computer": "コンピュータ",
+  "gadgets": "ガジェット",
+  "watches": "時計",
+  "cloths": "衣服",
+  "check": "確認",
+  "mobilePay": "モバイルペイ",
+  "jan": "1月",
+  "feb": "2月",
+  "mar": "3月",
+  "apr": "4月",
+  "may": "5月",
+  "jun": "6月",
+  "jul": "7月",
+  "aug": "8月",
+  "sep": "9月",
+  "oct": "10月",
+  "nov": "11月",
+  "dec": "12月"
+
 
 
 }

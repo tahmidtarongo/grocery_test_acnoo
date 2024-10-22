@@ -87,11 +87,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "অ্যান্ড্রয়েড ও আইওএস অ্যাপ সমর্থন"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("অ্যাপল ওয়াচ"),
         "apply": MessageLookupByLibrary.simpleMessage("প্রয়োগ"),
+        "apr": MessageLookupByLibrary.simpleMessage("এপ্রি"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("আপনি কি নিশ্চিত?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "আপনি কি সত্যিই এই পার্টি মুছে ফেলতে চান?"),
         "areYouSureYouWantToDeleteThis":
             MessageLookupByLibrary.simpleMessage("আপনি কি এটি মুছতে চান?"),
+        "aug": MessageLookupByLibrary.simpleMessage("আগস্ট"),
         "backToHome":
             MessageLookupByLibrary.simpleMessage("মূলপাতায় ফিরে যান"),
         "balance": MessageLookupByLibrary.simpleMessage("ব্যালেন্স"),
@@ -121,6 +123,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "categoryName": MessageLookupByLibrary.simpleMessage("বিভাগ নাম"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("পাসওয়ার্ড পরিবর্তন করুন"),
+        "check": MessageLookupByLibrary.simpleMessage("চেক করুন"),
         "checkEmail": MessageLookupByLibrary.simpleMessage("ইমেল পরীক্ষা করুন"),
         "chooseCustomer":
             MessageLookupByLibrary.simpleMessage("গ্রাহক চয়ন করুন"),
@@ -135,6 +138,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("সংযোগ করতে ক্লিক করুন"),
         "close": MessageLookupByLibrary.simpleMessage("বন্ধ করুন"),
+        "cloths": MessageLookupByLibrary.simpleMessage("পোশাক"),
         "collectDue":
             MessageLookupByLibrary.simpleMessage("বকেয়া সংগ্রহ করুন"),
         "collectDues": MessageLookupByLibrary.simpleMessage(
@@ -144,6 +148,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "comingSoon": MessageLookupByLibrary.simpleMessage("শিগগিরই আসছে"),
         "companyAddress":
             MessageLookupByLibrary.simpleMessage("কোম্পানির ঠিকানা"),
+        "computer": MessageLookupByLibrary.simpleMessage("কম্পিউটার"),
         "confirmDelete":
             MessageLookupByLibrary.simpleMessage("মুছে ফেলা নিশ্চিত করুন"),
         "confirmPass":
@@ -195,6 +200,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "daysLeft": MessageLookupByLibrary.simpleMessage("অবশিষ্ট দিন"),
         "dealer": MessageLookupByLibrary.simpleMessage("ডিলার"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage("ডিলার মূল্য"),
+        "dec": MessageLookupByLibrary.simpleMessage("ডিসে"),
         "delete": MessageLookupByLibrary.simpleMessage("মুছে ফেলা"),
         "deleteConfirmation":
             MessageLookupByLibrary.simpleMessage("মুছার নিশ্চয়তা"),
@@ -232,6 +238,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ক্রয় চালান সম্পাদনা করুন"),
         "editSalesInvoice":
             MessageLookupByLibrary.simpleMessage("বিক্রয় চালান সম্পাদনা করুন"),
+        "electronics": MessageLookupByLibrary.simpleMessage("ইলেকট্রনিক্স"),
         "email": MessageLookupByLibrary.simpleMessage("ইমেইল ঠিকানা"),
         "emailCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("ইমেল ফাঁকা রাখা যাবে না"),
@@ -312,7 +319,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "facebook": MessageLookupByLibrary.simpleMessage("ফেসবুক"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "প্ল্যাটফর্ম সংস্করণ পাওয়া যায়নি।"),
+        "fashion": MessageLookupByLibrary.simpleMessage("ফ্যাশন"),
         "fashions": MessageLookupByLibrary.simpleMessage("ফ্যাশন"),
+        "feb": MessageLookupByLibrary.simpleMessage("ফেব"),
         "field": MessageLookupByLibrary.simpleMessage("ফিল্ড"),
         "firstName": MessageLookupByLibrary.simpleMessage("নামের প্রথম অংশ"),
         "folder": MessageLookupByLibrary.simpleMessage(
@@ -330,10 +339,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "fullName": MessageLookupByLibrary.simpleMessage("পুরো নাম"),
         "fullyPaid":
             MessageLookupByLibrary.simpleMessage("সম্পূর্ণভাবে পরিশোধিত"),
+        "gadgets": MessageLookupByLibrary.simpleMessage("গ্যাজেটস"),
         "gallery": MessageLookupByLibrary.simpleMessage("গ্যালারি"),
         "gotEmail":
             MessageLookupByLibrary.simpleMessage("আপনি একটি ইমেল পেয়েছেন"),
         "gotIt": MessageLookupByLibrary.simpleMessage("বুঝেছি"),
+        "groceryShop": MessageLookupByLibrary.simpleMessage("মুদির দোকান"),
         "guest": MessageLookupByLibrary.simpleMessage("অতিথি"),
         "haveAcc": MessageLookupByLibrary.simpleMessage(
             "ইতিমধ্যে একটি অ্যাকাউন্ট আছে?"),
@@ -356,6 +367,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "items": MessageLookupByLibrary.simpleMessage("আইটেম"),
         "itemsFor": MessageLookupByLibrary.simpleMessage("জন্য আইটেম"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("আইটেম বিক্রয়"),
+        "jan": MessageLookupByLibrary.simpleMessage("জানু"),
+        "jul": MessageLookupByLibrary.simpleMessage("জুলাই"),
+        "jun": MessageLookupByLibrary.simpleMessage("জুন"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("ইমেল"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("পাসওয়ার্ড"),
         "language": MessageLookupByLibrary.simpleMessage("ভাষা"),
@@ -392,8 +406,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "lp": MessageLookupByLibrary.simpleMessage("ক্ষতি লাভ"),
         "lpDetails": MessageLookupByLibrary.simpleMessage("লস / প্রফিট বিবরণী"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("উত্পাদক"),
+        "mar": MessageLookupByLibrary.simpleMessage("মার্চ"),
         "masterCard": MessageLookupByLibrary.simpleMessage("মাস্টারকার্ড"),
+        "may": MessageLookupByLibrary.simpleMessage("মে"),
         "mobile": MessageLookupByLibrary.simpleMessage("মোবাইলঃ"),
+        "mobilePay": MessageLookupByLibrary.simpleMessage("মোবাইল পেমেন্ট"),
         "mobilePayment": MessageLookupByLibrary.simpleMessage("মোবাইল পেমেন্ট"),
         "mon": MessageLookupByLibrary.simpleMessage("সোম"),
         "monthly": MessageLookupByLibrary.simpleMessage("মাসিক"),
@@ -425,7 +442,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "notFound": MessageLookupByLibrary.simpleMessage("কিছু পাওয়া যায়নি"),
         "note": MessageLookupByLibrary.simpleMessage("বিঃদ্রঃ"),
         "notification": MessageLookupByLibrary.simpleMessage("বিজ্ঞপ্তি"),
+        "nov": MessageLookupByLibrary.simpleMessage("নভে"),
         "oK": MessageLookupByLibrary.simpleMessage("ঠিক আছে"),
+        "oct": MessageLookupByLibrary.simpleMessage("অক্টো"),
         "off": MessageLookupByLibrary.simpleMessage("বন্ধ"),
         "on": MessageLookupByLibrary.simpleMessage("চালু"),
         "openingBalance":
@@ -661,6 +680,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendSms": MessageLookupByLibrary.simpleMessage("এসএমএস পাঠান"),
         "sendYourEmail":
             MessageLookupByLibrary.simpleMessage("আপনার ইমেল প্রেরণ করুন"),
+        "sep": MessageLookupByLibrary.simpleMessage("সেপ্টে"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "আপনার প্রোফাইল আপডেট করে আপনার ডাক্তারকে ভাল প্রভাব দিতে সাহায্য করুন"),
         "setUpNewPassword":
@@ -784,6 +804,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "viewAll": MessageLookupByLibrary.simpleMessage("সব দেখ"),
         "walkInCustomer":
             MessageLookupByLibrary.simpleMessage("ওয়াক-ইন গ্রাহক"),
+        "watches": MessageLookupByLibrary.simpleMessage("ঘড়ি"),
         "weHaveSentAConfirmationEmailTo": MessageLookupByLibrary.simpleMessage(
             "আমরা একটি নিশ্চিতকরণ ইমেল পাঠিয়েছি"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(

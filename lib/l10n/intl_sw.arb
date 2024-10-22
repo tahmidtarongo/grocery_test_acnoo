@@ -560,7 +560,31 @@
   "notActiveUser": "Mtumiaji Asiye Hai",
   "pleaseUseTheValidPurchaseCodeToUseTheApp": "Tafadhali tumia nambari halali ya ununuzi ili kutumia programu",
   "ok": "Sawa",
-  "daysLeft": "Siku Zilizobaki"
+  "daysLeft": "Siku Zilizobaki",
+
+
+  "groceryShop": "Duka la Vyakula",
+  "fashion": "Mitindo",
+  "electronics": "Electronics",
+  "computer": "Kompyuta",
+  "gadgets": "Vifaa",
+  "watches": "Saa",
+  "cloths": "Mavazi",
+  "check": "Angalia",
+  "mobilePay": "Malipo ya Simu",
+  "jan": "Jan",
+  "feb": "Feb",
+  "mar": "Mar",
+  "apr": "Apr",
+  "may": "Mei",
+  "jun": "Jun",
+  "jul": "Jul",
+  "aug": "Aug",
+  "sep": "Sep",
+  "oct": "Okt",
+  "nov": "Nov",
+  "dec": "Des"
+
 
 
 

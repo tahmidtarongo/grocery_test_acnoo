@@ -567,7 +567,29 @@
   "notActiveUser": "Aktiv İstifadəçi Deyil",
   "pleaseUseTheValidPurchaseCodeToUseTheApp": "Zəhmət olmasa, proqramdan istifadə etmək üçün düzgün alış kodunu istifadə edin",
   "oK": "Tamam",
-  "daysLeft": "Qalan Günlər"
+  "daysLeft": "Qalan Günlər",
+
+  "groceryShop": "Baqqal Dükanı",
+  "fashion": "Moda",
+  "electronics": "Elektronika",
+  "computer": "Kompüter",
+  "gadgets": "Qadcetlər",
+  "watches": "Saatlar",
+  "cloths": "Paltarlar",
+  "check": "Yoxla",
+  "mobilePay": "Mobil Ödəniş",
+  "jan": "Yan",
+  "feb": "Fev",
+  "mar": "Mar",
+  "apr": "Apr",
+  "may": "May",
+  "jun": "İyn",
+  "jul": "İyl",
+  "aug": "Avq",
+  "sep": "Sen",
+  "oct": "Okt",
+  "nov": "Noy",
+  "dec": "Dek"
 
 
 }

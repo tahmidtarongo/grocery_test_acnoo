@@ -89,11 +89,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "En ny opdatering er tilgængelig\nOpdater venligst din app"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
         "apply": MessageLookupByLibrary.simpleMessage("Anvend"),
+        "apr": MessageLookupByLibrary.simpleMessage("Apr"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("Er du sikker?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "Er du sikker på, at du vil slette denne part?"),
         "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
             "Er du sikker på, at du vil slette dette?"),
+        "aug": MessageLookupByLibrary.simpleMessage("Aug"),
         "backToHome": MessageLookupByLibrary.simpleMessage("Tilbage til start"),
         "balance": MessageLookupByLibrary.simpleMessage("Balance"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("Bangladesh"),
@@ -122,6 +124,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "categoryName": MessageLookupByLibrary.simpleMessage("Kategorinavn"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("Skift adgangskode"),
+        "check": MessageLookupByLibrary.simpleMessage("Tjek"),
         "checkEmail": MessageLookupByLibrary.simpleMessage("Tjek e-mail"),
         "chooseCustomer": MessageLookupByLibrary.simpleMessage("Vælg en kunde"),
         "chooseSupplier":
@@ -135,6 +138,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Klik for at forbinde"),
         "close": MessageLookupByLibrary.simpleMessage("Luk"),
+        "cloths": MessageLookupByLibrary.simpleMessage("Tøj"),
         "collectDue": MessageLookupByLibrary.simpleMessage("Inddriv skyldige"),
         "collectDues": MessageLookupByLibrary.simpleMessage(
             "Inddriv venligst et skyldigt beløb"),
@@ -143,6 +147,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "comingSoon": MessageLookupByLibrary.simpleMessage("Kommer snart"),
         "companyAddress":
             MessageLookupByLibrary.simpleMessage("Virksomhedsadresse"),
+        "computer": MessageLookupByLibrary.simpleMessage("Computer"),
         "confirmDelete":
             MessageLookupByLibrary.simpleMessage("Bekræft sletning"),
         "confirmPass":
@@ -194,6 +199,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "daysLeft": MessageLookupByLibrary.simpleMessage("Dage tilbage"),
         "dealer": MessageLookupByLibrary.simpleMessage("Forhandler"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage("Forhandlerpris"),
+        "dec": MessageLookupByLibrary.simpleMessage("Dec"),
         "delete": MessageLookupByLibrary.simpleMessage("Slet"),
         "deleteConfirmation":
             MessageLookupByLibrary.simpleMessage("Slet bekræftelse"),
@@ -235,6 +241,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Rediger salgsfaktura"),
         "editSocailMedia":
             MessageLookupByLibrary.simpleMessage("Rediger social medie"),
+        "electronics": MessageLookupByLibrary.simpleMessage("Elektronik"),
         "email": MessageLookupByLibrary.simpleMessage("Emailadresse"),
         "emailCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("E-mail kan ikke være tom"),
@@ -317,7 +324,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Mislykkedes med at få platformversion."),
+        "fashion": MessageLookupByLibrary.simpleMessage("Mode"),
         "fashions": MessageLookupByLibrary.simpleMessage("Mode"),
+        "feb": MessageLookupByLibrary.simpleMessage("Feb"),
         "field": MessageLookupByLibrary.simpleMessage("Felt"),
         "firstName": MessageLookupByLibrary.simpleMessage("Fornavn"),
         "folder": MessageLookupByLibrary.simpleMessage(
@@ -334,10 +343,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "fromDate": MessageLookupByLibrary.simpleMessage("Fra dato"),
         "fullName": MessageLookupByLibrary.simpleMessage("Fulde navn"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("Fuldt betalt"),
+        "gadgets": MessageLookupByLibrary.simpleMessage("Gadgets"),
         "gallery": MessageLookupByLibrary.simpleMessage("Galleri"),
         "gotEmail":
             MessageLookupByLibrary.simpleMessage("Du har modtaget en e-mail"),
         "gotIt": MessageLookupByLibrary.simpleMessage("Forstået"),
+        "groceryShop": MessageLookupByLibrary.simpleMessage("Dagligvarebutik"),
         "guest": MessageLookupByLibrary.simpleMessage("Gæst"),
         "haveAcc":
             MessageLookupByLibrary.simpleMessage("Har du allerede en konto?"),
@@ -362,6 +373,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "items": MessageLookupByLibrary.simpleMessage("Varer"),
         "itemsFor": MessageLookupByLibrary.simpleMessage("varer til"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("Vare salg"),
+        "jan": MessageLookupByLibrary.simpleMessage("Jan"),
+        "jul": MessageLookupByLibrary.simpleMessage("Jul"),
+        "jun": MessageLookupByLibrary.simpleMessage("Jun"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("Adgangskode"),
         "language": MessageLookupByLibrary.simpleMessage("Sprog"),
@@ -399,9 +413,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "lpDetails":
             MessageLookupByLibrary.simpleMessage("Tab/Profit detaljer"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("Producent"),
+        "mar": MessageLookupByLibrary.simpleMessage("Mar"),
         "masterCard": MessageLookupByLibrary.simpleMessage("MasterCard"),
+        "may": MessageLookupByLibrary.simpleMessage("Maj"),
         "messege": MessageLookupByLibrary.simpleMessage("Besked"),
         "mobile": MessageLookupByLibrary.simpleMessage("Mobil:"),
+        "mobilePay": MessageLookupByLibrary.simpleMessage("Mobilbetaling"),
         "mobilePayment": MessageLookupByLibrary.simpleMessage("Mobilbetaling"),
         "mon": MessageLookupByLibrary.simpleMessage("Man"),
         "monthly": MessageLookupByLibrary.simpleMessage("Månedligt"),
@@ -435,7 +452,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "notFound": MessageLookupByLibrary.simpleMessage("Ikke fundet"),
         "note": MessageLookupByLibrary.simpleMessage("Bemærkning"),
         "notification": MessageLookupByLibrary.simpleMessage("Meddelelse"),
+        "nov": MessageLookupByLibrary.simpleMessage("Nov"),
         "oK": MessageLookupByLibrary.simpleMessage("OK"),
+        "oct": MessageLookupByLibrary.simpleMessage("Okt"),
         "off": MessageLookupByLibrary.simpleMessage("Slukket"),
         "on": MessageLookupByLibrary.simpleMessage("Tændt"),
         "openingBalance":
@@ -669,6 +688,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendSms": MessageLookupByLibrary.simpleMessage("Send SMS"),
         "sendYourEmail":
             MessageLookupByLibrary.simpleMessage("Send din e-mail"),
+        "sep": MessageLookupByLibrary.simpleMessage("Sep"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "Opdater din profil for at få en bedre forbindelse til din læge"),
         "setUpNewPassword":
@@ -791,6 +811,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "verityEmail": MessageLookupByLibrary.simpleMessage("Bekræft e-mail"),
         "viewAll": MessageLookupByLibrary.simpleMessage("Vis alle"),
         "walkInCustomer": MessageLookupByLibrary.simpleMessage("Walk-in kunde"),
+        "watches": MessageLookupByLibrary.simpleMessage("Ure"),
         "weHaveSentAConfirmationEmailTo": MessageLookupByLibrary.simpleMessage(
             "Vi har sendt en bekræftelses-e-mail til"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(

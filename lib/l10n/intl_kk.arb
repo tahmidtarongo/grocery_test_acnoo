@@ -562,7 +562,30 @@
   "notActiveUser": "Белсенді емес пайдаланушы",
   "pleaseUseTheValidPurchaseCodeToUseTheApp": "Қолданбаны пайдалану үшін жарамды сатып алу кодын пайдаланыңыз",
   "oK": "ОК",
-  "daysLeft": "Қалған күндер"
+  "daysLeft": "Қалған күндер",
+
+  "groceryShop": "Дүкен",
+  "fashion": "Сән",
+  "electronics": "Электроника",
+  "computer": "Компьютер",
+  "gadgets": "Құрылғылар",
+  "watches": "Сағаттар",
+  "cloths": "Киім",
+  "check": "Тексеріңіз",
+  "mobilePay": "Мобильді төлем",
+  "jan": "Қаң",
+  "feb": "Ақп",
+  "mar": "Наур",
+  "apr": "Сәу",
+  "may": "Мам",
+  "jun": "Маус",
+  "jul": "Шіл",
+  "aug": "Там",
+  "sep": "Қыр",
+  "oct": "Қаз",
+  "nov": "Қара",
+  "dec": "Жел"
+
 
 
 }

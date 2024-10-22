@@ -563,7 +563,31 @@
   "notActiveUser": "Nije aktivan korisnik",
   "pleaseUseTheValidPurchaseCodeToUseTheApp": "Molimo koristite važeći kupovni kod da biste koristili aplikaciju",
   "oK": "U redu",
-  "daysLeft": "Preostali dani"
+  "daysLeft": "Preostali dani",
+
+  "groceryShop": "Prodavnica namirnica",
+  "fashion": "Moda",
+  "electronics": "Elektronika",
+  "computer": "Računari",
+  "gadgets": "Gadgeti",
+  "watches": "Satovi",
+  "cloths": "Odjeća",
+  "check": "Provjeri",
+  "mobilePay": "Mobilno plaćanje",
+  "jan": "Jan",
+  "feb": "Feb",
+  "mar": "Mar",
+  "apr": "Apr",
+  "may": "Maj",
+  "jun": "Jun",
+  "jul": "Jul",
+  "aug": "Avg",
+  "sep": "Sep",
+  "oct": "Okt",
+  "nov": "Nov",
+  "dec": "Dec"
+
+
 
 
 }

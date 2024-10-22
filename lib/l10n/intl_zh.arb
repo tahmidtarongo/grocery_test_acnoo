@@ -565,7 +565,31 @@
   "notActiveUser": "非活跃用户",
   "pleaseUseTheValidPurchaseCodeToUseTheApp": "请使用有效的购买代码以使用此应用程序",
   "oK": "好的",
-  "daysLeft": "剩余天数"
+  "daysLeft": "剩余天数",
+
+
+  "groceryShop": "杂货店",
+  "fashion": "时尚",
+  "electronics": "电子产品",
+  "computer": "电脑",
+  "gadgets": "小工具",
+  "watches": "手表",
+  "cloths": "衣物",
+  "check": "检查",
+  "mobilePay": "移动支付",
+  "jan": "一月",
+  "feb": "二月",
+  "mar": "三月",
+  "apr": "四月",
+  "may": "五月",
+  "jun": "六月",
+  "jul": "七月",
+  "aug": "八月",
+  "sep": "九月",
+  "oct": "十月",
+  "nov": "十一月",
+  "dec": "十二月"
+
 
 
 

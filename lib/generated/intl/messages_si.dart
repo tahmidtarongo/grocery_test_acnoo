@@ -93,11 +93,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Android සහ iOS යෙදුම් සහාය"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("ඇපල් වොච්"),
         "apply": MessageLookupByLibrary.simpleMessage("අයදුම් කරනවා"),
+        "apr": MessageLookupByLibrary.simpleMessage("අප්‍ර"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("ඔබට සහතිකද?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "ඔබට මෙම පාර්ටි මැකීමට සහතිකද?"),
         "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
             "ඔබ මෙය ඉවත් කිරීමට යැයි විශ්වාසද?"),
+        "aug": MessageLookupByLibrary.simpleMessage("අගෝ"),
         "backToHome": MessageLookupByLibrary.simpleMessage("මුල් පිටුවට ආපසු"),
         "balance": MessageLookupByLibrary.simpleMessage("ශේෂය"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("බංගලාදේශනය"),
@@ -127,6 +129,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "categoryName": MessageLookupByLibrary.simpleMessage("ප්‍රවර්ගයේ නම"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("මුරපදය වෙනස් කරන්න"),
+        "check": MessageLookupByLibrary.simpleMessage("පරීක්ෂා කරන්න"),
         "checkEmail":
             MessageLookupByLibrary.simpleMessage("ඊමේල් පණිවිඩයක් පටන් ගන්න"),
         "chooseCustomer":
@@ -142,6 +145,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("සම්බන්ධ කිරීමට ක්ලික් කරන්න"),
         "close": MessageLookupByLibrary.simpleMessage("වසන්න"),
+        "cloths": MessageLookupByLibrary.simpleMessage("ඉතා"),
         "collectDue": MessageLookupByLibrary.simpleMessage("ගෙවීම් එකතු කිරීම"),
         "collectDues":
             MessageLookupByLibrary.simpleMessage("කරුණාකර ගෙවීමක් එක් කරන්න"),
@@ -149,6 +153,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "color": MessageLookupByLibrary.simpleMessage("වර්ණය"),
         "comingSoon": MessageLookupByLibrary.simpleMessage("ඉක්මනින් එනවා"),
         "companyAddress": MessageLookupByLibrary.simpleMessage("කාමරයේ ලිපිනය"),
+        "computer": MessageLookupByLibrary.simpleMessage("කම්පියුටර්"),
         "confirmDelete":
             MessageLookupByLibrary.simpleMessage("මැකීම තහවුරු කරන්න"),
         "confirmPass":
@@ -201,6 +206,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "daysLeft": MessageLookupByLibrary.simpleMessage("මාසය ඉතිරි"),
         "dealer": MessageLookupByLibrary.simpleMessage("අලෙවි"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage("අලෙවි මිල"),
+        "dec": MessageLookupByLibrary.simpleMessage("දෙසැ"),
         "delete": MessageLookupByLibrary.simpleMessage("මකනවා"),
         "deleteConfirmation":
             MessageLookupByLibrary.simpleMessage("ඉවත් කිරීමේ තහවුරුකිරීම"),
@@ -238,6 +244,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "මිලදී ගැනීමේ ප්‍රවාහනය සංස්කරණය කරන්න"),
         "editSalesInvoice": MessageLookupByLibrary.simpleMessage(
             "විකුණුම් ප්‍රවාහනය සංස්කරණය කරන්න"),
+        "electronics": MessageLookupByLibrary.simpleMessage("ඉලෙක්ට්‍රොනික্স"),
         "email": MessageLookupByLibrary.simpleMessage("ඊමේල් ලිපිනය"),
         "emailCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "විද්‍යුත් තැපෑල හිස් විය නොහැක"),
@@ -323,7 +330,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "facebook": MessageLookupByLibrary.simpleMessage("ෆේස්බුක්"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "වෙබ් අඩවියේ අනුවාදය ලබා ගැනීමට අසාර්ථකයි."),
+        "fashion": MessageLookupByLibrary.simpleMessage("අනුරූපනය"),
         "fashions": MessageLookupByLibrary.simpleMessage("විදේශීය"),
+        "feb": MessageLookupByLibrary.simpleMessage("පෙබ"),
         "field": MessageLookupByLibrary.simpleMessage("මැද"),
         "firstName": MessageLookupByLibrary.simpleMessage("පළමු නම"),
         "folder": MessageLookupByLibrary.simpleMessage(
@@ -339,10 +348,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "fromDate": MessageLookupByLibrary.simpleMessage("දිනයේ සිට"),
         "fullName": MessageLookupByLibrary.simpleMessage("සම්පූර්ණ නාමය"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("සම්පූර්ණයි"),
+        "gadgets": MessageLookupByLibrary.simpleMessage("ගැජට්"),
         "gallery": MessageLookupByLibrary.simpleMessage("ගැලරිය"),
         "gotEmail": MessageLookupByLibrary.simpleMessage(
             "ඔබට එක් ඊමේල් ලබා ඇතිකිරීමක් ඇත"),
         "gotIt": MessageLookupByLibrary.simpleMessage("ඇත්තයි"),
+        "groceryShop": MessageLookupByLibrary.simpleMessage("කිරි අලෙවිසැල්"),
         "guest": MessageLookupByLibrary.simpleMessage("අමුත්තා"),
         "haveAcc": MessageLookupByLibrary.simpleMessage(
             "කාලාරයට හෝදයියෝගීන් ගිණුමක් තිබේද?"),
@@ -365,6 +376,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "items": MessageLookupByLibrary.simpleMessage("අයිතම"),
         "itemsFor": MessageLookupByLibrary.simpleMessage("අයිතම සඳහා"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("අයිතම විකිණීම්"),
+        "jan": MessageLookupByLibrary.simpleMessage("ජන"),
+        "jul": MessageLookupByLibrary.simpleMessage("ජුලි"),
+        "jun": MessageLookupByLibrary.simpleMessage("ජුනි"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("විද්‍යුත් තැපෑල"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("මුරපදය"),
         "language": MessageLookupByLibrary.simpleMessage("භාෂාව"),
@@ -401,8 +415,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "lp": MessageLookupByLibrary.simpleMessage("හිම/ලාභ"),
         "lpDetails": MessageLookupByLibrary.simpleMessage("හිම/ලාභ විස්තර"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("නිෂ්පාතිකයා"),
+        "mar": MessageLookupByLibrary.simpleMessage("මාර්"),
         "masterCard": MessageLookupByLibrary.simpleMessage("මාස්ටර් කාඩ්"),
+        "may": MessageLookupByLibrary.simpleMessage("මැයි"),
         "mobile": MessageLookupByLibrary.simpleMessage("ජංගම:"),
+        "mobilePay": MessageLookupByLibrary.simpleMessage("ජංගම ගෙවීම"),
         "mobilePayment": MessageLookupByLibrary.simpleMessage("ජාතික ගෙවීම්"),
         "mon": MessageLookupByLibrary.simpleMessage("සඳුදා"),
         "monthly": MessageLookupByLibrary.simpleMessage("මාසික"),
@@ -432,7 +449,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "notFound": MessageLookupByLibrary.simpleMessage("ගොඩනැගූ නෑ"),
         "note": MessageLookupByLibrary.simpleMessage("අවශ්‍යතාවය"),
         "notification": MessageLookupByLibrary.simpleMessage("සේවාව"),
+        "nov": MessageLookupByLibrary.simpleMessage("නොවැ"),
         "oK": MessageLookupByLibrary.simpleMessage("හරි"),
+        "oct": MessageLookupByLibrary.simpleMessage("ඔක්තෝ"),
         "off": MessageLookupByLibrary.simpleMessage("අඩු"),
         "on": MessageLookupByLibrary.simpleMessage("අඩු"),
         "openingBalance":
@@ -669,6 +688,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendSms": MessageLookupByLibrary.simpleMessage("පණිවිඩය යවනවා"),
         "sendYourEmail":
             MessageLookupByLibrary.simpleMessage("ඔබගේ විද්‍යුත් තැපෑල යවන්න"),
+        "sep": MessageLookupByLibrary.simpleMessage("සැප්"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "ඔබගේ විස්තරය යොමු කිරීමේදී ඔබගේ වෛද්‍යවරුන් සමඟ වැඩිදියුණු සංකීර්ණයක් ලබාගැනීමට"),
         "setUpNewPassword":
@@ -791,6 +811,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "viewAll": MessageLookupByLibrary.simpleMessage("සියල්ල බලන්න"),
         "walkInCustomer":
             MessageLookupByLibrary.simpleMessage("සැපයුම් ගනුදෙනුකරු"),
+        "watches": MessageLookupByLibrary.simpleMessage("නොවතා"),
         "weHaveSentAConfirmationEmailTo": MessageLookupByLibrary.simpleMessage(
             "අපි සත්‍යාපන විද්‍යුත් තැපෑලක් යවා ඇත"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(

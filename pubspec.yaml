@@ -16,7 +16,7 @@ dependencies:
 
   flutter_localizations:
     sdk: flutter
-  intl:
+  intl: any
   cupertino_icons: ^1.0.5
   google_fonts: ^6.2.1
   barcode_widget: ^2.0.2

@@ -565,6 +565,29 @@
   "notActiveUser": "משתמש לא פעיל",
   "pleaseUseTheValidPurchaseCodeToUseTheApp": "אנא השתמש בקוד הרכישה בתוקף כדי להשתמש באפליקציה",
   "oK": "אוקי",
-  "daysLeft": "ימים שנותרו"
+  "daysLeft": "ימים שנותרו",
+
+  "groceryShop": "חנות מכולת",
+  "fashion": "אופנה",
+  "electronics": "אלקטרוניקה",
+  "computer": "מחשב",
+  "gadgets": "גאדג'טים",
+  "watches": "שעונים",
+  "cloths": "בגדים",
+  "check": "בדוק",
+  "mobilePay": "תשלום נייד",
+  "jan": "ינו",
+  "feb": "פבר",
+  "mar": "מרץ",
+  "apr": "אפר",
+  "may": "מאי",
+  "jun": "יונ",
+  "jul": "יול",
+  "aug": "אוג",
+  "sep": "ספט",
+  "oct": "אוקט",
+  "nov": "נוב",
+  "dec": "דצמ"
+
 
 }

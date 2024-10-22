@@ -86,12 +86,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "ມີການປັບປຸງໃຫມ່ຢູ່\nກະລຸນາປັບປຸງແອດອັນຂອງທ່ານ"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("ນາມໄຟເປິງ"),
         "apply": MessageLookupByLibrary.simpleMessage("ນຳໃຊ້"),
+        "apr": MessageLookupByLibrary.simpleMessage("ມີນາ"),
         "areYouSure":
             MessageLookupByLibrary.simpleMessage("ເປັນຄວາມແນ່ໃຈເທົ່າໃດ?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "ເປັນຄວາມແນ່ໃຈເທົ່າໃດແລະຈະລົບບົດນີ້?"),
         "areYouSureYouWantToDeleteThis":
             MessageLookupByLibrary.simpleMessage("ທ່ານແນ່ໃຈບໍ່ທີ່ຈະລຶບນີ້"),
+        "aug": MessageLookupByLibrary.simpleMessage("ສິງຫາ"),
         "backToHome": MessageLookupByLibrary.simpleMessage("ກັບໄປໜ້າຫຼັກ"),
         "balance": MessageLookupByLibrary.simpleMessage("ຍອດ"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("ປະເທດລາວ"),
@@ -118,6 +120,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "categoryName": MessageLookupByLibrary.simpleMessage("ຊື່ປະເພດ"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("ປ່ຽນ​ລະ​ຫັດ​ຜ່ານ"),
+        "check": MessageLookupByLibrary.simpleMessage("ເຊັກ"),
         "checkEmail": MessageLookupByLibrary.simpleMessage("ກວດເບິ່ງອີເມວ"),
         "chooseCustomer": MessageLookupByLibrary.simpleMessage("ເລືອກລູກຄ້າ"),
         "chooseSupplier":
@@ -131,6 +134,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("ຄລິກເພື່ອເຊື່ອມຕໍ່"),
         "close": MessageLookupByLibrary.simpleMessage("ປິດ"),
+        "cloths": MessageLookupByLibrary.simpleMessage("ເສື້ອ"),
         "collectDue": MessageLookupByLibrary.simpleMessage("ເກັບກຳຄົບກຳນົດ"),
         "collectDues":
             MessageLookupByLibrary.simpleMessage("ກະລຸນາເກັບກຳຕາມກຳນົດ"),
@@ -138,6 +142,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "color": MessageLookupByLibrary.simpleMessage("ສີ"),
         "comingSoon": MessageLookupByLibrary.simpleMessage("ເຂົ້າໃຈທັງໝົດ"),
         "companyAddress": MessageLookupByLibrary.simpleMessage("ທີ່ຢູ່ບໍລິສັດ"),
+        "computer": MessageLookupByLibrary.simpleMessage("ຄອມພິວເຕີ"),
         "confirmDelete": MessageLookupByLibrary.simpleMessage("ຢືນຢັນການລົບ"),
         "confirmPass": MessageLookupByLibrary.simpleMessage("ຢືນ​ຢັນ​ລະ​ຫັດ"),
         "confirmPassword":
@@ -188,6 +193,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "dealer": MessageLookupByLibrary.simpleMessage("ຕົວແທນຈໍາຫນ່າຍ"),
         "dealerPrice":
             MessageLookupByLibrary.simpleMessage("ລາຄາຕົວແທນຈໍາຫນ່າຍ"),
+        "dec": MessageLookupByLibrary.simpleMessage("ທັນວາ"),
         "delete": MessageLookupByLibrary.simpleMessage("ລຶບ"),
         "deleteConfirmation":
             MessageLookupByLibrary.simpleMessage("ຢືນຢັນການລຶບ"),
@@ -227,6 +233,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ແກ້ໄຂໃບແຈ້ງໜີ້ການຂາຍ"),
         "editSocailMedia":
             MessageLookupByLibrary.simpleMessage("ແກ້ໄຂສື່ອງການສຶກສາ"),
+        "electronics": MessageLookupByLibrary.simpleMessage("ເອົາເຄື່ອງອິນໄຊ"),
         "email": MessageLookupByLibrary.simpleMessage("ທີ່​ຢູ່​ອີ​ເມວ"),
         "emailCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("ອີເມວບໍ່ເປົ່າງປ່ອນ"),
@@ -306,7 +313,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "facebook": MessageLookupByLibrary.simpleMessage("ເຟສບຸດ"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "ບໍ່ສາມາດຮັບສະຖານທີ່ເພີ່ມເຂອງເວບເຊີ່ນ"),
+        "fashion": MessageLookupByLibrary.simpleMessage("ແຟຊັນ"),
         "fashions": MessageLookupByLibrary.simpleMessage("ເສື້ອຂ່າວ"),
+        "feb": MessageLookupByLibrary.simpleMessage("ກຸມພາ"),
         "field": MessageLookupByLibrary.simpleMessage("ສາລາ"),
         "firstName": MessageLookupByLibrary.simpleMessage("ຊື່ທ່ານ"),
         "folder": MessageLookupByLibrary.simpleMessage(
@@ -322,9 +331,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "fromDate": MessageLookupByLibrary.simpleMessage("ຈາກວັນທີ"),
         "fullName": MessageLookupByLibrary.simpleMessage("ຊື່ທັງໝົດ"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("ຈ່າຍເຕັມ"),
+        "gadgets": MessageLookupByLibrary.simpleMessage("ເຄື່ອງມືຂໍ້ມູນ"),
         "gallery": MessageLookupByLibrary.simpleMessage("ຄັງຮູບ"),
         "gotEmail": MessageLookupByLibrary.simpleMessage("ທ່ານໄດ້ຮັບອີເມວ"),
         "gotIt": MessageLookupByLibrary.simpleMessage("ໄດ້"),
+        "groceryShop": MessageLookupByLibrary.simpleMessage("ຮ້ານຂາຍອາຫານ"),
         "guest": MessageLookupByLibrary.simpleMessage("ສະເໝິຍ"),
         "haveAcc": MessageLookupByLibrary.simpleMessage("ມີບັນຊີຢູ່ແລ້ວບໍ?"),
         "hintEmail": MessageLookupByLibrary.simpleMessage("ໃສ່ບັນທຶກອີເມວ"),
@@ -345,6 +356,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "items": MessageLookupByLibrary.simpleMessage("ສິນຄ້າ"),
         "itemsFor": MessageLookupByLibrary.simpleMessage("ສິນຄ້າສໍາລັບ"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("ຂອງເສີຍສະຜິດຕະພາບ"),
+        "jan": MessageLookupByLibrary.simpleMessage("ມັງກອນ"),
+        "jul": MessageLookupByLibrary.simpleMessage("ກົດພາ"),
+        "jun": MessageLookupByLibrary.simpleMessage("ມິຖຸນາ"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("ອີເມວ"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("ລະຫັດຜໍ່"),
         "language": MessageLookupByLibrary.simpleMessage("ພາສາ"),
@@ -382,9 +396,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "lpDetails":
             MessageLookupByLibrary.simpleMessage("ລາຍລະອຽດການສູນເສຍ/ກໍາໄລ"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("ຜູ້ຜະລິດ"),
+        "mar": MessageLookupByLibrary.simpleMessage("ມີນາ"),
         "masterCard": MessageLookupByLibrary.simpleMessage("ປະຕູຫຼັກ"),
+        "may": MessageLookupByLibrary.simpleMessage("ພຶດສະພາ"),
         "messege": MessageLookupByLibrary.simpleMessage("ຂໍ້ຄວາມ"),
         "mobile": MessageLookupByLibrary.simpleMessage("ມືຖື:"),
+        "mobilePay": MessageLookupByLibrary.simpleMessage("ຈ່າຍໂທລະສັບ"),
         "mobilePayment": MessageLookupByLibrary.simpleMessage("ການຈ່າຍໜ້າຈ່າຍ"),
         "mon": MessageLookupByLibrary.simpleMessage("ຈັນ"),
         "monthly": MessageLookupByLibrary.simpleMessage("ລະດູການ"),
@@ -414,7 +431,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "notFound": MessageLookupByLibrary.simpleMessage("ບໍ່ພົບ"),
         "note": MessageLookupByLibrary.simpleMessage("ຫມາຍ​ເຫດ​"),
         "notification": MessageLookupByLibrary.simpleMessage("ການແຈ້ງເຕືອນ"),
+        "nov": MessageLookupByLibrary.simpleMessage("ເດືອນສິງຫາ"),
         "oK": MessageLookupByLibrary.simpleMessage("OK"),
+        "oct": MessageLookupByLibrary.simpleMessage("ຕຸລາ"),
         "off": MessageLookupByLibrary.simpleMessage("ປິດ"),
         "on": MessageLookupByLibrary.simpleMessage("ເປີດ"),
         "openingBalance": MessageLookupByLibrary.simpleMessage("ເປີດຍອດເງິນ"),
@@ -646,6 +665,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendSms": MessageLookupByLibrary.simpleMessage("ສົ່ງຂໍ້ຄວາມ SMS"),
         "sendYourEmail":
             MessageLookupByLibrary.simpleMessage("ສົ່ງອີເມລຂອງທ່ານ"),
+        "sep": MessageLookupByLibrary.simpleMessage("ເກົາລະ"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "ອັບເດດໂປຣໄຟລ໌ຂອງທ່ານເພື່ອເຊື່ອມຕໍ່ທ່ານໝໍດ້ວຍຄວາມປະທັບໃຈທີ່ດີຂຶ້ນ"),
         "setUpNewPassword":
@@ -767,6 +787,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "verityEmail": MessageLookupByLibrary.simpleMessage("ເປັນສ່ອງອີເມວ"),
         "viewAll": MessageLookupByLibrary.simpleMessage("ເບິ່ງ​ທັງ​ຫມົດ"),
         "walkInCustomer": MessageLookupByLibrary.simpleMessage("ລູກຄ້າເຂົ້າມາ"),
+        "watches": MessageLookupByLibrary.simpleMessage("ນາມອອນ"),
         "weHaveSentAConfirmationEmailTo":
             MessageLookupByLibrary.simpleMessage("ເຮົາໄດ້ສົ່ງອີເມວຢືນຢັນໄປທີ່"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(

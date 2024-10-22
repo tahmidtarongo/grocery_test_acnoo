@@ -562,6 +562,29 @@
   "notActiveUser": "غیر فعال صارف",
   "pleaseUseTheValidPurchaseCodeToUseTheApp": "براہ کرم ایپ استعمال کرنے کے لیے درست خریداری کا کوڈ استعمال کریں",
   "oK": "ٹھیک ہے",
-  "daysLeft": "دن باقی ہیں"
+  "daysLeft": "دن باقی ہیں",
+
+  "groceryShop": "گروسری کی دکان",
+  "fashion": "فیشن",
+  "electronics": "الیکٹرونکس",
+  "computer": "کمپیوٹر",
+  "gadgets": "گیجٹس",
+  "watches": "گھڑیاں",
+  "cloths": "کپڑے",
+  "check": "چیک",
+  "mobilePay": "موبائل ادائیگی",
+  "jan": "جنوری",
+  "feb": "فروری",
+  "mar": "مارچ",
+  "apr": "اپریل",
+  "may": "مئی",
+  "jun": "جون",
+  "jul": "جولائی",
+  "aug": "اگست",
+  "sep": "ستمبر",
+  "oct": "اکتوبر",
+  "nov": "نومبر",
+  "dec": "دسمبر"
+
 
 }

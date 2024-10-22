@@ -87,11 +87,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "بروزرسانی جدید موجود است\nلطفاً نرم‌افزار خود را بروز کنید"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("اپل واچ"),
         "apply": MessageLookupByLibrary.simpleMessage("اعمال"),
+        "apr": MessageLookupByLibrary.simpleMessage("آوریل"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("آیا مطمئن هستید؟"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "آیا مطمئن هستید که می‌خواهید این طرف را حذف کنید؟"),
         "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
             "آیا مطمئنید که می‌خواهید این مورد را حذف کنید؟"),
+        "aug": MessageLookupByLibrary.simpleMessage("اوت"),
         "backToHome": MessageLookupByLibrary.simpleMessage("بازگشت به خانه"),
         "balance": MessageLookupByLibrary.simpleMessage("موجودی"),
         "bangladesh": MessageLookupByLibrary.simpleMessage("بنگلادش"),
@@ -118,6 +120,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "categoryName": MessageLookupByLibrary.simpleMessage("نام دسته"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("رمز عبور را تغییر دهید"),
+        "check": MessageLookupByLibrary.simpleMessage("بررسی"),
         "checkEmail":
             MessageLookupByLibrary.simpleMessage("ایمیل را بررسی کنید"),
         "chooseCustomer":
@@ -133,6 +136,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("برای اتصال کلیک کنید"),
         "close": MessageLookupByLibrary.simpleMessage("بستن"),
+        "cloths": MessageLookupByLibrary.simpleMessage("پوشاک"),
         "collectDue": MessageLookupByLibrary.simpleMessage("دریافت سررسید"),
         "collectDues":
             MessageLookupByLibrary.simpleMessage("لطفا سررسید جمع آوری کنید"),
@@ -141,6 +145,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "color": MessageLookupByLibrary.simpleMessage("رنگ"),
         "comingSoon": MessageLookupByLibrary.simpleMessage("به زودی"),
         "companyAddress": MessageLookupByLibrary.simpleMessage("آدرس شرکت"),
+        "computer": MessageLookupByLibrary.simpleMessage("کامپیوتر"),
         "confirmDelete": MessageLookupByLibrary.simpleMessage("تأیید حذف"),
         "confirmPass":
             MessageLookupByLibrary.simpleMessage("رمز عبور را تایید کنید"),
@@ -189,6 +194,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "daysLeft": MessageLookupByLibrary.simpleMessage("روزهای باقیمانده"),
         "dealer": MessageLookupByLibrary.simpleMessage("فروشنده - دلال"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage("قیمت نمایندگی"),
+        "dec": MessageLookupByLibrary.simpleMessage("دسامبر"),
         "delete": MessageLookupByLibrary.simpleMessage("حذف"),
         "deleteConfirmation": MessageLookupByLibrary.simpleMessage("تأیید حذف"),
         "deleting": MessageLookupByLibrary.simpleMessage("در حال حذف...."),
@@ -223,6 +229,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ویرایش فاکتور خرید"),
         "editSalesInvoice":
             MessageLookupByLibrary.simpleMessage("ویرایش فاکتور فروش"),
+        "electronics": MessageLookupByLibrary.simpleMessage("الکترونیک"),
         "email": MessageLookupByLibrary.simpleMessage("آدرس ایمیل"),
         "emailCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("ایمیل نمی‌تواند خالی باشد"),
@@ -311,7 +318,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "facebook": MessageLookupByLibrary.simpleMessage("فیسبوک"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "دریافت نسخه پلتفرم ناموفق بود."),
+        "fashion": MessageLookupByLibrary.simpleMessage("مد"),
         "fashions": MessageLookupByLibrary.simpleMessage("مد"),
+        "feb": MessageLookupByLibrary.simpleMessage("فوریه"),
         "field": MessageLookupByLibrary.simpleMessage("فیلد"),
         "firstName": MessageLookupByLibrary.simpleMessage("نام"),
         "folder": MessageLookupByLibrary.simpleMessage(
@@ -329,9 +338,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "fullName": MessageLookupByLibrary.simpleMessage("نام کامل"),
         "fullyPaid":
             MessageLookupByLibrary.simpleMessage("به طور کامل پرداخت شده"),
+        "gadgets": MessageLookupByLibrary.simpleMessage("ابزارهای الکترونیکی"),
         "gallery": MessageLookupByLibrary.simpleMessage("آلبوم عکس"),
         "gotEmail": MessageLookupByLibrary.simpleMessage("شما یک ایمیل دارید"),
         "gotIt": MessageLookupByLibrary.simpleMessage("متوجه شدم"),
+        "groceryShop":
+            MessageLookupByLibrary.simpleMessage("فروشگاه مواد غذایی"),
         "guest": MessageLookupByLibrary.simpleMessage("مهمان"),
         "haveAcc":
             MessageLookupByLibrary.simpleMessage("از قبل حساب کاربری دارید؟"),
@@ -354,6 +366,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "items": MessageLookupByLibrary.simpleMessage("کالاها"),
         "itemsFor": MessageLookupByLibrary.simpleMessage("موارد برای"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("فروش اقلام"),
+        "jan": MessageLookupByLibrary.simpleMessage("ژانویه"),
+        "jul": MessageLookupByLibrary.simpleMessage("ژوئیه"),
+        "jun": MessageLookupByLibrary.simpleMessage("ژوئن"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("ایمیل"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("رمز عبور"),
         "language": MessageLookupByLibrary.simpleMessage("زبان"),
@@ -387,8 +402,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "lp": MessageLookupByLibrary.simpleMessage("زیان / سود"),
         "lpDetails": MessageLookupByLibrary.simpleMessage("جزئیات زیان / سود"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("سازنده"),
+        "mar": MessageLookupByLibrary.simpleMessage("مارس"),
         "masterCard": MessageLookupByLibrary.simpleMessage("کارت مستر"),
+        "may": MessageLookupByLibrary.simpleMessage("می"),
         "mobile": MessageLookupByLibrary.simpleMessage("سیار:"),
+        "mobilePay": MessageLookupByLibrary.simpleMessage("پرداخت موبایل"),
         "mobilePayment": MessageLookupByLibrary.simpleMessage("پرداخت موبایل"),
         "mon": MessageLookupByLibrary.simpleMessage("دوشنبه"),
         "monthly": MessageLookupByLibrary.simpleMessage("ماهانه"),
@@ -421,7 +439,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "notFound": MessageLookupByLibrary.simpleMessage("یافت نشد"),
         "note": MessageLookupByLibrary.simpleMessage("توجه داشته باشید"),
         "notification": MessageLookupByLibrary.simpleMessage("اعلان"),
+        "nov": MessageLookupByLibrary.simpleMessage("نوامبر"),
         "oK": MessageLookupByLibrary.simpleMessage("باشه"),
+        "oct": MessageLookupByLibrary.simpleMessage("اکتبر"),
         "off": MessageLookupByLibrary.simpleMessage("خاموش"),
         "on": MessageLookupByLibrary.simpleMessage("روشن"),
         "openingBalance": MessageLookupByLibrary.simpleMessage("تعادل باز"),
@@ -649,6 +669,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendSms": MessageLookupByLibrary.simpleMessage("ارسال پیامک"),
         "sendYourEmail":
             MessageLookupByLibrary.simpleMessage("ارسال ایمیل خود"),
+        "sep": MessageLookupByLibrary.simpleMessage("سپتامبر"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "نمایه خود را به روز کنید تا پزشک خود را با برداشت بهتر ارتباط برقرار کنید"),
         "setUpNewPassword":
@@ -769,6 +790,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "verityEmail": MessageLookupByLibrary.simpleMessage("تأیید ایمیل"),
         "viewAll": MessageLookupByLibrary.simpleMessage("مشاهده همه"),
         "walkInCustomer": MessageLookupByLibrary.simpleMessage("مشتری حضوری"),
+        "watches": MessageLookupByLibrary.simpleMessage("ساعت‌ها"),
         "weHaveSentAConfirmationEmailTo":
             MessageLookupByLibrary.simpleMessage("ما ایمیل تأیید را به"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(

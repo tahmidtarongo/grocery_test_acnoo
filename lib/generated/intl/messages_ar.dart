@@ -87,11 +87,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "تحديث جديد متاح\nالرجاء تحديث تطبيقك"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("ساعة آبل"),
         "apply": MessageLookupByLibrary.simpleMessage("تطبيق"),
+        "apr": MessageLookupByLibrary.simpleMessage("أبريل"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("هل أنت متأكد؟"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "هل أنت متأكد أنك تريد حذف هذا الطرف؟"),
         "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
             "هل أنت متأكد أنك تريد حذف هذا؟"),
+        "aug": MessageLookupByLibrary.simpleMessage("أغسطس"),
         "backToHome":
             MessageLookupByLibrary.simpleMessage("العودة إلى الصفحة الرئيسية"),
         "balance": MessageLookupByLibrary.simpleMessage("الرصيد"),
@@ -121,6 +123,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "categoryName": MessageLookupByLibrary.simpleMessage("اسم التصنيف"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
+        "check": MessageLookupByLibrary.simpleMessage("تحقق"),
         "checkEmail":
             MessageLookupByLibrary.simpleMessage("تفقد البريد الإلكتروني"),
         "chooseCustomer": MessageLookupByLibrary.simpleMessage("اختر الزبون"),
@@ -132,6 +135,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "clearAll": MessageLookupByLibrary.simpleMessage("مسح الكل"),
         "clickToConnect": MessageLookupByLibrary.simpleMessage("انقر للاتصال"),
         "close": MessageLookupByLibrary.simpleMessage("يغلق"),
+        "cloths": MessageLookupByLibrary.simpleMessage("الملابس"),
         "collectDue": MessageLookupByLibrary.simpleMessage("تحصيل المستحق"),
         "collectDues":
             MessageLookupByLibrary.simpleMessage("يرجى جمع المبلغ المستحق"),
@@ -139,6 +143,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "color": MessageLookupByLibrary.simpleMessage("اللون"),
         "comingSoon": MessageLookupByLibrary.simpleMessage("قريبًا"),
         "companyAddress": MessageLookupByLibrary.simpleMessage("عنوان الشركة"),
+        "computer": MessageLookupByLibrary.simpleMessage("الكمبيوتر"),
         "confirmDelete": MessageLookupByLibrary.simpleMessage("تأكيد الحذف"),
         "confirmPass":
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
@@ -189,6 +194,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "daysLeft": MessageLookupByLibrary.simpleMessage("الأيام المتبقية"),
         "dealer": MessageLookupByLibrary.simpleMessage("تاجر"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage("سعر التاجر"),
+        "dec": MessageLookupByLibrary.simpleMessage("ديسمبر"),
         "delete": MessageLookupByLibrary.simpleMessage("حذف"),
         "deleteConfirmation":
             MessageLookupByLibrary.simpleMessage("تأكيد الحذف"),
@@ -227,6 +233,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تحرير فاتورة المبيعات"),
         "editSocailMedia": MessageLookupByLibrary.simpleMessage(
             "تعديل وسائل التواصل الاجتماعي"),
+        "electronics": MessageLookupByLibrary.simpleMessage("الإلكترونيات"),
         "email":
             MessageLookupByLibrary.simpleMessage("عنوان البريد الإلكتروني"),
         "emailCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
@@ -306,7 +313,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "facebook": MessageLookupByLibrary.simpleMessage("فيسبوك"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "فشل في الحصول على إصدار المنصة."),
+        "fashion": MessageLookupByLibrary.simpleMessage("الموضة"),
         "fashions": MessageLookupByLibrary.simpleMessage("الأزياء"),
+        "feb": MessageLookupByLibrary.simpleMessage("فبراير"),
         "field": MessageLookupByLibrary.simpleMessage("الحقل"),
         "firstName": MessageLookupByLibrary.simpleMessage("الاسم الأول"),
         "folder": MessageLookupByLibrary.simpleMessage(
@@ -323,9 +332,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "fromDate": MessageLookupByLibrary.simpleMessage("من التاريخ"),
         "fullName": MessageLookupByLibrary.simpleMessage("الاسم الكامل"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("مدفوعة بالكامل"),
+        "gadgets": MessageLookupByLibrary.simpleMessage("الأدوات"),
         "gallery": MessageLookupByLibrary.simpleMessage("صالة عرض"),
         "gotEmail": MessageLookupByLibrary.simpleMessage("لديك بريد إلكتروني"),
         "gotIt": MessageLookupByLibrary.simpleMessage("فهمت"),
+        "groceryShop": MessageLookupByLibrary.simpleMessage("متجر البقالة"),
         "guest": MessageLookupByLibrary.simpleMessage("ضيف"),
         "haveAcc": MessageLookupByLibrary.simpleMessage("هل لديك حساب؟"),
         "hintEmail": MessageLookupByLibrary.simpleMessage(
@@ -348,6 +359,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "items": MessageLookupByLibrary.simpleMessage("عناصر"),
         "itemsFor": MessageLookupByLibrary.simpleMessage("عناصر لـ"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("مبيعات العناصر"),
+        "jan": MessageLookupByLibrary.simpleMessage("يناير"),
+        "jul": MessageLookupByLibrary.simpleMessage("يوليو"),
+        "jun": MessageLookupByLibrary.simpleMessage("يونيو"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "language": MessageLookupByLibrary.simpleMessage("لغة"),
@@ -385,9 +399,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "lpDetails":
             MessageLookupByLibrary.simpleMessage("تفاصيل الخسارة / الربح"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("الصانع"),
+        "mar": MessageLookupByLibrary.simpleMessage("مارس"),
         "masterCard": MessageLookupByLibrary.simpleMessage("بطاقة ماستركارد"),
+        "may": MessageLookupByLibrary.simpleMessage("مايو"),
         "messege": MessageLookupByLibrary.simpleMessage("رسالة"),
         "mobile": MessageLookupByLibrary.simpleMessage("متحرك:"),
+        "mobilePay": MessageLookupByLibrary.simpleMessage("الدفع عبر الجوال"),
         "mobilePayment":
             MessageLookupByLibrary.simpleMessage("دفع عبر الهاتف المحمول"),
         "mon": MessageLookupByLibrary.simpleMessage("الإثنين"),
@@ -419,7 +436,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "notFound": MessageLookupByLibrary.simpleMessage("غير موجود"),
         "note": MessageLookupByLibrary.simpleMessage("ملحوظة"),
         "notification": MessageLookupByLibrary.simpleMessage("إشعار"),
+        "nov": MessageLookupByLibrary.simpleMessage("نوفمبر"),
         "oK": MessageLookupByLibrary.simpleMessage("حسنًا"),
+        "oct": MessageLookupByLibrary.simpleMessage("أكتوبر"),
         "off": MessageLookupByLibrary.simpleMessage("إيقاف"),
         "on": MessageLookupByLibrary.simpleMessage("تشغيل"),
         "openingBalance":
@@ -650,6 +669,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendSms": MessageLookupByLibrary.simpleMessage("إرسال رسالة نصية"),
         "sendYourEmail":
             MessageLookupByLibrary.simpleMessage("أرسل بريدك الإلكتروني"),
+        "sep": MessageLookupByLibrary.simpleMessage("سبتمبر"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "قم بتحديث ملف التعريف الخاص بك لتوصيل طبيبك بانطباع أفضل"),
         "setUpNewPassword":
@@ -770,6 +790,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تحقق من البريد الإلكتروني"),
         "viewAll": MessageLookupByLibrary.simpleMessage("مشاهدة الكل"),
         "walkInCustomer": MessageLookupByLibrary.simpleMessage("عميل عابر"),
+        "watches": MessageLookupByLibrary.simpleMessage("الساعات"),
         "weHaveSentAConfirmationEmailTo":
             MessageLookupByLibrary.simpleMessage("لقد أرسلنا رسالة تأكيد إلى"),
         "weSentAnOTPInYourPhoneNumber":

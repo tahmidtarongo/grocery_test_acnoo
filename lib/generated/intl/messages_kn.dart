@@ -90,12 +90,14 @@ class MessageLookup extends MessageLookupByLibrary {
             "ಹೊಸ ಅಪ್‌ಡೇಟ್ ಲಭ್ಯವಿದೆ\nದಯವಿಟ್ಟು ನಿಮ್ಮ ಆಪ್‌ಡೇಟ್ ಮಾಡಿ"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("ಆಪಲ್ ವಾಚ್"),
         "apply": MessageLookupByLibrary.simpleMessage("ಅನ್ವಯಿಸು"),
+        "apr": MessageLookupByLibrary.simpleMessage("ಎಪ್ರಿಲ್"),
         "areYouSure":
             MessageLookupByLibrary.simpleMessage("ನೀವು ಖಚಿತವಾಗಿದ್ದೀರಾ?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "ನೀವು ಈ ಪಕ್ಷಿಯನ್ನು ಅಳಿಸಲು ಖಚಿತವಾಗಿದ್ದೀರಾ?"),
         "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
             "ನೀವು ಇದನ್ನು ಅಳಿಸಲು ಖಚಿತವಾಗಿ ಇರುತ್ತೀರಾ"),
+        "aug": MessageLookupByLibrary.simpleMessage("ಆಗಸ್ಟ್"),
         "backToHome":
             MessageLookupByLibrary.simpleMessage("ಮುಂಗಡೆಗೆ ಹಿಂತಿರುಗಿ"),
         "balance": MessageLookupByLibrary.simpleMessage("ಬ್ಯಾಲೆನ್ಸ್"),
@@ -125,6 +127,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "categoryName": MessageLookupByLibrary.simpleMessage("ವರ್ಗದ ಹೆಸರು"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("ಪಾಸ್‌ವರ್ಡ್ ಬದಲಿಸಿ"),
+        "check": MessageLookupByLibrary.simpleMessage("ಚೆಕ್"),
         "checkEmail": MessageLookupByLibrary.simpleMessage("ಇಮೇಲ್ ತನಿಖೆಮಾಡಿ"),
         "chooseCustomer":
             MessageLookupByLibrary.simpleMessage("ಗ್ರಾಹಕನ್ನು ಆಯ್ಕೆಮಾಡಿ"),
@@ -140,6 +143,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("ಸಂಪರ್ಕಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ"),
         "close": MessageLookupByLibrary.simpleMessage("ಮುಚ್ಚಿ"),
+        "cloths": MessageLookupByLibrary.simpleMessage("ಕಟ್ಟಿಂಗ್‌"),
         "collectDue":
             MessageLookupByLibrary.simpleMessage("ಬಾಕಿಯನ್ನು ಸಂಗ್ರಹಿಸಿ"),
         "collectDues": MessageLookupByLibrary.simpleMessage(
@@ -148,6 +152,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "color": MessageLookupByLibrary.simpleMessage("ಬಣ್ಣ"),
         "comingSoon": MessageLookupByLibrary.simpleMessage("ಮೆಲುಕಾಣುತ್ತಿದೆ"),
         "companyAddress": MessageLookupByLibrary.simpleMessage("ಕಂಪನಿ ವಿಳಾಸ"),
+        "computer": MessageLookupByLibrary.simpleMessage("ಕಂಪ್ಯೂಟರ್"),
         "confirmDelete":
             MessageLookupByLibrary.simpleMessage("ಅಳಿಸುವಿಕೆಯನ್ನು ಖಚಿತಪಡಿಸಿ"),
         "confirmPass":
@@ -200,6 +205,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "daysLeft": MessageLookupByLibrary.simpleMessage("ಮತ್ತು ದಿನಗಳು"),
         "dealer": MessageLookupByLibrary.simpleMessage("ಡೀಲರ್"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage("ಡಿಲರ್ ಬೆಲೆ"),
+        "dec": MessageLookupByLibrary.simpleMessage("ಡಿಸೆಂಬರ್"),
         "delete": MessageLookupByLibrary.simpleMessage("ಅಳಿಸಿ"),
         "deleteConfirmation":
             MessageLookupByLibrary.simpleMessage("ಅಳಿಸುವ ದೃಢೀಕರಣ"),
@@ -237,6 +243,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ಮಾರಾಟ ಚಲಾವಣೆಯನ್ನು ಸಂಪಾದಿಸಿ"),
         "editSocailMedia": MessageLookupByLibrary.simpleMessage(
             "ಸಾಮಾಜಿಕ ಮಾಧ್ಯಮಗಳನ್ನು ಸಂಪಾದಿಸಿ"),
+        "electronics": MessageLookupByLibrary.simpleMessage("ಇಲೆಕ್ಟ್ರಾನಿಕ್ಸ್"),
         "email": MessageLookupByLibrary.simpleMessage("ಇಮೇಲ್ ವಿಳಾಸ"),
         "emailCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("ಇಮೇಲ್ ಖಾಲಿಯಾಗಿರಬಹುದು"),
@@ -319,7 +326,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "facebook": MessageLookupByLibrary.simpleMessage("ಫೇಸ್ಬುಕ್"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ಆವೃತ್ತಿಯನ್ನು ಪಡೆಯಲು ವಿಫಲವಾಯಿತು."),
+        "fashion": MessageLookupByLibrary.simpleMessage("ಫ್ಯಾಷನ್"),
         "fashions": MessageLookupByLibrary.simpleMessage("ಫ್ಯಾಷನ್"),
+        "feb": MessageLookupByLibrary.simpleMessage("ಫೆಬ್ರವರಿ"),
         "field": MessageLookupByLibrary.simpleMessage("ಹೆತ್ತುವ"),
         "firstName": MessageLookupByLibrary.simpleMessage("ಮೊದಲ ಹೆಸರು"),
         "folder": MessageLookupByLibrary.simpleMessage(
@@ -336,9 +345,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "fromDate": MessageLookupByLibrary.simpleMessage("ದಿನಾಂಕ ಯಿಂದ"),
         "fullName": MessageLookupByLibrary.simpleMessage("ಪೂರ್ಣ ಹೆಸರು"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("ಸಂಪೂರ್ಣ ಪಾವತಿ"),
+        "gadgets": MessageLookupByLibrary.simpleMessage("ಗ್ಯಾಜೆಟ್‌ಗಳು"),
         "gallery": MessageLookupByLibrary.simpleMessage("ಗ್ಯಾಲರಿ"),
         "gotEmail": MessageLookupByLibrary.simpleMessage("ನಿಮಗೆ ಇಮೇಲ್ ಬಂದಿದೆ"),
         "gotIt": MessageLookupByLibrary.simpleMessage("ಸಿಕ್ಕಿತು"),
+        "groceryShop":
+            MessageLookupByLibrary.simpleMessage("ಕಡಲೆಕಾಯಿಗಳು ಅಂಗಡಿ"),
         "guest": MessageLookupByLibrary.simpleMessage("ಅತಿಥಿ"),
         "haveAcc":
             MessageLookupByLibrary.simpleMessage("ಈಗಾಗಲೇ ಖಾತೆ ಹೊಂದಿದ್ದೀರಿಯಾ?"),
@@ -363,6 +375,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "items": MessageLookupByLibrary.simpleMessage("ನಿವೃತ್ತಿಗಳು"),
         "itemsFor": MessageLookupByLibrary.simpleMessage("ನಿವೃತ್ತಿಗಳು"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("ಐಟಮ್‌ಗಳ ಮಾರಾಟ"),
+        "jan": MessageLookupByLibrary.simpleMessage("ಜಾನವರಿ"),
+        "jul": MessageLookupByLibrary.simpleMessage("ಜುಲೈ"),
+        "jun": MessageLookupByLibrary.simpleMessage("ಜೂನ್"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("ಇಮೇಲ್"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("ಪಾಸ್ವರ್ಡ್"),
         "language": MessageLookupByLibrary.simpleMessage("ಭಾಷೆ"),
@@ -399,9 +414,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "lp": MessageLookupByLibrary.simpleMessage("ನಷ್ಟ/ಲಾಭ"),
         "lpDetails": MessageLookupByLibrary.simpleMessage("ನಷ್ಟ/ಲಾಭ ವಿವರಗಳು"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("ನಿರ್ಮಾತಾ"),
+        "mar": MessageLookupByLibrary.simpleMessage("ಮಾರ್ಚ್"),
         "masterCard": MessageLookupByLibrary.simpleMessage("ಮಾಸ್ಟರ್ ಕಾರ್ಡ್"),
+        "may": MessageLookupByLibrary.simpleMessage("ಮೇ"),
         "messege": MessageLookupByLibrary.simpleMessage("ಸಂದೇಶ"),
         "mobile": MessageLookupByLibrary.simpleMessage("ಮೊಬೈಲ್:"),
+        "mobilePay": MessageLookupByLibrary.simpleMessage("ಮೊಬೈಲ್ ಪೇ"),
         "mobilePayment": MessageLookupByLibrary.simpleMessage("ಮೊಬೈಲ್ ಪೇಮೆಂಟ್"),
         "mon": MessageLookupByLibrary.simpleMessage("ಸೋಮವಾರ"),
         "monthly": MessageLookupByLibrary.simpleMessage("ತಿಂಗಳಿಗೆ"),
@@ -434,7 +452,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "notFound": MessageLookupByLibrary.simpleMessage("ಅಳಿದ"),
         "note": MessageLookupByLibrary.simpleMessage("ಕೆಲಸ"),
         "notification": MessageLookupByLibrary.simpleMessage("ಅಧಿಸೂಚನೆ"),
+        "nov": MessageLookupByLibrary.simpleMessage("ನವೆಂಬರ್"),
         "oK": MessageLookupByLibrary.simpleMessage("ಓಕೆ"),
+        "oct": MessageLookupByLibrary.simpleMessage("ಅಕ್ಟೋಬರ್"),
         "off": MessageLookupByLibrary.simpleMessage("ಆಫ್"),
         "on": MessageLookupByLibrary.simpleMessage("ಆನ್"),
         "openingBalance": MessageLookupByLibrary.simpleMessage("ಆರಂಭಿಕ ಜಮಾ"),
@@ -669,6 +689,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendSms": MessageLookupByLibrary.simpleMessage("ಎಸ್‌ಎಂಎಸ್ ಕಳುಹಿಸಿ"),
         "sendYourEmail":
             MessageLookupByLibrary.simpleMessage("ನಿಮ್ಮ ಇಮೇಲ್ ಅನ್ನು ಕಳುಹಿಸಿ"),
+        "sep": MessageLookupByLibrary.simpleMessage("ಸೆಪ್ಟೆಂಬರ್"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "ನಿಮ್ಮ ಪ್ರೊಫೈಲ್ ನನ್ನೆಯ ಡಾಕ್ಟರ್ ನೊಂದಿಗೆ ಹೆಚ್ಚು ಪ್ರಭಾವ ಬೆಳೆಸಲು ನವೀಕರಿಸಿ"),
         "setUpNewPassword":
@@ -792,6 +813,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "viewAll": MessageLookupByLibrary.simpleMessage("ಎಲ್ಲವನ್ನೂ ವೀಕ್ಷಿಸಿ"),
         "walkInCustomer":
             MessageLookupByLibrary.simpleMessage("ವಾಕ್ಇನ್ ಗ್ರಾಹಕ"),
+        "watches": MessageLookupByLibrary.simpleMessage("ಗಡಿಯಾರಗಳು"),
         "weHaveSentAConfirmationEmailTo": MessageLookupByLibrary.simpleMessage(
             "ನಾವು ದೃಢೀಕರಣ ಇಮೇಲ್ ಅನ್ನು ಕಳುಹಿಸಿದ್ದೇವೆ"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(

@@ -90,11 +90,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "Доступно новое обновление\nПожалуйста, обновите ваше приложение"),
         "appleWatch": MessageLookupByLibrary.simpleMessage("Apple Watch"),
         "apply": MessageLookupByLibrary.simpleMessage("Применить"),
+        "apr": MessageLookupByLibrary.simpleMessage("Апр"),
         "areYouSure": MessageLookupByLibrary.simpleMessage("Вы уверены?"),
         "areYouSureYouWant": MessageLookupByLibrary.simpleMessage(
             "Вы уверены, что хотите удалить этого пользователя?"),
         "areYouSureYouWantToDeleteThis": MessageLookupByLibrary.simpleMessage(
             "Вы уверены, что хотите удалить это?"),
+        "aug": MessageLookupByLibrary.simpleMessage("Авг"),
         "backToHome":
             MessageLookupByLibrary.simpleMessage("Вернуться на главную"),
         "balance": MessageLookupByLibrary.simpleMessage("Баланс"),
@@ -125,6 +127,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Название категории"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("Изменить пароль"),
+        "check": MessageLookupByLibrary.simpleMessage("Проверить"),
         "checkEmail":
             MessageLookupByLibrary.simpleMessage("Проверить электронную почту"),
         "chooseCustomer":
@@ -140,6 +143,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "clickToConnect":
             MessageLookupByLibrary.simpleMessage("Нажмите, чтобы подключиться"),
         "close": MessageLookupByLibrary.simpleMessage("Закрывать"),
+        "cloths": MessageLookupByLibrary.simpleMessage("Одежда"),
         "collectDue": MessageLookupByLibrary.simpleMessage("Собрать из-за"),
         "collectDues":
             MessageLookupByLibrary.simpleMessage("Пожалуйста, соберите взнос"),
@@ -148,6 +152,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "comingSoon": MessageLookupByLibrary.simpleMessage("Скоро"),
         "companyAddress":
             MessageLookupByLibrary.simpleMessage("Адрес компании"),
+        "computer": MessageLookupByLibrary.simpleMessage("Компьютер"),
         "confirmDelete":
             MessageLookupByLibrary.simpleMessage("Подтвердите удаление"),
         "confirmPass":
@@ -201,6 +206,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "daysLeft": MessageLookupByLibrary.simpleMessage("Осталось дней"),
         "dealer": MessageLookupByLibrary.simpleMessage("Дилер"),
         "dealerPrice": MessageLookupByLibrary.simpleMessage("Дилерская цена"),
+        "dec": MessageLookupByLibrary.simpleMessage("Дек"),
         "delete": MessageLookupByLibrary.simpleMessage("Удалить"),
         "deleteConfirmation":
             MessageLookupByLibrary.simpleMessage("Подтверждение удаления"),
@@ -241,6 +247,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Изменить счет продажи"),
         "editSocailMedia": MessageLookupByLibrary.simpleMessage(
             "Редактировать социальные медиа"),
+        "electronics": MessageLookupByLibrary.simpleMessage("Электроника"),
         "email":
             MessageLookupByLibrary.simpleMessage("Адрес электронной почты"),
         "emailCannotBeEmpty":
@@ -327,7 +334,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Не удалось получить версию платформы."),
+        "fashion": MessageLookupByLibrary.simpleMessage("Мода"),
         "fashions": MessageLookupByLibrary.simpleMessage("Мода"),
+        "feb": MessageLookupByLibrary.simpleMessage("Фев"),
         "field": MessageLookupByLibrary.simpleMessage("Поле"),
         "firstName": MessageLookupByLibrary.simpleMessage("Имя"),
         "folder": MessageLookupByLibrary.simpleMessage(
@@ -343,10 +352,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "fromDate": MessageLookupByLibrary.simpleMessage("С даты"),
         "fullName": MessageLookupByLibrary.simpleMessage("Полное имя"),
         "fullyPaid": MessageLookupByLibrary.simpleMessage("Полностью оплачено"),
+        "gadgets": MessageLookupByLibrary.simpleMessage("Гаджеты"),
         "gallery": MessageLookupByLibrary.simpleMessage("Галерея"),
         "gotEmail": MessageLookupByLibrary.simpleMessage(
             "Вы получили электронное письмо"),
         "gotIt": MessageLookupByLibrary.simpleMessage("Понял"),
+        "groceryShop":
+            MessageLookupByLibrary.simpleMessage("Продуктовый магазин"),
         "guest": MessageLookupByLibrary.simpleMessage("Гость"),
         "haveAcc":
             MessageLookupByLibrary.simpleMessage("У вас уже есть аккаунт?"),
@@ -370,6 +382,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "items": MessageLookupByLibrary.simpleMessage("Товары"),
         "itemsFor": MessageLookupByLibrary.simpleMessage("Товары для"),
         "itemsSales": MessageLookupByLibrary.simpleMessage("Продажа товаров"),
+        "jan": MessageLookupByLibrary.simpleMessage("Янв"),
+        "jul": MessageLookupByLibrary.simpleMessage("Июл"),
+        "jun": MessageLookupByLibrary.simpleMessage("Июн"),
         "lableEmail": MessageLookupByLibrary.simpleMessage("Email"),
         "lablePassword": MessageLookupByLibrary.simpleMessage("Пароль"),
         "language": MessageLookupByLibrary.simpleMessage("язык"),
@@ -407,9 +422,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "lpDetails": MessageLookupByLibrary.simpleMessage(
             "Информация об убытках/прибылях"),
         "manufacturer": MessageLookupByLibrary.simpleMessage("Производитель"),
+        "mar": MessageLookupByLibrary.simpleMessage("Мар"),
         "masterCard": MessageLookupByLibrary.simpleMessage("MasterCard"),
+        "may": MessageLookupByLibrary.simpleMessage("Май"),
         "messege": MessageLookupByLibrary.simpleMessage("Сообщение"),
         "mobile": MessageLookupByLibrary.simpleMessage("Мобильный:"),
+        "mobilePay": MessageLookupByLibrary.simpleMessage("Мобильная оплата"),
         "mobilePayment":
             MessageLookupByLibrary.simpleMessage("Мобильный платеж"),
         "mon": MessageLookupByLibrary.simpleMessage("Пн"),
@@ -441,7 +459,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "notFound": MessageLookupByLibrary.simpleMessage("Не найдено"),
         "note": MessageLookupByLibrary.simpleMessage("Примечание"),
         "notification": MessageLookupByLibrary.simpleMessage("Уведомление"),
+        "nov": MessageLookupByLibrary.simpleMessage("Ноя"),
         "oK": MessageLookupByLibrary.simpleMessage("ОК"),
+        "oct": MessageLookupByLibrary.simpleMessage("Окт"),
         "off": MessageLookupByLibrary.simpleMessage("Выключено"),
         "on": MessageLookupByLibrary.simpleMessage("Включено"),
         "openingBalance":
@@ -687,6 +707,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "sendSms": MessageLookupByLibrary.simpleMessage("Отправить SMS"),
         "sendYourEmail":
             MessageLookupByLibrary.simpleMessage("Отправить ваш email"),
+        "sep": MessageLookupByLibrary.simpleMessage("Сен"),
         "setUpDesc": MessageLookupByLibrary.simpleMessage(
             "Обновите свой профиль, чтобы связать своего врача с лучшим впечатлением"),
         "setUpNewPassword":
@@ -812,6 +833,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "viewAll": MessageLookupByLibrary.simpleMessage("Посмотреть все"),
         "walkInCustomer":
             MessageLookupByLibrary.simpleMessage("Клиент без записи"),
+        "watches": MessageLookupByLibrary.simpleMessage("Часы"),
         "weHaveSentAConfirmationEmailTo": MessageLookupByLibrary.simpleMessage(
             "Мы отправили подтверждающее письмо на"),
         "weSentAnOTPInYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
