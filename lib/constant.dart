@@ -89,6 +89,58 @@ bool newSelect = false;
 
 ///--------------------subscription dilog-----------------------
 
+
+///__________Language________________________________
+Map<String, String> languageMap = {
+  'English': 'en',
+  'Chinese': 'zh',
+  'Hindi': 'hi',
+  'French': 'fr',
+  'Spanish': 'es',
+  'Japanese': 'ja',
+  'Arabic': 'ar',
+  'Romanian': 'ro',
+  'Italian': 'it',
+  'German': 'de',
+  'Vietnamese': 'vi',
+  'Русский': 'ru',
+  'Indonesian': 'id',
+  'Korean': 'ko',
+  'Serbian': 'sr',
+  'Polish': 'pl',
+  'Persian': 'fa',
+  'Ukrainian': 'uk',
+  'Malay': 'ms',
+  'Lao': 'lo',
+  'Turkish': 'tr',
+  'Portuguese': 'pt',
+  'Hungarian': 'hu',
+  'Hebrew': 'he',
+  'Thai': 'th',
+  'Dutch': 'nl',
+  'Finland': 'fi',
+  'Greek': 'el',
+  'Khmer': 'km',
+  'Bosnian': 'bs',
+  'Bangla': 'bn',
+  'Swahili': 'sw',
+  'Slovak': 'sk',
+  'Sinhala': 'si',
+  'Urdu': 'ur',
+  'Kannada': 'kn',
+  'Marathi': 'mr',
+  'Tamil': 'ta',
+  'Afrikans': 'af',
+  'Czech': 'cs',
+  'Swedish': 'sv',
+  'Albanian': 'sq',
+  'Danish': 'da',
+  'Azerbaijani': 'az',
+  'Kazakh': 'kk',
+  'Crotian': 'hr',
+  'Nepali': 'ne',
+  'Burmese': 'my',
+};
 //______________________________________________Back_Button__________________
 class Back extends StatelessWidget {
   final VoidCallback onPressed;

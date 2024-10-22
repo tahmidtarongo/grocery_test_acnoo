@@ -160,7 +160,7 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                                               crossAxisAlignment: CrossAxisAlignment.center,
                                               children: [
                                                 Text(
-                                                  totalProfit.toString(),
+                                                  '$currency $totalProfit',
                                                   style: const TextStyle(
                                                     color: Colors.green,
                                                     fontSize: 20,
@@ -186,7 +186,7 @@ class _LossProfitScreenState extends State<LossProfitScreen> {
                                               crossAxisAlignment: CrossAxisAlignment.center,
                                               children: [
                                                 Text(
-                                                  totalLoss.toString(),
+                                                '$currency $totalLoss',
                                                   style: const TextStyle(
                                                     color: Colors.orange,
                                                     fontSize: 20,

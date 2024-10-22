@@ -38,7 +38,7 @@ class UserRoleRepo {
     required String name,
     required String email,
     // required String email,
-    // required String password,
+    required String password,
     // required String passwordConfirmation,
     required Permission permission,
   }) async {
@@ -50,9 +50,7 @@ class UserRoleRepo {
     request.fields.addAll({
       "name": name,
       "email": email,
-      // "email": email,
-      // "password": password,
-      // "password_confirmation": passwordConfirmation,
+      "password": password,
     });
     request.fields.addAll(permission.toJson());
 
@@ -115,6 +113,7 @@ class UserRoleRepo {
     required BuildContext context,
     required String userName,
     required String email,
+    String? password,
     required Permission permission,
   }) async {
     final uri = Uri.parse('${APIConfig.url}/users/$userId');
@@ -128,6 +127,11 @@ class UserRoleRepo {
       "name": userName,
       "email": email,
     });
+    if (password != null) {
+      request.fields.addAll({
+        "password": password,
+      });
+    }
     request.fields.addAll(permission.toJson());
 
     final response = await request.send();

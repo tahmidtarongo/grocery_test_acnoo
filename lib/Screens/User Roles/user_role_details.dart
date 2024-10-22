@@ -49,6 +49,7 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
   TextEditingController phoneController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController titleController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
   bool isMailSent = false;
 
   @override
@@ -84,7 +85,7 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
           backgroundColor: Colors.white,
           title: Text(
             lang.S.of(context).userRoleDetails,
-           // 'User Role Details',
+            // 'User Role Details',
             style: GoogleFonts.poppins(
               color: Colors.black,
             ),
@@ -110,10 +111,9 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
-                                   Text(
-                                     lang.S.of(context).doYouWantToDeleteTheUser,
-                                       //'Do you want to delete the user?',
-                                       style: const TextStyle(fontSize: 20)),
+                                  Text(lang.S.of(context).doYouWantToDeleteTheUser,
+                                      //'Do you want to delete the user?',
+                                      style: const TextStyle(fontSize: 20)),
                                   const SizedBox(height: 20),
                                   Row(
                                     children: [
@@ -134,8 +134,9 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                             buttontext: lang.S.of(context).delete,
                                             buttonDecoration: kButtonDecoration.copyWith(color: Colors.red),
                                             onPressed: (() async {
-                                              EasyLoading.show(status: lang.S.of(context).loading,
-                                              //'loading..'
+                                              EasyLoading.show(
+                                                status: lang.S.of(context).loading,
+                                                //'loading..'
                                               );
                                               UserRoleRepo repo = UserRoleRepo();
                                               await repo.deleteUser(id: widget.userRoleModel.id.toString(), context: context, ref: ref);
@@ -219,7 +220,7 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                     });
                                   }
                                 },
-                                title:  Text(
+                                title: Text(
                                   lang.S.of(context).all,
                                   //'All',
                                   style: TextStyle(fontSize: 14),
@@ -241,7 +242,7 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                     profileEditPermission = value!;
                                   });
                                 },
-                                title:  Text(
+                                title: Text(
                                   lang.S.of(context).profileEdit,
                                   //'Profile Edit',
                                   style: const TextStyle(fontSize: 14),
@@ -258,7 +259,7 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                     salePermission = value!;
                                   });
                                 },
-                                title:  Text(
+                                title: Text(
                                   lang.S.of(context).sales,
                                   //'Sales',
                                   style: const TextStyle(fontSize: 14),
@@ -279,7 +280,7 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                     partiesPermission = value!;
                                   });
                                 },
-                                title:  Text(
+                                title: Text(
                                   lang.S.of(context).parties,
                                   //'Parties',
                                   style: const TextStyle(fontSize: 14),
@@ -294,9 +295,9 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                     purchasePermission = value!;
                                   });
                                 },
-                                title:  Text(
+                                title: Text(
                                   lang.S.of(context).purchase,
-                                 // 'Purchase',
+                                  // 'Purchase',
                                   style: const TextStyle(fontSize: 14),
                                 ),
                               ),
@@ -315,9 +316,9 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                     productPermission = value!;
                                   });
                                 },
-                                title:  Text(
+                                title: Text(
                                   lang.S.of(context).products,
-                                 // 'Products',
+                                  // 'Products',
                                   style: const TextStyle(fontSize: 14),
                                 ),
                               ),
@@ -330,7 +331,7 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                     dueListPermission = value!;
                                   });
                                 },
-                                title:  Text(
+                                title: Text(
                                   lang.S.of(context).dueList,
                                   //'Due List',
                                   style: const TextStyle(fontSize: 14),
@@ -351,7 +352,7 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                     stockPermission = value!;
                                   });
                                 },
-                                title:  Text(
+                                title: Text(
                                   lang.S.of(context).stock,
                                   //'Stock',
                                   style: const TextStyle(fontSize: 14),
@@ -366,7 +367,7 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                     reportsPermission = value!;
                                   });
                                 },
-                                title:  Text(
+                                title: Text(
                                   lang.S.of(context).reports,
                                   //'Reports',
                                   style: const TextStyle(fontSize: 14),
@@ -387,7 +388,7 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                     salesListPermission = value!;
                                   });
                                 },
-                                title:  Text(
+                                title: Text(
                                   lang.S.of(context).salesList,
                                   //'Sales List',
                                   style: const TextStyle(fontSize: 14),
@@ -404,9 +405,9 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                     purchaseListPermission = value!;
                                   });
                                 },
-                                title:  Text(
+                                title: Text(
                                   lang.S.of(context).purchaseList,
-                                 // 'Purchase List',
+                                  // 'Purchase List',
                                   style: const TextStyle(fontSize: 14),
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
@@ -427,7 +428,7 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                     lossProfitPermission = value!;
                                   });
                                 },
-                                title:  Text(
+                                title: Text(
                                   lang.S.of(context).lossProfit,
                                   //'Loss Profit',
                                   style: const TextStyle(fontSize: 14),
@@ -442,7 +443,7 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                     addExpensePermission = value!;
                                   });
                                 },
-                                title:  Text(
+                                title: Text(
                                   lang.S.of(context).expense,
                                   //'Expense',
                                   style: const TextStyle(fontSize: 14),
@@ -546,7 +547,7 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                           decoration: kInputDecoration.copyWith(
                             //labelText: 'User Title',
                             labelText: lang.S.of(context).userTitle,
-                           // hintText: 'Enter User Title',
+                            // hintText: 'Enter User Title',
                             hintText: lang.S.of(context).enterUserTitle,
                             contentPadding: const EdgeInsets.all(10.0),
                             errorBorder: const OutlineInputBorder(borderSide: BorderSide(color: Colors.red)),
@@ -562,26 +563,34 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                             ),
                           ),
                         ),
-                        // const SizedBox(height: 20.0),
-                        //
-                        // TextButton(
-                        //   onPressed: () async {
-                        //     try {
-                        //       EasyLoading.show(status: 'Loading....');
-                        //       await FirebaseAuth.instance.sendPasswordResetEmail(
-                        //         email: widget.userRoleModel.email ?? '',
-                        //       );
-                        //
-                        //       EasyLoading.showSuccess('An Email has been sent\nCheck your inbox');
-                        //       setState(() {
-                        //         isMailSent = true;
-                        //       });
-                        //     } catch (e) {
-                        //       EasyLoading.showError(e.toString());
-                        //     }
-                        //   },
-                        //   child: const Text('Forget password? '),
-                        // ).visible(!isMailSent),
+                        const SizedBox(height: 20.0),
+
+                        ///_____________Update_Password__________________________________
+                        AppTextField(
+                          validator: (value) {
+                            return null;
+                          },
+                          controller: passwordController,
+                          showCursor: true,
+                          decoration: kInputDecoration.copyWith(
+                            labelText: 'Update Password',
+                            floatingLabelAlignment: FloatingLabelAlignment.start,
+                            hintText: 'Update your password',
+                            contentPadding: const EdgeInsets.all(10.0),
+                            enabledBorder: const OutlineInputBorder(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(4.0),
+                              ),
+                              borderSide: BorderSide(color: kBorderColorTextField, width: 1),
+                            ),
+                            errorBorder: const OutlineInputBorder(borderSide: BorderSide(color: Colors.red)),
+                            focusedBorder: const OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                              borderSide: BorderSide(color: kBorderColorTextField, width: 2),
+                            ),
+                          ),
+                          textFieldType: TextFieldType.PASSWORD,
+                        ),
                       ],
                     ),
                   ),
@@ -610,9 +619,9 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                     salesListPermission ||
                     purchaseListPermission) {
                   if (validateAndSave()) {
-                    EasyLoading.show(status:
-                        lang.S.of(context).loading,
-                    //'loading..'
+                    EasyLoading.show(
+                      status: lang.S.of(context).loading,
+                      //'loading..'
                     );
                     user.Permission permission = user.Permission(
                       salePermission: salePermission,
@@ -635,14 +644,14 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                       context: context,
                       userName: titleController.text,
                       email: emailController.text,
+                      password: passwordController.text,
                       permission: permission,
                     );
                   }
                 } else {
-                  EasyLoading.showError(
-                    lang.S.of(context).youHaveToGivePermission
+                  EasyLoading.showError(lang.S.of(context).youHaveToGivePermission
                       //'You Have To Give Permission'
-                  );
+                      );
                 }
               }),
               buttonTextColor: Colors.white),

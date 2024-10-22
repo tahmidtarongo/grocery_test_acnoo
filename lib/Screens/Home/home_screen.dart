@@ -73,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return false;
   }
 
-  num? selectedCategoryId =0;
+  num? selectedCategoryId = 0;
   bool isListView = false;
 
   TextEditingController productSearchController = TextEditingController();
@@ -402,7 +402,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 );
                               },
                               error: (error, stackTrace) => const Text('Could not fetch the categories'),
-                              loading: () => const SizedBox(height: 40, width: 40, child: CircularProgressIndicator()),
+                              loading: () => const SizedBox(height: 30, width: 30, child: CircularProgressIndicator()),
                             ),
                           ),
                         ],

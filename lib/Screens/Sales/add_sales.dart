@@ -47,6 +47,8 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
   String? selectedPaymentType;
   TextEditingController vatPercentageEditingController = TextEditingController();
   TextEditingController vatAmountEditingController = TextEditingController();
+  TextEditingController discountPercentageEditingController = TextEditingController();
+  TextEditingController discountAmountEditingController = TextEditingController();
 
   double vatAmount = 0;
 
@@ -351,8 +353,8 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                     ),
                                     const SizedBox(width: 10),
                                     IconButton(
-                                      onPressed: () {
-                                        showModalBottomSheet(
+                                      onPressed: () async{
+                                       await showModalBottomSheet(
                                           context: context,
                                           isScrollControlled: true,
                                           shape: const RoundedRectangleBorder(
@@ -365,6 +367,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                             ref: consumerRef,
                                           ),
                                         );
+
                                       },
                                       icon: const Icon(IconlyLight.edit_square),
                                     )
@@ -405,6 +408,8 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                           ],
                         ),
                       ),
+
+                      ///________Vat__________________________________________
                       Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Row(
@@ -511,6 +516,8 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                           ],
                         ),
                       ),
+
+                      ///_______Discount__________________________________________
                       Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Row(
@@ -520,41 +527,122 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                               lang.S.of(context).discount,
                               style: const TextStyle(fontSize: 16),
                             ),
-                            SizedBox(
-                              width: context.width() / 4,
-                              child: TextField(
-                                controller: paidText,
-                                onChanged: (value) {
-                                  if (value == '') {
-                                    setState(() {
-                                      discountAmount = 0;
-                                    });
-                                  } else {
-                                    if (value.toInt() <= cartProviderData.getTotalAmount()) {
-                                      setState(() {
-                                        discountAmount = double.parse(value);
-                                      });
-                                    } else {
-                                      paidText.clear();
-                                      setState(() {
-                                        discountAmount = 0;
-                                      });
-                                      EasyLoading.showError(lang.S.of(context).enterAValidDiscount
-                                          //'Enter a valid Discount'
-                                          );
-                                    }
-                                  }
-                                },
-                                textAlign: TextAlign.right,
-                                decoration: const InputDecoration(
-                                  hintText: '0',
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width: context.width() / 4,
+                                  height: 40.0,
+                                  child: Center(
+                                    child: AppTextField(
+                                      inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
+                                      controller: discountPercentageEditingController,
+                                      onChanged: (value) {
+                                        if (value == '') {
+                                          setState(() {
+                                            discountAmountEditingController.text = 0.toString();
+                                            discountAmount = 0;
+                                          });
+                                        } else {
+                                          if (value.toDouble() > 100) {
+                                            EasyLoading.showError(lang.S.of(context).enterAValidDiscount);
+                                            setState(() {
+                                              discountAmount = 0;
+                                              discountAmountEditingController.clear();
+                                              discountPercentageEditingController.clear();
+                                            });
+                                          } else {
+                                            setState(() {
+                                              discountAmount = (value.toDouble() / 100) * cartProviderData.getTotalAmount().toDouble();
+                                              discountAmountEditingController.text = discountAmount.toStringAsFixed(2);
+                                            });
+                                          }
+                                        }
+                                      },
+                                      textAlign: TextAlign.right,
+                                      decoration: InputDecoration(
+                                        contentPadding: const EdgeInsets.only(right: 6.0),
+                                        hintText: '0',
+                                        border: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: Color(0xFFff5f00))),
+                                        enabledBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: Color(0xFFff5f00))),
+                                        disabledBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: Color(0xFFff5f00))),
+                                        focusedBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: Color(0xFFff5f00))),
+                                        prefixIconConstraints: const BoxConstraints(maxWidth: 30.0, minWidth: 30.0),
+                                        prefixIcon: Container(
+                                          padding: const EdgeInsets.only(top: 8.0, left: 8.0),
+                                          height: 40,
+                                          decoration: const BoxDecoration(
+                                              color: Color(0xFFff5f00), borderRadius: BorderRadius.only(topLeft: Radius.circular(4.0), bottomLeft: Radius.circular(4.0))),
+                                          child: const Text(
+                                            '%',
+                                            style: TextStyle(fontSize: 18.0, color: Colors.white),
+                                          ),
+                                        ),
+                                      ),
+                                      textFieldType: TextFieldType.PHONE,
+                                    ),
+                                  ),
                                 ),
-                                keyboardType: TextInputType.number,
-                              ),
+                                const SizedBox(width: 4.0),
+                                SizedBox(
+                                  width: context.width() / 4,
+                                  height: 40.0,
+                                  child: Center(
+                                    child: AppTextField(
+                                      inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
+                                      controller: discountAmountEditingController,
+                                      onChanged: (value) {
+                                        if (value == '') {
+                                          setState(() {
+                                            discountAmount = 0;
+                                            discountPercentageEditingController.clear();
+                                          });
+                                        } else {
+                                          if (value.toDouble() > cartProviderData.getTotalAmount()) {
+                                            EasyLoading.showError(lang.S.of(context).enterAValidDiscount);
+                                            setState(() {
+                                              discountAmount = 0;
+                                              discountAmountEditingController.clear();
+                                              discountPercentageEditingController.clear();
+                                            });
+                                          } else {
+                                            setState(() {
+                                              discountAmount = double.parse(value);
+                                              discountPercentageEditingController.text = ((discountAmount * 100) / cartProviderData.getTotalAmount()).toStringAsFixed(2);
+                                            });
+                                          }
+                                        }
+                                      },
+                                      textAlign: TextAlign.right,
+                                      decoration: InputDecoration(
+                                        contentPadding: const EdgeInsets.only(right: 6.0),
+                                        hintText: '0',
+                                        border: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: kMainColor)),
+                                        enabledBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: kMainColor)),
+                                        disabledBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: kMainColor)),
+                                        focusedBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: kMainColor)),
+                                        prefixIconConstraints: const BoxConstraints(maxWidth: 30.0, minWidth: 30.0),
+                                        prefixIcon: Container(
+                                          alignment: Alignment.center,
+                                          height: 40,
+                                          decoration: const BoxDecoration(
+                                              color: kMainColor, borderRadius: BorderRadius.only(topLeft: Radius.circular(4.0), bottomLeft: Radius.circular(4.0))),
+                                          child: Text(
+                                            currency,
+                                            style: const TextStyle(fontSize: 14.0, color: Colors.white),
+                                          ),
+                                        ),
+                                      ),
+                                      textFieldType: TextFieldType.PHONE,
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),
                       ),
+
+                      ///______Total____________________________________________
                       Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Row(

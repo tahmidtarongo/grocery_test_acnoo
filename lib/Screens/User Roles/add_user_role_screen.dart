@@ -472,77 +472,75 @@ class _AddUserRoleState extends State<AddUserRole> {
                         const SizedBox(height: 20.0),
 
                         ///______password___________________________________________________________
-                        // AppTextField(
-                        //   validator: (value) {
-                        //     if (value == null || value.isEmpty) {
-                        //       return 'Password can\'t be empty';
-                        //     } else if (value.length < 4) {
-                        //       return 'Please enter a bigger password';
-                        //     }
-                        //     return null;
-                        //   },
-                        //   controller: passwordController,
-                        //   showCursor: true,
-                        //   // cursorColor: kTitleColor,
-                        //   decoration: kInputDecoration.copyWith(
-                        //     labelText: 'Password',
-                        //     floatingLabelAlignment: FloatingLabelAlignment.start,
-                        //     // labelStyle: kTextStyle.copyWith(color: kTitleColor),
-                        //     hintText: 'Enter your password',
-                        //     // hintStyle: kTextStyle.copyWith(color: kLitGreyColor),
-                        //     contentPadding: const EdgeInsets.all(10.0),
-                        //     enabledBorder: const OutlineInputBorder(
-                        //       borderRadius: BorderRadius.all(
-                        //         Radius.circular(4.0),
-                        //       ),
-                        //       borderSide: BorderSide(color: kBorderColorTextField, width: 1),
-                        //     ),
-                        //     errorBorder: const OutlineInputBorder(borderSide: BorderSide(color: Colors.red)),
-                        //     focusedBorder: const OutlineInputBorder(
-                        //       borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                        //       borderSide: BorderSide(color: kBorderColorTextField, width: 2),
-                        //     ),
-                        //   ),
-                        //   textFieldType: TextFieldType.PASSWORD,
-                        // ),
+                        AppTextField(
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Password can\'t be empty';
+                            } else if (value.length < 4) {
+                              return 'Please enter a bigger password';
+                            }
+                            return null;
+                          },
+                          controller: passwordController,
+                          showCursor: true,
+                          // cursorColor: kTitleColor,
+                          decoration: kInputDecoration.copyWith(
+                            labelText: 'Password',
+                            floatingLabelAlignment: FloatingLabelAlignment.start,
+                            hintText: 'Enter your password',
+                            contentPadding: const EdgeInsets.all(10.0),
+                            enabledBorder: const OutlineInputBorder(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(4.0),
+                              ),
+                              borderSide: BorderSide(color: kBorderColorTextField, width: 1),
+                            ),
+                            errorBorder: const OutlineInputBorder(borderSide: BorderSide(color: Colors.red)),
+                            focusedBorder: const OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                              borderSide: BorderSide(color: kBorderColorTextField, width: 2),
+                            ),
+                          ),
+                          textFieldType: TextFieldType.PASSWORD,
+                        ),
 
-                        ///________retype_email____________________________________________________
-                        // const SizedBox(height: 20.0),
-                        // AppTextField(
-                        //   validator: (value) {
-                        //     if (value == null || value.isEmpty) {
-                        //       return 'Password can\'t be empty';
-                        //     } else if (value != passwordController.text) {
-                        //       return 'Password and confirm password does not match';
-                        //     } else if (value.length < 4) {
-                        //       return 'Please enter a bigger password';
-                        //     }
-                        //     return null;
-                        //   },
-                        //   controller: confirmPasswordController,
-                        //   showCursor: true,
-                        //   // cursorColor: kTitleColor,
-                        //   decoration: kInputDecoration.copyWith(
-                        //     labelText: 'Password',
-                        //     floatingLabelAlignment: FloatingLabelAlignment.start,
-                        //     // labelStyle: kTextStyle.copyWith(color: kTitleColor),
-                        //     hintText: 'Enter your password',
-                        //     // hintStyle: kTextStyle.copyWith(color: kLitGreyColor),
-                        //     contentPadding: const EdgeInsets.all(10.0),
-                        //     errorBorder: const OutlineInputBorder(borderSide: BorderSide(color: Colors.red)),
-                        //     enabledBorder: const OutlineInputBorder(
-                        //       borderRadius: BorderRadius.all(
-                        //         Radius.circular(4.0),
-                        //       ),
-                        //       borderSide: BorderSide(color: kBorderColorTextField, width: 1),
-                        //     ),
-                        //     focusedBorder: const OutlineInputBorder(
-                        //       borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                        //       borderSide: BorderSide(color: kBorderColorTextField, width: 2),
-                        //     ),
-                        //   ),
-                        //   textFieldType: TextFieldType.PASSWORD,
-                        // ),
+                        ///________confirm password____________________________________________________
+                        const SizedBox(height: 20.0),
+                        AppTextField(
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return 'Password can\'t be empty';
+                            } else if (value != passwordController.text) {
+                              return 'Password and confirm password does not match';
+                            } else if (value.length < 4) {
+                              return 'Please enter a bigger password';
+                            }
+                            return null;
+                          },
+                          controller: confirmPasswordController,
+                          showCursor: true,
+                          // cursorColor: kTitleColor,
+                          decoration: kInputDecoration.copyWith(
+                            labelText: 'Confirm Password',
+                            floatingLabelAlignment: FloatingLabelAlignment.start,
+                            hintText: 'Enter your confirm password',
+                            contentPadding: const EdgeInsets.all(10.0),
+                            errorBorder: const OutlineInputBorder(borderSide: BorderSide(color: Colors.red)),
+                            enabledBorder: const OutlineInputBorder(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(4.0),
+                              ),
+                              borderSide: BorderSide(color: kBorderColorTextField, width: 1),
+                            ),
+                            focusedBorder: const OutlineInputBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                              borderSide: BorderSide(color: kBorderColorTextField, width: 2),
+                            ),
+                          ),
+                          textFieldType: TextFieldType.PASSWORD,
+                        ),
+
+                        const SizedBox(height: 20.0),
 
                         ///__________Title_________________________________________________________
 
@@ -627,6 +625,7 @@ class _AddUserRoleState extends State<AddUserRole> {
                       context: context,
                       name: titleController.text,
                       email: emailController.text,
+                      password: passwordController.text,
                       permission: permission,
                     );
                   }

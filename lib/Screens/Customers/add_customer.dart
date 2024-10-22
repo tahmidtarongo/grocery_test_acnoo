@@ -76,8 +76,8 @@ class _AddPartyState extends State<AddParty> {
                           padding: const EdgeInsets.only(top: 10.0, left: 10, right: 10),
                           child: IntlPhoneField(
                             // controller: phoneController,
-                            decoration:  InputDecoration(
-                             // labelText: 'Phone Number',
+                            decoration: InputDecoration(
+                              // labelText: 'Phone Number',
                               labelText: lang.S.of(context).phoneNumber,
                               border: const OutlineInputBorder(
                                 borderSide: BorderSide(),
@@ -117,7 +117,7 @@ class _AddPartyState extends State<AddParty> {
                             controller: nameController,
                             validator: (value) {
                               if (value == null || value.isEmpty) {
-                               // return 'Please enter a valid Name';
+                                // return 'Please enter a valid Name';
                                 return lang.S.of(context).pleaseEnterAValidName;
                               }
                               // You can add more validation logic as needed
@@ -396,12 +396,11 @@ class _AddPartyState extends State<AddParty> {
                               child: TextFormField(
                                 controller: emailController,
                                 decoration: InputDecoration(
-                                  border: const OutlineInputBorder(),
-                                  floatingLabelBehavior: FloatingLabelBehavior.always,
-                                  labelText: lang.S.of(context).email,
-                                  //hintText: 'Enter your email address',
-                                  hintText: lang.S.of(context).hintEmail
-                                ),
+                                    border: const OutlineInputBorder(),
+                                    floatingLabelBehavior: FloatingLabelBehavior.always,
+                                    labelText: lang.S.of(context).email,
+                                    //hintText: 'Enter your email address',
+                                    hintText: lang.S.of(context).hintEmail),
                               ),
                             ),
                             Padding(
@@ -414,8 +413,7 @@ class _AddPartyState extends State<AddParty> {
                                     floatingLabelBehavior: FloatingLabelBehavior.always,
                                     labelText: lang.S.of(context).address,
                                     //hintText: 'Enter your address'
-                                  hintText: lang.S.of(context).hintEmail
-                                ),
+                                    hintText: lang.S.of(context).hintEmail),
                               ),
                             ),
                             Padding(
@@ -456,10 +454,9 @@ class _AddPartyState extends State<AddParty> {
                             due: dueController.text.isEmptyOrNull ? null : dueController.text,
                           );
                         } else {
-                          EasyLoading.showError(
-                            lang.S.of(context).pleaseEnterValidPhoneAndNameFirst
+                          EasyLoading.showError(lang.S.of(context).pleaseEnterValidPhoneAndNameFirst
                               //'Please Enter valid phone and name first'
-                          );
+                              );
                         }
                       },
                       buttonTextColor: Colors.white),

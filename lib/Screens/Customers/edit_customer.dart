@@ -89,10 +89,9 @@ class _EditCustomerState extends State<EditCustomer> {
                             padding: const EdgeInsets.all(10.0),
                             child: TextFormField(
                               controller: phoneController,
-
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
-                                 // return 'Please enter a valid phone number';
+                                  // return 'Please enter a valid phone number';
                                   return lang.S.of(context).pleaseEnterAValidPhoneNumber;
                                 }
                                 return null;
@@ -113,7 +112,7 @@ class _EditCustomerState extends State<EditCustomer> {
                               controller: nameController,
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
-                                 // return 'Please enter a valid Name';
+                                  // return 'Please enter a valid Name';
                                   return lang.S.of(context).pleaseEnterAValidName;
                                 }
                                 // You can add more validation logic as needed
@@ -224,32 +223,27 @@ class _EditCustomerState extends State<EditCustomer> {
                       ),
                     ),
                     ExpansionPanelList(
-                      expansionCallback: (int index, bool isExpanded) {},
+                      expansionCallback: (int index, bool isExpanded) {
+                        setState(() {
+                          expanded == false ? expanded = true : expanded = false;
+                        });
+                      },
                       animationDuration: const Duration(seconds: 1),
                       elevation: 0,
                       dividerColor: Colors.white,
                       children: [
                         ExpansionPanel(
                           backgroundColor: kWhite,
+                          canTapOnHeader: true,
                           headerBuilder: (BuildContext context, bool isExpanded) {
-                            return Column(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                TextButton(
-                                  child: Text(
-                                    lang.S.of(context).moreInfo,
-                                    style: GoogleFonts.poppins(
-                                      fontSize: 20.0,
-                                      color: kMainColor,
-                                    ),
-                                  ),
-                                  onPressed: () {
-                                    setState(() {
-                                      expanded == false ? expanded = true : expanded = false;
-                                    });
-                                  },
+                            return Center(
+                              child: Text(
+                                lang.S.of(context).moreInfo,
+                                style: GoogleFonts.poppins(
+                                  fontSize: 20.0,
+                                  color: kMainColor,
                                 ),
-                              ],
+                              ),
                             );
                           },
                           body: Column(
@@ -383,7 +377,7 @@ class _EditCustomerState extends State<EditCustomer> {
                                     border: const OutlineInputBorder(),
                                     floatingLabelBehavior: FloatingLabelBehavior.always,
                                     labelText: lang.S.of(context).email,
-                                   // hintText: 'Enter your email',
+                                    // hintText: 'Enter your email',
                                     hintText: lang.S.of(context).hintEmail,
                                   ),
                                 ),
@@ -394,11 +388,11 @@ class _EditCustomerState extends State<EditCustomer> {
                                   controller: addressController,
                                   maxLines: 2,
                                   decoration: InputDecoration(
-                                      border: const OutlineInputBorder(),
-                                      floatingLabelBehavior: FloatingLabelBehavior.always,
-                                      labelText: lang.S.of(context).address,
-                                      //hintText: 'Enter your address'
-                                     hintText: lang.S.of(context).hintEmail,
+                                    border: const OutlineInputBorder(),
+                                    floatingLabelBehavior: FloatingLabelBehavior.always,
+                                    labelText: lang.S.of(context).address,
+                                    //hintText: 'Enter your address'
+                                    hintText: lang.S.of(context).hintEmail,
                                   ),
                                 ),
                               ),
@@ -426,9 +420,9 @@ class _EditCustomerState extends State<EditCustomer> {
                         onPressed: () async {
                           if (_formKay.currentState!.validate()) {
                             try {
-                              EasyLoading.show(status:
-                                  lang.S.of(context).updating,
-                             // 'Updating...'
+                              EasyLoading.show(
+                                status: lang.S.of(context).updating,
+                                // 'Updating...'
                               );
                               final party = PartyRepository();
                               await party.updateParty(

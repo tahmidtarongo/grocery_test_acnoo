@@ -36,6 +36,8 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
     transitionModel = widget.transitionModel;
     paidAmount = (widget.transitionModel.paidAmount ?? 0);
     discountAmount = widget.transitionModel.discountAmount!;
+    discountAmountEditingController.text = widget.transitionModel.discountAmount.toString();
+    discountPercentageEditingController.text = ((discountAmount * 100) / (widget.transitionModel.totalAmount ?? 0 + (widget.transitionModel.discountAmount??0))).toStringAsFixed(2);
     paymentType = widget.transitionModel.paymentType;
     discountText.text = discountAmount.toString();
     paidText.text = paidAmount.toString();
@@ -90,6 +92,9 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
 
   TextEditingController vatPercentageEditingController = TextEditingController();
   TextEditingController vatAmountEditingController = TextEditingController();
+
+  TextEditingController discountPercentageEditingController = TextEditingController();
+  TextEditingController discountAmountEditingController = TextEditingController();
 
   num vatAmount = 0;
 
@@ -296,6 +301,7 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                                             GestureDetector(
                                               onTap: () {
                                                 providerData.quantityDecrease(index);
+
                                               },
                                               child: Container(
                                                 height: 20,
@@ -532,9 +538,9 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                           ),
                         ),
 
-                        ///___Discount____________________________________________
+                        ///_______Discount__________________________________________
                         Padding(
-                          padding: const EdgeInsets.only(left: 10.0, right: 10, bottom: 10),
+                          padding: const EdgeInsets.all(10.0),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -542,42 +548,122 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                                 lang.S.of(context).discount,
                                 style: const TextStyle(fontSize: 16),
                               ),
-                              SizedBox(
-                                width: context.width() / 4,
-                                child: TextField(
-                                  controller: discountText,
-                                  onChanged: (value) {
-                                    if (value == '') {
-                                      setState(() {
-                                        discountAmount = 0;
-                                      });
-                                    } else {
-                                      if (value.toInt() <= providerData.getTotalAmount()) {
-                                        setState(() {
-                                          discountAmount = double.parse(value);
-                                        });
-                                      } else {
-                                        discountText.clear();
-                                        setState(() {
-                                          discountAmount = 0;
-                                        });
-                                        EasyLoading.showError(
-                                          lang.S.of(context).enterAValidDiscount,
-                                          //'Enter a valid Discount'
-                                        );
-                                      }
-                                    }
-                                  },
-                                  textAlign: TextAlign.right,
-                                  decoration: const InputDecoration(
-                                    hintText: '0',
+                              Row(
+                                children: [
+                                  SizedBox(
+                                    width: context.width() / 4,
+                                    height: 40.0,
+                                    child: Center(
+                                      child: AppTextField(
+                                        inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
+                                        controller: discountPercentageEditingController,
+                                        onChanged: (value) {
+                                          if (value == '') {
+                                            setState(() {
+                                              discountAmountEditingController.text = 0.toString();
+                                              discountAmount = 0;
+                                            });
+                                          } else {
+                                            if (value.toDouble() > 100) {
+                                              EasyLoading.showError(lang.S.of(context).enterAValidDiscount);
+                                              setState(() {
+                                                discountAmount = 0;
+                                                discountAmountEditingController.clear();
+                                                discountPercentageEditingController.clear();
+                                              });
+                                            } else {
+                                              setState(() {
+                                                discountAmount = (value.toDouble() / 100) * providerData.getTotalAmount().toDouble();
+                                                discountAmountEditingController.text = discountAmount.toStringAsFixed(2);
+                                              });
+                                            }
+                                          }
+                                        },
+                                        textAlign: TextAlign.right,
+                                        decoration: InputDecoration(
+                                          contentPadding: const EdgeInsets.only(right: 6.0),
+                                          hintText: '0',
+                                          border: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: Color(0xFFff5f00))),
+                                          enabledBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: Color(0xFFff5f00))),
+                                          disabledBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: Color(0xFFff5f00))),
+                                          focusedBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: Color(0xFFff5f00))),
+                                          prefixIconConstraints: const BoxConstraints(maxWidth: 30.0, minWidth: 30.0),
+                                          prefixIcon: Container(
+                                            padding: const EdgeInsets.only(top: 8.0, left: 8.0),
+                                            height: 40,
+                                            decoration: const BoxDecoration(
+                                                color: Color(0xFFff5f00), borderRadius: BorderRadius.only(topLeft: Radius.circular(4.0), bottomLeft: Radius.circular(4.0))),
+                                            child: const Text(
+                                              '%',
+                                              style: TextStyle(fontSize: 18.0, color: Colors.white),
+                                            ),
+                                          ),
+                                        ),
+                                        textFieldType: TextFieldType.PHONE,
+                                      ),
+                                    ),
                                   ),
-                                  keyboardType: TextInputType.number,
-                                ),
+                                  const SizedBox(width: 4.0),
+                                  SizedBox(
+                                    width: context.width() / 4,
+                                    height: 40.0,
+                                    child: Center(
+                                      child: AppTextField(
+                                        inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^\d*\.?\d{0,2}'))],
+                                        controller: discountAmountEditingController,
+                                        onChanged: (value) {
+                                          if (value == '') {
+                                            setState(() {
+                                              discountAmount = 0;
+                                              discountPercentageEditingController.clear();
+                                            });
+                                          } else {
+                                            if (value.toDouble() > providerData.getTotalAmount()) {
+                                              EasyLoading.showError(lang.S.of(context).enterAValidDiscount);
+                                              setState(() {
+                                                discountAmount = 0;
+                                                discountAmountEditingController.clear();
+                                                discountPercentageEditingController.clear();
+                                              });
+                                            } else {
+                                              setState(() {
+                                                discountAmount = double.parse(value);
+                                                discountPercentageEditingController.text = ((discountAmount * 100) / providerData.getTotalAmount()).toStringAsFixed(2);
+                                              });
+                                            }
+                                          }
+                                        },
+                                        textAlign: TextAlign.right,
+                                        decoration: InputDecoration(
+                                          contentPadding: const EdgeInsets.only(right: 6.0),
+                                          hintText: '0',
+                                          border: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: kMainColor)),
+                                          enabledBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: kMainColor)),
+                                          disabledBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: kMainColor)),
+                                          focusedBorder: const OutlineInputBorder(gapPadding: 0.0, borderSide: BorderSide(color: kMainColor)),
+                                          prefixIconConstraints: const BoxConstraints(maxWidth: 30.0, minWidth: 30.0),
+                                          prefixIcon: Container(
+                                            alignment: Alignment.center,
+                                            height: 40,
+                                            decoration: const BoxDecoration(
+                                                color: kMainColor, borderRadius: BorderRadius.only(topLeft: Radius.circular(4.0), bottomLeft: Radius.circular(4.0))),
+                                            child: Text(
+                                              currency,
+                                              style: const TextStyle(fontSize: 14.0, color: Colors.white),
+                                            ),
+                                          ),
+                                        ),
+                                        textFieldType: TextFieldType.PHONE,
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
                         ),
+
+                        ///________Total__________________________________
                         Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: Row(
@@ -594,6 +680,7 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                             ],
                           ),
                         ),
+                        ///____________Previous paid Amount___________________________
                         Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: Row(
