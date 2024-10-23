@@ -584,7 +584,31 @@
   "sep": "செப்",
   "oct": "அக்",
   "nov": "நவ்",
-  "dec": "டிச"
+  "dec": "டிச",
+  "incomeDate": "உயர்வு தேதி",
+  "enterProductCode": "தயாரிப்பு குறியீட்டை உள்ளிடவும்",
+  "retry": "மீண்டும் முயற்சி செய்க",
+  "addedSuccessful": "வெற்றிகரமாகச் சேர்க்கப்பட்டது",
+  "poweredBy": "இவற்றால் இயக்கப்படுகிறது",
+  "updatePassword": "கடவுச்சொல்லை புதுப்பிக்கவும்",
+  "updateYourPassword": "உங்கள் கடவுச்சொல்லை புதுப்பிக்கவும்",
+  "enterYourConfirmPassword": "உங்கள் உறுதி கடவுச்சொல்லை உள்ளிடவும்",
+  "enterYourPassword": "உங்கள் கடவுச்சொல்லை உள்ளிடவும்",
+  "passwordAndConfirmPasswordDoesNotMatch": "கடவுச்சொல் மற்றும் உறுதி கடவுச்சொல் பொருந்தவில்லை",
+  "noWiFiConnection": "எந்த Wi-Fi இணைப்பு இல்லை",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "தயவுசெய்து உங்கள் இணைய இணைப்பை சரிபார்க்கவும் மற்றும் மீண்டும் முயற்சிக்கவும்",
+  "userCreationFailed": "பயனர் உருவாக்க முடியவில்லை",
+  "userDeletedSuccessfully": "பயனர் வெற்றிகரமாக அழிக்கப்பட்டது",
+  "failedToDeleteUser": "பயனரை அழிக்க முடியவில்லை",
+  "error": "தவறு",
+  "updatedSuccessfully": "வெற்றிகரமாக புதுப்பிக்கப்பட்டது",
+  "userUpdateFailed": "பயனர் புதுப்பிப்பு தோல்வி",
+  "subscribeSuccessful": "வெற்றிகரமாக சந்தாதாரராக பதிவு செய்யப்பட்டது",
+  "subscribeCreationFailed": "சந்தா உருவாக்கம் தோல்வி",
+  "anErrorOccurred": "ஒரு தவறு ஏற்பட்டது",
+  "salesCreationFailed": "விற்பனை உருவாக்கம் தோல்வி",
+  "purchaseCreationFailed": "வாங்குதல் உருவாக்கம் தோல்வி"
+
 
 
 

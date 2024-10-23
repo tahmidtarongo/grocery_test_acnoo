@@ -69,6 +69,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("Ychwanegu Uned"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Ychwanegu Rôl Defnyddiwr"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("Ychwanegwyd yn llwyddiannus"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("Ychwanegwyd i\'r Gornel"),
         "adding": MessageLookupByLibrary.simpleMessage("Ychwanegu.."),
@@ -86,6 +88,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "amarSonarBangla":
             MessageLookupByLibrary.simpleMessage("Amar sonar bangla"),
         "amount": MessageLookupByLibrary.simpleMessage("Swm"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("Digwyddodd gwall"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "Anfonir SMS i\'r rhif canlynol: "),
@@ -293,6 +297,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("Rhowch Nodyn"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("Rhowch gydbwysedd agoriadol"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("Nodwch God y Cynnyrch"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("Rhowch enw cynnyrch"),
         "enterPurchasePrice":
@@ -314,14 +320,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("Rhowch bwysau"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("Rhowch bris cyfanwerthu"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Nodwch eich cyfrinair cadarnhau"),
         "enterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
             "Mewnosod eich cyfeiriad e-bost"),
         "enterYourFullName":
             MessageLookupByLibrary.simpleMessage("Rhowch eich enw llawn"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("Mewnosod eich enw"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("Nodwch eich cyfrinair"),
         "enterYourPhoneNumber":
             MessageLookupByLibrary.simpleMessage("Mewnosod eich rhif ffôn"),
+        "error": MessageLookupByLibrary.simpleMessage("Gwall"),
         "expense": MessageLookupByLibrary.simpleMessage("Gwariant"),
         "expenseCat":
             MessageLookupByLibrary.simpleMessage("Categorïau Gwariant"),
@@ -330,6 +341,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenseReport":
             MessageLookupByLibrary.simpleMessage("Adroddiad Gwariant"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser":
+            MessageLookupByLibrary.simpleMessage("Methu â dileu defnyddiwr"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Methodd cael fersiwn llwyfan."),
         "fashion": MessageLookupByLibrary.simpleMessage("Ffasiwn"),
@@ -368,6 +381,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("Incwm"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("Categorïau Incwm"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("Dyddiad Incwm"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("Incwm ar gyfer"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("Adroddiad Incwm"),
         "instagram": MessageLookupByLibrary.simpleMessage("Instagram"),
@@ -456,6 +470,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noSupplier":
             MessageLookupByLibrary.simpleMessage("Dim Cynhelwr ar gael"),
         "noTransaction": MessageLookupByLibrary.simpleMessage("Dim Trafodion"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Dim Cysylltiad Wi-Fi"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("Defnyddiwr Anweithredol"),
         "notFound": MessageLookupByLibrary.simpleMessage("Heb ddod o hyd"),
@@ -476,6 +492,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("Partïon"),
         "partyList": MessageLookupByLibrary.simpleMessage("Rhestr Partïon"),
         "password": MessageLookupByLibrary.simpleMessage("Cyfrinair"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "Nid yw\'r cyfrinair a\'r cyfrinair cadarnhau yn cyfateb"),
         "passwordCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Nid yw\'r cyfrinair yn gallu bod yn wag"),
         "passwordsDoNotMatch": MessageLookupByLibrary.simpleMessage(
@@ -513,6 +532,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("Cynllun"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("Pleser ychwanegu faint"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Gwiriwch eich cysylltiad Rhyngrwyd a cheisiwch eto"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "Pleser cysylltu\'r argraffydd yn gyntaf"),
         "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
@@ -567,6 +589,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Pleser defnyddio\'r cod prynu dilys i ddefnyddio\'r ap"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Pweredig gan Acnoo"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("Cynhelir gan"),
         "premiumCustomerSupport":
             MessageLookupByLibrary.simpleMessage("Cymorth Ap Android a iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Cynllun Premiwm"),
@@ -600,6 +623,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("Prynu Gan:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Pryniad wedi\'i gadarnhau"),
+        "purchaseCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Methu â chreu pryniant"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("Manylion Prynu"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("Rhestr Prynu"),
@@ -645,6 +670,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "Adnewyddu eich cyfrinair i adfer a mewngofnodi i\'ch cyfrif"),
         "retailer": MessageLookupByLibrary.simpleMessage("Man Werthu"),
+        "retry": MessageLookupByLibrary.simpleMessage("Dewiswch eto"),
         "retur": MessageLookupByLibrary.simpleMessage("Dychwelyd"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("Swm Dychwelyd"),
         "riead": MessageLookupByLibrary.simpleMessage("Riead"),
@@ -653,6 +679,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("Pris Gwerthu"),
         "sales": MessageLookupByLibrary.simpleMessage("Gwerthiannau"),
         "salesBy": MessageLookupByLibrary.simpleMessage("Gwerthu Gan:"),
+        "salesCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Methu â chreu gwerthiant"),
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("Manylion Gwerthu"),
         "salesList":
@@ -743,6 +771,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("Stoc: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Is-gyfanswm"),
         "submit": MessageLookupByLibrary.simpleMessage("Cyflwyno"),
+        "subscribeCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Methu â chreu cofrestriad"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("Cofrestrwyd yn llwyddiannus"),
         "subscription": MessageLookupByLibrary.simpleMessage("Aelodaeth"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Is-gyfanswm"),
         "successfullyPaid": MessageLookupByLibrary.simpleMessage(
@@ -808,22 +840,34 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("Diweddaru Cyswllt"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Diweddaru Nawr"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("Diweddarwch y Cyfrinair"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("Diweddaru Cynnyrch"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("Diweddaru Eich Proffil"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("Diweddarwch eich cyfrinair"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "Diweddarwch eich proffil i gysylltu â\'ch cwsmer gyda gwell argraff"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("Diweddaru eich aelodaeth"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Diweddarwyd yn llwyddiannus"),
         "updating": MessageLookupByLibrary.simpleMessage("Diweddaru..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("Uwchsgwyddo Nawr"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Nid yw teitl y defnyddiwr yn gallu bod yn wag"),
+        "userCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Methu â chreu defnyddiwr"),
+        "userDeletedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "Defnyddiwr wedi\'i ddileu\'n llwyddiannus"),
         "userRole": MessageLookupByLibrary.simpleMessage("Rôl Defnyddiwr"),
         "userRoleDetails":
             MessageLookupByLibrary.simpleMessage("Manylion Rolau Defnyddiwr"),
         "userTitle": MessageLookupByLibrary.simpleMessage("Teitl Defnyddiwr"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "Methu â diweddaru defnyddiwr"),
         "vat": MessageLookupByLibrary.simpleMessage("TAW"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("Nid yw TAW yn gymwys"),

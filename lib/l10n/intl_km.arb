@@ -23,7 +23,7 @@
   "lastName": "នាមត្រកូល",
   "easytheusedesciption": "កម្មវិធី PosPro គឺជាកម្មវិធីឥតគិតថ្លៃ ដែលអាចប្រើបានងាយៗ។ ក្នុងបរិយាប័ត្រនេះ, វាជាជម្រើសល្អបំផុតរបស់ប្រព័ន្ធបញ្ជាទិញទំនិញនៅក្នុងពិភពពិភពលោក។",
   "choseYourFeature": "ជ្រើសរើសលក្ខណៈពិសេសរបស់អ្នក",
-  "choseyourfeatureDesciption": "លក្ខណៈពិសេសជា​ផ្នែក​សំខាន់​ដែលធ្វើ​ឲ្យ​កម្មវិធី PosPro ខូចចិត្តនៃ​ការដំណោះស្រាយ​ប្រចាំ​នៅពី​ដំណាក់​កាល​ចាស់ៗ។",
+  "choseyourfeatureDesciption": "លក្ខណៈពិសេសជាផ្នែក សំខាន់ ែលធ្វើឲ្យ កម្មវិធី PosPro ខូចចិត្តនៃ​ការដំណោះស្រាយ​ប្រចាំ​នៅពី​ដំណាក់​កាល​ចាស់ៗ។",
   "allBusinessolutionDescrip": "កម្មវិធី PosPro គឺជា​កម្មវិធី​ពិសេស​អាជីវកម្ម​ពេញលេញ​ដែលមាន​ស្តុក​សារ​គ្រឿង​សម្រាប់​ការ​ធ្វើ​កិច្ច​ការ​ គណនេយ្យ​ការ​លក់​ ចំណាយ & ចំណេញ/ការ​បញ្ចូល។",
   "country": "ប្រទេស",
   "bangladesh": "បង់ក្លាដែស",
@@ -589,7 +589,32 @@
   "sep": "កញ្ញា",
   "oct": "តុលា",
   "nov": "វិច្ឆិកា",
-  "dec": "ធ្នូ"
+  "dec": "ធ្នូ",
+  "incomeDate": "កាលបរិច្ឆេទចំណូល",
+  "enterProductCode": "បញ្ចូលកូដផលិតផល",
+  "retry": "ព្យាយាមម្តងទៀត",
+  "addedSuccessful": "បន្ថែមដោយជោគជ័យ",
+  "poweredBy": "កាន់ដោយ",
+  "updatePassword": "កែប្រែពាក្យសម្ងាត់",
+  "updateYourPassword": "កែប្រែពាក្យសម្ងាត់របស់អ្នក",
+  "enterYourConfirmPassword": "បញ្ចូលពាក្យសម្ងាត់បញ្ជាក់របស់អ្នក",
+  "enterYourPassword": "បញ្ចូលពាក្យសម្ងាត់របស់អ្នក",
+  "passwordAndConfirmPasswordDoesNotMatch": "ពាក្យសម្ងាត់ និងពាក្យសម្ងាត់បញ្ជាក់មិនផ្គូផ្គងគ្នា",
+  "noWiFiConnection": "គ្មានការតភ្ជាប់ Wi-Fi",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "សូមពិនិត្យការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នកហើយព្យាយាមម្តងទៀត",
+  "userCreationFailed": "ការបង្កើតអ្នកប្រើបរាជ័យ",
+  "userDeletedSuccessfully": "អ្នកប្រើបានលុបដោយជោគជ័យ",
+  "failedToDeleteUser": "បរាជ័យក្នុងការលុបអ្នកប្រើ",
+  "error": "កំហុស",
+  "updatedSuccessfully": "បានធ្វើបច្ចុប្បន្នភាពដោយជោគជ័យ",
+  "userUpdateFailed": "ការធ្វើបច្ចុប្បន្នភាពអ្នកប្រើបានបរាជ័យ",
+  "subscribeSuccessful": "ការជាវបានជោគជ័យ",
+  "subscribeCreationFailed": "ការបង្កើតការជាវបានបរាជ័យ",
+  "anErrorOccurred": "មានកំហុសកើតឡើង",
+  "salesCreationFailed": "ការបង្កើតការលក់បានបរាជ័យ",
+  "purchaseCreationFailed": "ការបង្កើតការជាវបានបរាជ័យ"
+
+
 
 
 }

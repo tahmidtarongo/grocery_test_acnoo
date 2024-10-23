@@ -585,7 +585,31 @@
   "sep": "Sep",
   "oct": "Oct",
   "nov": "Nov",
-  "dec": "Dec"
+  "dec": "Dec",
+  "incomeDate": "Data veniturilor",
+  "enterProductCode": "Introduceți codul produsului",
+  "retry": "Reîncercați",
+  "addedSuccessful": "Adăugat cu succes",
+  "poweredBy": "Furnizat de",
+  "updatePassword": "Actualizați parola",
+  "updateYourPassword": "Actualizați-vă parola",
+  "enterYourConfirmPassword": "Introduceți parola de confirmare",
+  "enterYourPassword": "Introduceți parola dvs.",
+  "passwordAndConfirmPasswordDoesNotMatch": "Parola și parola de confirmare nu se potrivesc",
+  "noWiFiConnection": "Nicio conexiune Wi-Fi",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Vă rugăm să verificați conexiunea la internet și să încercați din nou",
+  "userCreationFailed": "Crearea utilizatorului a eșuat",
+  "userDeletedSuccessfully": "Utilizator șters cu succes",
+  "failedToDeleteUser": "Eșec la ștergerea utilizatorului",
+  "error": "Eroare",
+  "updatedSuccessfully": "Actualizat cu succes",
+  "userUpdateFailed": "Actualizarea utilizatorului a eșuat",
+  "subscribeSuccessful": "Abonare reușită",
+  "subscribeCreationFailed": "Crearea abonamentului a eșuat",
+  "anErrorOccurred": "A apărut o eroare",
+  "salesCreationFailed": "Crearea vânzărilor a eșuat",
+  "purchaseCreationFailed": "Crearea achiziției a eșuat"
+
 
 
 

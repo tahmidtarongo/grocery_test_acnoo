@@ -583,5 +583,30 @@
   "sep": "Set",
   "oct": "Out",
   "nov": "Nov",
-  "dec": "Dec"
+  "dec": "Dec",
+  "incomeDate": "Data de ingresos",
+  "enterProductCode": "Introduza o código do produto",
+  "retry": "Tentar de novo",
+  "addedSuccessful": "Engadido correctamente",
+  "poweredBy": "Desenvolvido por",
+  "updatePassword": "Actualizar contrasinal",
+  "updateYourPassword": "Actualiza o teu contrasinal",
+  "enterYourConfirmPassword": "Introduce o teu contrasinal de confirmación",
+  "enterYourPassword": "Introduce o teu contrasinal",
+  "passwordAndConfirmPasswordDoesNotMatch": "O contrasinal e a confirmación non coinciden",
+  "noWiFiConnection": "Sen conexión Wi-Fi",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Comproba a túa conexión a Internet e volve tentar",
+  "userCreationFailed": "Erro ao crear o usuario",
+  "userDeletedSuccessfully": "Usuario eliminado correctamente",
+  "failedToDeleteUser": "Erro ao eliminar o usuario",
+  "error": "Erro",
+  "updatedSuccessfully": "Actualizado correctamente",
+  "userUpdateFailed": "Erro ao actualizar o usuario",
+  "subscribeSuccessful": "Subscripción realizada con éxito",
+  "subscribeCreationFailed": "Erro ao crear a subscripción",
+  "anErrorOccurred": "Ocorreu un erro",
+  "salesCreationFailed": "Erro ao crear a venda",
+  "purchaseCreationFailed": "Erro ao crear a compra"
+
+
 }

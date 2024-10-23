@@ -64,6 +64,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("Нэгж нэмэх"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Хэрэглэгчийн үүрэг нэмэх"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("Амжилттай нэмэгдлээ"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("Сагсанд нэмэгдлээ"),
         "adding": MessageLookupByLibrary.simpleMessage("Нэмж байна.."),
@@ -80,6 +82,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "amarSonarBangla":
             MessageLookupByLibrary.simpleMessage("Амир сонирхолтой бангла"),
         "amount": MessageLookupByLibrary.simpleMessage("Дүн"),
+        "anErrorOccurred": MessageLookupByLibrary.simpleMessage("Алдаа гарлаа"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "Дараах дугаарт SMS илгээгдэнэ: "),
@@ -294,6 +297,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("Тайлбар оруулна уу"),
         "enterOpeningBalance": MessageLookupByLibrary.simpleMessage(
             "Нээлтийн тэнцлийг оруулна уу"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("Барааны код оруулна уу"),
         "enterProductName": MessageLookupByLibrary.simpleMessage(
             "Бүтээгдэхүүний нэрийг оруулна уу"),
         "enterPurchasePrice": MessageLookupByLibrary.simpleMessage(
@@ -317,20 +322,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("Жинг оруулна уу"),
         "enterWholesalePrice": MessageLookupByLibrary.simpleMessage(
             "Борлуулагчийн үнийг оруулна уу"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Таны баталгаажуулах нууц үг оруулна уу"),
         "enterYourEmailAddress":
             MessageLookupByLibrary.simpleMessage("И-мэйл хаягаа оруулна уу"),
         "enterYourFullName":
             MessageLookupByLibrary.simpleMessage("Бүтэн нэрээ оруулна уу"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("Нэрээ оруулна уу"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("Таны нууц үг оруулна уу"),
         "enterYourPhoneNumber":
             MessageLookupByLibrary.simpleMessage("Утасны дугаараа оруулна уу"),
+        "error": MessageLookupByLibrary.simpleMessage("Алдаа"),
         "expense": MessageLookupByLibrary.simpleMessage("Зардал"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("Зардлын ангилал"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("Зардлын огноо"),
         "expenseFor": MessageLookupByLibrary.simpleMessage("Зардал"),
         "expenseReport": MessageLookupByLibrary.simpleMessage("Зардлын тайлан"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser": MessageLookupByLibrary.simpleMessage(
+            "Хэрэглэгчийг устгахад амжилтгүй"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Платформын хувилбарыг авахад алдаа гарлаа."),
         "fashion": MessageLookupByLibrary.simpleMessage("Фэшн"),
@@ -369,6 +381,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("Орлого"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("Орлогын категориуд"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("Орлогын огноо"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("Орлого"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("Орлогын тайлан"),
         "instagram": MessageLookupByLibrary.simpleMessage("Instagram"),
@@ -458,6 +471,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noSupplier":
             MessageLookupByLibrary.simpleMessage("Нийлүүлэгч байхгүй"),
         "noTransaction": MessageLookupByLibrary.simpleMessage("Төлбөр байхгүй"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Wi-Fi холболт байхгүй"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("Идэвхгүй хэрэглэгч"),
         "notFound": MessageLookupByLibrary.simpleMessage("Олоогүй"),
@@ -478,6 +493,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("Талууд"),
         "partyList": MessageLookupByLibrary.simpleMessage("Талаар жагсаалт"),
         "password": MessageLookupByLibrary.simpleMessage("Нууц үг"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "Нууц үг ба баталгаажуулах нууц үг тохирохгүй байна"),
         "passwordCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Нууц үг хоосон байж болохгүй"),
         "passwordsDoNotMatch":
@@ -516,6 +534,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("Төлөвлөгөө"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("Тоо хэмжээ нэмнэ үү"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Интернет холболтоо шалгаж, дахин оролдоно уу"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "Эхлээд принтерийг холбохыг хүсье"),
         "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
@@ -570,6 +591,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Апп ашиглахад хүчинтэй худалдан авалтын кодыг ашиглана уу"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Acnoo-аас хүчирхэгжүүлсэн"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("Энэ нь powered by"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "Premium хэрэглэгчийн дэмжлэг"),
         "premiumPlan":
@@ -608,6 +630,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("Худалдан авсан: "),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Худалдан авалт батлагдсан"),
+        "purchaseCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Их худалдан авалтын бүртгэл амжилтгүй боллоо"),
         "purchaseDetails": MessageLookupByLibrary.simpleMessage(
             "Худалдан авалтын дэлгэрэнгүй"),
         "purchaseList":
@@ -655,6 +679,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "Таны нууц үгийг сэргээж, нэвтрэхийн тулд"),
         "retailer": MessageLookupByLibrary.simpleMessage("Дэлгүүр"),
+        "retry": MessageLookupByLibrary.simpleMessage("Дахин оролдоно уу"),
         "retur": MessageLookupByLibrary.simpleMessage("Буцаах"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("Буцаалтын дүн"),
         "riead": MessageLookupByLibrary.simpleMessage("Riead"),
@@ -664,6 +689,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("Зарах үнэ"),
         "sales": MessageLookupByLibrary.simpleMessage("Борлуулалт"),
         "salesBy": MessageLookupByLibrary.simpleMessage("Борлуулсан: "),
+        "salesCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Борлуулалтын бүртгэл амжилтгүй боллоо"),
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("Борлуулалтын дэлгэрэнгүй"),
         "salesList":
@@ -755,6 +782,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("Нөөц: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Дэд нийт"),
         "submit": MessageLookupByLibrary.simpleMessage("Илгээх"),
+        "subscribeCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Абонементын бүртгэл амжилтгүй боллоо"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("Абонемент амжилттай"),
         "subscription": MessageLookupByLibrary.simpleMessage("Бүртгэл"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Дэд нийт"),
         "successfullyPaid":
@@ -819,22 +850,34 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("Холбоо барихыг шинэчлэх"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Одоо шинэчлэх"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("Нууц үг шинэчлэх"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("Бүтээгдэхүүнийг шинэчлэх"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("Профайлаа шинэчлэх"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("Таны нууц үгийг шинэчлэх"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "Таны профайлыг шинэчилж, хэрэглэгчидтэй илүү сайн холбогдоно уу"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("Таны захиалгыг шинэчилнэ үү"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Амжилттай шинэчиллээ"),
         "updating": MessageLookupByLibrary.simpleMessage("Шинэчилж байна..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("Одоо шинэчилнэ үү"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Хэрэглэгчийн нэр хоосон байж болохгүй"),
+        "userCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Хэрэглэгчийн бүртгэл амжилтгүй боллоо"),
+        "userDeletedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "Хэрэглэгч амжилттай устгагдлаа"),
         "userRole": MessageLookupByLibrary.simpleMessage("Хэрэглэгчийн үүрэг"),
         "userRoleDetails": MessageLookupByLibrary.simpleMessage(
             "Хэрэглэгчийн эрхийн дэлгэрэнгүй"),
         "userTitle": MessageLookupByLibrary.simpleMessage("Хэрэглэгчийн нэр"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "Хэрэглэгчийн шинэчлэлт амжилтгүй боллоо"),
         "vat": MessageLookupByLibrary.simpleMessage("НӨАТ"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("НӨАТ хэрэглэхгүй"),

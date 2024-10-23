@@ -67,6 +67,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("یونٹ شامل کریں"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("صارف کی رول شامل کریں"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("کامیابی سے شامل کیا گیا"),
         "addedToCart": MessageLookupByLibrary.simpleMessage("کارٹ میں شامل"),
         "adding": MessageLookupByLibrary.simpleMessage("شامل کر رہا ہے.."),
         "address": MessageLookupByLibrary.simpleMessage("پتہ"),
@@ -80,6 +82,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage(
             "کیا آپ کے پاس پہلے سے ہی اکاؤنٹ ہے؟"),
         "amount": MessageLookupByLibrary.simpleMessage("رقم"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("ایک خرابی ہوئی"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "ایس ایم ایس مندرجہ ذیل نمبر پر بھیجا جائے گا:"),
@@ -284,6 +288,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("نوٹ درج کریں"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("افتتاحی بیلنس درج کریں"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("پروڈکٹ کوڈ درج کریں"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("پروڈکٹ کا نام درج کریں"),
         "enterPurchasePrice":
@@ -305,14 +311,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("وزن درج کریں"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("ہول سیل کی قیمت درج کریں"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "اپنا تصدیق شدہ پاس ورڈ درج کریں"),
         "enterYourEmailAddress":
             MessageLookupByLibrary.simpleMessage("اپنا ای میل پتہ درج کریں"),
         "enterYourFullName":
             MessageLookupByLibrary.simpleMessage("اپنا مکمل نام درج کریں"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("اپنا نام درج کریں"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("اپنا پاس ورڈ درج کریں"),
         "enterYourPhoneNumber":
             MessageLookupByLibrary.simpleMessage("اپنا فون نمبر درج کریں"),
+        "error": MessageLookupByLibrary.simpleMessage("خرابی"),
         "expense": MessageLookupByLibrary.simpleMessage("اخراجات"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("اخراجات کیٹیگریاں"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("اخراجات کی تاریخ"),
@@ -320,6 +331,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenseReport":
             MessageLookupByLibrary.simpleMessage("اخراجات کی رپورٹ"),
         "facebook": MessageLookupByLibrary.simpleMessage("فیس بک"),
+        "failedToDeleteUser":
+            MessageLookupByLibrary.simpleMessage("صارف کو حذف کرنے میں ناکامی"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "پلیٹ فارم ورژن حاصل کرنے میں ناکام"),
         "fashion": MessageLookupByLibrary.simpleMessage("فیشن"),
@@ -358,6 +371,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("آمدنی"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("آمدنی کے زمرے"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("آمدنی کی تاریخ"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("آمدنی کے لیے"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("آمدنی کی رپورٹ"),
         "instagram": MessageLookupByLibrary.simpleMessage("انسٹاگرام"),
@@ -443,6 +457,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("کوئی سپلائر دستیاب نہیں ہے"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("کوئی معاملہ نہیں"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("کوئی Wi-Fi کنکشن نہیں"),
         "notActiveUser": MessageLookupByLibrary.simpleMessage("غیر فعال صارف"),
         "notFound": MessageLookupByLibrary.simpleMessage("مل نہیں سکا"),
         "note": MessageLookupByLibrary.simpleMessage("نوٹ"),
@@ -462,6 +478,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("پارٹیز"),
         "partyList": MessageLookupByLibrary.simpleMessage("پارٹیوں کی فہرست"),
         "password": MessageLookupByLibrary.simpleMessage("پاس ورڈ"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "پاس ورڈ اور تصدیق شدہ پاس ورڈ میل نہیں کھاتے"),
         "passwordCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("پاس ورڈ خالی نہیں ہوسکتا"),
         "passwordsDoNotMatch":
@@ -498,6 +517,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("پلان"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("براہ کرم مقدار شامل کریں"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "براہ کرم اپنے انٹرنیٹ کنکشن کو چیک کریں اور دوبارہ کوشش کریں"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "براہ کرم پرنٹر کو پہلے کنیکٹ کریں"),
         "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
@@ -552,6 +574,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "براہ کرم ایپ استعمال کرنے کے لیے درست خریداری کا کوڈ استعمال کریں"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("آکنو کی طرف سے طاقت دی گئی"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("کی طرف سے طاقتور"),
         "premiumCustomerSupport":
             MessageLookupByLibrary.simpleMessage("Android اور iOS ایپ سپورٹ"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("پریمیم پلان"),
@@ -585,6 +608,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("خریداری کی گئی:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("خریداری تصدیق شدہ"),
+        "purchaseCreationFailed":
+            MessageLookupByLibrary.simpleMessage("خریداری بنانا ناکام ہوا"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("خریداری کی تفصیلات"),
         "purchaseList":
@@ -629,6 +654,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "اپنا پاس ورڈ دوبارہ ترتیب دیں اور اپنے اکاؤنٹ میں لاگ ان کریں"),
         "retailer": MessageLookupByLibrary.simpleMessage("ریٹیلر"),
+        "retry": MessageLookupByLibrary.simpleMessage("دوبارہ کوشش کریں"),
         "retur": MessageLookupByLibrary.simpleMessage("واپسی"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("واپسی کی رقم"),
         "riead": MessageLookupByLibrary.simpleMessage("ریڈ"),
@@ -637,6 +663,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("فروخت کی قیمت"),
         "sales": MessageLookupByLibrary.simpleMessage("فروخت"),
         "salesBy": MessageLookupByLibrary.simpleMessage("فروخت کیا گیا:"),
+        "salesCreationFailed":
+            MessageLookupByLibrary.simpleMessage("سیلز بنانا ناکام ہوا"),
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("فروخت کی تفصیلات"),
         "salesList": MessageLookupByLibrary.simpleMessage("فروخت کی فہرست"),
@@ -723,6 +751,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("اسٹاک: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("ذیلی کل"),
         "submit": MessageLookupByLibrary.simpleMessage("جمع کرائیں"),
+        "subscribeCreationFailed":
+            MessageLookupByLibrary.simpleMessage("سبسکرپشن بنانا ناکام ہوا"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("سبسکرپشن کامیاب"),
         "subscription": MessageLookupByLibrary.simpleMessage("سبسکرپشن"),
         "subtotal": MessageLookupByLibrary.simpleMessage("ذیلی کل"),
         "successfullyPaid":
@@ -782,22 +814,34 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("رابطے کو اپ ڈیٹ کریں"),
         "updateNow": MessageLookupByLibrary.simpleMessage("ابھی اپ ڈیٹ کریں"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("پاس ورڈ اپ ڈیٹ کریں"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("مصنوعہ کو اپ ڈیٹ کریں"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("اپنی پروفائل اپ ڈیٹ کریں"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("اپنا پاس ورڈ اپ ڈیٹ کریں"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "اپنی پروفائل کو اپ ڈیٹ کریں تاکہ آپ اپنے صارفین کو بہتر تاثر دے سکیں"),
         "updateYourSubscription": MessageLookupByLibrary.simpleMessage(
             "اپنی سبسکرپشن کو اپ ڈیٹ کریں"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("کامیابی سے اپ ڈیٹ کیا گیا"),
         "updating": MessageLookupByLibrary.simpleMessage("اپ ڈیٹ کر رہا ہے..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("اب اپ گریڈ کریں"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "صارف کا عنوان خالی نہیں ہوسکتا"),
+        "userCreationFailed":
+            MessageLookupByLibrary.simpleMessage("صارف بنانا ناکام ہوا"),
+        "userDeletedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "صارف کامیابی سے حذف کر دیا گیا"),
         "userRole": MessageLookupByLibrary.simpleMessage("صارف کی کردار"),
         "userRoleDetails":
             MessageLookupByLibrary.simpleMessage("صارف کے کردار کی تفصیلات"),
         "userTitle": MessageLookupByLibrary.simpleMessage("صارف کا عنوان"),
+        "userUpdateFailed":
+            MessageLookupByLibrary.simpleMessage("صارف کی اپ ڈیٹ ناکام ہوئی"),
         "vat": MessageLookupByLibrary.simpleMessage("VAT"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("ویٹ لاگو نہیں ہوتا"),

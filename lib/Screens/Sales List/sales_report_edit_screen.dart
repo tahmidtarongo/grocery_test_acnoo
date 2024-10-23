@@ -239,7 +239,7 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                             width: double.infinity,
                             decoration: BoxDecoration(
                               color: kMainColor.withOpacity(0.1),
-                              borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+                              borderRadius: const BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
                             ),
                             child: Padding(
                               padding: const EdgeInsets.all(10),
@@ -428,7 +428,7 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                         Container(
                           padding: const EdgeInsets.all(10),
                           decoration:
-                              BoxDecoration(color: kMainColor.withOpacity(0.1), borderRadius: BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10))),
+                              BoxDecoration(color: kMainColor.withOpacity(0.1), borderRadius: const BorderRadius.only(topRight: Radius.circular(10), topLeft: Radius.circular(10))),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [

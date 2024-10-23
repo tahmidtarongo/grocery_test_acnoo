@@ -590,11 +590,28 @@
   "sep": "Set",
   "oct": "Ott",
   "nov": "Nov",
-  "dec": "Dic"
-
-
-
-
-
-
+  "dec": "Dic",
+  "incomeDate": "Data di entrata",
+  "enterProductCode": "Inserisci il codice prodotto",
+  "retry": "Riprova",
+  "addedSuccessful": "Aggiunto con successo",
+  "poweredBy": "Powered By",
+  "updatePassword": "Aggiorna password",
+  "updateYourPassword": "Aggiorna la tua password",
+  "enterYourConfirmPassword": "Inserisci la tua password di conferma",
+  "enterYourPassword": "Inserisci la tua password",
+  "passwordAndConfirmPasswordDoesNotMatch": "La password e la password di conferma non corrispondono",
+  "noWiFiConnection": "Nessuna connessione Wi-Fi",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Controlla la tua connessione internet e riprova",
+  "userCreationFailed": "Creazione utente fallita",
+  "userDeletedSuccessfully": "Utente eliminato con successo",
+  "failedToDeleteUser": "Impossibile eliminare l'utente",
+  "error": "Errore",
+  "updatedSuccessfully": "Aggiornato con successo",
+  "userUpdateFailed": "Aggiornamento utente fallito",
+  "subscribeSuccessful": "Iscrizione avvenuta con successo",
+  "subscribeCreationFailed": "Creazione iscrizione fallita",
+  "anErrorOccurred": "Si è verificato un errore",
+  "salesCreationFailed": "Creazione vendita fallita",
+  "purchaseCreationFailed": "Creazione acquisto fallita"
 }

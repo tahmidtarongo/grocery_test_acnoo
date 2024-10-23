@@ -56,6 +56,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "addToCart": MessageLookupByLibrary.simpleMessage("הוסף לסל"),
         "addUnit": MessageLookupByLibrary.simpleMessage("הוסף יחידה"),
         "addUserRole": MessageLookupByLibrary.simpleMessage("הוסף תפקיד משתמש"),
+        "addedSuccessful": MessageLookupByLibrary.simpleMessage("נוסף בהצלחה"),
         "addedToCart": MessageLookupByLibrary.simpleMessage("הוסף לסל"),
         "adding": MessageLookupByLibrary.simpleMessage("מוסיף.."),
         "address": MessageLookupByLibrary.simpleMessage("כתובת"),
@@ -69,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("כבר יש לך חשבון?"),
         "amount": MessageLookupByLibrary.simpleMessage("כמות"),
+        "anErrorOccurred": MessageLookupByLibrary.simpleMessage("אירעה שגיאה"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage("יישלח SMS למספר הבא: "),
         "android": MessageLookupByLibrary.simpleMessage(
@@ -257,6 +259,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("הזן הערה"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("הזן יתרה פתיחה"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("הזן קוד מוצר"),
         "enterProductName": MessageLookupByLibrary.simpleMessage("הזן שם מוצר"),
         "enterPurchasePrice":
             MessageLookupByLibrary.simpleMessage("הזן מחיר רכישה"),
@@ -276,19 +280,26 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("הזן משקל"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("הזן מחיר סיטונאי"),
+        "enterYourConfirmPassword":
+            MessageLookupByLibrary.simpleMessage("הזן את סיסמת האישור שלך"),
         "enterYourEmailAddress":
             MessageLookupByLibrary.simpleMessage("הזן את כתובת האימייל שלך"),
         "enterYourFullName":
             MessageLookupByLibrary.simpleMessage("הזן את שמך המלא"),
         "enterYourName": MessageLookupByLibrary.simpleMessage("הזן את שמך"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("הזן את הסיסמה שלך"),
         "enterYourPhoneNumber":
             MessageLookupByLibrary.simpleMessage("הזן את מספר הטלפון שלך"),
+        "error": MessageLookupByLibrary.simpleMessage("שגיאה"),
         "expense": MessageLookupByLibrary.simpleMessage("הוצאה"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("קטגוריות הוצאות"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("תאריך הוצאה"),
         "expenseFor": MessageLookupByLibrary.simpleMessage("הוצאה עבור"),
         "expenseReport": MessageLookupByLibrary.simpleMessage("דו\"ח הוצאות"),
         "facebook": MessageLookupByLibrary.simpleMessage("פייסבוק"),
+        "failedToDeleteUser":
+            MessageLookupByLibrary.simpleMessage("מחיקת המשתמש נכשלה"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "כישלון בקבלת גרסת הפלטפורמה."),
         "fashion": MessageLookupByLibrary.simpleMessage("אופנה"),
@@ -324,6 +335,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("הכנסה"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("קטגוריות הכנסה"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("תאריך הכנסה"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("הכנסה עבור"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("דוח הכנסות"),
         "instagram": MessageLookupByLibrary.simpleMessage("אינסטגרם"),
@@ -403,6 +415,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("לא נמצא תפקיד משתמש"),
         "noSupplier": MessageLookupByLibrary.simpleMessage("אין ספק זמין"),
         "noTransaction": MessageLookupByLibrary.simpleMessage("אין עסקה"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("אין חיבור Wi-Fi"),
         "notActiveUser": MessageLookupByLibrary.simpleMessage("משתמש לא פעיל"),
         "notFound": MessageLookupByLibrary.simpleMessage("לא נמצא"),
         "note": MessageLookupByLibrary.simpleMessage("הערה"),
@@ -421,6 +435,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("צדדים"),
         "partyList": MessageLookupByLibrary.simpleMessage("רשימת הצדדים"),
         "password": MessageLookupByLibrary.simpleMessage("סיסמה"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "הסיסמה ואישור הסיסמה אינם תואמים"),
         "passwordCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("הסיסמה לא יכולה להיות ריקה"),
         "passwordsDoNotMatch":
@@ -453,6 +470,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("תוכנית"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("אנא הוסף כמות"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "אנא בדוק את חיבור האינטרנט שלך ונסה שוב"),
         "pleaseConnectThePrinterFirst":
             MessageLookupByLibrary.simpleMessage("אנא התחבר תחילה למדפסת"),
         "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
@@ -506,6 +526,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "אנא השתמש בקוד הרכישה בתוקף כדי להשתמש באפליקציה"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("מופעל על ידי Acnoo"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("מופעל על ידי"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "תמיכה באפליקציות Android ו-iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("תוכנית פרימיום"),
@@ -538,6 +559,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("נרכש על ידי:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("רכישה מאושרת"),
+        "purchaseCreationFailed":
+            MessageLookupByLibrary.simpleMessage("יצירת הרכישה נכשלה"),
         "purchaseDetails": MessageLookupByLibrary.simpleMessage("פרטי רכישה"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("רשימת רכישות"),
         "purchaseNow": MessageLookupByLibrary.simpleMessage("רכוש עכשיו"),
@@ -576,6 +599,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "אפס את הסיסמה שלך לשחזור ולהתחבר לחשבון שלך"),
         "retailer": MessageLookupByLibrary.simpleMessage("קִמעוֹנַאִי"),
+        "retry": MessageLookupByLibrary.simpleMessage("נסה שוב"),
         "retur": MessageLookupByLibrary.simpleMessage("החזרה"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("סכום החזרה"),
         "riead": MessageLookupByLibrary.simpleMessage("קרא"),
@@ -584,6 +608,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("מחיר מבצע"),
         "sales": MessageLookupByLibrary.simpleMessage("מכירות"),
         "salesBy": MessageLookupByLibrary.simpleMessage("נמכר על ידי:"),
+        "salesCreationFailed":
+            MessageLookupByLibrary.simpleMessage("יצירת המכירה נכשלה"),
         "salesDetails": MessageLookupByLibrary.simpleMessage("פרטי מכירה"),
         "salesList": MessageLookupByLibrary.simpleMessage("רשימת מכירות"),
         "salesPrice": MessageLookupByLibrary.simpleMessage("מחיר מכירה"),
@@ -660,6 +686,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("מלאי: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("תת סך הכל"),
         "submit": MessageLookupByLibrary.simpleMessage("שליחה"),
+        "subscribeCreationFailed":
+            MessageLookupByLibrary.simpleMessage("יצירת ההרשמה נכשלה"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("ההרשמה הצליחה"),
         "subscription": MessageLookupByLibrary.simpleMessage("מִנוּי"),
         "subtotal": MessageLookupByLibrary.simpleMessage("סכום ביניים"),
         "successfullyPaid": MessageLookupByLibrary.simpleMessage("שולם בהצלחה"),
@@ -716,21 +746,32 @@ class MessageLookup extends MessageLookupByLibrary {
         "update": MessageLookupByLibrary.simpleMessage("עדכון"),
         "updateContact": MessageLookupByLibrary.simpleMessage("עדכן איש קשר"),
         "updateNow": MessageLookupByLibrary.simpleMessage("עדכן כעת"),
+        "updatePassword": MessageLookupByLibrary.simpleMessage("עדכן סיסמה"),
         "updateProduct": MessageLookupByLibrary.simpleMessage("עדכן את המוצר"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("עדכן את הפרופיל שלך"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("עדכן את הסיסמה שלך"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "עדכן את הפרופיל שלך כדי לחבר את הלקוח שלך בצורה טובה יותר"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("עדכן את המנוי שלך"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("עודכן בהצלחה"),
         "updating": MessageLookupByLibrary.simpleMessage("מעודכן..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("שדרג עכשיו"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "כותרת המשתמש לא יכולה להיות ריקה"),
+        "userCreationFailed":
+            MessageLookupByLibrary.simpleMessage("יצירת המשתמש נכשלה"),
+        "userDeletedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("המשתמש נמחק בהצלחה"),
         "userRole": MessageLookupByLibrary.simpleMessage("תפקיד משתמש"),
         "userRoleDetails":
             MessageLookupByLibrary.simpleMessage("פרטי תפקיד משתמש"),
         "userTitle": MessageLookupByLibrary.simpleMessage("כותרת משתמש"),
+        "userUpdateFailed":
+            MessageLookupByLibrary.simpleMessage("עדכון המשתמש נכשל"),
         "vat": MessageLookupByLibrary.simpleMessage("מע\"מ"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("מע\"מ אינו חל"),

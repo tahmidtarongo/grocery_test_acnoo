@@ -52,6 +52,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "addToCart": MessageLookupByLibrary.simpleMessage("添加到购物车"),
         "addUnit": MessageLookupByLibrary.simpleMessage("添加单位"),
         "addUserRole": MessageLookupByLibrary.simpleMessage("添加用户角色"),
+        "addedSuccessful": MessageLookupByLibrary.simpleMessage("添加成功"),
         "addedToCart": MessageLookupByLibrary.simpleMessage("已添加到购物车"),
         "adding": MessageLookupByLibrary.simpleMessage("添加中.."),
         "address": MessageLookupByLibrary.simpleMessage("地址"),
@@ -64,6 +65,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("已经加入"),
         "alreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage("已经有账户？"),
         "amount": MessageLookupByLibrary.simpleMessage("数量"),
+        "anErrorOccurred": MessageLookupByLibrary.simpleMessage("发生错误"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage("短信将发送到以下号码："),
         "android": MessageLookupByLibrary.simpleMessage("安卓和iOS应用支持"),
@@ -217,6 +219,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterName": MessageLookupByLibrary.simpleMessage("请输入名称"),
         "enterNote": MessageLookupByLibrary.simpleMessage("输入备注"),
         "enterOpeningBalance": MessageLookupByLibrary.simpleMessage("输入初始余额"),
+        "enterProductCode": MessageLookupByLibrary.simpleMessage("输入产品代码"),
         "enterProductName": MessageLookupByLibrary.simpleMessage("输入产品名称"),
         "enterPurchasePrice": MessageLookupByLibrary.simpleMessage("输入采购价格"),
         "enterQuantity": MessageLookupByLibrary.simpleMessage("输入数量"),
@@ -230,18 +233,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterValidOTP": MessageLookupByLibrary.simpleMessage("请输入有效的验证码"),
         "enterWeight": MessageLookupByLibrary.simpleMessage("输入重量"),
         "enterWholesalePrice": MessageLookupByLibrary.simpleMessage("输入批发价格"),
+        "enterYourConfirmPassword":
+            MessageLookupByLibrary.simpleMessage("输入确认密码"),
         "enterYourEmailAddress":
             MessageLookupByLibrary.simpleMessage("请输入您的电子邮件地址"),
         "enterYourFullName": MessageLookupByLibrary.simpleMessage("请输入您的全名"),
         "enterYourName": MessageLookupByLibrary.simpleMessage("请输入您的姓名"),
+        "enterYourPassword": MessageLookupByLibrary.simpleMessage("输入您的密码"),
         "enterYourPhoneNumber":
             MessageLookupByLibrary.simpleMessage("请输入您的电话号码"),
+        "error": MessageLookupByLibrary.simpleMessage("错误"),
         "expense": MessageLookupByLibrary.simpleMessage("支出"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("费用类别"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("费用日期"),
         "expenseFor": MessageLookupByLibrary.simpleMessage("费用为"),
         "expenseReport": MessageLookupByLibrary.simpleMessage("开支报告"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser": MessageLookupByLibrary.simpleMessage("删除用户失败"),
         "failedToGetPlatformVersion":
             MessageLookupByLibrary.simpleMessage("获取平台版本失败。"),
         "fashion": MessageLookupByLibrary.simpleMessage("时尚"),
@@ -272,6 +280,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "image": MessageLookupByLibrary.simpleMessage("图像"),
         "income": MessageLookupByLibrary.simpleMessage("收入"),
         "incomeCategories": MessageLookupByLibrary.simpleMessage("收入类别"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("收入日期"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("收入为"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("收入报告"),
         "instagram": MessageLookupByLibrary.simpleMessage("Instagram"),
@@ -342,6 +351,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "noRoleFound": MessageLookupByLibrary.simpleMessage("未找到用户角色"),
         "noSupplier": MessageLookupByLibrary.simpleMessage("没有可用的供应商"),
         "noTransaction": MessageLookupByLibrary.simpleMessage("无交易"),
+        "noWiFiConnection": MessageLookupByLibrary.simpleMessage("没有Wi-Fi连接"),
         "notActiveUser": MessageLookupByLibrary.simpleMessage("非活跃用户"),
         "notFound": MessageLookupByLibrary.simpleMessage("未找到"),
         "note": MessageLookupByLibrary.simpleMessage("笔记"),
@@ -360,6 +370,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("派对"),
         "partyList": MessageLookupByLibrary.simpleMessage("政党名单"),
         "password": MessageLookupByLibrary.simpleMessage("密码"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage("密码和确认密码不匹配"),
         "passwordCannotBeEmpty": MessageLookupByLibrary.simpleMessage("密码不能为空"),
         "passwordsDoNotMatch": MessageLookupByLibrary.simpleMessage("密码不匹配"),
         "payForSubscribe": MessageLookupByLibrary.simpleMessage("支付订阅费用"),
@@ -383,6 +395,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "pickStartDate": MessageLookupByLibrary.simpleMessage("选择开始日期"),
         "plan": MessageLookupByLibrary.simpleMessage("计划"),
         "pleaseAddQuantity": MessageLookupByLibrary.simpleMessage("请添加数量"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage("请检查您的互联网连接并重试"),
         "pleaseConnectThePrinterFirst":
             MessageLookupByLibrary.simpleMessage("请先连接打印机"),
         "pleaseEnterABiggerPassword":
@@ -425,6 +439,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("请选择费用类别"),
         "pleaseUseTheValidPurchaseCodeToUseTheApp":
             MessageLookupByLibrary.simpleMessage("请使用有效的购买代码以使用此应用程序"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("提供支持"),
         "premiumCustomerSupport":
             MessageLookupByLibrary.simpleMessage("安卓和iOS应用支持"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("保费计划"),
@@ -454,6 +469,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseAlarm": MessageLookupByLibrary.simpleMessage("购买提醒"),
         "purchaseBy": MessageLookupByLibrary.simpleMessage("购买者："),
         "purchaseConfirmed": MessageLookupByLibrary.simpleMessage("购买已确认"),
+        "purchaseCreationFailed":
+            MessageLookupByLibrary.simpleMessage("采购创建失败"),
         "purchaseDetails": MessageLookupByLibrary.simpleMessage("采购详情"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("采购清单"),
         "purchaseNow": MessageLookupByLibrary.simpleMessage("立即购买"),
@@ -486,6 +503,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "reset": MessageLookupByLibrary.simpleMessage("通过电子邮件或手机号码重置密码"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("重置密码以恢复并登录您的账户"),
         "retailer": MessageLookupByLibrary.simpleMessage("零售商"),
+        "retry": MessageLookupByLibrary.simpleMessage("重试"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("退货金额"),
         "riead": MessageLookupByLibrary.simpleMessage("Riead"),
         "sale": MessageLookupByLibrary.simpleMessage("销售"),
@@ -493,6 +511,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("销售价格"),
         "sales": MessageLookupByLibrary.simpleMessage("销售"),
         "salesBy": MessageLookupByLibrary.simpleMessage("销售者："),
+        "salesCreationFailed": MessageLookupByLibrary.simpleMessage("销售创建失败"),
         "salesDetails": MessageLookupByLibrary.simpleMessage("销售明细"),
         "salesList": MessageLookupByLibrary.simpleMessage("销售列表"),
         "salesPrice": MessageLookupByLibrary.simpleMessage("销售价格"),
@@ -559,6 +578,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("库存："),
         "subTotal": MessageLookupByLibrary.simpleMessage("小计"),
         "submit": MessageLookupByLibrary.simpleMessage("提交"),
+        "subscribeCreationFailed":
+            MessageLookupByLibrary.simpleMessage("订阅创建失败"),
+        "subscribeSuccessful": MessageLookupByLibrary.simpleMessage("订阅成功"),
         "subscription": MessageLookupByLibrary.simpleMessage("订阅"),
         "subtotal": MessageLookupByLibrary.simpleMessage("小计"),
         "successfullyPaid": MessageLookupByLibrary.simpleMessage("成功支付"),
@@ -612,19 +634,26 @@ class MessageLookup extends MessageLookupByLibrary {
         "update": MessageLookupByLibrary.simpleMessage("更新"),
         "updateContact": MessageLookupByLibrary.simpleMessage("更新联系人"),
         "updateNow": MessageLookupByLibrary.simpleMessage("现在更新"),
+        "updatePassword": MessageLookupByLibrary.simpleMessage("更新密码"),
         "updateProduct": MessageLookupByLibrary.simpleMessage("更新产品"),
         "updateProfile": MessageLookupByLibrary.simpleMessage("更新您的个人资料"),
+        "updateYourPassword": MessageLookupByLibrary.simpleMessage("更新您的密码"),
         "updateYourProfile":
             MessageLookupByLibrary.simpleMessage("更新您的个人资料，以便给客户留下更好的印象"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("更新您的订阅"),
+        "updatedSuccessfully": MessageLookupByLibrary.simpleMessage("更新成功"),
         "updating": MessageLookupByLibrary.simpleMessage("更新中..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("立即升级"),
         "useTitleCanNotBeEmpty":
             MessageLookupByLibrary.simpleMessage("用户标题不能为空"),
+        "userCreationFailed": MessageLookupByLibrary.simpleMessage("用户创建失败"),
+        "userDeletedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("用户删除成功"),
         "userRole": MessageLookupByLibrary.simpleMessage("用户角色"),
         "userRoleDetails": MessageLookupByLibrary.simpleMessage("用户角色详情"),
         "userTitle": MessageLookupByLibrary.simpleMessage("用户标题"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage("用户更新失败"),
         "vat": MessageLookupByLibrary.simpleMessage("增值税"),
         "vatDoesNOtApply": MessageLookupByLibrary.simpleMessage("不适用增值税"),
         "verification": MessageLookupByLibrary.simpleMessage("验证"),

@@ -18,10 +18,14 @@ class _TestNumericAxisChartState extends State<TestNumericAxisChart> {
     ChartData(lang.S.current.thurs, 20000, 10000),
     ChartData(lang.S.current.fri, 25000, 20000),
   ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // floatingActionButton: FloatingActionButton(onPressed: (){
+      //   setState(() {
+      //     chartData.insert(0, "hello world")
+      //   });
+      // }),
       body: Center(
         child: Container(
           color: Colors.white,

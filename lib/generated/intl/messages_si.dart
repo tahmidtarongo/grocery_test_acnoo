@@ -71,6 +71,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("ඒකකය එක් කරන්න"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("පරිශීලක භාවිත තරඟ එකතුව"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("සාර්ථකව එකතු කරන ලදි"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("කාර්ට්ටු එකතු කරන ලදී"),
         "adding": MessageLookupByLibrary.simpleMessage("එකතු කරමින්"),
@@ -86,6 +88,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("දැනටමත් ගිණුමක් තිබේද?"),
         "amount": MessageLookupByLibrary.simpleMessage("මුදල්"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("කිසිඳු දෝෂයක් ඇති විය"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS එක පහත සඳහන් අංකයට යවනු ලැබේ:"),
@@ -290,6 +294,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("සටහන ඇතුළත් කරන්න"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("ආරම්භක ශේෂය ඇතුළත් කරන්න"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("නිෂ්පාදන කේතය ඇතුළත් කරන්න"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("නිෂ්පාදන නාමය ඇතුළත් කරන්න"),
         "enterPurchasePrice": MessageLookupByLibrary.simpleMessage(
@@ -314,20 +320,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("බර ඇතුළත් කරන්න"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("හොල්සේල් මිල ඇතුළත් කරන්න"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "ඔබේ තහවුරුකළ මුරපදය ඇතුළත් කරන්න"),
         "enterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
             "ඔබගේ විද්‍යුත් තැපැල් ලිපිනය ඇතුළත් කරන්න"),
         "enterYourFullName": MessageLookupByLibrary.simpleMessage(
             "ඔබේ සම්පූර්ණ නාමය ඇතුළත් කරන්න"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("ඔබගේ නම ඇතුළත් කරන්න"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("ඔබේ මුරපදය ඇතුළත් කරන්න"),
         "enterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "ඔබගේ දුරකථන අංකය ඇතුළත් කරන්න"),
+        "error": MessageLookupByLibrary.simpleMessage("දෝෂය"),
         "expense": MessageLookupByLibrary.simpleMessage("වියදම"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("අයිතම කාණ්ඩයන්"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("අයිතමය දිනය"),
         "expenseFor": MessageLookupByLibrary.simpleMessage("අයිතමය සඳහා"),
         "expenseReport": MessageLookupByLibrary.simpleMessage("අයිතම වාර්තාව"),
         "facebook": MessageLookupByLibrary.simpleMessage("ෆේස්බුක්"),
+        "failedToDeleteUser": MessageLookupByLibrary.simpleMessage(
+            "පරිශීලකයා මකා දැමීමට අසාර්ථකයි"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "වෙබ් අඩවියේ අනුවාදය ලබා ගැනීමට අසාර්ථකයි."),
         "fashion": MessageLookupByLibrary.simpleMessage("අනුරූපනය"),
@@ -366,6 +379,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("ආදායම"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("ආදායම් කාණ්ඩ"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("ආදායම් දිනය"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("ආදායම් සඳහා"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("ආදායම් වාර්තාව"),
         "instagram": MessageLookupByLibrary.simpleMessage("ඉන්ස්ටග්‍රෑම්"),
@@ -444,6 +458,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ප්‍රයෝජනවත් සපයන්නේ නැත"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("කිසිදු ගනුදෙනුවක් නැත"),
+        "noWiFiConnection": MessageLookupByLibrary.simpleMessage(
+            "කිසිඳු Wi-Fi සම්බන්ධතාවක් නැත"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("ක්‍රියාත්මක නොවන පරිශීලක"),
         "notFound": MessageLookupByLibrary.simpleMessage("ගොඩනැගූ නෑ"),
@@ -464,6 +480,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("පක්ෂ"),
         "partyList": MessageLookupByLibrary.simpleMessage("පාර්ටියෝ ලැයිස්තුව"),
         "password": MessageLookupByLibrary.simpleMessage("මුරපදය"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "මුරපදය සහ තහවුරුකළ මුරපදය නොගැලපේ"),
         "passwordCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("මුරපදය හිස් විය නොහැක"),
         "passwordsDoNotMatch":
@@ -503,6 +522,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("යෝජනා"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("කරුණාකර ප්‍රමාණය එකතු කරන්න"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "කරුණාකර ඔබේ ඉන්ටර්නෙට් සම්බන්ධතාවය පරීක්ෂා කරන්න සහ නැවත උත්සාහ කරන්න"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "කරුණාකර ප්‍රින්ටරය පළමුව සම්බනවීම"),
         "pleaseEnterABiggerPassword": MessageLookupByLibrary.simpleMessage(
@@ -553,6 +575,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pleaseUseTheValidPurchaseCodeToUseTheApp":
             MessageLookupByLibrary.simpleMessage(
                 "කරුණාකර යෙදුම භාවිතා කිරීමට වලංගු මිලදී ගන්නා කේතය භාවිතා කරන්න"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("දැන්වීම් විසින්"),
         "premiumCustomerSupport":
             MessageLookupByLibrary.simpleMessage("Android සහ iOS යෙදුම් සහාය"),
         "premiumPlan":
@@ -590,6 +613,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("මිලදී ගත්තේ:"),
         "purchaseConfirmed": MessageLookupByLibrary.simpleMessage(
             "විකුණු සියල්ලක් සත්‍යාපනය කරන ලදි"),
+        "purchaseCreationFailed":
+            MessageLookupByLibrary.simpleMessage("නොමිලේ සාදා ගැනීම අසාර්ථකයි"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("මිලදී ගැනීමේ විස්තර"),
         "purchaseList":
@@ -631,6 +656,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "ඔබගේ ගිණුමට ප්‍රතිසංස්කරණය කිරීමට මුරපදය යළි පිහිටුවන්න"),
         "retailer": MessageLookupByLibrary.simpleMessage("කුළියේ වෙළඳපොළවලින්"),
+        "retry": MessageLookupByLibrary.simpleMessage("පැමිණිල්ල"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("සෙවුම් මුදල"),
         "riead": MessageLookupByLibrary.simpleMessage("රිඩ්"),
         "sale": MessageLookupByLibrary.simpleMessage("විකුණුම්"),
@@ -638,6 +664,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("මිලියනය කිරීමේ මිල"),
         "sales": MessageLookupByLibrary.simpleMessage("විකුණු"),
         "salesBy": MessageLookupByLibrary.simpleMessage("විකුණුවේ:"),
+        "salesCreationFailed":
+            MessageLookupByLibrary.simpleMessage("අලෙවි සාදා ගැනීම අසාර්ථකයි"),
         "salesDetails": MessageLookupByLibrary.simpleMessage("විකුණුම් විස්තර"),
         "salesList": MessageLookupByLibrary.simpleMessage("විකිණීම් ලයිස්තුව"),
         "salesPrice": MessageLookupByLibrary.simpleMessage("අලෙවි මිල"),
@@ -724,6 +752,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("වෙළඳපොළ: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("අඩු එකතුව"),
         "submit": MessageLookupByLibrary.simpleMessage("ඉදිරිපත් කරන්න"),
+        "subscribeCreationFailed":
+            MessageLookupByLibrary.simpleMessage("දුරකථන සාදා ගැනීම අසාර්ථකයි"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("දුරකථනය සාර්ථකයි"),
         "subscription": MessageLookupByLibrary.simpleMessage("දැන්වීම"),
         "subtotal": MessageLookupByLibrary.simpleMessage("උප-මුළු"),
         "successfullyPaid":
@@ -781,24 +813,36 @@ class MessageLookup extends MessageLookupByLibrary {
             "සම්බන්ධතාවය යාවත්කාලීන කරන්න"),
         "updateNow":
             MessageLookupByLibrary.simpleMessage("වියදමක් දැනටමත් වෙනස් කරන්න"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("මුරපදය යාවත්කාලීන කරන්න"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("නිෂ්පාතය යාවත්කාලීන කරන්න"),
         "updateProfile": MessageLookupByLibrary.simpleMessage(
             "ඔබගේ විස්තර යාවත්කාලීන කරන්න"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("ඔබේ මුරපදය යාවත්කාලීන කරන්න"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "ඔබේ පැතිකඩ යාවත්කාලීන කරන්න, ඔබගේ ගනුදෙනුකරුවන්ට හොඳ ප්‍රතිචාරයක් ලබා දෙන්න"),
         "updateYourSubscription": MessageLookupByLibrary.simpleMessage(
             "ඔබගේ අනුමත කිරීම යාවත්කාලීන කරන්න"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("යාවත්කාලීන විය"),
         "updating":
             MessageLookupByLibrary.simpleMessage("යාවත්කාලීන කරමින්..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("මෙහි වර්ධනය කරන්න"),
         "useTitleCanNotBeEmpty":
             MessageLookupByLibrary.simpleMessage("භාවිතා නාමය හිස් විය නොහැක"),
+        "userCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "පරිශීලක සාදා ගැනීම අසාර්ථක විය"),
+        "userDeletedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "පරිශීලකයා සාර්ථකව මකා දැමිය හැක"),
         "userRole":
             MessageLookupByLibrary.simpleMessage("පරිශීලක භාවිතා කිරීම"),
         "userRoleDetails":
             MessageLookupByLibrary.simpleMessage("පරිශීලක භූමිකා විස්තර"),
         "userTitle": MessageLookupByLibrary.simpleMessage("පරිශීලක නාමය"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "පරිශීලක යාවත්කාලීන කිරීම අසාර්ථකයි"),
         "vat": MessageLookupByLibrary.simpleMessage("VAT"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("VAT වලංගු නොවේ"),

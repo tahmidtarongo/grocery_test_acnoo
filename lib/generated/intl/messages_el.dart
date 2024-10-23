@@ -69,6 +69,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("Προσθήκη μονάδας"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Προσθήκη Ρόλου Χρήστη"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("Προστέθηκε με επιτυχία"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("Προστέθηκε στο καλάθι"),
         "adding": MessageLookupByLibrary.simpleMessage("Προσθήκη.."),
@@ -84,6 +86,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Έχετε ήδη λογαριασμό;"),
         "amount": MessageLookupByLibrary.simpleMessage("Ποσό"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("Παρουσιάστηκε σφάλμα"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "Θα σταλεί ένα SMS στον εξής αριθμό: "),
@@ -301,6 +305,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("Εισάγετε Σημείωση"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("Εισάγετε το αρχικό υπόλοιπο"),
+        "enterProductCode": MessageLookupByLibrary.simpleMessage(
+            "Εισάγετε τον Κωδικό Προϊόντος"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("Εισάγετε το όνομα προϊόντος"),
         "enterPurchasePrice":
@@ -323,14 +329,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("Εισάγετε Βάρος"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("Εισάγετε τιμή χονδρικής"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Εισάγετε τον επιβεβαιωτικό σας κωδικό"),
         "enterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
             "Εισαγάγετε τη διεύθυνση email σας"),
         "enterYourFullName": MessageLookupByLibrary.simpleMessage(
             "Εισάγετε το πλήρες όνομα σας"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("Εισαγάγετε το όνομά σας"),
+        "enterYourPassword": MessageLookupByLibrary.simpleMessage(
+            "Εισάγετε τον κωδικό πρόσβασής σας"),
         "enterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Εισαγάγετε τον αριθμό τηλεφώνου σας"),
+        "error": MessageLookupByLibrary.simpleMessage("Σφάλμα"),
         "expense": MessageLookupByLibrary.simpleMessage("Έξοδο"),
         "expenseCat":
             MessageLookupByLibrary.simpleMessage("Κατηγορίες δαπανών"),
@@ -339,6 +350,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenseFor": MessageLookupByLibrary.simpleMessage("Έξοδα για"),
         "expenseReport": MessageLookupByLibrary.simpleMessage("ΑΝΑΦΟΡΑ ΕΞΟΔΩΝ"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser":
+            MessageLookupByLibrary.simpleMessage("Αποτυχία διαγραφής χρήστη"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Αποτυχία λήψης έκδοσης πλατφόρμας."),
         "fashion": MessageLookupByLibrary.simpleMessage("Μόδα"),
@@ -377,6 +390,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("Εισόδημα"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("Κατηγορίες εσόδων"),
+        "incomeDate":
+            MessageLookupByLibrary.simpleMessage("Ημερομηνία Εισοδήματος"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("Έσοδα για"),
         "incomeReport":
             MessageLookupByLibrary.simpleMessage("Αναφορά Εισοδήματος"),
@@ -472,6 +487,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Δεν υπάρχει διαθέσιμος προμηθευτής"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("Καμία Συναλλαγή"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Δεν υπάρχει σύνδεση Wi-Fi"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("Μη ενεργός χρήστης"),
         "notFound": MessageLookupByLibrary.simpleMessage("Δεν Βρέθηκε"),
@@ -493,6 +510,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("Συμβαλλόμενα Μέρη"),
         "partyList": MessageLookupByLibrary.simpleMessage("Λίστα κομμάτων"),
         "password": MessageLookupByLibrary.simpleMessage("Κωδικός πρόσβασης"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "Ο κωδικός πρόσβασης και ο επιβεβαιωτικός κωδικός δεν ταιριάζουν"),
         "passwordCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Ο κωδικός δεν μπορεί να είναι κενός"),
         "passwordsDoNotMatch":
@@ -531,6 +551,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("Σχέδιο"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("Παρακαλώ προσθέστε ποσότητα"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Ελέγξτε τη σύνδεση στο Διαδίκτυο και δοκιμάστε ξανά"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "Παρακαλώ συνδέστε πρώτα τον εκτυπωτή"),
         "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
@@ -585,6 +608,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Παρακαλώ χρησιμοποιήστε τον έγκυρο κωδικό αγοράς για να χρησιμοποιήσετε την εφαρμογή"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Υποστηρίζεται από Acnoo"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("Powered By"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "Υποστήριξη Εφαρμογών Android & iOS"),
         "premiumPlan":
@@ -624,6 +648,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("Αγοράστηκε από:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Επιβεβαίωση αγοράς"),
+        "purchaseCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Αποτυχία δημιουργίας αγοράς"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("Λεπτομέρειες Αγοράς"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("Λίστα αγορών"),
@@ -668,6 +694,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "Επαναφέρετε τον κωδικό σας για αποκατάσταση και σύνδεση"),
         "retailer": MessageLookupByLibrary.simpleMessage("Εμπορος λιανικής"),
+        "retry": MessageLookupByLibrary.simpleMessage("Δοκιμάστε ξανά"),
         "retur": MessageLookupByLibrary.simpleMessage("Επιστροφή"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("Ποσό Επιστροφής"),
         "riead": MessageLookupByLibrary.simpleMessage("Διαβάστε"),
@@ -676,6 +703,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("Τιμή πώλησης"),
         "sales": MessageLookupByLibrary.simpleMessage("Πωλήσεις"),
         "salesBy": MessageLookupByLibrary.simpleMessage("Πωλήθηκε από:"),
+        "salesCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Αποτυχία δημιουργίας πωλήσεων"),
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("Στοιχεία Πωλήσεων"),
         "salesList": MessageLookupByLibrary.simpleMessage("Λίστα Πωλήσεων"),
@@ -766,6 +795,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("Αποθέματα: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("ΜΕΡΙΚΟ ΣΥΝΟΛΟ"),
         "submit": MessageLookupByLibrary.simpleMessage("Υποβολή"),
+        "subscribeCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Αποτυχία δημιουργίας συνδρομής"),
+        "subscribeSuccessful": MessageLookupByLibrary.simpleMessage(
+            "Η συνδρομή έγινε με επιτυχία"),
         "subscription": MessageLookupByLibrary.simpleMessage("Συνδρομή"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Μερικό Σύνολο"),
         "successfullyPaid":
@@ -834,22 +867,34 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("Ενημέρωση επαφής"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Ενημέρωση τώρα"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("Ενημέρωση Κωδικού Πρόσβασης"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("Ενημέρωση προϊόντος"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("Ενημερώστε το προφίλ σας"),
+        "updateYourPassword": MessageLookupByLibrary.simpleMessage(
+            "Ενημερώστε τον κωδικό πρόσβασής σας"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "Ενημερώστε το προφίλ σας για καλύτερη σύνδεση με τους πελάτες σας"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("Ενημερώστε τη συνδρομή σας"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Ενημερώθηκε με επιτυχία"),
         "updating": MessageLookupByLibrary.simpleMessage("Ενημέρωση..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("Αναβάθμιση Τώρα"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Ο τίτλος χρήστη δεν μπορεί να είναι κενός"),
+        "userCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Η δημιουργία χρήστη απέτυχε"),
+        "userDeletedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "Ο χρήστης διαγράφηκε με επιτυχία"),
         "userRole": MessageLookupByLibrary.simpleMessage("Ρόλος χρήστη"),
         "userRoleDetails":
             MessageLookupByLibrary.simpleMessage("Λεπτομέρειες Ρόλου Χρήστη"),
         "userTitle": MessageLookupByLibrary.simpleMessage("Τίτλος Χρήστη"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "Η ενημέρωση του χρήστη απέτυχε"),
         "vat": MessageLookupByLibrary.simpleMessage("ΦΠΑ"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("Ο ΦΠΑ δεν ισχύει"),

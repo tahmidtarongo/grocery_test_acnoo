@@ -65,6 +65,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("បន្ថែមឯកតា"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("បន្ថែមតួនាទីអ្នកប្រើប្រាស់"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("បន្ថែមដោយជោគជ័យ"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("បានបន្ថែមទៅកាន់កណ្តុរដុំ"),
         "adding": MessageLookupByLibrary.simpleMessage("កំពុងបន្ថែម.."),
@@ -79,6 +81,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("មានគណនីរួចហើយ?"),
         "amount": MessageLookupByLibrary.simpleMessage("ចំនួនទឹកប្រាក់"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("មានកំហុសកើតឡើង"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "សារ SMS នឹងត្រូវបញ្ជូនទៅលេខដូចខាងក្រោម:"),
@@ -130,7 +134,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("ជ្រើសរើសលក្ខណៈពិសេសរបស់អ្នក"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "លក្ខណៈពិសេសជា​ផ្នែក​សំខាន់​ដែលធ្វើ​ឲ្យ​កម្មវិធី PosPro ខូចចិត្តនៃ​ការដំណោះស្រាយ​ប្រចាំ​នៅពី​ដំណាក់​កាល​ចាស់ៗ។"),
+            "លក្ខណៈពិសេសជាផ្នែក សំខាន់ ែលធ្វើឲ្យ កម្មវិធី PosPro ខូចចិត្តនៃ​ការដំណោះស្រាយ​ប្រចាំ​នៅពី​ដំណាក់​កាល​ចាស់ៗ។"),
         "clarence": MessageLookupByLibrary.simpleMessage("ឃ្លានិង"),
         "clearAll": MessageLookupByLibrary.simpleMessage("សម្អាតទាំងអស់"),
         "clickToConnect":
@@ -278,6 +282,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("បញ្ចូលកំណត់ត្រា"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("បញ្ចូលមូលបត្រចាប់ផ្តើម"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("បញ្ចូលកូដផលិតផល"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("បញ្ចូលឈ្មោះផលិតផល"),
         "enterPurchasePrice":
@@ -298,20 +304,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("បញ្ចូលទម្ងន់"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("បញ្ចូលតម្លៃលក់ដុំ"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "បញ្ចូលពាក្យសម្ងាត់បញ្ជាក់របស់អ្នក"),
         "enterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
             "បញ្ចូលអាសយដ្ឋានអ៊ីមែលរបស់អ្នក"),
         "enterYourFullName":
             MessageLookupByLibrary.simpleMessage("បញ្ចូលឈ្មោះពេញរបស់អ្នក"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("បញ្ចូលឈ្មោះរបស់អ្នក"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("បញ្ចូលពាក្យសម្ងាត់របស់អ្នក"),
         "enterYourPhoneNumber":
             MessageLookupByLibrary.simpleMessage("បញ្ចូលលេខទូរស័ព្ទរបស់អ្នក"),
+        "error": MessageLookupByLibrary.simpleMessage("កំហុស"),
         "expense": MessageLookupByLibrary.simpleMessage("ចំណាយ"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("ប្រភេទចំណាយ"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("កាលបរិច្ឆេទចំណាយ"),
         "expenseFor": MessageLookupByLibrary.simpleMessage("ការចំណាយសម្រាប់"),
         "expenseReport": MessageLookupByLibrary.simpleMessage("របាយការណ៍ចំណាយ"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser":
+            MessageLookupByLibrary.simpleMessage("បរាជ័យក្នុងការលុបអ្នកប្រើ"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "បរាជ័យក្នុងការទទួលបានកំណែវេទិកា។"),
         "fashion": MessageLookupByLibrary.simpleMessage("ម៉ូដ"),
@@ -348,6 +361,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "image": MessageLookupByLibrary.simpleMessage("រូបភាព"),
         "income": MessageLookupByLibrary.simpleMessage("ចំណូល"),
         "incomeCategories": MessageLookupByLibrary.simpleMessage("ប្រភេទចំណូល"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("កាលបរិច្ឆេទចំណូល"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("ចំណូលសម្រាប់"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("របាយការណ៍ចំណូល"),
         "instagram": MessageLookupByLibrary.simpleMessage("Instagram"),
@@ -431,6 +445,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("មិនមានអ្នកផ្គត់ផ្គង់ទេ។"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("គ្មានប្រតិបត្តិការ"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("គ្មានការតភ្ជាប់ Wi-Fi"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("អ្នកប្រើមិនសកម្ម"),
         "notFound": MessageLookupByLibrary.simpleMessage("មិនឃើញ"),
@@ -452,6 +468,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("ប្រតិបត្តិ"),
         "partyList": MessageLookupByLibrary.simpleMessage("បញ្ជីគណបក្ស"),
         "password": MessageLookupByLibrary.simpleMessage("ពាក្យសម្ងាត់"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "ពាក្យសម្ងាត់ និងពាក្យសម្ងាត់បញ្ជាក់មិនផ្គូផ្គងគ្នា"),
         "passwordCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("ពាក្យសម្ងាត់មិនអាចទទេបានទេ"),
         "passwordsDoNotMatch": MessageLookupByLibrary.simpleMessage(
@@ -489,6 +508,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("គម្រោង"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("សូមបន្ថែមបរិមាណ"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "សូមពិនិត្យការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នកហើយព្យាយាមម្តងទៀត"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "សូមភ្ជាប់​ម៉ាស៊ីន​បោះពុម្ភ​ជាមុន"),
         "pleaseEnterABiggerPassword": MessageLookupByLibrary.simpleMessage(
@@ -539,6 +561,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pleaseUseTheValidPurchaseCodeToUseTheApp":
             MessageLookupByLibrary.simpleMessage(
                 "សូមប្រើកូដទិញដែលមានសុពលភាពដើម្បីប្រើកម្មវិធី"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("កាន់ដោយ"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "ការគាំទ្រអំពីកម្មវិធី Android និង iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("គម្រោងពិសេស"),
@@ -573,6 +596,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("ទិញដោយ:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("ការទិញបានអនុម័ត"),
+        "purchaseCreationFailed":
+            MessageLookupByLibrary.simpleMessage("ការបង្កើតការជាវបានបរាជ័យ"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("ព័ត៌មានលម្អិតការទិញ"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("បញ្ជីទិញ"),
@@ -614,6 +639,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "កំណត់ពាក្យសម្ងាត់ឡើងវិញដើម្បីកែសម្រួលនិងចូលប្រើគណនីរបស់អ្នក"),
         "retailer": MessageLookupByLibrary.simpleMessage("អ្នកលក់រាយ"),
+        "retry": MessageLookupByLibrary.simpleMessage("ព្យាយាមម្តងទៀត"),
         "returnAmount":
             MessageLookupByLibrary.simpleMessage("ចំនួនទឹកប្រាក់ត្រឡប់មកវិញ"),
         "riead": MessageLookupByLibrary.simpleMessage("Riead"),
@@ -622,6 +648,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("តំលៃ​លក់"),
         "sales": MessageLookupByLibrary.simpleMessage("ការលក់"),
         "salesBy": MessageLookupByLibrary.simpleMessage("លក់ដោយ:"),
+        "salesCreationFailed":
+            MessageLookupByLibrary.simpleMessage("ការបង្កើតការលក់បានបរាជ័យ"),
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("ព័ត៌មានលម្អិតអំពីការលក់"),
         "salesList": MessageLookupByLibrary.simpleMessage("បញ្ជីការលក់"),
@@ -709,6 +737,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("សារជាត៖"),
         "subTotal": MessageLookupByLibrary.simpleMessage("សរុបរង"),
         "submit": MessageLookupByLibrary.simpleMessage("ដាក់ស្នើ"),
+        "subscribeCreationFailed":
+            MessageLookupByLibrary.simpleMessage("ការបង្កើតការជាវបានបរាជ័យ"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("ការជាវបានជោគជ័យ"),
         "subscription": MessageLookupByLibrary.simpleMessage("ការជាវ"),
         "subtotal": MessageLookupByLibrary.simpleMessage("សរុបរង"),
         "successfullyPaid":
@@ -769,25 +801,37 @@ class MessageLookup extends MessageLookupByLibrary {
             "ធ្វើបច្ចុប្បន្នភាពទំនាក់ទំនង"),
         "updateNow":
             MessageLookupByLibrary.simpleMessage("ធ្វើបច្ចុប្បន្នភាពឥឡូវនេះ"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("កែប្រែពាក្យសម្ងាត់"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("ធ្វើបច្ចុប្បន្នភាពផលិតផល"),
         "updateProfile": MessageLookupByLibrary.simpleMessage(
             "ធ្វើបច្ចុប្បន្នភាពប្រវត្តិរូបរបស់អ្នក។"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("កែប្រែពាក្យសម្ងាត់របស់អ្នក"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "ធ្វើបច្ចុប្បន្នភាពប្រវត្តិរូបរបស់អ្នកដើម្បីភ្ជាប់អតិថិជនរបស់អ្នកជាមួយការស្រស់ស្អាតបន្ថែមទៀត"),
         "updateYourSubscription": MessageLookupByLibrary.simpleMessage(
             "ធ្វើបច្ចុប្បន្នភាពការជាវរបស់អ្នក"),
+        "updatedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "បានធ្វើបច្ចុប្បន្នភាពដោយជោគជ័យ"),
         "updating":
             MessageLookupByLibrary.simpleMessage("កំពុងធ្វើបច្ចុប្បន្នភាព..."),
         "upgradeNow":
             MessageLookupByLibrary.simpleMessage("ធ្វើឱ្យទាន់សម័យឥឡូវនេះ"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "ចំណងជើងអ្នកប្រើមិនអាចទទេបានទេ"),
+        "userCreationFailed":
+            MessageLookupByLibrary.simpleMessage("ការបង្កើតអ្នកប្រើបរាជ័យ"),
+        "userDeletedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("អ្នកប្រើបានលុបដោយជោគជ័យ"),
         "userRole":
             MessageLookupByLibrary.simpleMessage("តួនាទីអ្នកប្រើប្រាស់"),
         "userRoleDetails":
             MessageLookupByLibrary.simpleMessage("ព័ត៌មានលម្អិតតួនាទីអ្នកប្រើ"),
         "userTitle": MessageLookupByLibrary.simpleMessage("ចំណងជើងអ្នកប្រើ"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "ការធ្វើបច្ចុប្បន្នភាពអ្នកប្រើបានបរាជ័យ"),
         "vat": MessageLookupByLibrary.simpleMessage("VAT"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("វ៉ាតមិនអនុវត្តន៍"),

@@ -581,7 +581,31 @@
   "sep": "Medi",
   "oct": "Hydref",
   "nov": "Tachwedd",
-  "dec": "Rhagfyr"
+  "dec": "Rhagfyr",
+  "incomeDate": "Dyddiad Incwm",
+  "enterProductCode": "Nodwch God y Cynnyrch",
+  "retry": "Dewiswch eto",
+  "addedSuccessful": "Ychwanegwyd yn llwyddiannus",
+  "poweredBy": "Cynhelir gan",
+  "updatePassword": "Diweddarwch y Cyfrinair",
+  "updateYourPassword": "Diweddarwch eich cyfrinair",
+  "enterYourConfirmPassword": "Nodwch eich cyfrinair cadarnhau",
+  "enterYourPassword": "Nodwch eich cyfrinair",
+  "passwordAndConfirmPasswordDoesNotMatch": "Nid yw'r cyfrinair a'r cyfrinair cadarnhau yn cyfateb",
+  "noWiFiConnection": "Dim Cysylltiad Wi-Fi",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Gwiriwch eich cysylltiad Rhyngrwyd a cheisiwch eto",
+  "userCreationFailed": "Methu â chreu defnyddiwr",
+  "userDeletedSuccessfully": "Defnyddiwr wedi'i ddileu'n llwyddiannus",
+  "failedToDeleteUser": "Methu â dileu defnyddiwr",
+  "error": "Gwall",
+  "updatedSuccessfully": "Diweddarwyd yn llwyddiannus",
+  "userUpdateFailed": "Methu â diweddaru defnyddiwr",
+  "subscribeSuccessful": "Cofrestrwyd yn llwyddiannus",
+  "subscribeCreationFailed": "Methu â chreu cofrestriad",
+  "anErrorOccurred": "Digwyddodd gwall",
+  "salesCreationFailed": "Methu â chreu gwerthiant",
+  "purchaseCreationFailed": "Methu â chreu pryniant"
+
 
 
 

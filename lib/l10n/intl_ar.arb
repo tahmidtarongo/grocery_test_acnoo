@@ -590,7 +590,31 @@
   "sep": "سبتمبر",
   "oct": "أكتوبر",
   "nov": "نوفمبر",
-  "dec": "ديسمبر"
+  "dec": "ديسمبر",
+  "incomeDate": "تاريخ الدخل",
+  "enterProductCode": "أدخل رمز المنتج",
+  "retry": "إعادة المحاولة",
+  "addedSuccessful": "تمت الإضافة بنجاح",
+  "poweredBy": "مدعوم بواسطة",
+  "updatePassword": "تحديث كلمة المرور",
+  "updateYourPassword": "قم بتحديث كلمة المرور الخاصة بك",
+  "enterYourConfirmPassword": "أدخل كلمة المرور المؤكدة الخاصة بك",
+  "enterYourPassword": "أدخل كلمة المرور الخاصة بك",
+  "passwordAndConfirmPasswordDoesNotMatch": "كلمة المرور وكلمة المرور المؤكدة لا تتطابق",
+  "noWiFiConnection": "لا يوجد اتصال Wi-Fi",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "يرجى التحقق من اتصال الإنترنت الخاص بك والمحاولة مرة أخرى",
+  "userCreationFailed": "فشل إنشاء المستخدم",
+  "userDeletedSuccessfully": "تم حذف المستخدم بنجاح",
+  "failedToDeleteUser": "فشل في حذف المستخدم",
+  "error": "خطأ",
+  "updatedSuccessfully": "تم التحديث بنجاح",
+  "userUpdateFailed": "فشل تحديث المستخدم",
+  "subscribeSuccessful": "تم الاشتراك بنجاح",
+  "subscribeCreationFailed": "فشل إنشاء الاشتراك",
+  "anErrorOccurred": "حدث خطأ",
+  "salesCreationFailed": "فشل إنشاء المبيعات",
+  "purchaseCreationFailed": "فشل إنشاء الشراء"
+
 
 
 

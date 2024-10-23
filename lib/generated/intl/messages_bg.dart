@@ -65,6 +65,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("Добави единица"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Добавете роля на потребител"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("Успешно добавено"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("Добавено в количката"),
         "adding": MessageLookupByLibrary.simpleMessage("Добавяне.."),
@@ -81,6 +83,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "amarSonarBangla":
             MessageLookupByLibrary.simpleMessage("Амар сонар бангла"),
         "amount": MessageLookupByLibrary.simpleMessage("Сума"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("Възникна грешка"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS ще бъде изпратен до следния номер: "),
@@ -295,6 +299,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("Въведете бележка"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("Въведете начално салдо"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("Въведете кода на продукта"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("Въведете име на продукта"),
         "enterPurchasePrice":
@@ -318,14 +324,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("Въведете тегло"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("Въведете цена на едро"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Въведете потвърдителната си парола"),
         "enterYourEmailAddress":
             MessageLookupByLibrary.simpleMessage("Въведете имейл адреса си"),
         "enterYourFullName":
             MessageLookupByLibrary.simpleMessage("Въведете пълното си име"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("Въведете името си"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("Въведете вашата парола"),
         "enterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Въведете телефонния си номер"),
+        "error": MessageLookupByLibrary.simpleMessage("Грешка"),
         "expense": MessageLookupByLibrary.simpleMessage("Разход"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("Категории разходи"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("Дата на разхода"),
@@ -333,6 +344,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenseReport":
             MessageLookupByLibrary.simpleMessage("Отчет за разходите"),
         "facebook": MessageLookupByLibrary.simpleMessage("Фейсбук"),
+        "failedToDeleteUser": MessageLookupByLibrary.simpleMessage(
+            "Неуспешно изтриване на потребителя"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Неуспешно получаване на версията на платформата."),
         "fashion": MessageLookupByLibrary.simpleMessage("Мода"),
@@ -370,6 +383,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("Приходи"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("Категории доходи"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("Дата на приходите"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("Доходи за"),
         "incomeReport":
             MessageLookupByLibrary.simpleMessage("Доклад за приходите"),
@@ -460,6 +474,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Няма наличен доставчик"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("Няма транзакции"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Няма Wi-Fi връзка"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("Неактивен потребител"),
         "notFound": MessageLookupByLibrary.simpleMessage("Не е намерен"),
@@ -482,6 +498,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("Страни"),
         "partyList": MessageLookupByLibrary.simpleMessage("Списък на страните"),
         "password": MessageLookupByLibrary.simpleMessage("Парола"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "Паролата и потвърдителната парола не съвпадат"),
         "passwordCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Паролата не може да е празна"),
         "passwordsDoNotMatch":
@@ -521,6 +540,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("План"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("Моля, добавете количество"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Моля, проверете интернет връзката си и опитайте отново"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "Моля, свържете принтера първо"),
         "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
@@ -575,6 +597,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Моля, използвайте валиден код за покупка, за да използвате приложението"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Предоставено от Acnoo"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("Поддържа"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "Премиум поддръжка на клиенти"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Премиум план"),
@@ -614,6 +637,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("Закупено от:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Покупката е потвърдена"),
+        "purchaseCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Създаването на покупка не успя"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("Детайли за покупката"),
         "purchaseList":
@@ -659,6 +684,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "Нулирайте паролата си, за да възстановите достъпа до акаунта си"),
         "retailer": MessageLookupByLibrary.simpleMessage("Търговец на дребно"),
+        "retry": MessageLookupByLibrary.simpleMessage("Опитайте отново"),
         "retur": MessageLookupByLibrary.simpleMessage("Връщане"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("Сума за връщане"),
         "riead": MessageLookupByLibrary.simpleMessage("Прочетено"),
@@ -668,6 +694,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("Цена на продажба"),
         "sales": MessageLookupByLibrary.simpleMessage("Продажби"),
         "salesBy": MessageLookupByLibrary.simpleMessage("Продадено от:"),
+        "salesCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Създаването на продажби не успя"),
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("Детайли за продажби"),
         "salesList":
@@ -761,6 +789,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("Наличности: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Обща сума"),
         "submit": MessageLookupByLibrary.simpleMessage("Изпратете"),
+        "subscribeCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Създаването на абонамент не успя"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("Абонирането беше успешно"),
         "subscription": MessageLookupByLibrary.simpleMessage("Абонамент"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Общо"),
         "successfullyPaid":
@@ -825,24 +857,36 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Актуализиране на контакта"),
         "updateNow":
             MessageLookupByLibrary.simpleMessage("Актуализирайте сега"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("Актуализирайте паролата"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("Актуализиране на продукта"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("Актуализирайте профила си"),
+        "updateYourPassword": MessageLookupByLibrary.simpleMessage(
+            "Актуализирайте вашата парола"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "Актуализирайте профила си, за да оставите по-добро впечатление на клиентите си"),
         "updateYourSubscription": MessageLookupByLibrary.simpleMessage(
             "Актуализирайте абонамента си"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Успешно актуализирано"),
         "updating": MessageLookupByLibrary.simpleMessage("Актуализиране..."),
         "upgradeNow":
             MessageLookupByLibrary.simpleMessage("Актуализирайте сега"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Заглавието на потребителя не може да бъде празно"),
+        "userCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Създаването на потребител не успя"),
+        "userDeletedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "Потребителят беше успешно изтрит"),
         "userRole": MessageLookupByLibrary.simpleMessage("Роля на потребителя"),
         "userRoleDetails": MessageLookupByLibrary.simpleMessage(
             "Детайли за роля на потребителя"),
         "userTitle":
             MessageLookupByLibrary.simpleMessage("Заглавие на потребителя"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "Актуализацията на потребителя не успя"),
         "vat": MessageLookupByLibrary.simpleMessage("ДДС"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("ДДС не се прилага"),

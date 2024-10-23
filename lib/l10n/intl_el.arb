@@ -589,7 +589,31 @@
   "sep": "Σεπ",
   "oct": "Οκτ",
   "nov": "Νοε",
-  "dec": "Δεκ"
+  "dec": "Δεκ",
+  "incomeDate": "Ημερομηνία Εισοδήματος",
+  "enterProductCode": "Εισάγετε τον Κωδικό Προϊόντος",
+  "retry": "Δοκιμάστε ξανά",
+  "addedSuccessful": "Προστέθηκε με επιτυχία",
+  "poweredBy": "Powered By",
+  "updatePassword": "Ενημέρωση Κωδικού Πρόσβασης",
+  "updateYourPassword": "Ενημερώστε τον κωδικό πρόσβασής σας",
+  "enterYourConfirmPassword": "Εισάγετε τον επιβεβαιωτικό σας κωδικό",
+  "enterYourPassword": "Εισάγετε τον κωδικό πρόσβασής σας",
+  "passwordAndConfirmPasswordDoesNotMatch": "Ο κωδικός πρόσβασης και ο επιβεβαιωτικός κωδικός δεν ταιριάζουν",
+  "noWiFiConnection": "Δεν υπάρχει σύνδεση Wi-Fi",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Ελέγξτε τη σύνδεση στο Διαδίκτυο και δοκιμάστε ξανά",
+  "userCreationFailed": "Η δημιουργία χρήστη απέτυχε",
+  "userDeletedSuccessfully": "Ο χρήστης διαγράφηκε με επιτυχία",
+  "failedToDeleteUser": "Αποτυχία διαγραφής χρήστη",
+  "error": "Σφάλμα",
+  "updatedSuccessfully": "Ενημερώθηκε με επιτυχία",
+  "userUpdateFailed": "Η ενημέρωση του χρήστη απέτυχε",
+  "subscribeSuccessful": "Η συνδρομή έγινε με επιτυχία",
+  "subscribeCreationFailed": "Αποτυχία δημιουργίας συνδρομής",
+  "anErrorOccurred": "Παρουσιάστηκε σφάλμα",
+  "salesCreationFailed": "Αποτυχία δημιουργίας πωλήσεων",
+  "purchaseCreationFailed": "Αποτυχία δημιουργίας αγοράς"
+
 
 
 

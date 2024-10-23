@@ -588,7 +588,31 @@
   "sep": "စက်",
   "oct": "အောက်",
   "nov": "နိုဝင်",
-  "dec": "ဒီဇင်"
+  "dec": "ဒီဇင်",
+  "incomeDate": "ဝင်ငွေနေ့",
+  "enterProductCode": "ကုန်ပစ္စည်းကုဒ် ထည့်ပါ",
+  "retry": "ထပ်ကြိုးစားပါ",
+  "addedSuccessful": "အောင်မြင်စွာ ထည့်သွင်းပြီး",
+  "poweredBy": "ဤအားဖြင့် လည်ပတ်သည်",
+  "updatePassword": "စကားဝှက် အသစ်ထည့်ပါ",
+  "updateYourPassword": "သင့်စကားဝှက်ကို အသစ်ပြင်ဆင်ပါ",
+  "enterYourConfirmPassword": "သင့်အတည်ပြုစကားဝှက်ထည့်ပါ",
+  "enterYourPassword": "သင့်စကားဝှက်ထည့်ပါ",
+  "passwordAndConfirmPasswordDoesNotMatch": "စကားဝှက်နှင့် အတည်ပြုစကားဝှက်မကိုက်ညီပါ",
+  "noWiFiConnection": "Wi-Fi ချိတ်ဆက်မှု မရှိပါ",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "ကျေးဇူးပြု၍ သင့်အင်တာနက်ချိတ်ဆက်မှုကို စစ်ဆေးပြီး ထပ်မံကြိုးစားပါ",
+  "userCreationFailed": "အသုံးပြုသူဖန်တီးမှု အောင်မြင်မှု မရှိပါ",
+  "userDeletedSuccessfully": "အသုံးပြုသူ အောင်မြင်စွာ ဖျက်ပြီး",
+  "failedToDeleteUser": "အသုံးပြုသူကို ဖျက်ရန် မအောင်မြင်ပါ",
+  "error": "အမှား",
+  "updatedSuccessfully": "အောင်မြင်စွာ အပ်ဒိတ် ပြုလုပ်ပြီး",
+  "userUpdateFailed": "အသုံးပြုသူ အပ်ဒိတ်မအောင်မြင်ပါ",
+  "subscribeSuccessful": "စာရင်းသွင်းခြင်း အောင်မြင်စွာ ပြီးဆုံးပါသည်",
+  "subscribeCreationFailed": "စာရင်းသွင်းမှု ဖန်တီးခြင်း မအောင်မြင်ပါ",
+  "anErrorOccurred": "အမှားတစ်ခု ဖြစ်ပျက်ခဲ့သည်",
+  "salesCreationFailed": "ရောင်းအားဖန်တီးမှု မအောင်မြင်ပါ",
+  "purchaseCreationFailed": "ဝယ်ယူမှုဖန်တီးမှု မအောင်မြင်ပါ"
+
 
 
 

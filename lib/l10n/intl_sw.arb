@@ -583,7 +583,31 @@
   "sep": "Sep",
   "oct": "Okt",
   "nov": "Nov",
-  "dec": "Des"
+  "dec": "Des",
+  "incomeDate": "Tarehe ya Mapato",
+  "enterProductCode": "Ingiza Nambari ya Bidhaa",
+  "retry": "Jaribu Tena",
+  "addedSuccessful": "Imeongezwa kwa Mafanikio",
+  "poweredBy": "Imewezeshwa na",
+  "updatePassword": "Sasisha Nywila",
+  "updateYourPassword": "Sasisha nywila yako",
+  "enterYourConfirmPassword": "Ingiza nywila yako ya kuthibitisha",
+  "enterYourPassword": "Ingiza nywila yako",
+  "passwordAndConfirmPasswordDoesNotMatch": "Nywila na nywila ya kuthibitisha hazifananishi",
+  "noWiFiConnection": "Hakuna Muunganisho wa Wi-Fi",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Tafadhali angalia muunganisho wako wa intaneti na ujaribu tena",
+  "userCreationFailed": "Kuunda mtumiaji kumeshindikana",
+  "userDeletedSuccessfully": "Mtumiaji ameondolewa kwa mafanikio",
+  "failedToDeleteUser": "Kushindwa kuondoa mtumiaji",
+  "error": "Kosa",
+  "updatedSuccessfully": "Imesasishwa kwa Mafanikio",
+  "userUpdateFailed": "Kusasisha mtumiaji kumeshindikana",
+  "subscribeSuccessful": "Uanachama umefanikiwa",
+  "subscribeCreationFailed": "Kuunda uanachama kumeshindikana",
+  "anErrorOccurred": "Kosa lilitokea",
+  "salesCreationFailed": "Kuunda mauzo kumeshindikana",
+  "purchaseCreationFailed": "Kuunda ununuzi kumeshindikana"
+
 
 
 

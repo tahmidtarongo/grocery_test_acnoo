@@ -588,7 +588,31 @@
   "sep": "Sep",
   "oct": "Okt",
   "nov": "Nov",
-  "dec": "Dez"
+  "dec": "Dez",
+  "incomeDate": "Eingangsdatum",
+  "enterProductCode": "Produktcode eingeben",
+  "retry": "Erneut versuchen",
+  "addedSuccessful": "Erfolgreich hinzugefügt",
+  "poweredBy": "Bereitgestellt von",
+  "updatePassword": "Passwort aktualisieren",
+  "updateYourPassword": "Ihr Passwort aktualisieren",
+  "enterYourConfirmPassword": "Bestätigungs-Passwort eingeben",
+  "enterYourPassword": "Ihr Passwort eingeben",
+  "passwordAndConfirmPasswordDoesNotMatch": "Passwort und Bestätigungs-Passwort stimmen nicht überein",
+  "noWiFiConnection": "Keine Wi-Fi-Verbindung",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut",
+  "userCreationFailed": "Benutzererstellung fehlgeschlagen",
+  "userDeletedSuccessfully": "Benutzer erfolgreich gelöscht",
+  "failedToDeleteUser": "Benutzer konnte nicht gelöscht werden",
+  "error": "Fehler",
+  "updatedSuccessfully": "Erfolgreich aktualisiert",
+  "userUpdateFailed": "Benutzeraktualisierung fehlgeschlagen",
+  "subscribeSuccessful": "Abonnement erfolgreich",
+  "subscribeCreationFailed": "Abonnementserstellung fehlgeschlagen",
+  "anErrorOccurred": "Ein Fehler ist aufgetreten",
+  "salesCreationFailed": "Verkaufserstellung fehlgeschlagen",
+  "purchaseCreationFailed": "Kaufserstellung fehlgeschlagen"
+
 
 
 

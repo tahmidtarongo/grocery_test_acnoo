@@ -223,7 +223,7 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                                 title: Text(
                                   lang.S.of(context).all,
                                   //'All',
-                                  style: TextStyle(fontSize: 14),
+                                  style: const TextStyle(fontSize: 14),
                                 ),
                               ),
                             ),
@@ -573,9 +573,11 @@ class _UserRoleDetailsState extends State<UserRoleDetails> {
                           controller: passwordController,
                           showCursor: true,
                           decoration: kInputDecoration.copyWith(
-                            labelText: 'Update Password',
+                            //labelText: 'Update Password',
+                            labelText: lang.S.of(context).updatePassword,
                             floatingLabelAlignment: FloatingLabelAlignment.start,
-                            hintText: 'Update your password',
+                           // hintText: 'Update your password',
+                            hintText: lang.S.of(context).updateYourPassword,
                             contentPadding: const EdgeInsets.all(10.0),
                             enabledBorder: const OutlineInputBorder(
                               borderRadius: BorderRadius.all(

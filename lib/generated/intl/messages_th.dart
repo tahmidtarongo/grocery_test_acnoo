@@ -62,6 +62,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "addToCart": MessageLookupByLibrary.simpleMessage("เพิ่มลงในตะกร้า"),
         "addUnit": MessageLookupByLibrary.simpleMessage("เพิ่มหน่วย"),
         "addUserRole": MessageLookupByLibrary.simpleMessage("เพิ่มบทบาทผู้ใช้"),
+        "addedSuccessful": MessageLookupByLibrary.simpleMessage("เพิ่มสำเร็จ"),
         "addedToCart": MessageLookupByLibrary.simpleMessage("เพิ่มลงในตะกร้า"),
         "adding": MessageLookupByLibrary.simpleMessage("กำลังเพิ่ม.."),
         "address": MessageLookupByLibrary.simpleMessage("ที่อยู่"),
@@ -75,6 +76,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("มีบัญชีอยู่แล้ว?"),
         "amount": MessageLookupByLibrary.simpleMessage("จำนวน"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("เกิดข้อผิดพลาด"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "จะส่ง SMS ไปยังหมายเลขต่อไปนี้:"),
@@ -276,6 +279,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("กรอกรายละเอียด"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("กรอกยอดเงินเปิด"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("กรอกรหัสผลิตภัณฑ์"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("กรอกชื่อสินค้า"),
         "enterPurchasePrice":
@@ -297,13 +302,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("กรอกน้ำหนัก"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("กรอกราคาส่ง"),
+        "enterYourConfirmPassword":
+            MessageLookupByLibrary.simpleMessage("กรอกพาสเวิร์ดยืนยันของคุณ"),
         "enterYourEmailAddress":
             MessageLookupByLibrary.simpleMessage("ป้อนที่อยู่อีเมลของคุณ"),
         "enterYourFullName":
             MessageLookupByLibrary.simpleMessage("กรอกชื่อเต็มของคุณ"),
         "enterYourName": MessageLookupByLibrary.simpleMessage("ป้อนชื่อของคุณ"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("กรอกพาสเวิร์ดของคุณ"),
         "enterYourPhoneNumber":
             MessageLookupByLibrary.simpleMessage("ป้อนหมายเลขโทรศัพท์ของคุณ"),
+        "error": MessageLookupByLibrary.simpleMessage("ข้อผิดพลาด"),
         "expense": MessageLookupByLibrary.simpleMessage("ค่าใช้จ่าย"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("หมวดค่าใช้จ่าย"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("วันที่ค่าใช้จ่าย"),
@@ -311,6 +321,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenseReport":
             MessageLookupByLibrary.simpleMessage("รายงานค่าใช้จ่าย"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser":
+            MessageLookupByLibrary.simpleMessage("ลบผู้ใช้ไม่สำเร็จ"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "ไม่สามารถดึงเวอร์ชันของแพลตฟอร์มได้"),
         "fashion": MessageLookupByLibrary.simpleMessage("แฟชั่น"),
@@ -345,6 +357,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("รายได้"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("หมวดหมู่รายได้"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("วันที่รายได้"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("รายได้สำหรับ"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("รายงานรายได้"),
         "instagram": MessageLookupByLibrary.simpleMessage("Instagram"),
@@ -427,6 +440,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noRoleFound": MessageLookupByLibrary.simpleMessage("ไม่พบบทบาทผู้ใช้"),
         "noSupplier": MessageLookupByLibrary.simpleMessage("ไม่มีซัพพลายเออร์"),
         "noTransaction": MessageLookupByLibrary.simpleMessage("ไม่มีธุรกรรม"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("ไม่มีการเชื่อมต่อ Wi-Fi"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("ผู้ใช้ที่ไม่ใช้งาน"),
         "notFound": MessageLookupByLibrary.simpleMessage("ไม่พบ"),
@@ -448,6 +463,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("ผู้รับประทาน"),
         "partyList": MessageLookupByLibrary.simpleMessage("รายชื่อภาคี"),
         "password": MessageLookupByLibrary.simpleMessage("รหัสผ่าน"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "พาสเวิร์ดและพาสเวิร์ดยืนยันไม่ตรงกัน"),
         "passwordCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("รหัสผ่านต้องไม่ว่างเปล่า"),
         "passwordsDoNotMatch":
@@ -488,6 +506,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("แผน"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("กรุณาเพิ่มจำนวน"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณและลองอีกครั้ง"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "โปรดเชื่อมต่อเครื่องพิมพ์ก่อน"),
         "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
@@ -542,6 +563,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "กรุณาใช้รหัสการซื้อที่ถูกต้องเพื่อใช้แอป"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("ขับเคลื่อนโดย Acnoo"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("ขับเคลื่อนโดย"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "การสนับสนุนแอป Android และ iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("แผนพรีเมียม"),
@@ -576,6 +598,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("ซื้อโดย:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("ยืนยันการซื้อ"),
+        "purchaseCreationFailed":
+            MessageLookupByLibrary.simpleMessage("การสร้างการซื้อไม่สำเร็จ"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("รายละเอียดการซื้อ"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("รายการซื้อ"),
@@ -617,6 +641,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "รีเซ็ตรหัสผ่านของคุณเพื่อกู้คืนและเข้าสู่บัญชีของคุณ"),
         "retailer": MessageLookupByLibrary.simpleMessage("ผู้ค้าปลีก"),
+        "retry": MessageLookupByLibrary.simpleMessage("ลองอีกครั้ง"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("จำนวนคืน"),
         "riead": MessageLookupByLibrary.simpleMessage("อ่าน"),
         "sale": MessageLookupByLibrary.simpleMessage("ขาย"),
@@ -624,6 +649,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("ลดราคา"),
         "sales": MessageLookupByLibrary.simpleMessage("การขาย"),
         "salesBy": MessageLookupByLibrary.simpleMessage("ขายโดย:"),
+        "salesCreationFailed":
+            MessageLookupByLibrary.simpleMessage("การสร้างการขายล้มเหลว"),
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("รายละเอียดการขาย"),
         "salesList": MessageLookupByLibrary.simpleMessage("รายการขาย"),
@@ -705,6 +732,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("สต๊อก: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("ยอดรวมย่อย"),
         "submit": MessageLookupByLibrary.simpleMessage("ส่ง"),
+        "subscribeCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "การสร้างการสมัครสมาชิกล้มเหลว"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("สมัครสมาชิกสำเร็จ"),
         "subscription": MessageLookupByLibrary.simpleMessage("การสมัครสมาชิก"),
         "subtotal": MessageLookupByLibrary.simpleMessage("ยอดรวมย่อย"),
         "successfullyPaid":
@@ -769,21 +800,33 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("อัปเดตผู้ติดต่อ"),
         "updateNow": MessageLookupByLibrary.simpleMessage("อัปเดตทันที"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("อัปเดตพาสเวิร์ด"),
         "updateProduct": MessageLookupByLibrary.simpleMessage("อัพเดทสินค้า"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("อัปเดตโปรไฟล์ของคุณ"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("อัปเดตพาสเวิร์ดของคุณ"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "อัปเดตโปรไฟล์ของคุณเพื่อเชื่อมต่อลูกค้าของคุณด้วยการแสดงผลที่ดีขึ้น"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("อัปเดตการสมัครสมาชิกของคุณ"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("อัปเดตสำเร็จ"),
         "updating": MessageLookupByLibrary.simpleMessage("กำลังอัปเดต..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("อัปเกรดตอนนี้"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "ชื่อผู้ใช้ไม่สามารถว่างเปล่า"),
+        "userCreationFailed":
+            MessageLookupByLibrary.simpleMessage("การสร้างผู้ใช้ล้มเหลว"),
+        "userDeletedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("ลบผู้ใช้สำเร็จ"),
         "userRole": MessageLookupByLibrary.simpleMessage("บทบาทของผู้ใช้"),
         "userRoleDetails":
             MessageLookupByLibrary.simpleMessage("รายละเอียดบทบาทผู้ใช้"),
         "userTitle": MessageLookupByLibrary.simpleMessage("ชื่อผู้ใช้"),
+        "userUpdateFailed":
+            MessageLookupByLibrary.simpleMessage("การอัปเดตผู้ใช้ล้มเหลว"),
         "vat": MessageLookupByLibrary.simpleMessage("VAT"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("VAT ไม่สามารถใช้ได้"),

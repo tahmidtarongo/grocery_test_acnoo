@@ -583,7 +583,31 @@
   "sep": "Tháng 9",
   "oct": "Tháng 10",
   "nov": "Tháng 11",
-  "dec": "Tháng 12"
+  "dec": "Tháng 12",
+  "incomeDate": "Ngày thu nhập",
+  "enterProductCode": "Nhập mã sản phẩm",
+  "retry": "Thử lại",
+  "addedSuccessful": "Thêm thành công",
+  "poweredBy": "Được phát triển bởi",
+  "updatePassword": "Cập nhật mật khẩu",
+  "updateYourPassword": "Cập nhật mật khẩu của bạn",
+  "enterYourConfirmPassword": "Nhập mật khẩu xác nhận của bạn",
+  "enterYourPassword": "Nhập mật khẩu của bạn",
+  "passwordAndConfirmPasswordDoesNotMatch": "Mật khẩu và mật khẩu xác nhận không khớp",
+  "noWiFiConnection": "Không có kết nối Wi-Fi",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Vui lòng kiểm tra kết nối Internet của bạn và thử lại",
+  "userCreationFailed": "Tạo người dùng thất bại",
+  "userDeletedSuccessfully": "Người dùng đã bị xóa thành công",
+  "failedToDeleteUser": "Xóa người dùng thất bại",
+  "error": "Lỗi",
+  "updatedSuccessfully": "Cập nhật thành công",
+  "userUpdateFailed": "Cập nhật người dùng thất bại",
+  "subscribeSuccessful": "Đăng ký thành công",
+  "subscribeCreationFailed": "Tạo đăng ký thất bại",
+  "anErrorOccurred": "Đã xảy ra lỗi",
+  "salesCreationFailed": "Tạo doanh thu thất bại",
+  "purchaseCreationFailed": "Tạo đơn hàng thất bại"
+
 
 
 

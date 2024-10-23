@@ -583,7 +583,31 @@
   "sep": "ಸೆಪ್ಟೆಂಬರ್",
   "oct": "ಅಕ್ಟೋಬರ್",
   "nov": "ನವೆಂಬರ್",
-  "dec": "ಡಿಸೆಂಬರ್"
+  "dec": "ಡಿಸೆಂಬರ್",
+  "incomeDate": "ಆಯದ ದಿನಾಂಕ",
+  "enterProductCode": "ಉತ್ಪನ್ನ ಕೋಡ್ ನಮೂದಿಸಿ",
+  "retry": "ಮರು ಪ್ರಯತ್ನಿಸಿ",
+  "addedSuccessful": "ಸಾಧಾರಣವಾಗಿ ಸೇರಿಸಲಾಗಿದೆ",
+  "poweredBy": "ಇದರಿಂದ ಚಲಿತ",
+  "updatePassword": "ಪಾಸ್ವರ್ಡ್ ಅಪ್‌ಡೇಟ್ ಮಾಡಿ",
+  "updateYourPassword": "ನಿಮ್ಮ ಪಾಸ್ವರ್ಡ್ ಅನ್ನು ಅಪ್‌ಡೇಟ್ ಮಾಡಿ",
+  "enterYourConfirmPassword": "ನಿಮ್ಮ ದೃಢೀಕರಣ ಪಾಸ್ವರ್ಡ್ ನಮೂದಿಸಿ",
+  "enterYourPassword": "ನಿಮ್ಮ ಪಾಸ್ವರ್ಡ್ ನಮೂದಿಸಿ",
+  "passwordAndConfirmPasswordDoesNotMatch": "ಪಾಸ್ವರ್ಡ್ ಮತ್ತು ದೃಢೀಕರಣ ಪಾಸ್ವರ್ಡ್ ಹೊಂದಿಲ್ಲ",
+  "noWiFiConnection": "ಯಾವುದೇ Wi-Fi ಸಂಪರ್ಕ ಇಲ್ಲ",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "ದಯವಿಟ್ಟು ನಿಮ್ಮ ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಪುನಃ ಪ್ರಯತ್ನಿಸಿ",
+  "userCreationFailed": "ಬಳಕೆದಾರರ ರಚನೆ ವಿಫಲವಾಗಿದೆ",
+  "userDeletedSuccessfully": "ಬಳಕೆದಾರವನ್ನು ಯಶಸ್ವಿಯಾಗಿ ಅಳಿಸಲಾಗಿದೆ",
+  "failedToDeleteUser": "ಬಳಕೆದಾರರನ್ನು ಅಳಿಸಲು ವಿಫಲವಾಗಿದೆ",
+  "error": "ತಪ್ಪು",
+  "updatedSuccessfully": "ಯಶಸ್ವಿಯಾಗಿ ಅಪ್‌ಡೇಟ್ ಮಾಡಲಾಗಿದೆ",
+  "userUpdateFailed": "ಬಳಕೆದಾರರ ಅಪ್‌ಡೇಟ್ ವಿಫಲವಾಗಿದೆ",
+  "subscribeSuccessful": "ಚಂದಾ ಯಶಸ್ವಿಯಾಗಿ",
+  "subscribeCreationFailed": "ಚಂದಾದಾರರ ರಚನೆ ವಿಫಲವಾಗಿದೆ",
+  "anErrorOccurred": "ಒಂದು ತಪ್ಪು ಸಂಭವಿಸಿದೆ",
+  "salesCreationFailed": "ಮಾರಾಟದ ರಚನೆ ವಿಫಲವಾಗಿದೆ",
+  "purchaseCreationFailed": "ಖರೀದಿಯ ರಚನೆ ವಿಫಲವಾಗಿದೆ"
+
 
 
 

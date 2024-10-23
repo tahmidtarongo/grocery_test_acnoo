@@ -585,7 +585,31 @@
   "sep": "Eyl",
   "oct": "Eki",
   "nov": "Kas",
-  "dec": "Ara"
+  "dec": "Ara",
+  "incomeDate": "Gelir tarihi",
+  "enterProductCode": "Ürün kodunu girin",
+  "retry": "Tekrar dene",
+  "addedSuccessful": "Başarıyla eklendi",
+  "poweredBy": "Tarafından sağlanmaktadır",
+  "updatePassword": "Şifreyi güncelle",
+  "updateYourPassword": "Şifrenizi güncelleyin",
+  "enterYourConfirmPassword": "Onay şifrenizi girin",
+  "enterYourPassword": "Şifrenizi girin",
+  "passwordAndConfirmPasswordDoesNotMatch": "Şifre ve onay şifresi eşleşmiyor",
+  "noWiFiConnection": "Wi-Fi Bağlantısı Yok",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Lütfen internet bağlantınızı kontrol edin ve tekrar deneyin",
+  "userCreationFailed": "Kullanıcı oluşturulamadı",
+  "userDeletedSuccessfully": "Kullanıcı başarıyla silindi",
+  "failedToDeleteUser": "Kullanıcı silme başarısız oldu",
+  "error": "Hata",
+  "updatedSuccessfully": "Başarıyla güncellendi",
+  "userUpdateFailed": "Kullanıcı güncelleme başarısız oldu",
+  "subscribeSuccessful": "Abonelik başarıyla oluşturuldu",
+  "subscribeCreationFailed": "Abonelik oluşturma başarısız oldu",
+  "anErrorOccurred": "Bir hata oluştu",
+  "salesCreationFailed": "Satış oluşturma başarısız oldu",
+  "purchaseCreationFailed": "Satın alma oluşturma başarısız oldu"
+
 
 
 }

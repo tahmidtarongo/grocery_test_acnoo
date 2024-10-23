@@ -587,7 +587,32 @@
   "sep": "Sep",
   "oct": "Okt",
   "nov": "Nov",
-  "dec": "Des"
+  "dec": "Des",
+  "incomeDate": "Tanggal Pendapatan",
+  "enterProductCode": "Masukkan Kode Produk",
+  "retry": "Coba Lagi",
+  "addedSuccessful": "Berhasil Ditambahkan",
+  "poweredBy": "Ditenagai Oleh",
+  "updatePassword": "Perbarui Kata Sandi",
+  "updateYourPassword": "Perbarui kata sandi Anda",
+  "enterYourConfirmPassword": "Masukkan kata sandi konfirmasi Anda",
+  "enterYourPassword": "Masukkan kata sandi Anda",
+  "passwordAndConfirmPasswordDoesNotMatch": "Kata sandi dan kata sandi konfirmasi tidak cocok",
+  "noWiFiConnection": "Tidak Ada Koneksi Wi-Fi",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Silakan periksa koneksi internet Anda dan coba lagi",
+  "userCreationFailed": "Pembuatan pengguna gagal",
+  "userDeletedSuccessfully": "Pengguna berhasil dihapus",
+  "failedToDeleteUser": "Gagal menghapus pengguna",
+  "error": "Kesalahan",
+  "updatedSuccessfully": "Berhasil Diperbarui",
+  "userUpdateFailed": "Pembaruan pengguna gagal",
+  "subscribeSuccessful": "Berhasil Berlangganan",
+  "subscribeCreationFailed": "Pembuatan langganan gagal",
+  "anErrorOccurred": "Terjadi kesalahan",
+  "salesCreationFailed": "Pembuatan penjualan gagal",
+  "purchaseCreationFailed": "Pembuatan pembelian gagal"
+
+
 
 
 

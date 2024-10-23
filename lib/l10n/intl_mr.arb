@@ -582,7 +582,31 @@
   "sep": "सप्टेंबर",
   "oct": "ऑक्टोबर",
   "nov": "नोव्हेंबर",
-  "dec": "डिसेंबर"
+  "dec": "डिसेंबर",
+  "incomeDate": "उत्पन्न दिनांक",
+  "enterProductCode": "उत्पादन कोड प्रविष्ट करा",
+  "retry": "पुन्हा प्रयत्न करा",
+  "addedSuccessful": "यशस्वीरित्या जोडले",
+  "poweredBy": "द्वारा कार्यान्वित",
+  "updatePassword": "संकेतशब्द अद्यतनित करा",
+  "updateYourPassword": "तुमचा संकेतशब्द अद्यतनित करा",
+  "enterYourConfirmPassword": "तुमचा पुष्टी संकेतशब्द प्रविष्ट करा",
+  "enterYourPassword": "तुमचा संकेतशब्द प्रविष्ट करा",
+  "passwordAndConfirmPasswordDoesNotMatch": "संकेतशब्द आणि पुष्टी संकेतशब्द जुळत नाहीत",
+  "noWiFiConnection": "कोणतीही Wi-Fi कनेक्शन नाही",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "कृपया तुमचे इंटरनेट कनेक्शन तपासा आणि पुन्हा प्रयत्न करा",
+  "userCreationFailed": "वापरकर्ता निर्माण करण्यात अयशस्वी",
+  "userDeletedSuccessfully": "वापरकर्ता यशस्वीरित्या हटवला",
+  "failedToDeleteUser": "वापरकर्ता हटवण्यात अयशस्वी",
+  "error": "त्रुटी",
+  "updatedSuccessfully": "यशस्वीरित्या अद्यतनित",
+  "userUpdateFailed": "वापरकर्ता अद्यतन करण्यात अयशस्वी",
+  "subscribeSuccessful": "सदस्यता यशस्वी",
+  "subscribeCreationFailed": "सदस्यता निर्माण करण्यात अयशस्वी",
+  "anErrorOccurred": "एक त्रुटी झाली",
+  "salesCreationFailed": "विक्री निर्माण करण्यात अयशस्वी",
+  "purchaseCreationFailed": "खरेदी निर्माण करण्यात अयशस्वी"
+
 
 
 

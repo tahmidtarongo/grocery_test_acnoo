@@ -581,7 +581,31 @@
   "sep": "Sep",
   "oct": "Oct",
   "nov": "Nóv",
-  "dec": "Des"
+  "dec": "Des",
+  "incomeDate": "Tekjudagsetning",
+  "enterProductCode": "Sláðu inn vöru kóða",
+  "retry": "Reyndu aftur",
+  "addedSuccessful": "Bætt við með góðum árangri",
+  "poweredBy": "Knúið af",
+  "updatePassword": "Uppfærðu lykilorð",
+  "updateYourPassword": "Uppfærðu lykilorðið þitt",
+  "enterYourConfirmPassword": "Sláðu inn staðfestingarlykilorðið þitt",
+  "enterYourPassword": "Sláðu inn lykilorðið þitt",
+  "passwordAndConfirmPasswordDoesNotMatch": "Lykilorð og staðfestingarlykilorð passa ekki",
+  "noWiFiConnection": "Engin Wi-Fi tenging",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Vinsamlegast athugaðu internet tenginguna þína og reyndu aftur",
+  "userCreationFailed": "Notendasköpun mistókst",
+  "userDeletedSuccessfully": "Notanda eytt með góðum árangri",
+  "failedToDeleteUser": "Mistókst að eyða notanda",
+  "error": "Villa",
+  "updatedSuccessfully": "Uppfært með góðum árangri",
+  "userUpdateFailed": "Uppfærsla notanda mistókst",
+  "subscribeSuccessful": "Aðskrift staðfest",
+  "subscribeCreationFailed": "Aðskriftarsköpun mistókst",
+  "anErrorOccurred": "Villa kom upp",
+  "salesCreationFailed": "Sölu sköpun mistókst",
+  "purchaseCreationFailed": "Kaupasamningur mistókst"
+
 
 
 }

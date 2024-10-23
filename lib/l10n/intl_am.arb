@@ -581,5 +581,30 @@
   "sep": "ሴፕቴምበር",
   "oct": "ኦክቶበር",
   "nov": "ኖቬምበር",
-  "dec": "ዲሴምበር"
+  "dec": "ዲሴምበር",
+  "incomeDate": "የገቢ ቀን",
+  "enterProductCode": "የምርት ኮድን እንዲህ ይግቡ",
+  "retry": "ድጋፍ ይሁን",
+  "addedSuccessful": "ተጨምሯል",
+  "poweredBy": "በዚህ ይዘው",
+  "updatePassword": "የይለፍ ቃልን ያዝ",
+  "updateYourPassword": "የይለፍ ቃልዎን ያዝ",
+  "enterYourConfirmPassword": "የይለፍ ቃል ይምዝ",
+  "enterYourPassword": "የይለፍ ቃልዎን ይምዝ",
+  "passwordAndConfirmPasswordDoesNotMatch": "የይለፍ ቃል እና የማረጋገጫ ይለፍ ቃል አይተያይዞም",
+  "noWiFiConnection": "የWi-Fi ግንኙነት የለም",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "እባኮትን የኢንተርኔት ግንኙነትዎን ይመልከቱ እና እንደገና ይሞክሩ",
+  "userCreationFailed": "የተጠቃሚ ፈጠር የተሳሳተ",
+  "userDeletedSuccessfully": "ተጠቃሚው በትክክል ወይን አልፏት",
+  "failedToDeleteUser": "ተጠቃሚውን ማስወገድ ይሳሳት",
+  "error": "ስህተት",
+  "updatedSuccessfully": "በትክክል ወይን እንደተያዙ",
+  "userUpdateFailed": "የተጠቃሚ አውደ ምርት ይሳሳት",
+  "subscribeSuccessful": "ይመዝገቡ በትክክል",
+  "subscribeCreationFailed": "የማመለከቻ ፈጠር ይሳሳት",
+  "anErrorOccurred": "ስህተት ተከስቷል",
+  "salesCreationFailed": "የሽያጭ ፈጠር ይሳሳት",
+  "purchaseCreationFailed": "የግዢ ፈጠር ይሳሳት"
+
+
 }

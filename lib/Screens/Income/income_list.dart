@@ -48,7 +48,8 @@ class _IncomeListState extends State<IncomeList> {
           backgroundColor: kWhite,
           appBar: AppBar(
             title: Text(
-              'Income Report',
+              lang.S.of(context).incomeReport,
+              //'Income Report',
               style: GoogleFonts.poppins(
                 color: Colors.black,
                 fontSize: 20.0,
@@ -140,10 +141,11 @@ class _IncomeListState extends State<IncomeList> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const SizedBox(
+                         SizedBox(
                           width: 130,
                           child: Text(
-                            'Income For',
+                            lang.S.of(context).incomeFor,
+                            //'Income For',
                           ),
                         ),
                         SizedBox(
@@ -266,8 +268,9 @@ class _IncomeListState extends State<IncomeList> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
-                        'Total Income',
+                       Text(
+                         lang.S.of(context).totalIncome,
+                       // 'Total Income',
                       ),
                       Text('$currency$totalExpense')
                     ],
@@ -276,7 +279,8 @@ class _IncomeListState extends State<IncomeList> {
         
                 ///________button________________________________________________
                 ButtonGlobalWithoutIcon(
-                  buttontext: 'Add Income',
+                  //buttontext: 'Add Income',
+                  buttontext: lang.S.of(context).addIncome,
                   buttonDecoration: kButtonDecoration.copyWith(color: kMainColor),
                   onPressed: () {
                     const AddIncome().launch(context);

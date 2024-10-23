@@ -65,6 +65,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("Gehitu Unitate"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Erabiltzaile Rolaren Gehitu"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("Gehitu da arrakastaz"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("Saskira Gehitu da"),
         "adding": MessageLookupByLibrary.simpleMessage("Gehitzen..."),
@@ -82,6 +84,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "amarSonarBangla":
             MessageLookupByLibrary.simpleMessage("Amar sonar bangla"),
         "amount": MessageLookupByLibrary.simpleMessage("Zenbatekoa"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("Errore bat gertatu da"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS bat bidaliko da zenbaki honetara: "),
@@ -302,6 +306,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("Sartu Oharrak"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("Sartu hasierako balantzea"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("Sartu Produktu Kodea"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("Sartu produktu izena"),
         "enterPurchasePrice":
@@ -324,20 +330,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("Sartu Pisua"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("Sartu Txikizkako Prezioa"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Sartu zure baieztapen pasahitza"),
         "enterYourEmailAddress":
             MessageLookupByLibrary.simpleMessage("Idatzi zure email helbidea"),
         "enterYourFullName": MessageLookupByLibrary.simpleMessage(
             "Idatzi zure izena eta abizena"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("Idatzi zure izena"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("Sartu zure pasahitza"),
         "enterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Idatzi zure telefono zenbakia"),
+        "error": MessageLookupByLibrary.simpleMessage("Errorea"),
         "expense": MessageLookupByLibrary.simpleMessage("Gastu"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("Gastu Kategoriak"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("Gastuaren Data"),
         "expenseFor": MessageLookupByLibrary.simpleMessage("Gastua"),
         "expenseReport": MessageLookupByLibrary.simpleMessage("Gastu Txostena"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser": MessageLookupByLibrary.simpleMessage(
+            "Erabiltzailea ezabatzea huts egin du"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Ezin izan da plataforma bertsioa lortu."),
         "fashion": MessageLookupByLibrary.simpleMessage("Moda"),
@@ -375,6 +388,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("Sarrera"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("Sarrera Kategoriak"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("Sarrera data"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("Sarrerak"),
         "incomeReport":
             MessageLookupByLibrary.simpleMessage("Sarrera Txostena"),
@@ -465,6 +479,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ez dago Hornitzailerik Eskuragarri"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("Ez Transakziorik"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Ez dago Wi-Fi konexiorik"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("Erabiltzaile Ez Aktiboa"),
         "notFound": MessageLookupByLibrary.simpleMessage("Ez Aurkitu"),
@@ -487,6 +503,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("Partiduak"),
         "partyList": MessageLookupByLibrary.simpleMessage("Partiduen Zerrenda"),
         "password": MessageLookupByLibrary.simpleMessage("Pasahitza"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "Pasahitza eta baieztapen pasahitza ez datoz bat"),
         "passwordCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Pasahitza hutsik egon daiteke"),
         "passwordsDoNotMatch": MessageLookupByLibrary.simpleMessage(
@@ -528,6 +547,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("Plana"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("Mesedez, gehitu kantitatea"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Mesedez, egiaztatu zure internet konexioa eta saiatu berriro"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "Mesedez, konektatu inprimagailua lehenik"),
         "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
@@ -582,6 +604,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Mesedez, erabili aplikazioa erabiltzeko baliozko erosketa kodea"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Acnoo-ren Indarra"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("Hornitua"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "Android eta iOS aplikazio laguntza"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Premium Plana"),
@@ -621,6 +644,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Erosketen Egilea: "),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Erosketa Berretsita"),
+        "purchaseCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Erosketen sorrera huts egin du"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("Erosketen Xehetasunak"),
         "purchaseList":
@@ -668,6 +693,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "Berrezarri zure pasahitza berreskuratzeko eta zure kontura saiatuko da"),
         "retailer": MessageLookupByLibrary.simpleMessage("Banatzailea"),
+        "retry": MessageLookupByLibrary.simpleMessage("Saiatu berriro"),
         "retur": MessageLookupByLibrary.simpleMessage("Itzuli"),
         "returnAmount":
             MessageLookupByLibrary.simpleMessage("Itzulitako Zenbatekoa"),
@@ -677,6 +703,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("Salmenta Prezioa"),
         "sales": MessageLookupByLibrary.simpleMessage("Salmentak"),
         "salesBy": MessageLookupByLibrary.simpleMessage("Salmenten Egilea: "),
+        "salesCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Salmenten sorrera huts egin du"),
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("Salmenten Xehetasunak"),
         "salesList": MessageLookupByLibrary.simpleMessage("Salmenten Zerrenda"),
@@ -767,6 +795,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("Stock: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Azpitotala"),
         "submit": MessageLookupByLibrary.simpleMessage("Aurkeztu"),
+        "subscribeCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Harpidetzaren sorrera huts egin du"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("Harpidetzan arrakasta"),
         "subscription": MessageLookupByLibrary.simpleMessage("Harpidura"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Azpitotala"),
         "successfullyPaid":
@@ -836,23 +868,35 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("Eguneratu Harremana"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Eguneratu Orain"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("Eguneratu Pasahitza"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("Eguneratu Produktua"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("Eguneratu Zure Profila"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("Eguneratu zure pasahitza"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "Eguneratu zure profila zure bezeroarekin inpresio hobea izateko konektatzeko"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("Eguneratu zure harpidura"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Arrakastaz eguneratua"),
         "updating": MessageLookupByLibrary.simpleMessage("Eguneratzen..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("Eguneratu Orain"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Erabiltzaile titulua hutsik egon daiteke"),
+        "userCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Erabiltzailearen sorrera huts egin du"),
+        "userDeletedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "Erabiltzailea arrakastaz ezabatu da"),
         "userRole": MessageLookupByLibrary.simpleMessage("Erabiltzaile Rol"),
         "userRoleDetails": MessageLookupByLibrary.simpleMessage(
             "Erabiltzaile Rolaren Xehetasunak"),
         "userTitle":
             MessageLookupByLibrary.simpleMessage("Erabiltzaile Izenburua"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "Erabiltzailearen eguneraketa huts egin du"),
         "vat": MessageLookupByLibrary.simpleMessage("BEZa"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("BEZ-a ez da aplikatzen"),

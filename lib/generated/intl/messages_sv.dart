@@ -66,6 +66,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addToCart":
             MessageLookupByLibrary.simpleMessage("Lägg till i kundvagn"),
         "addUnit": MessageLookupByLibrary.simpleMessage("Lägg till enhet"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("Tilläggning lyckades"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("Lagd till i kundvagnen"),
         "adding": MessageLookupByLibrary.simpleMessage("Lägger till.."),
@@ -80,6 +82,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Har du redan ett konto?"),
         "amount": MessageLookupByLibrary.simpleMessage("Belopp"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("Ett fel inträffade"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "Ett SMS kommer att skickas till följande nummer:"),
@@ -278,6 +282,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("Ange anteckning"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("Ange ingående saldo"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("Ange produktkod"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("Ange produktnamn"),
         "enterPurchasePrice":
@@ -299,14 +305,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("Ange vikt"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("Ange grossistpris"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Ange ditt bekräftelselösenord"),
         "enterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
             "Zadajte svoju e-mailovú adresu"),
         "enterYourFullName":
             MessageLookupByLibrary.simpleMessage("Ange ditt fullständiga namn"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("Zadajte svoje meno"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("Ange ditt lösenord"),
         "enterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Zadajte svoje telefónne číslo"),
+        "error": MessageLookupByLibrary.simpleMessage("Fel"),
         "expense": MessageLookupByLibrary.simpleMessage("Výdavok"),
         "expenseCat":
             MessageLookupByLibrary.simpleMessage("Kostnadskategorier"),
@@ -315,6 +326,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenseReport":
             MessageLookupByLibrary.simpleMessage("Kostnadsrapport"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser": MessageLookupByLibrary.simpleMessage(
+            "Misslyckades med att radera användare"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Misslyckades med att hämta plattformsversion."),
         "fashion": MessageLookupByLibrary.simpleMessage("Mode"),
@@ -352,6 +365,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("Inkomst"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("Inkomstkategorier"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("Inkomstdatum"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("Inkomst för"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("Inkomstrapport"),
         "instagram": MessageLookupByLibrary.simpleMessage("Instagram"),
@@ -434,6 +448,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ingen leverantör tillgänglig"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("Ingen transaktion"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Ingen Wi-Fi-anslutning"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("Inte aktiv användare"),
         "notFound": MessageLookupByLibrary.simpleMessage("Inte hittad"),
@@ -454,6 +470,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("Strany"),
         "partyList": MessageLookupByLibrary.simpleMessage("Lista över parter"),
         "password": MessageLookupByLibrary.simpleMessage("Lösenord"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "Lösenord och bekräftelselösenord matchar inte"),
         "passwordCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("Lösenord kan inte vara tomt"),
         "passwordsDoNotMatch":
@@ -491,6 +510,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("Plan"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("Lägg till kvantitet"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Kontrollera din internetanslutning och försök igen"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "Prosím, najprv pripojte tlačiareň"),
         "pleaseEnterABiggerPassword":
@@ -540,6 +562,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pleaseUseTheValidPurchaseCodeToUseTheApp":
             MessageLookupByLibrary.simpleMessage(
                 "Använd den giltiga köpkoden för att använda appen"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("Drivs av"),
         "premiumCustomerSupport":
             MessageLookupByLibrary.simpleMessage("Android & iOS appstöd"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Premiumplan"),
@@ -572,6 +595,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("Köpt av:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Nákup potvrdený"),
+        "purchaseCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Köp skapande misslyckades"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("Inköpsdetaljer"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("Inköpslista"),
@@ -614,6 +639,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "Återställ ditt lösenord för att återställa och logga in på ditt konto"),
         "retailer": MessageLookupByLibrary.simpleMessage("Återförsäljare"),
+        "retry": MessageLookupByLibrary.simpleMessage("Försök igen"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("Returbelopp"),
         "riead": MessageLookupByLibrary.simpleMessage("Läst"),
         "sale": MessageLookupByLibrary.simpleMessage("Försäljning"),
@@ -621,6 +647,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("Försäljningspris"),
         "sales": MessageLookupByLibrary.simpleMessage("Predaje"),
         "salesBy": MessageLookupByLibrary.simpleMessage("Såld av:"),
+        "salesCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Försäljning skapande misslyckades"),
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("Försäljningsdetaljer"),
         "salesList": MessageLookupByLibrary.simpleMessage("Försäljningslista"),
@@ -702,6 +730,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stockValue": MessageLookupByLibrary.simpleMessage("Lager värde"),
         "stocks": MessageLookupByLibrary.simpleMessage("Lager: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Delsumma"),
+        "subscribeCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Skapande av prenumeration misslyckades"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("Prenumeration lyckades"),
         "subscription": MessageLookupByLibrary.simpleMessage("Prenumeration"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Delsumma"),
         "successfullyPaid":
@@ -764,22 +796,34 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("Uppdatera kontakt"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Uppdatera nu"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("Uppdatera lösenord"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("Uppdatera produkt"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("Uppdatera din profil"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("Uppdatera ditt lösenord"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "Uppdatera din profil för att skapa ett bättre intryck hos dina kunder"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("Uppdatera ditt abonnemang"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Uppdaterad framgångsrikt"),
         "updating": MessageLookupByLibrary.simpleMessage("Uppdaterar..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("Uppgradera nu"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Användartitel kan inte vara tom"),
+        "userCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Användarskapande misslyckades"),
+        "userDeletedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "Användare raderad framgångsrikt"),
         "userRole": MessageLookupByLibrary.simpleMessage("Användarroll"),
         "userRoleDetails":
             MessageLookupByLibrary.simpleMessage("Användarrolls detaljer"),
         "userTitle": MessageLookupByLibrary.simpleMessage("Användartitel"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "Uppdatering av användare misslyckades"),
         "vat": MessageLookupByLibrary.simpleMessage("Moms"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("Moms gäller inte"),

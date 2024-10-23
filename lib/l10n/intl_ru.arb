@@ -584,7 +584,31 @@
   "sep": "Сен",
   "oct": "Окт",
   "nov": "Ноя",
-  "dec": "Дек"
+  "dec": "Дек",
+  "incomeDate": "Дата дохода",
+  "enterProductCode": "Введите код продукта",
+  "retry": "Повторить",
+  "addedSuccessful": "Добавлено успешно",
+  "poweredBy": "Силой",
+  "updatePassword": "Обновить пароль",
+  "updateYourPassword": "Обновите свой пароль",
+  "enterYourConfirmPassword": "Введите ваш подтверждающий пароль",
+  "enterYourPassword": "Введите ваш пароль",
+  "passwordAndConfirmPasswordDoesNotMatch": "Пароль и подтверждающий пароль не совпадают",
+  "noWiFiConnection": "Нет Wi-Fi соединения",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Пожалуйста, проверьте ваше интернет-соединение и попробуйте снова",
+  "userCreationFailed": "Не удалось создать пользователя",
+  "userDeletedSuccessfully": "Пользователь успешно удален",
+  "failedToDeleteUser": "Не удалось удалить пользователя",
+  "error": "Ошибка",
+  "updatedSuccessfully": "Успешно обновлено",
+  "userUpdateFailed": "Не удалось обновить пользователя",
+  "subscribeSuccessful": "Подписка успешна",
+  "subscribeCreationFailed": "Не удалось создать подписку",
+  "anErrorOccurred": "Произошла ошибка",
+  "salesCreationFailed": "Не удалось создать продажу",
+  "purchaseCreationFailed": "Не удалось создать покупку"
+
 
 
 

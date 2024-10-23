@@ -589,7 +589,31 @@
   "sep": "Sen",
   "oct": "Okt",
   "nov": "Noy",
-  "dec": "Dek"
+  "dec": "Dek",
+  "incomeDate": "Gəlir tarixi",
+  "enterProductCode": "Məhsul kodunu daxil edin",
+  "retry": "Təkrar cəhd edin",
+  "addedSuccessful": "Uğurla əlavə edildi",
+  "poweredBy": "Tərəfindən təmin edilir",
+  "updatePassword": "Şifrəni yeniləyin",
+  "updateYourPassword": "Şifrənizi yeniləyin",
+  "enterYourConfirmPassword": "Təsdiq şifrənizi daxil edin",
+  "enterYourPassword": "Şifrənizi daxil edin",
+  "passwordAndConfirmPasswordDoesNotMatch": "Şifrə və təsdiq şifrəsi uyğun gəlmir",
+  "noWiFiConnection": "Wi-Fi bağlantısı yoxdur",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Xahiş edirik internet bağlantınızı yoxlayın və yenidən cəhd edin",
+  "userCreationFailed": "İstifadəçi yaradılması uğursuz oldu",
+  "userDeletedSuccessfully": "İstifadəçi uğurla silindi",
+  "failedToDeleteUser": "İstifadəçini silmək mümkün olmadı",
+  "error": "Xəta",
+  "updatedSuccessfully": "Uğurla yeniləndi",
+  "userUpdateFailed": "İstifadəçi yeniləmə uğursuz oldu",
+  "subscribeSuccessful": "Abunə olmaq uğurludur",
+  "subscribeCreationFailed": "Abunə yaratmaq uğursuz oldu",
+  "anErrorOccurred": "Bir xəta baş verdi",
+  "salesCreationFailed": "Satış yaradılması uğursuz oldu",
+  "purchaseCreationFailed": "Alış yaradılması uğursuz oldu"
+
 
 
 }

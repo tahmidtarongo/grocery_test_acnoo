@@ -581,7 +581,31 @@
   "sep": "სექ",
   "oct": "ოქტ",
   "nov": "ნოემბ",
-  "dec": "დეკ"
+  "dec": "დეკ",
+  "incomeDate": "შემოსავლის თარიღი",
+  "enterProductCode": "პროდუქტის კოდის შეყვანა",
+  "retry": "კიდევ ერთხელ სცადეთ",
+  "addedSuccessful": "წარმატებით დაემატა",
+  "poweredBy": "ძალა მიაწვდოს",
+  "updatePassword": "პაროლის განახლება",
+  "updateYourPassword": "განაახლეთ თქვენი პაროლი",
+  "enterYourConfirmPassword": "შეიყვანეთ თქვენი ადასტურების პაროლი",
+  "enterYourPassword": "შეიყვანეთ თქვენი პაროლი",
+  "passwordAndConfirmPasswordDoesNotMatch": "პაროლი და ადასტურების პაროლი არ ემთხვევა",
+  "noWiFiConnection": "არ არის Wi-Fi დაკავშირება",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "გთხოვთ შეამოწმოთ თქვენი ინტერნეტის დაკავშირება და სცადეთ კიდევ ერთხელ",
+  "userCreationFailed": "მომხმარებლის შექმნა ვერ მოხერხდა",
+  "userDeletedSuccessfully": "მომხმარებელი წარმატებით წაიშალა",
+  "failedToDeleteUser": "მომხმარებლის წაშლა ვერ მოხერხდა",
+  "error": "შეცდომა",
+  "updatedSuccessfully": "წარმატებით განახლდა",
+  "userUpdateFailed": "მომხმარებლის განახლება ვერ მოხერხდა",
+  "subscribeSuccessful": "მომწვდელობა წარმატებით დასრულდა",
+  "subscribeCreationFailed": "მომწვდელობის შექმნა ვერ მოხერხდა",
+  "anErrorOccurred": "შეცდომა მოხდა",
+  "salesCreationFailed": "გაყიდვის შექმნა ვერ მოხერხდა",
+  "purchaseCreationFailed": "ყიდვის შექმნა ვერ მოხერხდა"
+
 
 
 }

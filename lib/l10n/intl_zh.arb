@@ -588,7 +588,31 @@
   "sep": "九月",
   "oct": "十月",
   "nov": "十一月",
-  "dec": "十二月"
+  "dec": "十二月",
+  "incomeDate": "收入日期",
+  "enterProductCode": "输入产品代码",
+  "retry": "重试",
+  "addedSuccessful": "添加成功",
+  "poweredBy": "提供支持",
+  "updatePassword": "更新密码",
+  "updateYourPassword": "更新您的密码",
+  "enterYourConfirmPassword": "输入确认密码",
+  "enterYourPassword": "输入您的密码",
+  "passwordAndConfirmPasswordDoesNotMatch": "密码和确认密码不匹配",
+  "noWiFiConnection": "没有Wi-Fi连接",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "请检查您的互联网连接并重试",
+  "userCreationFailed": "用户创建失败",
+  "userDeletedSuccessfully": "用户删除成功",
+  "failedToDeleteUser": "删除用户失败",
+  "error": "错误",
+  "updatedSuccessfully": "更新成功",
+  "userUpdateFailed": "用户更新失败",
+  "subscribeSuccessful": "订阅成功",
+  "subscribeCreationFailed": "订阅创建失败",
+  "anErrorOccurred": "发生错误",
+  "salesCreationFailed": "销售创建失败",
+  "purchaseCreationFailed": "采购创建失败"
+
 
 
 

@@ -586,7 +586,31 @@
   "sep": "ก.ย.",
   "oct": "ต.ค.",
   "nov": "พ.ย.",
-  "dec": "ธ.ค."
+  "dec": "ธ.ค.",
+  "incomeDate": "วันที่รายได้",
+  "enterProductCode": "กรอกรหัสผลิตภัณฑ์",
+  "retry": "ลองอีกครั้ง",
+  "addedSuccessful": "เพิ่มสำเร็จ",
+  "poweredBy": "ขับเคลื่อนโดย",
+  "updatePassword": "อัปเดตพาสเวิร์ด",
+  "updateYourPassword": "อัปเดตพาสเวิร์ดของคุณ",
+  "enterYourConfirmPassword": "กรอกพาสเวิร์ดยืนยันของคุณ",
+  "enterYourPassword": "กรอกพาสเวิร์ดของคุณ",
+  "passwordAndConfirmPasswordDoesNotMatch": "พาสเวิร์ดและพาสเวิร์ดยืนยันไม่ตรงกัน",
+  "noWiFiConnection": "ไม่มีการเชื่อมต่อ Wi-Fi",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณและลองอีกครั้ง",
+  "userCreationFailed": "การสร้างผู้ใช้ล้มเหลว",
+  "userDeletedSuccessfully": "ลบผู้ใช้สำเร็จ",
+  "failedToDeleteUser": "ลบผู้ใช้ไม่สำเร็จ",
+  "error": "ข้อผิดพลาด",
+  "updatedSuccessfully": "อัปเดตสำเร็จ",
+  "userUpdateFailed": "การอัปเดตผู้ใช้ล้มเหลว",
+  "subscribeSuccessful": "สมัครสมาชิกสำเร็จ",
+  "subscribeCreationFailed": "การสร้างการสมัครสมาชิกล้มเหลว",
+  "anErrorOccurred": "เกิดข้อผิดพลาด",
+  "salesCreationFailed": "การสร้างการขายล้มเหลว",
+  "purchaseCreationFailed": "การสร้างการซื้อไม่สำเร็จ"
+
 
 
 }

@@ -3,7 +3,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
 import 'package:nb_utils/nb_utils.dart';
-
 import '../../Const/api_config.dart';
 import '../../Provider/print_thermal_invoice_provider.dart';
 // ignore: library_prefixes

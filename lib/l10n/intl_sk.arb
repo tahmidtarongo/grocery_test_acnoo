@@ -584,7 +584,31 @@
   "sep": "Sep",
   "oct": "Okt",
   "nov": "Nov",
-  "dec": "Dec"
+  "dec": "Dec",
+  "incomeDate": "Dátum príjmu",
+  "enterProductCode": "Zadajte kód produktu",
+  "retry": "Skúsiť znova",
+  "addedSuccessful": "Úspešne pridané",
+  "poweredBy": "Napájané spoločnosťou",
+  "updatePassword": "Aktualizovať heslo",
+  "updateYourPassword": "Aktualizujte svoje heslo",
+  "enterYourConfirmPassword": "Zadajte svoje potvrdenie hesla",
+  "enterYourPassword": "Zadajte svoje heslo",
+  "passwordAndConfirmPasswordDoesNotMatch": "Heslo a potvrdenie hesla sa nezhodujú",
+  "noWiFiConnection": "Žiadne pripojenie Wi-Fi",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Skontrolujte prosím svoje internetové pripojenie a skúste to znova",
+  "userCreationFailed": "Vytvorenie používateľa zlyhalo",
+  "userDeletedSuccessfully": "Používateľ bol úspešne odstránený",
+  "failedToDeleteUser": "Nepodarilo sa odstrániť používateľa",
+  "error": "Chyba",
+  "updatedSuccessfully": "Úspešne aktualizované",
+  "userUpdateFailed": "Aktualizácia používateľa zlyhala",
+  "subscribeSuccessful": "Úspešne prihlásené",
+  "subscribeCreationFailed": "Vytvorenie prihlásenia zlyhalo",
+  "anErrorOccurred": "Došlo k chybe",
+  "salesCreationFailed": "Vytvorenie predaja zlyhalo",
+  "purchaseCreationFailed": "Vytvorenie nákupu zlyhalo"
+
 
 
 

@@ -581,7 +581,32 @@
   "sep": "Сен",
   "oct": "Окт",
   "nov": "Ноя",
-  "dec": "Дек"
+  "dec": "Дек",
+  "incomeDate": "Киреше датасы",
+  "enterProductCode": "Өнүмдүн кодун киргизиңиз",
+  "retry": "Кайра аракет кылыңыз",
+  "addedSuccessful": "Тагылды",
+  "poweredBy": "Чыгарылган",
+  "updatePassword": "Паролду жаңыртуу",
+  "updateYourPassword": "Паролду жаңыртыңыз",
+  "enterYourConfirmPassword": "Жеңилдетилген паролуңузду киргизиңиз",
+  "enterYourPassword": "Паролуңузду киргизиңиз",
+  "passwordAndConfirmPasswordDoesNotMatch": "Пароль жана жеңилдетилген пароль дал келбейт",
+  "noWiFiConnection": "Wi-Fi туташуусу жок",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Сураныч, интернет туташуусун текшериңиз жана кайра аракет кылыңыз",
+  "userCreationFailed": "Колдонуучу түзүү иши ийгиликсиз болду",
+  "userDeletedSuccessfully": "Колдонуучу ийгиликтүү жок кылынды",
+  "failedToDeleteUser": "Колдонуучуну жок кылуу мүмкүн болбоду",
+  "error": "Каталар",
+  "updatedSuccessfully": "Ийгиликтүү жаңыртылды",
+  "userUpdateFailed": "Колдонуучуну жаңыртуу ийгиликсиз болду",
+  "subscribeSuccessful": "Жазылуу ийгиликтүү",
+  "subscribeCreationFailed": "Жазылууну түзүү ийгиликсиз болду",
+  "anErrorOccurred": "Ката кетти",
+  "salesCreationFailed": "Сатуу түзүү ийгиликсиз болду",
+  "purchaseCreationFailed": "Сатып алууларды түзүү ийгиликсиз болду"
+
+
 
 
 }

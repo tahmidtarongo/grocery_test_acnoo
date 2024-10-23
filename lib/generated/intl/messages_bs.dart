@@ -63,6 +63,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("Dodaj jedinicu"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Dodaj ulogu korisnika"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("Uspešno dodano"),
         "addedToCart": MessageLookupByLibrary.simpleMessage("Dodato u korpu"),
         "adding": MessageLookupByLibrary.simpleMessage("Dodavanje.."),
         "address": MessageLookupByLibrary.simpleMessage("Adresa"),
@@ -76,6 +78,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Već imate nalog?"),
         "amount": MessageLookupByLibrary.simpleMessage("Iznos"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("Dogodila se greška"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS će biti poslat na sledeći broj: "),
@@ -288,6 +292,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("Unesite belešku"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("Unesite početni saldo"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("Unesite kod proizvoda"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("Unesite ime proizvoda"),
         "enterPurchasePrice":
@@ -310,14 +316,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("Unesite težinu"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("Unesite veleprodajnu cenu"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Unesite svoju potvrdu lozinke"),
         "enterYourEmailAddress":
             MessageLookupByLibrary.simpleMessage("Unesite vašu email adresu"),
         "enterYourFullName":
             MessageLookupByLibrary.simpleMessage("Unesite svoje puno ime"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("Unesite vaše ime"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("Unesite svoju lozinku"),
         "enterYourPhoneNumber":
             MessageLookupByLibrary.simpleMessage("Unesite vaš broj telefona"),
+        "error": MessageLookupByLibrary.simpleMessage("Greška"),
         "expense": MessageLookupByLibrary.simpleMessage("Trošak"),
         "expenseCat":
             MessageLookupByLibrary.simpleMessage("Kategorije troškova"),
@@ -326,6 +337,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenseReport":
             MessageLookupByLibrary.simpleMessage("Izvještaj o troškovima"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser": MessageLookupByLibrary.simpleMessage(
+            "Nije uspelo brisanje korisnika"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Nije uspelo dobijanje verzije platforme."),
         "fashion": MessageLookupByLibrary.simpleMessage("Moda"),
@@ -363,6 +376,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("Prihod"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("Kategorije prihoda"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("Datum prihoda"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("Prihod za"),
         "incomeReport":
             MessageLookupByLibrary.simpleMessage("Izveštaj o prihodima"),
@@ -450,6 +464,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Dobavljač nije dostupan"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("Nema transakcija"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Nema Wi-Fi veze"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("Nije aktivan korisnik"),
         "notFound": MessageLookupByLibrary.simpleMessage("Nije pronađeno"),
@@ -470,6 +486,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("Strane"),
         "partyList": MessageLookupByLibrary.simpleMessage("Lista stranaka"),
         "password": MessageLookupByLibrary.simpleMessage("Lozinka"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "Lozinka i potvrda lozinke se ne podudaraju"),
         "passwordCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("Lozinka ne može biti prazna"),
         "passwordsDoNotMatch":
@@ -508,6 +527,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("Plan"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("Molimo dodajte količinu"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Molimo vas provjerite svoju internet vezu i pokušajte ponovo"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "Molimo vas da prvo povežete štampač"),
         "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
@@ -562,6 +584,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Molimo koristite važeći kupovni kod da biste koristili aplikaciju"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Pokreće Acnoo"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("Pokreće"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "Podrška za Android i iOS aplikacije"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Premium plan"),
@@ -597,6 +620,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("Kupio:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Kupovina potvrđena"),
+        "purchaseCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Kreiranje kupovine nije uspelo"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("Detalji kupovine"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("Lista kupovine"),
@@ -642,6 +667,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "Poništite svoju lozinku kako biste se prijavili na nalog"),
         "retailer": MessageLookupByLibrary.simpleMessage("Prodavac na malo"),
+        "retry": MessageLookupByLibrary.simpleMessage("Pokušajte ponovo"),
         "retur": MessageLookupByLibrary.simpleMessage("Povrat"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("Povratni iznos"),
         "riead": MessageLookupByLibrary.simpleMessage("Riead"),
@@ -650,6 +676,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("Prodajna cijena"),
         "sales": MessageLookupByLibrary.simpleMessage("Prodaja"),
         "salesBy": MessageLookupByLibrary.simpleMessage("Prodao:"),
+        "salesCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Kreiranje prodaje nije uspelo"),
         "salesDetails": MessageLookupByLibrary.simpleMessage("Sales Details"),
         "salesList": MessageLookupByLibrary.simpleMessage("Lista prodaje"),
         "salesPrice": MessageLookupByLibrary.simpleMessage("Prodajna cijena"),
@@ -737,6 +765,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("Zalihe: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Sub Total"),
         "submit": MessageLookupByLibrary.simpleMessage("Pošalji"),
+        "subscribeCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Kreiranje pretplate nije uspelo"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("Uspešno pretplaćeno"),
         "subscription": MessageLookupByLibrary.simpleMessage("Pretplata"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Subtotal"),
         "successfullyPaid":
@@ -800,22 +832,34 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("Ažurirajte kontakt"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Ažurirati sada"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("Ažurirajte lozinku"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("Ažurirajte proizvod"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("Ažurirajte svoj profil"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("Ažurirajte svoju lozinku"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "Ažurirajte svoj profil kako biste ostavili bolji utisak na svoje kupce"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("Ažurirajte svoju pretplatu"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Uspešno ažurirano"),
         "updating": MessageLookupByLibrary.simpleMessage("Ažuriranje..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("Nabavite sada"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Naziv korisnika ne može biti prazan"),
+        "userCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Kreiranje korisnika nije uspelo"),
+        "userDeletedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Korisnik je uspešno obrisan"),
         "userRole": MessageLookupByLibrary.simpleMessage("Uloga korisnika"),
         "userRoleDetails":
             MessageLookupByLibrary.simpleMessage("Detalji uloge korisnika"),
         "userTitle": MessageLookupByLibrary.simpleMessage("Naziv korisnika"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "Ažuriranje korisnika nije uspelo"),
         "vat": MessageLookupByLibrary.simpleMessage("PDV"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("PDV se ne primjenjuje"),

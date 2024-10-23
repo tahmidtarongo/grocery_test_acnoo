@@ -584,7 +584,31 @@
   "sep": "Sep",
   "oct": "Okt",
   "nov": "Nov",
-  "dec": "Dec"
+  "dec": "Dec",
+  "incomeDate": "Inkomstdatum",
+  "enterProductCode": "Voer productcode in",
+  "retry": "Probeer opnieuw",
+  "addedSuccessful": "Toegevoegd succesvol",
+  "poweredBy": "Mogelijk gemaakt door",
+  "updatePassword": "Wachtwoord bijwerken",
+  "updateYourPassword": "Werk uw wachtwoord bij",
+  "enterYourConfirmPassword": "Voer uw bevestigingswachtwoord in",
+  "enterYourPassword": "Voer uw wachtwoord in",
+  "passwordAndConfirmPasswordDoesNotMatch": "Wachtwoord en bevestigingswachtwoord komen niet overeen",
+  "noWiFiConnection": "Geen Wi-Fi-verbinding",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Controleer uw internetverbinding en probeer het opnieuw",
+  "userCreationFailed": "Het aanmaken van de gebruiker is mislukt",
+  "userDeletedSuccessfully": "Gebruiker succesvol verwijderd",
+  "failedToDeleteUser": "Verwijderen van gebruiker is mislukt",
+  "error": "Fout",
+  "updatedSuccessfully": "Succesvol bijgewerkt",
+  "userUpdateFailed": "Bijwerken van gebruiker is mislukt",
+  "subscribeSuccessful": "Abonneren succesvol",
+  "subscribeCreationFailed": "Het aanmaken van het abonnement is mislukt",
+  "anErrorOccurred": "Er is een fout opgetreden",
+  "salesCreationFailed": "Het aanmaken van verkoop is mislukt",
+  "purchaseCreationFailed": "Het aanmaken van de aankoop is mislukt"
+
 
 
 }

@@ -65,6 +65,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("Додати одиницю"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Додати роль користувача"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("Успішно додано"),
         "addedToCart": MessageLookupByLibrary.simpleMessage("Додано до кошика"),
         "adding": MessageLookupByLibrary.simpleMessage("Додається.."),
         "address": MessageLookupByLibrary.simpleMessage("Адреса"),
@@ -76,6 +78,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Вже маєте акаунт?"),
         "amount": MessageLookupByLibrary.simpleMessage("Сума"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("Виникла помилка"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS буде відправлено на наступний номер:"),
@@ -276,6 +280,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("Введіть примітку"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("Введіть початковий баланс"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("Введіть код продукту"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("Введіть назву продукту"),
         "enterPurchasePrice":
@@ -298,14 +304,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("Введіть вагу"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("Введіть оптову ціну"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Введіть підтвердження пароля"),
         "enterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
             "Введіть свою електронну адресу"),
         "enterYourFullName":
             MessageLookupByLibrary.simpleMessage("Введіть ваше повне ім\'я"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("Введіть своє ім\'я"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("Введіть свій пароль"),
         "enterYourPhoneNumber":
             MessageLookupByLibrary.simpleMessage("Введіть свій номер телефону"),
+        "error": MessageLookupByLibrary.simpleMessage("Помилка"),
         "expense": MessageLookupByLibrary.simpleMessage("Витрати"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("Категорії витрат"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("Дата витрат"),
@@ -313,6 +324,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenseReport":
             MessageLookupByLibrary.simpleMessage("Звіт про витрати"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser": MessageLookupByLibrary.simpleMessage(
+            "Не вдалося видалити користувача"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Не вдалося отримати версію платформи."),
         "fashion": MessageLookupByLibrary.simpleMessage("Мода"),
@@ -350,6 +363,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("Доходи"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("Категорії доходів"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("Дата доходу"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("Доходи за"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("Звіт про доходи"),
         "instagram": MessageLookupByLibrary.simpleMessage("Instagram"),
@@ -432,6 +446,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Немає постачальників"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("Немає транзакції"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Немає Wi-Fi підключення"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("Користувач не активний"),
         "notFound": MessageLookupByLibrary.simpleMessage("Не знайдено"),
@@ -453,6 +469,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("Партнери"),
         "partyList": MessageLookupByLibrary.simpleMessage("Список партій"),
         "password": MessageLookupByLibrary.simpleMessage("Пароль"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "Пароль та підтвердження пароля не збігаються"),
         "passwordCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Пароль не може бути порожнім"),
         "passwordsDoNotMatch":
@@ -492,6 +511,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("План"),
         "pleaseAddQuantity": MessageLookupByLibrary.simpleMessage(
             "Будь ласка, додайте кількість"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Перевірте своє підключення до Інтернету та спробуйте ще раз"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "Будь ласка, спершу підключіть принтер"),
         "pleaseEnterABiggerPassword": MessageLookupByLibrary.simpleMessage(
@@ -542,6 +564,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pleaseUseTheValidPurchaseCodeToUseTheApp":
             MessageLookupByLibrary.simpleMessage(
                 "Будь ласка, використовуйте дійсний код покупки для використання додатка"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("Працює на"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "Підтримка додатків для Android та iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Преміальний план"),
@@ -577,6 +600,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("Куплено:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Покупка підтверджена"),
+        "purchaseCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Не вдалося створити покупку"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("Деталі закупівлі"),
         "purchaseList":
@@ -623,6 +648,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Скиньте пароль, щоб відновити доступ і увійти в акаунт"),
         "retailer":
             MessageLookupByLibrary.simpleMessage("Роздрібний продавець"),
+        "retry": MessageLookupByLibrary.simpleMessage("Спробуйте ще раз"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("Сума повернення"),
         "riead": MessageLookupByLibrary.simpleMessage("Прочитано"),
         "sale": MessageLookupByLibrary.simpleMessage("Розпродаж"),
@@ -630,6 +656,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("Ціна продажу"),
         "sales": MessageLookupByLibrary.simpleMessage("Продажі"),
         "salesBy": MessageLookupByLibrary.simpleMessage("Продано:"),
+        "salesCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Не вдалося створити продаж"),
         "salesDetails": MessageLookupByLibrary.simpleMessage("Деталі продажу"),
         "salesList": MessageLookupByLibrary.simpleMessage("Список продажів"),
         "salesPrice": MessageLookupByLibrary.simpleMessage("Ціна продажу"),
@@ -717,6 +745,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("Запаси: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Підсумок"),
         "submit": MessageLookupByLibrary.simpleMessage("Відправити"),
+        "subscribeCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Не вдалося створити підписку"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("Успішно підписано"),
         "subscription": MessageLookupByLibrary.simpleMessage("Підписка"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Проміжний підсумок"),
         "successfullyPaid":
@@ -785,22 +817,34 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("Оновити контакт"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Оновити зараз"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("Оновити пароль"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("Оновити продукт"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("Оновіть свій профіль"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("Оновіть свій пароль"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "Оновіть ваш профіль, щоб створити краще враження на клієнтів"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("Оновіть вашу підписку"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Успішно оновлено"),
         "updating": MessageLookupByLibrary.simpleMessage("Оновлюється..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("Оновити зараз"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Назва користувача не може бути порожньою"),
+        "userCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Не вдалося створити користувача"),
+        "userDeletedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "Користувача видалено успішно"),
         "userRole": MessageLookupByLibrary.simpleMessage("Роль користувача"),
         "userRoleDetails":
             MessageLookupByLibrary.simpleMessage("Деталі ролі користувача"),
         "userTitle": MessageLookupByLibrary.simpleMessage("Назва користувача"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "Не вдалося оновити користувача"),
         "vat": MessageLookupByLibrary.simpleMessage("ПДВ"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("ПДВ не застосовується"),

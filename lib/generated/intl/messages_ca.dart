@@ -66,6 +66,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("Afegir unitat"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Afegir rol d\'usuari"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("Afegit amb èxit"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("Afegit a la cistella"),
         "adding": MessageLookupByLibrary.simpleMessage("Afegint.."),
@@ -82,6 +84,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "amarSonarBangla":
             MessageLookupByLibrary.simpleMessage("Amar sonar bangla"),
         "amount": MessageLookupByLibrary.simpleMessage("Import"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("Ha ocorregut un error"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "S\'enviarà un SMS al següent número: "),
@@ -298,6 +302,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("Introduïu una nota"),
         "enterOpeningBalance": MessageLookupByLibrary.simpleMessage(
             "Introduïu el saldo d\'obertura"),
+        "enterProductCode": MessageLookupByLibrary.simpleMessage(
+            "Introduïu el codi del producte"),
         "enterProductName": MessageLookupByLibrary.simpleMessage(
             "Introduïu el nom del producte"),
         "enterPurchasePrice":
@@ -321,14 +327,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("Introduïu el pes"),
         "enterWholesalePrice": MessageLookupByLibrary.simpleMessage(
             "Introduïu el preu de venda a l\'engròs"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Introduïu la vostra contrasenya de confirmació"),
         "enterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
             "Introduïu la vostra adreça de correu electrònic"),
         "enterYourFullName": MessageLookupByLibrary.simpleMessage(
             "Introduïu el vostre nom complet"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("Introduïu el vostre nom"),
+        "enterYourPassword": MessageLookupByLibrary.simpleMessage(
+            "Introduïu la vostra contrasenya"),
         "enterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Introduïu el vostre número de telèfon"),
+        "error": MessageLookupByLibrary.simpleMessage("Error"),
         "expense": MessageLookupByLibrary.simpleMessage("Despesa"),
         "expenseCat":
             MessageLookupByLibrary.simpleMessage("Categories de despesa"),
@@ -337,6 +348,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenseReport":
             MessageLookupByLibrary.simpleMessage("Informe de despeses"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser": MessageLookupByLibrary.simpleMessage(
+            "No s\'ha pogut eliminar l\'usuari"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "No s\'ha pogut obtenir la versió de la plataforma."),
         "fashion": MessageLookupByLibrary.simpleMessage("Moda"),
@@ -376,6 +389,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("Ingressos"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("Categories d\'ingressos"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("Data d\'ingressos"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("Ingressos per"),
         "incomeReport":
             MessageLookupByLibrary.simpleMessage("Informe d\'ingressos"),
@@ -466,6 +480,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "No hi ha proveïdor disponible"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("Sense transaccions"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Sense connexió Wi-Fi"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("Usuari no actiu"),
         "notFound": MessageLookupByLibrary.simpleMessage("No trobat"),
@@ -487,6 +503,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("Parts"),
         "partyList": MessageLookupByLibrary.simpleMessage("Llista de parts"),
         "password": MessageLookupByLibrary.simpleMessage("Contrasenya"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "La contrasenya i la contrasenya de confirmació no coincideixen"),
         "passwordCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "La contrasenya no pot estar buida"),
         "passwordsDoNotMatch": MessageLookupByLibrary.simpleMessage(
@@ -528,6 +547,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("Pla"),
         "pleaseAddQuantity": MessageLookupByLibrary.simpleMessage(
             "Si us plau, afegiu una quantitat"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Si us plau, comproveu la vostra connexió a Internet i torneu-ho a intentar"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "Si us plau, connecteu primer la impressora"),
         "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
@@ -582,6 +604,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Si us plau, utilitzeu el codi de compra vàlid per utilitzar l\'aplicació"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Potenciat per Acnoo"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("Desenvolupat per"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "Suport premium per a clients"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Pla premium"),
@@ -620,6 +643,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("Compra per:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Compra confirmada"),
+        "purchaseCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "La creació de la compra ha fallat"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("Detalls de la compra"),
         "purchaseList":
@@ -662,6 +687,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "Restabliu la vostra contrasenya per recuperar i iniciar sessió al vostre compte"),
         "retailer": MessageLookupByLibrary.simpleMessage("Minorista"),
+        "retry": MessageLookupByLibrary.simpleMessage("Reintentar"),
         "retur": MessageLookupByLibrary.simpleMessage("Retorn"),
         "returnAmount":
             MessageLookupByLibrary.simpleMessage("Import de devolució"),
@@ -671,6 +697,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("Preu de venda"),
         "sales": MessageLookupByLibrary.simpleMessage("Vendes"),
         "salesBy": MessageLookupByLibrary.simpleMessage("Vendes per:"),
+        "salesCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "La creació de la venda ha fallat"),
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("Detalls de les vendes"),
         "salesList": MessageLookupByLibrary.simpleMessage("Llista de vendes"),
@@ -761,6 +789,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("Estoc: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Subtotal"),
         "submit": MessageLookupByLibrary.simpleMessage("Enviar"),
+        "subscribeCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "La creació de la subscripció ha fallat"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("Subscripció amb èxit"),
         "subscription": MessageLookupByLibrary.simpleMessage("Subscripció"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Subtotal"),
         "successfullyPaid":
@@ -824,22 +856,34 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("Actualitzar contacte"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Actualitzar ara"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("Actualitzar la contrasenya"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("Actualitzar producte"),
         "updateProfile": MessageLookupByLibrary.simpleMessage(
             "Actualitzeu el vostre perfil"),
+        "updateYourPassword": MessageLookupByLibrary.simpleMessage(
+            "Actualitzeu la vostra contrasenya"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "Actualitzeu el vostre perfil per connectar millor amb els vostres clients"),
         "updateYourSubscription": MessageLookupByLibrary.simpleMessage(
             "Actualitzeu la vostra subscripció"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Actualitzat amb èxit"),
         "updating": MessageLookupByLibrary.simpleMessage("Actualitzant..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("Actualitzeu ara"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "El títol d\'usuari no pot estar buit"),
+        "userCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "La creació d\'usuari ha fallat"),
+        "userDeletedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Usuari eliminat amb èxit"),
         "userRole": MessageLookupByLibrary.simpleMessage("Rol d\'usuari"),
         "userRoleDetails":
             MessageLookupByLibrary.simpleMessage("Detalls del rol d\'usuari"),
         "userTitle": MessageLookupByLibrary.simpleMessage("Títol d\'usuari"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "La actualització de l\'usuari ha fallat"),
         "vat": MessageLookupByLibrary.simpleMessage("IVA"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("L\'IVA no s\'aplica"),

@@ -84,7 +84,8 @@ class _SaleProductsListState extends State<SaleProductsList> {
                         decoration: InputDecoration(
                           floatingLabelBehavior: FloatingLabelBehavior.always,
                           labelText: lang.S.of(context).productCode,
-                          hintText: productCode == '0000' || productCode == '-1' ? 'Scan product QR code' : productCode,
+                         // hintText: productCode == '0000' || productCode == '-1' ? 'Scan product QR code' : productCode,
+                          hintText: productCode == '0000' || productCode == '-1' ? lang.S.of(context).scanProductQRCode : productCode,
                           border: const OutlineInputBorder(),
                         ),
                       ),
@@ -126,7 +127,7 @@ class _SaleProductsListState extends State<SaleProductsList> {
 
                                           if (barcodes.isNotEmpty) {
                                             final Barcode barcode = barcodes.first;
-                                            debugPrint('Barcode found! ${barcode.rawValue}');
+                                            debugPrint('${lang.S.of(context).barcodeFound}! ${barcode.rawValue}');
                                             setState(() {
                                               productCode = barcode.rawValue!;
                                               codeController.text = productCode;
@@ -183,7 +184,8 @@ class _SaleProductsListState extends State<SaleProductsList> {
                         return GestureDetector(
                           onTap: () async {
                             if ((products[i].productStock ?? 0) <= 0) {
-                              EasyLoading.showError('Out of stock');
+                              //EasyLoading.showError('Out of stock');
+                              EasyLoading.showError(lang.S.of(context).outOfStock);
                             } else {
                               if (widget.customerModel == null) {
                                 sentProductPrice = products[i].productSalePrice.toString();

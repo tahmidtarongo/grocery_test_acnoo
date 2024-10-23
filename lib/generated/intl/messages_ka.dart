@@ -70,6 +70,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("ერთეულის დამატება"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("მომხმარებლის როლის დამატება"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("წარმატებით დაემატა"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("კატალოგში დაემატა"),
         "adding": MessageLookupByLibrary.simpleMessage("დამატება.."),
@@ -87,6 +89,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "amarSonarBangla":
             MessageLookupByLibrary.simpleMessage("ამარ სონარ ბანგლა"),
         "amount": MessageLookupByLibrary.simpleMessage("რაოდენობა"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("შეცდომა მოხდა"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS გაიგზავნება შემდეგ ნომერზე: "),
@@ -305,6 +309,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("შეიყვანეთ შენიშვნა"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("შეიყვანეთ ხსნადი saldo"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("პროდუქტის კოდის შეყვანა"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("შეიყვანეთ პროდუქტის სახელი"),
         "enterPurchasePrice":
@@ -327,14 +333,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("შეიყვანეთ წონა"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("შეიყვანეთ საბითუმო ფასი"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "შეიყვანეთ თქვენი ადასტურების პაროლი"),
         "enterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
             "შეიყვანეთ თქვენი ელ. ფოსტის მისამართი"),
         "enterYourFullName": MessageLookupByLibrary.simpleMessage(
             "შეიყვანეთ თქვენი სრული სახელი"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("შეიყვანეთ თქვენი სახელი"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("შეიყვანეთ თქვენი პაროლი"),
         "enterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "შეიყვანეთ თქვენი ტელეფონის ნომერი"),
+        "error": MessageLookupByLibrary.simpleMessage("შეცდომა"),
         "expense": MessageLookupByLibrary.simpleMessage("ხარჯები"),
         "expenseCat":
             MessageLookupByLibrary.simpleMessage("ხარჯების კატეგორიები"),
@@ -343,6 +354,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenseReport":
             MessageLookupByLibrary.simpleMessage("ხარჯების ანგარიში"),
         "facebook": MessageLookupByLibrary.simpleMessage("ფეისბუკი"),
+        "failedToDeleteUser": MessageLookupByLibrary.simpleMessage(
+            "მომხმარებლის წაშლა ვერ მოხერხდა"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "პლატფორმის ვერსიის მიღება ვერ მოხერხდა."),
         "fashion": MessageLookupByLibrary.simpleMessage("მოდა"),
@@ -381,6 +394,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("შემოსავალი"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("შემოსავლების კატეგორიები"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("შემოსავლის თარიღი"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("შემოსავლები"),
         "incomeReport":
             MessageLookupByLibrary.simpleMessage("შემოსავლების ანგარიში"),
@@ -472,6 +486,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("მომწოდებელი არ არის"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("არ არის ტრანზაქცია"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("არ არის Wi-Fi დაკავშირება"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("აქტიური მომხმარებელი არაა"),
         "notFound": MessageLookupByLibrary.simpleMessage("არ მოიძებნა"),
@@ -492,6 +508,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("პარტიები"),
         "partyList": MessageLookupByLibrary.simpleMessage("პარტიების სია"),
         "password": MessageLookupByLibrary.simpleMessage("პაროლი"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "პაროლი და ადასტურების პაროლი არ ემთხვევა"),
         "passwordCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("პაროლი ვერ იქნება ცარიელი"),
         "passwordsDoNotMatch":
@@ -532,6 +551,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("გეგმა"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("გთხოვთ დაამატოთ რაოდენობა"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "გთხოვთ შეამოწმოთ თქვენი ინტერნეტის დაკავშირება და სცადეთ კიდევ ერთხელ"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "გთხოვთ, პირველ რიგში, გააერთიანოთ პრინტერი"),
         "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
@@ -586,6 +608,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "გთხოვთ, გამოიყენეთ ვალიდური შეძენის კოდი აპლიკაციის გამოყენებისათვის"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("მოწვდილია Acnoo-ს მიერ"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("ძალა მიაწვდოს"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "პრემიუმ მომხმარებელთა მხარდაჭერა"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("პრემიუმ გეგმა"),
@@ -623,6 +646,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("შეძენილი:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("შესყიდვა დადასტურებულია"),
+        "purchaseCreationFailed":
+            MessageLookupByLibrary.simpleMessage("ყიდვის შექმნა ვერ მოხერხდა"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("შესყიდვების დეტალები"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("შესყიდვების სია"),
@@ -669,6 +694,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "შეამოწმეთ თქვენი პაროლი აღდგენისთვის და შესვლისთვის თქვენს ანგარიშზე"),
         "retailer": MessageLookupByLibrary.simpleMessage("წარმომადგენელი"),
+        "retry": MessageLookupByLibrary.simpleMessage("კიდევ ერთხელ სცადეთ"),
         "retur": MessageLookupByLibrary.simpleMessage("გასწორება"),
         "returnAmount":
             MessageLookupByLibrary.simpleMessage("თანხის დაბრუნება"),
@@ -678,6 +704,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("გაყიდვის ფასი"),
         "sales": MessageLookupByLibrary.simpleMessage("გაყიდვები"),
         "salesBy": MessageLookupByLibrary.simpleMessage("გაყიდულია:"),
+        "salesCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "გაყიდვის შექმნა ვერ მოხერხდა"),
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("გაყიდვის დეტალები"),
         "salesList": MessageLookupByLibrary.simpleMessage("გაყიდვების სია"),
@@ -768,6 +796,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("მარაგი: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("შეიძლება"),
         "submit": MessageLookupByLibrary.simpleMessage("გაგზავნა"),
+        "subscribeCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "მომწვდელობის შექმნა ვერ მოხერხდა"),
+        "subscribeSuccessful": MessageLookupByLibrary.simpleMessage(
+            "მომწვდელობა წარმატებით დასრულდა"),
         "subscription": MessageLookupByLibrary.simpleMessage("წარმატებული"),
         "subtotal": MessageLookupByLibrary.simpleMessage("შესაბამისი თანხა"),
         "successfullyPaid":
@@ -832,23 +864,35 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("კონტაქტის განახლება"),
         "updateNow": MessageLookupByLibrary.simpleMessage("განაახლეთ ახლა"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("პაროლის განახლება"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("პროდუქტის განახლება"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("განაახლეთ თქვენი პროფილი"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("განაახლეთ თქვენი პაროლი"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "განაახლეთ თქვენი პროფილი, რომ უკეთ დააკავშიროთ თქვენი მომხმარებელი"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("განაახლეთ თქვენი გამოწერა"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("წარმატებით განახლდა"),
         "updating": MessageLookupByLibrary.simpleMessage("განახლება..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("განაახლეთ ახლა"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "მომხმარებლის სახელწოდება არ შეიძლება იყოს ცარიელი"),
+        "userCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "მომხმარებლის შექმნა ვერ მოხერხდა"),
+        "userDeletedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "მომხმარებელი წარმატებით წაიშალა"),
         "userRole": MessageLookupByLibrary.simpleMessage("მომხმარებლის როლი"),
         "userRoleDetails":
             MessageLookupByLibrary.simpleMessage("მომხმარებლის როლის დეტალები"),
         "userTitle":
             MessageLookupByLibrary.simpleMessage("მომხმარებლის სახელწოდება"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "მომხმარებლის განახლება ვერ მოხერხდა"),
         "vat": MessageLookupByLibrary.simpleMessage("ბადალი"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("ბადალი არ ვრცელდება"),

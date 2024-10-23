@@ -590,7 +590,31 @@
   "sep": "सितंबर",
   "oct": "अक्टूबर",
   "nov": "नवंबर",
-  "dec": "दिसंबर"
+  "dec": "दिसंबर",
+  "incomeDate": "आय की तारीख",
+  "enterProductCode": "उत्पाद कोड दर्ज करें",
+  "retry": "पुनः प्रयास करें",
+  "addedSuccessful": "सफलतापूर्वक जोड़ा गया",
+  "poweredBy": "द्वारा संचालित",
+  "updatePassword": "पासवर्ड अपडेट करें",
+  "updateYourPassword": "अपना पासवर्ड अपडेट करें",
+  "enterYourConfirmPassword": "अपना पुष्टि पासवर्ड दर्ज करें",
+  "enterYourPassword": "अपना पासवर्ड दर्ज करें",
+  "passwordAndConfirmPasswordDoesNotMatch": "पासवर्ड और पुष्टि पासवर्ड मेल नहीं खाते",
+  "noWiFiConnection": "कोई Wi-Fi कनेक्शन नहीं",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "कृपया अपना इंटरनेट कनेक्शन जांचें और पुनः प्रयास करें",
+  "userCreationFailed": "उपयोगकर्ता निर्माण विफल रहा",
+  "userDeletedSuccessfully": "उपयोगकर्ता सफलतापूर्वक हटाया गया",
+  "failedToDeleteUser": "उपयोगकर्ता को हटाने में विफल",
+  "error": "त्रुटि",
+  "updatedSuccessfully": "सफलतापूर्वक अपडेट किया गया",
+  "userUpdateFailed": "उपयोगकर्ता अपडेट विफल रहा",
+  "subscribeSuccessful": "सफलतापूर्वक सदस्यता ली गई",
+  "subscribeCreationFailed": "सदस्यता निर्माण विफल रहा",
+  "anErrorOccurred": "एक त्रुटि हुई",
+  "salesCreationFailed": "बिक्री निर्माण विफल रहा",
+  "purchaseCreationFailed": "खरीद निर्माण विफल रहा"
+
 
 
 

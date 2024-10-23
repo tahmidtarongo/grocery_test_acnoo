@@ -67,6 +67,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("Adăugați o unitate"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Adaugă Rol Utilizator"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("Adăugat cu succes"),
         "addedToCart": MessageLookupByLibrary.simpleMessage("Adăugat în coș"),
         "adding": MessageLookupByLibrary.simpleMessage("Adăugare.."),
         "address": MessageLookupByLibrary.simpleMessage("Abordare"),
@@ -80,6 +82,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Ai deja un cont?"),
         "amount": MessageLookupByLibrary.simpleMessage("Cantitate"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("A apărut o eroare"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "Un SMS va fi trimis la următorul număr:"),
@@ -295,6 +299,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("Introdu notița"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("Introdu soldul inițial"),
+        "enterProductCode": MessageLookupByLibrary.simpleMessage(
+            "Introduceți codul produsului"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("Introdu numele produsului"),
         "enterPurchasePrice":
@@ -318,14 +324,19 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Introdu greutatea"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("Introdu prețul en-gros"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Introduceți parola de confirmare"),
         "enterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
             "Introduceți adresa dvs. de email"),
         "enterYourFullName":
             MessageLookupByLibrary.simpleMessage("Introdu numele tău complet"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("Introduceți numele dvs."),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("Introduceți parola dvs."),
         "enterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Introduceți numărul dvs. de telefon"),
+        "error": MessageLookupByLibrary.simpleMessage("Eroare"),
         "expense": MessageLookupByLibrary.simpleMessage("Cheltuială"),
         "expenseCat":
             MessageLookupByLibrary.simpleMessage("Categorii de cheltuieli"),
@@ -334,6 +345,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenseReport":
             MessageLookupByLibrary.simpleMessage("Raport de cheltuieli"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser": MessageLookupByLibrary.simpleMessage(
+            "Eșec la ștergerea utilizatorului"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Eșec la obținerea versiunii platformei."),
         "fashion": MessageLookupByLibrary.simpleMessage("Modă"),
@@ -372,6 +385,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("Venit"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("Categorii de venit"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("Data veniturilor"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("Venit pentru"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("Raport venituri"),
         "instagram": MessageLookupByLibrary.simpleMessage("Instagram"),
@@ -461,6 +475,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Niciun furnizor disponibile"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("Fără tranzacție"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Nicio conexiune Wi-Fi"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("Utilizator inactiv"),
         "notFound": MessageLookupByLibrary.simpleMessage("Nu a fost găsit"),
@@ -482,6 +498,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("Părți"),
         "partyList": MessageLookupByLibrary.simpleMessage("Lista partidelor"),
         "password": MessageLookupByLibrary.simpleMessage("Parola"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "Parola și parola de confirmare nu se potrivesc"),
         "passwordCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("Parola nu poate fi goală"),
         "passwordsDoNotMatch":
@@ -518,6 +537,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("Plan"),
         "pleaseAddQuantity": MessageLookupByLibrary.simpleMessage(
             "Te rugăm să adaugi cantitatea"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Vă rugăm să verificați conexiunea la internet și să încercați din nou"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "Vă rugăm conectați imprimanta mai întâi"),
         "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
@@ -572,6 +594,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Vă rugăm să folosiți codul de achiziție valid pentru a utiliza aplicația"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Furnizat de Acnoo"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("Furnizat de"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "Suport pentru aplicații Android și iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Plan Premium"),
@@ -609,6 +632,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("Cumpărat de:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Achiziție confirmată"),
+        "purchaseCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Crearea achiziției a eșuat"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("Detalii achiziție"),
         "purchaseList":
@@ -657,6 +682,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Resetează parola pentru a-ți recupera contul și a te conecta"),
         "retailer":
             MessageLookupByLibrary.simpleMessage("Vânzător cu amănuntul"),
+        "retry": MessageLookupByLibrary.simpleMessage("Reîncercați"),
         "retur": MessageLookupByLibrary.simpleMessage("Returnare"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("Suma returnată"),
         "riead": MessageLookupByLibrary.simpleMessage("Riead"),
@@ -665,6 +691,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("Preț de vânzare"),
         "sales": MessageLookupByLibrary.simpleMessage("Vânzări"),
         "salesBy": MessageLookupByLibrary.simpleMessage("Vândut de:"),
+        "salesCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Crearea vânzărilor a eșuat"),
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("Detalii de vânzări"),
         "salesList": MessageLookupByLibrary.simpleMessage("Lista vânzărilor"),
@@ -754,6 +782,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("Stoc: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Subtotal"),
         "submit": MessageLookupByLibrary.simpleMessage("Trimite"),
+        "subscribeCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Crearea abonamentului a eșuat"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("Abonare reușită"),
         "subscription": MessageLookupByLibrary.simpleMessage("Abonament"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Subtotal"),
         "successfullyPaid":
@@ -818,23 +850,35 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("Actualizați contactul"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Actualizează acum"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("Actualizați parola"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("Actualizați produsul"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("Actualizeaza-ti profilul"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("Actualizați-vă parola"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "Actualizează-ți profilul pentru a conecta clientul tău cu o impresie mai bună"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("Actualizează-ți abonamentul"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Actualizat cu succes"),
         "updating": MessageLookupByLibrary.simpleMessage("Se actualizează..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("Actualizează acum"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Titlul utilizatorului nu poate fi gol"),
+        "userCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Crearea utilizatorului a eșuat"),
+        "userDeletedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Utilizator șters cu succes"),
         "userRole":
             MessageLookupByLibrary.simpleMessage("Rolul utilizatorului"),
         "userRoleDetails":
             MessageLookupByLibrary.simpleMessage("Detalii rol utilizator"),
         "userTitle": MessageLookupByLibrary.simpleMessage("Titlu utilizator"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "Actualizarea utilizatorului a eșuat"),
         "vat": MessageLookupByLibrary.simpleMessage("TVA"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("TVA-ul nu se aplică"),

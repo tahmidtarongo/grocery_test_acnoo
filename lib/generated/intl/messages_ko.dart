@@ -52,6 +52,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "addToCart": MessageLookupByLibrary.simpleMessage("장바구니에 추가"),
         "addUnit": MessageLookupByLibrary.simpleMessage("단위 추가"),
         "addUserRole": MessageLookupByLibrary.simpleMessage("사용자 역할 추가"),
+        "addedSuccessful": MessageLookupByLibrary.simpleMessage("추가 성공"),
         "addedToCart": MessageLookupByLibrary.simpleMessage("장바구니에 추가됨"),
         "adding": MessageLookupByLibrary.simpleMessage("추가하는 중..."),
         "address": MessageLookupByLibrary.simpleMessage("주소"),
@@ -65,6 +66,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("이미 계정이 있으신가요?"),
         "amount": MessageLookupByLibrary.simpleMessage("양"),
+        "anErrorOccurred": MessageLookupByLibrary.simpleMessage("오류가 발생했습니다"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage("다음 번호로 SMS가 전송됩니다:"),
         "android": MessageLookupByLibrary.simpleMessage("Android 및 iOS 앱 지원"),
@@ -230,6 +232,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterName": MessageLookupByLibrary.simpleMessage("이름 입력"),
         "enterNote": MessageLookupByLibrary.simpleMessage("메모 입력"),
         "enterOpeningBalance": MessageLookupByLibrary.simpleMessage("초기 잔액 입력"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("제품 코드를 입력하세요"),
         "enterProductName": MessageLookupByLibrary.simpleMessage("제품 이름 입력"),
         "enterPurchasePrice": MessageLookupByLibrary.simpleMessage("구매 가격 입력"),
         "enterQuantity": MessageLookupByLibrary.simpleMessage("수량 입력"),
@@ -243,18 +247,24 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterValidOTP": MessageLookupByLibrary.simpleMessage("유효한 OTP를 입력하세요"),
         "enterWeight": MessageLookupByLibrary.simpleMessage("무게 입력"),
         "enterWholesalePrice": MessageLookupByLibrary.simpleMessage("도매 가격 입력"),
+        "enterYourConfirmPassword":
+            MessageLookupByLibrary.simpleMessage("확인 비밀번호를 입력하세요"),
         "enterYourEmailAddress":
             MessageLookupByLibrary.simpleMessage("이메일 주소를 입력하세요"),
         "enterYourFullName": MessageLookupByLibrary.simpleMessage("전체 이름 입력"),
         "enterYourName": MessageLookupByLibrary.simpleMessage("이름을 입력하세요"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("비밀번호를 입력하세요"),
         "enterYourPhoneNumber":
             MessageLookupByLibrary.simpleMessage("전화번호를 입력하세요"),
+        "error": MessageLookupByLibrary.simpleMessage("오류"),
         "expense": MessageLookupByLibrary.simpleMessage("지출"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("비용 범주"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("비용 날짜"),
         "expenseFor": MessageLookupByLibrary.simpleMessage("비용"),
         "expenseReport": MessageLookupByLibrary.simpleMessage("경비 보고서"),
         "facebook": MessageLookupByLibrary.simpleMessage("페이스북"),
+        "failedToDeleteUser": MessageLookupByLibrary.simpleMessage("사용자 삭제 실패"),
         "failedToGetPlatformVersion":
             MessageLookupByLibrary.simpleMessage("플랫폼 버전을 가져오지 못했습니다."),
         "fashion": MessageLookupByLibrary.simpleMessage("패션"),
@@ -286,6 +296,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "image": MessageLookupByLibrary.simpleMessage("이미지"),
         "income": MessageLookupByLibrary.simpleMessage("수입"),
         "incomeCategories": MessageLookupByLibrary.simpleMessage("수입 카테고리"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("수입 날짜"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("수입 대상"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("수입 보고서"),
         "instagram": MessageLookupByLibrary.simpleMessage("인스타그램"),
@@ -361,6 +372,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("사용자 역할을 찾을 수 없습니다"),
         "noSupplier": MessageLookupByLibrary.simpleMessage("공급업체 없음"),
         "noTransaction": MessageLookupByLibrary.simpleMessage("거래 없음"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Wi-Fi 연결이 없습니다"),
         "notActiveUser": MessageLookupByLibrary.simpleMessage("활성 사용자가 아닙니다"),
         "notFound": MessageLookupByLibrary.simpleMessage("찾을 수 없음"),
         "note": MessageLookupByLibrary.simpleMessage("메모"),
@@ -379,6 +392,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("파티"),
         "partyList": MessageLookupByLibrary.simpleMessage("당사자 목록"),
         "password": MessageLookupByLibrary.simpleMessage("비밀번호"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage("비밀번호와 확인 비밀번호가 일치하지 않습니다"),
         "passwordCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("비밀번호를 입력해야 합니다"),
         "passwordsDoNotMatch":
@@ -407,6 +422,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "pickStartDate": MessageLookupByLibrary.simpleMessage("시작 날짜 선택"),
         "plan": MessageLookupByLibrary.simpleMessage("계획"),
         "pleaseAddQuantity": MessageLookupByLibrary.simpleMessage("수량을 추가하세요"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage("인터넷 연결을 확인하고 다시 시도하세요"),
         "pleaseConnectThePrinterFirst":
             MessageLookupByLibrary.simpleMessage("프린터를 먼저 연결하세요"),
         "pleaseConnectYourBlutohPrinter":
@@ -456,6 +473,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("앱을 사용하려면 유효한 구매 코드를 사용하세요"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Powered By Acnoo"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("제공자"),
         "premiumCustomerSupport":
             MessageLookupByLibrary.simpleMessage("Android 및 iOS 앱 지원"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("프리미엄 플랜"),
@@ -485,6 +503,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseAlarm": MessageLookupByLibrary.simpleMessage("구매 알림"),
         "purchaseBy": MessageLookupByLibrary.simpleMessage("구매자:"),
         "purchaseConfirmed": MessageLookupByLibrary.simpleMessage("구매 확인"),
+        "purchaseCreationFailed":
+            MessageLookupByLibrary.simpleMessage("구매 생성 실패"),
         "purchaseDetails": MessageLookupByLibrary.simpleMessage("구매 세부 사항"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("구매 목록"),
         "purchaseNow": MessageLookupByLibrary.simpleMessage("지금 구매"),
@@ -520,6 +540,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword":
             MessageLookupByLibrary.simpleMessage("비밀번호를 재설정하고 계정에 로그인하세요"),
         "retailer": MessageLookupByLibrary.simpleMessage("소매점"),
+        "retry": MessageLookupByLibrary.simpleMessage("다시 시도"),
         "retur": MessageLookupByLibrary.simpleMessage("반품"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("반환 금액"),
         "riead": MessageLookupByLibrary.simpleMessage("읽기"),
@@ -528,6 +549,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("세일 가격"),
         "sales": MessageLookupByLibrary.simpleMessage("판매"),
         "salesBy": MessageLookupByLibrary.simpleMessage("판매자:"),
+        "salesCreationFailed": MessageLookupByLibrary.simpleMessage("판매 생성 실패"),
         "salesDetails": MessageLookupByLibrary.simpleMessage("공급업체 없음"),
         "salesList": MessageLookupByLibrary.simpleMessage("판매 목록"),
         "salesPrice": MessageLookupByLibrary.simpleMessage("판매 가격"),
@@ -597,6 +619,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("재고: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("소계"),
         "submit": MessageLookupByLibrary.simpleMessage("제출"),
+        "subscribeCreationFailed":
+            MessageLookupByLibrary.simpleMessage("구독 생성 실패"),
+        "subscribeSuccessful": MessageLookupByLibrary.simpleMessage("구독 성공"),
         "subscription": MessageLookupByLibrary.simpleMessage("신청"),
         "subtotal": MessageLookupByLibrary.simpleMessage("소계"),
         "successfullyPaid": MessageLookupByLibrary.simpleMessage("성공적으로 결제됨"),
@@ -651,19 +676,28 @@ class MessageLookup extends MessageLookupByLibrary {
         "update": MessageLookupByLibrary.simpleMessage("업데이트"),
         "updateContact": MessageLookupByLibrary.simpleMessage("연락처 업데이트"),
         "updateNow": MessageLookupByLibrary.simpleMessage("지금 업데이트"),
+        "updatePassword": MessageLookupByLibrary.simpleMessage("비밀번호 업데이트"),
         "updateProduct": MessageLookupByLibrary.simpleMessage("제품 업데이트"),
         "updateProfile": MessageLookupByLibrary.simpleMessage("프로필 업데이트"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("비밀번호를 업데이트하세요"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "고객과 더 나은 인상을 주기 위해 프로필을 업데이트하세요"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("구독을 업데이트하세요"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("성공적으로 업데이트됨"),
         "updating": MessageLookupByLibrary.simpleMessage("업데이트 중..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("지금 업그레이드"),
         "useTitleCanNotBeEmpty":
             MessageLookupByLibrary.simpleMessage("사용자 제목을 입력해야 합니다"),
+        "userCreationFailed": MessageLookupByLibrary.simpleMessage("사용자 생성 실패"),
+        "userDeletedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("사용자 삭제 성공"),
         "userRole": MessageLookupByLibrary.simpleMessage("사용자 역할"),
         "userRoleDetails": MessageLookupByLibrary.simpleMessage("사용자 역할 세부 사항"),
         "userTitle": MessageLookupByLibrary.simpleMessage("사용자 제목"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage("사용자 업데이트 실패"),
         "vat": MessageLookupByLibrary.simpleMessage("부가가치세"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("부가세가 적용되지 않습니다"),

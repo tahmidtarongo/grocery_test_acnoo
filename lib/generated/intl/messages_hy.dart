@@ -68,6 +68,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("Ավելացնել միավոր"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Ավելացնել օգտվողի դերը"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("Ավելացված է հաջողությամբ"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("Ավելացվել է սայլիկ"),
         "adding": MessageLookupByLibrary.simpleMessage("Ավելացնելիս.."),
@@ -85,6 +87,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "amarSonarBangla":
             MessageLookupByLibrary.simpleMessage("Ամար սոնար բանգլա"),
         "amount": MessageLookupByLibrary.simpleMessage("Գումար"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("Տեղի ունեցավ սխալ"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS կհղվի հետևյալ հեռախոսահամարին:"),
@@ -299,6 +303,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("Մուտքագրեք նշում"),
         "enterOpeningBalance": MessageLookupByLibrary.simpleMessage(
             "Մուտքագրեք սկզբնական մնացորդը"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("Մուտքագրեք ապրանքի կոդը"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("Մուտքագրեք ապրանքի անունը"),
         "enterPurchasePrice":
@@ -321,14 +327,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("Մուտքագրեք քաշը"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("Մուտքագրեք մեծածախ գինը"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Մուտքագրեք ձեր հաստատման գաղտնաբառը"),
         "enterYourEmailAddress":
             MessageLookupByLibrary.simpleMessage("Մուտքագրեք ձեր էլ. հասցեն"),
         "enterYourFullName": MessageLookupByLibrary.simpleMessage(
             "Մուտքագրեք ձեր ամբողջ անունը"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("Մուտքագրեք ձեր անունը"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("Մուտքագրեք ձեր գաղտնաբառը"),
         "enterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Մուտքագրեք ձեր հեռախոսահամարը"),
+        "error": MessageLookupByLibrary.simpleMessage("Սխալ"),
         "expense": MessageLookupByLibrary.simpleMessage("Ծախս"),
         "expenseCat":
             MessageLookupByLibrary.simpleMessage("Ծախսի կատեգորիաներ"),
@@ -337,6 +348,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenseReport":
             MessageLookupByLibrary.simpleMessage("Ծախսի հաշվետվություն"),
         "facebook": MessageLookupByLibrary.simpleMessage("Ֆեյսբուք"),
+        "failedToDeleteUser":
+            MessageLookupByLibrary.simpleMessage("Օգտատիրոջ ջնջումը ձախողվեց"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Չի հաջողվել ստանալ պլատֆորմի տարբերակը:"),
         "fashion": MessageLookupByLibrary.simpleMessage("Ֆաշոն"),
@@ -376,6 +389,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("Տոկոս"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("Եկամտի կատեգորիաներ"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("Եկամուտի ամսաթիվ"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("Եկամտի համար"),
         "incomeReport":
             MessageLookupByLibrary.simpleMessage("Եկամտի հաշվետվություն"),
@@ -464,6 +478,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Օգտվողի դերը չի գտնվել"),
         "noSupplier": MessageLookupByLibrary.simpleMessage("Մատակարար չկա"),
         "noTransaction": MessageLookupByLibrary.simpleMessage("Չկա գործարք"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Wi-Fi կապ չկա"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("Չակերտված օգտվող"),
         "notFound": MessageLookupByLibrary.simpleMessage("Չի գտնվել"),
@@ -486,6 +502,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "partyList":
             MessageLookupByLibrary.simpleMessage("Կուսակցությունների ցանկ"),
         "password": MessageLookupByLibrary.simpleMessage("Գաղտնաբառ"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "Գաղտնաբառը և հաստատման գաղտնաբառը չեն համընկնում"),
         "passwordCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Գաղտնաբառը չի կարող դատարկ լինել"),
         "passwordsDoNotMatch":
@@ -525,6 +544,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("Հիմնարկ"),
         "pleaseAddQuantity": MessageLookupByLibrary.simpleMessage(
             "Խնդրում ենք ավելացնել քանակություն"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Խնդրում ենք ստուգել ձեր ինտերնետ կապը և կրկին փորձել"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "Խնդրում ենք առաջինը միացնել տպիչը"),
         "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
@@ -579,6 +601,8 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Խնդրում ենք օգտագործել վավեր գնման կոդը հավելվածը օգտագործելու համար"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Հզորացված է Acnoo-ի կողմից"),
+        "poweredBy":
+            MessageLookupByLibrary.simpleMessage("Շարժիչը ապահովված է"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "Առաջատար հաճախորդների աջակցություն"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Պրեմիում պլան"),
@@ -614,6 +638,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("Գնված է՝"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Գնումը հաստատվել է"),
+        "purchaseCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Գնումների ստեղծումը ձախողվեց"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("Գնումների մանրամասներ"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("Գնումների ցանկ"),
@@ -656,6 +682,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "Վերականգնել ձեր գաղտնաբառը, որպեսզի կրկին մուտք գործեք ձեր հաշիվը"),
         "retailer": MessageLookupByLibrary.simpleMessage("Վաճառող"),
+        "retry": MessageLookupByLibrary.simpleMessage("Կրկին փորձել"),
         "retur": MessageLookupByLibrary.simpleMessage("Վերադարձ"),
         "returnAmount":
             MessageLookupByLibrary.simpleMessage("Վերադարձի գումար"),
@@ -665,6 +692,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("Վաճառքի գին"),
         "sales": MessageLookupByLibrary.simpleMessage("Վաճառքներ"),
         "salesBy": MessageLookupByLibrary.simpleMessage("Վաճառված է՝"),
+        "salesCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Վաճառքի ստեղծումը ձախողվեց"),
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("Վաճառքի մանրամասներ"),
         "salesList": MessageLookupByLibrary.simpleMessage("Վաճառքների ցուցակ"),
@@ -753,6 +782,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("Պաշարներ:"),
         "subTotal": MessageLookupByLibrary.simpleMessage("Երկրային գումար"),
         "submit": MessageLookupByLibrary.simpleMessage("Ներդնել"),
+        "subscribeCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Բաժանորդագրության ստեղծումը ձախողվեց"),
+        "subscribeSuccessful": MessageLookupByLibrary.simpleMessage(
+            "Բաժանորդագրությունը հաջողվեց"),
         "subscription":
             MessageLookupByLibrary.simpleMessage("Բաժանորդագրություն"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Երկրային գումար"),
@@ -820,22 +853,34 @@ class MessageLookup extends MessageLookupByLibrary {
         "update": MessageLookupByLibrary.simpleMessage("Թարմացնել"),
         "updateContact": MessageLookupByLibrary.simpleMessage("Թարմացնել կապը"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Թարմացրեք հիմա"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("Թարմացնել գաղտնաբառը"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("Թարմացնել ապրանքը"),
         "updateProfile": MessageLookupByLibrary.simpleMessage(
             "Թարմացնել ձեր վիճակագրությունը"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("Թարմացրեք ձեր գաղտնաբառը"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "Թարմացրեք ձեր պրոֆիլը, որպեսզի ձեր հաճախորդը միանա ավելի լավ տպավորություն թողնելու համար"),
         "updateYourSubscription": MessageLookupByLibrary.simpleMessage(
             "Թարմացրեք ձեր բաժանորդագրությունը"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Հաջողությամբ թարմացվեց"),
         "updating": MessageLookupByLibrary.simpleMessage("Թարմացում.."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("Թարմացրեք հիմա"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Օգտվողի վերնագիրը չի կարող լինել դատարկ"),
+        "userCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Օգտատիրոջ ստեղծումը ձախողվեց"),
+        "userDeletedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "Օգտատերը հաջողությամբ ջնջվեց"),
         "userRole": MessageLookupByLibrary.simpleMessage("Օգտվողի դերը"),
         "userRoleDetails":
             MessageLookupByLibrary.simpleMessage("Օգտվողի դերերի մանրամասներ"),
         "userTitle": MessageLookupByLibrary.simpleMessage("Օգտվողի վերնագիր"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "Օգտատիրոջ թարմացումը ձախողվեց"),
         "vat": MessageLookupByLibrary.simpleMessage("ԱՎԱՏ"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("ԱՎԱՏ-ը չի գործում"),

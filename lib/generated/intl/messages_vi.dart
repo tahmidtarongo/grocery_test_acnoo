@@ -65,6 +65,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("Thêm đơn vị"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Thêm Vai Trò Người Dùng"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("Thêm thành công"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("Đã thêm vào giỏ hàng"),
         "adding": MessageLookupByLibrary.simpleMessage("Đang thêm.."),
@@ -79,6 +81,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Đã có tài khoản? "),
         "amount": MessageLookupByLibrary.simpleMessage("Số lượng"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("Đã xảy ra lỗi"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "Một tin nhắn SMS sẽ được gửi đến số điện thoại sau:"),
@@ -284,6 +288,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("Nhập ghi chú"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("Nhập số dư mở"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("Nhập mã sản phẩm"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("Nhập tên sản phẩm"),
         "enterPurchasePrice":
@@ -306,14 +312,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("Nhập trọng lượng"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("Nhập giá bán buôn"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Nhập mật khẩu xác nhận của bạn"),
         "enterYourEmailAddress":
             MessageLookupByLibrary.simpleMessage("Nhập địa chỉ email của bạn"),
         "enterYourFullName":
             MessageLookupByLibrary.simpleMessage("Nhập họ và tên của bạn"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("Nhập tên của bạn"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("Nhập mật khẩu của bạn"),
         "enterYourPhoneNumber":
             MessageLookupByLibrary.simpleMessage("Nhập số điện thoại của bạn"),
+        "error": MessageLookupByLibrary.simpleMessage("Lỗi"),
         "expense": MessageLookupByLibrary.simpleMessage("Chi phí"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("Danh mục chi phí"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("Ngày chi phí"),
@@ -321,6 +332,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenseReport":
             MessageLookupByLibrary.simpleMessage("Báo cáo chi tiêu"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser":
+            MessageLookupByLibrary.simpleMessage("Xóa người dùng thất bại"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Không lấy được phiên bản nền tảng."),
         "fashion": MessageLookupByLibrary.simpleMessage("Thời trang"),
@@ -356,6 +369,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("Doanh thu"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("Danh mục thu nhập"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("Ngày thu nhập"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("Thu nhập cho"),
         "incomeReport":
             MessageLookupByLibrary.simpleMessage("Báo cáo doanh thu"),
@@ -445,6 +459,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Không có nhà cung cấp"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("Không có giao dịch"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Không có kết nối Wi-Fi"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("Người dùng không hoạt động"),
         "notFound": MessageLookupByLibrary.simpleMessage("Không tìm thấy"),
@@ -465,6 +481,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("Bên thứ ba"),
         "partyList": MessageLookupByLibrary.simpleMessage("Danh sách các bên"),
         "password": MessageLookupByLibrary.simpleMessage("Mật khẩu"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "Mật khẩu và mật khẩu xác nhận không khớp"),
         "passwordCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Mật khẩu không được để trống"),
         "passwordsDoNotMatch":
@@ -506,6 +525,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("Kế hoạch"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("Vui lòng thêm số lượng"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Vui lòng kiểm tra kết nối Internet của bạn và thử lại"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "Vui lòng kết nối máy in trước"),
         "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
@@ -560,6 +582,8 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Vui lòng sử dụng mã mua hàng hợp lệ để sử dụng ứng dụng"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Được cung cấp bởi Acnoo"),
+        "poweredBy":
+            MessageLookupByLibrary.simpleMessage("Được phát triển bởi"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "Hỗ trợ ứng dụng Android và iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Gói cao cấp"),
@@ -596,6 +620,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("Mua bởi:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Mua hàng đã xác nhận"),
+        "purchaseCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Tạo đơn hàng thất bại"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("Chi tiết mua hàng"),
         "purchaseList":
@@ -638,6 +664,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "Đặt lại mật khẩu để khôi phục và đăng nhập vào tài khoản của bạn"),
         "retailer": MessageLookupByLibrary.simpleMessage("nhà bán lẻ"),
+        "retry": MessageLookupByLibrary.simpleMessage("Thử lại"),
         "retur": MessageLookupByLibrary.simpleMessage("Trả hàng"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("Số tiền trả lại"),
         "riead": MessageLookupByLibrary.simpleMessage("Đọc"),
@@ -646,6 +673,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("Giá bán"),
         "sales": MessageLookupByLibrary.simpleMessage("Bán hàng"),
         "salesBy": MessageLookupByLibrary.simpleMessage("Bán bởi:"),
+        "salesCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Tạo doanh thu thất bại"),
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("Chi tiết bán hàng"),
         "salesList": MessageLookupByLibrary.simpleMessage("Danh sách bán hàng"),
@@ -736,6 +765,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("Hàng tồn kho: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Tổng phụ"),
         "submit": MessageLookupByLibrary.simpleMessage("Gửi"),
+        "subscribeCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Tạo đăng ký thất bại"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("Đăng ký thành công"),
         "subscription": MessageLookupByLibrary.simpleMessage("Đăng ký"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Tạm tính"),
         "successfullyPaid":
@@ -799,22 +832,34 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("Cập nhật liên hệ"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Cập nhật bây giờ"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("Cập nhật mật khẩu"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("Cập nhật sản phẩm"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("Cập nhật hồ sơ của bạn"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("Cập nhật mật khẩu của bạn"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "Cập nhật hồ sơ của bạn để kết nối khách hàng của bạn với ấn tượng tốt hơn"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("Cập nhật đăng ký của bạn"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Cập nhật thành công"),
         "updating": MessageLookupByLibrary.simpleMessage("Đang cập nhật..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("Nâng cấp ngay"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Tiêu đề người dùng không được để trống"),
+        "userCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Tạo người dùng thất bại"),
+        "userDeletedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "Người dùng đã bị xóa thành công"),
         "userRole": MessageLookupByLibrary.simpleMessage("Vai trò người dùng"),
         "userRoleDetails":
             MessageLookupByLibrary.simpleMessage("Chi tiết vai trò người dùng"),
         "userTitle": MessageLookupByLibrary.simpleMessage("Tiêu đề người dùng"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "Cập nhật người dùng thất bại"),
         "vat": MessageLookupByLibrary.simpleMessage("VAT"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("Không áp dụng VAT"),

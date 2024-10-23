@@ -65,6 +65,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("Tilføj enhed"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Tilføj brugerrolle"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("Tilføjet succesfuldt"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("Tilføjet til kurv"),
         "adding": MessageLookupByLibrary.simpleMessage("Tilføjer.."),
@@ -80,6 +82,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Har du allerede en konto?"),
         "amount": MessageLookupByLibrary.simpleMessage("Beløb"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("Der opstod en fejl"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "En SMS vil blive sendt til følgende nummer: "),
@@ -286,6 +290,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("Indtast note"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("Indtast åbningbalance"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("Indtast produktkode"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("Indtast produktnavn"),
         "enterPurchasePrice":
@@ -308,20 +314,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("Indtast vægt"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("Indtast engrospris"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Indtast dit bekræftelsespassword"),
         "enterYourEmailAddress":
             MessageLookupByLibrary.simpleMessage("Indtast din e-mailadresse"),
         "enterYourFullName":
             MessageLookupByLibrary.simpleMessage("Indtast dit fulde navn"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("Indtast dit navn"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("Indtast dit password"),
         "enterYourPhoneNumber":
             MessageLookupByLibrary.simpleMessage("Indtast dit telefonnummer"),
+        "error": MessageLookupByLibrary.simpleMessage("Fejl"),
         "expense": MessageLookupByLibrary.simpleMessage("Udgift"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("Udgiftskategorier"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("Udgiftsdato"),
         "expenseFor": MessageLookupByLibrary.simpleMessage("Udgift til"),
         "expenseReport": MessageLookupByLibrary.simpleMessage("Udgiftsrapport"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser":
+            MessageLookupByLibrary.simpleMessage("Fejl ved sletning af bruger"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Mislykkedes med at få platformversion."),
         "fashion": MessageLookupByLibrary.simpleMessage("Mode"),
@@ -361,6 +374,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("Indkomst"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("Indkomstkategorier"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("Indtægtsdato"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("Indkomst for"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("Indkomstrapport"),
         "instagram": MessageLookupByLibrary.simpleMessage("Instagram"),
@@ -447,6 +461,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ingen leverandør tilgængelig"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("Ingen transaktion"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Ingen Wi-Fi-forbindelse"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("Ikke aktiv bruger"),
         "notFound": MessageLookupByLibrary.simpleMessage("Ikke fundet"),
@@ -467,6 +483,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("Parter"),
         "partyList": MessageLookupByLibrary.simpleMessage("Partiliste"),
         "password": MessageLookupByLibrary.simpleMessage("Adgangskode"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "Password og bekræftelsespassword stemmer ikke overens"),
         "passwordCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Adgangskoden kan ikke være tom"),
         "passwordsDoNotMatch": MessageLookupByLibrary.simpleMessage(
@@ -504,6 +523,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("Plan"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("Tilføj venligst antal"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Kontroller venligst din internetforbindelse og prøv igen"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "Tilslut venligst printeren først"),
         "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
@@ -557,6 +579,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Brug venligst den gyldige kødekode for at bruge appen"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Drevet af Acnoo"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("Drevet af"),
         "premiumCustomerSupport":
             MessageLookupByLibrary.simpleMessage("Android & iOS app-support"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Premium plan"),
@@ -591,6 +614,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("Købt af:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Køb bekræftet"),
+        "purchaseCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Købsoprettelse fejlede"),
         "purchaseDetails": MessageLookupByLibrary.simpleMessage("Købsdetaljer"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("Købsliste"),
         "purchaseNow": MessageLookupByLibrary.simpleMessage("Køb Nu"),
@@ -632,6 +657,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "Nulstil din adgangskode for at gendanne og logge ind på din konto"),
         "retailer": MessageLookupByLibrary.simpleMessage("Forhandler"),
+        "retry": MessageLookupByLibrary.simpleMessage("Prøv igen"),
         "retur": MessageLookupByLibrary.simpleMessage("Returner"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("Returbeløb"),
         "riead": MessageLookupByLibrary.simpleMessage("Riead"),
@@ -640,6 +666,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("Salgspris"),
         "sales": MessageLookupByLibrary.simpleMessage("Salg"),
         "salesBy": MessageLookupByLibrary.simpleMessage("Solgt af:"),
+        "salesCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Salgsoprettelse fejlede"),
         "salesDetails": MessageLookupByLibrary.simpleMessage("Salgsdetaljer"),
         "salesList": MessageLookupByLibrary.simpleMessage("Salgs liste"),
         "salesPrice": MessageLookupByLibrary.simpleMessage("Salgspris"),
@@ -722,6 +750,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("Lager: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Subtotal"),
         "submit": MessageLookupByLibrary.simpleMessage("Indsend"),
+        "subscribeCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Abonnementsoprettelse fejlede"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("Abonneret succesfuldt"),
         "subscription": MessageLookupByLibrary.simpleMessage("Abonnement"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Subtotal"),
         "successfullyPaid":
@@ -785,22 +817,34 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("Opdater kontakt"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Opdater nu"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("Opdater password"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("Opdater produkt"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("Opdater din profil"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("Opdater dit password"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "Opdater din profil for at forbinde dine kunder med et bedre indtryk"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("Opdater dit abonnement"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Opdateret succesfuldt"),
         "updating": MessageLookupByLibrary.simpleMessage("Opdaterer..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("Opgrader nu"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Brugertitel kan ikke være tom"),
+        "userCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Brugeroprettelse fejlede"),
+        "userDeletedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Bruger slettet succesfuldt"),
         "userRole": MessageLookupByLibrary.simpleMessage("Brugerrolle"),
         "userRoleDetails":
             MessageLookupByLibrary.simpleMessage("Brugerrolle detaljer"),
         "userTitle": MessageLookupByLibrary.simpleMessage("Brugertitel"),
+        "userUpdateFailed":
+            MessageLookupByLibrary.simpleMessage("Brugeropdatering fejlede"),
         "vat": MessageLookupByLibrary.simpleMessage("MOMS"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("Moms gælder ikke"),

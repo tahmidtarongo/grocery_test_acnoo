@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 const kMainColor = Color(0xff019934);
 const kGreyTextColor = Color(0xFF828282);
 const kBackgroundColor = Color(0xffF5F5F5);
@@ -13,7 +13,14 @@ const kPremiumPlanColor2 = Color(0xFFFF5F00);
 const kTitleColor = Color(0xFF000000);
 bool connected = false;
 bool isPrintEnable = false;
-List<String> paymentsTypeList = ['Cash', 'Card', 'Check', 'Mobile Pay', 'Due'];
+
+List<String>get paymentsTypeList => [
+  'Cash',
+  'Card',
+  'Check',
+  'Mobile Pay',
+  'Due'
+];
 bool isExpiringInFiveDays = false;
 bool isExpiringInOneDays = false;
 String paypalClientId = '';
@@ -78,7 +85,14 @@ final otpInputDecoration = InputDecoration(
 
 // List<String> language = ['English'];
 
-List<String> productCategory = ['Fashion', 'Electronics', 'Computer', 'Gadgets', 'Watches', 'Cloths'];
+List<String> get productCategory => [
+  'Fashion',
+  'Electronics',
+  'Computer',
+  'Gadgets',
+ 'Watches',
+  'Cloths',
+];
 
 ///______________________________________________________________________________________________
 String constUserId = '';
@@ -140,6 +154,35 @@ Map<String, String> languageMap = {
   'Crotian': 'hr',
   'Nepali': 'ne',
   'Burmese': 'my',
+  'Amharic': 'am',
+  'Assamese': 'as',
+  'Belarusian': 'be',
+  'Catalan Valencian': 'ca',
+  'Welsh': 'cy',
+  'Estonian': 'et',
+  'Basque': 'eu',
+  'Filipino': 'fil',
+  'Galician': 'gl',
+  'Gujarati': 'gu',
+  'Armenian': 'hy',
+  'Icelandic': 'is',
+  'Georgian': 'ka',
+  'Kirghiz Kyrgyz': 'ky',
+  'Lithuanian': 'lt',
+  'Latvian': 'lv',
+  'Macedonian': 'mk',
+  'Malayalam': 'ml',
+  'Mongolian': 'mn',
+  'Norwegian Bokmål': 'nb',
+  'Norwegian': 'no',
+  'Oriya': 'or',
+  'Panjabi': 'pa',
+  'Pushto': 'ps',
+  'Slovenian': 'sl',
+  'Telugu': 'te',
+  'Tagalog': 'tl',
+  'Uzbek': 'uz',
+  'Zulu': 'zu',
 };
 //______________________________________________Back_Button__________________
 class Back extends StatelessWidget {

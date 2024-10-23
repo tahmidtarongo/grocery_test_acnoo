@@ -587,7 +587,31 @@
   "sep": "ספט",
   "oct": "אוקט",
   "nov": "נוב",
-  "dec": "דצמ"
+  "dec": "דצמ",
+  "incomeDate": "תאריך הכנסה",
+  "enterProductCode": "הזן קוד מוצר",
+  "retry": "נסה שוב",
+  "addedSuccessful": "נוסף בהצלחה",
+  "poweredBy": "מופעל על ידי",
+  "updatePassword": "עדכן סיסמה",
+  "updateYourPassword": "עדכן את הסיסמה שלך",
+  "enterYourConfirmPassword": "הזן את סיסמת האישור שלך",
+  "enterYourPassword": "הזן את הסיסמה שלך",
+  "passwordAndConfirmPasswordDoesNotMatch": "הסיסמה ואישור הסיסמה אינם תואמים",
+  "noWiFiConnection": "אין חיבור Wi-Fi",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "אנא בדוק את חיבור האינטרנט שלך ונסה שוב",
+  "userCreationFailed": "יצירת המשתמש נכשלה",
+  "userDeletedSuccessfully": "המשתמש נמחק בהצלחה",
+  "failedToDeleteUser": "מחיקת המשתמש נכשלה",
+  "error": "שגיאה",
+  "updatedSuccessfully": "עודכן בהצלחה",
+  "userUpdateFailed": "עדכון המשתמש נכשל",
+  "subscribeSuccessful": "ההרשמה הצליחה",
+  "subscribeCreationFailed": "יצירת ההרשמה נכשלה",
+  "anErrorOccurred": "אירעה שגיאה",
+  "salesCreationFailed": "יצירת המכירה נכשלה",
+  "purchaseCreationFailed": "יצירת הרכישה נכשלה"
+
 
 
 }

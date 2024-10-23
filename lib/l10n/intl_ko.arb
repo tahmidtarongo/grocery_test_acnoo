@@ -586,7 +586,31 @@
   "sep": "9월",
   "oct": "10월",
   "nov": "11월",
-  "dec": "12월"
+  "dec": "12월",
+  "incomeDate": "수입 날짜",
+  "enterProductCode": "제품 코드를 입력하세요",
+  "retry": "다시 시도",
+  "addedSuccessful": "추가 성공",
+  "poweredBy": "제공자",
+  "updatePassword": "비밀번호 업데이트",
+  "updateYourPassword": "비밀번호를 업데이트하세요",
+  "enterYourConfirmPassword": "확인 비밀번호를 입력하세요",
+  "enterYourPassword": "비밀번호를 입력하세요",
+  "passwordAndConfirmPasswordDoesNotMatch": "비밀번호와 확인 비밀번호가 일치하지 않습니다",
+  "noWiFiConnection": "Wi-Fi 연결이 없습니다",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "인터넷 연결을 확인하고 다시 시도하세요",
+  "userCreationFailed": "사용자 생성 실패",
+  "userDeletedSuccessfully": "사용자 삭제 성공",
+  "failedToDeleteUser": "사용자 삭제 실패",
+  "error": "오류",
+  "updatedSuccessfully": "성공적으로 업데이트됨",
+  "userUpdateFailed": "사용자 업데이트 실패",
+  "subscribeSuccessful": "구독 성공",
+  "subscribeCreationFailed": "구독 생성 실패",
+  "anErrorOccurred": "오류가 발생했습니다",
+  "salesCreationFailed": "판매 생성 실패",
+  "purchaseCreationFailed": "구매 생성 실패"
+
 
 
 

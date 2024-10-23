@@ -67,6 +67,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("Vahid Əlavə Et"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("İstifadəçi Rolu Əlavə Et"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("Uğurla əlavə edildi"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("Səbətə əlavə olundu"),
         "adding": MessageLookupByLibrary.simpleMessage("Əlavə olunur.."),
@@ -82,6 +84,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Hesabınız var?"),
         "amount": MessageLookupByLibrary.simpleMessage("Məbləğ"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("Bir xəta baş verdi"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "Aşağıdakı nömrəyə SMS göndəriləcək: "),
@@ -283,6 +287,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Qeydləri daxil edin"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("Açılış balansını daxil edin"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("Məhsul kodunu daxil edin"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("Məhsul adını daxil edin"),
         "enterPurchasePrice":
@@ -307,14 +313,19 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Çəkini daxil edin"),
         "enterWholesalePrice": MessageLookupByLibrary.simpleMessage(
             "Topdansatış qiymətini daxil edin"),
+        "enterYourConfirmPassword":
+            MessageLookupByLibrary.simpleMessage("Təsdiq şifrənizi daxil edin"),
         "enterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
             "E-poçt ünvanınızı daxil edin"),
         "enterYourFullName":
             MessageLookupByLibrary.simpleMessage("Tam adınızı daxil edin"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("Adınızı daxil edin"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("Şifrənizi daxil edin"),
         "enterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Telefon nömrənizi daxil edin"),
+        "error": MessageLookupByLibrary.simpleMessage("Xəta"),
         "expense": MessageLookupByLibrary.simpleMessage("Xərc"),
         "expenseCat":
             MessageLookupByLibrary.simpleMessage("Xərc kateqoriyaları"),
@@ -322,6 +333,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenseFor": MessageLookupByLibrary.simpleMessage("Xərclər üçün"),
         "expenseReport": MessageLookupByLibrary.simpleMessage("Xərc hesabatı"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser": MessageLookupByLibrary.simpleMessage(
+            "İstifadəçini silmək mümkün olmadı"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Platforma versiyasını əldə etmək mümkün olmadı."),
         "fashion": MessageLookupByLibrary.simpleMessage("Moda"),
@@ -359,6 +372,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("Gəlir"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("Gəlir Kateqoriyaları"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("Gəlir tarixi"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("Gəlir üçün"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("Gəlir Hesabatı"),
         "instagram": MessageLookupByLibrary.simpleMessage("Instagram"),
@@ -443,6 +457,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Təchizatçı mövcud deyil"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("Heç bir əməliyyat yoxdur"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Wi-Fi bağlantısı yoxdur"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("Aktiv İstifadəçi Deyil"),
         "notFound": MessageLookupByLibrary.simpleMessage("Tapılmadı"),
@@ -464,6 +480,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("Tərəfdaşlar"),
         "partyList": MessageLookupByLibrary.simpleMessage("Tərəf siyahısı"),
         "password": MessageLookupByLibrary.simpleMessage("Şifrə"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "Şifrə və təsdiq şifrəsi uyğun gəlmir"),
         "passwordCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("Şifrə boş ola bilməz"),
         "passwordsDoNotMatch":
@@ -500,6 +519,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("Plan"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("Miqdar əlavə edin"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Xahiş edirik internet bağlantınızı yoxlayın və yenidən cəhd edin"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "Zəhmət olmasa əvvəlcə çap etmə makinasını qoşun"),
         "pleaseEnterABiggerPassword": MessageLookupByLibrary.simpleMessage(
@@ -550,6 +572,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "pleaseUseTheValidPurchaseCodeToUseTheApp":
             MessageLookupByLibrary.simpleMessage(
                 "Zəhmət olmasa, proqramdan istifadə etmək üçün düzgün alış kodunu istifadə edin"),
+        "poweredBy":
+            MessageLookupByLibrary.simpleMessage("Tərəfindən təmin edilir"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "Android və iOS Tətbiq Dəstəyi"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Premium plan"),
@@ -584,6 +608,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("Alış edən:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Alışveriş Təsdiqləndi"),
+        "purchaseCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Alış yaradılması uğursuz oldu"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("Alış Detalları"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("Alış Siyahısı"),
@@ -624,6 +650,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "Şifrənizi bərpa edin və hesabınıza daxil olun"),
         "retailer": MessageLookupByLibrary.simpleMessage("Alıcı"),
+        "retry": MessageLookupByLibrary.simpleMessage("Təkrar cəhd edin"),
         "returnAmount":
             MessageLookupByLibrary.simpleMessage("Qaytarılan Məbləğ"),
         "riead": MessageLookupByLibrary.simpleMessage("Riead"),
@@ -632,6 +659,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("Satış Qiyməti"),
         "sales": MessageLookupByLibrary.simpleMessage("Satışlar"),
         "salesBy": MessageLookupByLibrary.simpleMessage("Satış edən:"),
+        "salesCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Satış yaradılması uğursuz oldu"),
         "salesDetails": MessageLookupByLibrary.simpleMessage("Satış Detalları"),
         "salesList": MessageLookupByLibrary.simpleMessage("Satışlar Siyahısı"),
         "salesPrice": MessageLookupByLibrary.simpleMessage("Satış qiyməti"),
@@ -716,6 +745,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("İnventar: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Cəmi"),
         "submit": MessageLookupByLibrary.simpleMessage("Təqdim etmək"),
+        "subscribeCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Abunə yaratmaq uğursuz oldu"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("Abunə olmaq uğurludur"),
         "subscription": MessageLookupByLibrary.simpleMessage("Abunəlik"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Ara cəmi"),
         "successfullyPaid":
@@ -777,22 +810,34 @@ class MessageLookup extends MessageLookupByLibrary {
         "update": MessageLookupByLibrary.simpleMessage("Yenilə"),
         "updateContact": MessageLookupByLibrary.simpleMessage("Əlaqəni yenilə"),
         "updateNow": MessageLookupByLibrary.simpleMessage("İndi yeniləyin"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("Şifrəni yeniləyin"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("Məhsulu yeniləyin"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("Profilinizi yeniləyin"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("Şifrənizi yeniləyin"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "Profilinizi yeniləyin, müştərilərinizlə daha yaxşı təsir bağışlayın"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("Abunəliyinizi yeniləyin"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Uğurla yeniləndi"),
         "updating": MessageLookupByLibrary.simpleMessage("Yenilənir..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("İndi Yüksəldin"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "İstifadəçi başlığı boş ola bilməz"),
+        "userCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "İstifadəçi yaradılması uğursuz oldu"),
+        "userDeletedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("İstifadəçi uğurla silindi"),
         "userRole": MessageLookupByLibrary.simpleMessage("İstifadəçi rolü"),
         "userRoleDetails": MessageLookupByLibrary.simpleMessage(
             "İstifadəçi Rolunun Təfərrüatları"),
         "userTitle": MessageLookupByLibrary.simpleMessage("İstifadəçi Başlığı"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "İstifadəçi yeniləmə uğursuz oldu"),
         "vat": MessageLookupByLibrary.simpleMessage("ƏDV"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("ƏDV tətbiq olunmur"),

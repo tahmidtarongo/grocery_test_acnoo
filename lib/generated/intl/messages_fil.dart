@@ -72,6 +72,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("Magdagdag ng Yunit"),
         "addUserRole": MessageLookupByLibrary.simpleMessage(
             "Magdagdag ng Papel ng Gumagamit"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("Matagumpay na Naidagdag"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("Nagdagdag sa Cart"),
         "adding": MessageLookupByLibrary.simpleMessage("Nagdadagdag.."),
@@ -88,6 +90,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "amarSonarBangla":
             MessageLookupByLibrary.simpleMessage("Amar Sonar Bangla"),
         "amount": MessageLookupByLibrary.simpleMessage("Halaga"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("Nagkaroon ng error"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "Isang SMS ang ipapadala sa sumusunod na numero: "),
@@ -311,6 +315,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("Ilagay ang Tala"),
         "enterOpeningBalance": MessageLookupByLibrary.simpleMessage(
             "Ilagay ang pambukas na balanse"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("Ilagay ang Product Code"),
         "enterProductName": MessageLookupByLibrary.simpleMessage(
             "Ilagay ang pangalan ng produkto"),
         "enterPurchasePrice": MessageLookupByLibrary.simpleMessage(
@@ -335,14 +341,19 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ilagay ang Timbang"),
         "enterWholesalePrice": MessageLookupByLibrary.simpleMessage(
             "Ilagay ang presyo ng pakyawan"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Ilagay ang iyong kumpirmasyon ng password"),
         "enterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
             "Ilagay ang iyong email address"),
         "enterYourFullName": MessageLookupByLibrary.simpleMessage(
             "Ilagay ang iyong buong pangalan"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("Ilagay ang iyong pangalan"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("Ilagay ang iyong password"),
         "enterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Ilagay ang iyong numero ng telepono"),
+        "error": MessageLookupByLibrary.simpleMessage("Error"),
         "expense": MessageLookupByLibrary.simpleMessage("Gastos"),
         "expenseCat":
             MessageLookupByLibrary.simpleMessage("Kategorya ng Gastos"),
@@ -350,6 +361,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenseFor": MessageLookupByLibrary.simpleMessage("Gastos Para sa"),
         "expenseReport": MessageLookupByLibrary.simpleMessage("Ulat ng Gastos"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser":
+            MessageLookupByLibrary.simpleMessage("Nabigong tanggalin ang user"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Nabigong makuha ang bersyon ng platform."),
         "fashion": MessageLookupByLibrary.simpleMessage("Fashion"),
@@ -390,6 +403,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("Kita"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("Mga Kategorya ng Kita"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("Petsa ng Kita"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("Kita Para sa"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("Ulat ng Kita"),
         "instagram": MessageLookupByLibrary.simpleMessage("Instagram"),
@@ -480,6 +494,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Walang Magagamit na Tagapagbigay"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("Walang Transaksyon"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Walang Wi-Fi Connection"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("Hindi Aktibong Gumagamit"),
         "notFound": MessageLookupByLibrary.simpleMessage("Hindi Natagpuan"),
@@ -502,6 +518,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "partyList":
             MessageLookupByLibrary.simpleMessage("Listahan ng mga Partido"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "Hindi tumutugma ang password at kumpirmasyon ng password"),
         "passwordCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Hindi pwedeng walang password"),
         "passwordsDoNotMatch": MessageLookupByLibrary.simpleMessage(
@@ -542,6 +561,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("Plano"),
         "pleaseAddQuantity": MessageLookupByLibrary.simpleMessage(
             "Mangyaring magdagdag ng dami"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Paki-check ang iyong internet connection at subukang muli"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "Mangyaring ikonekta muna ang printer"),
         "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
@@ -596,6 +618,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Mangyaring gamitin ang wastong code ng pagbili upang magamit ang app"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Pinapagana ng Acnoo"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("Pinatatakbo Ng"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "Suporta sa Premium na Customer"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Premium na Plano"),
@@ -638,6 +661,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("Bumili Ni:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Nakumpirma ang Pagbili"),
+        "purchaseCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Nabigo ang paglikha ng pagbili"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("Mga Detalye ng Pagbili"),
         "purchaseList":
@@ -688,6 +713,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "I-reset ang iyong password upang makuha at mag-login sa iyong account"),
         "retailer": MessageLookupByLibrary.simpleMessage("Nagbebenta"),
+        "retry": MessageLookupByLibrary.simpleMessage("Subukan Muli"),
         "retur": MessageLookupByLibrary.simpleMessage("Ibalik"),
         "returnAmount":
             MessageLookupByLibrary.simpleMessage("Halaga ng Pagbabalik"),
@@ -697,6 +723,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("Presyo ng Benta"),
         "sales": MessageLookupByLibrary.simpleMessage("Benta"),
         "salesBy": MessageLookupByLibrary.simpleMessage("Benta Ni:"),
+        "salesCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Nabigo ang paglikha ng benta"),
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("Mga Detalye ng Benta"),
         "salesList": MessageLookupByLibrary.simpleMessage("Listahan ng Benta"),
@@ -789,6 +817,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("Imbentaryo: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Kabuuang Sub"),
         "submit": MessageLookupByLibrary.simpleMessage("I-submit"),
+        "subscribeCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Nabigo ang paglikha ng subscription"),
+        "subscribeSuccessful": MessageLookupByLibrary.simpleMessage(
+            "Matagumpay na naka-subscribe"),
         "subscription": MessageLookupByLibrary.simpleMessage("Subscription"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Kabuuang Sub"),
         "successfullyPaid":
@@ -853,23 +885,35 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("I-update ang Kontak"),
         "updateNow": MessageLookupByLibrary.simpleMessage("I-update Ngayon"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("I-update ang Password"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("I-update ang Produkto"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("I-update ang Iyong Profile"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("I-update ang iyong password"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "I-update ang iyong profile upang kumonekta sa iyong customer nang may mas magandang impresyon"),
         "updateYourSubscription": MessageLookupByLibrary.simpleMessage(
             "I-update ang iyong subscription"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Matagumpay na Na-update"),
         "updating": MessageLookupByLibrary.simpleMessage("Nag-a-update..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("I-upgrade Ngayon"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Ang pamagat ng gumagamit ay hindi maaaring walang laman"),
+        "userCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Nabigo ang paglikha ng user"),
+        "userDeletedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "Matagumpay na natanggal ang user"),
         "userRole": MessageLookupByLibrary.simpleMessage("Papel ng Gumagamit"),
         "userRoleDetails": MessageLookupByLibrary.simpleMessage(
             "Mga Detalye ng Papel ng Gumagamit"),
         "userTitle":
             MessageLookupByLibrary.simpleMessage("Pamagat ng Gumagamit"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "Nabigo ang pag-update ng user"),
         "vat": MessageLookupByLibrary.simpleMessage("VAT"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("Hindi Nag-aaplay ang VAT"),

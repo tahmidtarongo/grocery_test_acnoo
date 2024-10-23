@@ -106,7 +106,7 @@ class _ReportsState extends State<Reports> {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => const IncomeReport()));
                   },
                   iconPath: 'assets/incomeReport.svg',
-                  title: 'Income Report'),
+                  title: lang.S.of(context).incomeReport),
               const SizedBox(
                 height: 16,
               ),

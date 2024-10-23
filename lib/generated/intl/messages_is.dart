@@ -69,6 +69,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("Bæta við einingu"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Bæta notendahlutverki við"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("Bætt við með góðum árangri"),
         "addedToCart": MessageLookupByLibrary.simpleMessage("Bætt við körfu"),
         "adding": MessageLookupByLibrary.simpleMessage("Bætist við.."),
         "address": MessageLookupByLibrary.simpleMessage("Heimilisfang"),
@@ -85,6 +87,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "amarSonarBangla":
             MessageLookupByLibrary.simpleMessage("Amar sonar bangla"),
         "amount": MessageLookupByLibrary.simpleMessage("Upphæð"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("Villa kom upp"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS verður sent á eftirfarandi númer: "),
@@ -297,6 +301,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Sláðu inn athugasemd"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("Sláðu inn upphafsafl"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("Sláðu inn vöru kóða"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("Sláðu inn vörunafn"),
         "enterPurchasePrice":
@@ -318,14 +324,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("Sláðu inn þyngd"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("Sláðu inn heildsöluverð"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Sláðu inn staðfestingarlykilorðið þitt"),
         "enterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
             "Sláðu inn tölvupóstfangið þitt"),
         "enterYourFullName":
             MessageLookupByLibrary.simpleMessage("Sláðu inn fullt nafn þitt"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("Sláðu inn nafn þitt"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("Sláðu inn lykilorðið þitt"),
         "enterYourPhoneNumber":
             MessageLookupByLibrary.simpleMessage("Sláðu inn símanúmerið þitt"),
+        "error": MessageLookupByLibrary.simpleMessage("Villa"),
         "expense": MessageLookupByLibrary.simpleMessage("Útgöld"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("Flokkar útgjalda"),
         "expenseDate":
@@ -334,6 +345,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenseReport":
             MessageLookupByLibrary.simpleMessage("Útgjalda skýrsla"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser":
+            MessageLookupByLibrary.simpleMessage("Mistókst að eyða notanda"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Tókst ekki að fá útgáfu á pallinum."),
         "fashion": MessageLookupByLibrary.simpleMessage("Tíska"),
@@ -373,6 +386,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("Tekjur"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("Tekjuflokkar"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("Tekjudagsetning"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("Tekjur fyrir"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("Tekjurapport"),
         "instagram": MessageLookupByLibrary.simpleMessage("Instagram"),
@@ -459,6 +473,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enginn birgir í boði"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("Engin viðskipti"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Engin Wi-Fi tenging"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("Ekki virk notandi"),
         "notFound": MessageLookupByLibrary.simpleMessage("Ekki fundinn"),
@@ -479,6 +495,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("Aðilar"),
         "partyList": MessageLookupByLibrary.simpleMessage("Listi yfir aðila"),
         "password": MessageLookupByLibrary.simpleMessage("Lykilorð"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "Lykilorð og staðfestingarlykilorð passa ekki"),
         "passwordCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("Lykilorð má ekki vera tómt"),
         "passwordsDoNotMatch":
@@ -516,6 +535,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("Áætlun"),
         "pleaseAddQuantity": MessageLookupByLibrary.simpleMessage(
             "Vinsamlegast bættu við magni"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Vinsamlegast athugaðu internet tenginguna þína og reyndu aftur"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "Vinsamlegast tengdu prentarann fyrst"),
         "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
@@ -570,6 +592,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Vinsamlegast notaðu gild kaup kóða til að nota forritið"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Rekið af Acnoo"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("Knúið af"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "Premium stuðningur fyrir viðskiptavini"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Fyrirkomulag"),
@@ -602,6 +625,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("Keypt af:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Kaup staðfest"),
+        "purchaseCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Kaupasamningur mistókst"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("Kaupupplýsingar"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("Kaupaskrá"),
@@ -642,6 +667,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "Endurstilla lykilorð til að endurheimta og skrá þig inn á reikninginn þinn"),
         "retailer": MessageLookupByLibrary.simpleMessage("Smásali"),
+        "retry": MessageLookupByLibrary.simpleMessage("Reyndu aftur"),
         "retur": MessageLookupByLibrary.simpleMessage("Skila"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("Vissufé"),
         "riead": MessageLookupByLibrary.simpleMessage("Riead"),
@@ -650,6 +676,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("Söluverð"),
         "sales": MessageLookupByLibrary.simpleMessage("Sölu"),
         "salesBy": MessageLookupByLibrary.simpleMessage("Selt af:"),
+        "salesCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Sölu sköpun mistókst"),
         "salesDetails": MessageLookupByLibrary.simpleMessage("Söluupplýsingar"),
         "salesList": MessageLookupByLibrary.simpleMessage("Sölulisti"),
         "salesPrice": MessageLookupByLibrary.simpleMessage("Söluverð"),
@@ -732,6 +760,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("Birgðir: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Samtala"),
         "submit": MessageLookupByLibrary.simpleMessage("Senda"),
+        "subscribeCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Aðskriftarsköpun mistókst"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("Aðskrift staðfest"),
         "subscription": MessageLookupByLibrary.simpleMessage("Aðild"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Samtala"),
         "successfullyPaid":
@@ -795,20 +827,32 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("Uppfæra tengilið"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Uppfæra núna"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("Uppfærðu lykilorð"),
         "updateProduct": MessageLookupByLibrary.simpleMessage("Uppfæra vöru"),
         "updateProfile": MessageLookupByLibrary.simpleMessage("Uppfæra prófíl"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("Uppfærðu lykilorðið þitt"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "Uppfærðu prófílinn þinn til að tengja viðskiptavininn þinn með betri ímynd"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("Uppfærðu áskriftina þína"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Uppfært með góðum árangri"),
         "updating": MessageLookupByLibrary.simpleMessage("Uppfæra..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("Uppfærðu núna"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Notendanafn má ekki vera tómt"),
+        "userCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Notendasköpun mistókst"),
+        "userDeletedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "Notanda eytt með góðum árangri"),
         "userRole": MessageLookupByLibrary.simpleMessage("Notendahlutverk"),
         "userRoleDetails": MessageLookupByLibrary.simpleMessage(
             "Smáatriði um hlutverk notanda"),
         "userTitle": MessageLookupByLibrary.simpleMessage("Notendanafnið"),
+        "userUpdateFailed":
+            MessageLookupByLibrary.simpleMessage("Uppfærsla notanda mistókst"),
         "vat": MessageLookupByLibrary.simpleMessage("VSK"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("VSK á ekki við"),

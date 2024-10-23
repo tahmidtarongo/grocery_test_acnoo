@@ -66,6 +66,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("Legg til enhet"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Legg til brukerrolle"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("Lagt til vellykket"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("Lagt i handlekurv"),
         "adding": MessageLookupByLibrary.simpleMessage("Legger til.."),
@@ -81,6 +83,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "amarSonarBangla":
             MessageLookupByLibrary.simpleMessage("Amar sonar bangla"),
         "amount": MessageLookupByLibrary.simpleMessage("Beløp"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("Det oppstod en feil"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "En SMS vil bli sendt til følgende nummer: "),
@@ -275,6 +279,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("Skriv inn notat"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("Skriv inn åpningsbalanse"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("Skriv inn produktkode"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("Skriv inn produktnavn"),
         "enterPurchasePrice":
@@ -298,20 +304,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("Skriv inn vekt"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("Skriv inn engrospris"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Skriv inn bekreftelsespassordet ditt"),
         "enterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
             "Skriv inn e-postadressen din"),
         "enterYourFullName":
             MessageLookupByLibrary.simpleMessage("Skriv inn ditt fulle navn"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("Skriv inn navnet ditt"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("Skriv inn passordet ditt"),
         "enterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Skriv inn telefonnummeret ditt"),
+        "error": MessageLookupByLibrary.simpleMessage("Feil"),
         "expense": MessageLookupByLibrary.simpleMessage("Utgift"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("Utgiftskategorier"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("Utgiftsdato"),
         "expenseFor": MessageLookupByLibrary.simpleMessage("Utgift for"),
         "expenseReport": MessageLookupByLibrary.simpleMessage("Utgiftsrapport"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser":
+            MessageLookupByLibrary.simpleMessage("Kunne ikke slette bruker"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Kunne ikke hente plattformversjon."),
         "fashion": MessageLookupByLibrary.simpleMessage("Mote"),
@@ -350,6 +363,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("Inntekt"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("Inntektskategorier"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("Inntektsdato"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("Inntekt for"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("Inntektsrapport"),
         "instagram": MessageLookupByLibrary.simpleMessage("Instagram"),
@@ -431,6 +445,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ingen leverandør tilgjengelig"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("Ingen transaksjon"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Ingen Wi-Fi-tilkobling"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("Ikke aktiv bruker"),
         "notFound": MessageLookupByLibrary.simpleMessage("Ikke funnet"),
@@ -451,6 +467,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("Parter"),
         "partyList": MessageLookupByLibrary.simpleMessage("Partiliste"),
         "password": MessageLookupByLibrary.simpleMessage("Passord"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "Passordet og bekreftelsespassordet samsvarer ikke"),
         "passwordCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("Passord kan ikke være tomt"),
         "passwordsDoNotMatch": MessageLookupByLibrary.simpleMessage(
@@ -487,6 +506,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("Plan"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("Vennligst legg til antall"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Vennligst sjekk internettforbindelsen din og prøv igjen"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "Vennligst koble til skriveren først"),
         "pleaseEnterABiggerPassword": MessageLookupByLibrary.simpleMessage(
@@ -537,6 +559,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pleaseUseTheValidPurchaseCodeToUseTheApp":
             MessageLookupByLibrary.simpleMessage(
                 "Vennligst bruk den gyldige kjøpskoden for å bruke appen"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("Drevet av"),
         "premiumCustomerSupport":
             MessageLookupByLibrary.simpleMessage("Premium kundestøtte"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Premium plan"),
@@ -571,6 +594,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("Kjøpt av:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Kjøp bekreftet"),
+        "purchaseCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Opprettelse av kjøp mislyktes"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("Kjøpsdetaljer"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("Innkjøpsliste"),
@@ -613,6 +638,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "Tilbakestill passordet ditt for å gjenopprette og logge inn på kontoen din"),
         "retailer": MessageLookupByLibrary.simpleMessage("Forhandler"),
+        "retry": MessageLookupByLibrary.simpleMessage("Prøv igjen"),
         "returnAmount":
             MessageLookupByLibrary.simpleMessage("Tilbakebetalingsbeløp"),
         "riead": MessageLookupByLibrary.simpleMessage("Les"),
@@ -621,6 +647,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("Salgspris"),
         "sales": MessageLookupByLibrary.simpleMessage("Salg"),
         "salesBy": MessageLookupByLibrary.simpleMessage("Solgt av:"),
+        "salesCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Opprettelse av salg mislyktes"),
         "salesDetails": MessageLookupByLibrary.simpleMessage("Salgsdetaljer"),
         "salesList": MessageLookupByLibrary.simpleMessage("Salgsliste"),
         "salesPrice": MessageLookupByLibrary.simpleMessage("Salgspris"),
@@ -704,6 +732,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("Lager: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Subtotal"),
         "submit": MessageLookupByLibrary.simpleMessage("Send inn"),
+        "subscribeCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Opprettelse av abonnement mislyktes"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("Abonnering vellykket"),
         "subscription": MessageLookupByLibrary.simpleMessage("Abonnement"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Delsum"),
         "successfullyPaid":
@@ -766,22 +798,34 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("Oppdater kontakt"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Oppdater nå"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("Oppdater passord"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("Oppdater produkt"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("Oppdater profilen din"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("Oppdater passordet ditt"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "Oppdater profilen din for å knytte kunden din med bedre inntrykk"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("Oppdater abonnementet ditt"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Oppdatert vellykket"),
         "updating": MessageLookupByLibrary.simpleMessage("Oppdaterer..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("Oppgrader nå"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Brukertittel kan ikke være tom"),
+        "userCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Brukeropprettelse mislyktes"),
+        "userDeletedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Bruker slettet vellykket"),
         "userRole": MessageLookupByLibrary.simpleMessage("Brukerrolle"),
         "userRoleDetails":
             MessageLookupByLibrary.simpleMessage("Brukerrolle detaljer"),
         "userTitle": MessageLookupByLibrary.simpleMessage("Brukertittel"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "Oppdatering av bruker mislyktes"),
         "vat": MessageLookupByLibrary.simpleMessage("MVA"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("MVA gjelder ikke"),

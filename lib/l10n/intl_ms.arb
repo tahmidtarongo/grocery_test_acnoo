@@ -584,8 +584,30 @@
   "sep": "Sep",
   "oct": "Okt",
   "nov": "Nov",
-  "dec": "Dis"
-
+  "dec": "Dis",
+  "incomeDate": "Tarikh Pendapatan",
+  "enterProductCode": "Masukkan Kod Produk",
+  "retry": "Cuba Lagi",
+  "addedSuccessful": "Berjaya Ditambah",
+  "poweredBy": "Dikuasakan Oleh",
+  "updatePassword": "Kemas kini Kata Laluan",
+  "updateYourPassword": "Kemas kini kata laluan anda",
+  "enterYourConfirmPassword": "Masukkan kata laluan pengesahan anda",
+  "enterYourPassword": "Masukkan kata laluan anda",
+  "passwordAndConfirmPasswordDoesNotMatch": "Kata laluan dan kata laluan pengesahan tidak sepadan",
+  "noWiFiConnection": "Tiada Sambungan Wi-Fi",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Sila semak sambungan internet anda dan cuba lagi",
+  "userCreationFailed": "Penciptaan pengguna gagal",
+  "userDeletedSuccessfully": "Pengguna berjaya dipadam",
+  "failedToDeleteUser": "Gagal untuk memadam pengguna",
+  "error": "Ralat",
+  "updatedSuccessfully": "Berjaya Dihasik",
+  "userUpdateFailed": "Kemas kini pengguna gagal",
+  "subscribeSuccessful": "Langganan berjaya",
+  "subscribeCreationFailed": "Penciptaan langganan gagal",
+  "anErrorOccurred": "Satu ralat berlaku",
+  "salesCreationFailed": "Penciptaan jualan gagal",
+  "purchaseCreationFailed": "Penciptaan pembelian gagal"
 
 
 }

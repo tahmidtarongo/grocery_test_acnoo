@@ -5879,6 +5879,236 @@ class S {
       args: [],
     );
   }
+
+  /// `Income date`
+  String get incomeDate {
+    return Intl.message(
+      'Income date',
+      name: 'incomeDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter Product Code`
+  String get enterProductCode {
+    return Intl.message(
+      'Enter Product Code',
+      name: 'enterProductCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Retry`
+  String get retry {
+    return Intl.message(
+      'Retry',
+      name: 'retry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Added successful`
+  String get addedSuccessful {
+    return Intl.message(
+      'Added successful',
+      name: 'addedSuccessful',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Powered By`
+  String get poweredBy {
+    return Intl.message(
+      'Powered By',
+      name: 'poweredBy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Update Password`
+  String get updatePassword {
+    return Intl.message(
+      'Update Password',
+      name: 'updatePassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Update your password`
+  String get updateYourPassword {
+    return Intl.message(
+      'Update your password',
+      name: 'updateYourPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your confirm password`
+  String get enterYourConfirmPassword {
+    return Intl.message(
+      'Enter your confirm password',
+      name: 'enterYourConfirmPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your password`
+  String get enterYourPassword {
+    return Intl.message(
+      'Enter your password',
+      name: 'enterYourPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password and confirm password does not match`
+  String get passwordAndConfirmPasswordDoesNotMatch {
+    return Intl.message(
+      'Password and confirm password does not match',
+      name: 'passwordAndConfirmPasswordDoesNotMatch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No Wi-Fi Connection`
+  String get noWiFiConnection {
+    return Intl.message(
+      'No Wi-Fi Connection',
+      name: 'noWiFiConnection',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please check your internet connection and try again`
+  String get pleaseCheckYourInternetConnectionAndTryAgain {
+    return Intl.message(
+      'Please check your internet connection and try again',
+      name: 'pleaseCheckYourInternetConnectionAndTryAgain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User creation failed`
+  String get userCreationFailed {
+    return Intl.message(
+      'User creation failed',
+      name: 'userCreationFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User deleted successfully`
+  String get userDeletedSuccessfully {
+    return Intl.message(
+      'User deleted successfully',
+      name: 'userDeletedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Failed to delete user`
+  String get failedToDeleteUser {
+    return Intl.message(
+      'Failed to delete user',
+      name: 'failedToDeleteUser',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error`
+  String get error {
+    return Intl.message(
+      'Error',
+      name: 'error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Updated Successfully`
+  String get updatedSuccessfully {
+    return Intl.message(
+      'Updated Successfully',
+      name: 'updatedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `User Update failed`
+  String get userUpdateFailed {
+    return Intl.message(
+      'User Update failed',
+      name: 'userUpdateFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Subscribe successful`
+  String get subscribeSuccessful {
+    return Intl.message(
+      'Subscribe successful',
+      name: 'subscribeSuccessful',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Subscribe creation failed`
+  String get subscribeCreationFailed {
+    return Intl.message(
+      'Subscribe creation failed',
+      name: 'subscribeCreationFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `An error occurred`
+  String get anErrorOccurred {
+    return Intl.message(
+      'An error occurred',
+      name: 'anErrorOccurred',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sales creation failed`
+  String get salesCreationFailed {
+    return Intl.message(
+      'Sales creation failed',
+      name: 'salesCreationFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Purchase creation failed`
+  String get purchaseCreationFailed {
+    return Intl.message(
+      'Purchase creation failed',
+      name: 'purchaseCreationFailed',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

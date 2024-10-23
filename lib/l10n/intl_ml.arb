@@ -581,7 +581,30 @@
   "sep": "സെപ്റ്റംബർ",
   "oct": "ഒക്ടോബർ",
   "nov": "നവംബർ",
-  "dec": "ഡിസംബർ"
+  "dec": "ഡിസംബർ",
+  "incomeDate": "വരുമാന തീയതി",
+  "enterProductCode": "ഉൽപ്പന്ന കോഡ് നൽകുക",
+  "retry": "പുനരാലോചന",
+  "addedSuccessful": "വെക്കിപ്പെടുത്തൽ വിജയിച്ചു",
+  "poweredBy": "ഈ വഴി നടത്തപ്പെടുന്നു",
+  "updatePassword": "പാസ്‌വേഡ്സ് പുതുക്കുക",
+  "updateYourPassword": "നിങ്ങളുടെ പാസ്‌വേഡ്സ് പുതുക്കുക",
+  "enterYourConfirmPassword": "നിങ്ങളുടെ സ്ഥിരീകരണ പാസ്‌വേഡ് നൽകുക",
+  "enterYourPassword": "നിങ്ങളുടെ പാസ്‌വേഡ് നൽകുക",
+  "passwordAndConfirmPasswordDoesNotMatch": "പാസ്‌വേഡും സ്ഥിരീകരണ പാസ്‌വേഡും പൊരുത്തപ്പെടുന്നില്ല",
+  "noWiFiConnection": "വൈഫൈ കണക്ഷൻ ഇല്ല",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "ദയവായി നിങ്ങളുടെ ഇന്റർനെറ്റ് കണക്ഷൻ പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക",
+  "userCreationFailed": "ഉപയോക്തൃ സൃഷ്ടി പരാജയപ്പെട്ടു",
+  "userDeletedSuccessfully": "ഉപയോക്താവ് വിജയകരമായി നീക്കപ്പെട്ടു",
+  "failedToDeleteUser": "ഉപയോക്താവ് നീക്കാൻ പരാജയപ്പെട്ടു",
+  "error": "പിശക്",
+  "updatedSuccessfully": "വരുത്തൽ വിജയകരമായി",
+  "userUpdateFailed": "ഉപയോക്തൃ പുതുക്കൽ പരാജയപ്പെട്ടു",
+  "subscribeSuccessful": "സബ്സ്ക്രിപ്ഷൻ വിജയിച്ചു",
+  "subscribeCreationFailed": "സബ്സ്ക്രിപ്ഷൻ സൃഷ്ടി പരാജയപ്പെട്ടു",
+  "anErrorOccurred": "ഒരു പിശക് സംഭവിച്ചു",
+  "salesCreationFailed": "വില്പന സൃഷ്ടി പരാജയപ്പെട്ടു",
+  "purchaseCreationFailed": "വാങ്ങലിന്റെ സൃഷ്ടി പരാജയപ്പെട്ടു"
 
 
 

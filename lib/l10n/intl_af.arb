@@ -588,7 +588,31 @@
   "sep": "Sep",
   "oct": "Okt",
   "nov": "Nov",
-  "dec": "Des"
+  "dec": "Des",
+  "incomeDate": "Inkomsdatum",
+  "enterProductCode": "Voer produk kode in",
+  "retry": "Probeer weer",
+  "addedSuccessful": "Suksesvol bygevoeg",
+  "poweredBy": "Aangedryf deur",
+  "updatePassword": "Werk paswoord op",
+  "updateYourPassword": "Werk jou paswoord op",
+  "enterYourConfirmPassword": "Voer jou bevestigingspaswoord in",
+  "enterYourPassword": "Voer jou paswoord in",
+  "passwordAndConfirmPasswordDoesNotMatch": "Paswoord en bevestigingspaswoord stem nie ooreen nie",
+  "noWiFiConnection": "Geen Wi-Fi verbinding nie",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Gaan asseblief jou internetverbinding na en probeer weer",
+  "userCreationFailed": "Gebruikersondorp het gefaal",
+  "userDeletedSuccessfully": "Gebruiker suksesvol verwyder",
+  "failedToDeleteUser": "Kon gebruiker nie verwyder nie",
+  "error": "Fout",
+  "updatedSuccessfully": "Suksesvol opdateer",
+  "userUpdateFailed": "Gebruikersondorp het gefaal",
+  "subscribeSuccessful": "Inskrywing suksesvol",
+  "subscribeCreationFailed": "Inskrywing het gefaal",
+  "anErrorOccurred": "Daar het 'n fout plaasgevind",
+  "salesCreationFailed": "Verkope het gefaal",
+  "purchaseCreationFailed": "Aankope het gefaal"
+
 
 
 }

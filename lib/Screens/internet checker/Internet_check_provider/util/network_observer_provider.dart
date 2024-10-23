@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mobile_pos/constant.dart';
 import '../controller/network_provider_controller.dart';
+import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 class ProviderNetworkObserver extends StatefulWidget {
   final Widget child;
@@ -55,18 +56,20 @@ class _ProviderNetworkObserverState extends State<ProviderNetworkObserver> {
                       ),
                     ),
                     const SizedBox(height: 16.0),
-                    const Text(
-                      'No Wi-Fi Connection',
-                      style: TextStyle(
+                     Text(
+                       lang.S.of(context).noWiFiConnection,
+                      //'No Wi-Fi Connection',
+                      style: const TextStyle(
                         fontSize: 22.0,
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
                       ),
                     ),
                     const SizedBox(height: 12.0),
-                    const Text(
-                      'Please check your internet connection and try again.',
-                      style: TextStyle(
+                     Text(
+                       lang.S.of(context).pleaseCheckYourInternetConnectionAndTryAgain,
+                     // 'Please check your internet connection and try again.',
+                      style: const TextStyle(
                         fontSize: 16.0,
                         color: Colors.grey,
                       ),
@@ -76,9 +79,10 @@ class _ProviderNetworkObserverState extends State<ProviderNetworkObserver> {
                     ElevatedButton(
                       style: const ButtonStyle(backgroundColor: WidgetStatePropertyAll(kMainColor)),
                       onPressed: () {},
-                      child: const Text(
-                        'Retry',
-                        style: TextStyle(color: Colors.white),
+                      child:  Text(
+                        lang.S.of(context).retry,
+                        //'Retry',
+                        style: const TextStyle(color: Colors.white),
                       ),
                     )
                   ],

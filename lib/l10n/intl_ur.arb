@@ -584,7 +584,30 @@
   "sep": "ستمبر",
   "oct": "اکتوبر",
   "nov": "نومبر",
-  "dec": "دسمبر"
+  "dec": "دسمبر",
+  "incomeDate": "آمدنی کی تاریخ",
+  "enterProductCode": "پروڈکٹ کوڈ درج کریں",
+  "retry": "دوبارہ کوشش کریں",
+  "addedSuccessful": "کامیابی سے شامل کیا گیا",
+  "poweredBy": "کی طرف سے طاقتور",
+  "updatePassword": "پاس ورڈ اپ ڈیٹ کریں",
+  "updateYourPassword": "اپنا پاس ورڈ اپ ڈیٹ کریں",
+  "enterYourConfirmPassword": "اپنا تصدیق شدہ پاس ورڈ درج کریں",
+  "enterYourPassword": "اپنا پاس ورڈ درج کریں",
+  "passwordAndConfirmPasswordDoesNotMatch": "پاس ورڈ اور تصدیق شدہ پاس ورڈ میل نہیں کھاتے",
+  "noWiFiConnection": "کوئی Wi-Fi کنکشن نہیں",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "براہ کرم اپنے انٹرنیٹ کنکشن کو چیک کریں اور دوبارہ کوشش کریں",
+  "userCreationFailed": "صارف بنانا ناکام ہوا",
+  "userDeletedSuccessfully": "صارف کامیابی سے حذف کر دیا گیا",
+  "failedToDeleteUser": "صارف کو حذف کرنے میں ناکامی",
+  "error": "خرابی",
+  "updatedSuccessfully": "کامیابی سے اپ ڈیٹ کیا گیا",
+  "userUpdateFailed": "صارف کی اپ ڈیٹ ناکام ہوئی",
+  "subscribeSuccessful": "سبسکرپشن کامیاب",
+  "subscribeCreationFailed": "سبسکرپشن بنانا ناکام ہوا",
+  "anErrorOccurred": "ایک خرابی ہوئی",
+  "salesCreationFailed": "سیلز بنانا ناکام ہوا",
+  "purchaseCreationFailed": "خریداری بنانا ناکام ہوا"
 
 
 }

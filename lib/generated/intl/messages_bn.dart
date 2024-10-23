@@ -66,6 +66,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("ইউনিট যোগ করুন"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("ব্যবহারকারী ভূমিকা যোগ করুন"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("সফলভাবে যোগ হয়েছে"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("কার্টে যোগ করা হয়েছে"),
         "adding": MessageLookupByLibrary.simpleMessage("যোগ করা হচ্ছে.."),
@@ -80,6 +82,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("একাউন্ট already আছে?"),
         "amount": MessageLookupByLibrary.simpleMessage("পরিমাণ"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("একটি ত্রুটি ঘটেছে"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "নিচের নম্বরে একটি এসএমএস পাঠানো হবে: "),
@@ -282,6 +286,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("নোট লিখুন"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("উদ্বোধনী ব্যালেন্স লিখুন"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("পণ্যের কোড লিখুন"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("পণ্যের নাম লিখুন"),
         "enterPurchasePrice":
@@ -303,20 +309,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("ওজন লিখুন"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("পাইকারি মূল্য লিখুন"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "আপনার নিশ্চিত পাসওয়ার্ড লিখুন"),
         "enterYourEmailAddress":
             MessageLookupByLibrary.simpleMessage("আপনার ইমেল ঠিকানা লিখুন"),
         "enterYourFullName":
             MessageLookupByLibrary.simpleMessage("আপনার পুরো নাম লিখুন"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("আপনার নাম লিখুন"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("আপনার পাসওয়ার্ড লিখুন"),
         "enterYourPhoneNumber":
             MessageLookupByLibrary.simpleMessage("আপনার ফোন নম্বর লিখুন"),
+        "error": MessageLookupByLibrary.simpleMessage("ত্রুটি"),
         "expense": MessageLookupByLibrary.simpleMessage("ব্যয়"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("ব্যয় বিভাগ"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("খরচের তারিখ"),
         "expenseFor": MessageLookupByLibrary.simpleMessage("জন্য খরচ"),
         "expenseReport": MessageLookupByLibrary.simpleMessage("ব্যয় রিপোর্ট"),
         "facebook": MessageLookupByLibrary.simpleMessage("ফেসবুক"),
+        "failedToDeleteUser": MessageLookupByLibrary.simpleMessage(
+            "ব্যবহারকারী মুছতে ব্যর্থ হয়েছে"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "প্ল্যাটফর্ম সংস্করণ পাওয়া যায়নি।"),
         "fashion": MessageLookupByLibrary.simpleMessage("ফ্যাশন"),
@@ -356,6 +369,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("আয়"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("আয় বিভাগের তালিকা"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("আয় তারিখ"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("জন্য আয়"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("আয় রিপোর্ট"),
         "instagram": MessageLookupByLibrary.simpleMessage("ইনস্টাগ্রাম"),
@@ -437,6 +451,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noSupplier":
             MessageLookupByLibrary.simpleMessage("কোনও সরবরাহকারী উপলব্ধ নেই"),
         "noTransaction": MessageLookupByLibrary.simpleMessage("কোন লেনদেন নেই"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("কোনো Wi-Fi সংযোগ নেই"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("সক্রিয় ব্যবহারকারী নন"),
         "notFound": MessageLookupByLibrary.simpleMessage("কিছু পাওয়া যায়নি"),
@@ -457,6 +473,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("পার্টি লিস্ট"),
         "partyList": MessageLookupByLibrary.simpleMessage("দলগুলোর তালিকা"),
         "password": MessageLookupByLibrary.simpleMessage("পাসওয়ার্ড"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "পাসওয়ার্ড এবং নিশ্চিত পাসওয়ার্ড মেলে না"),
         "passwordCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "পাসওয়ার্ড ফাঁকা রাখা যাবে না"),
         "passwordsDoNotMatch":
@@ -495,6 +514,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("পরিকল্পনা"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("পরিমাণ যোগ করুন"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "দয়া করে আপনার ইন্টারনেট সংযোগটি পরীক্ষা করুন এবং আবার চেষ্টা করুন"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "দয়া করে প্রিন্টারটি প্রথমে সংযুক্ত করুন"),
         "pleaseEnterABiggerPassword":
@@ -544,6 +566,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pleaseUseTheValidPurchaseCodeToUseTheApp":
             MessageLookupByLibrary.simpleMessage(
                 "অ্যাপটি ব্যবহার করতে বৈধ ক্রয় কোড ব্যবহার করুন"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("দ্বারা চালিত"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "অ্যান্ড্রয়েড ও আইওএস অ্যাপ সমর্থন"),
         "premiumPlan":
@@ -579,6 +602,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("কেনেছে:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("ক্রয় নিশ্চিত"),
+        "purchaseCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "ক্রয় তৈরি করতে ব্যর্থ হয়েছে"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("ক্রয়ের বিবরণ"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("ক্রয় তালিকা"),
@@ -620,6 +645,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "আপনার পাসওয়ার্ড পুনরায় সেট করুন এবং আপনার একাউন্টে লগ ইন করুন"),
         "retailer": MessageLookupByLibrary.simpleMessage("খুচরা বিক্রেতা"),
+        "retry": MessageLookupByLibrary.simpleMessage("পুনরায় চেষ্টা করুন"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("ফেরত মুল্য"),
         "riead": MessageLookupByLibrary.simpleMessage("পড়ুন"),
         "sale": MessageLookupByLibrary.simpleMessage("বিক্রয়"),
@@ -627,6 +653,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("বিক্রয় মূল্য"),
         "sales": MessageLookupByLibrary.simpleMessage("বিক্রয়"),
         "salesBy": MessageLookupByLibrary.simpleMessage("বিক্রি করেছে:"),
+        "salesCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "বিক্রয় তৈরি করতে ব্যর্থ হয়েছে"),
         "salesDetails": MessageLookupByLibrary.simpleMessage("বিক্রয় বিবরণী"),
         "salesList": MessageLookupByLibrary.simpleMessage("বিক্রয়ের তালিকা"),
         "salesPrice": MessageLookupByLibrary.simpleMessage("বিক্রয় মূল্য"),
@@ -717,6 +745,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("স্টক: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("সাবটোটাল"),
         "submit": MessageLookupByLibrary.simpleMessage("জমা দিন"),
+        "subscribeCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "সাবস্ক্রিপশন তৈরি করতে ব্যর্থ হয়েছে"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("সাবস্ক্রিপশন সফল হয়েছে"),
         "subscription": MessageLookupByLibrary.simpleMessage("সাবস্ক্রিপশন"),
         "subtotal": MessageLookupByLibrary.simpleMessage("অন্তর্বর্তী মোট"),
         "successfullyPaid":
@@ -776,23 +808,35 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("যোগাযোগ আপডেট করুন"),
         "updateNow": MessageLookupByLibrary.simpleMessage("এখনই আপডেট করুন"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("পাসওয়ার্ড আপডেট করুন"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("পণ্য আপডেট করুন"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("আপনার প্রোফাইল আপডেট করুন"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("আপনার পাসওয়ার্ড আপডেট করুন"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "আপনার প্রোফাইল আপডেট করুন আপনার গ্রাহকদের সাথে আরও ভালভাবে সংযোগ করার জন্য"),
         "updateYourSubscription": MessageLookupByLibrary.simpleMessage(
             "আপনার সাবস্ক্রিপশন আপডেট করুন"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("সফলভাবে আপডেট হয়েছে"),
         "updating": MessageLookupByLibrary.simpleMessage("আপডেট হচ্ছে..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("এখন আপগ্রেড করুন"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "ব্যবহারকারীর শিরোনাম ফাঁকা রাখা যাবে না"),
+        "userCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "ব্যবহারকারী তৈরি করতে ব্যর্থ হয়েছে"),
+        "userDeletedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "ব্যবহারকারী সফলভাবে মুছে ফেলা হয়েছে"),
         "userRole": MessageLookupByLibrary.simpleMessage("ব্যবহারকারী ভূমিকা"),
         "userRoleDetails":
             MessageLookupByLibrary.simpleMessage("ব্যবহারকারী ভূমিকা বিবরণ"),
         "userTitle":
             MessageLookupByLibrary.simpleMessage("ব্যবহারকারীর শিরোনাম"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "ব্যবহারকারী আপডেট করতে ব্যর্থ হয়েছে"),
         "vat": MessageLookupByLibrary.simpleMessage("ভ্যাট"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("ভ্যাট প্রযোজ্য নয়"),

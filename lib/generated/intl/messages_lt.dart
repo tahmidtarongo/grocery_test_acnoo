@@ -66,6 +66,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("Pridėti vienetą"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Pridėti vartotojo vaidmenį"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("Sėkmingai pridėta"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("Pridėta į krepšelį"),
         "adding": MessageLookupByLibrary.simpleMessage("Pridėjimas..."),
@@ -82,6 +84,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "amarSonarBangla":
             MessageLookupByLibrary.simpleMessage("Amar sonar bangla"),
         "amount": MessageLookupByLibrary.simpleMessage("Suma"),
+        "anErrorOccurred": MessageLookupByLibrary.simpleMessage("Įvyko klaida"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS bus išsiųstas į šį numerį:"),
@@ -298,6 +301,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("Įveskite pastabą"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("Įveskite pradinę balansą"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("Įveskite produkto kodą"),
         "enterProductName": MessageLookupByLibrary.simpleMessage(
             "Įveskite produkto pavadinimą"),
         "enterPurchasePrice":
@@ -319,14 +324,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("Įveskite svorį"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("Įveskite didmeninę kainą"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Įveskite savo patvirtinimo slaptažodį"),
         "enterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
             "Įveskite savo el. pašto adresą"),
         "enterYourFullName": MessageLookupByLibrary.simpleMessage(
             "Įveskite savo vardą ir pavardę"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("Įveskite savo vardą"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("Įveskite savo slaptažodį"),
         "enterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Įveskite savo telefono numerį"),
+        "error": MessageLookupByLibrary.simpleMessage("Klaida"),
         "expense": MessageLookupByLibrary.simpleMessage("Išlaidos"),
         "expenseCat":
             MessageLookupByLibrary.simpleMessage("Išlaidų kategorijos"),
@@ -335,6 +345,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenseReport":
             MessageLookupByLibrary.simpleMessage("Išlaidų ataskaita"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser":
+            MessageLookupByLibrary.simpleMessage("Nepavyko ištrinti vartotojo"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Nepavyko gauti platformos versijos."),
         "fashion": MessageLookupByLibrary.simpleMessage("Mada"),
@@ -373,6 +385,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("Pajamos"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("Pajamų kategorijos"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("Pajamų data"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("Pajamos"),
         "incomeReport":
             MessageLookupByLibrary.simpleMessage("Pajamų ataskaita"),
@@ -462,6 +475,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Vartotojo vaidmens nerasta"),
         "noSupplier": MessageLookupByLibrary.simpleMessage("Nėra tiekėjų"),
         "noTransaction": MessageLookupByLibrary.simpleMessage("Nėra sandorių"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Nėra Wi-Fi ryšio"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("Ne aktyvus vartotojas"),
         "notFound": MessageLookupByLibrary.simpleMessage("Nerasta"),
@@ -483,6 +498,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("Šalys"),
         "partyList": MessageLookupByLibrary.simpleMessage("Šalių sąrašas"),
         "password": MessageLookupByLibrary.simpleMessage("Slaptažodis"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "Slaptažodis ir patvirtinimo slaptažodis nesutampa"),
         "passwordCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Slaptažodis negali būti tuščias"),
         "passwordsDoNotMatch":
@@ -522,6 +540,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("Planas"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("Įveskite kiekį"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Prašome patikrinti savo interneto ryšį ir bandyti dar kartą"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "Prašome pirmiausia prijungti spausdintuvą"),
         "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
@@ -576,6 +597,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Norėdami naudoti programą, naudokite galiojantį pirkimo kodą"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Sukurtas Acnoo"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("Galia teikia"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "Android ir iOS programos palaikymas"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Premium planas"),
@@ -615,6 +637,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("Pirko:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Pirkimas patvirtintas"),
+        "purchaseCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Pirkimo kūrimas nepavyko"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("Pirkimo detalės"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("Pirkimų sąrašas"),
@@ -659,6 +683,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "Atstatykite slaptažodį, kad galėtumėte atkurti ir prisijungti prie savo paskyros"),
         "retailer": MessageLookupByLibrary.simpleMessage("Mažmenininkas"),
+        "retry": MessageLookupByLibrary.simpleMessage("Bandykite vėl"),
         "retur": MessageLookupByLibrary.simpleMessage("Grąžinimas"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("Grąžinama suma"),
         "riead": MessageLookupByLibrary.simpleMessage("Riead"),
@@ -667,6 +692,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("Pardavimo kaina"),
         "sales": MessageLookupByLibrary.simpleMessage("Pardavimai"),
         "salesBy": MessageLookupByLibrary.simpleMessage("Parduodama:"),
+        "salesCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Pardavimų kūrimas nepavyko"),
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("Pardavimo detalės"),
         "salesList": MessageLookupByLibrary.simpleMessage("Pardavimo sąrašas"),
@@ -759,6 +786,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("Sandėlis:"),
         "subTotal": MessageLookupByLibrary.simpleMessage("Iš viso"),
         "submit": MessageLookupByLibrary.simpleMessage("Pateikti"),
+        "subscribeCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Prenumeratos kūrimas nepavyko"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("Prenumerata sėkminga"),
         "subscription": MessageLookupByLibrary.simpleMessage("Prenumerata"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Iš viso"),
         "successfullyPaid":
@@ -825,23 +856,35 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("Atnaujinti kontaktą"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Atnaujinti dabar"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("Atnaujinti slaptažodį"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("Atnaujinti produktą"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("Atnaujinti profilį"),
+        "updateYourPassword": MessageLookupByLibrary.simpleMessage(
+            "Atnaujinkite savo slaptažodį"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "Atnaujinkite savo profilį, kad geriau susijungtumėte su savo klientais"),
         "updateYourSubscription": MessageLookupByLibrary.simpleMessage(
             "Atnaujinkite savo prenumeratą"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Sėkmingai atnaujinta"),
         "updating": MessageLookupByLibrary.simpleMessage("Atnaujinimas..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("Atnaujinti dabar"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Vartotojo pavadinimas negali būti tuščias"),
+        "userCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Vartotojo kūrimas nepavyko"),
+        "userDeletedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "Vartotojas sėkmingai ištrintas"),
         "userRole": MessageLookupByLibrary.simpleMessage("Vartotojo vaidmuo"),
         "userRoleDetails":
             MessageLookupByLibrary.simpleMessage("Vartotojo vaidmens detalės"),
         "userTitle":
             MessageLookupByLibrary.simpleMessage("Vartotojo pavadinimas"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "Vartotojo atnaujinimas nepavyko"),
         "vat": MessageLookupByLibrary.simpleMessage("PVM"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("PVM netaikomas"),

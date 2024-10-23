@@ -588,7 +588,31 @@
   "sep": "Вер",
   "oct": "Жов",
   "nov": "Лис",
-  "dec": "Гру"
+  "dec": "Гру",
+  "incomeDate": "Дата доходу",
+  "enterProductCode": "Введіть код продукту",
+  "retry": "Спробуйте ще раз",
+  "addedSuccessful": "Успішно додано",
+  "poweredBy": "Працює на",
+  "updatePassword": "Оновити пароль",
+  "updateYourPassword": "Оновіть свій пароль",
+  "enterYourConfirmPassword": "Введіть підтвердження пароля",
+  "enterYourPassword": "Введіть свій пароль",
+  "passwordAndConfirmPasswordDoesNotMatch": "Пароль та підтвердження пароля не збігаються",
+  "noWiFiConnection": "Немає Wi-Fi підключення",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Перевірте своє підключення до Інтернету та спробуйте ще раз",
+  "userCreationFailed": "Не вдалося створити користувача",
+  "userDeletedSuccessfully": "Користувача видалено успішно",
+  "failedToDeleteUser": "Не вдалося видалити користувача",
+  "error": "Помилка",
+  "updatedSuccessfully": "Успішно оновлено",
+  "userUpdateFailed": "Не вдалося оновити користувача",
+  "subscribeSuccessful": "Успішно підписано",
+  "subscribeCreationFailed": "Не вдалося створити підписку",
+  "anErrorOccurred": "Виникла помилка",
+  "salesCreationFailed": "Не вдалося створити продаж",
+  "purchaseCreationFailed": "Не вдалося створити покупку"
+
 
 
 

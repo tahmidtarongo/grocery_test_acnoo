@@ -67,6 +67,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("Voeg Eenheid by"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Voeg Gebruikersrol By"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("Suksesvol bygevoeg"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("Bygevoeg tot Mandjie"),
         "adding": MessageLookupByLibrary.simpleMessage("Voeg by.."),
@@ -81,6 +83,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Het jy al \'n rekening? "),
         "amount": MessageLookupByLibrary.simpleMessage("Bedrag"),
+        "anErrorOccurred": MessageLookupByLibrary.simpleMessage(
+            "Daar het \'n fout plaasgevind"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "‘n SMS sal na die volgende nommer gestuur word: "),
@@ -290,6 +294,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("Voer \'n Nota in"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("Voer openingsaldo in"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("Voer produk kode in"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("Voer produknaam in"),
         "enterPurchasePrice":
@@ -312,14 +318,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("Voer Gewig in"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("Voer Groothandelprys in"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Voer jou bevestigingspaswoord in"),
         "enterYourEmailAddress":
             MessageLookupByLibrary.simpleMessage("Voer jou e-posadres in"),
         "enterYourFullName":
             MessageLookupByLibrary.simpleMessage("Voer jou volle naam in"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("Voer jou naam in"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("Voer jou paswoord in"),
         "enterYourPhoneNumber":
             MessageLookupByLibrary.simpleMessage("Voer jou telefoonnommer in"),
+        "error": MessageLookupByLibrary.simpleMessage("Fout"),
         "expense": MessageLookupByLibrary.simpleMessage("Uitgawe"),
         "expenseCat":
             MessageLookupByLibrary.simpleMessage("Uitgawe Kategorieë"),
@@ -327,6 +338,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenseFor": MessageLookupByLibrary.simpleMessage("Uitgawe Vir"),
         "expenseReport": MessageLookupByLibrary.simpleMessage("Uitgaweverslag"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser": MessageLookupByLibrary.simpleMessage(
+            "Kon gebruiker nie verwyder nie"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Kon nie platformweergawe kry nie."),
         "fashion": MessageLookupByLibrary.simpleMessage("Mode"),
@@ -366,6 +379,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("Inkomste"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("Inkomskategorieë"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("Inkomsdatum"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("Inkomste Vir"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("Inkomsteverslag"),
         "instagram": MessageLookupByLibrary.simpleMessage("Instagram"),
@@ -454,6 +468,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Geen Verskaffer Beskikbaar"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("Geen Transaksie"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Geen Wi-Fi verbinding nie"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("Nie Aktiewe Gebruiker"),
         "notFound": MessageLookupByLibrary.simpleMessage("Nie Gevind Nie"),
@@ -473,6 +489,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("Partyjies"),
         "partyList": MessageLookupByLibrary.simpleMessage("Partylyste"),
         "password": MessageLookupByLibrary.simpleMessage("Wagwoord"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "Paswoord en bevestigingspaswoord stem nie ooreen nie"),
         "passwordCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Wagwoord kan nie leeg wees nie"),
         "passwordsDoNotMatch": MessageLookupByLibrary.simpleMessage(
@@ -509,6 +528,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("Plan"),
         "pleaseAddQuantity": MessageLookupByLibrary.simpleMessage(
             "Voeg asseblief hoeveelheid by"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Gaan asseblief jou internetverbinding na en probeer weer"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "Verbind asseblief die drukker eerste"),
         "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
@@ -563,6 +585,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Gebruik asseblief die geldige aankoopkode om die app te gebruik"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Aangedryf deur Acnoo"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("Aangedryf deur"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "Android & iOS App Ondersteuning"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Premium Plan"),
@@ -598,6 +621,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("Gekoop deur:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Aankoop Bevestig"),
+        "purchaseCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Aankope het gefaal"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("Aankoopbesonderhede"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("Aankooplys"),
@@ -642,6 +667,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "Herstel jou wagwoord om jou rekening te herwin en aan te meld"),
         "retailer": MessageLookupByLibrary.simpleMessage("Kleinhandelaar"),
+        "retry": MessageLookupByLibrary.simpleMessage("Probeer weer"),
         "retur": MessageLookupByLibrary.simpleMessage("Terugkeer"),
         "returnAmount":
             MessageLookupByLibrary.simpleMessage("Terugbetaling Bedrag"),
@@ -651,6 +677,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("Verkoopprys"),
         "sales": MessageLookupByLibrary.simpleMessage("Verkope"),
         "salesBy": MessageLookupByLibrary.simpleMessage("Verkoop deur:"),
+        "salesCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Verkope het gefaal"),
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("Verkope Besonderhede"),
         "salesList": MessageLookupByLibrary.simpleMessage("Verkooplys"),
@@ -737,6 +765,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("Voorraad: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Subtotaal"),
         "submit": MessageLookupByLibrary.simpleMessage("Dien In"),
+        "subscribeCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Inskrywing het gefaal"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("Inskrywing suksesvol"),
         "subscription": MessageLookupByLibrary.simpleMessage("Subskripsie"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Subtotaal"),
         "successfullyPaid":
@@ -799,21 +831,33 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("Opdateer Kontak"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Werk Nou By"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("Werk paswoord op"),
         "updateProduct": MessageLookupByLibrary.simpleMessage("Werk Produk by"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("Werk Jou Profiel by"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("Werk jou paswoord op"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "Werk jou profiel op om jou kliënt met \'n beter indruk te verbind"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("Werk jou intekening op"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Suksesvol opdateer"),
         "updating": MessageLookupByLibrary.simpleMessage("Opdateer..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("Opgradeer Nou"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Gebruikerstitel kan nie leeg wees nie"),
+        "userCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Gebruikersondorp het gefaal"),
+        "userDeletedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "Gebruiker suksesvol verwyder"),
         "userRole": MessageLookupByLibrary.simpleMessage("Gebruikersrol"),
         "userRoleDetails":
             MessageLookupByLibrary.simpleMessage("Gebruikersrol Besonderhede"),
         "userTitle": MessageLookupByLibrary.simpleMessage("Gebruikerstitel"),
+        "userUpdateFailed":
+            MessageLookupByLibrary.simpleMessage("Gebruikersondorp het gefaal"),
         "vat": MessageLookupByLibrary.simpleMessage("BTW"),
         "vatDoesNOtApply": MessageLookupByLibrary.simpleMessage("BTW geld nie"),
         "verification": MessageLookupByLibrary.simpleMessage("Verifikasie"),

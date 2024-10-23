@@ -62,13 +62,7 @@ class _AddIncomeState extends State<AddIncome> {
         );
       })
     ];
-    // for (String des in paymentMethods) {
-    //   var item = DropdownMenuItem(
-    //     value: des,
-    //     child: Text(des),
-    //   );
-    //   dropDownItems.add(item);
-    // }
+
     return DropdownButton(
       items: dropDownItems,
       value: selectedPaymentType,
@@ -115,7 +109,8 @@ class _AddIncomeState extends State<AddIncome> {
           appBar: AppBar(
             backgroundColor: Colors.white,
             title: Text(
-              'Add Income',
+              lang.S.of(context).addIncome,
+              //'Add Income',
               style: GoogleFonts.poppins(
                 color: Colors.black,
               ),
@@ -140,8 +135,9 @@ class _AddIncomeState extends State<AddIncome> {
                               decoration: kInputDecoration.copyWith(
                                 suffixIcon: const Icon(IconlyLight.calendar, color: kGreyTextColor),
                                 // enabledBorder: const OutlineInputBorder(),
-                                contentPadding: const EdgeInsets.all(20),
-                                labelText: 'Income date',
+                                contentPadding:  const EdgeInsets.all(20),
+                               // labelText: 'Income date',
+                                labelText: lang.S.of(context).incomeDate,
                                 hintText: lang.S.of(context).enterExpenseDate,
                               ),
                               child: Text(
@@ -168,7 +164,8 @@ class _AddIncomeState extends State<AddIncome> {
                             child: Row(
                               children: [
                                 const SizedBox(width: 10.0),
-                                Text(selectedCategory?.categoryName ?? 'Select a category'),
+                                //Text(selectedCategory?.categoryName ?? 'Select a category'),
+                                Text(selectedCategory?.categoryName ?? lang.S.of(context).selectACategory),
                                 const Spacer(),
                                 const Icon(Icons.keyboard_arrow_down),
                                 const SizedBox(
@@ -197,7 +194,8 @@ class _AddIncomeState extends State<AddIncome> {
                           decoration: kInputDecoration.copyWith(
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             // border: const OutlineInputBorder(),
-                            labelText: 'Income for',
+                            //labelText: 'Income for',
+                            labelText: lang.S.of(context).incomeFor,
                             hintText: lang.S.of(context).enterName,
                           ),
                         ),

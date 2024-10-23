@@ -55,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("እንደገና ከሸማቾች ሰንጠረዥ ጋር አክል"),
         "addUnit": MessageLookupByLibrary.simpleMessage("ክፍል ጨምር"),
         "addUserRole": MessageLookupByLibrary.simpleMessage("ተጠቃሚ ሚና አክል"),
+        "addedSuccessful": MessageLookupByLibrary.simpleMessage("ተጨምሯል"),
         "addedToCart": MessageLookupByLibrary.simpleMessage("ወደ ጋሪ ተጨምሯል"),
         "adding": MessageLookupByLibrary.simpleMessage("እንደገና ተጨምሮአል.."),
         "address": MessageLookupByLibrary.simpleMessage("አድራሻ"),
@@ -69,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("መለያ አለህ?"),
         "amarSonarBangla": MessageLookupByLibrary.simpleMessage("አማር ሶናር ባንግላ"),
         "amount": MessageLookupByLibrary.simpleMessage("ብዛት"),
+        "anErrorOccurred": MessageLookupByLibrary.simpleMessage("ስህተት ተከስቷል"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "እባክህ ይህንን ቁጥር ወደ ስልክ አሰናብለንታል: "),
@@ -254,6 +256,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("ማስታወሻ አስገባ"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("መክፈቻ ቀሪ ሂሳብ አስገባ"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("የምርት ኮድን እንዲህ ይግቡ"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("የምርት ስም አስገባ"),
         "enterPurchasePrice":
@@ -274,19 +278,26 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("ክብደት አስገባ"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("የታላቅ ሽያጭ ዋጋ አስገባ"),
+        "enterYourConfirmPassword":
+            MessageLookupByLibrary.simpleMessage("የይለፍ ቃል ይምዝ"),
         "enterYourEmailAddress":
             MessageLookupByLibrary.simpleMessage("የኢሜል አድራሻዎን ያስገቡ"),
         "enterYourFullName":
             MessageLookupByLibrary.simpleMessage("ሙሉ ስምህን አስገባ"),
         "enterYourName": MessageLookupByLibrary.simpleMessage("ስምዎን ያስገቡ"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("የይለፍ ቃልዎን ይምዝ"),
         "enterYourPhoneNumber":
             MessageLookupByLibrary.simpleMessage("የስልክ ቁጥርዎን ያስገቡ"),
+        "error": MessageLookupByLibrary.simpleMessage("ስህተት"),
         "expense": MessageLookupByLibrary.simpleMessage("ወጪ"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("የወጪ ምድቦች"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("የወጪ ቀን"),
         "expenseFor": MessageLookupByLibrary.simpleMessage("ለምን ወጪ"),
         "expenseReport": MessageLookupByLibrary.simpleMessage("የወጪ ሪፖርት"),
         "facebook": MessageLookupByLibrary.simpleMessage("ፌስቡክ"),
+        "failedToDeleteUser":
+            MessageLookupByLibrary.simpleMessage("ተጠቃሚውን ማስወገድ ይሳሳት"),
         "failedToGetPlatformVersion":
             MessageLookupByLibrary.simpleMessage("የመሳሰሉትን እቅድ እባክህ ድጋሚ ሞክር."),
         "fashion": MessageLookupByLibrary.simpleMessage("ፋሽን"),
@@ -319,6 +330,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "image": MessageLookupByLibrary.simpleMessage("ምስል"),
         "income": MessageLookupByLibrary.simpleMessage("ገቢ"),
         "incomeCategories": MessageLookupByLibrary.simpleMessage("የገቢ ምድቦች"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("የገቢ ቀን"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("ገቢ ለ"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("የገቢ ሪፖርት"),
         "instagram": MessageLookupByLibrary.simpleMessage("ኢንስታግራም"),
@@ -397,6 +409,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noSupplier": MessageLookupByLibrary.simpleMessage("ምንም አቅራቢ አልተገኘም"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("የሚቀርቡ ዝውውሮች የሉም"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("የWi-Fi ግንኙነት የለም"),
         "notActiveUser": MessageLookupByLibrary.simpleMessage("ተጠቃሚ አይሆንም"),
         "notFound": MessageLookupByLibrary.simpleMessage("አልተገኘም"),
         "note": MessageLookupByLibrary.simpleMessage("ማስታወሻ"),
@@ -416,6 +430,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("ፓርቲዎች"),
         "partyList": MessageLookupByLibrary.simpleMessage("የወጣቶች ዝርዝር"),
         "password": MessageLookupByLibrary.simpleMessage("የይለፍ ቃል"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "የይለፍ ቃል እና የማረጋገጫ ይለፍ ቃል አይተያይዞም"),
         "passwordCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("የይለፍ ቃል ባዶ ሊሆን አይችልም"),
         "passwordsDoNotMatch":
@@ -446,6 +463,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("እቅድ"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("ብዛት እንዲጨምር እባክህ አስገባ"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "እባኮትን የኢንተርኔት ግንኙነትዎን ይመልከቱ እና እንደገና ይሞክሩ"),
         "pleaseConnectThePrinterFirst":
             MessageLookupByLibrary.simpleMessage("እባክዎን መጀመሪያ ማተሚያውን ያገናኙ"),
         "pleaseConnectYourBlutohPrinter":
@@ -498,6 +518,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "እባክህ ትክክለኛውን የግዢ ኮድ ተጠቅመህ መተግበሪያውን ተጠቅመ"),
         "powerdedByAcnoo": MessageLookupByLibrary.simpleMessage("በAcnoo የተጎበኘ"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("በዚህ ይዘው"),
         "premiumCustomerSupport":
             MessageLookupByLibrary.simpleMessage("የተሻሻለ ደንበኛ ድጋፍ"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("ከፍተኛ እቅድ"),
@@ -528,6 +549,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseAlarm": MessageLookupByLibrary.simpleMessage("የግዢ ማንቂያ"),
         "purchaseBy": MessageLookupByLibrary.simpleMessage("ተግዟል: "),
         "purchaseConfirmed": MessageLookupByLibrary.simpleMessage("ግዢ ተረጋገጠ"),
+        "purchaseCreationFailed":
+            MessageLookupByLibrary.simpleMessage("የግዢ ፈጠር ይሳሳት"),
         "purchaseDetails": MessageLookupByLibrary.simpleMessage("የግዢ ዝርዝር"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("የግዢ ዝርዝር"),
         "purchaseNow": MessageLookupByLibrary.simpleMessage("አሁን ግዢ"),
@@ -564,6 +587,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "የይለፍ ቃልህን እንዲመለስ እና በመለያህ ውስጥ እንዲገባ እንድትችል"),
         "retailer": MessageLookupByLibrary.simpleMessage("ሸቀጣር"),
+        "retry": MessageLookupByLibrary.simpleMessage("ድጋፍ ይሁን"),
         "retur": MessageLookupByLibrary.simpleMessage("ይመለሱ"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("መመለስ የተከፈለ ብዛት"),
         "riead": MessageLookupByLibrary.simpleMessage("ሬድ"),
@@ -572,6 +596,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("የሽያጭ ዋጋ"),
         "sales": MessageLookupByLibrary.simpleMessage("ሽያጭ"),
         "salesBy": MessageLookupByLibrary.simpleMessage("ተሽይቷል: "),
+        "salesCreationFailed":
+            MessageLookupByLibrary.simpleMessage("የሽያጭ ፈጠር ይሳሳት"),
         "salesDetails": MessageLookupByLibrary.simpleMessage("የሽያጭ ዝርዝሮች"),
         "salesList": MessageLookupByLibrary.simpleMessage("የሽያጭ ዝርዝር"),
         "salesPrice": MessageLookupByLibrary.simpleMessage("የሽያጭ ዋጋ"),
@@ -647,6 +673,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("እቃ: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("ንዑስ ጠቅላላ"),
         "submit": MessageLookupByLibrary.simpleMessage("አስገባ"),
+        "subscribeCreationFailed":
+            MessageLookupByLibrary.simpleMessage("የማመለከቻ ፈጠር ይሳሳት"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("ይመዝገቡ በትክክል"),
         "subscription": MessageLookupByLibrary.simpleMessage("የመደበኛነት እቅድ"),
         "subtotal": MessageLookupByLibrary.simpleMessage("አንደኛ ድምር"),
         "successfullyPaid":
@@ -704,20 +734,31 @@ class MessageLookup extends MessageLookupByLibrary {
         "update": MessageLookupByLibrary.simpleMessage("አዘምን"),
         "updateContact": MessageLookupByLibrary.simpleMessage("አድራሻ አዘምን"),
         "updateNow": MessageLookupByLibrary.simpleMessage("አሁን አዘምን"),
+        "updatePassword": MessageLookupByLibrary.simpleMessage("የይለፍ ቃልን ያዝ"),
         "updateProduct": MessageLookupByLibrary.simpleMessage("ምርት አዘምን"),
         "updateProfile": MessageLookupByLibrary.simpleMessage("መገለጫዎን አዘምን"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("የይለፍ ቃልዎን ያዝ"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "የገለፅ መግለጫህን አዘምን እንዲሁም እንደ ጥሩ ደንበኛ ሁኔታ ያሳይ"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("የእቅድህን ማሻሻያ አዘምን"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("በትክክል ወይን እንደተያዙ"),
         "updating": MessageLookupByLibrary.simpleMessage("እንደገና ተሻሽሏል..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("አሁን አዘምን"),
         "useTitleCanNotBeEmpty":
             MessageLookupByLibrary.simpleMessage("የተጠቃሚ ርዕስ አይባተውም"),
+        "userCreationFailed":
+            MessageLookupByLibrary.simpleMessage("የተጠቃሚ ፈጠር የተሳሳተ"),
+        "userDeletedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("ተጠቃሚው በትክክል ወይን አልፏት"),
         "userRole": MessageLookupByLibrary.simpleMessage("የተጠቃሚ ሚና"),
         "userRoleDetails":
             MessageLookupByLibrary.simpleMessage("የተጠቃሚ ክፍለ ክፍል ዝርዝሮች"),
         "userTitle": MessageLookupByLibrary.simpleMessage("የተጠቃሚ ርዕስ"),
+        "userUpdateFailed":
+            MessageLookupByLibrary.simpleMessage("የተጠቃሚ አውደ ምርት ይሳሳት"),
         "vat": MessageLookupByLibrary.simpleMessage("VAT"),
         "vatDoesNOtApply": MessageLookupByLibrary.simpleMessage("VAT አይተገበም"),
         "verification": MessageLookupByLibrary.simpleMessage("ማረጋገጫ"),

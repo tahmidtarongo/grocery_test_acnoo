@@ -584,8 +584,28 @@
   "sep": "Қыр",
   "oct": "Қаз",
   "nov": "Қара",
-  "dec": "Жел"
-
-
-
+  "dec": "Жел",
+  "incomeDate": "Кіріс күні",
+  "enterProductCode": "Өнім кодын енгізіңіз",
+  "retry": "Қайтадан сынап көріңіз",
+  "addedSuccessful": "Қосылды",
+  "poweredBy": "Қолдайды",
+  "updatePassword": "Парольді жаңарту",
+  "updateYourPassword": "Парольді жаңартыңыз",
+  "enterYourConfirmPassword": "Нақтылаған парольді енгізіңіз",
+  "enterYourPassword": "Парольді енгізіңіз",
+  "passwordAndConfirmPasswordDoesNotMatch": "Пароль және расталған пароль сәйкес келмейді",
+  "noWiFiConnection": "Wi-Fi байланысы жоқ",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Интернет байланысыңызды тексеріп, қайтадан көріңіз",
+  "userCreationFailed": "Пайдаланушыны жасау сәтсіз аяқталды",
+  "userDeletedSuccessfully": "Пайдаланушы сәтті жойылды",
+  "failedToDeleteUser": "Пайдаланушыны жою сәтсіз аяқталды",
+  "error": "Қате",
+  "updatedSuccessfully": "Сәтті жаңартылды",
+  "userUpdateFailed": "Пайдаланушыны жаңарту сәтсіз аяқталды",
+  "subscribeSuccessful": "Жазылу сәтті өтті",
+  "subscribeCreationFailed": "Жазылуды жасау сәтсіз аяқталды",
+  "anErrorOccurred": "Қате пайда болды",
+  "salesCreationFailed": "Сату жасау сәтсіз аяқталды",
+  "purchaseCreationFailed": "Сатып алу жасау сәтсіз аяқталды"
 }

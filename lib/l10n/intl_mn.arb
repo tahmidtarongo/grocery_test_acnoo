@@ -581,7 +581,31 @@
   "sep": "9-р сар",
   "oct": "10-р сар",
   "nov": "11-р сар",
-  "dec": "12-р сар"
+  "dec": "12-р сар",
+  "incomeDate": "Орлогын огноо",
+  "enterProductCode": "Барааны код оруулна уу",
+  "retry": "Дахин оролдоно уу",
+  "addedSuccessful": "Амжилттай нэмэгдлээ",
+  "poweredBy": "Энэ нь powered by",
+  "updatePassword": "Нууц үг шинэчлэх",
+  "updateYourPassword": "Таны нууц үгийг шинэчлэх",
+  "enterYourConfirmPassword": "Таны баталгаажуулах нууц үг оруулна уу",
+  "enterYourPassword": "Таны нууц үг оруулна уу",
+  "passwordAndConfirmPasswordDoesNotMatch": "Нууц үг ба баталгаажуулах нууц үг тохирохгүй байна",
+  "noWiFiConnection": "Wi-Fi холболт байхгүй",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Интернет холболтоо шалгаж, дахин оролдоно уу",
+  "userCreationFailed": "Хэрэглэгчийн бүртгэл амжилтгүй боллоо",
+  "userDeletedSuccessfully": "Хэрэглэгч амжилттай устгагдлаа",
+  "failedToDeleteUser": "Хэрэглэгчийг устгахад амжилтгүй",
+  "error": "Алдаа",
+  "updatedSuccessfully": "Амжилттай шинэчиллээ",
+  "userUpdateFailed": "Хэрэглэгчийн шинэчлэлт амжилтгүй боллоо",
+  "subscribeSuccessful": "Абонемент амжилттай",
+  "subscribeCreationFailed": "Абонементын бүртгэл амжилтгүй боллоо",
+  "anErrorOccurred": "Алдаа гарлаа",
+  "salesCreationFailed": "Борлуулалтын бүртгэл амжилтгүй боллоо",
+  "purchaseCreationFailed": "Их худалдан авалтын бүртгэл амжилтгүй боллоо"
+
 
 
 

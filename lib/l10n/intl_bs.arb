@@ -585,7 +585,31 @@
   "sep": "Sep",
   "oct": "Okt",
   "nov": "Nov",
-  "dec": "Dec"
+  "dec": "Dec",
+  "incomeDate": "Datum prihoda",
+  "enterProductCode": "Unesite kod proizvoda",
+  "retry": "Pokušajte ponovo",
+  "addedSuccessful": "Uspešno dodano",
+  "poweredBy": "Pokreće",
+  "updatePassword": "Ažurirajte lozinku",
+  "updateYourPassword": "Ažurirajte svoju lozinku",
+  "enterYourConfirmPassword": "Unesite svoju potvrdu lozinke",
+  "enterYourPassword": "Unesite svoju lozinku",
+  "passwordAndConfirmPasswordDoesNotMatch": "Lozinka i potvrda lozinke se ne podudaraju",
+  "noWiFiConnection": "Nema Wi-Fi veze",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Molimo vas provjerite svoju internet vezu i pokušajte ponovo",
+  "userCreationFailed": "Kreiranje korisnika nije uspelo",
+  "userDeletedSuccessfully": "Korisnik je uspešno obrisan",
+  "failedToDeleteUser": "Nije uspelo brisanje korisnika",
+  "error": "Greška",
+  "updatedSuccessfully": "Uspešno ažurirano",
+  "userUpdateFailed": "Ažuriranje korisnika nije uspelo",
+  "subscribeSuccessful": "Uspešno pretplaćeno",
+  "subscribeCreationFailed": "Kreiranje pretplate nije uspelo",
+  "anErrorOccurred": "Dogodila se greška",
+  "salesCreationFailed": "Kreiranje prodaje nije uspelo",
+  "purchaseCreationFailed": "Kreiranje kupovine nije uspelo"
+
 
 
 

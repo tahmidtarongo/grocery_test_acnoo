@@ -590,7 +590,31 @@
   "sep": "සැප්",
   "oct": "ඔක්තෝ",
   "nov": "නොවැ",
-  "dec": "දෙසැ"
+  "dec": "දෙසැ",
+  "incomeDate": "ආදායම් දිනය",
+  "enterProductCode": "නිෂ්පාදන කේතය ඇතුළත් කරන්න",
+  "retry": "පැමිණිල්ල",
+  "addedSuccessful": "සාර්ථකව එකතු කරන ලදි",
+  "poweredBy": "දැන්වීම් විසින්",
+  "updatePassword": "මුරපදය යාවත්කාලීන කරන්න",
+  "updateYourPassword": "ඔබේ මුරපදය යාවත්කාලීන කරන්න",
+  "enterYourConfirmPassword": "ඔබේ තහවුරුකළ මුරපදය ඇතුළත් කරන්න",
+  "enterYourPassword": "ඔබේ මුරපදය ඇතුළත් කරන්න",
+  "passwordAndConfirmPasswordDoesNotMatch": "මුරපදය සහ තහවුරුකළ මුරපදය නොගැලපේ",
+  "noWiFiConnection": "කිසිඳු Wi-Fi සම්බන්ධතාවක් නැත",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "කරුණාකර ඔබේ ඉන්ටර්නෙට් සම්බන්ධතාවය පරීක්ෂා කරන්න සහ නැවත උත්සාහ කරන්න",
+  "userCreationFailed": "පරිශීලක සාදා ගැනීම අසාර්ථක විය",
+  "userDeletedSuccessfully": "පරිශීලකයා සාර්ථකව මකා දැමිය හැක",
+  "failedToDeleteUser": "පරිශීලකයා මකා දැමීමට අසාර්ථකයි",
+  "error": "දෝෂය",
+  "updatedSuccessfully": "යාවත්කාලීන විය",
+  "userUpdateFailed": "පරිශීලක යාවත්කාලීන කිරීම අසාර්ථකයි",
+  "subscribeSuccessful": "දුරකථනය සාර්ථකයි",
+  "subscribeCreationFailed": "දුරකථන සාදා ගැනීම අසාර්ථකයි",
+  "anErrorOccurred": "කිසිඳු දෝෂයක් ඇති විය",
+  "salesCreationFailed": "අලෙවි සාදා ගැනීම අසාර්ථකයි",
+  "purchaseCreationFailed": "නොමිලේ සාදා ගැනීම අසාර්ථකයි"
+
 
 
 }

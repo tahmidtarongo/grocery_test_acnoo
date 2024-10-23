@@ -581,6 +581,30 @@
   "sep": "Вер",
   "oct": "Каст",
   "nov": "Ліст",
-  "dec": "Сне"
+  "dec": "Сне",
+  "incomeDate": "Дата даходу",
+  "enterProductCode": "Увядзіце код прадукту",
+  "retry": "Паўтарыць",
+  "addedSuccessful": "Дададзена паспяхова",
+  "poweredBy": "Распрацавана",
+  "updatePassword": "Абнавіць пароль",
+  "updateYourPassword": "Абнавіце ваш пароль",
+  "enterYourConfirmPassword": "Увядзіце свой пацвярджаючы пароль",
+  "enterYourPassword": "Увядзіце ваш пароль",
+  "passwordAndConfirmPasswordDoesNotMatch": "Пароль і пацвярджаючы пароль не супадаюць",
+  "noWiFiConnection": "Няма злучэння Wi-Fi",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Калі ласка, праверце ваша інтэрнэт-злучэнне і паспрабуйце яшчэ раз",
+  "userCreationFailed": "Стварэнне карыстальніка не атрымалася",
+  "userDeletedSuccessfully": "Карыстальнік паспяхова выдалены",
+  "failedToDeleteUser": "Не атрымалася выдаліць карыстальніка",
+  "error": "Памылка",
+  "updatedSuccessfully": "Паспяхова абноўлена",
+  "userUpdateFailed": "Абнаўленне карыстальніка не атрымалася",
+  "subscribeSuccessful": "Падпіска паспяховая",
+  "subscribeCreationFailed": "Не атрымалася стварыць падпіску",
+  "anErrorOccurred": "Адбылася памылка",
+  "salesCreationFailed": "Не атрымалася стварыць продажы",
+  "purchaseCreationFailed": "Не атрымалася стварыць пакупкі"
+
 
 }

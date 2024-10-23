@@ -592,7 +592,31 @@
   "sep": "Szept",
   "oct": "Okt",
   "nov": "Nov",
-  "dec": "Dec"
+  "dec": "Dec",
+  "incomeDate": "Bevétel dátuma",
+  "enterProductCode": "Adja meg a termékkódot",
+  "retry": "Újrapróbálkozás",
+  "addedSuccessful": "Sikeresen hozzáadva",
+  "poweredBy": "Támogatja",
+  "updatePassword": "Jelszó frissítése",
+  "updateYourPassword": "Frissítse a jelszavát",
+  "enterYourConfirmPassword": "Adja meg a megerősítő jelszavát",
+  "enterYourPassword": "Adja meg a jelszavát",
+  "passwordAndConfirmPasswordDoesNotMatch": "A jelszó és a megerősítő jelszó nem egyezik",
+  "noWiFiConnection": "Nincs Wi-Fi kapcsolat",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Kérem ellenőrizze az internetkapcsolatát és próbálja újra",
+  "userCreationFailed": "A felhasználó létrehozása sikertelen",
+  "userDeletedSuccessfully": "A felhasználó sikeresen törölve",
+  "failedToDeleteUser": "A felhasználó törlése sikertelen",
+  "error": "Hiba",
+  "updatedSuccessfully": "Sikeresen frissítve",
+  "userUpdateFailed": "A felhasználó frissítése sikertelen",
+  "subscribeSuccessful": "Sikeres feliratkozás",
+  "subscribeCreationFailed": "A feliratkozás létrehozása sikertelen",
+  "anErrorOccurred": "Hiba történt",
+  "salesCreationFailed": "Az értékesítés létrehozása sikertelen",
+  "purchaseCreationFailed": "A vásárlás létrehozása sikertelen"
+
 
 
 }

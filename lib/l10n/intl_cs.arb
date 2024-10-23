@@ -584,7 +584,31 @@
   "sep": "Září",
   "oct": "Říjen",
   "nov": "Listopad",
-  "dec": "Prosinec"
+  "dec": "Prosinec",
+  "incomeDate": "Datum příjmu",
+  "enterProductCode": "Zadejte kód produktu",
+  "retry": "Zkusit znovu",
+  "addedSuccessful": "Úspěšně přidáno",
+  "poweredBy": "Poháněno",
+  "updatePassword": "Aktualizovat heslo",
+  "updateYourPassword": "Aktualizujte své heslo",
+  "enterYourConfirmPassword": "Zadejte své potvrzovací heslo",
+  "enterYourPassword": "Zadejte své heslo",
+  "passwordAndConfirmPasswordDoesNotMatch": "Heslo a potvrzovací heslo se neshodují",
+  "noWiFiConnection": "Žádné Wi-Fi připojení",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Zkontrolujte své internetové připojení a zkuste to znovu",
+  "userCreationFailed": "Vytvoření uživatele se nezdařilo",
+  "userDeletedSuccessfully": "Uživatel úspěšně smazán",
+  "failedToDeleteUser": "Nepodařilo se smazat uživatele",
+  "error": "Chyba",
+  "updatedSuccessfully": "Úspěšně aktualizováno",
+  "userUpdateFailed": "Aktualizace uživatele se nezdařila",
+  "subscribeSuccessful": "Úspěšně přihlášeno",
+  "subscribeCreationFailed": "Vytvoření předplatného se nezdařilo",
+  "anErrorOccurred": "Došlo k chybě",
+  "salesCreationFailed": "Vytvoření prodeje se nezdařilo",
+  "purchaseCreationFailed": "Vytvoření nákupu se nezdařilo"
+
 
 
 

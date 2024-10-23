@@ -72,6 +72,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("Pievienot vienību"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Pievienot lietotāja lomu"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("Pievienots veiksmīgi"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("Pievienots grozam"),
         "adding": MessageLookupByLibrary.simpleMessage("Pievieno..."),
@@ -88,6 +90,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "amarSonarBangla":
             MessageLookupByLibrary.simpleMessage("Mana zelta Bangladeša"),
         "amount": MessageLookupByLibrary.simpleMessage("Summa"),
+        "anErrorOccurred": MessageLookupByLibrary.simpleMessage("Notika kļūda"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS tiks nosūtīts uz sekojošo numuru: "),
@@ -302,6 +305,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("Ievadiet piezīmi"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("Ievadiet sākuma bilanci"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("Ievadiet produkta kodu"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("Ievadiet produkta nosaukumu"),
         "enterPurchasePrice":
@@ -324,14 +329,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("Ievadiet svaru"),
         "enterWholesalePrice": MessageLookupByLibrary.simpleMessage(
             "Ievadiet vairumtirdzniecības cenu"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Ievadiet savu apstiprinājuma paroli"),
         "enterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
             "Ievadiet savu e-pasta adresi"),
         "enterYourFullName":
             MessageLookupByLibrary.simpleMessage("Ievadiet savu pilno vārdu"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("Ievadiet savu vārdu"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("Ievadiet savu paroli"),
         "enterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Ievadiet savu telefona numuru"),
+        "error": MessageLookupByLibrary.simpleMessage("Kļūda"),
         "expense": MessageLookupByLibrary.simpleMessage("Izdevumi"),
         "expenseCat":
             MessageLookupByLibrary.simpleMessage("Izdevumu kategorijas"),
@@ -340,6 +350,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenseReport":
             MessageLookupByLibrary.simpleMessage("Izdevumu atskaite"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser":
+            MessageLookupByLibrary.simpleMessage("Neizdevās izdzēst lietotāju"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Neizdevās iegūt platformas versiju."),
         "fashion": MessageLookupByLibrary.simpleMessage("Modes"),
@@ -376,6 +388,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("Ieņēmumi"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("Ienākumu kategorijas"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("Ieņēmumu datums"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("Ienākumi par"),
         "incomeReport":
             MessageLookupByLibrary.simpleMessage("Ieņēmumu ziņojums"),
@@ -461,6 +474,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Lietotāja loma nav atrasta"),
         "noSupplier": MessageLookupByLibrary.simpleMessage("Nav piegādātāja"),
         "noTransaction": MessageLookupByLibrary.simpleMessage("Nav darījumu"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Nav Wi-Fi savienojuma"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("Nekompaktēts lietotājs"),
         "notFound": MessageLookupByLibrary.simpleMessage("Nav atrasts"),
@@ -482,6 +497,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("Puses"),
         "partyList": MessageLookupByLibrary.simpleMessage("Partneru saraksts"),
         "password": MessageLookupByLibrary.simpleMessage("Parole"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "Parole un apstiprinājuma parole nesakrīt"),
         "passwordCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("Parole nedrīkst būt tukša"),
         "passwordsDoNotMatch":
@@ -521,6 +539,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("Plāns"),
         "pleaseAddQuantity": MessageLookupByLibrary.simpleMessage(
             "Lūdzu, pievienojiet daudzumu"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Lūdzu, pārbaudiet savu interneta savienojumu un mēģiniet vēlreiz"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "Lūdzu, vispirms pievienojiet printeri"),
         "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
@@ -575,6 +596,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Lūdzu, izmantojiet derīgu pirkuma kodu, lai izmantotu lietotni"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Izstrādājis Acnoo"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("Piedāvā"),
         "premiumCustomerSupport":
             MessageLookupByLibrary.simpleMessage("Premium klientu atbalsts"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Premium plāns"),
@@ -613,6 +635,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("Iegādāts:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Iepirkums apstiprināts"),
+        "purchaseCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Pirkuma izveide neizdevās"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("Pirkuma detaļas"),
         "purchaseList":
@@ -658,6 +682,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "Atjaunojiet savu paroli, lai atgūtu un pieteiktos savā kontā"),
         "retailer": MessageLookupByLibrary.simpleMessage("Mazumtirgotājs"),
+        "retry": MessageLookupByLibrary.simpleMessage("Mēģināt vēlreiz"),
         "retur": MessageLookupByLibrary.simpleMessage("Atgriešana"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("Atgrieztā summa"),
         "riead": MessageLookupByLibrary.simpleMessage("Riead"),
@@ -666,6 +691,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("Pārdošanas cena"),
         "sales": MessageLookupByLibrary.simpleMessage("Pārdošana"),
         "salesBy": MessageLookupByLibrary.simpleMessage("Pārdošana:"),
+        "salesCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Pārdošanas izveide neizdevās"),
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("Pārdošanas detaļas"),
         "salesList":
@@ -758,6 +785,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("Krājumi: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Starpsumma"),
         "submit": MessageLookupByLibrary.simpleMessage("Iesniegt"),
+        "subscribeCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Abonēšanas izveide neizdevās"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("Abonēšana veiksmīga"),
         "subscription": MessageLookupByLibrary.simpleMessage("Abonements"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Starpsumma"),
         "successfullyPaid":
@@ -826,23 +857,35 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("Atjaunināt kontaktu"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Atjaunināt tagad"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("Atjaunināt paroli"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("Atjaunināt produktu"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("Atjaunināt profilu"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("Atjauniniet savu paroli"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "Atjauniniet savu profilu, lai savienotu savus klientus ar labāku iespaidu"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("Atjauniniet savu abonementu"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Veiksmīgi atjaunināts"),
         "updating": MessageLookupByLibrary.simpleMessage("Atjaunināšana..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("Uzlabot tagad"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Lietotāja nosaukumam nevar būt tukšs"),
+        "userCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Lietotāja izveide neizdevās"),
+        "userDeletedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "Lietotājs veiksmīgi izdzēsts"),
         "userRole": MessageLookupByLibrary.simpleMessage("Lietotāja loma"),
         "userRoleDetails":
             MessageLookupByLibrary.simpleMessage("Lietotāja lomu detaļas"),
         "userTitle":
             MessageLookupByLibrary.simpleMessage("Lietotāja nosaukums"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "Lietotāja atjaunināšana neizdevās"),
         "vat": MessageLookupByLibrary.simpleMessage("PVN"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("PVN neattiecas"),

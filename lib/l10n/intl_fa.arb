@@ -588,7 +588,31 @@
   "sep": "سپتامبر",
   "oct": "اکتبر",
   "nov": "نوامبر",
-  "dec": "دسامبر"
+  "dec": "دسامبر",
+  "incomeDate": "تاریخ درآمد",
+  "enterProductCode": "کد محصول را وارد کنید",
+  "retry": "تلاش مجدد",
+  "addedSuccessful": "با موفقیت اضافه شد",
+  "poweredBy": "قدرت گرفته از",
+  "updatePassword": "به‌روزرسانی رمز عبور",
+  "updateYourPassword": "رمز عبور خود را به‌روزرسانی کنید",
+  "enterYourConfirmPassword": "رمز عبور تأییدی خود را وارد کنید",
+  "enterYourPassword": "رمز عبور خود را وارد کنید",
+  "passwordAndConfirmPasswordDoesNotMatch": "رمز عبور و رمز عبور تأییدی مطابقت ندارند",
+  "noWiFiConnection": "هیچ اتصال Wi-Fi وجود ندارد",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "لطفاً اتصال اینترنت خود را بررسی کنید و دوباره تلاش کنید",
+  "userCreationFailed": "ایجاد کاربر ناموفق بود",
+  "userDeletedSuccessfully": "کاربر با موفقیت حذف شد",
+  "failedToDeleteUser": "حذف کاربر ناموفق بود",
+  "error": "خطا",
+  "updatedSuccessfully": "با موفقیت به‌روزرسانی شد",
+  "userUpdateFailed": "به‌روزرسانی کاربر ناموفق بود",
+  "subscribeSuccessful": "اشتراک با موفقیت انجام شد",
+  "subscribeCreationFailed": "ایجاد اشتراک ناموفق بود",
+  "anErrorOccurred": "خطایی رخ داده است",
+  "salesCreationFailed": "ایجاد فروش ناموفق بود",
+  "purchaseCreationFailed": "ایجاد خرید ناموفق بود"
+
 
 
 

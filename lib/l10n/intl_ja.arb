@@ -589,7 +589,31 @@
   "sep": "9月",
   "oct": "10月",
   "nov": "11月",
-  "dec": "12月"
+  "dec": "12月",
+  "incomeDate": "収入日",
+  "enterProductCode": "商品コードを入力してください",
+  "retry": "再試行",
+  "addedSuccessful": "追加成功",
+  "poweredBy": "提供元",
+  "updatePassword": "パスワードを更新",
+  "updateYourPassword": "パスワードを更新してください",
+  "enterYourConfirmPassword": "確認用パスワードを入力してください",
+  "enterYourPassword": "パスワードを入力してください",
+  "passwordAndConfirmPasswordDoesNotMatch": "パスワードと確認用パスワードが一致しません",
+  "noWiFiConnection": "Wi-Fi接続がありません",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "インターネット接続を確認して再試行してください",
+  "userCreationFailed": "ユーザーの作成に失敗しました",
+  "userDeletedSuccessfully": "ユーザーが正常に削除されました",
+  "failedToDeleteUser": "ユーザーの削除に失敗しました",
+  "error": "エラー",
+  "updatedSuccessfully": "正常に更新されました",
+  "userUpdateFailed": "ユーザーの更新に失敗しました",
+  "subscribeSuccessful": "購読成功",
+  "subscribeCreationFailed": "購読の作成に失敗しました",
+  "anErrorOccurred": "エラーが発生しました",
+  "salesCreationFailed": "販売の作成に失敗しました",
+  "purchaseCreationFailed": "購入の作成に失敗しました"
+
 
 
 

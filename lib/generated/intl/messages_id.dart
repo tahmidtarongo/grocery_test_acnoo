@@ -71,6 +71,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("Tambahkan Satuan"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Tambahkan Peran Pengguna"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("Berhasil Ditambahkan"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("Ditambahkan ke Keranjang"),
         "adding": MessageLookupByLibrary.simpleMessage("Menambahkan.."),
@@ -86,6 +88,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Sudah memiliki akun? "),
         "amount": MessageLookupByLibrary.simpleMessage("Jumlah"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("Terjadi kesalahan"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS akan dikirim ke nomor berikut: "),
@@ -298,6 +302,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("Masukkan Catatan"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("Masukkan saldo awal"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("Masukkan Kode Produk"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("Masukkan nama produk"),
         "enterPurchasePrice":
@@ -320,14 +326,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("Masukkan Berat"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("Masukkan harga grosir"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Masukkan kata sandi konfirmasi Anda"),
         "enterYourEmailAddress":
             MessageLookupByLibrary.simpleMessage("Masukkan alamat email Anda"),
         "enterYourFullName":
             MessageLookupByLibrary.simpleMessage("Masukkan nama lengkap Anda"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("Masukkan nama Anda"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("Masukkan kata sandi Anda"),
         "enterYourPhoneNumber":
             MessageLookupByLibrary.simpleMessage("Masukkan nomor telepon Anda"),
+        "error": MessageLookupByLibrary.simpleMessage("Kesalahan"),
         "expense": MessageLookupByLibrary.simpleMessage("Pengeluaran"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("Kategori Biaya"),
         "expenseDate":
@@ -336,6 +347,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenseReport":
             MessageLookupByLibrary.simpleMessage("Laporan pengeluaran"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser":
+            MessageLookupByLibrary.simpleMessage("Gagal menghapus pengguna"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Gagal mendapatkan versi platform."),
         "fashion": MessageLookupByLibrary.simpleMessage("Fashion"),
@@ -374,6 +387,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("Pendapatan"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("Kategori Pendapatan"),
+        "incomeDate":
+            MessageLookupByLibrary.simpleMessage("Tanggal Pendapatan"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("Pendapatan Untuk"),
         "incomeReport":
             MessageLookupByLibrary.simpleMessage("Laporan Pendapatan"),
@@ -463,6 +478,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Tidak Ada Pemasok yang Tersedia"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("Tidak ada transaksi"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Tidak Ada Koneksi Wi-Fi"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("Pengguna Tidak Aktif"),
         "notFound": MessageLookupByLibrary.simpleMessage("Tidak Ditemukan"),
@@ -482,6 +499,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("Pihak"),
         "partyList": MessageLookupByLibrary.simpleMessage("Daftar Pihak"),
         "password": MessageLookupByLibrary.simpleMessage("Kata sandi"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "Kata sandi dan kata sandi konfirmasi tidak cocok"),
         "passwordCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Kata sandi tidak boleh kosong"),
         "passwordsDoNotMatch":
@@ -522,6 +542,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("Rencana"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("Silakan tambahkan jumlah"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Silakan periksa koneksi internet Anda dan coba lagi"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "Harap hubungkan printer terlebih dahulu"),
         "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
@@ -575,6 +598,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Gunakan kode pembelian yang valid untuk menggunakan aplikasi"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Didukung oleh Acnoo"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("Ditenagai Oleh"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "Dukungan Aplikasi Android & iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Paket Premium"),
@@ -610,6 +634,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("Dibeli oleh:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Pembelian Dikonfirmasi"),
+        "purchaseCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Pembuatan pembelian gagal"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("Rincian Pembelian"),
         "purchaseList":
@@ -657,6 +683,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "Atur ulang kata sandi Anda untuk pemulihan dan masuk ke akun Anda"),
         "retailer": MessageLookupByLibrary.simpleMessage("Pengecer"),
+        "retry": MessageLookupByLibrary.simpleMessage("Coba Lagi"),
         "retur": MessageLookupByLibrary.simpleMessage("Pengembalian"),
         "returnAmount":
             MessageLookupByLibrary.simpleMessage("Jumlah Pengembalian"),
@@ -666,6 +693,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("Harga penjualan"),
         "sales": MessageLookupByLibrary.simpleMessage("Penjualan"),
         "salesBy": MessageLookupByLibrary.simpleMessage("Dijual oleh:"),
+        "salesCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Pembuatan penjualan gagal"),
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("Detail Penjualan"),
         "salesList": MessageLookupByLibrary.simpleMessage("Daftar Penjualan"),
@@ -751,6 +780,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("Stok: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Sub Total"),
         "submit": MessageLookupByLibrary.simpleMessage("Kirim"),
+        "subscribeCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Pembuatan langganan gagal"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("Berhasil Berlangganan"),
         "subscription": MessageLookupByLibrary.simpleMessage("Langganan"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Subtotal"),
         "successfullyPaid":
@@ -816,23 +849,35 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Perbarui Kontak"),
         "updateNow":
             MessageLookupByLibrary.simpleMessage("Memperbarui sekarang"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("Perbarui Kata Sandi"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("Perbarui Produk"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("Perbarui Profil Anda"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("Perbarui kata sandi Anda"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "Perbarui profil Anda untuk memberikan kesan yang lebih baik kepada pelanggan Anda"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("Perbarui langganan Anda"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Berhasil Diperbarui"),
         "updating": MessageLookupByLibrary.simpleMessage("Memperbarui..."),
         "upgradeNow":
             MessageLookupByLibrary.simpleMessage("Tingkatkan Sekarang"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Judul pengguna tidak boleh kosong"),
+        "userCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Pembuatan pengguna gagal"),
+        "userDeletedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Pengguna berhasil dihapus"),
         "userRole": MessageLookupByLibrary.simpleMessage("Peran pengguna"),
         "userRoleDetails":
             MessageLookupByLibrary.simpleMessage("Detail Peran Pengguna"),
         "userTitle": MessageLookupByLibrary.simpleMessage("Judul Pengguna"),
+        "userUpdateFailed":
+            MessageLookupByLibrary.simpleMessage("Pembaruan pengguna gagal"),
         "vat": MessageLookupByLibrary.simpleMessage("PPN"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("PPN Tidak Berlaku"),

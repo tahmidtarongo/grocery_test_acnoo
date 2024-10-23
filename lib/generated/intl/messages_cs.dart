@@ -65,6 +65,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("Přidat jednotku"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Přidat uživatelskou roli"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("Úspěšně přidáno"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("Přidáno do košíku"),
         "adding": MessageLookupByLibrary.simpleMessage("Přidávání.."),
@@ -79,6 +81,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Už máte účet?"),
         "amount": MessageLookupByLibrary.simpleMessage("Částka"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("Došlo k chybě"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS bude odeslána na následující číslo: "),
@@ -287,6 +291,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("Zadejte poznámku"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("Zadejte počáteční zůstatek"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("Zadejte kód produktu"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("Zadejte název produktu"),
         "enterPurchasePrice":
@@ -309,14 +315,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("Zadejte hmotnost"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("Zadejte velkoobchodní cenu"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Zadejte své potvrzovací heslo"),
         "enterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
             "Zadejte svou emailovou adresu"),
         "enterYourFullName":
             MessageLookupByLibrary.simpleMessage("Zadejte své celé jméno"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("Zadejte své jméno"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("Zadejte své heslo"),
         "enterYourPhoneNumber":
             MessageLookupByLibrary.simpleMessage("Zadejte své telefonní číslo"),
+        "error": MessageLookupByLibrary.simpleMessage("Chyba"),
         "expense": MessageLookupByLibrary.simpleMessage("Výdaj"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("Kategorie výdajů"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("Datum výdaje"),
@@ -324,6 +335,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenseReport":
             MessageLookupByLibrary.simpleMessage("Hlášení o výdajích"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser": MessageLookupByLibrary.simpleMessage(
+            "Nepodařilo se smazat uživatele"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Nepodařilo se získat verzi platformy."),
         "fashion": MessageLookupByLibrary.simpleMessage("Móda"),
@@ -361,6 +374,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("Příjem"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("Kategorie příjmů"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("Datum příjmu"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("Příjem pro"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("Přehled příjmů"),
         "instagram": MessageLookupByLibrary.simpleMessage("Instagram"),
@@ -448,6 +462,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Není k dispozici žádný dodavatel"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("Žádná transakce"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Žádné Wi-Fi připojení"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("Neaktivní uživatel"),
         "notFound": MessageLookupByLibrary.simpleMessage("Nenašlo se"),
@@ -468,6 +484,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("Strany"),
         "partyList": MessageLookupByLibrary.simpleMessage("Seznam stran"),
         "password": MessageLookupByLibrary.simpleMessage("Heslo"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "Heslo a potvrzovací heslo se neshodují"),
         "passwordCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("Heslo nemůže být prázdné"),
         "passwordsDoNotMatch":
@@ -506,6 +525,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("Plán"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("Přidejte množství"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Zkontrolujte své internetové připojení a zkuste to znovu"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "Prosím, nejdříve připojte tiskárnu"),
         "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
@@ -560,6 +582,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Použijte platný kód zakoupení pro použití aplikace"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Vytvořeno společností Acnoo"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("Poháněno"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "Podpora aplikací pro Android a iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Prémiový plán"),
@@ -595,6 +618,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("Zakoupil:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Nákup potvrzen"),
+        "purchaseCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Vytvoření nákupu se nezdařilo"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("Podrobnosti o nákupu"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("Seznam nákupů"),
@@ -639,6 +664,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "Obnovte své heslo pro zotavení a přihlaste se do svého účtu"),
         "retailer": MessageLookupByLibrary.simpleMessage("Prodejce"),
+        "retry": MessageLookupByLibrary.simpleMessage("Zkusit znovu"),
         "retur": MessageLookupByLibrary.simpleMessage("Vrátit"),
         "returnAmount":
             MessageLookupByLibrary.simpleMessage("Částka k vrácení"),
@@ -648,6 +674,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("Prodejní cena"),
         "sales": MessageLookupByLibrary.simpleMessage("Prodeje"),
         "salesBy": MessageLookupByLibrary.simpleMessage("Prodal:"),
+        "salesCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Vytvoření prodeje se nezdařilo"),
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("Podrobnosti o prodeji"),
         "salesList": MessageLookupByLibrary.simpleMessage("Seznam prodeje"),
@@ -736,6 +764,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("Zásoby: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Mezisoučet"),
         "submit": MessageLookupByLibrary.simpleMessage("Odeslat"),
+        "subscribeCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Vytvoření předplatného se nezdařilo"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("Úspěšně přihlášeno"),
         "subscription": MessageLookupByLibrary.simpleMessage("Předplatné"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Mezisoučet"),
         "successfullyPaid":
@@ -801,22 +833,34 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("Aktualizovat kontakt"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Aktualizovat nyní"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("Aktualizovat heslo"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("Aktualizovat produkt"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("Aktualizovat váš profil"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("Aktualizujte své heslo"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "Aktualizujte svůj profil, abyste lépe spojili své zákazníky"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("Aktualizujte své předplatné"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Úspěšně aktualizováno"),
         "updating": MessageLookupByLibrary.simpleMessage("Aktualizuji..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("Upgradovat nyní"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Titulek uživatele nemůže být prázdný"),
+        "userCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Vytvoření uživatele se nezdařilo"),
+        "userDeletedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Uživatel úspěšně smazán"),
         "userRole": MessageLookupByLibrary.simpleMessage("Role uživatele"),
         "userRoleDetails": MessageLookupByLibrary.simpleMessage(
             "Podrobnosti o uživatelské roli"),
         "userTitle": MessageLookupByLibrary.simpleMessage("Titulek uživatele"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "Aktualizace uživatele se nezdařila"),
         "vat": MessageLookupByLibrary.simpleMessage("DPH"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("DPH se nevztahuje"),

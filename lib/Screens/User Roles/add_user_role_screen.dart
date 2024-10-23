@@ -475,9 +475,11 @@ class _AddUserRoleState extends State<AddUserRole> {
                         AppTextField(
                           validator: (value) {
                             if (value == null || value.isEmpty) {
-                              return 'Password can\'t be empty';
+                             // return 'Password can\'t be empty';
+                              return lang.S.of(context).passwordCannotBeEmpty;
                             } else if (value.length < 4) {
-                              return 'Please enter a bigger password';
+                              //return 'Please enter a bigger password';
+                              return lang.S.of(context).pleaseEnterABiggerPassword;
                             }
                             return null;
                           },
@@ -485,9 +487,11 @@ class _AddUserRoleState extends State<AddUserRole> {
                           showCursor: true,
                           // cursorColor: kTitleColor,
                           decoration: kInputDecoration.copyWith(
-                            labelText: 'Password',
+                            //labelText: 'Password',
+                            labelText: lang.S.of(context).password,
                             floatingLabelAlignment: FloatingLabelAlignment.start,
-                            hintText: 'Enter your password',
+                            //hintText: 'Enter your password',
+                            hintText: lang.S.of(context).enterYourPassword,
                             contentPadding: const EdgeInsets.all(10.0),
                             enabledBorder: const OutlineInputBorder(
                               borderRadius: BorderRadius.all(
@@ -509,11 +513,14 @@ class _AddUserRoleState extends State<AddUserRole> {
                         AppTextField(
                           validator: (value) {
                             if (value == null || value.isEmpty) {
-                              return 'Password can\'t be empty';
+                             // return 'Password can\'t be empty';
+                              return lang.S.of(context).passwordCannotBeEmpty;
                             } else if (value != passwordController.text) {
-                              return 'Password and confirm password does not match';
+                             // return 'Password and confirm password does not match';
+                              return lang.S.of(context).passwordAndConfirmPasswordDoesNotMatch;
                             } else if (value.length < 4) {
-                              return 'Please enter a bigger password';
+                              //return 'Please enter a bigger password';
+                              return lang.S.of(context).pleaseEnterABiggerPassword;
                             }
                             return null;
                           },
@@ -521,9 +528,11 @@ class _AddUserRoleState extends State<AddUserRole> {
                           showCursor: true,
                           // cursorColor: kTitleColor,
                           decoration: kInputDecoration.copyWith(
-                            labelText: 'Confirm Password',
+                           // labelText: 'Confirm Password',
+                            labelText: lang.S.of(context).confirmPassword,
                             floatingLabelAlignment: FloatingLabelAlignment.start,
-                            hintText: 'Enter your confirm password',
+                            //hintText: 'Enter your confirm password',
+                            hintText: lang.S.of(context).enterYourConfirmPassword,
                             contentPadding: const EdgeInsets.all(10.0),
                             errorBorder: const OutlineInputBorder(borderSide: BorderSide(color: Colors.red)),
                             enabledBorder: const OutlineInputBorder(

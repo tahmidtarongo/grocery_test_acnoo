@@ -62,6 +62,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("Lisa ühik"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Lisa kasutajaroll"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("Lisamine õnnestus"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("Lisatud ostukorvi"),
         "adding": MessageLookupByLibrary.simpleMessage("Lisamine.."),
@@ -78,6 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "amarSonarBangla":
             MessageLookupByLibrary.simpleMessage("Amar sonar bangla"),
         "amount": MessageLookupByLibrary.simpleMessage("Summa"),
+        "anErrorOccurred": MessageLookupByLibrary.simpleMessage("Tekkis viga"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS saadetakse järgmisele numbrile: "),
@@ -281,6 +284,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("Sisestage märkus"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("Sisestage avanssaldot"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("Sisesta toote kood"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("Sisestage toote nimi"),
         "enterPurchasePrice":
@@ -304,20 +309,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("Sisestage kaal"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("Sisestage hulgihind"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Sisesta oma kinnituse parool"),
         "enterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
             "Sisestage oma e-posti aadress"),
         "enterYourFullName":
             MessageLookupByLibrary.simpleMessage("Sisestage oma täisnimi"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("Sisestage oma nimi"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("Sisesta oma parool"),
         "enterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Sisestage oma telefoninumber"),
+        "error": MessageLookupByLibrary.simpleMessage("Viga"),
         "expense": MessageLookupByLibrary.simpleMessage("Kulu"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("Kulu kategooriad"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("Kulu kuupäev"),
         "expenseFor": MessageLookupByLibrary.simpleMessage("Kulu"),
         "expenseReport": MessageLookupByLibrary.simpleMessage("Kuluaruanne"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser": MessageLookupByLibrary.simpleMessage(
+            "Kasutaja kustutamine ebaõnnestus"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Platvormi versiooni saamine ebaõnnestus."),
         "fashion": MessageLookupByLibrary.simpleMessage("Mood"),
@@ -357,6 +369,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("Sissetulek"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("Sissetuleku kategooriad"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("Tulu kuupäev"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("Sissetulek"),
         "incomeReport":
             MessageLookupByLibrary.simpleMessage("Sissetuleku aruanne"),
@@ -442,6 +455,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noSupplier":
             MessageLookupByLibrary.simpleMessage("Tarnija pole saadaval"),
         "noTransaction": MessageLookupByLibrary.simpleMessage("Tehinguid pole"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Wi-Fi ühendust ei ole"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("Mitteaktiivne kasutaja"),
         "notFound": MessageLookupByLibrary.simpleMessage("Ei leitud"),
@@ -461,6 +476,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("Osalised"),
         "partyList": MessageLookupByLibrary.simpleMessage("Osaliste nimekiri"),
         "password": MessageLookupByLibrary.simpleMessage("Parool"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "Parool ja kinnituse parool ei ühti"),
         "passwordCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("Parool ei saa olla tühi"),
         "passwordsDoNotMatch":
@@ -498,6 +516,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("Kava"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("Palun lisage kogus"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Palun kontrolli oma Interneti-ühendust ja proovi uuesti"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "Palun ühendage printer esmalt"),
         "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
@@ -552,6 +573,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Palun kasutage rakenduse kasutamiseks kehtivat ostukoodi"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Toetatud Acnoo poolt"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("Toetab"),
         "premiumCustomerSupport":
             MessageLookupByLibrary.simpleMessage("Premium klienditugi"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Premium plaan"),
@@ -587,6 +609,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("Ostetud:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Ost kinnitatud"),
+        "purchaseCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Ostutehingu loomine ebaõnnestus"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("Ostu üksikasjad"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("Ostunimekiri"),
@@ -626,6 +650,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "Lähtesta oma parool, et taastada ja sisse logida oma kontole"),
         "retailer": MessageLookupByLibrary.simpleMessage("Jaemüüja"),
+        "retry": MessageLookupByLibrary.simpleMessage("Proovi uuesti"),
         "retur": MessageLookupByLibrary.simpleMessage("Tagasta"),
         "returnAmount":
             MessageLookupByLibrary.simpleMessage("Tagastatav summa"),
@@ -635,6 +660,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("Müügi hind"),
         "sales": MessageLookupByLibrary.simpleMessage("Müük"),
         "salesBy": MessageLookupByLibrary.simpleMessage("Müüdud:"),
+        "salesCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Müügitehingu loomine ebaõnnestus"),
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("Müügi üksikasjad"),
         "salesList": MessageLookupByLibrary.simpleMessage("Müügiloend"),
@@ -722,6 +749,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("Laos: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Vahekokkuvõte"),
         "submit": MessageLookupByLibrary.simpleMessage("Esita"),
+        "subscribeCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Tellimise loomine ebaõnnestus"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("Tellimine õnnestus"),
         "subscription": MessageLookupByLibrary.simpleMessage("Tellimus"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Vahekokkuvõte"),
         "successfullyPaid":
@@ -782,21 +813,33 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("Uuenda kontakti"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Uuenda kohe"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("Uuenda parooli"),
         "updateProduct": MessageLookupByLibrary.simpleMessage("Uuenda toodet"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("Uuenda oma profiili"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("Uuenda oma parooli"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "Uuendage oma profiili, et luua oma kliendile parem mulje"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("Uuenda oma tellimust"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Uuendamine õnnestus"),
         "updating": MessageLookupByLibrary.simpleMessage("Uuendamine..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("Uuenda nüüd"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Kasutaja tiitel ei saa olla tühi"),
+        "userCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Kasutaja loomine ebaõnnestus"),
+        "userDeletedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "Kasutaja kustutamine õnnestus"),
         "userRole": MessageLookupByLibrary.simpleMessage("Kasutaja roll"),
         "userRoleDetails":
             MessageLookupByLibrary.simpleMessage("Kasutaja rolli üksikasjad"),
         "userTitle": MessageLookupByLibrary.simpleMessage("Kasutaja tiitel"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "Kasutaja uuendamine ebaõnnestus"),
         "vat": MessageLookupByLibrary.simpleMessage("KM"),
         "vatDoesNOtApply": MessageLookupByLibrary.simpleMessage("KM ei kehti"),
         "verification": MessageLookupByLibrary.simpleMessage("Kinnitus"),

@@ -589,7 +589,31 @@
   "sep": "Sept",
   "oct": "Oct",
   "nov": "Nov",
-  "dec": "Déc"
+  "dec": "Déc",
+  "incomeDate": "Date de revenu",
+  "enterProductCode": "Entrez le code produit",
+  "retry": "Réessayer",
+  "addedSuccessful": "Ajout réussi",
+  "poweredBy": "Propulsé par",
+  "updatePassword": "Mettre à jour le mot de passe",
+  "updateYourPassword": "Mettez à jour votre mot de passe",
+  "enterYourConfirmPassword": "Entrez votre mot de passe de confirmation",
+  "enterYourPassword": "Entrez votre mot de passe",
+  "passwordAndConfirmPasswordDoesNotMatch": "Le mot de passe et la confirmation ne correspondent pas",
+  "noWiFiConnection": "Pas de connexion Wi-Fi",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Veuillez vérifier votre connexion Internet et réessayer",
+  "userCreationFailed": "Échec de la création de l'utilisateur",
+  "userDeletedSuccessfully": "Utilisateur supprimé avec succès",
+  "failedToDeleteUser": "Échec de la suppression de l'utilisateur",
+  "error": "Erreur",
+  "updatedSuccessfully": "Mis à jour avec succès",
+  "userUpdateFailed": "Échec de la mise à jour de l'utilisateur",
+  "subscribeSuccessful": "Abonnement réussi",
+  "subscribeCreationFailed": "Échec de la création de l'abonnement",
+  "anErrorOccurred": "Une erreur s'est produite",
+  "salesCreationFailed": "Échec de la création des ventes",
+  "purchaseCreationFailed": "Échec de la création des achats"
+
 
 
 

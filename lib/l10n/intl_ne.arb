@@ -584,7 +584,31 @@
   "sep": "सेप्टेम्बर",
   "oct": "अक्टोबर",
   "nov": "नोभेम्बर",
-  "dec": "डिसेम्बर"
+  "dec": "डिसेम्बर",
+  "incomeDate": "आय मिति",
+  "enterProductCode": "उत्पादन कोड लेख्नुहोस्",
+  "retry": "पुनः प्रयास गर्नुहोस्",
+  "addedSuccessful": "सफलतापूर्वक थपियो",
+  "poweredBy": "द्वारा संचालित",
+  "updatePassword": "पासवर्ड अपडेट गर्नुहोस्",
+  "updateYourPassword": "तपाईंको पासवर्ड अपडेट गर्नुहोस्",
+  "enterYourConfirmPassword": "तपाईंको पुष्टि पासवर्ड लेख्नुहोस्",
+  "enterYourPassword": "तपाईंको पासवर्ड लेख्नुहोस्",
+  "passwordAndConfirmPasswordDoesNotMatch": "पासवर्ड र पुष्टि पासवर्ड मेल खाँदैन",
+  "noWiFiConnection": "कोई Wi-Fi जडान छैन",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "कृपया आफ्नो इन्टरनेट जडान जाँच गर्नुहोस् र पुनः प्रयास गर्नुहोस्",
+  "userCreationFailed": "प्रयोगकर्ता सिर्जना गर्न असफल",
+  "userDeletedSuccessfully": "प्रयोगकर्ता सफलतापूर्वक हटाइयो",
+  "failedToDeleteUser": "प्रयोगकर्ता हटाउन असफल",
+  "error": "त्रुटि",
+  "updatedSuccessfully": "सफलतापूर्वक अपडेट गरियो",
+  "userUpdateFailed": "प्रयोगकर्ता अपडेट गर्न असफल",
+  "subscribeSuccessful": "सदस्यता सफलतापूर्वक गरियो",
+  "subscribeCreationFailed": "सदस्यता सिर्जना गर्न असफल",
+  "anErrorOccurred": "एक त्रुटि भएको छ",
+  "salesCreationFailed": "बिक्री सिर्जना गर्न असफल",
+  "purchaseCreationFailed": "खरिद सिर्जना गर्न असफल"
+
 
 
 }

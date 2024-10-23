@@ -581,7 +581,31 @@
   "sep": "Сеп",
   "oct": "Окт",
   "nov": "Нов",
-  "dec": "Дек"
+  "dec": "Дек",
+  "incomeDate": "Датум на приход",
+  "enterProductCode": "Внесете код на производот",
+  "retry": "Обидете се повторно",
+  "addedSuccessful": "Успешно додадено",
+  "poweredBy": "Поддржано од",
+  "updatePassword": "Ажурирајте го лозинката",
+  "updateYourPassword": "Ажурирајте ја вашата лозинка",
+  "enterYourConfirmPassword": "Внесете ја вашата потврдна лозинка",
+  "enterYourPassword": "Внесете ја вашата лозинка",
+  "passwordAndConfirmPasswordDoesNotMatch": "Лозинката и потврдната лозинка не се совпаѓаат",
+  "noWiFiConnection": "Нема Wi-Fi конекција",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Ве молам проверете ја вашата интернет конекција и обидете се повторно",
+  "userCreationFailed": "Создавањето на корисникот не успеа",
+  "userDeletedSuccessfully": "Корисникот успешно е избришан",
+  "failedToDeleteUser": "Не успеа да се избрише корисникот",
+  "error": "Грешка",
+  "updatedSuccessfully": "Успешно ажурирано",
+  "userUpdateFailed": "Ажурирањето на корисникот не успеа",
+  "subscribeSuccessful": "Успешно претплатено",
+  "subscribeCreationFailed": "Создавањето на претплатата не успеа",
+  "anErrorOccurred": "Се појави грешка",
+  "salesCreationFailed": "Создавањето на продажбите не успеа",
+  "purchaseCreationFailed": "Создавањето на купувањето не успеа"
+
 
 
 

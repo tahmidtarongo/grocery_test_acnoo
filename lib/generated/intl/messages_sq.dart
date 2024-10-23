@@ -63,6 +63,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("Shto Njësi"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Shto Rolin e Përdoruesit"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("Shtimi u krye me sukses"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("Shtuar në Shportë"),
         "adding": MessageLookupByLibrary.simpleMessage("Shtimi.."),
@@ -78,6 +80,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Keni tashmë një llogari?"),
         "amount": MessageLookupByLibrary.simpleMessage("Shuma"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("Ndodhi një gabim"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "Një SMS do të dërgohet në numrin e mëposhtëm:"),
@@ -286,6 +290,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("Fut Shënimin"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("Fut bilancin e hapjes"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("Shkruani Kodin e Produktit"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("Futni emrin e produktit"),
         "enterPurchasePrice":
@@ -307,14 +313,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("Fut Peshën"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("Futni çmimin me shumicë"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Shkruani fjalëkalimin tuaj të konfirmimit"),
         "enterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
             "Shkruani adresën tuaj të emailit"),
         "enterYourFullName":
             MessageLookupByLibrary.simpleMessage("Fut emrin tënd të plotë"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("Shkruani emrin tuaj"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("Shkruani fjalëkalimin tuaj"),
         "enterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Shkruani numrin tuaj të telefonit"),
+        "error": MessageLookupByLibrary.simpleMessage("Gabim"),
         "expense": MessageLookupByLibrary.simpleMessage("Shpenzim"),
         "expenseCat":
             MessageLookupByLibrary.simpleMessage("Kategoritë e Shpenzimeve"),
@@ -324,6 +335,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenseReport":
             MessageLookupByLibrary.simpleMessage("Raporti i Shpenzimeve"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser": MessageLookupByLibrary.simpleMessage(
+            "Dështoi në fshirjen e përdoruesit"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Dështoi të merret versioni i platformës."),
         "fashion": MessageLookupByLibrary.simpleMessage("Modë"),
@@ -364,6 +377,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("Të Ardhurat"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("Kategoritë e Të Ardhurave"),
+        "incomeDate":
+            MessageLookupByLibrary.simpleMessage("Data e të ardhurave"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("Të Ardhurat Për"),
         "incomeReport":
             MessageLookupByLibrary.simpleMessage("Raporti i Të Ardhurave"),
@@ -452,6 +467,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Nuk ka Furnizues të disponueshëm"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("Nuk ka transaksion"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Nuk ka lidhje Wi-Fi"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("Kompania e Pasaktive"),
         "notFound": MessageLookupByLibrary.simpleMessage("Nuk u Gjet"),
@@ -473,6 +490,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("Partitë"),
         "partyList": MessageLookupByLibrary.simpleMessage("Lista e Palëve"),
         "password": MessageLookupByLibrary.simpleMessage("Fjalëkalimi"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "Fjalëkalimi dhe fjalëkalimi i konfirmimit nuk përputhen"),
         "passwordCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Fjalëkalimi nuk mund të jetë bosh"),
         "passwordsDoNotMatch":
@@ -512,6 +532,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("Plan"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("Ju lutemi shtoni sasinë"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Ju lutemi kontrolloni lidhjen tuaj të internetit dhe provoni përsëri"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "Ju lutemi lidhni printerin së pari"),
         "pleaseEnterABiggerPassword": MessageLookupByLibrary.simpleMessage(
@@ -562,6 +585,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pleaseUseTheValidPurchaseCodeToUseTheApp":
             MessageLookupByLibrary.simpleMessage(
                 "Ju lutemi përdorni kodin e vlefshëm të blerjes për të përdorur aplikacionin"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("Furnizuar nga"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "Mbështetje për Aplikacionet Android & iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Paketa Premium"),
@@ -601,6 +625,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("Blerë nga:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Blerja e Konfirmuar"),
+        "purchaseCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Krijimi i blerjes dështoi"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("Detajet e Blerjes"),
         "purchaseList":
@@ -645,6 +671,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "Rivendos fjalëkalimin tuaj për të rikuperuar dhe për t\'u identifikuar në llogarinë tuaj"),
         "retailer": MessageLookupByLibrary.simpleMessage("Tregtar"),
+        "retry": MessageLookupByLibrary.simpleMessage("Përpiquni përsëri"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("Shuma e Kthimit"),
         "riead": MessageLookupByLibrary.simpleMessage("Riead"),
         "sale": MessageLookupByLibrary.simpleMessage("Shitje"),
@@ -652,6 +679,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("Çmimi i Shitjes"),
         "sales": MessageLookupByLibrary.simpleMessage("Shitjet"),
         "salesBy": MessageLookupByLibrary.simpleMessage("Shitur nga:"),
+        "salesCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Krijimi i shitjeve dështoi"),
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("Detajet e Shitjeve"),
         "salesList": MessageLookupByLibrary.simpleMessage("Lista e Shitjeve"),
@@ -740,6 +769,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("Stok: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Nëntotali"),
         "submit": MessageLookupByLibrary.simpleMessage("Dërgo"),
+        "subscribeCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Krijimi i abonimit dështoi"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("Abonimi u krye me sukses"),
         "subscription": MessageLookupByLibrary.simpleMessage("Abonim"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Nëntotali"),
         "successfullyPaid":
@@ -805,23 +838,35 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("Përditëso Kontaktoni"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Përditëso Tani"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("Përditëso Përdoruesin"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("Përditëso Produktin"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("Përditëso Profilin Tënd"),
+        "updateYourPassword": MessageLookupByLibrary.simpleMessage(
+            "Përditësoni fjalëkalimin tuaj"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "Përditëso profilin tuaj për të lidhur klientët tuaj me një përshtypje më të mirë"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("Përditëso abonimin tuaj"),
+        "updatedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "Përditësimi u krye me sukses"),
         "updating": MessageLookupByLibrary.simpleMessage("Po përditësohet..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("Përmirëso Tani"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Titulli i përdoruesit nuk mund të jetë bosh"),
+        "userCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Krijimi i përdoruesit dështoi"),
+        "userDeletedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Përdoruesi u fshi me sukses"),
         "userRole": MessageLookupByLibrary.simpleMessage("Roli i Përdoruesit"),
         "userRoleDetails": MessageLookupByLibrary.simpleMessage(
             "Detajet e Rolit të Përdoruesit"),
         "userTitle":
             MessageLookupByLibrary.simpleMessage("Titulli i Përdoruesit"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "Përditësimi i përdoruesit dështoi"),
         "vat": MessageLookupByLibrary.simpleMessage("TVSH"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("TVSH nuk zbatohet"),

@@ -62,6 +62,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("एकक जोडा"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("वापरकर्ता भूमिका जोडा"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("यशस्वीरित्या जोडले"),
         "addedToCart": MessageLookupByLibrary.simpleMessage("कार्टमध्ये जोडले"),
         "adding": MessageLookupByLibrary.simpleMessage("जोडत आहे.."),
         "address": MessageLookupByLibrary.simpleMessage("पत्ता"),
@@ -76,6 +78,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("आता एक खाते आहे का?"),
         "amount": MessageLookupByLibrary.simpleMessage("रक्कम"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("एक त्रुटी झाली"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "खालील क्रमांकावर एक SMS पाठवला जाईल: "),
@@ -282,6 +286,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("नोट प्रविष्ट करा"),
         "enterOpeningBalance": MessageLookupByLibrary.simpleMessage(
             "उघडण्याची शिल्लक प्रविष्ट करा"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("उत्पादन कोड प्रविष्ट करा"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("उत्पादन नाव प्रविष्ट करा"),
         "enterPurchasePrice":
@@ -306,20 +312,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("वजन प्रविष्ट करा"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("थोक किंमत प्रविष्ट करा"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "तुमचा पुष्टी संकेतशब्द प्रविष्ट करा"),
         "enterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
             "तुमचा ईमेल पत्ता प्रविष्ट करा"),
         "enterYourFullName": MessageLookupByLibrary.simpleMessage(
             "तुमचे पूर्ण नाव प्रविष्ट करा"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("तुमचं नाव प्रविष्ट करा"),
+        "enterYourPassword": MessageLookupByLibrary.simpleMessage(
+            "तुमचा संकेतशब्द प्रविष्ट करा"),
         "enterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "तुमचा मोबाइल नंबर प्रविष्ट करा"),
+        "error": MessageLookupByLibrary.simpleMessage("त्रुटी"),
         "expense": MessageLookupByLibrary.simpleMessage("खर्च"),
         "expenseCat": MessageLookupByLibrary.simpleMessage("खर्च श्रेणी"),
         "expenseDate": MessageLookupByLibrary.simpleMessage("खर्च तारीख"),
         "expenseFor": MessageLookupByLibrary.simpleMessage("खर्चाचे कारण"),
         "expenseReport": MessageLookupByLibrary.simpleMessage("खर्च अहवाल"),
         "facebook": MessageLookupByLibrary.simpleMessage("फेसबुक"),
+        "failedToDeleteUser":
+            MessageLookupByLibrary.simpleMessage("वापरकर्ता हटवण्यात अयशस्वी"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "प्लॅटफॉर्म आवृत्ती मिळवण्यात अयशस्वी"),
         "fashion": MessageLookupByLibrary.simpleMessage("फॅशन"),
@@ -358,6 +371,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("उत्पन्न"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("उत्पन्न श्रेणी"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("उत्पन्न दिनांक"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("उत्पन्न साठी"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("उत्पन्न रिपोर्ट"),
         "instagram": MessageLookupByLibrary.simpleMessage("इंस्टाग्राम"),
@@ -445,6 +459,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "कोणताही आपूर्तीदार उपलब्ध नाही"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("कोणताही व्यवहार नाही"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("कोणतीही Wi-Fi कनेक्शन नाही"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("सक्रिय वापरकर्ता नाही"),
         "notFound": MessageLookupByLibrary.simpleMessage("सापडले नाही"),
@@ -466,6 +482,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("पक्षे"),
         "partyList": MessageLookupByLibrary.simpleMessage("पार्टीची यादी"),
         "password": MessageLookupByLibrary.simpleMessage("पासवर्ड"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "संकेतशब्द आणि पुष्टी संकेतशब्द जुळत नाहीत"),
         "passwordCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("पासवर्ड रिकामे राहू नये"),
         "passwordsDoNotMatch":
@@ -499,6 +518,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("योजना"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("कृपया प्रमाण जोडा"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "कृपया तुमचे इंटरनेट कनेक्शन तपासा आणि पुन्हा प्रयत्न करा"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "कृपया पहिल्यांदा प्रिंटर कनेक्ट करा"),
         "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
@@ -553,6 +575,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "अ‍ॅप वापरण्यासाठी कृपया वैध खरेदी कोड वापरा"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("द्वारा संचालित Acnoo"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("द्वारा कार्यान्वित"),
         "premiumCustomerSupport":
             MessageLookupByLibrary.simpleMessage("Android आणि iOS अ‍ॅप समर्थन"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("प्रीमियम प्लॅन"),
@@ -585,6 +608,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("खरेदी केले: "),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("खरेदी पुष्टीकृत"),
+        "purchaseCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "खरेदी निर्माण करण्यात अयशस्वी"),
         "purchaseDetails": MessageLookupByLibrary.simpleMessage("खरेदी तपशील"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("खरेदी यादी"),
         "purchaseNow": MessageLookupByLibrary.simpleMessage("आता खरेदी करा"),
@@ -625,6 +650,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "आपला पासवर्ड पुनर्प्राप्ती करण्यासाठी रीसेट करा आणि लॉग इन करा"),
         "retailer": MessageLookupByLibrary.simpleMessage("विक्रेता"),
+        "retry": MessageLookupByLibrary.simpleMessage("पुन्हा प्रयत्न करा"),
         "retur": MessageLookupByLibrary.simpleMessage("परत"),
         "returnAmount":
             MessageLookupByLibrary.simpleMessage("परत केलेली रक्कम"),
@@ -634,6 +660,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("विक्री किंमत"),
         "sales": MessageLookupByLibrary.simpleMessage("विक्री"),
         "salesBy": MessageLookupByLibrary.simpleMessage("विक्री केली: "),
+        "salesCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "विक्री निर्माण करण्यात अयशस्वी"),
         "salesDetails": MessageLookupByLibrary.simpleMessage("विक्री तपशील"),
         "salesList": MessageLookupByLibrary.simpleMessage("विक्री यादी"),
         "salesPrice": MessageLookupByLibrary.simpleMessage("विक्री किंमत"),
@@ -714,6 +742,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("स्टॉक: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("उपयुक्त एकूण"),
         "submit": MessageLookupByLibrary.simpleMessage("सबमिट करा"),
+        "subscribeCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "सदस्यता निर्माण करण्यात अयशस्वी"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("सदस्यता यशस्वी"),
         "subscription": MessageLookupByLibrary.simpleMessage("सदस्यता"),
         "subtotal": MessageLookupByLibrary.simpleMessage("उप-एकूण"),
         "successfullyPaid":
@@ -775,22 +807,34 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("संपर्क अद्यतित करा"),
         "updateNow": MessageLookupByLibrary.simpleMessage("आता अद्यतनित करा"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("संकेतशब्द अद्यतनित करा"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("उत्पाद अद्यतित करा"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("तुमची प्रोफाइल अद्यतित करा"),
+        "updateYourPassword": MessageLookupByLibrary.simpleMessage(
+            "तुमचा संकेतशब्द अद्यतनित करा"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "तुमचा प्रोफाइल अपडेट करा जेणेकरून तुमचा ग्राहक चांगल्या छापीत जुळवू शकेल"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("तुमची सदस्यता अपडेट करा"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("यशस्वीरित्या अद्यतनित"),
         "updating": MessageLookupByLibrary.simpleMessage("अद्यतन करीत आहे..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("आताच अपग्रेड करा"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "वापरकर्ता शीर्षक रिकामे राहू नये"),
+        "userCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "वापरकर्ता निर्माण करण्यात अयशस्वी"),
+        "userDeletedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "वापरकर्ता यशस्वीरित्या हटवला"),
         "userRole": MessageLookupByLibrary.simpleMessage("वापरकर्ता भूमिका"),
         "userRoleDetails":
             MessageLookupByLibrary.simpleMessage("वापरकर्ता भूमिका तपशील"),
         "userTitle": MessageLookupByLibrary.simpleMessage("वापरकर्ता शीर्षक"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "वापरकर्ता अद्यतन करण्यात अयशस्वी"),
         "vat": MessageLookupByLibrary.simpleMessage("VAT"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("वॅट लागू होत नाही"),

@@ -582,5 +582,31 @@
   "sep": "Sep",
   "oct": "Oct",
   "nov": "Nov",
-  "dec": "Dec"
+  "dec": "Dec",
+  "incomeDate": "Ieņēmumu datums",
+  "enterProductCode": "Ievadiet produkta kodu",
+  "retry": "Mēģināt vēlreiz",
+  "addedSuccessful": "Pievienots veiksmīgi",
+  "poweredBy": "Piedāvā",
+  "updatePassword": "Atjaunināt paroli",
+  "updateYourPassword": "Atjauniniet savu paroli",
+  "enterYourConfirmPassword": "Ievadiet savu apstiprinājuma paroli",
+  "enterYourPassword": "Ievadiet savu paroli",
+  "passwordAndConfirmPasswordDoesNotMatch": "Parole un apstiprinājuma parole nesakrīt",
+  "noWiFiConnection": "Nav Wi-Fi savienojuma",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Lūdzu, pārbaudiet savu interneta savienojumu un mēģiniet vēlreiz",
+  "userCreationFailed": "Lietotāja izveide neizdevās",
+  "userDeletedSuccessfully": "Lietotājs veiksmīgi izdzēsts",
+  "failedToDeleteUser": "Neizdevās izdzēst lietotāju",
+  "error": "Kļūda",
+  "updatedSuccessfully": "Veiksmīgi atjaunināts",
+  "userUpdateFailed": "Lietotāja atjaunināšana neizdevās",
+  "subscribeSuccessful": "Abonēšana veiksmīga",
+  "subscribeCreationFailed": "Abonēšanas izveide neizdevās",
+  "anErrorOccurred": "Notika kļūda",
+  "salesCreationFailed": "Pārdošanas izveide neizdevās",
+  "purchaseCreationFailed": "Pirkuma izveide neizdevās"
+
+
+
 }

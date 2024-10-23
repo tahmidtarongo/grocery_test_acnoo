@@ -582,7 +582,31 @@
   "sep": "Ira",
   "oct": "Urr",
   "nov": "Aza",
-  "dec": "Abe"
+  "dec": "Abe",
+  "incomeDate": "Sarrera data",
+  "enterProductCode": "Sartu Produktu Kodea",
+  "retry": "Saiatu berriro",
+  "addedSuccessful": "Gehitu da arrakastaz",
+  "poweredBy": "Hornitua",
+  "updatePassword": "Eguneratu Pasahitza",
+  "updateYourPassword": "Eguneratu zure pasahitza",
+  "enterYourConfirmPassword": "Sartu zure baieztapen pasahitza",
+  "enterYourPassword": "Sartu zure pasahitza",
+  "passwordAndConfirmPasswordDoesNotMatch": "Pasahitza eta baieztapen pasahitza ez datoz bat",
+  "noWiFiConnection": "Ez dago Wi-Fi konexiorik",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Mesedez, egiaztatu zure internet konexioa eta saiatu berriro",
+  "userCreationFailed": "Erabiltzailearen sorrera huts egin du",
+  "userDeletedSuccessfully": "Erabiltzailea arrakastaz ezabatu da",
+  "failedToDeleteUser": "Erabiltzailea ezabatzea huts egin du",
+  "error": "Errorea",
+  "updatedSuccessfully": "Arrakastaz eguneratua",
+  "userUpdateFailed": "Erabiltzailearen eguneraketa huts egin du",
+  "subscribeSuccessful": "Harpidetzan arrakasta",
+  "subscribeCreationFailed": "Harpidetzaren sorrera huts egin du",
+  "anErrorOccurred": "Errore bat gertatu da",
+  "salesCreationFailed": "Salmenten sorrera huts egin du",
+  "purchaseCreationFailed": "Erosketen sorrera huts egin du"
+
 
 
 

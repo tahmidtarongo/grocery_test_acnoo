@@ -584,7 +584,31 @@
   "sep": "Sep",
   "oct": "Okt",
   "nov": "Nov",
-  "dec": "Dec"
+  "dec": "Dec",
+  "incomeDate": "Indtægtsdato",
+  "enterProductCode": "Indtast produktkode",
+  "retry": "Prøv igen",
+  "addedSuccessful": "Tilføjet succesfuldt",
+  "poweredBy": "Drevet af",
+  "updatePassword": "Opdater password",
+  "updateYourPassword": "Opdater dit password",
+  "enterYourConfirmPassword": "Indtast dit bekræftelsespassword",
+  "enterYourPassword": "Indtast dit password",
+  "passwordAndConfirmPasswordDoesNotMatch": "Password og bekræftelsespassword stemmer ikke overens",
+  "noWiFiConnection": "Ingen Wi-Fi-forbindelse",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Kontroller venligst din internetforbindelse og prøv igen",
+  "userCreationFailed": "Brugeroprettelse fejlede",
+  "userDeletedSuccessfully": "Bruger slettet succesfuldt",
+  "failedToDeleteUser": "Fejl ved sletning af bruger",
+  "error": "Fejl",
+  "updatedSuccessfully": "Opdateret succesfuldt",
+  "userUpdateFailed": "Brugeropdatering fejlede",
+  "subscribeSuccessful": "Abonneret succesfuldt",
+  "subscribeCreationFailed": "Abonnementsoprettelse fejlede",
+  "anErrorOccurred": "Der opstod en fejl",
+  "salesCreationFailed": "Salgsoprettelse fejlede",
+  "purchaseCreationFailed": "Købsoprettelse fejlede"
+
 
 
 

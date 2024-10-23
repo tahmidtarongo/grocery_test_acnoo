@@ -60,6 +60,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("Бірлік қосу"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Пайдаланушы рөліні қосу"),
+        "addedSuccessful": MessageLookupByLibrary.simpleMessage("Қосылды"),
         "addedToCart": MessageLookupByLibrary.simpleMessage("Себетке қосылды"),
         "adding": MessageLookupByLibrary.simpleMessage("Қосылып жатыр..."),
         "address": MessageLookupByLibrary.simpleMessage("Мекен-жай"),
@@ -73,6 +74,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Есептік жазбаңыз бар ма?"),
         "amount": MessageLookupByLibrary.simpleMessage("Сома"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("Қате пайда болды"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS келесі нөмірге жіберіледі: "),
@@ -284,6 +287,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ескертуді енгізіңіз"),
         "enterOpeningBalance": MessageLookupByLibrary.simpleMessage(
             "Бастапқы теңгерімді енгізіңіз"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("Өнім кодын енгізіңіз"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("Өнім атауын енгізіңіз"),
         "enterPurchasePrice":
@@ -305,14 +310,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("Салмақ енгізіңіз"),
         "enterWholesalePrice": MessageLookupByLibrary.simpleMessage(
             "Бөлшек сауда бағасын енгізіңіз"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Нақтылаған парольді енгізіңіз"),
         "enterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
             "Электрондық пошта мекенжайын енгізіңіз"),
         "enterYourFullName": MessageLookupByLibrary.simpleMessage(
             "Толық аты-жөніңізді енгізіңіз"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("Атыңызды енгізіңіз"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("Парольді енгізіңіз"),
         "enterYourPhoneNumber":
             MessageLookupByLibrary.simpleMessage("Телефон нөмірін енгізіңіз"),
+        "error": MessageLookupByLibrary.simpleMessage("Қате"),
         "expense": MessageLookupByLibrary.simpleMessage("Тариф"),
         "expenseCat":
             MessageLookupByLibrary.simpleMessage("Шығын категориялары"),
@@ -321,6 +331,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenseReport":
             MessageLookupByLibrary.simpleMessage("Шығынның есептігі"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser": MessageLookupByLibrary.simpleMessage(
+            "Пайдаланушыны жою сәтсіз аяқталды"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Платформа нұсқасын алу сәтсіз аяқталды."),
         "fashion": MessageLookupByLibrary.simpleMessage("Сән"),
@@ -358,6 +370,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("Кіріс"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("Кіріс категориялары"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("Кіріс күні"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("Кіріс үшін"),
         "incomeReport": MessageLookupByLibrary.simpleMessage("Кіріс есебі"),
         "instagram": MessageLookupByLibrary.simpleMessage("Instagram"),
@@ -443,6 +456,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "noSupplier": MessageLookupByLibrary.simpleMessage(
             "Қолжетімді тапсырыс беруші жоқ"),
         "noTransaction": MessageLookupByLibrary.simpleMessage("Транзакция жоқ"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Wi-Fi байланысы жоқ"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("Белсенді емес пайдаланушы"),
         "notFound": MessageLookupByLibrary.simpleMessage("Табылмады"),
@@ -463,6 +478,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("Тіркелушілер"),
         "partyList": MessageLookupByLibrary.simpleMessage("Топтау тізімі"),
         "password": MessageLookupByLibrary.simpleMessage("Құпия сөз"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "Пароль және расталған пароль сәйкес келмейді"),
         "passwordCannotBeEmpty":
             MessageLookupByLibrary.simpleMessage("Пароль бос болмауы керек"),
         "passwordsDoNotMatch":
@@ -500,6 +518,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("Жоспар"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("Сан қосыңыз"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Интернет байланысыңызды тексеріп, қайтадан көріңіз"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "Алдымен принтерді байланысқа алыңыз"),
         "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
@@ -554,6 +575,7 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Қолданбаны пайдалану үшін жарамды сатып алу кодын пайдаланыңыз"),
         "powerdedByAcnoo":
             MessageLookupByLibrary.simpleMessage("Acnoo бетімен жеткізілген"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("Қолдайды"),
         "premiumCustomerSupport":
             MessageLookupByLibrary.simpleMessage("Android және iOS Қолдау"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Премиум план"),
@@ -588,6 +610,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("Сатылып алынған:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Сатып алу расталды"),
+        "purchaseCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Сатып алу жасау сәтсіз аяқталды"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("Сатып алу мәліметтері"),
         "purchaseList":
@@ -631,6 +655,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "Парольді қалпына келтіріп, есептік жазбаңызға кіріңіз"),
         "retailer": MessageLookupByLibrary.simpleMessage("Сатушы"),
+        "retry": MessageLookupByLibrary.simpleMessage("Қайтадан сынап көріңіз"),
         "retur": MessageLookupByLibrary.simpleMessage("Қайтару"),
         "returnAmount":
             MessageLookupByLibrary.simpleMessage("Алып келу сомасы"),
@@ -640,6 +665,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("Сатып алу бағасы"),
         "sales": MessageLookupByLibrary.simpleMessage("Сатып алу"),
         "salesBy": MessageLookupByLibrary.simpleMessage("Сатушы:"),
+        "salesCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Сату жасау сәтсіз аяқталды"),
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("Сатып алу туралы мәліметтер"),
         "salesList": MessageLookupByLibrary.simpleMessage("Сатылымдар тізімі"),
@@ -728,6 +755,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("Қойма: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("Жалпы сома"),
         "submit": MessageLookupByLibrary.simpleMessage("Жіберу"),
+        "subscribeCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Жазылуды жасау сәтсіз аяқталды"),
+        "subscribeSuccessful":
+            MessageLookupByLibrary.simpleMessage("Жазылу сәтті өтті"),
         "subscription": MessageLookupByLibrary.simpleMessage("Жазылу"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Промежуточная сумма"),
         "successfullyPaid":
@@ -791,21 +822,33 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("Байланысты жаңарту"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Қазір жаңарту"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("Парольді жаңарту"),
         "updateProduct": MessageLookupByLibrary.simpleMessage("Өнімді жаңарту"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("Профильіңізді жаңартыңыз"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("Парольді жаңартыңыз"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "Профильіңізді жаңартып, клиенттеріңізге жақсы әсер қалдырыңыз"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("Жазылымыңызды жаңартыңыз"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Сәтті жаңартылды"),
         "updating": MessageLookupByLibrary.simpleMessage("Жаңарту..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("Қазір жаңарту"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "Пайдаланушы атауы бос болмауы керек"),
+        "userCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Пайдаланушыны жасау сәтсіз аяқталды"),
+        "userDeletedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Пайдаланушы сәтті жойылды"),
         "userRole": MessageLookupByLibrary.simpleMessage("Пайдаланушы рөлі"),
         "userRoleDetails": MessageLookupByLibrary.simpleMessage(
             "Пайдаланушы рөлі туралы мәліметтер"),
         "userTitle": MessageLookupByLibrary.simpleMessage("Пайдаланушы атауы"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "Пайдаланушыны жаңарту сәтсіз аяқталды"),
         "vat": MessageLookupByLibrary.simpleMessage("ҚҚС"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("ҚҚС қолданылмайды"),

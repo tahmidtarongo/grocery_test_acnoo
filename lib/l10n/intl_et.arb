@@ -581,10 +581,28 @@
   "sep": "Sept",
   "oct": "Okt",
   "nov": "Nov",
-  "dec": "Dets"
-
-
-
-
-
+  "dec": "Dets",
+  "incomeDate": "Tulu kuupäev",
+  "enterProductCode": "Sisesta toote kood",
+  "retry": "Proovi uuesti",
+  "addedSuccessful": "Lisamine õnnestus",
+  "poweredBy": "Toetab",
+  "updatePassword": "Uuenda parooli",
+  "updateYourPassword": "Uuenda oma parooli",
+  "enterYourConfirmPassword": "Sisesta oma kinnituse parool",
+  "enterYourPassword": "Sisesta oma parool",
+  "passwordAndConfirmPasswordDoesNotMatch": "Parool ja kinnituse parool ei ühti",
+  "noWiFiConnection": "Wi-Fi ühendust ei ole",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Palun kontrolli oma Interneti-ühendust ja proovi uuesti",
+  "userCreationFailed": "Kasutaja loomine ebaõnnestus",
+  "userDeletedSuccessfully": "Kasutaja kustutamine õnnestus",
+  "failedToDeleteUser": "Kasutaja kustutamine ebaõnnestus",
+  "error": "Viga",
+  "updatedSuccessfully": "Uuendamine õnnestus",
+  "userUpdateFailed": "Kasutaja uuendamine ebaõnnestus",
+  "subscribeSuccessful": "Tellimine õnnestus",
+  "subscribeCreationFailed": "Tellimise loomine ebaõnnestus",
+  "anErrorOccurred": "Tekkis viga",
+  "salesCreationFailed": "Müügitehingu loomine ebaõnnestus",
+  "purchaseCreationFailed": "Ostutehingu loomine ebaõnnestus"
 }

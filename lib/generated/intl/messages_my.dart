@@ -69,6 +69,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("ယူနစ်ထည့်ပါ"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("အသုံးပြုသူ ရယူရန်"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("အောင်မြင်စွာ ထည့်သွင်းပြီး"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("ကတ်ထဲ ထည့်ပြီးပါသည်"),
         "adding": MessageLookupByLibrary.simpleMessage("ထည့်နေပါသည်.."),
@@ -83,6 +85,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("အကောင့်ရှိပါပြီလား?"),
         "amount": MessageLookupByLibrary.simpleMessage("ပမာဏ"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("အမှားတစ်ခု ဖြစ်ပျက်ခဲ့သည်"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "SMS ကို နောက်လိုက်သည့်နံပါတ်သို့ ပို့ပေးပါမည်။"),
@@ -301,6 +305,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("မှတ်ချက် ရိုက်ထည့်ပါ"),
         "enterOpeningBalance": MessageLookupByLibrary.simpleMessage(
             "အစပြု ဘဏ်စာရင်းကို ရိုက်ထည့်ပါ"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("ကုန်ပစ္စည်းကုဒ် ထည့်ပါ"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("ထုတ်ကုန်အမည် ရိုက်ထည့်ပါ"),
         "enterPurchasePrice":
@@ -327,14 +333,19 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("အလေးချိန် ရိုက်ထည့်ပါ"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("မူလဈေးနှုန်း ရိုက်ထည့်ပါ"),
+        "enterYourConfirmPassword":
+            MessageLookupByLibrary.simpleMessage("သင့်အတည်ပြုစကားဝှက်ထည့်ပါ"),
         "enterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
             "သင့်အီးမေးလ်လိပ်စာကိုရိုက်ထည့်ပါ"),
         "enterYourFullName": MessageLookupByLibrary.simpleMessage(
             "သင်၏ အပြည့်အဝ အမည် ရိုက်ထည့်ပါ"),
         "enterYourName": MessageLookupByLibrary.simpleMessage(
             "သင့်နာမည်အပြည့်အစုံကိုရိုက်ထည့်ပါ"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("သင့်စကားဝှက်ထည့်ပါ"),
         "enterYourPhoneNumber":
             MessageLookupByLibrary.simpleMessage("သင်၏ဖုန်းနံပါတ်ရိုက်ထည့်ပါ"),
+        "error": MessageLookupByLibrary.simpleMessage("အမှား"),
         "expense": MessageLookupByLibrary.simpleMessage("ကုန်ကျစရိတ်"),
         "expenseCat":
             MessageLookupByLibrary.simpleMessage("အသုံးစရိတ်အမျိုးအစားများ"),
@@ -343,6 +354,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("အသုံးပြုသည့်အရေအတွက်"),
         "expenseReport": MessageLookupByLibrary.simpleMessage("အသုံးစာရင်း"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser": MessageLookupByLibrary.simpleMessage(
+            "အသုံးပြုသူကို ဖျက်ရန် မအောင်မြင်ပါ"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "ပလက်ဖောင်း ဗားရှင်း ရယူရန် အမှားရှိသည်။"),
         "fashion": MessageLookupByLibrary.simpleMessage("ဖက်ရှင်"),
@@ -382,6 +395,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("ဝင်ငွေ"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("ဝင်ငွေအမျိုးအစားများ"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("ဝင်ငွေနေ့"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("ဝင်ငွေအတွက်"),
         "incomeReport":
             MessageLookupByLibrary.simpleMessage("ဝင်ငွေ အစီရင်ခံစာ"),
@@ -470,6 +484,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ရရှိနိုင်သောကုန်သည်မရှိပါ"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("သဘောတူညီချက်မရှိ"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Wi-Fi ချိတ်ဆက်မှု မရှိပါ"),
         "notActiveUser": MessageLookupByLibrary.simpleMessage(
             "ဖက်ဆောင်းသူမဟုတ်သောအသုံးပြုသူ"),
         "notFound": MessageLookupByLibrary.simpleMessage("မတွေ့ပါ"),
@@ -491,6 +507,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("ပါတ်ဆိုင်များ"),
         "partyList": MessageLookupByLibrary.simpleMessage("လက်ခံမှုစာရင်း"),
         "password": MessageLookupByLibrary.simpleMessage("စကားဝှက်"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "စကားဝှက်နှင့် အတည်ပြုစကားဝှက်မကိုက်ညီပါ"),
         "passwordCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "စကားဝှက်သည် အကျယ်အဝန်းမရှိရပါ"),
         "passwordsDoNotMatch":
@@ -532,6 +551,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("အစီအစဉ်"),
         "pleaseAddQuantity":
             MessageLookupByLibrary.simpleMessage("အရေအတွက် ထည့်ပါ"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "ကျေးဇူးပြု၍ သင့်အင်တာနက်ချိတ်ဆက်မှုကို စစ်ဆေးပြီး ထပ်မံကြိုးစားပါ"),
         "pleaseConnectThePrinterFirst":
             MessageLookupByLibrary.simpleMessage("ကျေးဇူးပြု၍ ပင်နှစ်ထည့်ပါ"),
         "pleaseConnectYourBlutohPrinter": MessageLookupByLibrary.simpleMessage(
@@ -584,6 +606,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "pleaseUseTheValidPurchaseCodeToUseTheApp":
             MessageLookupByLibrary.simpleMessage(
                 "အဆိုပါ အက်ပ်ကို သုံးရန် အမည်စာရင်း မှတ်ပုံတင်ကုတ်ကို အသုံးပြုပါ"),
+        "poweredBy":
+            MessageLookupByLibrary.simpleMessage("ဤအားဖြင့် လည်ပတ်သည်"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "Android နှင့် iOS အက်ပ် အထောက်အပံ့"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("အလဲမရှိသေးပါ"),
@@ -623,6 +647,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("ဝယ်သူ:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("ဝယ်ယူမှု အတည်ပြုပြီး"),
+        "purchaseCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "ဝယ်ယူမှုဖန်တီးမှု မအောင်မြင်ပါ"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("ဝယ်ယူမှု အသေးစိတ်"),
         "purchaseList": MessageLookupByLibrary.simpleMessage("ဝယ်ယူရန်စာရင်း"),
@@ -670,6 +696,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "သင်၏ စကားဝှက်ကို ပြန်လည်သတ်မှတ်ပါ"),
         "retailer":
             MessageLookupByLibrary.simpleMessage("ကုန်ပစ္စည်းရောင်းရသူ"),
+        "retry": MessageLookupByLibrary.simpleMessage("ထပ်ကြိုးစားပါ"),
         "returnAmount": MessageLookupByLibrary.simpleMessage("ပြန်အမ်းငွေ"),
         "riead": MessageLookupByLibrary.simpleMessage("Riead"),
         "sale": MessageLookupByLibrary.simpleMessage("အေရာင်းမြင်ရန်"),
@@ -678,6 +705,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("ရောင်းစျေး"),
         "sales": MessageLookupByLibrary.simpleMessage("အရောင်မှုများ"),
         "salesBy": MessageLookupByLibrary.simpleMessage("ရောင်းသူ:"),
+        "salesCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "ရောင်းအားဖန်တီးမှု မအောင်မြင်ပါ"),
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("အေရာင်းအဝယ်အသေးစိတ်"),
         "salesList": MessageLookupByLibrary.simpleMessage("ရောင်းချမှု စာရင်း"),
@@ -768,6 +797,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("စတော့ရှယ်ယာ: "),
         "subTotal": MessageLookupByLibrary.simpleMessage("စုစုပေါင်းကျသင့်ငွေ"),
         "submit": MessageLookupByLibrary.simpleMessage("တင်သွင်းပါ"),
+        "subscribeCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "စာရင်းသွင်းမှု ဖန်တီးခြင်း မအောင်မြင်ပါ"),
+        "subscribeSuccessful": MessageLookupByLibrary.simpleMessage(
+            "စာရင်းသွင်းခြင်း အောင်မြင်စွာ ပြီးဆုံးပါသည်"),
         "subscription": MessageLookupByLibrary.simpleMessage("ဝန်ဆောင်မှု"),
         "subtotal": MessageLookupByLibrary.simpleMessage("အချို့လက်မှတ်"),
         "successfullyPaid": MessageLookupByLibrary.simpleMessage(
@@ -836,25 +869,37 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact": MessageLookupByLibrary.simpleMessage(
             "ဆက်သွယ်ရန်နောက်တစ်ဆင့်အပ်ဒိတ်ပြုရန်"),
         "updateNow": MessageLookupByLibrary.simpleMessage("အခုပြောင်းလဲရန်"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("စကားဝှက် အသစ်ထည့်ပါ"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("ကုန်ပစ္စည်းအပ်ဒိတ်ပြုရန်"),
         "updateProfile": MessageLookupByLibrary.simpleMessage(
             "သင်၏ကိုယ်ရေးအကျဉ်းပြုပြီးပြောင်းလဲရန်"),
+        "updateYourPassword": MessageLookupByLibrary.simpleMessage(
+            "သင့်စကားဝှက်ကို အသစ်ပြင်ဆင်ပါ"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "သင့်ပရိုဖိုင်းကို အပ်ဒိတ်လုပ်ပါ၊ သင့်ဖောက်သည်များကို အပြန်အလှန်ပြောပါ"),
         "updateYourSubscription": MessageLookupByLibrary.simpleMessage(
             "သင့် စာရင်းသွင်းမှုကို အပ်ဒိတ်လုပ်ပါ"),
+        "updatedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "အောင်မြင်စွာ အပ်ဒိတ် ပြုလုပ်ပြီး"),
         "updating": MessageLookupByLibrary.simpleMessage("စစ်ဆေးနေပါသည်..."),
         "upgradeNow":
             MessageLookupByLibrary.simpleMessage("ယခု Upgrade လုပ်ပါ"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "အသုံးပြုသူခေါင်းစဉ်သည် အကျယ်အဝန်းမရှိရပါ"),
+        "userCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "အသုံးပြုသူဖန်တီးမှု အောင်မြင်မှု မရှိပါ"),
+        "userDeletedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "အသုံးပြုသူ အောင်မြင်စွာ ဖျက်ပြီး"),
         "userRole":
             MessageLookupByLibrary.simpleMessage("အသုံးပြုသူအဆင့်အတန်း"),
         "userRoleDetails":
             MessageLookupByLibrary.simpleMessage("အသုံးပြုသူ တာဝန်အသေးစိတ်"),
         "userTitle":
             MessageLookupByLibrary.simpleMessage("အသုံးပြုသူခေါင်းစဉ်"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "အသုံးပြုသူ အပ်ဒိတ်မအောင်မြင်ပါ"),
         "vat": MessageLookupByLibrary.simpleMessage("VAT"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("VAT မသက်ဆိုင်ပါ"),

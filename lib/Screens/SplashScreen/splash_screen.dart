@@ -55,8 +55,10 @@ class _SplashScreenState extends State<SplashScreen> {
           showDialog(
             context: context,
             builder: (context) => AlertDialog(
-              title: const Text("Not Active User"),
-              content: const Text("Please use the valid purchase code to use the app."),
+             // title:  Text("Not Active User"),
+              title:  Text(lang.S.of(context).notActiveUser),
+             // content: const Text("Please use the valid purchase code to use the app."),
+              content:  Text("${lang.S.of(context).pleaseUseTheValidPurchaseCodeToUseTheApp}."),
               actions: [
                 TextButton(
                   onPressed: () {
@@ -67,7 +69,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       exit(0);
                     }
                   },
-                  child: const Text("OK"),
+                  child:  Text(lang.S.of(context).oK),
                 ),
               ],
             ),
@@ -114,18 +116,20 @@ class _SplashScreenState extends State<SplashScreen> {
                       ),
                     ),
                     const SizedBox(height: 16.0),
-                    const Text(
-                      'No Wi-Fi Connection',
-                      style: TextStyle(
+                     Text(
+                       lang.S.of(context).noWiFiConnection,
+                     // 'No Wi-Fi Connection',
+                      style: const TextStyle(
                         fontSize: 22.0,
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
                       ),
                     ),
                     const SizedBox(height: 12.0),
-                    const Text(
-                      'Please check your internet connection and try again.',
-                      style: TextStyle(
+                     Text(
+                       lang.S.of(context).pleaseCheckYourInternetConnectionAndTryAgain,
+                     // 'Please check your internet connection and try again.',
+                      style: const TextStyle(
                         fontSize: 16.0,
                         color: Colors.grey,
                       ),
@@ -137,9 +141,10 @@ class _SplashScreenState extends State<SplashScreen> {
                       onPressed: () {
                         checkUser();
                       },
-                      child: const Text(
-                        'Retry',
-                        style: TextStyle(color: Colors.white),
+                      child:  Text(
+                        lang.S.of(context).retry,
+                       // 'Retry',
+                        style: const TextStyle(color: Colors.white),
                       ),
                     )
                   ],
@@ -212,7 +217,8 @@ class _SplashScreenState extends State<SplashScreen> {
                 children: [
                   Center(
                     child: Text(
-                      'Powered By $companyName',
+                     // 'Powered By $companyName',
+                      '${lang.S.of(context).poweredBy} $companyName',
                       style: GoogleFonts.poppins(color: Colors.white, fontWeight: FontWeight.normal, fontSize: 20.0),
                     ),
                   ),

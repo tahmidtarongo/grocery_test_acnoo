@@ -102,7 +102,7 @@ class _PurchaseReportState extends State<PurchaseListScreen> {
                                                 color: reTransaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d).withOpacity(0.1) : const Color(0xFFED1A3B).withOpacity(0.1),
                                                 borderRadius: const BorderRadius.all(Radius.circular(10))),
                                             child: Text(
-                                              reTransaction[index].dueAmount! <= 0 ? 'Paid' : 'Unpaid',
+                                              reTransaction[index].dueAmount! <= 0 ? lang.S.of(context).paid : lang.S.of(context).unPaid,
                                               style: TextStyle(color: reTransaction[index].dueAmount! <= 0 ? const Color(0xff0dbf7d) : const Color(0xFFED1A3B)),
                                             ),
                                           ),

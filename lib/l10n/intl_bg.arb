@@ -582,7 +582,30 @@
   "sep": "Сеп",
   "oct": "Окт",
   "nov": "Ное",
-  "dec": "Дек"
+  "dec": "Дек",
+  "incomeDate": "Дата на приходите",
+  "enterProductCode": "Въведете кода на продукта",
+  "retry": "Опитайте отново",
+  "addedSuccessful": "Успешно добавено",
+  "poweredBy": "Поддържа",
+  "updatePassword": "Актуализирайте паролата",
+  "updateYourPassword": "Актуализирайте вашата парола",
+  "enterYourConfirmPassword": "Въведете потвърдителната си парола",
+  "enterYourPassword": "Въведете вашата парола",
+  "passwordAndConfirmPasswordDoesNotMatch": "Паролата и потвърдителната парола не съвпадат",
+  "noWiFiConnection": "Няма Wi-Fi връзка",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Моля, проверете интернет връзката си и опитайте отново",
+  "userCreationFailed": "Създаването на потребител не успя",
+  "userDeletedSuccessfully": "Потребителят беше успешно изтрит",
+  "failedToDeleteUser": "Неуспешно изтриване на потребителя",
+  "error": "Грешка",
+  "updatedSuccessfully": "Успешно актуализирано",
+  "userUpdateFailed": "Актуализацията на потребителя не успя",
+  "subscribeSuccessful": "Абонирането беше успешно",
+  "subscribeCreationFailed": "Създаването на абонамент не успя",
+  "anErrorOccurred": "Възникна грешка",
+  "salesCreationFailed": "Създаването на продажби не успя",
+  "purchaseCreationFailed": "Създаването на покупка не успя"
 
 
 

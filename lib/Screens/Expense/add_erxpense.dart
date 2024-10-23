@@ -36,26 +36,28 @@ class _AddExpenseState extends State<AddExpense> {
   TextEditingController expanseAmountController = TextEditingController();
   TextEditingController expanseNoteController = TextEditingController();
   TextEditingController expanseRefController = TextEditingController();
-  List<String> paymentMethods = [
-    //lang.S.of(context).cancel,
-    'Cash',
-    'Bank',
-    'Card',
-    'Mobile Payment',
-    'Due',
-  ];
 
-  String selectedPaymentType = 'Cash';
+  Map<String,dynamic> get paymentMethods =>
+      {
+        "Cash" :  lang.S.current.cash,
+        "Bank" : lang.S.current.bank,
+        "Card": lang.S.current.card,
+        "Mobile Payment": lang.S.current.mobilePayment,
+        "Due":lang.S.current.due,
+      };
+
+  late String selectedPaymentType = paymentMethods.entries.first.key;
 
   DropdownButton<String> getPaymentMethods() {
-    List<DropdownMenuItem<String>> dropDownItems = [];
-    for (String des in paymentMethods) {
-      var item = DropdownMenuItem(
-        value: des,
-        child: Text(des),
-      );
-      dropDownItems.add(item);
-    }
+    List<DropdownMenuItem<String>> dropDownItems = [
+      ...paymentMethods.entries.map((e){
+        return DropdownMenuItem(
+          value: e.key,
+          child: Text(e.value),
+        );
+      })
+    ];
+
     return DropdownButton(
       items: dropDownItems,
       value: selectedPaymentType,
@@ -156,7 +158,7 @@ class _AddExpenseState extends State<AddExpense> {
                             child: Row(
                               children: [
                                 const SizedBox(width: 10.0),
-                                Text(selectedCategory?.categoryName ?? 'Select a category'),
+                                Text(selectedCategory?.categoryName ?? lang.S.of(context).selectACategory),
                                 const Spacer(),
                                 const Icon(Icons.keyboard_arrow_down),
                                 const SizedBox(

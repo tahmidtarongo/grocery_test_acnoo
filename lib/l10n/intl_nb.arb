@@ -581,7 +581,31 @@
   "sep": "Sep",
   "oct": "Okt",
   "nov": "Nov",
-  "dec": "Des"
+  "dec": "Des",
+  "incomeDate": "Inntektsdato",
+  "enterProductCode": "Skriv inn produktkode",
+  "retry": "Prøv igjen",
+  "addedSuccessful": "Legg til vellykket",
+  "poweredBy": "Drevet av",
+  "updatePassword": "Oppdater passord",
+  "updateYourPassword": "Oppdater passordet ditt",
+  "enterYourConfirmPassword": "Skriv inn ditt bekreftelsespassord",
+  "enterYourPassword": "Skriv inn passordet ditt",
+  "passwordAndConfirmPasswordDoesNotMatch": "Passordet og bekreftelsespassordet stemmer ikke overens",
+  "noWiFiConnection": "Ingen Wi-Fi-tilkobling",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Vennligst sjekk internettforbindelsen din og prøv igjen",
+  "userCreationFailed": "Brukeropprettelse mislyktes",
+  "userDeletedSuccessfully": "Bruker slettet vellykket",
+  "failedToDeleteUser": "Mislyktes i å slette bruker",
+  "error": "Feil",
+  "updatedSuccessfully": "Oppdatert vellykket",
+  "userUpdateFailed": "Oppdatering av bruker mislyktes",
+  "subscribeSuccessful": "Abonnement vellykket",
+  "subscribeCreationFailed": "Opprettelse av abonnement mislyktes",
+  "anErrorOccurred": "Det oppstod en feil",
+  "salesCreationFailed": "Opprettelse av salg mislyktes",
+  "purchaseCreationFailed": "Opprettelse av kjøp mislyktes"
+
 
 
 

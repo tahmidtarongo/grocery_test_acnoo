@@ -67,6 +67,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "addUnit": MessageLookupByLibrary.simpleMessage("Adicionar unidade"),
         "addUserRole":
             MessageLookupByLibrary.simpleMessage("Adicionar Função de Usuário"),
+        "addedSuccessful":
+            MessageLookupByLibrary.simpleMessage("Adicionado com sucesso"),
         "addedToCart":
             MessageLookupByLibrary.simpleMessage("Adicionado ao Carrinho"),
         "adding": MessageLookupByLibrary.simpleMessage("Adicionando.."),
@@ -81,6 +83,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Já tem uma conta?"),
         "amount": MessageLookupByLibrary.simpleMessage("Quantia"),
+        "anErrorOccurred":
+            MessageLookupByLibrary.simpleMessage("Ocorreu um erro"),
         "anSMSWillBeSentToTheFollowingNumber":
             MessageLookupByLibrary.simpleMessage(
                 "Um SMS será enviado para o seguinte número:"),
@@ -290,6 +294,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterNote": MessageLookupByLibrary.simpleMessage("Digite a Nota"),
         "enterOpeningBalance":
             MessageLookupByLibrary.simpleMessage("Digite o saldo inicial"),
+        "enterProductCode":
+            MessageLookupByLibrary.simpleMessage("Digite o código do produto"),
         "enterProductName":
             MessageLookupByLibrary.simpleMessage("Digite o nome do produto"),
         "enterPurchasePrice":
@@ -312,14 +318,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterWeight": MessageLookupByLibrary.simpleMessage("Digite o Peso"),
         "enterWholesalePrice":
             MessageLookupByLibrary.simpleMessage("Digite o preço no atacado"),
+        "enterYourConfirmPassword": MessageLookupByLibrary.simpleMessage(
+            "Digite sua senha de confirmação"),
         "enterYourEmailAddress": MessageLookupByLibrary.simpleMessage(
             "Digite o seu endereço de e-mail"),
         "enterYourFullName":
             MessageLookupByLibrary.simpleMessage("Digite seu nome completo"),
         "enterYourName":
             MessageLookupByLibrary.simpleMessage("Digite o seu nome"),
+        "enterYourPassword":
+            MessageLookupByLibrary.simpleMessage("Digite sua senha"),
         "enterYourPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "Digite o seu número de telefone"),
+        "error": MessageLookupByLibrary.simpleMessage("Erro"),
         "expense": MessageLookupByLibrary.simpleMessage("Despesa"),
         "expenseCat":
             MessageLookupByLibrary.simpleMessage("Categorias de despesas"),
@@ -328,6 +339,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "expenseReport":
             MessageLookupByLibrary.simpleMessage("Relatório de Despesas"),
         "facebook": MessageLookupByLibrary.simpleMessage("Facebook"),
+        "failedToDeleteUser":
+            MessageLookupByLibrary.simpleMessage("Falha ao excluir usuário"),
         "failedToGetPlatformVersion": MessageLookupByLibrary.simpleMessage(
             "Falha ao obter a versão da plataforma."),
         "fashion": MessageLookupByLibrary.simpleMessage("Moda"),
@@ -364,6 +377,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "income": MessageLookupByLibrary.simpleMessage("Renda"),
         "incomeCategories":
             MessageLookupByLibrary.simpleMessage("Categorias de Renda"),
+        "incomeDate": MessageLookupByLibrary.simpleMessage("Data de entrada"),
         "incomeFor": MessageLookupByLibrary.simpleMessage("Renda para"),
         "incomeReport":
             MessageLookupByLibrary.simpleMessage("Relatório de Renda"),
@@ -449,6 +463,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Nenhum fornecedor disponível"),
         "noTransaction":
             MessageLookupByLibrary.simpleMessage("Nenhuma transação"),
+        "noWiFiConnection":
+            MessageLookupByLibrary.simpleMessage("Sem conexão Wi-Fi"),
         "notActiveUser":
             MessageLookupByLibrary.simpleMessage("Usuário Inativo"),
         "notFound": MessageLookupByLibrary.simpleMessage("Não Encontrado"),
@@ -469,6 +485,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "parties": MessageLookupByLibrary.simpleMessage("Partes"),
         "partyList": MessageLookupByLibrary.simpleMessage("Lista de Partes"),
         "password": MessageLookupByLibrary.simpleMessage("Senha"),
+        "passwordAndConfirmPasswordDoesNotMatch":
+            MessageLookupByLibrary.simpleMessage(
+                "A senha e a confirmação da senha não coincidem"),
         "passwordCannotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "A senha não pode estar vazia"),
         "passwordsDoNotMatch":
@@ -510,6 +529,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "plan": MessageLookupByLibrary.simpleMessage("Plano"),
         "pleaseAddQuantity": MessageLookupByLibrary.simpleMessage(
             "Por favor, adicione a quantidade"),
+        "pleaseCheckYourInternetConnectionAndTryAgain":
+            MessageLookupByLibrary.simpleMessage(
+                "Verifique sua conexão com a internet e tente novamente"),
         "pleaseConnectThePrinterFirst": MessageLookupByLibrary.simpleMessage(
             "Por favor, conecte a impressora primeiro"),
         "pleaseEnterABiggerPassword": MessageLookupByLibrary.simpleMessage(
@@ -560,6 +582,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pleaseUseTheValidPurchaseCodeToUseTheApp":
             MessageLookupByLibrary.simpleMessage(
                 "Por favor, use o código de compra válido para usar o aplicativo"),
+        "poweredBy": MessageLookupByLibrary.simpleMessage("Desenvolvido por"),
         "premiumCustomerSupport": MessageLookupByLibrary.simpleMessage(
             "Suporte para Apps Android e iOS"),
         "premiumPlan": MessageLookupByLibrary.simpleMessage("Plano Premium"),
@@ -599,6 +622,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "purchaseBy": MessageLookupByLibrary.simpleMessage("Comprado por:"),
         "purchaseConfirmed":
             MessageLookupByLibrary.simpleMessage("Compra Confirmada"),
+        "purchaseCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Falha na criação de compras"),
         "purchaseDetails":
             MessageLookupByLibrary.simpleMessage("Detalhes da Compra"),
         "purchaseList":
@@ -643,6 +668,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage(
             "Redefina sua senha para recuperar e fazer login na sua conta"),
         "retailer": MessageLookupByLibrary.simpleMessage("Varejista"),
+        "retry": MessageLookupByLibrary.simpleMessage("Tente novamente"),
         "returnAmount":
             MessageLookupByLibrary.simpleMessage("Valor de devolução"),
         "riead": MessageLookupByLibrary.simpleMessage("Ler"),
@@ -651,6 +677,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "salePrice": MessageLookupByLibrary.simpleMessage("Preço de venda"),
         "sales": MessageLookupByLibrary.simpleMessage("Vendas"),
         "salesBy": MessageLookupByLibrary.simpleMessage("Vendido por:"),
+        "salesCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Falha na criação de vendas"),
         "salesDetails":
             MessageLookupByLibrary.simpleMessage("Detalhes de vendas"),
         "salesList": MessageLookupByLibrary.simpleMessage("Lista de Vendas"),
@@ -741,6 +769,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "stocks": MessageLookupByLibrary.simpleMessage("Estoque:"),
         "subTotal": MessageLookupByLibrary.simpleMessage("Subtotal"),
         "submit": MessageLookupByLibrary.simpleMessage("Enviar"),
+        "subscribeCreationFailed": MessageLookupByLibrary.simpleMessage(
+            "Falha na criação da assinatura"),
+        "subscribeSuccessful": MessageLookupByLibrary.simpleMessage(
+            "Assinatura realizada com sucesso"),
         "subscription": MessageLookupByLibrary.simpleMessage("Inscrição"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Subtotal"),
         "successfullyPaid":
@@ -799,22 +831,34 @@ class MessageLookup extends MessageLookupByLibrary {
         "updateContact":
             MessageLookupByLibrary.simpleMessage("Atualizar contato"),
         "updateNow": MessageLookupByLibrary.simpleMessage("Atualizar agora"),
+        "updatePassword":
+            MessageLookupByLibrary.simpleMessage("Atualizar senha"),
         "updateProduct":
             MessageLookupByLibrary.simpleMessage("Atualizar produto"),
         "updateProfile":
             MessageLookupByLibrary.simpleMessage("Atualize seu perfil"),
+        "updateYourPassword":
+            MessageLookupByLibrary.simpleMessage("Atualize sua senha"),
         "updateYourProfile": MessageLookupByLibrary.simpleMessage(
             "Atualize seu perfil para conectar seus clientes com uma melhor impressão"),
         "updateYourSubscription":
             MessageLookupByLibrary.simpleMessage("Atualize sua assinatura"),
+        "updatedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Atualizado com sucesso"),
         "updating": MessageLookupByLibrary.simpleMessage("Atualizando..."),
         "upgradeNow": MessageLookupByLibrary.simpleMessage("Atualizar Agora"),
         "useTitleCanNotBeEmpty": MessageLookupByLibrary.simpleMessage(
             "O título do usuário não pode estar vazio"),
+        "userCreationFailed":
+            MessageLookupByLibrary.simpleMessage("Falha ao criar usuário"),
+        "userDeletedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "Usuário excluído com sucesso"),
         "userRole": MessageLookupByLibrary.simpleMessage("Papel do usuário"),
         "userRoleDetails": MessageLookupByLibrary.simpleMessage(
             "Detalhes do Papel do Usuário"),
         "userTitle": MessageLookupByLibrary.simpleMessage("Título do Usuário"),
+        "userUpdateFailed": MessageLookupByLibrary.simpleMessage(
+            "Falha na atualização do usuário"),
         "vat": MessageLookupByLibrary.simpleMessage("IVA"),
         "vatDoesNOtApply":
             MessageLookupByLibrary.simpleMessage("O VAT não se aplica"),

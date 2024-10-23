@@ -575,7 +575,32 @@
   "sep": "Sep",
   "oct": "Okt",
   "nov": "Nov",
-  "dec": "Dec"
+  "dec": "Dec",
+  "incomeDate": "Inkomstdatum",
+  "enterProductCode": "Ange produktkod",
+  "retry": "Försök igen",
+  "addedSuccessful": "Tilläggning lyckades",
+  "poweredBy": "Drivs av",
+  "updatePassword": "Uppdatera lösenord",
+  "updateYourPassword": "Uppdatera ditt lösenord",
+  "enterYourConfirmPassword": "Ange ditt bekräftelselösenord",
+  "enterYourPassword": "Ange ditt lösenord",
+  "passwordAndConfirmPasswordDoesNotMatch": "Lösenord och bekräftelselösenord matchar inte",
+  "noWiFiConnection": "Ingen Wi-Fi-anslutning",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Kontrollera din internetanslutning och försök igen",
+  "userCreationFailed": "Användarskapande misslyckades",
+  "userDeletedSuccessfully": "Användare raderad framgångsrikt",
+  "failedToDeleteUser": "Misslyckades med att radera användare",
+  "error": "Fel",
+  "updatedSuccessfully": "Uppdaterad framgångsrikt",
+  "userUpdateFailed": "Uppdatering av användare misslyckades",
+  "subscribeSuccessful": "Prenumeration lyckades",
+  "subscribeCreationFailed": "Skapande av prenumeration misslyckades",
+  "anErrorOccurred": "Ett fel inträffade",
+  "salesCreationFailed": "Försäljning skapande misslyckades",
+  "purchaseCreationFailed": "Köp skapande misslyckades"
+
+
 
 
 

@@ -590,7 +590,31 @@
   "sep": "Sht",
   "oct": "Tet",
   "nov": "Nën",
-  "dec": "Dhj"
+  "dec": "Dhj",
+  "incomeDate": "Data e të ardhurave",
+  "enterProductCode": "Shkruani Kodin e Produktit",
+  "retry": "Përpiquni përsëri",
+  "addedSuccessful": "Shtimi u krye me sukses",
+  "poweredBy": "Furnizuar nga",
+  "updatePassword": "Përditëso Përdoruesin",
+  "updateYourPassword": "Përditësoni fjalëkalimin tuaj",
+  "enterYourConfirmPassword": "Shkruani fjalëkalimin tuaj të konfirmimit",
+  "enterYourPassword": "Shkruani fjalëkalimin tuaj",
+  "passwordAndConfirmPasswordDoesNotMatch": "Fjalëkalimi dhe fjalëkalimi i konfirmimit nuk përputhen",
+  "noWiFiConnection": "Nuk ka lidhje Wi-Fi",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Ju lutemi kontrolloni lidhjen tuaj të internetit dhe provoni përsëri",
+  "userCreationFailed": "Krijimi i përdoruesit dështoi",
+  "userDeletedSuccessfully": "Përdoruesi u fshi me sukses",
+  "failedToDeleteUser": "Dështoi në fshirjen e përdoruesit",
+  "error": "Gabim",
+  "updatedSuccessfully": "Përditësimi u krye me sukses",
+  "userUpdateFailed": "Përditësimi i përdoruesit dështoi",
+  "subscribeSuccessful": "Abonimi u krye me sukses",
+  "subscribeCreationFailed": "Krijimi i abonimit dështoi",
+  "anErrorOccurred": "Ndodhi një gabim",
+  "salesCreationFailed": "Krijimi i shitjeve dështoi",
+  "purchaseCreationFailed": "Krijimi i blerjes dështoi"
+
 
 
 }

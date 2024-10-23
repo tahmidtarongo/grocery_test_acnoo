@@ -583,7 +583,31 @@
   "sep": "ເກົາລະ",
   "oct": "ຕຸລາ",
   "nov": "ເດືອນສິງຫາ",
-  "dec": "ທັນວາ"
+  "dec": "ທັນວາ",
+  "incomeDate": "ວັນທີລາຍຮັບ",
+  "enterProductCode": "ໃສ່ລະຫັດສິນຄ້າ",
+  "retry": "ລອງໃໝ່",
+  "addedSuccessful": "ເພີ່ມເຂົ້າສຳເລັດ",
+  "poweredBy": "ໂດຍ",
+  "updatePassword": "ເອີ້ງພາສວດໃໝ່",
+  "updateYourPassword": "ເອີ້ງພາສວດໃໝ່ຂອງທ່ານ",
+  "enterYourConfirmPassword": "ໃສ່ພາສວດຢືນຢັນຂອງທ່ານ",
+  "enterYourPassword": "ໃສ່ພາສວດຂອງທ່ານ",
+  "passwordAndConfirmPasswordDoesNotMatch": "ພາສວດແລະພາສວດຢືນຢັນບໍ່ສຽງກັນ",
+  "noWiFiConnection": "ບໍ່ມີການເຊື່ອມໂຍງ Wi-Fi",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "ໃຫ້ເບິ່ງການເຊື່ອມເຂຍທ່ານ ແລະລອງໃໝ່",
+  "userCreationFailed": "ການເລີ່ມໃຊ້ຜູ້ໃຊ້ບໍ່ສຳເລັດ",
+  "userDeletedSuccessfully": "ລົບຜູ້ໃຊ້ສຳເລັດ",
+  "failedToDeleteUser": "ລົບຜູ້ໃຊ້ບໍ່ສຳເລັດ",
+  "error": "ບໍ່ຖືກ",
+  "updatedSuccessfully": "ອັບເດດສຳເລັດ",
+  "userUpdateFailed": "ອັບເດດຜູ້ໃຊ້ບໍ່ສຳເລັດ",
+  "subscribeSuccessful": "ສະຖານທີ່ສຳເລັດ",
+  "subscribeCreationFailed": "ສ້າງສະຖານທີ່ບໍ່ສຳເລັດ",
+  "anErrorOccurred": "ມີບໍ່ຖືກເກີດ",
+  "salesCreationFailed": "ສ້າງຂາຍບໍ່ສຳເລັດ",
+  "purchaseCreationFailed": "ສ້າງຊື້ບໍ່ສຳເລັດ"
+
 
 
 

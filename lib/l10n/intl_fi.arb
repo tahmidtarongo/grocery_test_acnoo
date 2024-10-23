@@ -586,7 +586,31 @@
   "sep": "Syys",
   "oct": "Loka",
   "nov": "Marras",
-  "dec": "Joulu"
+  "dec": "Joulu",
+  "incomeDate": "Tulopäivämäärä",
+  "enterProductCode": "Syötä tuotteen koodi",
+  "retry": "Yritä uudelleen",
+  "addedSuccessful": "Lisäys onnistui",
+  "poweredBy": "Voimanlähteenä",
+  "updatePassword": "Päivitä salasana",
+  "updateYourPassword": "Päivitä salasanasi",
+  "enterYourConfirmPassword": "Syötä vahvistussalasanasi",
+  "enterYourPassword": "Syötä salasanasi",
+  "passwordAndConfirmPasswordDoesNotMatch": "Salasana ja vahvistussalasana eivät täsmää",
+  "noWiFiConnection": "Ei Wi-Fi-yhteyttä",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "Tarkista internet-yhteytesi ja yritä uudelleen",
+  "userCreationFailed": "Käyttäjän luominen epäonnistui",
+  "userDeletedSuccessfully": "Käyttäjä poistettiin onnistuneesti",
+  "failedToDeleteUser": "Käyttäjän poistaminen epäonnistui",
+  "error": "Virhe",
+  "updatedSuccessfully": "Päivitys onnistui",
+  "userUpdateFailed": "Käyttäjän päivitys epäonnistui",
+  "subscribeSuccessful": "Tilauksen luominen onnistui",
+  "subscribeCreationFailed": "Tilauksen luominen epäonnistui",
+  "anErrorOccurred": "Tapahtui virhe",
+  "salesCreationFailed": "Myynnin luominen epäonnistui",
+  "purchaseCreationFailed": "Ostoksen luominen epäonnistui"
+
 
 
 }

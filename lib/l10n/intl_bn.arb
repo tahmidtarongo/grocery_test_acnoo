@@ -593,7 +593,30 @@
   "sep": "সেপ্টে",
   "oct": "অক্টো",
   "nov": "নভে",
-  "dec": "ডিসে"
+  "dec": "ডিসে",
+  "incomeDate": "আয় তারিখ",
+  "enterProductCode": "পণ্যের কোড লিখুন",
+  "retry": "পুনরায় চেষ্টা করুন",
+  "addedSuccessful": "সফলভাবে যোগ হয়েছে",
+  "poweredBy": "দ্বারা চালিত",
+  "updatePassword": "পাসওয়ার্ড আপডেট করুন",
+  "updateYourPassword": "আপনার পাসওয়ার্ড আপডেট করুন",
+  "enterYourConfirmPassword": "আপনার নিশ্চিত পাসওয়ার্ড লিখুন",
+  "enterYourPassword": "আপনার পাসওয়ার্ড লিখুন",
+  "passwordAndConfirmPasswordDoesNotMatch": "পাসওয়ার্ড এবং নিশ্চিত পাসওয়ার্ড মেলে না",
+  "noWiFiConnection": "কোনো Wi-Fi সংযোগ নেই",
+  "pleaseCheckYourInternetConnectionAndTryAgain": "দয়া করে আপনার ইন্টারনেট সংযোগটি পরীক্ষা করুন এবং আবার চেষ্টা করুন",
+  "userCreationFailed": "ব্যবহারকারী তৈরি করতে ব্যর্থ হয়েছে",
+  "userDeletedSuccessfully": "ব্যবহারকারী সফলভাবে মুছে ফেলা হয়েছে",
+  "failedToDeleteUser": "ব্যবহারকারী মুছতে ব্যর্থ হয়েছে",
+  "error": "ত্রুটি",
+  "updatedSuccessfully": "সফলভাবে আপডেট হয়েছে",
+  "userUpdateFailed": "ব্যবহারকারী আপডেট করতে ব্যর্থ হয়েছে",
+  "subscribeSuccessful": "সাবস্ক্রিপশন সফল হয়েছে",
+  "subscribeCreationFailed": "সাবস্ক্রিপশন তৈরি করতে ব্যর্থ হয়েছে",
+  "anErrorOccurred": "একটি ত্রুটি ঘটেছে",
+  "salesCreationFailed": "বিক্রয় তৈরি করতে ব্যর্থ হয়েছে",
+  "purchaseCreationFailed": "ক্রয় তৈরি করতে ব্যর্থ হয়েছে"
 
 
 }
