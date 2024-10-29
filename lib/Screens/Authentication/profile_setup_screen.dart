@@ -40,18 +40,6 @@ class _ProfileSetupState extends State<ProfileSetup> {
   TextEditingController addressController = TextEditingController();
   TextEditingController openingBalanceController = TextEditingController();
   TextEditingController phoneController = TextEditingController();
-  TextEditingController nameController = TextEditingController();
-
-  // void _loadLanguages() async {
-  //   for (var element in languageData) {
-  //     final data = Language.fromJson(element);
-  //
-  //     language.add(data);
-  //     if (data.code == "en") {
-  //       selectedLanguage = data;
-  //     }
-  //   }
-  // }
 
   DropdownButton<BusinessCategory> getCategory({required List<BusinessCategory> list}) {
     List<DropdownMenuItem<BusinessCategory>> dropDownItems = [];
@@ -66,7 +54,7 @@ class _ProfileSetupState extends State<ProfileSetup> {
     return DropdownButton(
       hint: Text(lang.S.of(context).selectBusinessCategory
           //'Select Business Category'
-         ),
+          ),
       items: dropDownItems,
       value: selectedBusinessCategory,
       onChanged: (value) {
@@ -76,26 +64,6 @@ class _ProfileSetupState extends State<ProfileSetup> {
       },
     );
   }
-
-  // DropdownButton<Language> getLanguage() {
-  //   List<DropdownMenuItem<Language>> dropDownLangItems = [];
-  //   for (Language lang in language) {
-  //     var item = DropdownMenuItem(
-  //       value: lang,
-  //       child: Text(lang.name),
-  //     );
-  //     dropDownLangItems.add(item);
-  //   }
-  //   return DropdownButton(
-  //     items: dropDownLangItems,
-  //     value: selectedLanguage,
-  //     onChanged: (value) {
-  //       setState(() {
-  //         selectedLanguage = value!;
-  //       });
-  //     },
-  //   );
-  // }
 
   final GlobalKey<FormState> _formKey = GlobalKey();
 
@@ -134,16 +102,11 @@ class _ProfileSetupState extends State<ProfileSetup> {
                         BusinessSetupRepo businessSetupRepo = BusinessSetupRepo();
                         await businessSetupRepo.businessSetup(
                           context: context,
-                          name: nameController.text,
                           phone: phoneController.text,
                           address: addressController.text.isEmptyOrNull ? null : addressController.text,
                           categoryId: selectedBusinessCategory!.id.toString(),
-
                           image: pickedImage == null ? null : File(pickedImage!.path),
-
-                          // languageCode: selectedLanguage!.code,
                           openingBalance: openingBalanceController.text.isEmptyOrNull ? null : openingBalanceController.text,
-                          // phone: phoneController.text,
                         );
                       } catch (e) {
                         EasyLoading.dismiss();
@@ -163,19 +126,6 @@ class _ProfileSetupState extends State<ProfileSetup> {
                     key: _formKey,
                     child: Column(
                       children: [
-                        // Padding(
-                        //   padding: const EdgeInsets.all(10.0),
-                        //   child: Text(
-                        //     lang.S.of(context).setUpDesc,
-                        //     maxLines: 2,
-                        //     overflow: TextOverflow.ellipsis,
-                        //     textAlign: TextAlign.center,
-                        //     style: GoogleFonts.poppins(
-                        //       color: kGreyTextColor,
-                        //       fontSize: 15.0,
-                        //     ),
-                        //   ),
-                        // ),
                         GestureDetector(
                           onTap: () {
                             showDialog(
@@ -258,8 +208,6 @@ class _ProfileSetupState extends State<ProfileSetup> {
                                 width: 120,
                                 decoration: BoxDecoration(
                                   shape: BoxShape.circle,
-                                  // border: Border.all(color: Colors.black54, width: 1),
-                                  // borderRadius: const BorderRadius.all(Radius.circular(120)),
                                   image: pickedImage == null
                                       ? const DecorationImage(
                                           image: AssetImage('images/noImage.png'),
@@ -316,29 +264,6 @@ class _ProfileSetupState extends State<ProfileSetup> {
                           ),
                         ),
 
-                        ///_________Name________________________
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: AppTextField(
-                            // Optional
-                            textFieldType: TextFieldType.NAME,
-                            controller: nameController,
-                            validator: (value) {
-                              if (value == null || value.isEmpty) {
-                               // return 'Please enter a valid business name';
-                                return lang.S.of(context).pleaseEnterAValidBusinessName;
-                              }
-                              return null;
-                            },
-                            decoration: kInputDecoration.copyWith(
-                              labelText: lang.S.of(context).businessName,
-                              border: const OutlineInputBorder(),
-                              //hintText: 'Enter Business/Store Name'
-                              hintText: lang.S.of(context).enterBusiness,
-                            ),
-                          ),
-                        ),
-
                         ///__________Phone_________________________
                         Padding(
                           padding: const EdgeInsets.all(10.0),
@@ -363,7 +288,6 @@ class _ProfileSetupState extends State<ProfileSetup> {
                         Padding(
                           padding: const EdgeInsets.all(10.0),
                           child: AppTextField(
-                            // ignore: deprecated_member_use
                             textFieldType: TextFieldType.ADDRESS,
                             controller: addressController,
                             decoration: kInputDecoration.copyWith(
@@ -387,36 +311,12 @@ class _ProfileSetupState extends State<ProfileSetup> {
                             controller: openingBalanceController, // Optional
                             textFieldType: TextFieldType.PHONE,
                             decoration: kInputDecoration.copyWith(
-                              //hintText: 'Enter opening balance',
                               hintText: lang.S.of(context).enterOpeningBalance,
                               labelText: lang.S.of(context).openingBalance,
                               border: const OutlineInputBorder(),
                             ),
                           ),
                         ),
-
-                        ///_________Language___________________________
-                        // Padding(
-                        //   padding: const EdgeInsets.all(10.0),
-                        //   child: SizedBox(
-                        //     height: 60.0,
-                        //     child: FormField(
-                        //       builder: (FormFieldState<dynamic> field) {
-                        //         return InputDecorator(
-                        //           decoration: InputDecoration(
-                        //               floatingLabelBehavior: FloatingLabelBehavior.always,
-                        //               labelText: lang.S.of(context).language,
-                        //               labelStyle: GoogleFonts.poppins(
-                        //                 color: Colors.black,
-                        //                 fontSize: 20.0,
-                        //               ),
-                        //               border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.0))),
-                        //           child: DropdownButtonHideUnderline(child: getLanguage()),
-                        //         );
-                        //       },
-                        //     ),
-                        //   ),
-                        // ),
                       ],
                     ),
                   ),

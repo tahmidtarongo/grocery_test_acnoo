@@ -384,7 +384,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                             );
                           }),
                     ],
-                  ).visible(cartProviderData.cartItemList.isNotEmpty),
+                  ),
                 ),
                 const SizedBox(height: 15),
 

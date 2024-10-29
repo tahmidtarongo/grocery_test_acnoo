@@ -12,7 +12,7 @@ import '../../Screens/Home/home_screen.dart';
 
 class BusinessSetupRepo {
   Future<void> businessSetup({
-    required String name,
+    // required String name,
     String? phone,
     required String categoryId,
     // required String languageCode,
@@ -28,7 +28,7 @@ class BusinessSetupRepo {
     var request = http.MultipartRequest('POST', uri);
     request.headers['Authorization'] = await getAuthToken();
     request.headers['Accept'] = 'application/json';
-    request.fields['companyName'] = name;
+    // request.fields['companyName'] = name;
     request.fields['phoneNumber'] = phone ?? '';
     request.fields['business_category_id'] = categoryId;
     // request.fields['language'] = languageCode;
