@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Custom": MessageLookupByLibrary.simpleMessage("Xüsusi"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Müştəri məlumatları"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "Sun": MessageLookupByLibrary.simpleMessage("Bazar"),
         "addACustomer": MessageLookupByLibrary.simpleMessage(
             "Zəhmət olmasa bir müştəri əlavə edin"),
@@ -136,7 +136,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Xüsusiyyətlərinizi Seçin"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Xüsusiyyətlər əsas hissəsidir və POSpro-u ənənəvi həllərdən fərqləndirir."),
+            "Xüsusiyyətlər əsas hissəsidir və Gracery Shop-u ənənəvi həllərdən fərqləndirir."),
         "clarence": MessageLookupByLibrary.simpleMessage("Klarens"),
         "clearAll": MessageLookupByLibrary.simpleMessage("Hamısını Təmizlə"),
         "clickToConnect":

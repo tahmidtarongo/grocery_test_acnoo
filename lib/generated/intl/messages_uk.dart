@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Custom": MessageLookupByLibrary.simpleMessage("Налаштоване"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Відомості про клієнта"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "Sun": MessageLookupByLibrary.simpleMessage("Нед"),
         "addACustomer":
             MessageLookupByLibrary.simpleMessage("Будь ласка, додайте клієнта"),

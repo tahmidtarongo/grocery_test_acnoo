@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Custom": MessageLookupByLibrary.simpleMessage("Sérsniðið"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Upplýsingar um viðskiptavin"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "Sun": MessageLookupByLibrary.simpleMessage("Sunnud"),
         "addACustomer": MessageLookupByLibrary.simpleMessage(
             "Vinsamlegast bættu við viðskiptavini"),
@@ -78,7 +78,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Allar viðskiptaaðgerðir"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "PosPro er heildarlausn fyrir fyrirtæki með birgðum, reikningum, sölu, útgjöldum og tap/hagnað."),
+            "Gracery Shop er heildarlausn fyrir fyrirtæki með birgðum, reikningum, sölu, útgjöldum og tap/hagnað."),
         "allTime": MessageLookupByLibrary.simpleMessage("Allt tímabilið"),
         "alreadyAdded":
             MessageLookupByLibrary.simpleMessage("Nú þegar bætt við"),
@@ -143,7 +143,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Veldu eiginleika þína"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Eiginleikar eru mikilvægar hlutir sem gera POSpro frábrugðið hefðbundnum lausnum."),
+            "Eiginleikar eru mikilvægar hlutir sem gera Gracery Shop frábrugðið hefðbundnum lausnum."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clearAll": MessageLookupByLibrary.simpleMessage("Hreinsa allt"),
         "clickToConnect":
@@ -246,7 +246,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos":
             MessageLookupByLibrary.simpleMessage("Auðvelt að nota POS"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "POSpro appið er frítt og auðvelt í notkun. Það er eitt besta POS kerfið um allan heim."),
+            "Gracery Shop appið er frítt og auðvelt í notkun. Það er eitt besta POS kerfið um allan heim."),
         "edit": MessageLookupByLibrary.simpleMessage("Breyta"),
         "editPhone": MessageLookupByLibrary.simpleMessage("Breyta símanúmeri?"),
         "editPurchaseInvoice":

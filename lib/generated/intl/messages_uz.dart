@@ -24,7 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Mijoz tafsilotlari"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "addACustomer": MessageLookupByLibrary.simpleMessage(
             "Mijoz qo\'shishingizni iltimos qiling"),
         "addAPurchase":
@@ -79,7 +79,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Barcha biznes echimlari"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "PosPro to\'liq biznes echimi, zaxira, hisob, savdo, xarajat va foyda/zarar bilan."),
+            "Gracery Shop to\'liq biznes echimi, zaxira, hisob, savdo, xarajat va foyda/zarar bilan."),
         "allTime": MessageLookupByLibrary.simpleMessage("Butun vaqt"),
         "alreadyAdded":
             MessageLookupByLibrary.simpleMessage("Allaqachon qo\'shilgan"),
@@ -245,7 +245,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos":
             MessageLookupByLibrary.simpleMessage("Mobil POSni ishlatish oson"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "POSpro ilovasi bepul, foydalanish uchun oson. Aslida, bu dunyodagi eng yaxshi POS tizimlaridan biridir."),
+            "Gracery Shop ilovasi bepul, foydalanish uchun oson. Aslida, bu dunyodagi eng yaxshi POS tizimlaridan biridir."),
         "edit": MessageLookupByLibrary.simpleMessage("Tahrirlash"),
         "editPhone": MessageLookupByLibrary.simpleMessage(
             "Telefon raqamini tahrirlash?"),

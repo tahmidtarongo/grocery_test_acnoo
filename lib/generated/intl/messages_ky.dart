@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Custom": MessageLookupByLibrary.simpleMessage("Жекече"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Кардардын маалыматтары"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "addACustomer":
             MessageLookupByLibrary.simpleMessage("Сураныч, кардар кошуңуз"),
         "addAPurchase":
@@ -71,7 +71,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Бардык бизнес чечимдери"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "PosPro - бул запас, эсеп, сатуу, чыгым жана пайда/зиян менен толук бизнес чечими."),
+            "Gracery Shop - бул запас, эсеп, сатуу, чыгым жана пайда/зиян менен толук бизнес чечими."),
         "allTime": MessageLookupByLibrary.simpleMessage("Бардык убакыт"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Алдына коюлган"),
         "alreadyHaveAnAccount":
@@ -241,7 +241,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Жеңил колдонулуучу мобилдик POS"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "POSpro тиркемеси акысыз, колдонуу жеңил. Чындыгында, ал дүйнөдөгү мыкты POS системалардын бири."),
+            "Gracery Shop тиркемеси акысыз, колдонуу жеңил. Чындыгында, ал дүйнөдөгү мыкты POS системалардын бири."),
         "edit": MessageLookupByLibrary.simpleMessage("Түзөтүү"),
         "editPhone": MessageLookupByLibrary.simpleMessage(
             "Телефон номерин редакциялоо?"),

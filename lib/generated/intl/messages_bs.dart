@@ -24,7 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Customer Details"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "addACustomer":
             MessageLookupByLibrary.simpleMessage("Molimo dodajte kupca"),
         "addAPurchase":
@@ -72,7 +72,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Sva poslovna rešenja"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "POSpro je kompletan poslovni sistem sa zalihama, računima, prodajom, troškovima i gubicima/profitom."),
+            "Gracery Shop je kompletan poslovni sistem sa zalihama, računima, prodajom, troškovima i gubicima/profitom."),
         "allTime": MessageLookupByLibrary.simpleMessage("Sve vrijeme"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Već dodano"),
         "alreadyHaveAnAccount":
@@ -137,7 +137,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Izaberite Svoje Mogućnosti"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Mogućnosti su važan deo koji čini POSpro drugačijim od tradicionalnih rešenja."),
+            "Mogućnosti su važan deo koji čini Gracery Shop drugačijim od tradicionalnih rešenja."),
         "clarence": MessageLookupByLibrary.simpleMessage("Klerens"),
         "clearAll": MessageLookupByLibrary.simpleMessage("Obriši sve"),
         "clickToConnect":
@@ -237,7 +237,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos":
             MessageLookupByLibrary.simpleMessage("Lako koristiti mobilni POS"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "POSpro aplikacija je besplatna i laka za korišćenje. Zapravo, jedan je od najboljih POS sistema širom sveta."),
+            "Gracery Shop aplikacija je besplatna i laka za korišćenje. Zapravo, jedan je od najboljih POS sistema širom sveta."),
         "edit": MessageLookupByLibrary.simpleMessage("Uredi"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Urediti broj telefona?"),

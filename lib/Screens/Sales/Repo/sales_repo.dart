@@ -50,6 +50,9 @@ class SaleRepo {
     required String paymentType,
     required List<CartSaleProducts> products,
   }) async {
+    for (var element in products) {
+      print('Product Quantity: ${element.quantities}');
+    }
     final uri = Uri.parse('${APIConfig.url}/sales');
     final requestBody = jsonEncode({
       'party_id': partyId,

@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Custom": MessageLookupByLibrary.simpleMessage("Pertsonalizatua"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Bezeroaren Xehetasunak"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "addACustomer":
             MessageLookupByLibrary.simpleMessage("Mesedez, Gehitu Bezero Bat"),
         "addAPurchase": MessageLookupByLibrary.simpleMessage(
@@ -75,7 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Negozio Soluzio guztiak"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "PosPro negozio soluzio osoa da, stock, kontu, salmenta, gastu eta irabazi/galera barne."),
+            "Gracery Shop negozio soluzio osoa da, stock, kontu, salmenta, gastu eta irabazi/galera barne."),
         "allTime": MessageLookupByLibrary.simpleMessage("Denbora guztian"),
         "alreadyAdded":
             MessageLookupByLibrary.simpleMessage("Dagoeneko Gehitu da"),
@@ -140,7 +140,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Hautatu Zure Ezaugarriak"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Ezaugarriak dira POSpro tradizionaletik bereizten duten garrantzitsua."),
+            "Ezaugarriak dira Gracery Shop tradizionaletik bereizten duten garrantzitsua."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clearAll": MessageLookupByLibrary.simpleMessage("Garbitu Guztia"),
         "clickToConnect":
@@ -249,7 +249,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Erraza erabiltzeko POS mugikorra"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "POSpro aplikazioa doakoa da, erraza erabiltzeko. Izan ere, munduko POS sistemarik onenetariko bat da."),
+            "Gracery Shop aplikazioa doakoa da, erraza erabiltzeko. Izan ere, munduko POS sistemarik onenetariko bat da."),
         "edit": MessageLookupByLibrary.simpleMessage("Editatu"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Editatu Telefono Zenbakia?"),

@@ -24,7 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Maelezo ya Mteja"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "addACustomer":
             MessageLookupByLibrary.simpleMessage("Tafadhali Ongeza Mteja"),
         "addAPurchase":
@@ -76,7 +76,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Suluhisho Zote za Biashara"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "PosPro ni suluhisho kamili la biashara lenye hisa, akaunti, mauzo, matumizi na hasara/faida."),
+            "Gracery Shop ni suluhisho kamili la biashara lenye hisa, akaunti, mauzo, matumizi na hasara/faida."),
         "allTime": MessageLookupByLibrary.simpleMessage("Wakati Wote"),
         "alreadyAdded":
             MessageLookupByLibrary.simpleMessage("Tayari Imeongezwa"),
@@ -139,7 +139,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Chagua Huduma Zako"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Huduma ni sehemu muhimu inayofanya PosPro kuwa tofauti na suluhisho za jadi."),
+            "Huduma ni sehemu muhimu inayofanya Gracery Shop kuwa tofauti na suluhisho za jadi."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clearAll": MessageLookupByLibrary.simpleMessage("Futa Yote"),
         "clickToConnect":
@@ -239,7 +239,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos":
             MessageLookupByLibrary.simpleMessage("Rahisi kutumia POS ya simu"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Programu ya PosPro ni bure, rahisi kutumia. Kwa kweli, ni moja ya mfumo bora wa POS duniani."),
+            "Programu ya Gracery Shop ni bure, rahisi kutumia. Kwa kweli, ni moja ya mfumo bora wa POS duniani."),
         "edit": MessageLookupByLibrary.simpleMessage("Hariri"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Hariri Namba ya Simu?"),

@@ -24,7 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Custom": MessageLookupByLibrary.simpleMessage("कस्टम"),
         "CustomerDetails": MessageLookupByLibrary.simpleMessage("ग्राहक विवरण"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "Sun": MessageLookupByLibrary.simpleMessage("रविवार"),
         "addACustomer":
             MessageLookupByLibrary.simpleMessage("कृपया एक ग्राहक जोड़ें"),

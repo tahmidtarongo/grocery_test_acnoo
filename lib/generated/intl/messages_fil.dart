@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Custom": MessageLookupByLibrary.simpleMessage("Custom"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Mga Detalye ng Customer"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "addACustomer": MessageLookupByLibrary.simpleMessage(
             "Mangyaring Magdagdag ng Customer"),
         "addAPurchase": MessageLookupByLibrary.simpleMessage(
@@ -82,7 +82,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
             "Lahat ng Solusyon sa Negosyo"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "Ang PosPro ay isang kumpletong solusyon sa negosyo na may stock, account, benta, gastos at pagkawala/kita."),
+            "Ang Gracery Shop ay isang kumpletong solusyon sa negosyo na may stock, account, benta, gastos at pagkawala/kita."),
         "allTime": MessageLookupByLibrary.simpleMessage("Lahat ng Oras"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Nagdagdag na"),
         "alreadyHaveAnAccount":
@@ -148,7 +148,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Pumili ng Iyong Mga Tampok"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Ang mga tampok ay ang mahalagang bahagi na ginagawang iba ang POSpro mula sa mga tradisyunal na solusyon."),
+            "Ang mga tampok ay ang mahalagang bahagi na ginagawang iba ang Gracery Shop mula sa mga tradisyunal na solusyon."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clearAll": MessageLookupByLibrary.simpleMessage("I-clear Lahat"),
         "clickToConnect":
@@ -257,7 +257,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Madaling Gamitin ang Mobile POS"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Ang POSpro app ay libre, madaling gamitin. Sa katunayan, ito ay isa sa mga pinakamahusay na POS systems sa buong mundo."),
+            "Ang Gracery Shop app ay libre, madaling gamitin. Sa katunayan, ito ay isa sa mga pinakamahusay na POS systems sa buong mundo."),
         "edit": MessageLookupByLibrary.simpleMessage("I-edit"),
         "editPhone": MessageLookupByLibrary.simpleMessage(
             "I-edit ang Numero ng Telepono?"),

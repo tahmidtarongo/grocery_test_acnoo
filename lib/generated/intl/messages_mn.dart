@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Custom": MessageLookupByLibrary.simpleMessage("Захиалгат"),
         "CustomerDetails": MessageLookupByLibrary.simpleMessage(
             "Хэрэглэгчийн дэлгэрэнгүй мэдээлэл"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "addACustomer": MessageLookupByLibrary.simpleMessage("Хэрэглэгч нэмэх"),
         "addAPurchase":
             MessageLookupByLibrary.simpleMessage("Захиалга нэмнэ үү"),
@@ -74,7 +74,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Бүх бизнесийн шийдлүүд"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "PosPro нь бүрэн бизнесийн шийдэл бөгөөд бараа, данс, борлуулалт, зардал, алдагдал/ашгийн менежментийг багтаана."),
+            "Gracery Shop нь бүрэн бизнесийн шийдэл бөгөөд бараа, данс, борлуулалт, зардал, алдагдал/ашгийн менежментийг багтаана."),
         "allTime": MessageLookupByLibrary.simpleMessage("Бүх цаг"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Нэмэгдсэн байна"),
         "alreadyHaveAnAccount":
@@ -137,7 +137,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Онцлогуудыг сонгох"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Онцлогууд нь POSpro-г уламжлалт шийдлүүдээс ялгаатай болгодог чухал хэсэг юм."),
+            "Онцлогууд нь Gracery Shop-г уламжлалт шийдлүүдээс ялгаатай болгодог чухал хэсэг юм."),
         "clarence": MessageLookupByLibrary.simpleMessage("Нягтлан бодогч"),
         "clearAll": MessageLookupByLibrary.simpleMessage("Бүгдийг арилгах"),
         "clickToConnect":
@@ -240,7 +240,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Хэрэглэхэд хялбар хөдөлгөөнт POS"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "POSpro апп нь үнэгүй, ашиглахад хялбар. Үнэндээ, энэ нь дэлхийн шилдэг POS системүүдийн нэг юм."),
+            "Gracery Shop апп нь үнэгүй, ашиглахад хялбар. Үнэндээ, энэ нь дэлхийн шилдэг POS системүүдийн нэг юм."),
         "edit": MessageLookupByLibrary.simpleMessage("Засах"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Утасны дугаарыг засах уу?"),

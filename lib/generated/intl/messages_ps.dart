@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Custom": MessageLookupByLibrary.simpleMessage("عادي"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("د پیرودونکي تفصیلات"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "Sun": MessageLookupByLibrary.simpleMessage("یکشنبه"),
         "addACustomer": MessageLookupByLibrary.simpleMessage(
             "لطفاً یو پیرودونکی اضافه کړئ"),
@@ -77,7 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("ټول سوداګریز حلونه"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "PosPro د انبار، حساب، پلور، لګښت او زیان/منفعت سره بشپړ سوداګریز حل دی."),
+            "Gracery Shop د انبار، حساب، پلور، لګښت او زیان/منفعت سره بشپړ سوداګریز حل دی."),
         "allTime": MessageLookupByLibrary.simpleMessage("د ټولو وختونو"),
         "alreadyAdded":
             MessageLookupByLibrary.simpleMessage("لا دمخه اضافه شوی"),
@@ -141,7 +141,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("خپل ځانګړتیاوې وټاکئ"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "ځانګړتیاوې هغه مهمې برخې دي چې POSpro له دودیزو حلونو څخه جلا کوي."),
+            "ځانګړتیاوې هغه مهمې برخې دي چې Gracery Shop له دودیزو حلونو څخه جلا کوي."),
         "clarence": MessageLookupByLibrary.simpleMessage("کلیرنس"),
         "clearAll": MessageLookupByLibrary.simpleMessage("ټول پاک کړئ"),
         "clickToConnect":
@@ -235,7 +235,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "د کارولو لپاره آسانه موبایل POS"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "POSpro اپلیکیشن وړیا، د کارولو لپاره آسانه دی. په حقیقت کې، دا د نړۍ یو له غوره POS سیسټمونو څخه دی."),
+            "Gracery Shop اپلیکیشن وړیا، د کارولو لپاره آسانه دی. په حقیقت کې، دا د نړۍ یو له غوره POS سیسټمونو څخه دی."),
         "edit": MessageLookupByLibrary.simpleMessage("سمول"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("د ټلیفون شمیره سمول؟"),

@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Custom": MessageLookupByLibrary.simpleMessage("Custom"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Customer Details"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "Sun": MessageLookupByLibrary.simpleMessage("Sun"),
         "addACustomer":
             MessageLookupByLibrary.simpleMessage("Please Add A Customer"),
@@ -71,7 +71,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("All business solutions"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "PosPro is a complete business solution with stock, account, sales, expense & loss/profit."),
+            "Gracery Shop is a complete business solution with stock, account, sales, expense & loss/profit."),
         "allTime": MessageLookupByLibrary.simpleMessage("All Time"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Already Added"),
         "alreadyHaveAnAccount":
@@ -133,7 +133,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Chose Your Features"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Features are the important part which makes POSpro different from traditional solutions."),
+            "Features are the important part which makes Gracery Shop different from traditional solutions."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clearAll": MessageLookupByLibrary.simpleMessage("Clear All"),
         "clickToConnect":
@@ -229,7 +229,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos":
             MessageLookupByLibrary.simpleMessage("Easy to use mobile pos"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "POSpro app is free, easy to use. In fact, it\'s one of the best  POS systems around the world."),
+            "Gracery Shop app is free, easy to use. In fact, it\'s one of the best  POS systems around the world."),
         "edit": MessageLookupByLibrary.simpleMessage("Edit"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Edit Phone Number ?"),

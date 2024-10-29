@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Custom": MessageLookupByLibrary.simpleMessage("Tùy chỉnh"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Chi tiết khách hàng"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "Sun": MessageLookupByLibrary.simpleMessage("Chủ Nhật"),
         "addACustomer": MessageLookupByLibrary.simpleMessage(
             "Vui lòng thêm một khách hàng"),
@@ -75,7 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
             "Tất cả giải pháp doanh nghiệp"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "PosPro là một giải pháp kinh doanh hoàn chỉnh với quản lý kho, tài khoản, bán hàng, chi phí và lợi nhuận/tổn thất."),
+            "Gracery Shop là một giải pháp kinh doanh hoàn chỉnh với quản lý kho, tài khoản, bán hàng, chi phí và lợi nhuận/tổn thất."),
         "allTime": MessageLookupByLibrary.simpleMessage("Mọi lúc"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Đã thêm"),
         "alreadyHaveAnAccount":
@@ -136,7 +136,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Chọn Chức năng của bạn"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Các tính năng quan trọng làm cho PosPro khác biệt so với các giải pháp truyền thống."),
+            "Các tính năng quan trọng làm cho Gracery Shop khác biệt so với các giải pháp truyền thống."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clearAll": MessageLookupByLibrary.simpleMessage("Xóa tất cả"),
         "clickToConnect":
@@ -234,7 +234,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Dễ sử dụng điểm bán hàng di động"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Ứng dụng PosPro miễn phí và dễ sử dụng. Trong thực tế, đó là một trong những hệ thống POS tốt nhất trên thế giới."),
+            "Ứng dụng Gracery Shop miễn phí và dễ sử dụng. Trong thực tế, đó là một trong những hệ thống POS tốt nhất trên thế giới."),
         "edit": MessageLookupByLibrary.simpleMessage("Biên tập"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Chỉnh sửa số điện thoại?"),

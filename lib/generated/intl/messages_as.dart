@@ -24,7 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("গ্ৰাহকৰ বিৱৰণ"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "addACustomer": MessageLookupByLibrary.simpleMessage(
             "অনুগ্ৰহ কৰি এজন গ্ৰাহক যোগ কৰক"),
         "addAPurchase":
@@ -74,7 +74,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("সকলো ব্যৱসায়ৰ সমাধান"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "POSpro হৈছে সম্পূৰ্ণ ব্যৱসায়িক সমাধান য\'ত ষ্টক, একাউন্ট, বিক্ৰি, ব্যয়, আৰু লাভ/ক্ষতি অন্তৰ্ভুক্ত।"),
+            "Gracery Shop হৈছে সম্পূৰ্ণ ব্যৱসায়িক সমাধান য\'ত ষ্টক, একাউন্ট, বিক্ৰি, ব্যয়, আৰু লাভ/ক্ষতি অন্তৰ্ভুক্ত।"),
         "allTime": MessageLookupByLibrary.simpleMessage("সকলো সময়"),
         "alreadyAdded":
             MessageLookupByLibrary.simpleMessage("আগতে যোগ কৰা হৈছে"),
@@ -236,7 +236,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "সহজে ব্যৱহাৰ কৰিব পৰা মোবাইল POS"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "POSpro এপ্প ফ্ৰী আৰু সহজে ব্যৱহাৰ কৰিব পৰা যায়। ই সত্যই বিশ্বৰ এটা অতি উত্তম POS ব্যৱস্থা।"),
+            "Gracery Shop এপ্প ফ্ৰী আৰু সহজে ব্যৱহাৰ কৰিব পৰা যায়। ই সত্যই বিশ্বৰ এটা অতি উত্তম POS ব্যৱস্থা।"),
         "edit": MessageLookupByLibrary.simpleMessage("সম্পাদনা কৰক"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("ফোন নম্বৰ সম্পাদনা কৰক?"),

@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Custom": MessageLookupByLibrary.simpleMessage("ການກຳນົດ"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("ລາຍລະອຽດລູກຄ້າ"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "Sun": MessageLookupByLibrary.simpleMessage("ອາທິດ"),
         "addACustomer":
             MessageLookupByLibrary.simpleMessage("ກະລຸນາເພີ່ມລູກຄ້າ"),
@@ -73,7 +73,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("ລົງທະບຽນທັງຫມົດ"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "PosPro ນຳເປັນລົງທະບຽນທັງຫມົດສຳລັບການຮັບສາຍທັງຫມົດນຳເປັນລົງທະບຽນສຳລັບການຊື້, ລາຍຮັບ, ການຂາຍ, ລາຍຈ່າຍ, ແລະການສູນສຳລັບການຂາຍທັງຫມົດ."),
+            "Gracery Shop ນຳເປັນລົງທະບຽນທັງຫມົດສຳລັບການຮັບສາຍທັງຫມົດນຳເປັນລົງທະບຽນສຳລັບການຊື້, ລາຍຮັບ, ການຂາຍ, ລາຍຈ່າຍ, ແລະການສູນສຳລັບການຂາຍທັງຫມົດ."),
         "allTime": MessageLookupByLibrary.simpleMessage("ທັງໝົດ"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("ເພີ່ມແລ້ວ"),
         "alreadyHaveAnAccount":
@@ -227,7 +227,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos":
             MessageLookupByLibrary.simpleMessage("ໃຊ້ໄດ້ໃນອາຍຸ POS ທີ່ໄວ້"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "ການເຂົ້າສະໜັບສະໜູນ PosPro ສະຫຼຸບ, ເປັນໃນການໃຊ້ແອັບເວີຊັນ POS ທີ່ຍັງບໍ່ຕ້ອງໄດ້ຈາກຮູບແບບຕົວເລືອກ."),
+            "ການເຂົ້າສະໜັບສະໜູນ Gracery Shop ສະຫຼຸບ, ເປັນໃນການໃຊ້ແອັບເວີຊັນ POS ທີ່ຍັງບໍ່ຕ້ອງໄດ້ຈາກຮູບແບບຕົວເລືອກ."),
         "edit": MessageLookupByLibrary.simpleMessage("ແກ້ໄຂ"),
         "editPhone": MessageLookupByLibrary.simpleMessage("ແກ້ໄຂເບີໂທລະສັບບໍ?"),
         "editPurchaseInvoice":

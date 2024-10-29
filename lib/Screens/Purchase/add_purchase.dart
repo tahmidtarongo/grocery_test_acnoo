@@ -302,7 +302,7 @@ class _AddPurchaseScreenState extends State<AddPurchaseScreen> {
                                                       return;
                                                     } else {
                                                       final newQuantity = num.parse(value);
-                                                      providerData.cartItemPurchaseList[index].productStock = newQuantity.round();
+                                                      providerData.cartItemPurchaseList[index].productStock = newQuantity;
                                                     }
                                                   },
                                                   decoration: InputDecoration(

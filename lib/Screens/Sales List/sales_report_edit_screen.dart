@@ -10,6 +10,7 @@ import 'package:mobile_pos/Provider/add_to_cart.dart';
 import 'package:mobile_pos/Provider/profile_provider.dart';
 import 'package:mobile_pos/Screens/Sales%20List/sales_Edit_invoice_add_products.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
+import 'package:mobile_pos/main.dart';
 import 'package:mobile_pos/model/sale_transaction_model.dart';
 import 'package:nb_utils/nb_utils.dart';
 import '../../Provider/product_provider.dart';
@@ -30,8 +31,8 @@ class SalesReportEditScreen extends StatefulWidget {
 class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
   @override
   void initState() {
-    // pastProducts = widget.transitionModel.productList!;
-    // TODO: implement initState
+
+
     super.initState();
     transitionModel = widget.transitionModel;
     paidAmount = (widget.transitionModel.paidAmount ?? 0);
@@ -140,7 +141,7 @@ class _SalesReportEditScreenState extends State<SalesReportEditScreen> {
                 productName: products.productName,
                 price: sentProductPrice,
                 uuid: element.productId ?? 0,
-                quantity: element.quantities?.round() ?? 0,
+                quantity: element.quantities?? 0,
                 productId: products.productCode,
                 productBrandName: products.brand?.brandName ?? '',
                 stock: (products.productStock ?? 0).round(),

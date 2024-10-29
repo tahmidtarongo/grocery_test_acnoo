@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Custom": MessageLookupByLibrary.simpleMessage("Pasgemaak"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Kliëntbesonderhede"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "Sun": MessageLookupByLibrary.simpleMessage("Son"),
         "addACustomer": MessageLookupByLibrary.simpleMessage(
             "Voeg asseblief \'n Kliënt by"),
@@ -77,7 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Alle besigheidsoplossings"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "POSpro is \'n volledige besigheidsoplossing met voorraad, rekening, verkope, uitgawes en verlies/wins."),
+            "Gracery Shop is \'n volledige besigheidsoplossing met voorraad, rekening, verkope, uitgawes en verlies/wins."),
         "allTime": MessageLookupByLibrary.simpleMessage("Altyd"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Reeds Toegevoeg"),
         "alreadyHaveAnAccount":
@@ -138,7 +138,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Kies Jou Funksies"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Funksies is die belangrike deel wat POSpro van tradisionele oplossings onderskei."),
+            "Funksies is die belangrike deel wat Gracery Shop Van tradisionele oplossings onderskei."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clearAll": MessageLookupByLibrary.simpleMessage("Maak alles skoon"),
         "clickToConnect":
@@ -239,7 +239,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Maklik om die mobiele pos te gebruik"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "POSpro-app is gratis, maklik om te gebruik. Werklik, dit is een van die beste POS-stelsels regoor die wêreld."),
+            "Gracery Shop-app is gratis, maklik om te gebruik. Werklik, dit is een van die beste POS-stelsels regoor die wêreld."),
         "edit": MessageLookupByLibrary.simpleMessage("Wysig"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Wysig Telefoonnommer?"),

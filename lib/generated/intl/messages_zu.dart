@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Custom": MessageLookupByLibrary.simpleMessage("Okukhethekile"),
         "CustomerDetails": MessageLookupByLibrary.simpleMessage(
             "Imininingwane Zamakhasimende"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "addACustomer":
             MessageLookupByLibrary.simpleMessage("Sicela Engeza Ikhasimende"),
         "addAPurchase":
@@ -78,7 +78,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
             "Zonke Izixazululo Zebhizinisi"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "I-POSPro iyisixazululo esiphelele sebhizinisi esinezinhlobo, ama-akhawunti, ukuthengisa, izindleko & ukulahleka/ukuze kube nezinzuzo."),
+            "I-Gracery Shop iyisixazululo esiphelele sebhizinisi esinezinhlobo, ama-akhawunti, ukuthengisa, izindleko & ukulahleka/ukuze kube nezinzuzo."),
         "allTime": MessageLookupByLibrary.simpleMessage("Zonke Izikhathi"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Sekwengeziwe"),
         "alreadyHaveAnAccount":
@@ -142,7 +142,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Khetha Izici Zakho"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Izici zibalulekile ezenza i-POSpro ihluke ezixazululweni zendabuko."),
+            "Izici zibalulekile ezenza i-Gracery Shop ihluke ezixazululweni zendabuko."),
         "clarence": MessageLookupByLibrary.simpleMessage("UClarence"),
         "clearAll": MessageLookupByLibrary.simpleMessage("Sula Konke"),
         "clickToConnect":
@@ -249,7 +249,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos":
             MessageLookupByLibrary.simpleMessage("Kulula Ukusebenzisa i-POS"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "I-POSpro app iyamahhala, kulula ukuyisebenzisa. Empeleni, iyodwa yezinhlelo ze-POS ezinhle kakhulu emhlabeni jikelele."),
+            "I-Gracery Shop app iyamahhala, kulula ukuyisebenzisa. Empeleni, iyodwa yezinhlelo ze-POS ezinhle kakhulu emhlabeni jikelele."),
         "edit": MessageLookupByLibrary.simpleMessage("Hlela"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Hlela Inombolo Yefoni?"),

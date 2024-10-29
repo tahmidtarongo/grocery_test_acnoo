@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Custom": MessageLookupByLibrary.simpleMessage("Vlastný"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Detaily zákazníka"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "addACustomer":
             MessageLookupByLibrary.simpleMessage("Prosím, pridajte zákazníka"),
         "addAPurchase":
@@ -74,7 +74,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Všetky obchodné riešenia"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "PosPro je kompletné obchodné riešenie zahŕňajúce sklad, účty, predaj, výdavky a zisk/stratu."),
+            "Gracery Shop je kompletné obchodné riešenie zahŕňajúce sklad, účty, predaj, výdavky a zisk/stratu."),
         "allTime": MessageLookupByLibrary.simpleMessage("Počas celého obdobia"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Už pridané"),
         "alreadyHaveAnAccount":
@@ -137,7 +137,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Vyberte si funkcie"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Funkcie sú dôležitou súčasťou, ktorá robí PosPro odlišným od tradičných riešení."),
+            "Funkcie sú dôležitou súčasťou, ktorá robí Gracery Shop odlišným od tradičných riešení."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clearAll": MessageLookupByLibrary.simpleMessage("Vymazať všetko"),
         "clickToConnect":
@@ -239,7 +239,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Jednoduchý mobilný pokladničný systém"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Aplikácia PosPro je bezplatná a jednoduchá na použitie. Je to jeden z najlepších POS systémov na svete."),
+            "Aplikácia Gracery Shop je bezplatná a jednoduchá na použitie. Je to jeden z najlepších POS systémov na svete."),
         "edit": MessageLookupByLibrary.simpleMessage("Upraviť"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Upraviť telefónne číslo?"),

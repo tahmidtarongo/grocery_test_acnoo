@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Custom": MessageLookupByLibrary.simpleMessage("କଷ୍ଟମ୍"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("ଗ୍ରାହକ ବିବରଣୀ"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "Sun": MessageLookupByLibrary.simpleMessage("ରବି"),
         "addACustomer":
             MessageLookupByLibrary.simpleMessage("ଦୟାକରି ଗ୍ରାହକ ଯୋଗ କରନ୍ତୁ"),
@@ -76,7 +76,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("ସମସ୍ତ ବ୍ୟବସାୟ ସମାଧାନଗୁଡ଼ିକ"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "PosPro ଏକ ସଂପୂର୍ଣ୍ଣ ବ୍ୟବସାୟ ସମାଧାନ ଯେଉଁଠାରେ ଷ୍ଟକ୍, ଖାତା, ବିକ୍ରୟ, ଖର୍ଚ୍ଚ ଓ ଲାଭ/କ୍ଷତି ରହିଛି।"),
+            "Gracery Shop ଏକ ସଂପୂର୍ଣ୍ଣ ବ୍ୟବସାୟ ସମାଧାନ ଯେଉଁଠାରେ ଷ୍ଟକ୍, ଖାତା, ବିକ୍ରୟ, ଖର୍ଚ୍ଚ ଓ ଲାଭ/କ୍ଷତି ରହିଛି।"),
         "allTime": MessageLookupByLibrary.simpleMessage("ସମସ୍ତ ସମୟ"),
         "alreadyAdded":
             MessageLookupByLibrary.simpleMessage("ପୂର୍ବରୁ ଯୋଡାଯାଇଛି"),
@@ -237,7 +237,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "ଆସାନ ଭାବରେ ପିଓଏସ୍ ବ୍ୟବହାର କରନ୍ତୁ"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "POSpro ଆପ୍ ମୁଫ୍ତ ଓ ବ୍ୟବହାରରେ ସହଜ। ବସ୍ତୁତଃ, ଏହା ଦୁନିଆରେ ସର୍ବଶ୍ରେଷ୍ଠ POS ସିଷ୍ଟମ ମଧ୍ୟରୁ ଗୋଟିଏ।"),
+            "Gracery Shop ଆପ୍ ମୁଫ୍ତ ଓ ବ୍ୟବହାରରେ ସହଜ। ବସ୍ତୁତଃ, ଏହା ଦୁନିଆରେ ସର୍ବଶ୍ରେଷ୍ଠ POS ସିଷ୍ଟମ ମଧ୍ୟରୁ ଗୋଟିଏ।"),
         "edit": MessageLookupByLibrary.simpleMessage("ସମ୍ପାଦନ କରନ୍ତୁ"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("ଫୋନ୍ ନମ୍ବର ସମ୍ପାଦନ କରନ୍ତୁ?"),

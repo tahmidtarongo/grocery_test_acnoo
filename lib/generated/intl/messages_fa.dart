@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Custom": MessageLookupByLibrary.simpleMessage("سفارشی"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("اطلاعات مشتری"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "Sun": MessageLookupByLibrary.simpleMessage("یکشنبه"),
         "addACustomer":
             MessageLookupByLibrary.simpleMessage("لطفا یک مشتری اضافه کنید"),

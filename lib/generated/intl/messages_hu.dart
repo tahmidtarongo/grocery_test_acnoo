@@ -24,7 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Vásárló adatai"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "addACustomer": MessageLookupByLibrary.simpleMessage(
             "Kérjük, adjon hozzá egy ügyfelet"),
         "addAPurchase": MessageLookupByLibrary.simpleMessage(
@@ -83,7 +83,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Minden üzleti megoldás"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "A PosPro egy teljes üzleti megoldás raktárkészlettel, számlával, értékesítéssel, költséggel és veszteség/nyereség számítással."),
+            "A Gracery Shop egy teljes üzleti megoldás raktárkészlettel, számlával, értékesítéssel, költséggel és veszteség/nyereség számítással."),
         "allTime": MessageLookupByLibrary.simpleMessage("Minden idő"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Már hozzáadva"),
         "alreadyHaveAnAccount":
@@ -143,7 +143,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Válassza ki a funkciókat"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "A funkciók fontos részét képezik annak, hogy a PosPro más legyen, mint a hagyományos megoldások."),
+            "A funkciók fontos részét képezik annak, hogy a Gracery Shop más legyen, mint a hagyományos megoldások."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clearAll": MessageLookupByLibrary.simpleMessage("Összes törlése"),
         "clickToConnect":
@@ -242,7 +242,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Könnyen használható mobil POS"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "A PosPro alkalmazás ingyenes, könnyen használható. Valójában ez az egyik legjobb értékesítési pontrendszer a világon."),
+            "A Gracery Shop alkalmazás ingyenes, könnyen használható. Valójában ez az egyik legjobb értékesítési pontrendszer a világon."),
         "edit": MessageLookupByLibrary.simpleMessage("Szerkesztés"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Telefonszám szerkesztése?"),

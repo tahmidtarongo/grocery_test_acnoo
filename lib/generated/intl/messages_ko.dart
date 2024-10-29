@@ -24,7 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Custom": MessageLookupByLibrary.simpleMessage("사용자 정의"),
         "CustomerDetails": MessageLookupByLibrary.simpleMessage("고객 정보"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "Sun": MessageLookupByLibrary.simpleMessage("일"),
         "addACustomer": MessageLookupByLibrary.simpleMessage("고객을 추가하십시오"),
         "addAPurchase": MessageLookupByLibrary.simpleMessage("구매를 추가하십시오"),
@@ -189,7 +189,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "dueReport": MessageLookupByLibrary.simpleMessage("기한 보고서"),
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage("쉬운 사용 모바일 포스"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "PosPro 앱은 무료이며 사용하기 쉽습니다. 실제로 세계 최고의 POS 시스템 중 하나입니다."),
+            "Gracery Shop 앱은 무료이며 사용하기 쉽습니다. 실제로 세계 최고의 POS 시스템 중 하나입니다."),
         "edit": MessageLookupByLibrary.simpleMessage("편집하다"),
         "editPhone": MessageLookupByLibrary.simpleMessage("전화번호 수정?"),
         "editPurchaseInvoice": MessageLookupByLibrary.simpleMessage("구매 송장 편집"),

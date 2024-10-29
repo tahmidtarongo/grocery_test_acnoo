@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Custom": MessageLookupByLibrary.simpleMessage("Personalitzat"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Detalls del client"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "Sun": MessageLookupByLibrary.simpleMessage("Dg."),
         "addACustomer": MessageLookupByLibrary.simpleMessage(
             "Si us plau, afegiu un client"),
@@ -76,7 +76,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
             "Totes les solucions empresarials"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "PosPro és una solució empresarial completa amb estoc, comptabilitat, vendes, despeses i pèrdua/benefici."),
+            "Gracery Shop és una solució empresarial completa amb estoc, comptabilitat, vendes, despeses i pèrdua/benefici."),
         "allTime": MessageLookupByLibrary.simpleMessage("Tot el temps"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Ja afegit"),
         "alreadyHaveAnAccount":
@@ -142,7 +142,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature": MessageLookupByLibrary.simpleMessage(
             "Trieu les vostres característiques"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Les característiques són la part important que fa que POSpro sigui diferent de les solucions tradicionals."),
+            "Les característiques són la part important que fa que Gracery Shop sigui diferent de les solucions tradicionals."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clearAll": MessageLookupByLibrary.simpleMessage("Netejar tot"),
         "clickToConnect":
@@ -243,7 +243,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos":
             MessageLookupByLibrary.simpleMessage("Fàcil d\'usar el POS mòbil"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "L\'aplicació POSpro és gratuïta i fàcil d\'usar. De fet, és un dels millors sistemes POS del món."),
+            "L\'aplicació Gracery Shop és gratuïta i fàcil d\'usar. De fet, és un dels millors sistemes POS del món."),
         "edit": MessageLookupByLibrary.simpleMessage("Editar"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Editar número de telèfon?"),

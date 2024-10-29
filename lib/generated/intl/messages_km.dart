@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Custom": MessageLookupByLibrary.simpleMessage("ធម្មតា"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("ព័ត៌មានលំអិតរបស់អតិថិជន"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "Sun": MessageLookupByLibrary.simpleMessage("ថ្ងៃអាទិត្យ"),
         "addACustomer":
             MessageLookupByLibrary.simpleMessage("សូមបន្ថែមអតិថិជន"),
@@ -75,7 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
             "ដែល​ជា​ការ​ដោះ​ស្រាយ​អាជីវកម្ម​ទាំងអស់"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "កម្មវិធី PosPro គឺជា​កម្មវិធី​ពិសេស​អាជីវកម្ម​ពេញលេញ​ដែលមាន​ស្តុក​សារ​គ្រឿង​សម្រាប់​ការ​ធ្វើ​កិច្ច​ការ​ គណនេយ្យ​ការ​លក់​ ចំណាយ & ចំណេញ/ការ​បញ្ចូល។"),
+            "កម្មវិធី Gracery Shop គឺជា​កម្មវិធី​ពិសេស​អាជីវកម្ម​ពេញលេញ​ដែលមាន​ស្តុក​សារ​គ្រឿង​សម្រាប់​ការ​ធ្វើ​កិច្ច​ការ​ គណនេយ្យ​ការ​លក់​ ចំណាយ & ចំណេញ/ការ​បញ្ចូល។"),
         "allTime": MessageLookupByLibrary.simpleMessage("ពេលវេលាទាំងអស់"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("បានបន្ថែមរួចហើយ"),
         "alreadyHaveAnAccount":
@@ -134,7 +134,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("ជ្រើសរើសលក្ខណៈពិសេសរបស់អ្នក"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "លក្ខណៈពិសេសជាផ្នែក សំខាន់ ែលធ្វើឲ្យ កម្មវិធី PosPro ខូចចិត្តនៃ​ការដំណោះស្រាយ​ប្រចាំ​នៅពី​ដំណាក់​កាល​ចាស់ៗ។"),
+            "លក្ខណៈពិសេសជាផ្នែក សំខាន់ ែលធ្វើឲ្យ កម្មវិធី Gracery Shop ខូចចិត្តនៃ​ការដំណោះស្រាយ​ប្រចាំ​នៅពី​ដំណាក់​កាល​ចាស់ៗ។"),
         "clarence": MessageLookupByLibrary.simpleMessage("ឃ្លានិង"),
         "clearAll": MessageLookupByLibrary.simpleMessage("សម្អាតទាំងអស់"),
         "clickToConnect":
@@ -229,7 +229,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "សម្រាប់ប្រើកម្មវិធីលក់តាមរយៈទូរស័ព្ទសំរាប់ហាងតាមរយៈមុខងារណាមួយ"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "កម្មវិធី PosPro គឺជាកម្មវិធីឥតគិតថ្លៃ ដែលអាចប្រើបានងាយៗ។ ក្នុងបរិយាប័ត្រនេះ, វាជាជម្រើសល្អបំផុតរបស់ប្រព័ន្ធបញ្ជាទិញទំនិញនៅក្នុងពិភពពិភពលោក។"),
+            "កម្មវិធី Gracery Shop គឺជាកម្មវិធីឥតគិតថ្លៃ ដែលអាចប្រើបានងាយៗ។ ក្នុងបរិយាប័ត្រនេះ, វាជាជម្រើសល្អបំផុតរបស់ប្រព័ន្ធបញ្ជាទិញទំនិញនៅក្នុងពិភពពិភពលោក។"),
         "edit": MessageLookupByLibrary.simpleMessage("កែសម្រួល"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("កែសម្រួលលេខទូរស័ព្ទ?"),

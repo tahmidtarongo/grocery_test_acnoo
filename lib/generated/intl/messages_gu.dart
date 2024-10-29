@@ -24,7 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Custom": MessageLookupByLibrary.simpleMessage("કસ્ટમ"),
         "CustomerDetails": MessageLookupByLibrary.simpleMessage("ગ્રાહક વિગતો"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "Sun": MessageLookupByLibrary.simpleMessage("રવિવાર"),
         "addACustomer":
             MessageLookupByLibrary.simpleMessage("કૃપા કરીને ગ્રાહક ઉમેરો"),
@@ -75,7 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("બધા બિઝનેસ ઉકેલો"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "PosPro એક સંપૂર્ણ બિઝનેસ ઉકેલ છે જેમાં સ્ટોક, ખાતા, વેચાણ, ખર્ચ અને નફા/હાનિ છે."),
+            "Gracery Shop એક સંપૂર્ણ બિઝનેસ ઉકેલ છે જેમાં સ્ટોક, ખાતા, વેચાણ, ખર્ચ અને નફા/હાનિ છે."),
         "allTime": MessageLookupByLibrary.simpleMessage("સમયના બધાં"),
         "alreadyAdded":
             MessageLookupByLibrary.simpleMessage("પહેલાં ઉમેર્યું છે"),
@@ -137,7 +137,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("તમારા લક્ષણો પસંદ કરો"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "લક્ષણો તે મહત્વપૂર્ણ ભાગ છે જે POSpro ને પરંપરાગત ઉકેલોથી જુદું બનાવે છે."),
+            "લક્ષણો તે મહત્વપૂર્ણ ભાગ છે જે Gracery Shop ને પરંપરાગત ઉકેલોથી જુદું બનાવે છે."),
         "clarence": MessageLookupByLibrary.simpleMessage("ક્લેરન્સ"),
         "clearAll": MessageLookupByLibrary.simpleMessage("બધું સાફ કરો"),
         "clickToConnect":
@@ -232,7 +232,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos":
             MessageLookupByLibrary.simpleMessage("ઇઝી ટુ યુઝ મોબાઈલ પોસ"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "POSpro એપ મફત, ઉપયોગમાં સરળ છે. વાસ્તવમાં, તે વિશ્વમાં શ્રેષ્ઠ POS સિસ્ટમોમાંની એક છે."),
+            "Gracery Shop એપ મફત, ઉપયોગમાં સરળ છે. વાસ્તવમાં, તે વિશ્વમાં શ્રેષ્ઠ POS સિસ્ટમોમાંની એક છે."),
         "edit": MessageLookupByLibrary.simpleMessage("સંપાદિત કરો"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("ફોન નંબર સંપાદિત કરો?"),

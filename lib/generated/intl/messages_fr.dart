@@ -24,7 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Détails du client"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "addACustomer":
             MessageLookupByLibrary.simpleMessage("Veuillez ajouter un client"),
         "addAPurchase":
@@ -78,7 +78,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
             "Toutes les solutions commerciales"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "PosPro est une solution commerciale complète avec stock, comptabilité, ventes, dépenses et pertes/bénéfices."),
+            "Gracery Shop est une solution commerciale complète avec stock, comptabilité, ventes, dépenses et pertes/bénéfices."),
         "allTime": MessageLookupByLibrary.simpleMessage("Tout le temps"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Déjà ajouté"),
         "alreadyHaveAnAccount":
@@ -143,7 +143,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature": MessageLookupByLibrary.simpleMessage(
             "Choisissez vos fonctionnalités"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Les fonctionnalités sont la partie importante qui distingue PosPro des solutions traditionnelles."),
+            "Les fonctionnalités sont la partie importante qui distingue Gracery Shop des solutions traditionnelles."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clearAll": MessageLookupByLibrary.simpleMessage("Tout effacer"),
         "clickToConnect":
@@ -246,7 +246,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Facilité d\'utilisation du terminal de paiement mobile"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "L\'application PosPro est gratuite et facile à utiliser. En fait, c\'est l\'un des meilleurs systèmes de TPV au monde."),
+            "L\'application Gracery Shop est gratuite et facile à utiliser. En fait, c\'est l\'un des meilleurs systèmes de TPV au monde."),
         "edit": MessageLookupByLibrary.simpleMessage("Modifier"),
         "editPhone": MessageLookupByLibrary.simpleMessage(
             "Modifier le numéro de téléphone ?"),

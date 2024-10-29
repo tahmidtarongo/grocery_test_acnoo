@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Custom": MessageLookupByLibrary.simpleMessage("Kohandatud"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Kliendi andmed"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "addACustomer":
             MessageLookupByLibrary.simpleMessage("Palun lisage klient"),
         "addAPurchase":
@@ -72,7 +72,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Kõik äriolukorrad"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "PosPro on täielik äriolukord koos lao, konto, müügi, kulu ja kasumi/kahjumiga."),
+            "Gracery Shop on täielik äriolukord koos lao, konto, müügi, kulu ja kasumi/kahjumiga."),
         "allTime": MessageLookupByLibrary.simpleMessage("Kõik ajad"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Juba lisatud"),
         "alreadyHaveAnAccount":
@@ -133,7 +133,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Valige oma funktsioonid"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Funktsioonid on oluline osa, mis muudab POSpro traditsioonilistest lahendustest erinevaks."),
+            "Funktsioonid on oluline osa, mis muudab Gracery Shop traditsioonilistest lahendustest erinevaks."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clearAll": MessageLookupByLibrary.simpleMessage("Tühjenda kõik"),
         "clickToConnect":
@@ -229,7 +229,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Lihtne kasutada mobiilne POS"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "POSpro rakendus on tasuta, lihtne kasutada. Tegelikult on see üks parimaid POS-süsteeme maailmas."),
+            "Gracery Shop rakendus on tasuta, lihtne kasutada. Tegelikult on see üks parimaid POS-süsteeme maailmas."),
         "edit": MessageLookupByLibrary.simpleMessage("Muuda"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Muuda telefoninumbrit?"),

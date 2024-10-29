@@ -24,7 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Данни за клиента"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "addACustomer":
             MessageLookupByLibrary.simpleMessage("Моля, добавете клиент"),
         "addAPurchase":
@@ -75,7 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Всички бизнес решения"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "PosPro е цялостно бизнес решение с инвентар, счетоводство, продажби, разходи и загуба/печалба."),
+            "Gracery Shop е цялостно бизнес решение с инвентар, счетоводство, продажби, разходи и загуба/печалба."),
         "allTime": MessageLookupByLibrary.simpleMessage("През всичкото време"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Вече добавен"),
         "alreadyHaveAnAccount":
@@ -139,7 +139,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Изберете вашите функции"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Функциите са важна част, която прави POSpro различен от традиционните решения."),
+            "Функциите са важна част, която прави Gracery Shop различен от традиционните решения."),
         "clarence": MessageLookupByLibrary.simpleMessage("Кларънс"),
         "clearAll": MessageLookupByLibrary.simpleMessage("Изчисти всичко"),
         "clickToConnect":
@@ -243,7 +243,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Лесен за използване мобилен POS"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "POSpro приложението е безплатно, лесно за използване. Всъщност, то е една от най-добрите POS системи в света."),
+            "Gracery Shop приложението е безплатно, лесно за използване. Всъщност, то е една от най-добрите POS системи в света."),
         "edit": MessageLookupByLibrary.simpleMessage("Редактиране"),
         "editPhone": MessageLookupByLibrary.simpleMessage(
             "Редактирайте телефонния номер?"),

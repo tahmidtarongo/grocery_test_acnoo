@@ -24,7 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("asiakkaan tiedot"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "addACustomer":
             MessageLookupByLibrary.simpleMessage("Ole hyvä ja lisää asiakas"),
         "addAPurchase":
@@ -73,7 +73,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
             "Kaikki liiketoimintaratkaisut"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "PosPro on täydellinen liiketoimintaratkaisu varaston, tilien, myynnin, kulujen ja voiton/tappion osalta."),
+            "Gracery Shop on täydellinen liiketoimintaratkaisu varaston, tilien, myynnin, kulujen ja voiton/tappion osalta."),
         "allTime": MessageLookupByLibrary.simpleMessage("Kaiken aikaa"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Jo lisätty"),
         "alreadyHaveAnAccount":
@@ -234,7 +234,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Helppo käyttää mobiilia POS-laitetta"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "PosPro -sovellus on ilmainen ja helppokäyttöinen. Itse asiassa se on yksi parhaista POS-järjestelmistä maailmassa."),
+            "Gracery Shop -sovellus on ilmainen ja helppokäyttöinen. Itse asiassa se on yksi parhaista POS-järjestelmistä maailmassa."),
         "edit": MessageLookupByLibrary.simpleMessage("Muokata"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Muokkaa puhelinnumeroa?"),

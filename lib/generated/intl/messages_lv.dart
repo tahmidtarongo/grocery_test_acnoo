@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Custom": MessageLookupByLibrary.simpleMessage("Pielāgots"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Klienta detaļas"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "addACustomer":
             MessageLookupByLibrary.simpleMessage("Lūdzu, pievienojiet klientu"),
         "addAPurchase":
@@ -82,7 +82,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Visi biznesa risinājumi"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "PosPro ir pilnīgs biznesa risinājums ar krājumiem, kontu, pārdošanu, izdevumiem un peļņu/zaudējumiem."),
+            "Gracery Shop ir pilnīgs biznesa risinājums ar krājumiem, kontu, pārdošanu, izdevumiem un peļņu/zaudējumiem."),
         "allTime": MessageLookupByLibrary.simpleMessage("Visu laiku"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Jau pievienots"),
         "alreadyHaveAnAccount":
@@ -148,7 +148,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Izvēlieties savas funkcijas"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Funkcijas ir svarīga daļa, kas padara POSpro atšķirīgu no tradicionālajiem risinājumiem."),
+            "Funkcijas ir svarīga daļa, kas padara Gracery Shop atšķirīgu no tradicionālajiem risinājumiem."),
         "clarence": MessageLookupByLibrary.simpleMessage("Atlaide"),
         "clearAll": MessageLookupByLibrary.simpleMessage("Notīrīt visu"),
         "clickToConnect": MessageLookupByLibrary.simpleMessage(
@@ -250,7 +250,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Viegli lietojama mobilā POS sistēma"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "POSpro lietotne ir bezmaksas, viegli lietojama un ir viena no labākajām POS sistēmām pasaulē."),
+            "Gracery Shop lietotne ir bezmaksas, viegli lietojama un ir viena no labākajām POS sistēmām pasaulē."),
         "edit": MessageLookupByLibrary.simpleMessage("Rediģēt"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Rediģēt tālruņa numuru?"),

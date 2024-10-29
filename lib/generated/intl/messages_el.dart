@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Custom": MessageLookupByLibrary.simpleMessage("Προσαρμοσμένο"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Πληροφορίες Πελάτη"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "addACustomer":
             MessageLookupByLibrary.simpleMessage("Προσθέστε έναν πελάτη"),
         "addAPurchase":
@@ -79,7 +79,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
             "Όλες οι επιχειρηματικές λύσεις"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "Το POSpro είναι μια ολοκληρωμένη επιχειρηματική λύση με αποθήκη, λογαριασμό, πωλήσεις, δαπάνες και απώλειες/κέρδη."),
+            "Το Gracery Shop είναι μια ολοκληρωμένη επιχειρηματική λύση με αποθήκη, λογαριασμό, πωλήσεις, δαπάνες και απώλειες/κέρδη."),
         "allTime": MessageLookupByLibrary.simpleMessage("Όλος ο χρόνος"),
         "alreadyAdded":
             MessageLookupByLibrary.simpleMessage("Ήδη έχει προστεθεί"),
@@ -143,7 +143,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature": MessageLookupByLibrary.simpleMessage(
             "Επιλέξτε τα χαρακτηριστικά σας"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Τα χαρακτηριστικά είναι το σημαντικό μέρος που κάνει το POSpro διαφορετικό από τις παραδοσιακές λύσεις."),
+            "Τα χαρακτηριστικά είναι το σημαντικό μέρος που κάνει το Gracery Shop διαφορετικό από τις παραδοσιακές λύσεις."),
         "clarence": MessageLookupByLibrary.simpleMessage("Κλαρενς"),
         "clearAll": MessageLookupByLibrary.simpleMessage("Καθαρισμός όλων"),
         "clickToConnect": MessageLookupByLibrary.simpleMessage(
@@ -245,7 +245,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Εύκολη χρήση του κινητού σημείου πώλησης"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Η εφαρμογή POSpro είναι δωρεάν και εύκολη στη χρήση. Πράγματι, είναι ένα από τα καλύτερα συστήματα POS σε όλο τον κόσμο."),
+            "Η εφαρμογή Gracery Shop είναι δωρεάν και εύκολη στη χρήση. Πράγματι, είναι ένα από τα καλύτερα συστήματα POS σε όλο τον κόσμο."),
         "edit": MessageLookupByLibrary.simpleMessage("Επεξεργασία"),
         "editPhone": MessageLookupByLibrary.simpleMessage(
             "Επεξεργασία αριθμού τηλεφώνου?"),

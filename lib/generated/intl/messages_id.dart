@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Custom": MessageLookupByLibrary.simpleMessage("Kustom"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("detil pelanggan"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "Sun": MessageLookupByLibrary.simpleMessage("Ming"),
         "addACustomer":
             MessageLookupByLibrary.simpleMessage("Silakan Tambahkan Pelanggan"),
@@ -81,7 +81,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Semua Solusi Bisnis"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "PosPro adalah solusi bisnis lengkap dengan stok, akun, penjualan, pengeluaran, dan kerugian/keuntungan."),
+            "Gracery Shop adalah solusi bisnis lengkap dengan stok, akun, penjualan, pengeluaran, dan kerugian/keuntungan."),
         "allTime": MessageLookupByLibrary.simpleMessage("Sepanjang Waktu"),
         "alreadyAdded":
             MessageLookupByLibrary.simpleMessage("Sudah ditambahkan"),
@@ -144,7 +144,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Pilih Fitur Anda"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Fitur-fitur penting yang membuat PosPro berbeda dari solusi tradisional."),
+            "Fitur-fitur penting yang membuat Gracery Shop berbeda dari solusi tradisional."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clearAll": MessageLookupByLibrary.simpleMessage("Bersihkan Semua"),
         "clickToConnect":
@@ -246,7 +246,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Mudah digunakan dalam Poin Penjualan Mobile"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Aplikasi PosPro gratis dan mudah digunakan. Faktanya, ini adalah salah satu sistem POS terbaik di seluruh dunia."),
+            "Aplikasi Gracery Shop gratis dan mudah digunakan. Faktanya, ini adalah salah satu sistem POS terbaik di seluruh dunia."),
         "edit": MessageLookupByLibrary.simpleMessage("Sunting"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("Sunting Nomor Telepon?"),

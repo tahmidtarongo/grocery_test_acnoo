@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Custom": MessageLookupByLibrary.simpleMessage("حسب ضرورت"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("کسٹمر کی تفصیلات"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "Sun": MessageLookupByLibrary.simpleMessage("اتوار"),
         "addACustomer": MessageLookupByLibrary.simpleMessage(
             "برائے مہربانی ایک کسٹمر شامل کریں"),

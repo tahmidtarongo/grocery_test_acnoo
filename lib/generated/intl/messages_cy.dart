@@ -24,7 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("Manylion Cwsmer"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "addACustomer":
             MessageLookupByLibrary.simpleMessage("Pleser Ychwanegu Cwsmer"),
         "addAPurchase":
@@ -79,7 +79,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Pob Ateb Busnes"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "Mae PosPro yn ateb busnes cyflawn gyda stoc, cyfrif, gwerthiannau, gwariant a cholled/proffit."),
+            "Mae Gracery Shop yn ateb busnes cyflawn gyda stoc, cyfrif, gwerthiannau, gwariant a cholled/proffit."),
         "allTime": MessageLookupByLibrary.simpleMessage("Pob Amser"),
         "alreadyAdded":
             MessageLookupByLibrary.simpleMessage("Eisoes wedi\'i Ychwanegu"),
@@ -143,7 +143,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Dewiswch Eich Nodweddion"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Mae nodweddion yn rhan bwysig sy\'n gwneud POSpro yn wahanol i atebion traddodiadol."),
+            "Mae nodweddion yn rhan bwysig sy\'n gwneud Gracery Shop yn wahanol i atebion traddodiadol."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clearAll": MessageLookupByLibrary.simpleMessage("Clirio Pob Un"),
         "clickToConnect":
@@ -243,7 +243,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos":
             MessageLookupByLibrary.simpleMessage("Hawdd i Ddefnyddio\'r POS"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Mae ap POSpro yn rhad ac yn hawdd i\'w ddefnyddio. Yn wir, mae\'n un o\'r systemau POS gorau ar draws y byd."),
+            "Mae ap Gracery Shop yn rhad ac yn hawdd i\'w ddefnyddio. Yn wir, mae\'n un o\'r systemau POS gorau ar draws y byd."),
         "edit": MessageLookupByLibrary.simpleMessage("Golygu"),
         "editPhone": MessageLookupByLibrary.simpleMessage("Golygu Rhif Ffôn?"),
         "editPurchaseInvoice":

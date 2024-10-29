@@ -12,7 +12,7 @@ class PaymentScreen extends StatefulWidget {
   _PaymentScreenState createState() => _PaymentScreenState();
 }
 
-String paymentUrl = 'https://pospro.acnoo.com/payments-gateways/plan_id/business_id';
+String paymentUrl = 'https://Gracery Shop.acnoo.com/payments-gateways/plan_id/business_id';
 const String successUrl = 'order-status?status=success';
 const String failureUrl = 'order-status?status=failed';
 

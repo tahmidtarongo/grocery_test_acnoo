@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Custom": MessageLookupByLibrary.simpleMessage("مخصص"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("تفاصيل العميل"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "Sun": MessageLookupByLibrary.simpleMessage("الأحد"),
         "addACustomer":
             MessageLookupByLibrary.simpleMessage("الرجاء إضافة عميل"),
@@ -74,7 +74,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("جميع حلول الأعمال"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "POSpro هو حلاً شاملاً للأعمال مع الأسهم والحسابات والمبيعات والمصروفات والخسائر / الأرباح."),
+            "Gracery Shop هو حلاً شاملاً للأعمال مع الأسهم والحسابات والمبيعات والمصروفات والخسائر / الأرباح."),
         "allTime": MessageLookupByLibrary.simpleMessage("كل الأوقات"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("اسم التصنيف"),
         "alreadyHaveAnAccount":
@@ -227,7 +227,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "سهولة استخدام نقاط البيع المحمولة"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "تطبيق POSpro مجاني وسهل الاستخدام. في الواقع، إنه واحد من أفضل أنظمة نقاط البيع حول العالم."),
+            "تطبيق Gracery Shop مجاني وسهل الاستخدام. في الواقع، إنه واحد من أفضل أنظمة نقاط البيع حول العالم."),
         "edit": MessageLookupByLibrary.simpleMessage("يحرر"),
         "editPhone": MessageLookupByLibrary.simpleMessage("تحرير رقم الهاتف؟"),
         "editPurchaseInvoice":

@@ -118,7 +118,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                         Navigator.pop(context);
                       },
                       //child: const Text('Clear All'),
-                      child:  Text(lang.S.of(context).clearAll),
+                      child: Text(lang.S.of(context).clearAll),
                     ),
                   ];
                 },
@@ -158,8 +158,8 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                             Text(
                               selectedCustomer?.phone ?? '',
                             ),
-                             Text(
-                               lang.S.of(context).previousDue,
+                            Text(
+                              lang.S.of(context).previousDue,
                               //'Previous Due',
                             ),
                           ],
@@ -189,7 +189,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                           setState(() {});
                         },
                         leading: const Icon(IconlyBold.add_user, color: kMainColor, size: 26),
-                        title:  Text(
+                        title: Text(
                           lang.S.of(context).addCustomer,
                           //'Add Customer',
                           style: const TextStyle(color: kMainColor),
@@ -292,7 +292,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                   onPressed: () {
                                     Navigator.pop(context);
                                   },
-                                  child:  Text(
+                                  child: Text(
                                     '+ ${lang.S.of(context).addItems}',
                                     style: const TextStyle(fontSize: 16, color: kMainColor),
                                   )),
@@ -676,6 +676,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                             Row(
                               children: [
                                 Checkbox(
+                                  activeColor: kMainColor,
                                   value: isFullReceved,
                                   onChanged: (value) {
                                     setState(() {
@@ -685,8 +686,8 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                     });
                                   },
                                 ),
-                                 Text(
-                                   lang.S.of(context).receivedAmount,
+                                Text(
+                                  lang.S.of(context).receivedAmount,
                                   //'Received Amount',
                                   style: const TextStyle(fontSize: 16),
                                 ),
@@ -833,9 +834,10 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
 
                                 for (var element in cartProviderData.cartItemList) {
                                   selectedProductList.add(
+
                                     CartSaleProducts(
                                       productId: element.uuid.toInt(),
-                                      quantities: element.quantity.toInt(),
+                                      quantities: element.quantity,
                                       price: (num.tryParse(element.price.toString()) ?? 0),
                                       lossProfit: (element.quantity * (num.tryParse(element.price.toString()) ?? 0)) -
                                           (element.quantity * (num.tryParse(element.productPurchasePrice.toString()) ?? 0)),
@@ -844,8 +846,7 @@ class _AddSalesScreenState extends State<AddSalesScreen> {
                                 }
 
                                 SaleRepo repo = SaleRepo();
-                                SalesTransaction? saleData;
-                                saleData = await repo.createSale(
+                                SalesTransaction? saleData = await repo.createSale(
                                   ref: consumerRef,
                                   context: context,
                                   totalAmount: subTotal,

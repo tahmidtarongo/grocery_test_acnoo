@@ -25,7 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Custom": MessageLookupByLibrary.simpleMessage("კომენტარი"),
         "CustomerDetails":
             MessageLookupByLibrary.simpleMessage("მომხმარებლის დეტალები"),
-        "POSProV": MessageLookupByLibrary.simpleMessage("POSPro V"),
+        "POSProV": MessageLookupByLibrary.simpleMessage("Gracery Shop V"),
         "Sun": MessageLookupByLibrary.simpleMessage("კვირა"),
         "addACustomer": MessageLookupByLibrary.simpleMessage(
             "გთხოვთ, დაამატეთ მომხმარებელი"),
@@ -80,7 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("ყველა ბიზნეს გადაწყვეტილება"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "PosPro არის სრულყოფილი ბიზნეს გადაწყვეტილება მარაგის, ანგარიშების, გაყიდვებისა და ხარჯების მონიტორინგისთვის."),
+            "Gracery Shop არის სრულყოფილი ბიზნეს გადაწყვეტილება მარაგის, ანგარიშების, გაყიდვებისა და ხარჯების მონიტორინგისთვის."),
         "allTime": MessageLookupByLibrary.simpleMessage("ყველა დრო"),
         "alreadyAdded":
             MessageLookupByLibrary.simpleMessage("მიუწვდელი დამატებულია"),
@@ -147,7 +147,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("რჩეული ფუნქციები"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "ფუნქციები მნიშვნელოვანი ნაწილია, რომელიც აჩვენებს, რომ POSpro განსხვავდება ტრადიციული გადაწყვეტილებებისგან."),
+            "ფუნქციები მნიშვნელოვანი ნაწილია, რომელიც აჩვენებს, რომ Gracery Shop განსხვავდება ტრადიციული გადაწყვეტილებებისგან."),
         "clarence": MessageLookupByLibrary.simpleMessage("კლარენსი"),
         "clearAll":
             MessageLookupByLibrary.simpleMessage("ყველაფერი გასუფთავება"),
@@ -252,7 +252,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "მობილური POS-ის მარტივი გამოყენება"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "POSpro აპლიკაცია უფასოა, მარტივად გამოსაყენებელი. ფაქტობრივად, ეს არის ერთ-ერთი საუკეთესო POS სისტემები მთელი მსოფლიოს მასშტაბით."),
+            "Gracery Shop აპლიკაცია უფასოა, მარტივად გამოსაყენებელი. ფაქტობრივად, ეს არის ერთ-ერთი საუკეთესო POS სისტემები მთელი მსოფლიოს მასშტაბით."),
         "edit": MessageLookupByLibrary.simpleMessage("რედაქტირება"),
         "editPhone": MessageLookupByLibrary.simpleMessage(
             "ტელეფონის ნომრის რედაქტირება?"),
