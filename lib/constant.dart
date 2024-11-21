@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mobile_pos/generated/l10n.dart' as lang;
 
 const kMainColor = Color(0xff019934);
 const kGreyTextColor = Color(0xFF828282);
@@ -226,7 +225,7 @@ class PrimaryButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
-    bool isDark = Theme.of(context).brightness == Brightness.dark;
+    // bool isDark = Theme.of(context).brightness == Brightness.dark;
     return SizedBox(
       height: 48.0,
       width: double.infinity,
