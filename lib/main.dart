@@ -51,7 +51,9 @@ class MyApp extends StatelessWidget {
       child: Builder(
           builder: (context) => MaterialApp(
                 debugShowCheckedModeBanner: false,
-                locale: pro.Provider.of<LanguageChangeProvider>(context, listen: true).currentLocale,
+                locale: pro.Provider.of<LanguageChangeProvider>(context,
+                        listen: true)
+                    .currentLocale,
                 localizationsDelegates: const [
                   S.delegate,
                   GlobalMaterialLocalizations.delegate,
@@ -66,12 +68,14 @@ class MyApp extends StatelessWidget {
                   '/': (context) => const SplashScreen(),
                   '/onBoard': (context) => const OnBoard(),
                   '/signIn': (context) => const SignInScreen(),
-                  '/loginForm': (context) => const LoginForm(isEmailLogin: true),
+                  '/loginForm': (context) =>
+                      const LoginForm(isEmailLogin: true),
                   '/signup': (context) => const RegisterScreen(),
                   '/forgotPassword': (context) => const ForgotPassword(),
                   '/home': (context) => const Home(),
                   '/profile': (context) => const ProfileScreen(),
-                  '/AddProducts': (context) => const AddProduct(fromHome: false),
+                  '/AddProducts': (context) =>
+                      const AddProduct(fromHome: false),
                   '/UpdateProducts': (context) => const UpdateProduct(),
                   '/Products': (context) => const ProductList(),
                   '/salesCustomer': (context) => const CustomerScreenSales(),

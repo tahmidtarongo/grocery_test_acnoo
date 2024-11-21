@@ -77,7 +77,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
             "എല്ലാ ബിസിനസ്സ് പരിഹാരങ്ങളും"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "Gracery Shop സ്റ്റോക്ക്, അക്കൗണ്ട്, വിൽപ്പന, ചെലവ് & നഷട/ലാഭം എന്നിവയുടെ ഒരു സമ്പൂർണ ബിസിനസ്സ് പരിഹാരമാണ്."),
+            "PosPro സ്റ്റോക്ക്, അക്കൗണ്ട്, വിൽപ്പന, ചെലവ് & നഷട/ലാഭം എന്നിവയുടെ ഒരു സമ്പൂർണ ബിസിനസ്സ് പരിഹാരമാണ്."),
         "allTime": MessageLookupByLibrary.simpleMessage("എല്ലാ സമയം"),
         "alreadyAdded":
             MessageLookupByLibrary.simpleMessage("ഇവിടെ കൂടി ചേർക്കപ്പെട്ടു"),
@@ -143,7 +143,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature": MessageLookupByLibrary.simpleMessage(
             "നിങ്ങളുടെ സവിശേഷതകൾ തിരഞ്ഞെടുക്കുക"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "സവിശേഷതകൾ Gracery Shop നെ പരമ്പരാഗത പരിഹാരങ്ങളിൽ നിന്നു വേർതിരിക്കാനുള്ള പ്രധാന ഭാഗമാണ്."),
+            "സവിശേഷതകൾ POSpro നെ പരമ്പരാഗത പരിഹാരങ്ങളിൽ നിന്നു വേർതിരിക്കാനുള്ള പ്രധാന ഭാഗമാണ്."),
         "clarence": MessageLookupByLibrary.simpleMessage("ക്ലാരൻസ്"),
         "clearAll": MessageLookupByLibrary.simpleMessage("എല്ലാം മായ്ക്കുക"),
         "clickToConnect": MessageLookupByLibrary.simpleMessage(
@@ -246,7 +246,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "ഉപയോഗിക്കാൻ എളുപ്പമായ മൊബൈൽ പോസ്"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Gracery Shop ആപ്പ് സൗജന്യവും ഉപയോഗിക്കാൻ എളുപ്പവുമാണ്. വാസ്തവത്തിൽ, ഇത് ലോകത്തെ ഏറ്റവും മികച്ച POS സംവിധാനങ്ങളിൽ ഒന്നാണ്."),
+            "POSpro ആപ്പ് സൗജന്യവും ഉപയോഗിക്കാൻ എളുപ്പവുമാണ്. വാസ്തവത്തിൽ, ഇത് ലോകത്തെ ഏറ്റവും മികച്ച POS സംവിധാനങ്ങളിൽ ഒന്നാണ്."),
         "edit": MessageLookupByLibrary.simpleMessage("എഡിറ്റ്"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("ഫോൺ നമ്പർ എഡിറ്റ് ചെയ്യണോ?"),

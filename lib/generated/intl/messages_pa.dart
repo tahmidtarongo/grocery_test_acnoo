@@ -79,7 +79,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("ਸਭ ਕਾਰੋਬਾਰੀ ਹੱਲ"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "Gracery Shop ਇੱਕ ਪੂਰਾ ਕਾਰੋਬਾਰੀ ਹੱਲ ਹੈ ਜਿਸ ਵਿੱਚ ਸਟਾਕ, ਖਾਤਾ, ਵਿਕਰੀ, ਖਰਚ ਅਤੇ ਨਫ਼ਾ/ਨੱਕਾ ਸ਼ਾਮਿਲ ਹਨ।"),
+            "PosPro ਇੱਕ ਪੂਰਾ ਕਾਰੋਬਾਰੀ ਹੱਲ ਹੈ ਜਿਸ ਵਿੱਚ ਸਟਾਕ, ਖਾਤਾ, ਵਿਕਰੀ, ਖਰਚ ਅਤੇ ਨਫ਼ਾ/ਨੱਕਾ ਸ਼ਾਮਿਲ ਹਨ।"),
         "allTime": MessageLookupByLibrary.simpleMessage("ਸਾਰੇ ਸਮੇਂ"),
         "alreadyAdded":
             MessageLookupByLibrary.simpleMessage("ਲੰਬੀ ਹੋ ਚੁੱਕੀ ਹੈ"),
@@ -140,7 +140,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("ਆਪਣੀ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਚੁਣੋ"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਉਹ ਮਹੱਤਵਪੂਰਨ ਹਿੱਸਾ ਹਨ ਜੋ Gracery Shop ਨੂੰ ਪੁਰਾਣੇ ਹੱਲਾਂ ਤੋਂ ਵੱਖਰਾ ਕਰਦੀ ਹਨ।"),
+            "ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਉਹ ਮਹੱਤਵਪੂਰਨ ਹਿੱਸਾ ਹਨ ਜੋ POSpro ਨੂੰ ਪੁਰਾਣੇ ਹੱਲਾਂ ਤੋਂ ਵੱਖਰਾ ਕਰਦੀ ਹਨ।"),
         "clarence": MessageLookupByLibrary.simpleMessage("ਕਲਾਰੈਂਸ"),
         "clearAll": MessageLookupByLibrary.simpleMessage("ਸਾਰੇ ਸਾਫ਼ ਕਰੋ"),
         "clickToConnect":
@@ -234,7 +234,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos":
             MessageLookupByLibrary.simpleMessage("ਸਮਰੱਥ ਮੋਬਾਇਲ ਪੋਸ"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Gracery Shop ਐਪ ਮੁਫ਼ਤ, ਵਰਤਣ ਵਿੱਚ ਆਸਾਨ ਹੈ। ਵਾਸਤਵ ਵਿੱਚ, ਇਹ ਦੁਨੀਆ ਭਰ ਵਿੱਚੋਂ ਸਭ ਤੋਂ ਵਧੀਆ POS ਸਿਸਟਮਾਂ ਵਿੱਚੋਂ ਇੱਕ ਹੈ।"),
+            "POSpro ਐਪ ਮੁਫ਼ਤ, ਵਰਤਣ ਵਿੱਚ ਆਸਾਨ ਹੈ। ਵਾਸਤਵ ਵਿੱਚ, ਇਹ ਦੁਨੀਆ ਭਰ ਵਿੱਚੋਂ ਸਭ ਤੋਂ ਵਧੀਆ POS ਸਿਸਟਮਾਂ ਵਿੱਚੋਂ ਇੱਕ ਹੈ।"),
         "edit": MessageLookupByLibrary.simpleMessage("ਸੰਪਾਦਿਤ ਕਰੋ"),
         "editPhone": MessageLookupByLibrary.simpleMessage("ਫੋਨ ਨੰਬਰ ਸੋਧੋ?"),
         "editPurchaseInvoice":

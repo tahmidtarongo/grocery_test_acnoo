@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter/services.dart';
 import 'package:iconly/iconly.dart';
 import 'package:mobile_pos/Screens/DashBoard/dashboard.dart';
 import 'package:mobile_pos/Screens/Home/home_screen.dart';
@@ -22,20 +22,72 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PageView(
-        controller: _pageController,
-        onPageChanged: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
+      body: PopScope(
+        canPop: false,
+        onPopInvokedWithResult: (didPop, result) {
+          showDialog(
+              context: context,
+              builder: (context) => AlertDialog(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16)),
+                    contentPadding: const EdgeInsets.all(20),
+                    actionsPadding: const EdgeInsets.only(bottom: 10),
+                    backgroundColor: kWhite,
+                    title: Text(
+                      'Are you sure you want to exit this application?',
+                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                          color: kTitleColor, fontWeight: FontWeight.w600),
+                      textAlign: TextAlign.center,
+                    ),
+                    actions: [
+                      TextButton(
+                          style: const ButtonStyle(
+                              padding: WidgetStatePropertyAll(EdgeInsets.zero)),
+                          onPressed: () {
+                            SystemNavigator.pop();
+                          },
+                          child: Text(
+                            'Yes',
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleMedium
+                                ?.copyWith(
+                                    fontWeight: FontWeight.w600,
+                                    color: kMainColor),
+                          )),
+                      TextButton(
+                          style: const ButtonStyle(
+                              padding: WidgetStatePropertyAll(EdgeInsets.zero)),
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: Text(
+                            'No',
+                            style: Theme.of(context)
+                                .textTheme
+                                .titleMedium
+                                ?.copyWith(
+                                    fontWeight: FontWeight.w600,
+                                    color: kMainColor),
+                          )),
+                    ],
+                  ));
         },
-        children: const [
-          HomeScreen(),
-          DashboardScreen(),
-          AddProduct(fromHome: true),
-          Reports(),
-          SettingScreen(),
-        ],
+        child: PageView(
+          controller: _pageController,
+          onPageChanged: (index) {
+            setState(() {
+              _currentIndex = index;
+            });
+          },
+          children: const [
+            HomeScreen(),
+            DashboardScreen(),
+            AddProduct(fromHome: true),
+            Reports(),
+            SettingScreen(),
+          ],
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
@@ -59,7 +111,8 @@ class _HomeState extends State<Home> {
           BottomNavigationBarItem(
             icon: Container(
               padding: const EdgeInsets.all(6),
-              decoration: const BoxDecoration(color:kMainColor, shape: BoxShape.circle),
+              decoration: const BoxDecoration(
+                  color: kMainColor, shape: BoxShape.circle),
               child: const Icon(Icons.add, color: Colors.white),
             ),
             label: 'Add',

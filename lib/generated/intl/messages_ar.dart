@@ -133,7 +133,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "chooseSupplier": MessageLookupByLibrary.simpleMessage("اختر موردًا"),
         "choseYourFeature": MessageLookupByLibrary.simpleMessage("اختر ميزاتك"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "الميزات هي الجزء الهام الذي يجعلPosPro مختلفًا عن الحلول التقليدية."),
+            "الميزات هي الجزء الهام الذي يجعلGracery Shop مختلفًا عن الحلول التقليدية."),
         "clarence": MessageLookupByLibrary.simpleMessage("كلارنس"),
         "clearAll": MessageLookupByLibrary.simpleMessage("مسح الكل"),
         "clickToConnect": MessageLookupByLibrary.simpleMessage("انقر للاتصال"),

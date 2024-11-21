@@ -63,7 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("ሁሉም የንግድ መፍትሄዎች"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "Gracery Shop ሙሉ የንግድ መፍትሄ ነው፣ ከክምችት፣ ሂሳብ፣ ሽያጭ፣ ወጪ እና ኪሳራ/ትርፍ ጋር።"),
+            "PosPro ሙሉ የንግድ መፍትሄ ነው፣ ከክምችት፣ ሂሳብ፣ ሽያጭ፣ ወጪ እና ኪሳራ/ትርፍ ጋር።"),
         "allTime": MessageLookupByLibrary.simpleMessage("ሁሉም ጊዜ"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("አስቀድሞ ታክሟል"),
         "alreadyHaveAnAccount":
@@ -205,7 +205,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos":
             MessageLookupByLibrary.simpleMessage("ቀላል የሆነ የሞባይል ፒኦኤስ"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Gracery Shop መተግበሪያ ነፃ፣ ቀላል ለመጠቀም ነው። በእውነቱ፣ በዓለም ዙሪያ ካሉ ምርጥ POS ስርዓቶች አንዱ ነው።"),
+            "POSpro መተግበሪያ ነፃ፣ ቀላል ለመጠቀም ነው። በእውነቱ፣ በዓለም ዙሪያ ካሉ ምርጥ POS ስርዓቶች አንዱ ነው።"),
         "edit": MessageLookupByLibrary.simpleMessage("አርትዕ"),
         "editPhone": MessageLookupByLibrary.simpleMessage("ስልክ ቁጥር አርትዕ?"),
         "editPurchaseInvoice":

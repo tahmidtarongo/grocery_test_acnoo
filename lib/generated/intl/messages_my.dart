@@ -79,7 +79,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("စီးပွားရေးစနစ်အားလုံး"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "Gracery Shop သည် စတော့၊ ငွေစာရင်း၊ အေရာင်းအားကစား၊ အစာရင်းနှင့် အခြေအနေ/အမြဲအစားများဖြစ်သည်။"),
+            "PosPro သည် စတော့၊ ငွေစာရင်း၊ အေရာင်းအားကစား၊ အစာရင်းနှင့် အခြေအနေ/အမြဲအစားများဖြစ်သည်။"),
         "allTime": MessageLookupByLibrary.simpleMessage("အချိန်အားလုံး"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("ရှိသည့်အတွက်"),
         "alreadyHaveAnAccount":
@@ -140,7 +140,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature": MessageLookupByLibrary.simpleMessage(
             "သင့်ရဲ့အကြောင်းကိုရွေးချယ်ပါ"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "အကြောင်းကိုများသည် တစ်စီးရှင်းတွင် မဟုတ်ပါ။ ယင်းအသုံးများကိုလည်း Gracery Shop ကို အသုံးပြုသော အကြောင်းကြောင်းကိုဖြစ်သည်။"),
+            "အကြောင်းကိုများသည် တစ်စီးရှင်းတွင် မဟုတ်ပါ။ ယင်းအသုံးများကိုလည်း PosPro ကို အသုံးပြုသော အကြောင်းကြောင်းကိုဖြစ်သည်။"),
         "clarence": MessageLookupByLibrary.simpleMessage("ကလာအန်"),
         "clearAll":
             MessageLookupByLibrary.simpleMessage("အားလုံးကို ရှင်းလင်းပါ"),
@@ -246,7 +246,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "အစီရင်ခံစားလိုသူများအတွက် အက်မြတ် POS ဖြန့်ဝေသည်"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Gracery Shop အက်ပလီကေးရှင့် အခမဲ့၊ အသုံးပြုနိုင်သောအကြောင်းကြောင်းကိုအသုံးပြုသည်။ အကြောင်းကို ရယူသည့် POS စနစ်တစ်ခုဖြစ်ပြီးကွောင်းကြောင်းကိုလည်းအတူ အကြောင်းကြောင်းများနှင့် အမြဲတမ်းများကိုပါဝင်သည်။"),
+            "PosPro အက်ပလီကေးရှင့် အခမဲ့၊ အသုံးပြုနိုင်သောအကြောင်းကြောင်းကိုအသုံးပြုသည်။ အကြောင်းကို ရယူသည့် POS စနစ်တစ်ခုဖြစ်ပြီးကွောင်းကြောင်းကိုလည်းအတူ အကြောင်းကြောင်းများနှင့် အမြဲတမ်းများကိုပါဝင်သည်။"),
         "edit": MessageLookupByLibrary.simpleMessage("ပြင်ဆင်ပါ"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("ဖုန်းနံပါတ်အား ပြင်ဆင်ရန်"),

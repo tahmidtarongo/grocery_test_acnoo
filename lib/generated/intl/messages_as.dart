@@ -74,7 +74,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("সকলো ব্যৱসায়ৰ সমাধান"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "Gracery Shop হৈছে সম্পূৰ্ণ ব্যৱসায়িক সমাধান য\'ত ষ্টক, একাউন্ট, বিক্ৰি, ব্যয়, আৰু লাভ/ক্ষতি অন্তৰ্ভুক্ত।"),
+            "POSpro হৈছে সম্পূৰ্ণ ব্যৱসায়িক সমাধান য\'ত ষ্টক, একাউন্ট, বিক্ৰি, ব্যয়, আৰু লাভ/ক্ষতি অন্তৰ্ভুক্ত।"),
         "allTime": MessageLookupByLibrary.simpleMessage("সকলো সময়"),
         "alreadyAdded":
             MessageLookupByLibrary.simpleMessage("আগতে যোগ কৰা হৈছে"),
@@ -236,7 +236,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "সহজে ব্যৱহাৰ কৰিব পৰা মোবাইল POS"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Gracery Shop এপ্প ফ্ৰী আৰু সহজে ব্যৱহাৰ কৰিব পৰা যায়। ই সত্যই বিশ্বৰ এটা অতি উত্তম POS ব্যৱস্থা।"),
+            "POSpro এপ্প ফ্ৰী আৰু সহজে ব্যৱহাৰ কৰিব পৰা যায়। ই সত্যই বিশ্বৰ এটা অতি উত্তম POS ব্যৱস্থা।"),
         "edit": MessageLookupByLibrary.simpleMessage("সম্পাদনা কৰক"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("ফোন নম্বৰ সম্পাদনা কৰক?"),

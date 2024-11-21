@@ -67,8 +67,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "adding": MessageLookupByLibrary.simpleMessage("กำลังเพิ่ม.."),
         "address": MessageLookupByLibrary.simpleMessage("ที่อยู่"),
         "all": MessageLookupByLibrary.simpleMessage("ทั้งหมด"),
-        "allBusinessSolutions":
-            MessageLookupByLibrary.simpleMessage("สิ่งที่ Gracery Shop มีให้ทั้งหมด"),
+        "allBusinessSolutions": MessageLookupByLibrary.simpleMessage(
+            "สิ่งที่ Gracery Shop มีให้ทั้งหมด"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
             "Gracery Shop เป็นสิ่งที่สมบูรณ์แบบสำหรับธุรกิจด้วยคลังสินค้า บัญชี การขาย ค่าใช้จ่ายและขาดทุน / กำไร"),
         "allTime": MessageLookupByLibrary.simpleMessage("ตลอดเวลา"),

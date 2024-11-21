@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mobile_pos/generated/l10n.dart' as lang;
+
 const kMainColor = Color(0xff019934);
 const kGreyTextColor = Color(0xFF828282);
 const kBackgroundColor = Color(0xffF5F5F5);
@@ -14,13 +15,8 @@ const kTitleColor = Color(0xFF000000);
 bool connected = false;
 bool isPrintEnable = false;
 
-List<String>get paymentsTypeList => [
-  'Cash',
-  'Card',
-  'Check',
-  'Mobile Pay',
-  'Due'
-];
+List<String> get paymentsTypeList =>
+    ['Cash', 'Card', 'Check', 'Mobile Pay', 'Due'];
 bool isExpiringInFiveDays = false;
 bool isExpiringInOneDays = false;
 String paypalClientId = '';
@@ -29,7 +25,8 @@ const bool sandbox = true;
 String noProductImageUrl = 'images/no_product_image.png';
 
 ///_______________Purchase_Code_______________________________
-String purchaseCode = 'Please enter your purchase code';
+// String purchaseCode = 'Please enter your purchase code';
+String purchaseCode = '3e873705-9a73-4a00-81f9-1f2fbef74e66';
 
 ///---------------update information---------------
 
@@ -86,13 +83,13 @@ final otpInputDecoration = InputDecoration(
 // List<String> language = ['English'];
 
 List<String> get productCategory => [
-  'Fashion',
-  'Electronics',
-  'Computer',
-  'Gadgets',
- 'Watches',
-  'Cloths',
-];
+      'Fashion',
+      'Electronics',
+      'Computer',
+      'Gadgets',
+      'Watches',
+      'Cloths',
+    ];
 
 ///______________________________________________________________________________________________
 String constUserId = '';
@@ -102,7 +99,6 @@ bool isSubUserDeleted = true;
 bool newSelect = false;
 
 ///--------------------subscription dilog-----------------------
-
 
 ///__________Language________________________________
 Map<String, String> languageMap = {
@@ -184,6 +180,7 @@ Map<String, String> languageMap = {
   'Uzbek': 'uz',
   'Zulu': 'zu',
 };
+
 //______________________________________________Back_Button__________________
 class Back extends StatelessWidget {
   final VoidCallback onPressed;
@@ -235,7 +232,8 @@ class PrimaryButton extends StatelessWidget {
       width: double.infinity,
       child: ElevatedButton(
         onPressed: onPressed,
-        style: const ButtonStyle(backgroundColor: WidgetStatePropertyAll(kMainColor)),
+        style: const ButtonStyle(
+            backgroundColor: WidgetStatePropertyAll(kMainColor)),
         child: Text(
           text,
           style: textTheme.labelLarge,

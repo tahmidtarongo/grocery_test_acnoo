@@ -72,7 +72,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("Vse poslovne rešitve"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "Gracery Shop je popolna poslovna rešitev z zalogo, računom, prodajo, stroški in izgubo/dobičkom."),
+            "PosPro je popolna poslovna rešitev z zalogo, računom, prodajo, stroški in izgubo/dobičkom."),
         "allTime": MessageLookupByLibrary.simpleMessage("Vse Čase"),
         "alreadyAdded": MessageLookupByLibrary.simpleMessage("Že dodano"),
         "alreadyHaveAnAccount":
@@ -138,7 +138,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Izberite svoje funkcije"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Funkcije so pomemben del, ki razlikuje Gracery Shop od tradicionalnih rešitev."),
+            "Funkcije so pomemben del, ki razlikuje POSpro od tradicionalnih rešitev."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clearAll": MessageLookupByLibrary.simpleMessage("Počisti vse"),
         "clickToConnect":
@@ -236,7 +236,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "Enostaven za uporabo mobilni POS"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Aplikacija Gracery Shop je brezplačna, enostavna za uporabo. Dejansko je ena najboljših POS sistemov po vsem svetu."),
+            "Aplikacija POSpro je brezplačna, enostavna za uporabo. Dejansko je ena najboljših POS sistemov po vsem svetu."),
         "edit": MessageLookupByLibrary.simpleMessage("Uredi"),
         "editPhone": MessageLookupByLibrary.simpleMessage(
             "Uredite telefonsko številko?"),

@@ -79,7 +79,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "allBusinessSolutions":
             MessageLookupByLibrary.simpleMessage("అన్ని వ్యాపార పరిష్కారాలు"),
         "allBusinessolutionDescrip": MessageLookupByLibrary.simpleMessage(
-            "Gracery Shop స్టాక్, ఖాతా, అమ్మకాలు, వ్యయం & నష్టం/లాభంతో కూడిన పూర్తి వ్యాపార పరిష్కారం."),
+            "PosPro స్టాక్, ఖాతా, అమ్మకాలు, వ్యయం & నష్టం/లాభంతో కూడిన పూర్తి వ్యాపార పరిష్కారం."),
         "allTime": MessageLookupByLibrary.simpleMessage("అన్నకాలం"),
         "alreadyAdded":
             MessageLookupByLibrary.simpleMessage("ఇప్పటికే చేర్చబడింది"),
@@ -250,7 +250,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "easyToUseThePos": MessageLookupByLibrary.simpleMessage(
             "సులభంగా ఉపయోగించగల మొబైల్ POS"),
         "easytheusedesciption": MessageLookupByLibrary.simpleMessage(
-            "Gracery Shop యాప్ ఉచితంగా, ఉపయోగించడానికి సులభం. వాస్తవానికి, ఇది ప్రపంచంలోని ఉత్తమ POS వ్యవస్థలలో ఒకటి."),
+            "POSpro యాప్ ఉచితంగా, ఉపయోగించడానికి సులభం. వాస్తవానికి, ఇది ప్రపంచంలోని ఉత్తమ POS వ్యవస్థలలో ఒకటి."),
         "edit": MessageLookupByLibrary.simpleMessage("సవరించు"),
         "editPhone":
             MessageLookupByLibrary.simpleMessage("ఫోన్ నంబరును సవరించాలా?"),

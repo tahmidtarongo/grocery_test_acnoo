@@ -146,7 +146,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "choseYourFeature":
             MessageLookupByLibrary.simpleMessage("Wählen Sie Ihre Funktionen"),
         "choseyourfeatureDesciption": MessageLookupByLibrary.simpleMessage(
-            "Funktionen sind der wichtige Teil, der Gracery Shop Von traditionellen Lösungen unterscheidet."),
+            "Funktionen sind der wichtige Teil, der Gracery Shop von traditionellen Lösungen unterscheidet."),
         "clarence": MessageLookupByLibrary.simpleMessage("Clarence"),
         "clearAll": MessageLookupByLibrary.simpleMessage("Alle löschen"),
         "clickToConnect":
